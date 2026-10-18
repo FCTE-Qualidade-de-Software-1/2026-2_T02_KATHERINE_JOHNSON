@@ -1,0 +1,31 @@
+\section{Referencial Teórico: GQM e PSM/CID}
+\label{sec:referencial-gqm}
+
+Para estruturar o processo de medição e garantir a rastreabilidade entre os anseios das partes interessadas e as grandezas mensuráveis coletadas em software, esta avaliação adota a abordagem \textit{Goal Question Metric} (GQM) em conjunto com os princípios de categorização do \textit{Practical Software Measurement} (PSM).
+
+\subsection{A Abordagem Goal Question Metric (GQM)}
+\label{subsec:gqm}
+
+Originalmente proposta por Basili e Weiss \cite{basili1984methodology} e consolidada por Basili, Caldiera e Rombach \cite{basili1994gqm}, a abordagem GQM fundamenta-se no princípio de que qualquer programa de medição em engenharia de software deve ser orientado por objetivos bem definidos. O método estrutura-se de forma \textit{top-down} em três níveis hierárquicos:
+
+\begin{enumerate}
+    \item \textbf{Nível Conceitual (Objetivo / \textit{Goal}):} Estabelece a finalidade primordial da medição a partir de um modelo estruturado com cinco dimensões fundamentais: o \textit{objeto} sob análise, o \textit{propósito} do estudo, o \textit{foco de qualidade} visado, o \textit{ponto de vista} do interessado e o \textit{contexto} ambiental no qual a medição ocorre;
+    \item \textbf{Nível Operacional (Questão / \textit{Question}):} Decompõe o objetivo em um conjunto de questões que caracterizam a forma pela qual o foco de qualidade será avaliado, cobrindo os atributos constitutivos do objeto e orientando o processo de discriminação entre alternativas de projeto ou canais;
+    \item \textbf{Nível Quantitativo (Métrica / \textit{Metric}):} Associa a cada questão dados quantitativos ou qualitativos objetivos, definindo regras formais de cálculo, fontes de coleta e parâmetros para interpretação operacional.
+\end{enumerate}
+
+Na fase de análise e síntese, a interpretação dos resultados ocorre no sentido inverso (\textit{bottom-up}): os dados empíricos apurados pelas métricas respondem diretamente às questões formuladas, as quais, em conjunto com suas respectivas hipóteses, corroboram ou refutam o alcance dos objetivos estabelecidos \cite{van2002goal}.
+
+\subsection{Categorias de Medição: PSM e Gestão CID}
+\label{subsec:psm}
+
+Enquanto o GQM é empregado na definição das métricas de produto e de qualidade em uso, a governança operacional e o controle da execução deste projeto de avaliação sustentam-se nas diretrizes do \textit{Practical Software Measurement} (PSM) \cite{mcgarry2002psm}, em consonância com a norma ISO/IEC 15939:2017 \cite{iso15939_2017}. 
+
+O PSM categoriza as necessidades de informação gerencial em dimensões padronizadas, das quais o presente trabalho adota a tríade CID:
+\begin{itemize}
+    \item \textbf{Desempenho dos Processos:} Monitora a eficácia e a aderência aos padrões de trabalho definidos pelo time (por exemplo, incidência de retrabalho em pull requests e índice de defeitos identificados em revisões por pares);
+    \item \textbf{Calendário e Progresso:} Acompanha o cumprimento temporal dos marcos estabelecidos frente ao cronograma planejado (como o percentual de \textit{issues} concluídas por \textit{milestone} e a variância de prazos das entregas);
+    \item \textbf{Recursos e Custos:} Mensura o dispêndio de capacidade produtiva humana alocada (horas dedicadas por membro e dispersão do esforço individual planejado versus realizado).
+\end{itemize}
+
+O monitoramento periódico dessas grandezas assegura subsídios empíricos para decisões corretivas de gestão ao longo das etapas avaliativas.
