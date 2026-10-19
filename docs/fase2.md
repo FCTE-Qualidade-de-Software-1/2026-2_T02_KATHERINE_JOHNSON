@@ -8,4 +8,4 @@ de pontuação e critérios de julgamento.
 | Tema | Responsável | Página |
 |---|---|---|
 | Objetivos, questões e hipóteses | Pedro Henrique | [Objetivos, questões e hipóteses](fase2-gqm.md) |
-| Métricas, níveis de pontuação, critérios de julgamento e diagrama GQM | Philipe | Em revisão |
+| Métricas, níveis de pontuação, critérios de julgamento e diagrama GQM | Philipe | [Métricas, níveis e critérios de julgamento](fase2-metricas.md) |

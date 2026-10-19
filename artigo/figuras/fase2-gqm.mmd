@@ -1,0 +1,38 @@
+flowchart TD
+    G1["G1 - Adequacao funcional<br/>Nivel conceitual"]
+    G2["G2 - Eficiencia de desempenho<br/>Nivel conceitual"]
+    G3["G3 - Cobertura de contexto<br/>Nivel conceitual"]
+
+    Q11["Q1.1 - Completude funcional<br/>Nivel operacional"]
+    Q12["Q1.2 - Consistencia dos campos comuns<br/>Nivel operacional"]
+    Q13["Q1.3 - Adequacao das operacoes<br/>Nivel operacional"]
+    Q21["Q2.1 - Tempo ate a exibicao completa<br/>Nivel operacional"]
+    Q22["Q2.2 - Volume de dados transferidos<br/>Nivel operacional"]
+    Q31["Q3.1 - Completude de contexto tecnologico<br/>Nivel operacional"]
+    Q32["Q3.2 - Rede degradada versus Wi-Fi e 4G<br/>Nivel operacional"]
+
+    M111["M1.1.1 - Campos da lista exibidos<br/>Nivel quantitativo"]
+    M112["M1.1.2 - Campos detalhados acessiveis<br/>Nivel quantitativo"]
+    M121["M1.2.1 - Campos comuns consistentes<br/>Nivel quantitativo"]
+    M122["M1.2.2 - Infracoes sem divergencia<br/>Nivel quantitativo"]
+    M131["M1.3.1 - Passos ate a lista<br/>Nivel quantitativo"]
+    M132["M1.3.2 - Transicoes de tela<br/>Nivel quantitativo"]
+    M211["M2.1.1 - Tempo ate a lista<br/>Nivel quantitativo"]
+    M212["M2.1.2 - Tempo ate os detalhes<br/>Nivel quantitativo"]
+    M221["M2.2.1 - Volume de dados<br/>Nivel quantitativo"]
+    M311["M3.1.1 - Conclusao por plataforma<br/>Nivel quantitativo"]
+    M312["M3.1.2 - Conclusao por navegador<br/>Nivel quantitativo"]
+    M321["M3.2.1 - Conclusao por rede<br/>Nivel quantitativo"]
+    M322["M3.2.2 - Falhas ou expiracao<br/>Nivel quantitativo"]
+    M323["M3.2.3 - Tempo por rede<br/>Nivel quantitativo"]
+
+    G1 --> Q11 & Q12 & Q13
+    G2 --> Q21 & Q22
+    G3 --> Q31 & Q32
+    Q11 --> M111 & M112
+    Q12 --> M121 & M122
+    Q13 --> M131 & M132
+    Q21 --> M211 & M212
+    Q22 --> M221
+    Q31 --> M311 & M312
+    Q32 --> M321 & M322 & M323

@@ -57,9 +57,11 @@ nav:
   - Início: index.md
   - Fase 1:
       - Visão geral: fase1.md
+      - Produto e modelo de qualidade: fase1-produto.md
   - Fase 2:
       - Visão geral: fase2.md
       - Objetivos, questões e hipóteses: fase2-gqm.md
+      - Métricas, níveis e critérios de julgamento: fase2-metricas.md
   - Gestão (PSM/CID): gestao.md
   - Atas: atas.md
   - Equipe: equipe.md
