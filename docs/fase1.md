@@ -7,7 +7,7 @@ partes interessadas definidas aqui.
 
 | Tema | Responsável | Situação |
 |---|---|---|
-| Propósito, requisitante, partes interessadas e escopo | Heitor | Em elaboração |
+| Propósito, requisitante, partes interessadas e escopo | Heitor | [Rascunho para revisão](fase1-proposito.md) |
 | Descrição do produto e modelo de qualidade adaptado | Hugo | [Produto e modelo de qualidade](fase1-produto.md) |
 | Priorização das características e ODS | Pedro Druck | Em elaboração |
 
