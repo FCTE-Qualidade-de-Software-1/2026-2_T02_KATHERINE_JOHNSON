@@ -93,7 +93,7 @@ Para julgar a completude funcional sem depender de um dos canais como padrão, p
 | R14 | Prazo de defesa prévia ou de indicação do condutor | Necessário para exercer a defesa | Data da Defesa Prévia · Identificação do Condutor Infrator | Data limite para defesa prévia · Identificação condutor infrator |
 | R15 | Situação da infração | Indica se ainda há algo a fazer | Situação Pagamento · Situação Multa | Situação do pagamento · Situação Multa |
 
-Ficam fora da lista os incisos IV (prontuário do condutor) e VI (assinatura do infrator) do art. 280, porque são dados pessoais que não fazem parte da consulta pelo proprietário. Velocidade permitida e aferida só se aplicam a infrações de velocidade e entram como campos condicionais, não na contagem geral. A definição da métrica e dos níveis cabe ao Philipe.
+Ficam fora da lista os incisos IV (prontuário do condutor) e VI (assinatura do infrator) do art. 280, porque são dados pessoais que não fazem parte da consulta pelo proprietário. Velocidade permitida e aferida só se aplicam a infrações de velocidade e entram como campos condicionais, não na contagem geral. A lista é usada nas métricas M1.1.1 (tela de lista) e M1.1.2 (tela de detalhamento), e os campos comuns da Seção 1.4 na métrica M1.2.1, definidas pelo Philipe em `docs/fase2-metricas.md`.
 
 ### 1.6 Evidências
 
