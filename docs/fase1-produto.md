@@ -96,3 +96,83 @@ Ficam fora da lista os incisos IV (prontuário do condutor) e VI (assinatura do 
 | `evidencias/fase1/portal-login-2026-10-18.png` | Tela de login: CPF/CNPJ, senha, reCAPTCHA e "Entrar com gov.br" | Nenhum (campos vazios) |
 
 Prints pendentes, a fazer com veículo real e com tarja em placa, RENAVAM, CPF, nome, endereço e número do auto antes de entrar no repositório: lista de veículos, lista de infrações e detalhes de uma infração, nos dois canais. As regras de anonimização estão em `evidencias/fase1/README.md`.
+
+---
+
+## 2. Tipo de produto e descrição estruturada
+
+### 2.1 Classificação
+
+A consulta de infrações é um **serviço digital governamental ao cidadão**, oferecido por um sistema de informação do Detran-DF com dois clientes:
+
+- **Portal de Serviços:** aplicação web de página única (SPA) feita em Angular 12 com Angular Material, executada no navegador;
+- **aplicativo:** cliente móvel distribuído nas lojas oficiais para Android e iOS. Não foi possível confirmar se é nativo ou híbrido [VERIFICAR: no Android, procurar `libflutter.so`, `index.android.bundle` ou uma WebView dominante no pacote instalado].
+
+Os dois clientes não guardam as infrações: consultam serviços de backend do Detran-DF, que por sua vez reúnem dados próprios e de bases nacionais, como o RENAINF.
+
+### 2.2 Descrição lado a lado
+
+| Aspecto | Portal de Serviços | Aplicativo |
+|---|---|---|
+| Módulos usados na consulta | Autenticação; módulo "Infração" (histórico por veículo, detalhes, débitos e emissão de boleto/PIX) | [VERIFICAR] |
+| Interface com o usuário | Navegador, layout responsivo para desktop e celular | Telas do aplicativo |
+| Interface com o backend | API HTTPS em `api5.detran.df.gov.br` (ex.: serviço `portal/infracoes`) | [VERIFICAR: mesma API ou API própria] |
+| Identidade | Servidor OpenID Connect do Detran-DF (`acesso.detran.df.gov.br`) e gov.br (`sso.acesso.gov.br`) | [VERIFICAR] |
+| Dependências externas no carregamento | Google reCAPTCHA; Google Fonts; jQuery servido por `code.jquery.com`; agente de monitoramento Dynatrace | [VERIFICAR] |
+| Origem dos dados | Base do Detran-DF e RENAINF (dica "Origem: RENAINF") | Presume-se a mesma [VERIFICAR] |
+| Plataformas | Qualquer navegador moderno, em desktop ou celular | Android [VERIFICAR versão mínima] e iOS 15.1 ou superior |
+| Restrições | Login obrigatório; reCAPTCHA no login com CPF; conexão permanente | Login [VERIFICAR]; instalação e atualização pela loja; conexão permanente [VERIFICAR comportamento sem rede] |
+
+### 2.3 Diagrama de contexto
+
+```mermaid
+flowchart LR
+    cidadao(["Cidadão / condutor<br/>(proprietário do veículo)"])
+
+    subgraph clientes["Canais avaliados (caixa-preta)"]
+        portal["Portal de Serviços<br/>SPA Angular no navegador"]
+        app["Aplicativo DETRAN-DF<br/>Android e iOS"]
+    end
+
+    subgraph detran["Detran-DF (fora do alcance da avaliação)"]
+        idp["Servidor de identidade<br/>acesso.detran.df.gov.br"]
+        api["Serviços de backend<br/>api5.detran.df.gov.br"]
+        base[("Base de infrações<br/>do Detran-DF")]
+    end
+
+    subgraph externos["Serviços externos"]
+        govbr["gov.br<br/>(login federado)"]
+        renainf[("RENAINF<br/>(SENATRAN)")]
+        terceiros["reCAPTCHA, CDN e<br/>monitoramento"]
+    end
+
+    cidadao -->|consulta| portal
+    cidadao -->|consulta| app
+    portal -->|autenticação| idp
+    portal -->|HTTPS| api
+    app -.->|"HTTPS [VERIFICAR]"| api
+    portal --> terceiros
+    idp --> govbr
+    api --> base
+    api --> renainf
+```
+
+*Figura — Diagrama de contexto da consulta de infrações. Linha tracejada: ligação ainda não confirmada. Fonte: elaborado pela equipe a partir do levantamento de 18/10/2026.*
+
+### 2.4 Implicações para a avaliação
+
+Como a avaliação é caixa-preta, só se mede o que chega ao avaliador pelo canal. O diagrama separa o que está ao alcance (os dois clientes e o que trafega entre eles e a rede) do que não está (servidores e bases).
+
+| Dá para medir | Como | Não dá para medir | Por quê |
+|---|---|---|---|
+| Campos exibidos e sua consistência entre canais | Comparar as telas dos dois canais para o mesmo veículo, no mesmo dia | Correção absoluta dos dados | Não há acesso à base oficial. A referência possível é o outro canal e a notificação recebida pelo proprietário |
+| Passos até a lista de infrações | Contar telas e ações em roteiro fixo | Causa de um passo a mais | Exigiria conhecer o projeto interno |
+| Tempo percebido até a lista aparecer | Gravação de tela e cronometragem; no portal, também DevTools | Tempo de processamento no servidor e na base | Só se vê o tempo de ponta a ponta |
+| Dados transferidos | Portal: aba Rede do DevTools. Aplicativo: contador de dados por aplicativo do Android ou `adb shell dumpsys netstats` | Memória do servidor e capacidade | Exigiria teste de carga, não autorizado |
+| Conclusão da consulta em cada contexto (dispositivo, sistema, navegador, rede) | Roteiro repetido em cada contexto, com rede limitada por perfil do DevTools ou do Android | Disponibilidade ao longo do tempo | Exigiria monitoramento contínuo por semanas |
+
+Três consequências práticas para as Fases 2 e 3:
+
+1. **Login obrigatório.** A consulta só lista veículos do CPF logado, então quem faz login é o proprietário que consentiu, no aparelho de teste. A equipe não guarda senhas (ver `dados/consentimento.md`).
+2. **reCAPTCHA no login.** O tempo de login depende do avaliador; a medição de tempo deve começar depois da autenticação, a partir da escolha do menu de infrações.
+3. **Ferramentas diferentes por canal.** O perfilador do Android Studio não funciona com aplicativos de loja (não depuráveis). Por isso a utilização de recursos fica restrita a dados transferidos, que têm medição equivalente nos dois canais; memória fica fora da comparação.
