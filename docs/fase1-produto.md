@@ -176,3 +176,91 @@ Três consequências práticas para as Fases 2 e 3:
 1. **Login obrigatório.** A consulta só lista veículos do CPF logado, então quem faz login é o proprietário que consentiu, no aparelho de teste. A equipe não guarda senhas (ver `dados/consentimento.md`).
 2. **reCAPTCHA no login.** O tempo de login depende do avaliador; a medição de tempo deve começar depois da autenticação, a partir da escolha do menu de infrações.
 3. **Ferramentas diferentes por canal.** O perfilador do Android Studio não funciona com aplicativos de loja (não depuráveis). Por isso a utilização de recursos fica restrita a dados transferidos, que têm medição equivalente nos dois canais; memória fica fora da comparação.
+
+---
+
+## 3. Modelo de qualidade adaptado
+
+### 3.1 Ponto de partida
+
+O modelo combina duas fontes da família SQuaRE:
+
+- **modelo de qualidade do produto da ISO/IEC 25010:2023**, de onde vêm adequação funcional e eficiência de desempenho;
+- **modelo de qualidade em uso da ISO/IEC 25010:2011**, de onde vem a cobertura de contexto, com medidas na ISO/IEC 25022:2016.
+
+A segunda fonte é uma edição anterior por um motivo explícito: a ISO/IEC 25019:2023, que substituiu o modelo de qualidade em uso de 2011, removeu a cobertura de contexto. O prefácio da norma diz: "context coverage which was shown as quality characteristics in the quality-in-use model of the previous version is removed" (ISO/IEC 25019:2023, Foreword). As medidas de completude de contexto continuam na ISO/IEC 25022:2016, ainda vigente, e a própria ISO/IEC 25019:2023 prevê comparar a qualidade entre contextos de uso para encontrar lacunas (Introduction). Por isso a equipe mantém a característica, com a origem declarada.
+
+Partes interessadas usadas nas justificativas (a tabela completa é a do Heitor, na seção de propósito e stakeholders [VERIFICAR nomes finais]):
+
+- **Cidadão/condutor:** precisa ver todas as infrações, com dados corretos, em qualquer aparelho e rede;
+- **Equipe técnica de TI e gestão de serviços digitais do Detran-DF:** precisa saber em que canal e em que condição o serviço fica lento ou pesado;
+- **Requisitante (área de governança digital do Detran-DF):** precisa de paridade entre os canais para decidir onde investir.
+
+### 3.2 Seleção das subcaracterísticas
+
+| Característica (origem) | Subcaracterística | Decisão | Justificativa |
+|---|---|---|---|
+| Adequação funcional (25010:2023) | Completude funcional | Incluída | O cidadão precisa de todas as informações da autuação para pagar, recorrer ou indicar condutor. Medida contra a lista de referência da Seção 1.5, externa aos dois canais |
+| | Correção funcional | Incluída, adaptada | Divergência entre canais leva a pagamento errado ou perda de prazo. Sem acesso à base oficial, é medida como consistência entre os canais e com a notificação recebida pelo proprietário |
+| | Adequação (apropriação) funcional | Incluída, adaptada | A norma exemplifica com "the necessary and sufficient steps to complete a task, excluding any unnecessary steps" (25010:2023, 3.1.3). Mede-se a contagem objetiva de passos, sem opinião sobre facilidade |
+| Eficiência de desempenho (25010:2023) | Comportamento temporal | Incluída | A equipe técnica precisa comparar tempos entre canais; o cidadão em rede móvel sente o atraso |
+| | Utilização de recursos | Incluída, restrita | Só dados transferidos, que pesam no plano de dados do cidadão e têm medição equivalente nos dois canais. Memória fica fora porque não há ferramenta equivalente para o portal e para um aplicativo de loja |
+| | Capacidade | Excluída | Exige teste de carga sobre a infraestrutura do Detran-DF, não autorizado e fora do alcance caixa-preta |
+| Cobertura de contexto (25010:2011, qualidade em uso) | Completude de contexto | Incluída, adaptada | É o que diferencia os canais: computador × celular, Wi-Fi × 4G. A norma de 2011 define com "effectiveness, efficiency, freedom from risk and satisfaction"; a equipe usa só eficácia (consulta concluída) e tempo, porque satisfação é usabilidade, proibida neste trabalho |
+| | Flexibilidade | Incluída | Contextos além dos especificados, como rede degradada e versões antigas de sistema. Não confundir com a característica "flexibilidade" do modelo de produto de 2023, que trata de adaptabilidade e instalação |
+| Capacidade de interação (25010:2023) | Todas | Excluída | Corresponde à antiga usabilidade, proibida pela professora |
+| Compatibilidade (25010:2023) | Coexistência, interoperabilidade | Excluída | A troca de dados com o gov.br e o RENAINF acontece no servidor, fora do que se observa |
+| Confiabilidade (25010:2023) | Todas | Excluída | Disponibilidade exige monitoramento contínuo por semanas. Falhas pontuais aparecem como consulta não concluída na cobertura de contexto |
+| Segurança (25010:2023) | Todas | Excluída | Testar proteção de dados exigiria autorização formal do Detran-DF; o cuidado com dados pessoais fica no procedimento da equipe (LGPD) |
+| Manutenibilidade e flexibilidade (25010:2023) | Todas | Excluídas | Dependem de código-fonte ou de processo de implantação, inacessíveis |
+| Segurança operacional (25010:2023) | Todas | Excluída | A consulta não controla equipamentos nem expõe pessoas a dano físico |
+| Qualidade em uso (25010:2011) | Eficácia, eficiência, satisfação, ausência de risco | Excluídas como características | Satisfação é opinião de usuário. Eficácia e tempo entram só como parte da completude de contexto |
+
+### 3.3 Adaptações em relação ao modelo de referência
+
+1. **Origem mista.** Duas características vêm do modelo de produto de 2023 e uma do modelo de qualidade em uso de 2011, porque a comparação entre canais depende do contexto em que cada um é usado.
+2. **Completude de contexto sem satisfação.** A definição de 2011 inclui satisfação; aqui ela é medida só pela conclusão da consulta e pelo tempo.
+3. **Correção como consistência.** Sem a base oficial, a correção é julgada pela concordância entre os canais e com a notificação em papel ou eletrônica que o proprietário recebeu.
+4. **Apropriação funcional como contagem de passos.** Segue o exemplo da própria norma e evita qualquer juízo sobre facilidade de uso.
+5. **Utilização de recursos só pela rede.** É o único recurso com medição equivalente nos dois canais.
+
+### 3.4 Diagrama do modelo
+
+```mermaid
+flowchart TB
+    raiz["Qualidade da consulta de infrações<br/>Portal de Serviços × aplicativo"]
+
+    subgraph produto["Modelo de qualidade do produto — ISO/IEC 25010:2023"]
+        af["Adequação funcional"]
+        af1["Completude funcional"]
+        af2["Correção funcional*"]
+        af3["Apropriação funcional*"]
+        ed["Eficiência de desempenho"]
+        ed1["Comportamento temporal"]
+        ed2["Utilização de recursos*"]
+    end
+
+    subgraph uso["Modelo de qualidade em uso — ISO/IEC 25010:2011 (medidas: ISO/IEC 25022:2016)"]
+        cc["Cobertura de contexto"]
+        cc1["Completude de contexto*"]
+        cc2["Flexibilidade"]
+    end
+
+    raiz --> af
+    raiz --> ed
+    raiz --> cc
+    af --> af1
+    af --> af2
+    af --> af3
+    ed --> ed1
+    ed --> ed2
+    cc --> cc1
+    cc --> cc2
+```
+
+*Figura — Modelo de qualidade adaptado. Asterisco: subcaracterística adaptada (ver Seção 3.3). Características excluídas estão na tabela da Seção 3.2. Fonte: elaborado pela equipe com base na ISO/IEC 25010:2023 e na ISO/IEC 25010:2011.*
+
+---
+
+*Repositório do projeto:* [GitHub - 2026-2_T02_KATHERINE_JOHNSON](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON)  
+*Versão 0.1 — 18/10/2026 — rascunho para revisão.*
