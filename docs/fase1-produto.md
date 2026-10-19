@@ -40,54 +40,58 @@ Itens que dependem de login com um veículo real ou de um aparelho com o aplicat
 
 ### 1.3 Passos da consulta
 
-Sequência provável no portal, deduzida das telas públicas e das rotas do código cliente. Deve ser refeita com um veículo real, contando cada tela e cada ação.
+Sequência provável nos dois canais, deduzida das telas públicas, das telas de divulgação nas lojas e dos nomes de menu e de tela presentes no código cliente. A contagem definitiva de telas e ações será feita com veículo real (ver `evidencias/fase1/roteiro-levantamento.md`).
 
 | # | Portal de Serviços | Aplicativo |
 |---|---|---|
-| 1 | Abrir <https://portal.detran.df.gov.br> | Abrir o aplicativo [VERIFICAR] |
-| 2 | "Fazer login" e autenticar (CPF/CNPJ + senha + reCAPTCHA, ou gov.br) | Autenticar [VERIFICAR] |
-| 3 | Menu "Infração" | [VERIFICAR] |
-| 4 | Opção de histórico de infrações por veículo [VERIFICAR nome exato no menu] | [VERIFICAR] |
-| 5 | Selecionar o veículo na lista "Veículos atuais de minha propriedade" | [VERIFICAR] |
-| 6 | Ver a lista de infrações e escolher uma ("Selecione a multa desejada") | [VERIFICAR] |
-| 7 | Ver a tela "Detalhes da infração" | [VERIFICAR] |
+| 1 | Abrir <https://portal.detran.df.gov.br> | Abrir o aplicativo |
+| 2 | "Fazer login" e autenticar (CPF/CNPJ + senha + reCAPTCHA, ou gov.br) | "Entrar" e autenticar (CPF/CNPJ + senha, gov.br ou biometria) |
+| 3 | Na área de serviços, abrir o grupo de consultas de infração [VERIFICAR rótulo exato] | Na tela inicial, abrir "Infrações" ("Transferência de pontuação e mais") |
+| 4 | Escolher "Histórico de infrações por veículo" | Escolher "Histórico de infrações por veículo" |
+| 5 | Selecionar o veículo na lista "Veículos atuais de minha propriedade" | Selecionar o veículo [VERIFICAR rótulo] |
+| 6 | Ver a lista de infrações e escolher uma ("Selecione a multa desejada") | Ver a "Lista de infrações" e escolher uma |
+| 7 | Ver a tela "Detalhes da infração" | Ver o detalhamento ("Confira o detalhamento da infração") |
+
+O menu "Infração" do cabeçalho público do portal leva a outros serviços ("Identificação de infrator" e "Notificação de penalidade"), não ao histórico.
 
 ### 1.4 Campos exibidos por infração
 
-A tela de detalhes do portal prevê os rótulos abaixo (extraídos do código cliente). Um rótulo previsto não garante que o dado apareça preenchido; a presença efetiva será conferida com veículo real. A coluna do aplicativo será preenchida no mesmo levantamento.
+Rótulos previstos nos dois canais, extraídos do código cliente do portal (tela "Detalhes da infração") e da tabela de textos do aplicativo. No aplicativo os textos não estão ligados a uma tela específica, então a coluna indica que o rótulo existe no pacote, não que aparece no detalhamento. Em ambos os casos, um rótulo previsto não garante que o dado apareça preenchido; a presença efetiva será conferida com veículo real.
 
-| Grupo | Rótulos previstos no portal | Aplicativo |
+| Grupo | Portal de Serviços | Aplicativo |
 |---|---|---|
-| Veículo | Placa · UF · Marca/Modelo | [VERIFICAR] |
-| Identificação da infração | Infração · Descrição da Infração · Regulamento · Natureza · Auto Infração · Código Renainf · Órgão Autuador · Responsável pela Infração | [VERIFICAR] |
-| Ocorrência | Data Infração · Hora Infração · Local da Infração · Velocidade Permitida · Velocidade Aferida | [VERIFICAR] |
-| Prazos | Data da Notif. de Autuação · Data da Notif. de Penalidade · Data da Defesa Prévia · Identificação do Condutor Infrator · Data de Vencimento | [VERIFICAR] |
-| Valores | Valor da Multa · Valor Correção · Valor Desconto · Valor Devido | [VERIFICAR] |
-| Situação | Pontuação Infração/Status · Situação Pagamento · Situação Multa | [VERIFICAR] |
+| Veículo | Placa · UF · Marca/Modelo | Placa · Marca/Modelo |
+| Identificação da infração | Infração · Descrição da Infração · Regulamento · Natureza · Auto Infração · Código Renainf · Órgão Autuador · Responsável pela Infração | Infração · Descrição da infração · Regulamento · Natureza · Auto Infração · Código RENAINF · Órgão Autuador · Responsável pela infração |
+| Ocorrência | Data Infração · Hora Infração · Local da Infração · Velocidade Permitida · Velocidade Aferida | Data Infração · Hora Infração · Local da Infração · Velocidade Permitida · Velocidade Aferida |
+| Prazos | Data da Notif. de Autuação · Data da Notif. de Penalidade · Data da Defesa Prévia · Identificação do Condutor Infrator · Data de Vencimento | Data da Notif. de Autuação · Data da Notif. de Penalidade · Data limite para defesa prévia · Identificação condutor infrator · Data de Vencimento · Data opção desconto 40% - SNE |
+| Valores | Valor da Multa · Valor Correção · Valor Desconto · Valor Devido | Valor da Multa · Valor Correção · Valor Desconto · Valor Devido |
+| Situação | Pontuação Infração/Status · Situação Pagamento · Situação Multa | Pontuação da Infração · Situação do pagamento · Situação Multa |
 
-O campo "Código Renainf" traz a dica "Origem: RENAINF", o que indica que parte dos dados vem do Registro Nacional de Infrações de Trânsito, e não só da base do Detran-DF.
+Diferenças previstas, a confirmar com veículo real: o aplicativo não tem um rótulo "UF" isolado e tem um rótulo a mais, "Data opção desconto 40% - SNE", ligado ao Sistema de Notificação Eletrônica.
+
+Nos dois canais, o campo "Código Renainf" traz a dica "Origem: RENAINF", o que indica que parte dos dados vem do Registro Nacional de Infrações de Trânsito, e não só da base do Detran-DF.
 
 ### 1.5 Lista de referência de campos (insumo para a questão Q1.1)
 
 Para julgar a completude funcional sem depender de um dos canais como padrão, propõe-se uma lista de referência externa. Ela parte do conteúdo obrigatório do auto de infração (art. 280 do Código de Trânsito Brasileiro, Lei nº 9.503/1997) e acrescenta as informações de que o cidadão precisa para decidir o que fazer com a multa (pagar, recorrer, indicar condutor). Os textos legais foram conferidos no Planalto em 18/10/2026.
 
-| ID | Campo de referência | Fundamento | Rótulo correspondente no portal |
-|---|---|---|---|
-| R01 | Tipificação da infração (código e descrição) | CTB, art. 280, I | Infração · Descrição da Infração |
-| R02 | Enquadramento legal | Complementa o art. 280, I | Regulamento |
-| R03 | Local da infração | CTB, art. 280, II | Local da Infração |
-| R04 | Data da infração | CTB, art. 280, II | Data Infração |
-| R05 | Hora da infração | CTB, art. 280, II | Hora Infração |
-| R06 | Placa do veículo | CTB, art. 280, III | Placa |
-| R07 | Marca/modelo do veículo | CTB, art. 280, III | Marca/Modelo |
-| R08 | Órgão autuador | CTB, art. 280, V | Órgão Autuador |
-| R09 | Número do auto de infração | Identifica a autuação em pagamento, defesa e recurso | Auto Infração |
-| R10 | Natureza (gravidade) | CTB, art. 258 | Natureza |
-| R11 | Pontuação | CTB, art. 259 | Pontuação Infração/Status |
-| R12 | Valor da multa | CTB, art. 258 | Valor da Multa · Valor Devido |
-| R13 | Data de vencimento | Necessária para pagar no prazo | Data de Vencimento |
-| R14 | Prazo de defesa prévia ou de indicação do condutor | Necessário para exercer a defesa | Data da Defesa Prévia · Identificação do Condutor Infrator |
-| R15 | Situação da infração | Indica se ainda há algo a fazer | Situação Pagamento · Situação Multa |
+| ID | Campo de referência | Fundamento | Rótulo no portal | Rótulo no aplicativo |
+|---|---|---|---|---|
+| R01 | Tipificação da infração (código e descrição) | CTB, art. 280, I | Infração · Descrição da Infração | Infração · Descrição da infração |
+| R02 | Enquadramento legal | Complementa o art. 280, I | Regulamento | Regulamento |
+| R03 | Local da infração | CTB, art. 280, II | Local da Infração | Local da Infração |
+| R04 | Data da infração | CTB, art. 280, II | Data Infração | Data Infração |
+| R05 | Hora da infração | CTB, art. 280, II | Hora Infração | Hora Infração |
+| R06 | Placa do veículo | CTB, art. 280, III | Placa | Placa |
+| R07 | Marca/modelo do veículo | CTB, art. 280, III | Marca/Modelo | Marca/Modelo |
+| R08 | Órgão autuador | CTB, art. 280, V | Órgão Autuador | Órgão Autuador |
+| R09 | Número do auto de infração | Identifica a autuação em pagamento, defesa e recurso | Auto Infração | Auto Infração |
+| R10 | Natureza (gravidade) | CTB, art. 258 | Natureza | Natureza |
+| R11 | Pontuação | CTB, art. 259 | Pontuação Infração/Status | Pontuação da Infração |
+| R12 | Valor da multa | CTB, art. 258 | Valor da Multa · Valor Devido | Valor da Multa · Valor Devido |
+| R13 | Data de vencimento | Necessária para pagar no prazo | Data de Vencimento | Data de Vencimento |
+| R14 | Prazo de defesa prévia ou de indicação do condutor | Necessário para exercer a defesa | Data da Defesa Prévia · Identificação do Condutor Infrator | Data limite para defesa prévia · Identificação condutor infrator |
+| R15 | Situação da infração | Indica se ainda há algo a fazer | Situação Pagamento · Situação Multa | Situação do pagamento · Situação Multa |
 
 Ficam fora da lista os incisos IV (prontuário do condutor) e VI (assinatura do infrator) do art. 280, porque são dados pessoais que não fazem parte da consulta pelo proprietário. Velocidade permitida e aferida só se aplicam a infrações de velocidade e entram como campos condicionais, não na contagem geral. A definição da métrica e dos níveis cabe ao Philipe.
 
@@ -122,7 +126,7 @@ Os dois clientes não guardam as infrações: consultam serviços de backend do 
 | Módulos usados na consulta | Autenticação; módulo "Infração" (histórico por veículo, detalhes, débitos e emissão de boleto/PIX) | Autenticação; menu "Infrações" (histórico por veículo e por condutor, detalhamento, indicação de condutor, boleto) |
 | Interface com o usuário | Navegador, layout responsivo para desktop e celular | Telas do aplicativo |
 | Interface com o backend | API HTTPS em `api5.detran.df.gov.br` (ex.: serviço `portal/infracoes`) | Mesma família de APIs (`api5`, `api4` e `api.detran.df.gov.br`), mas com serviço próprio para infrações (`app/verifica-multa`, rota `veiculo/lista-infracao`) |
-| Identidade | Servidor OpenID Connect do Detran-DF (`acesso.detran.df.gov.br`) e gov.br (`sso.acesso.gov.br`) | O mesmo servidor OpenID Connect (mesmo domínio `detran-portal`) e gov.br |
+| Identidade | Servidor OpenID Connect do Detran-DF (`acesso.detran.df.gov.br`) e gov.br (`sso.acesso.gov.br`) | O mesmo servidor OpenID Connect (mesmo domínio de autenticação, `detran-portal`) e gov.br |
 | Dependências externas no carregamento | Google reCAPTCHA; Google Fonts; jQuery servido por `code.jquery.com`; agente de monitoramento Dynatrace | Firebase (notificações e relatórios de falha) e agente de monitoramento Dynatrace |
 | Origem dos dados | Base do Detran-DF e RENAINF (dica "Origem: RENAINF") | A mesma: o aplicativo traz a mesma dica "Origem: RENAINF" |
 | Plataformas | Qualquer navegador moderno, em desktop ou celular | Android 8.0 ou superior e iOS 15.1 ou superior |
