@@ -1,0 +1,110 @@
+\subsection{Métricas de Medição}
+\label{subsec:metricas-gqm}
+
+Para responder às questões definidas na Seção~\ref{subsec:questoes-hipoteses}, foram especificadas métricas externas, objetivas e aplicáveis tanto ao Portal de Serviços web quanto ao aplicativo mobile oficial do Detran-DF. Todas as métricas consideram a mesma massa de dados, os mesmos contextos de acesso e o mesmo intervalo temporal de consulta, de modo a permitir a comparação entre os canais.
+
+A Tabela~\ref{tab:metricas-gqm} apresenta o mapeamento entre objetivos, questões e métricas.
+
+\begin{table}[htbp]
+\centering
+\caption{Mapeamento entre objetivos, questões e métricas GQM}
+\label{tab:metricas-gqm}
+\footnotesize
+\begin{tabular}{|c|c|c|p{6.8cm}|c|}
+\hline
+\textbf{Objetivo} & \textbf{Questão} & \textbf{Métrica} & \textbf{Nome da métrica} & \textbf{Unidade} \\ \hline
+G1 & Q1.1 & M1.1.1 & Proporção de campos da lista de referência exibidos & \% \\ \cline{3-5}
+& & M1.1.2 & Proporção de campos detalhados acessíveis & \% \\ \hline
+G1 & Q1.2 & M1.2.1 & Proporção de campos comuns consistentes & \% \\ \cline{3-5}
+& & M1.2.2 & Proporção de infrações sem divergência & \% \\ \hline
+G1 & Q1.3 & M1.3.1 & Número de passos até a lista de infrações & Passos \\ \cline{3-5}
+& & M1.3.2 & Número de transições de tela até a lista de infrações & Telas \\ \hline
+G2 & Q2.1 & M2.1.1 & Tempo até a exibição completa da lista de infrações & Segundos \\ \cline{3-5}
+& & M2.1.2 & Tempo até a exibição completa dos detalhes da infração & Segundos \\ \hline
+G2 & Q2.2 & M2.2.1 & Volume de dados transferidos na consulta completa & MB \\ \hline
+G3 & Q3.1 & M3.1.1 & Taxa de conclusão da consulta por plataforma & \% \\ \cline{3-5}
+& & M3.1.2 & Taxa de conclusão da consulta por navegador & \% \\ \hline
+G3 & Q3.2 & M3.2.1 & Taxa de conclusão da consulta por condição de rede & \% \\ \cline{3-5}
+& & M3.2.2 & Taxa de falhas ou expiração de sessão & \% \\ \cline{3-5}
+& & M3.2.3 & Tempo de conclusão da consulta por condição de rede & Segundos \\ \hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Métricas de adequação funcional}
+
+A métrica M1.1.1 verifica a completude das informações necessárias à identificação e compreensão da autuação. A lista de referência de campos deve ser definida a partir do levantamento dos campos efetivamente necessários e exibidos nos autos de infração consultados. [VERIFICAR] A faixa Excelente admite apenas ausência residual de campos, enquanto valores abaixo de 60\% indicam que parte substancial das informações necessárias não está disponível.
+
+A métrica M1.1.2 verifica se os campos detalhados da infração permanecem acessíveis no canal avaliado. [VERIFICAR] A faixa Excelente admite apenas ausência residual de campos; valores abaixo de 60\% indicam que parte substancial das informações detalhadas não está disponível.
+
+A métrica M1.2.1 compara os valores dos campos comuns exibidos nos dois canais. Divergências de status, valores monetários, pontuação ou prazos podem levar o cidadão a tomar decisões com base em informações inconsistentes; por isso, a faixa Excelente admite apenas divergências residuais. A métrica M1.2.2 agrega essa comparação por infração consultada, considerando que valores abaixo de 60\% indicam inconsistência substancial entre os canais.
+
+As métricas M1.3.1 e M1.3.2 quantificam a extensão do fluxo necessário para atingir a lista de infrações, sem avaliar a percepção de facilidade de uso. O número de passos mede as ações necessárias para concluir a consulta, enquanto o número de transições mede a extensão do caminho percorrido até o resultado.
+
+\subsubsection{Métricas de eficiência de desempenho}
+
+As métricas M2.1.1 e M2.1.2 medem o tempo decorrido entre o início da ação do avaliador e a exibição completa do conteúdo avaliado. Em M2.1.2, deve ser utilizada a mesma infração anonimizada nos dois canais. Os resultados serão reportados por média, mediana e percentil 90, considerando o número de repetições definido no plano de avaliação. [VERIFICAR] Os intervalos de aceitabilidade são provisionais e consideram referências usuais de engenharia de interação: respostas de até 1 segundo tendem a preservar o fluxo de pensamento, enquanto esperas de até 10 segundos ainda permitem manter a atenção na tarefa; acima desse limite, aumenta o risco de interrupção da interação. Como a consulta envolve autenticação, processamento e exibição de dados, foram adotadas faixas intermediárias entre esses limites.
+
+A métrica M2.2.1 mede o volume total de dados transferidos durante a execução completa da consulta. A redução do volume é relevante porque afeta o consumo de dados móveis do cidadão.
+
+\subsubsection{Métricas de cobertura de contexto}
+
+As métricas M3.1.1 e M3.1.2 verificam se a consulta é concluída nos ambientes operacionais definidos no escopo da avaliação. [VERIFICAR] A faixa Excelente representa conclusão integral ou quase integral; valores abaixo de 60\% indicam comprometimento relevante da cobertura de contexto.
+
+As métricas M3.2.1, M3.2.2 e M3.2.3 verificam o comportamento da consulta sob condições de rede degradada, em comparação com as condições de referência Wi-Fi e 4G. [VERIFICAR] A taxa de conclusão é priorizada porque indica diretamente a capacidade de realizar a tarefa em diferentes contextos; falhas, expirações e tempo são medidas complementares de estabilidade e resiliência.
+
+\subsection{Níveis de Pontuação}
+\label{subsec:niveis-pontuacao}
+
+Os níveis de pontuação das métricas percentuais são apresentados na Tabela~\ref{tab:niveis-percentuais}. Essas faixas são aplicadas às métricas de completude, consistência e conclusão. Para métricas de falhas, a ordem dos níveis é invertida, pois valores menores são melhores.
+
+\begin{table}[htbp]
+\centering
+\caption{Níveis de pontuação para métricas percentuais}
+\label{tab:niveis-percentuais}
+\footnotesize
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Nível} & \textbf{Faixa} \\ \hline
+Inaceitável & Abaixo de 60\% \\ \hline
+Mínimo aceitável & 60\% a 79\% \\ \hline
+Alvo & 80\% a 94\% \\ \hline
+Excelente & 95\% a 100\% \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Níveis de pontuação para métricas de contagem, tempo e volume}
+\label{tab:niveis-nao-percentuais}
+\footnotesize
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Métrica} & \textbf{Excelente} & \textbf{Alvo} & \textbf{Mínimo aceitável / Inaceitável} \\ \hline
+M1.3.1 (passos) & até 4 & 5 a 6 & 7 a 8 / acima de 8 \\ \hline
+M1.3.2 (telas) & até 3 & 4 a 5 & 6 a 7 / acima de 7 \\ \hline
+M2.1.1 (segundos) & até 3 & 3,01 a 5 & 5,01 a 8 / acima de 8 \\ \hline
+M2.1.2 (segundos) & até 2 & 2,01 a 4 & 4,01 a 6 / acima de 6 \\ \hline
+M2.2.1 (MB) & até 2 & 2,01 a 5 & 5,01 a 10 / acima de 10 \\ \hline
+M3.2.3 (segundos) & até 5 & 5,01 a 10 & 10,01 a 20 / acima de 20 \\ \hline
+\end{tabular}
+\end{table}
+
+Nas métricas da tabela, valores menores são melhores. As faixas foram definidas como critérios operacionais iniciais, combinando a finalidade da consulta, as necessidades do cidadão condutor, referências usuais de engenharia de interação, uma faixa intermediária de comparação e um limite de degradação que sinaliza impacto mensurável na conclusão da consulta. A equipe poderá recalibrá-las antes da execução apenas mediante registro da justificativa e aplicação uniforme aos dois canais.
+
+\subsection{Critérios de Julgamento}
+\label{subsec:criterios-julgamento}
+
+Cada questão será respondida pela comparação dos resultados das métricas associadas entre o Portal de Serviços e o aplicativo mobile. Um canal é considerado superior em uma métrica quando obtém nível de pontuação superior ao do outro canal; empate de nível será registrado como paridade nessa métrica.
+
+Uma questão é considerada atendida quando todas as suas métricas atingem pelo menos o nível Mínimo aceitável. Um objetivo é considerado atendido quando todas as questões que o compõem são atendidas e nenhuma métrica associada é classificada como Inaceitável. Se houver uma métrica Inaceitável, o objetivo será classificado como não atendido até que a evidência seja revista. Quando os canais apresentarem o mesmo nível em todas as métricas associadas a um objetivo, registra-se paridade entre os canais.
+
+Para a questão Q1.1, o Portal de Serviços será considerado mais completo que o aplicativo somente se M1.1.1 e M1.1.2 apresentarem valores superiores no Portal. Para a questão Q1.2, será registrada consistência entre os canais quando M1.2.1 e M1.2.2 atingirem o nível Alvo ou Excelente.
+
+Para a questão Q2.1, o canal com menor mediana será considerado superior; a média e o percentil 90 serão usados para verificar a estabilidade e reportar dispersão. Para a questão Q2.2, o canal com menor volume médio de dados transferidos será considerado superior.
+
+Para as questões Q3.1 e Q3.2, o canal será considerado superior quando apresentar maior taxa de conclusão; a taxa de falhas ou expiração de sessão será usada como métrica de desempate e verificação. Em caso de resultados conflitantes, prevalece o canal que atingir o maior nível na métrica diretamente ligada à hipótese da questão; empate permanece como paridade.
+
+\subsection{Diagrama GQM}
+\label{subsec:diagrama-gqm}
+
+O diagrama editável da cadeia Objetivo--Questão--Métrica está disponível em \texttt{artigo/figuras/diagram_code.mmd}, com a versão gráfica enviada em \texttt{artigo/figuras/diagram.png}. Ele contempla os níveis conceitual (G), operacional (Q) e quantitativo (M).
