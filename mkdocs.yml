@@ -1,0 +1,68 @@
+site_name: Avaliação da consulta de infrações do Detran-DF
+site_description: Projeto Final de FGA0315 Qualidade de Software 1 (UnB/FGA, 2026/2) — equipe Katherine Johnson
+site_url: https://fcte-qualidade-de-software-1.github.io/2026-2_T02_KATHERINE_JOHNSON/
+repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON
+repo_name: Repositório no GitHub
+edit_uri: edit/main/docs/
+docs_dir: docs
+
+theme:
+  name: material
+  language: pt-BR
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para tema escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para tema claro
+
+# Versão exibida no rodapé de todas as páginas; atualizar a cada release.
+extra:
+  versao: "0.1.0 (pré-E1)"
+  generator: false
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search:
+      lang: pt
+
+# Ao adicionar uma página nova em docs/, incluí-la aqui na seção correspondente.
+nav:
+  - Início: index.md
+  - Fase 1:
+      - Visão geral: fase1.md
+      - Produto e modelo de qualidade: fase1-produto.md
+  - Fase 2:
+      - Visão geral: fase2.md
+      - Objetivos, questões e hipóteses: fase2-gqm.md
+      - Métricas, níveis e critérios de julgamento: fase2-metricas.md
+  - Gestão (PSM/CID): gestao.md
+  - Atas: atas.md
+  - Equipe: equipe.md
+  - Declaração de IA: declaracao-ia.md

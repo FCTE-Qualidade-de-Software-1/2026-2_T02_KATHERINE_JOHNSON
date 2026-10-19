@@ -202,4 +202,4 @@ Para Q2.1, a mediana é o critério principal, com média e percentil 90 como me
 
 ## Diagrama GQM
 
-A seguir está o diagrama Objetivo–Questão–Métrica: [diagrama GQM](../artigo/figuras/diagram.png). O código editável está disponível em [`diagram_code.mmd`](../artigo/figuras/diagram_code.mmd).
+A seguir está o diagrama Objetivo–Questão–Métrica: [diagrama GQM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/artigo/figuras/diagram.png). O código editável está disponível em [`diagram_code.mmd`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/artigo/figuras/diagram_code.mmd).
