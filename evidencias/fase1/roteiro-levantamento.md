@@ -1,6 +1,6 @@
 # Roteiro da Sessão de Levantamento com Veículo Real
 
-**Objetivo:** fechar os itens da issue #5 que só podem ser verificados com login: prints das telas logadas, contagem de passos, campos efetivamente exibidos e os [VERIFICAR] restantes de `docs/fase1-produto.md`.  
+**Objetivo:** fechar os itens da issue #5 que só podem ser verificados com login: prints das telas logadas, contagem de passos, campos efetivamente exibidos e os itens pendentes de `docs/fase1-produto.md`.  
 **Duração estimada:** 40 minutos por veículo.  
 **Responsável:** Hugo Freitas Silva, com o proprietário do veículo presente.
 
@@ -55,7 +55,7 @@ Antes do commit, aplicar as regras de anonimização do `README.md` desta pasta:
 
 ## 5. Depois da sessão
 
-- [ ] Substituir os [VERIFICAR] de `docs/fase1-produto.md` pelos valores do formulário.
+- [ ] Atualizar `docs/fase1-produto.md` com os valores do formulário.
 - [ ] Atualizar a tabela anonimizada em `dados/massa-de-dados.md`.
 - [ ] Atualizar a tabela "Prints pendentes" do `README.md` desta pasta.
 - [ ] Se a contagem de passos ou os campos mudarem algo do artigo, ajustar `artigo/secoes/fase1-produto.tex`.

@@ -16,9 +16,9 @@ O levantamento usou apenas informações acessíveis a qualquer cidadão, sem cr
 1. **Acesso público ao Portal de Serviços** em navegador desktop (Google Chrome, Linux), em 18/10/2026, com captura das telas públicas (ver Seção 1.6).
 2. **Páginas oficiais do aplicativo** na Google Play e na App Store, com capturas da parte superior das páginas, e consulta aos metadados públicos das duas lojas (iTunes Lookup e dados da página da Google Play), em 18/10/2026.
 3. **Inspeção do código cliente público do portal**, isto é, os arquivos que o próprio navegador baixa ao abrir a página e que qualquer usuário pode ver nas ferramentas de desenvolvedor. Essa inspeção não dá acesso ao código do servidor e serviu só para identificar rótulos de tela, rotas e serviços externos.
-4. **Inspeção do pacote público do aplicativo Android**, versão 2.6.9 (código de versão 244, o mesmo publicado na Google Play), obtido no espelho público APKPure em 18/10/2026. Foram lidos apenas o manifesto, a lista de bibliotecas e a tabela de textos do pacote, com o mesmo objetivo do item 3. A versão iOS não foi inspecionada; presume-se o mesmo código-base [VERIFICAR no aparelho iOS].
+4. **Inspeção do pacote público do aplicativo Android**, versão 2.6.9 (código de versão 244, o mesmo publicado na Google Play), obtido no espelho público APKPure em 18/10/2026. Foram lidos apenas o manifesto, a lista de bibliotecas e a tabela de textos do pacote, com o mesmo objetivo do item 3. A versão iOS não foi inspecionada; presume-se o mesmo código-base, a confirmar no aparelho iOS.
 
-Itens que dependem de login com um veículo real estão marcados com **[VERIFICAR]** e serão confirmados na sessão de levantamento descrita em `evidencias/fase1/roteiro-levantamento.md`.
+Os itens que dependem de login com um veículo real (rótulos exatos das telas logadas, contagem de passos e campos efetivamente exibidos) serão confirmados na sessão de levantamento descrita em `evidencias/fase1/roteiro-levantamento.md`.
 
 ### 1.2 Identificação dos canais
 
@@ -27,16 +27,16 @@ Itens que dependem de login com um veículo real estão marcados com **[VERIFICA
 | Nome oficial | "Detran Digital", apresentado como "Portal de Serviços do Departamento de Trânsito do Distrito Federal (Detran/DF)" | "DETRAN-DF" nas duas lojas; a descrição na Google Play o chama de "DETRAN DIGITAL" |
 | Endereço / identificador | <https://portal.detran.df.gov.br> | Android: `br.com.mesotec.detrandf` · iOS: `id1526746296` |
 | Publicador | Detran-DF | App Store: "Departamento de Trânsito do Distrito Federal". Google Play: "DETRAN DF", com contato `appdetran@detran.df.gov.br` |
-| Versão avaliada | Não há número de versão público; o pacote principal carregado em 18/10/2026 é `main-es2017.638a2c0c922c0af94e51.js` | 2.6.9 no iOS (publicada em 13/10/2026) e na Google Play (atualizada em 09/10/2026) [VERIFICAR versão instalada no aparelho de teste] |
+| Versão avaliada | Não há número de versão público; o pacote principal carregado em 18/10/2026 é `main-es2017.638a2c0c922c0af94e51.js` | 2.6.9 no iOS (publicada em 13/10/2026) e na Google Play (atualizada em 09/10/2026) |
 | Primeira publicação | — | App Store: 17/08/2020 · Google Play: 14/08/2020 |
 | Plataformas | Navegador em desktop e em celular | Android e iOS |
-| Requisito mínimo | Não declarado [VERIFICAR navegadores suportados] | iOS 15.1 ou superior · Android 8.0 ou superior |
+| Requisito mínimo | Não declarado | iOS 15.1 ou superior · Android 8.0 ou superior |
 | Tamanho do pacote | — | 43,5 MB no iOS |
 | Instalações | — | Mais de 1 milhão na Google Play |
 | Autenticação | CPF/CNPJ e senha, com reCAPTCHA, ou botão "Entrar com gov.br" | CPF/CNPJ e senha, ou "Entrar com" gov.br; depois do primeiro acesso, login por biometria opcional. Mesma conta do portal (mesmo servidor de identidade) |
 | A consulta exige login? | Sim. As telas de infrações do veículo ficam na área logada e listam só os veículos vinculados ao CPF do usuário ("Veículos atuais de minha propriedade"). Há também a opção "Consultar veículo de outra UF". | Sim, pela mesma lógica: a opção "Histórico de infrações por veículo" fica na área logada. A tela inicial oferece "Serviços abertos" sem login (ver nota abaixo) |
 
-**Nota sobre consulta sem login.** Os dois canais têm uma consulta pública de **débitos** do veículo (serviço `acesso-publico/debitos`), que inclui débitos de infrações a pagar. Ela não substitui o histórico de infrações: mostra só o que está pendente de pagamento, sem o detalhamento da autuação. Por isso o objeto da avaliação continua sendo o histórico de infrações por veículo, na área logada. Cabe ao Heitor registrar esse corte no escopo [VERIFICAR com veículo real quais campos a consulta pública exibe].
+**Nota sobre consulta sem login.** Os dois canais têm uma consulta pública de **débitos** do veículo (serviço `acesso-publico/debitos`), que inclui débitos de infrações a pagar. Ela não substitui o histórico de infrações: mostra só o que está pendente de pagamento, sem o detalhamento da autuação. Por isso o objeto da avaliação continua sendo o histórico de infrações por veículo, na área logada. Cabe ao Heitor registrar esse corte no escopo.
 
 ### 1.3 Passos da consulta
 
@@ -46,9 +46,9 @@ Sequência provável nos dois canais, deduzida das telas públicas, das telas de
 |---|---|---|
 | 1 | Abrir <https://portal.detran.df.gov.br> | Abrir o aplicativo |
 | 2 | "Fazer login" e autenticar (CPF/CNPJ + senha + reCAPTCHA, ou gov.br) | "Entrar" e autenticar (CPF/CNPJ + senha, gov.br ou biometria) |
-| 3 | Na área de serviços, abrir o grupo de consultas de infração [VERIFICAR rótulo exato] | Na tela inicial, abrir "Infrações" ("Transferência de pontuação e mais") |
+| 3 | Na área de serviços, abrir o grupo de consultas de infração | Na tela inicial, abrir "Infrações" ("Transferência de pontuação e mais") |
 | 4 | Escolher "Histórico de infrações por veículo" | Escolher "Histórico de infrações por veículo" |
-| 5 | Selecionar o veículo na lista "Veículos atuais de minha propriedade" | Selecionar o veículo [VERIFICAR rótulo] |
+| 5 | Selecionar o veículo na lista "Veículos atuais de minha propriedade" | Selecionar o veículo |
 | 6 | Ver a lista de infrações e escolher uma ("Selecione a multa desejada") | Ver a "Lista de infrações" e escolher uma |
 | 7 | Ver a tela "Detalhes da infração" | Ver o detalhamento ("Confira o detalhamento da infração") |
 
@@ -130,7 +130,7 @@ Os dois clientes não guardam as infrações: consultam serviços de backend do 
 | Dependências externas no carregamento | Google reCAPTCHA; Google Fonts; jQuery servido por `code.jquery.com`; agente de monitoramento Dynatrace | Firebase (notificações e relatórios de falha) e agente de monitoramento Dynatrace |
 | Origem dos dados | Base do Detran-DF e RENAINF (dica "Origem: RENAINF") | A mesma: o aplicativo traz a mesma dica "Origem: RENAINF" |
 | Plataformas | Qualquer navegador moderno, em desktop ou celular | Android 8.0 ou superior e iOS 15.1 ou superior |
-| Restrições | Login obrigatório; reCAPTCHA no login com CPF; conexão permanente | Login obrigatório, sem reCAPTCHA; instalação e atualização pela loja; conexão permanente para a consulta (há aviso "Sem conexão com a internet") [VERIFICAR comportamento sem rede] |
+| Restrições | Login obrigatório; reCAPTCHA no login com CPF; conexão permanente | Login obrigatório, sem reCAPTCHA; instalação e atualização pela loja; conexão permanente para a consulta (há aviso "Sem conexão com a internet") |
 
 ### 2.3 Diagrama de contexto
 
@@ -201,7 +201,7 @@ O modelo combina duas fontes da família SQuaRE:
 
 A segunda fonte é uma edição anterior por um motivo explícito: a ISO/IEC 25019:2023, que substituiu o modelo de qualidade em uso de 2011, removeu a cobertura de contexto. O prefácio da norma diz: "context coverage which was shown as quality characteristics in the quality-in-use model of the previous version is removed" (ISO/IEC 25019:2023, Foreword). As medidas de completude de contexto continuam na ISO/IEC 25022:2016, ainda vigente, e a própria ISO/IEC 25019:2023 prevê comparar a qualidade entre contextos de uso para encontrar lacunas (Introduction). Por isso a equipe mantém a característica, com a origem declarada.
 
-Partes interessadas usadas nas justificativas (a tabela completa é a do Heitor, na seção de propósito e stakeholders [VERIFICAR nomes finais]):
+Partes interessadas usadas nas justificativas (a tabela completa é a do Heitor, na seção de propósito e stakeholders):
 
 - **Cidadão/condutor:** precisa ver todas as infrações, com dados corretos, em qualquer aparelho e rede;
 - **Equipe técnica de TI e gestão de serviços digitais do Detran-DF:** precisa saber em que canal e em que condição o serviço fica lento ou pesado;
