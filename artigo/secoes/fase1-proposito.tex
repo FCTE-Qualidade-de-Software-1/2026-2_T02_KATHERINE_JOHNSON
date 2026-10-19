@@ -1,0 +1,87 @@
+% Fase 1 --- Propósito, requisitante, partes interessadas e escopo (responsável: Heitor).
+% Versão completa para a GitPage: docs/fase1-proposito.md.
+% Referências cruzadas para subsec:produto e subsec:modelo-qualidade estão em fase1-produto.tex (Hugo).
+
+\subsection{Propósito e Uso Pretendido da Avaliação}
+\label{subsec:proposito}
+
+O Detran-DF oferece a consulta de infrações em dois canais, o Portal de Serviços e o aplicativo, e o cidadão escolhe qual usar conforme o aparelho e a conexão de que dispõe. Os dois canais compartilham o servidor de identidade, mas consultam serviços de backend distintos (Seção~\ref{subsec:produto}). Isso abre espaço para que um mesmo veículo apareça com informações, tempos de resposta ou possibilidade de conclusão diferentes conforme o canal. Esta avaliação existe para verificar se os dois canais entregam a consulta com qualidade equivalente e, quando não entregam, onde está a diferença.
+
+O requisitante é a \textbf{Área de Governança Digital do Detran-DF}. Trata-se de um \textbf{requisitante hipotético}, adotado para orientar as decisões da avaliação: a equipe não tem vínculo com o órgão, e nenhum resultado será apresentado como posição oficial dele. A Tabela~\ref{tab:decisoes} lista as decisões que os resultados devem apoiar e quem toma cada uma.
+
+\begin{table}[htbp]
+\centering
+\caption{Decisões apoiadas pela avaliação e seus responsáveis}
+\label{tab:decisoes}
+\footnotesize
+\begin{tabular}{|p{0.5cm}|p{6.6cm}|p{3.4cm}|p{2.6cm}|}
+\hline
+\textbf{ID} & \textbf{Decisão} & \textbf{Quem decide} & \textbf{Evidência usada} \\ \hline
+D1 & Em qual canal e em qual característica investir primeiro em melhoria & Requisitante & Julgamento dos objetivos G1, G2 e G3 por canal \\ \hline
+D2 & Quais divergências de dados entre os canais corrigir, e com que urgência & Equipe técnica de TI, acionada pelo requisitante & Questão Q1.2 (consistência entre canais) \\ \hline
+D3 & Qual canal recomendar ao cidadão em cada contexto de uso (computador ou celular, Wi-Fi ou rede móvel) & Requisitante, com a área de atendimento ao cidadão & Objetivos G2 e G3 por contexto \\ \hline
+D4 & Quais contextos (versões de sistema, navegadores e condições de rede) devem ter suporte garantido & Equipe técnica de TI & Objetivo G3 \\ \hline
+\end{tabular}
+\par\smallskip
+\raggedright\scriptsize Fonte: elaborada pela equipe.
+\end{table}
+
+O uso pretendido é comparativo. Os resultados valem como linha de base da qualidade da consulta nos dois canais, nas versões e nos contextos avaliados, e não como certificação de conformidade nem como avaliação do Detran-DF como um todo.
+
+\subsection{Partes Interessadas}
+\label{subsec:stakeholders}
+
+A Tabela~\ref{tab:stakeholders} apresenta as partes interessadas, o critério pelo qual cada uma consideraria a avaliação bem-sucedida e como cada uma influenciou as escolhas da equipe. As três primeiras fornecem os pontos de vista dos objetivos de medição da Fase 2 (Seção~\ref{subsec:rastreabilidade}).
+
+\begin{table}[htbp]
+\centering
+\caption{Partes interessadas, critérios de sucesso e influência na avaliação}
+\label{tab:stakeholders}
+\footnotesize
+\begin{tabular}{|p{2.4cm}|p{3.2cm}|p{3.6cm}|p{4.0cm}|}
+\hline
+\textbf{Parte interessada} & \textbf{Necessidade} & \textbf{Critério de sucesso} & \textbf{Influência na avaliação} \\ \hline
+Requisitante: Área de Governança Digital do Detran-DF (hipotético) & Saber se os canais têm paridade e onde investir & Julgamento por característica e por canal que permita ordenar as melhorias (D1) & Definiu o propósito comparativo e a regra de que toda métrica se aplica igualmente aos dois canais \\ \hline
+Cidadão/condutor proprietário do veículo & Ver as infrações completas e corretas para pagar, recorrer ou indicar condutor no prazo & Consulta concluída, com os campos de referência, em todos os contextos do escopo e com os mesmos dados nos dois canais & Motivou a adequação funcional e a cobertura de contexto; ponto de vista de G1 e G3 \\ \hline
+Equipe técnica de TI e gestão de serviços digitais do Detran-DF, incluindo o fornecedor do aplicativo & Saber em que canal e em que condição a consulta fica lenta, pesada ou falha & Medições reproduzíveis por canal e por condição de rede, que indiquem onde está a diferença (D2, D4) & Motivou a eficiência de desempenho; ponto de vista de G2 \\ \hline
+Área de atendimento ao cidadão & Orientar o cidadão sobre qual canal usar & Recomendação por contexto de uso (D3) & Indireta: reforça a comparação por contexto em G2 e G3 \\ \hline
+Órgãos de controle e transparência & Evidência de que o serviço digital é prestado de forma equivalente nos canais & Resultados rastreáveis até os dados brutos & Indireta: reforça a rastreabilidade dos dados no repositório \\ \hline
+Equipe avaliadora (Katherine Johnson) & Avaliação viável em caixa-preta, no prazo da disciplina & Todas as métricas coletáveis sem acesso ao código e com consentimento dos proprietários & Restringiu o escopo (Seção~\ref{subsec:escopo}) e a massa de dados \\ \hline
+\end{tabular}
+\par\smallskip
+\raggedright\scriptsize Fonte: elaborada pela equipe.
+\end{table}
+
+\subsection{Escopo, Profundidade e Objetos da Avaliação}
+\label{subsec:escopo}
+
+O objeto da avaliação é o \textbf{histórico de infrações por veículo}, na área autenticada, no Portal de Serviços \cite{detrandf2026portal} e no aplicativo, versão 2.6.9, para Android e iOS \cite{detrandf2026app}. A consulta é observada da escolha do menu de infrações, já com o usuário autenticado, até a exibição dos detalhes de uma infração. Os contextos de uso especificados, que a cobertura de contexto (objetivo G3) deve cobrir, são:
+\begin{itemize}
+    \item \textbf{Portal de Serviços:} navegadores Google Chrome e Mozilla Firefox em computador, e Google Chrome em celular Android;
+    \item \textbf{aplicativo:} um celular Android de entrada e um intermediário, ambos com Android 8.0 ou superior, e um iPhone com iOS 15.1 ou superior [VERIFICAR modelos disponíveis na equipe];
+    \item \textbf{rede:} Wi-Fi, rede móvel 4G e uma condição de rede degradada simulada, cujos parâmetros serão definidos no plano de avaliação (Fase 3).
+\end{itemize}
+
+A profundidade é de caixa-preta: todas as métricas são externas, obtidas por avaliadores da equipe que seguem um roteiro fixo, sem acesso ao código-fonte, aos servidores ou à base do Detran-DF, e sem coleta de opinião de usuários. A Tabela~\ref{tab:fora-escopo} apresenta o que ficou fora e o motivo de cada corte. As características excluídas do modelo de qualidade estão justificadas na Seção~\ref{subsec:modelo-qualidade}.
+
+\begin{table}[htbp]
+\centering
+\caption{Itens fora do escopo e justificativa de cada corte}
+\label{tab:fora-escopo}
+\footnotesize
+\begin{tabular}{|p{4.0cm}|p{9.6cm}|}
+\hline
+\textbf{Fora do escopo} & \textbf{Justificativa} \\ \hline
+Autenticação (login) & Pré-condição, não objeto: o portal exige reCAPTCHA e o aplicativo aceita biometria, o que torna tempo e passos de login incomparáveis \\ \hline
+Consulta pública de débitos, sem login & Mostra só débitos pendentes, sem o detalhamento da autuação; não equivale ao histórico de infrações \\ \hline
+Histórico de infrações por condutor & Existe apenas no aplicativo [VERIFICAR no portal com veículo real]; não pode ser comparado entre canais \\ \hline
+Pagamento, defesa, recurso e indicação de condutor & São serviços distintos da consulta e exigiriam transações financeiras ou processos administrativos reais com os veículos da massa de dados \\ \hline
+Consulta de veículo de outra UF & Depende de bases de outros estados, fora do serviço do Detran-DF \\ \hline
+Capacidade de interação (usabilidade) & Excluída por exigência da disciplina \\ \hline
+Aparelhos abaixo de Android 8.0 ou iOS 15.1 & Não instalam o aplicativo; não contam como falha de conclusão \\ \hline
+\end{tabular}
+\par\smallskip
+\raggedright\scriptsize Fonte: elaborada pela equipe a partir do levantamento da Seção~\ref{subsec:produto}.
+\end{table}
+
+Os resultados têm limites de validade. A massa de dados se restringe a veículos de integrantes e familiares que consentiram por escrito, o que limita a quantidade e os tipos de infração observados. Os resultados valem para as versões avaliadas e para o período de coleta: uma atualização de qualquer canal pode alterá-los. Os tempos dependem da carga dos servidores, que a equipe não controla, e a rede degradada é simulada. Por fim, a correção funcional é julgada pela consistência entre os canais e com a notificação recebida pelo proprietário, e não contra a base oficial.
