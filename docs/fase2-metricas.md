@@ -108,8 +108,8 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Definição:** volume total de dados transferidos durante a execução completa da consulta de infrações.
 - **Fórmula:** soma dos bytes transferidos durante a consulta.
 - **Unidade:** megabytes.
-- **Fonte dos dados:** Chrome DevTools, aba Network, no Portal; ferramenta de monitoramento de rede no aplicativo.
-- **Procedimento de coleta:** [VERIFICAR] definir condições de rede, dispositivo e número de repetições; medir a consulta completa nos dois canais.
+- **Fonte dos dados:** Chrome DevTools, aba Network, no Portal; no aplicativo Android, contadores de tráfego do sistema por aplicativo (`adb shell dumpsys netstats detail`, filtrado pelo UID do pacote `br.com.mesotec.detrandf`), lidos antes e depois da consulta. O iOS não oferece contador equivalente por aplicativo [VERIFICAR alternativa ou restringir a medição do aplicativo ao Android].
+- **Procedimento de coleta:** [VERIFICAR] definir condições de rede, dispositivo e número de repetições; medir a consulta completa nos dois canais, da abertura do grupo de infrações (já autenticado) até a lista completa, como em M1.3.1. Definir no plano se o cache é limpo antes de cada repetição, e aplicar a mesma regra aos dois canais.
 - **Interpretação:** menor é melhor.
 - **Justificativa dos níveis:** o volume transferido afeta o consumo de dados móveis do cidadão.
 - **Níveis:** [VERIFICAR] faixas provisionais. Excelente até 2 MB; Alvo de 2,01 a 5 MB; Mínimo aceitável de 5,01 a 10 MB; Inaceitável acima de 10 MB. 
@@ -121,7 +121,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Fórmula:** (número de plataformas com consulta concluída / número total de plataformas testadas) × 100.
 - **Unidade:** percentual.
 - **Fonte dos dados:** registro de execução por plataforma.
-- **Procedimento de coleta:** [VERIFICAR] definir plataformas com Heitor; executar o mesmo roteiro em cada plataforma.
+- **Procedimento de coleta:** [VERIFICAR] definir plataformas com Heitor; executar o mesmo roteiro em cada plataforma. Pelo levantamento da Fase 1, as plataformas candidatas são o portal em navegador de desktop e de celular e o aplicativo em Android 8.0 ou superior e iOS 15.1 ou superior. Aparelhos abaixo dessas versões não instalam o aplicativo e ficam fora do escopo; não contam como falha de conclusão.
 - **Interpretação:** maior é melhor.
 - **Justificativa dos níveis:** a cobertura de contexto avalia se a tarefa de consulta é concluída nos ambientes definidos. A faixa Excelente representa conclusão integral ou quase integral; valores abaixo de 60% indicam que a maior parte das plataformas não permite concluir a consulta. [VERIFICAR]
 - **Níveis:** Inaceitável abaixo de 60%; Mínimo aceitável de 60% a 79%; Alvo de 80% a 94%; Excelente de 95% a 100%. [VERIFICAR]
@@ -133,7 +133,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Fórmula:** (número de navegadores com consulta concluída / número total de navegadores testados) × 100.
 - **Unidade:** percentual.
 - **Fonte dos dados:** registro de execução por navegador.
-- **Procedimento de coleta:** [VERIFICAR] definir navegadores com Heitor; executar o mesmo roteiro em cada navegador.
+- **Procedimento de coleta:** [VERIFICAR] definir navegadores com Heitor; executar o mesmo roteiro em cada navegador. A métrica só se aplica ao Portal, e o portal não declara navegadores suportados (Fase 1); a escolha deve seguir os navegadores mais usados pelo público-alvo.
 - **Interpretação:** maior é melhor.
 - **Justificativa dos níveis:** a conclusão da consulta em diferentes navegadores indica que o serviço é utilizável nos contextos web definidos no escopo. A faixa Excelente representa conclusão integral ou quase integral; valores abaixo de 60% indicam comprometimento relevante da cobertura de contexto. [VERIFICAR]
 - **Níveis:** Inaceitável abaixo de 60%; Mínimo aceitável de 60% a 79%; Alvo de 80% a 94%; Excelente de 95% a 100%. [VERIFICAR]
@@ -145,7 +145,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Fórmula:** (número de condições de rede com consulta concluída / número total de condições testadas) × 100.
 - **Unidade:** percentual.
 - **Fonte dos dados:** registro de execução por condição de rede.
-- **Procedimento de coleta:** [VERIFICAR] definir Wi-Fi, 4G e condição de latência simulada com Heitor; executar o mesmo roteiro em cada condição.
+- **Procedimento de coleta:** [VERIFICAR] definir Wi-Fi, 4G e condição de latência simulada com Heitor; executar o mesmo roteiro em cada condição. Para aplicar a mesma condição aos dois canais, limitar a rede no ponto de acesso (por exemplo, `tc netem` num computador que compartilha a conexão com o celular), já que o perfil de rede do DevTools só afeta o navegador.
 - **Interpretação:** maior é melhor.
 - **Justificativa dos níveis:** a conclusão da consulta sob diferentes condições de rede indica a capacidade do serviço de manter a tarefa disponível em contextos de uso distintos. A faixa Excelente representa conclusão integral ou quase integral; valores abaixo de 60% indicam comprometimento relevante da cobertura de contexto. [VERIFICAR]
 - **Níveis:** Inaceitável abaixo de 60%; Mínimo aceitável de 60% a 79%; Alvo de 80% a 94%; Excelente de 95% a 100%. [VERIFICAR]
