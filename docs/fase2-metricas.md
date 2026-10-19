@@ -11,7 +11,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Fórmula:** (número de campos exibidos / número total de campos da lista de referência) × 100.
 - **Unidade:** percentual.
 - **Fonte dos dados:** prints anonimizados do Portal de Serviços e do aplicativo.
-- **Procedimento de coleta:** [VERIFICAR] definir a lista de referência com Hugo; consultar o mesmo veículo nos dois canais; registrar campo a campo em planilha.
+- **Procedimento de coleta:** usar a lista de referência R01–R15 da Fase 1 (`docs/fase1-produto.md`, Seção 1.5), que é externa aos dois canais e se baseia no conteúdo do auto de infração (CTB, arts. 258, 259 e 280); na **tela de lista de infrações** de cada canal, registrar em planilha, para cada infração, quais dos 15 campos aparecem preenchidos; consultar o mesmo veículo nos dois canais. O denominador é 15 para toda infração.
 - **Interpretação:** maior é melhor.
 - **Justificativa dos níveis:** a consulta cumpre sua finalidade quando o cidadão consegue identificar e compreender a infração. Por isso, a faixa Excelente admite apenas ausência residual de campos, enquanto valores abaixo de 60% indicam que parte substancial das informações necessárias não está disponível. [VERIFICAR]
 - **Níveis:** Inaceitável abaixo de 60%; Mínimo aceitável de 60% a 79%; Alvo de 80% a 94%; Excelente de 95% a 100%. [VERIFICAR]
@@ -19,11 +19,11 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 ## M1.1.2 — Proporção de campos detalhados acessíveis
 
 - **Questão respondida:** Q1.1
-- **Definição:** proporção de campos detalhados definidos na lista de referência que são exibidos ou podem ser acessados pelo canal ao consultar os detalhes de uma infração.
-- **Fórmula:** (número de campos detalhados acessíveis / número total de campos detalhados da lista de referência) × 100.
+- **Definição:** proporção de campos da lista de referência que são exibidos ou podem ser acessados pelo canal ao consultar os detalhes de uma infração. A diferença em relação a M1.1.1 é a tela medida (detalhamento, e não lista), não o conjunto de campos.
+- **Fórmula:** (número de campos da lista de referência acessíveis no detalhamento / número de campos da lista de referência aplicáveis à infração) × 100.
 - **Unidade:** percentual.
 - **Fonte dos dados:** prints anonimizados das telas de detalhes da infração.
-- **Procedimento de coleta:** [VERIFICAR] definir campos detalhados com Hugo; acessar os detalhes de cada infração nos dois canais; registrar a presença ou ausência de cada campo.
+- **Procedimento de coleta:** acessar a tela de detalhamento de cada infração nos dois canais ("Detalhes da infração" no portal; detalhamento da infração no aplicativo) e registrar a presença ou ausência de cada campo R01–R15. Velocidade permitida e aferida entram como campos condicionais, só nas infrações de velocidade, aumentando o denominador nesses casos. Pelo levantamento da Fase 1, os rótulos de todos os 15 campos existem nos dois canais; a métrica verifica se o dado aparece preenchido.
 - **Interpretação:** maior é melhor.
 - **Justificativa dos níveis:** a acessibilidade às informações detalhadas contribui para a compreensão completa da autuação. A faixa Excelente admite apenas ausência residual de campos; valores abaixo de 60% indicam que parte substancial das informações detalhadas não está disponível. [VERIFICAR]
 - **Níveis:** Inaceitável abaixo de 60%; Mínimo aceitável de 60% a 79%; Alvo de 80% a 94%; Excelente de 95% a 100%. [VERIFICAR]
@@ -35,7 +35,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Fórmula:** (número de campos comuns com valor idêntico / número total de campos comuns) × 100.
 - **Unidade:** percentual.
 - **Fonte dos dados:** planilha de comparação campo a campo entre Portal e aplicativo.
-- **Procedimento de coleta:** consultar a mesma infração nos dois canais em intervalo temporal próximo; comparar status, valores monetários, pontuação e prazos.
+- **Procedimento de coleta:** consultar a mesma infração nos dois canais em intervalo temporal próximo; comparar os campos comuns, isto é, os que têm rótulo nos dois canais segundo o levantamento da Fase 1 (`docs/fase1-produto.md`, Seção 1.4): placa, marca/modelo, infração, descrição, regulamento, natureza, auto, código RENAINF, órgão autuador, responsável, data, hora, local, velocidades, datas de notificação de autuação e de penalidade, prazo de defesa prévia, prazo de identificação do condutor, vencimento, valores (multa, correção, desconto, devido), pontuação e situações. Ficam fora "UF" (só no portal) e "Data opção desconto 40% - SNE" (só no aplicativo).
 - **Interpretação:** maior é melhor.
 - **Justificativa dos níveis:** divergências de status, valores monetários, pontuação ou prazos podem levar o cidadão a tomar decisões com base em informações inconsistentes. Por isso, a faixa Excelente admite apenas divergências residuais, e valores abaixo de 60% indicam inconsistência substancial entre os canais. [VERIFICAR]
 - **Níveis:** Inaceitável abaixo de 60%; Mínimo aceitável de 60% a 79%; Alvo de 80% a 94%; Excelente de 95% a 100%. [VERIFICAR]
