@@ -16,6 +16,7 @@ O levantamento usou apenas informações acessíveis a qualquer cidadão, sem cr
 1. **Acesso público ao Portal de Serviços** em navegador desktop (Google Chrome, Linux), em 18/10/2026, com captura das telas públicas (ver Seção 1.6).
 2. **Páginas oficiais do aplicativo** na Google Play e na App Store, com capturas da parte superior das páginas, e consulta aos metadados públicos das duas lojas (iTunes Lookup e dados da página da Google Play), em 18/10/2026.
 3. **Inspeção do código cliente público do portal**, isto é, os arquivos que o próprio navegador baixa ao abrir a página e que qualquer usuário pode ver nas ferramentas de desenvolvedor. Essa inspeção não dá acesso ao código do servidor e serviu só para identificar rótulos de tela, rotas e serviços externos.
+4. **Inspeção do pacote público do aplicativo Android**, versão 2.6.9 (código de versão 244, o mesmo publicado na Google Play), obtido no espelho público APKPure em 18/10/2026. Foram lidos apenas o manifesto, a lista de bibliotecas e a tabela de textos do pacote, com o mesmo objetivo do item 3. A versão iOS não foi inspecionada; presume-se o mesmo código-base [VERIFICAR no aparelho iOS].
 
 Itens que dependem de login com um veículo real ou de um aparelho com o aplicativo instalado estão marcados com **[VERIFICAR]** e serão confirmados na sessão de levantamento com a massa de dados (ver `dados/massa-de-dados.md`).
 
@@ -32,8 +33,10 @@ Itens que dependem de login com um veículo real ou de um aparelho com o aplicat
 | Requisito mínimo | Não declarado [VERIFICAR navegadores suportados] | iOS 15.1 ou superior · Android 8.0 ou superior |
 | Tamanho do pacote | — | 43,5 MB no iOS |
 | Instalações | — | Mais de 1 milhão na Google Play |
-| Autenticação | CPF/CNPJ e senha, com reCAPTCHA, ou botão "Entrar com gov.br" | [VERIFICAR: conta própria do Detran-DF, gov.br ou ambas] |
-| A consulta exige login? | Sim. As telas de infrações do veículo ficam na área logada e listam só os veículos vinculados ao CPF do usuário ("Veículos atuais de minha propriedade"). Há também a opção "Consultar veículo de outra UF". Não foi encontrada consulta de infrações por placa + RENAVAM sem login [VERIFICAR] | [VERIFICAR] |
+| Autenticação | CPF/CNPJ e senha, com reCAPTCHA, ou botão "Entrar com gov.br" | CPF/CNPJ e senha, ou "Entrar com" gov.br; depois do primeiro acesso, login por biometria opcional. Mesma conta do portal (mesmo servidor de identidade) |
+| A consulta exige login? | Sim. As telas de infrações do veículo ficam na área logada e listam só os veículos vinculados ao CPF do usuário ("Veículos atuais de minha propriedade"). Há também a opção "Consultar veículo de outra UF". | Sim, pela mesma lógica: a opção "Histórico de infrações por veículo" fica na área logada. A tela inicial oferece "Serviços abertos" sem login (ver nota abaixo) |
+
+**Nota sobre consulta sem login.** Os dois canais têm uma consulta pública de **débitos** do veículo (serviço `acesso-publico/debitos`), que inclui débitos de infrações a pagar. Ela não substitui o histórico de infrações: mostra só o que está pendente de pagamento, sem o detalhamento da autuação. Por isso o objeto da avaliação continua sendo o histórico de infrações por veículo, na área logada. Cabe ao Heitor registrar esse corte no escopo [VERIFICAR com veículo real quais campos a consulta pública exibe].
 
 ### 1.3 Passos da consulta
 
@@ -108,7 +111,7 @@ Prints pendentes, a fazer com veículo real e com tarja em placa, RENAVAM, CPF, 
 A consulta de infrações é um **serviço digital governamental ao cidadão**, oferecido por um sistema de informação do Detran-DF com dois clientes:
 
 - **Portal de Serviços:** aplicação web de página única (SPA) feita em Angular 12 com Angular Material, executada no navegador;
-- **aplicativo:** cliente móvel distribuído nas lojas oficiais para Android e iOS. Não foi possível confirmar se é nativo ou híbrido [VERIFICAR: no Android, procurar `libflutter.so`, `index.android.bundle` ou uma WebView dominante no pacote instalado].
+- **aplicativo:** cliente móvel multiplataforma feito em React Native, com o motor JavaScript Hermes (o pacote Android traz `index.android.bundle` em bytecode Hermes e as bibliotecas `libhermes.so` e `libreactnative.so`). As telas são componentes nativos, não uma página web embutida.
 
 Os dois clientes não guardam as infrações: consultam serviços de backend do Detran-DF, que por sua vez reúnem dados próprios e de bases nacionais, como o RENAINF.
 
@@ -116,14 +119,14 @@ Os dois clientes não guardam as infrações: consultam serviços de backend do 
 
 | Aspecto | Portal de Serviços | Aplicativo |
 |---|---|---|
-| Módulos usados na consulta | Autenticação; módulo "Infração" (histórico por veículo, detalhes, débitos e emissão de boleto/PIX) | [VERIFICAR] |
+| Módulos usados na consulta | Autenticação; módulo "Infração" (histórico por veículo, detalhes, débitos e emissão de boleto/PIX) | Autenticação; menu "Infrações" (histórico por veículo e por condutor, detalhamento, indicação de condutor, boleto) |
 | Interface com o usuário | Navegador, layout responsivo para desktop e celular | Telas do aplicativo |
-| Interface com o backend | API HTTPS em `api5.detran.df.gov.br` (ex.: serviço `portal/infracoes`) | [VERIFICAR: mesma API ou API própria] |
-| Identidade | Servidor OpenID Connect do Detran-DF (`acesso.detran.df.gov.br`) e gov.br (`sso.acesso.gov.br`) | [VERIFICAR] |
-| Dependências externas no carregamento | Google reCAPTCHA; Google Fonts; jQuery servido por `code.jquery.com`; agente de monitoramento Dynatrace | [VERIFICAR] |
-| Origem dos dados | Base do Detran-DF e RENAINF (dica "Origem: RENAINF") | Presume-se a mesma [VERIFICAR] |
-| Plataformas | Qualquer navegador moderno, em desktop ou celular | Android [VERIFICAR versão mínima] e iOS 15.1 ou superior |
-| Restrições | Login obrigatório; reCAPTCHA no login com CPF; conexão permanente | Login [VERIFICAR]; instalação e atualização pela loja; conexão permanente [VERIFICAR comportamento sem rede] |
+| Interface com o backend | API HTTPS em `api5.detran.df.gov.br` (ex.: serviço `portal/infracoes`) | Mesma família de APIs (`api5`, `api4` e `api.detran.df.gov.br`), mas com serviço próprio para infrações (`app/verifica-multa`, rota `veiculo/lista-infracao`) |
+| Identidade | Servidor OpenID Connect do Detran-DF (`acesso.detran.df.gov.br`) e gov.br (`sso.acesso.gov.br`) | O mesmo servidor OpenID Connect (mesmo domínio `detran-portal`) e gov.br |
+| Dependências externas no carregamento | Google reCAPTCHA; Google Fonts; jQuery servido por `code.jquery.com`; agente de monitoramento Dynatrace | Firebase (notificações e relatórios de falha) e agente de monitoramento Dynatrace |
+| Origem dos dados | Base do Detran-DF e RENAINF (dica "Origem: RENAINF") | A mesma: o aplicativo traz a mesma dica "Origem: RENAINF" |
+| Plataformas | Qualquer navegador moderno, em desktop ou celular | Android 8.0 ou superior e iOS 15.1 ou superior |
+| Restrições | Login obrigatório; reCAPTCHA no login com CPF; conexão permanente | Login obrigatório, sem reCAPTCHA; instalação e atualização pela loja; conexão permanente para a consulta (há aviso "Sem conexão com a internet") [VERIFICAR comportamento sem rede] |
 
 ### 2.3 Diagrama de contexto
 
@@ -133,33 +136,35 @@ flowchart LR
 
     subgraph clientes["Canais avaliados (caixa-preta)"]
         portal["Portal de Serviços<br/>SPA Angular no navegador"]
-        app["Aplicativo DETRAN-DF<br/>Android e iOS"]
+        app["Aplicativo DETRAN-DF<br/>React Native, Android e iOS"]
     end
 
     subgraph detran["Detran-DF (fora do alcance da avaliação)"]
         idp["Servidor de identidade<br/>acesso.detran.df.gov.br"]
-        api["Serviços de backend<br/>api5.detran.df.gov.br"]
+        api["Serviços de backend<br/>api*.detran.df.gov.br"]
         base[("Base de infrações<br/>do Detran-DF")]
     end
 
     subgraph externos["Serviços externos"]
         govbr["gov.br<br/>(login federado)"]
         renainf[("RENAINF<br/>(SENATRAN)")]
-        terceiros["reCAPTCHA, CDN e<br/>monitoramento"]
+        terceiros["reCAPTCHA, CDN, Firebase<br/>e monitoramento"]
     end
 
     cidadao -->|consulta| portal
     cidadao -->|consulta| app
     portal -->|autenticação| idp
+    app -->|autenticação| idp
     portal -->|HTTPS| api
-    app -.->|"HTTPS [VERIFICAR]"| api
+    app -->|HTTPS| api
     portal --> terceiros
+    app --> terceiros
     idp --> govbr
     api --> base
     api --> renainf
 ```
 
-*Figura — Diagrama de contexto da consulta de infrações. Linha tracejada: ligação ainda não confirmada. Fonte: elaborado pela equipe a partir do levantamento de 18/10/2026.*
+*Figura — Diagrama de contexto da consulta de infrações. Fonte: elaborado pela equipe a partir do levantamento de 18/10/2026.*
 
 ### 2.4 Implicações para a avaliação
 
@@ -176,7 +181,7 @@ Como a avaliação é caixa-preta, só se mede o que chega ao avaliador pelo can
 Três consequências práticas para as Fases 2 e 3:
 
 1. **Login obrigatório.** A consulta só lista veículos do CPF logado, então quem faz login é o proprietário que consentiu, no aparelho de teste. A equipe não guarda senhas (ver `dados/consentimento.md`).
-2. **reCAPTCHA no login.** O tempo de login depende do avaliador; a medição de tempo deve começar depois da autenticação, a partir da escolha do menu de infrações.
+2. **reCAPTCHA no login do portal.** O aplicativo não usa reCAPTCHA e permite biometria, então o tempo de login não é comparável entre canais; a medição de tempo deve começar depois da autenticação, a partir da escolha do menu de infrações.
 3. **Ferramentas diferentes por canal.** O perfilador do Android Studio não funciona com aplicativos de loja (não depuráveis). Por isso a utilização de recursos fica restrita a dados transferidos, que têm medição equivalente nos dois canais; memória fica fora da comparação.
 
 ---
