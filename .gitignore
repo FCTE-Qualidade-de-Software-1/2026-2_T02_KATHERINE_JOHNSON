@@ -1,0 +1,13 @@
+# Dados pessoais da massa de dados (tabela de correspondência e termos assinados)
+dados/privado/
+
+# Artefatos de compilação LaTeX
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
