@@ -1,0 +1,64 @@
+flowchart TD
+    subgraph N1["Nível conceitual — Objetivos"]
+        G1["G1 — Avaliar a adequação funcional<br/>da consulta de infrações"]
+        G2["G2 — Avaliar a eficiência de desempenho<br/>da consulta de infrações"]
+        G3["G3 — Avaliar a cobertura de contexto<br/>da consulta de infrações"]
+    end
+
+    subgraph N2["Nível operacional — Questões"]
+        Q11["Q1.1 — Completude funcional"]
+        Q12["Q1.2 — Consistência funcional"]
+        Q13["Q1.3 — Adequação das operações"]
+        Q21["Q2.1 — Comportamento temporal"]
+        Q22["Q2.2 — Utilização de recursos de rede"]
+        Q31["Q3.1 — Completude de contexto"]
+        Q32["Q3.2 — Flexibilidade em rede degradada"]
+    end
+
+    subgraph N3["Nível quantitativo — Métricas"]
+        M111["M1.1.1 — Proporção de campos<br/>da lista de referência exibidos"]
+        M112["M1.1.2 — Proporção de campos<br/>detalhados acessíveis"]
+        M121["M1.2.1 — Proporção de campos<br/>comuns consistentes"]
+        M122["M1.2.2 — Proporção de infrações<br/>sem divergência"]
+        M131["M1.3.1 — Número de passos<br/>até a lista de infrações"]
+        M132["M1.3.2 — Número de transições<br/>de tela"]
+        M211["M2.1.1 — Tempo até a exibição<br/>completa da lista"]
+        M212["M2.1.2 — Tempo até a exibição<br/>dos detalhes"]
+        M221["M2.2.1 — Volume de dados<br/>transferidos"]
+        M311["M3.1.1 — Conclusão por plataforma"]
+        M312["M3.1.2 — Conclusão por navegador"]
+        M321["M3.2.1 — Conclusão por condição<br/>de rede"]
+        M322["M3.2.2 — Taxa de falhas<br/>ou expiração"]
+        M323["M3.2.3 — Tempo de conclusão<br/>por condição de rede"]
+    end
+
+    G1 --> Q11
+    G1 --> Q12
+    G1 --> Q13
+
+    G2 --> Q21
+    G2 --> Q22
+
+    G3 --> Q31
+    G3 --> Q32
+
+    Q11 --> M111
+    Q11 --> M112
+
+    Q12 --> M121
+    Q12 --> M122
+
+    Q13 --> M131
+    Q13 --> M132
+
+    Q21 --> M211
+    Q21 --> M212
+
+    Q22 --> M221
+
+    Q31 --> M311
+    Q31 --> M312
+
+    Q32 --> M321
+    Q32 --> M322
+    Q32 --> M323

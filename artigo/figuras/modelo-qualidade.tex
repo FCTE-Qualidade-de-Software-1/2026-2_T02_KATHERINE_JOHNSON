@@ -1,0 +1,42 @@
+% Modelo de qualidade adaptado (Figura fig:modelo-qualidade).
+% Fonte editável em TikZ. Requer no preâmbulo:
+%   \usepackage{tikz}
+%   \usetikzlibrary{positioning,fit,backgrounds,arrows.meta}
+% Versão Mermaid equivalente: docs/fase1-produto.md, Seção 3.4.
+\begin{tikzpicture}[
+    font=\scriptsize,
+    raiz/.style={draw, thick, rounded corners=2pt, align=center, text width=60mm, minimum height=8mm, fill=white},
+    carac/.style={draw, rounded corners=2pt, align=center, text width=30mm, minimum height=7mm, fill=white, font=\scriptsize\bfseries},
+    sub/.style={draw, align=center, text width=26mm, minimum height=6mm, fill=white},
+    grupo/.style={draw, rounded corners=3pt, inner sep=2.5mm},
+    rotulo/.style={font=\scriptsize\itshape, anchor=north, inner sep=2pt, align=center},
+    liga/.style={-{Stealth[length=1.4mm]}},
+  ]
+  \node[raiz] (raiz) {Qualidade da consulta de infrações\\Portal de Serviços $\times$ aplicativo};
+
+  % Características
+  \node[carac, below left=12mm and 18mm of raiz.south] (af) {Adequação funcional};
+  \node[carac, right=6mm of af] (ed) {Eficiência de desempenho};
+  \node[carac, right=12mm of ed] (cc) {Cobertura de contexto};
+
+  % Subcaracterísticas
+  \node[sub, below=5mm of af, xshift=3mm] (af1) {Completude funcional};
+  \node[sub, below=2mm of af1] (af2) {Correção funcional*};
+  \node[sub, below=2mm of af2] (af3) {Apropriação funcional*};
+  \node[sub, below=5mm of ed, xshift=3mm] (ed1) {Comportamento temporal};
+  \node[sub, below=2mm of ed1] (ed2) {Utilização de recursos*};
+  \node[sub, below=5mm of cc, xshift=3mm] (cc1) {Completude de contexto*};
+  \node[sub, below=2mm of cc1] (cc2) {Flexibilidade};
+
+  \begin{scope}[on background layer]
+    \node[grupo, fill=black!3, fit=(af)(ed)(af3)] (gprod) {};
+    \node[grupo, dashed, fit=(cc)(cc2)] (guso) {};
+  \end{scope}
+  \node[rotulo] at (gprod.south) {Qualidade do produto\\ISO/IEC 25010:2023};
+  \node[rotulo] at (guso.south) {Qualidade em uso\\ISO/IEC 25010:2011\\(medidas: ISO/IEC 25022:2016)};
+
+  \foreach \c in {af,ed,cc} \draw[liga] (raiz.south) -- (\c.north);
+  \foreach \s in {af1,af2,af3} \draw[liga] ([xshift=-13mm]af.south) |- (\s.west);
+  \foreach \s in {ed1,ed2} \draw[liga] ([xshift=-13mm]ed.south) |- (\s.west);
+  \foreach \s in {cc1,cc2} \draw[liga] ([xshift=-13mm]cc.south) |- (\s.west);
+\end{tikzpicture}
