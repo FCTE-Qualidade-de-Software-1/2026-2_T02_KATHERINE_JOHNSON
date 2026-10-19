@@ -4,7 +4,7 @@ Capturas de tela do levantamento dos canais (Portal de Serviços e aplicativo do
 
 ## Nome dos arquivos
 
-`<canal>-<tela>-<AAAA-MM-DD>.png`, em que `<canal>` é `portal`, `app-android` ou `app-ios`. Exemplo: `app-android-detalhes-infracao-2026-10-20.png`.
+`<canal>-<tela>-<AAAA-MM-DD>.png`, em que `<canal>` é `portal`, `app-android` ou `app-ios`. Capturas das páginas das lojas usam `<tela>` = `google-play` ou `app-store`. Exemplo: `app-android-detalhes-infracao-2026-10-20.png`.
 
 ## Regras de anonimização (LGPD)
 
@@ -20,7 +20,10 @@ Nenhum print entra no repositório sem passar por estas regras:
 
 | Tela | Portal | Android | iOS |
 |---|---|---|---|
+| Página da loja | — | feito | feito |
 | Login | feito | pendente | pendente |
 | Lista de veículos | pendente | pendente | pendente |
 | Lista de infrações | pendente | pendente | pendente |
 | Detalhes de uma infração | pendente | pendente | pendente |
+
+As telas pendentes exigem login do proprietário com veículo real. O procedimento está em `roteiro-levantamento.md`.

@@ -7,7 +7,7 @@
 
 O objeto da avaliação é a consulta de infrações de trânsito oferecida pelo Detran-DF em dois canais: o Portal de Serviços, apresentado como ``Detran Digital'' \cite{detrandf2026portal}, e o aplicativo ``DETRAN-DF'', versão 2.6.9, distribuído na Google Play e na App Store \cite{detrandf2026app}. O levantamento, feito em 18/10/2026, usou apenas informações públicas: telas do portal, páginas das lojas e os arquivos que o navegador baixa ao abrir o portal; o registro completo está no repositório.
 
-Trata-se de um serviço digital governamental ao cidadão, prestado por um sistema de informação com dois clientes. O portal é uma aplicação web de página única executada no navegador; o aplicativo é um cliente móvel para Android e iOS [VERIFICAR: nativo ou híbrido]. Nenhum dos dois guarda as infrações: ambos consultam serviços de backend do Detran-DF, que reúnem dados próprios e do Registro Nacional de Infrações de Trânsito (RENAINF). A Tabela~\ref{tab:canais} compara os canais e a Figura~\ref{fig:contexto} mostra o contexto do sistema.
+Trata-se de um serviço digital governamental ao cidadão, prestado por um sistema de informação com dois clientes. O portal é uma aplicação web de página única executada no navegador; o aplicativo é um cliente móvel multiplataforma em React Native para Android e iOS. Nenhum dos dois guarda as infrações: ambos usam o mesmo servidor de identidade e a mesma família de APIs do Detran-DF, com serviços distintos para a consulta, que reúnem dados próprios e do Registro Nacional de Infrações de Trânsito (RENAINF). A Tabela~\ref{tab:canais} compara os canais e a Figura~\ref{fig:contexto} mostra o contexto do sistema.
 
 \begin{table}[htbp]
 \centering
@@ -17,10 +17,10 @@ Trata-se de um serviço digital governamental ao cidadão, prestado por um siste
 \begin{tabular}{|p{2.5cm}|p{5.5cm}|p{5.5cm}|}
 \hline
 \textbf{Aspecto} & \textbf{Portal de Serviços} & \textbf{Aplicativo} \\ \hline
-Acesso & \url{portal.detran.df.gov.br}, em navegador de desktop ou celular & Google Play e App Store; iOS 15.1 ou superior; Android [VERIFICAR versão mínima] \\ \hline
-Autenticação & CPF/CNPJ e senha com reCAPTCHA, ou conta gov.br & [VERIFICAR] \\ \hline
-Abrangência da consulta & Só veículos vinculados ao CPF autenticado; opção separada para veículo de outra UF & [VERIFICAR] \\ \hline
-Dados por infração & 31 rótulos previstos na tela de detalhes, entre eles auto, enquadramento, local, data, hora, órgão autuador, natureza, pontuação, valores, prazos e situação & [VERIFICAR] \\ \hline
+Acesso & \url{portal.detran.df.gov.br}, em navegador de desktop ou celular & Google Play e App Store; Android 8.0 ou iOS 15.1 ou superior \\ \hline
+Autenticação & CPF/CNPJ e senha com reCAPTCHA, ou conta gov.br & Mesma conta: CPF/CNPJ e senha, gov.br ou biometria, sem reCAPTCHA \\ \hline
+Abrangência da consulta & Só veículos vinculados ao CPF autenticado; opção separada para veículo de outra UF & Igual ao portal \\ \hline
+Dados por infração & 31 rótulos previstos na tela de detalhes, entre eles auto, enquadramento, local, data, hora, órgão autuador, natureza, pontuação, valores, prazos e situação & Os mesmos rótulos, exceto UF, mais a data de opção pelo desconto do SNE (a confirmar com veículo real) \\ \hline
 \end{tabular}
 \par\smallskip
 \raggedright\scriptsize Fonte: elaborada pela equipe a partir de \cite{detrandf2026portal} e \cite{detrandf2026app}.
@@ -29,13 +29,13 @@ Dados por infração & 31 rótulos previstos na tela de detalhes, entre eles aut
 \begin{figure}[htbp]
 \centering
 \input{figuras/diagrama-contexto}
-\caption{Diagrama de contexto da consulta de infrações. A linha tracejada indica ligação ainda não confirmada.}
+\caption{Diagrama de contexto da consulta de infrações.}
 \label{fig:contexto}
 \par\smallskip
 \scriptsize Fonte: elaborada pela equipe.
 \end{figure}
 
-Por ser caixa-preta, a avaliação alcança apenas o que chega ao avaliador: campos exibidos, passos até o resultado, tempo percebido, dados transferidos e conclusão da consulta em cada contexto de uso. Ficam fora o tempo de processamento no servidor, a capacidade da infraestrutura, a disponibilidade ao longo do tempo e a correção absoluta dos dados, sem acesso à base oficial. O produto impõe ainda três condições ao plano: só o proprietário que consentiu pode fazer login, pois a consulta lista apenas veículos do CPF autenticado; o reCAPTCHA torna o login dependente do avaliador, então a medição de tempo começa após a autenticação; e o perfilador do Android Studio não funciona com aplicativos de loja, o que restringe a utilização de recursos ao volume de dados transferidos.
+Por ser caixa-preta, a avaliação alcança apenas o que chega ao avaliador: campos exibidos, passos até o resultado, tempo percebido, dados transferidos e conclusão da consulta em cada contexto de uso. Ficam fora o tempo de processamento no servidor, a capacidade da infraestrutura, a disponibilidade ao longo do tempo e a correção absoluta dos dados, sem acesso à base oficial. O produto impõe ainda três condições ao plano: só o proprietário que consentiu pode fazer login, pois a consulta lista apenas veículos do CPF autenticado; o login difere entre canais (reCAPTCHA no portal, biometria no aplicativo), então a medição de tempo começa após a autenticação; e o perfilador do Android Studio não funciona com aplicativos de loja, o que restringe a utilização de recursos ao volume de dados transferidos.
 
 \subsection{Modelo de Qualidade Adaptado}
 \label{subsec:modelo-qualidade}

@@ -17,7 +17,7 @@
 
   % Canais avaliados
   \node[caixa, right=of cidadao, yshift=7mm] (portal) {Portal de Serviços\\(SPA no navegador)};
-  \node[caixa, below=of portal] (app) {Aplicativo DETRAN-DF\\(Android e iOS)};
+  \node[caixa, below=of portal] (app) {Aplicativo DETRAN-DF\\(React Native)};
 
   % Detran-DF
   \node[caixa, right=of portal, yshift=4mm] (idp) {Servidor de identidade\\(OpenID Connect)};
@@ -27,7 +27,7 @@
   % Externos
   \node[caixa, right=of idp, text width=21mm] (govbr) {gov.br\\(login federado)};
   \node[base, right=of api, yshift=-3mm] (renainf) {RENAINF\\(SENATRAN)};
-  \node[caixa, above=6mm of portal, text width=31mm] (terceiros) {reCAPTCHA, CDN\\e monitoramento};
+  \node[caixa, above=6mm of portal, text width=31mm] (terceiros) {reCAPTCHA, CDN, Firebase\\e monitoramento};
 
   \begin{scope}[on background layer]
     \node[grupo, fit=(portal)(app)] (gcanais) {};
@@ -40,10 +40,10 @@
 
   \draw[seta] (cidadao) -- (portal);
   \draw[seta] (cidadao) -- (app);
-  \draw[seta] (portal) -- (idp);
-  \draw[seta] (portal) -- (api);
-  \draw[seta, dashed] (app) -- (api);
-  \draw[seta] (portal) -- (terceiros);
+  % Os dois canais usam os mesmos serviços: as setas saem do grupo.
+  \draw[seta] (gcanais.east |- idp) -- (idp);
+  \draw[seta] (gcanais.east |- api) -- (api);
+  \draw[seta] (gcanais.north -| terceiros) -- (terceiros);
   \draw[seta] (idp) -- (govbr);
   \draw[seta] (api) -- (base);
   \draw[seta] (api) -- (renainf);

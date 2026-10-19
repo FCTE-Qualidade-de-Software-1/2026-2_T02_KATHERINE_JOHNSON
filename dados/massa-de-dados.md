@@ -32,4 +32,4 @@ A tabela que liga cada código (V1, V2...) à placa e ao titular fica em `dados/
 - [ ] Perguntar na reunião de 19/10 quais integrantes ou familiares têm veículos com infrações.
 - [ ] Colher os termos assinados até 21/10.
 - [ ] Preencher a tabela anonimizada.
-- [ ] Agendar a sessão de levantamento com login para confirmar os itens [VERIFICAR] de `docs/fase1-produto.md`.
+- [ ] Agendar a sessão de levantamento com login, seguindo `evidencias/fase1/roteiro-levantamento.md`.
