@@ -18,7 +18,7 @@ O levantamento usou apenas informações acessíveis a qualquer cidadão, sem cr
 3. **Inspeção do código cliente público do portal**, isto é, os arquivos que o próprio navegador baixa ao abrir a página e que qualquer usuário pode ver nas ferramentas de desenvolvedor. Essa inspeção não dá acesso ao código do servidor e serviu só para identificar rótulos de tela, rotas e serviços externos.
 4. **Inspeção do pacote público do aplicativo Android**, versão 2.6.9 (código de versão 244, o mesmo publicado na Google Play), obtido no espelho público APKPure em 18/10/2026. Foram lidos apenas o manifesto, a lista de bibliotecas e a tabela de textos do pacote, com o mesmo objetivo do item 3. A versão iOS não foi inspecionada; presume-se o mesmo código-base [VERIFICAR no aparelho iOS].
 
-Itens que dependem de login com um veículo real ou de um aparelho com o aplicativo instalado estão marcados com **[VERIFICAR]** e serão confirmados na sessão de levantamento com a massa de dados (ver `dados/massa-de-dados.md`).
+Itens que dependem de login com um veículo real estão marcados com **[VERIFICAR]** e serão confirmados na sessão de levantamento descrita em `evidencias/fase1/roteiro-levantamento.md`.
 
 ### 1.2 Identificação dos canais
 

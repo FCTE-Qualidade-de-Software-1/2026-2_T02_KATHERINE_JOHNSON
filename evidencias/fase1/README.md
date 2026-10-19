@@ -20,7 +20,10 @@ Nenhum print entra no repositório sem passar por estas regras:
 
 | Tela | Portal | Android | iOS |
 |---|---|---|---|
+| Página da loja | — | feito | feito |
 | Login | feito | pendente | pendente |
 | Lista de veículos | pendente | pendente | pendente |
 | Lista de infrações | pendente | pendente | pendente |
 | Detalhes de uma infração | pendente | pendente | pendente |
+
+As telas pendentes exigem login do proprietário com veículo real. O procedimento está em `roteiro-levantamento.md`.
