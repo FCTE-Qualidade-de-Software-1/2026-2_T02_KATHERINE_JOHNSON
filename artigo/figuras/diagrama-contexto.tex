@@ -1,0 +1,50 @@
+% Diagrama de contexto da consulta de infrações (Figura fig:contexto).
+% Fonte editável em TikZ. Requer no preâmbulo:
+%   \usepackage{tikz}
+%   \usetikzlibrary{positioning,fit,backgrounds,arrows.meta}
+% Versão Mermaid equivalente: docs/fase1-produto.md, Seção 2.3.
+\begin{tikzpicture}[
+    font=\scriptsize,
+    node distance=4mm and 8mm,
+    caixa/.style={draw, rounded corners=2pt, align=center, minimum height=8mm, text width=31mm, fill=white},
+    base/.style={draw, cylinder, shape border rotate=90, aspect=0.15, align=center, minimum height=9mm, text width=24mm, fill=white},
+    grupo/.style={draw, dashed, rounded corners=3pt, inner sep=2.5mm},
+    rotulo/.style={font=\scriptsize\itshape, anchor=south west, inner sep=1pt},
+    seta/.style={-{Stealth[length=1.6mm]}},
+  ]
+  % Usuário
+  \node[caixa, text width=22mm] (cidadao) {Cidadão / condutor\\(proprietário)};
+
+  % Canais avaliados
+  \node[caixa, right=of cidadao, yshift=7mm] (portal) {Portal de Serviços\\(SPA no navegador)};
+  \node[caixa, below=of portal] (app) {Aplicativo DETRAN-DF\\(Android e iOS)};
+
+  % Detran-DF
+  \node[caixa, right=of portal, yshift=4mm] (idp) {Servidor de identidade\\(OpenID Connect)};
+  \node[caixa, below=of idp] (api) {Serviços de backend\\(API HTTPS)};
+  \node[base, below=of api] (base) {Base de infrações\\do Detran-DF};
+
+  % Externos
+  \node[caixa, right=of idp, text width=21mm] (govbr) {gov.br\\(login federado)};
+  \node[base, right=of api, yshift=-3mm] (renainf) {RENAINF\\(SENATRAN)};
+  \node[caixa, above=6mm of portal, text width=31mm] (terceiros) {reCAPTCHA, CDN\\e monitoramento};
+
+  \begin{scope}[on background layer]
+    \node[grupo, fit=(portal)(app)] (gcanais) {};
+    \node[grupo, fit=(idp)(api)(base), fill=black!4] (gdetran) {};
+    \node[grupo, fit=(govbr)(renainf)] (gext) {};
+  \end{scope}
+  \node[rotulo, anchor=north west] at (gcanais.south west) {Canais avaliados};
+  \node[rotulo] at (gdetran.north west) {Detran-DF (fora do alcance)};
+  \node[rotulo] at (gext.north west) {Externos};
+
+  \draw[seta] (cidadao) -- (portal);
+  \draw[seta] (cidadao) -- (app);
+  \draw[seta] (portal) -- (idp);
+  \draw[seta] (portal) -- (api);
+  \draw[seta, dashed] (app) -- (api);
+  \draw[seta] (portal) -- (terceiros);
+  \draw[seta] (idp) -- (govbr);
+  \draw[seta] (api) -- (base);
+  \draw[seta] (api) -- (renainf);
+\end{tikzpicture}
