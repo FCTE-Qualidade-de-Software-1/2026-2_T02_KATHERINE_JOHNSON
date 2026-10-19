@@ -59,7 +59,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Fórmula:** contagem direta das ações realizadas.
 - **Unidade:** passos.
 - **Fonte dos dados:** gravação de tela e roteiro de execução.
-- **Procedimento de coleta:** executar o mesmo roteiro no Portal e no aplicativo, com o mesmo veículo anonimizado; contar cada ação necessária.
+- **Procedimento de coleta:** executar o mesmo roteiro no Portal e no aplicativo, com o mesmo veículo anonimizado; contar cada ação necessária. O fluxo começa na tela inicial já autenticada: o login não é comparável entre canais (CPF e senha com reCAPTCHA no portal; biometria opcional no aplicativo) e é registrado à parte. Pelo levantamento da Fase 1, o caminho previsto é o mesmo nos dois canais: grupo de infrações, "Histórico de infrações por veículo", seleção do veículo e lista (`docs/fase1-produto.md`, Seção 1.3) [VERIFICAR contagem com veículo real].
 - **Interpretação:** menor é melhor.
 - **Justificativa dos níveis:** o número de passos mede a extensão objetiva do fluxo necessário para concluir a consulta, sem avaliar a facilidade percebida. 
 - **Níveis:** [VERIFICAR] faixas provisionais. Excelente até 4 passos; Alvo de 5 a 6 passos; Mínimo aceitável de 7 a 8 passos; Inaceitável acima de 8 passos. 
@@ -71,7 +71,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Fórmula:** contagem direta das transições de tela.
 - **Unidade:** telas.
 - **Fonte dos dados:** gravação de tela.
-- **Procedimento de coleta:** executar o mesmo roteiro nos dois canais e contar as transições.
+- **Procedimento de coleta:** executar o mesmo roteiro nos dois canais, a partir da tela inicial já autenticada, como em M1.3.1, e contar as transições.
 - **Interpretação:** menor é melhor.
 - **Justificativa dos níveis:** o número de transições mede a extensão do caminho percorrido até o resultado.
 - **Níveis:** [VERIFICAR] faixas provisionais. Excelente até 3 telas; Alvo de 4 a 5 telas; Mínimo aceitável de 6 a 7 telas; Inaceitável acima de 7 telas. 
@@ -79,11 +79,11 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 ## M2.1.1 — Tempo até a exibição completa da lista de infrações
 
 - **Questão respondida:** Q2.1
-- **Definição:** intervalo entre a submissão da consulta e a primeira exibição completa da lista de infrações.
+- **Definição:** intervalo entre a seleção do veículo (clique ou toque que dispara a consulta, já que nenhum dos canais tem formulário de busca) e a primeira exibição completa da lista de infrações.
 - **Fórmula:** tempo final menos tempo inicial.
 - **Unidade:** segundos.
-- **Fonte dos dados:** gravação de tela com cronômetro; Chrome DevTools no Portal; ferramenta de profiling no aplicativo.
-- **Procedimento de coleta:** [VERIFICAR] definir dispositivos, condições de rede e número de repetições; usar o mesmo veículo anonimizado nos dois canais.
+- **Fonte dos dados:** gravação de tela nos dois canais, com contagem de quadros entre o toque e a lista completa; no Portal, também o Chrome DevTools. O perfilador do Android Studio não serve, porque não funciona com aplicativos de loja (não depuráveis).
+- **Procedimento de coleta:** [VERIFICAR] definir dispositivos, condições de rede e número de repetições; usar o mesmo veículo anonimizado nos dois canais. Os dispositivos devem respeitar os requisitos mínimos levantados na Fase 1 (aplicativo: Android 8.0 ou iOS 15.1). A medição começa depois da autenticação.
 - **Interpretação:** menor é melhor.
 - **Resultado reportado:** média, mediana e percentil 90.
 - **Justificativa dos níveis:** os intervalos foram baseados nos limites de tempo de resposta propostos por Nielsen. Segundo o autor, respostas de até 1 segundo tendem a preservar o fluxo de pensamento do usuário, enquanto esperas de até 10 segundos ainda permitem manter a atenção na tarefa; acima desse limite, há maior risco de interrupção da interação. Considerando que a consulta envolve autenticação, processamento e exibição de dados, adotaram-se faixas provisionais intermediárias entre esses limites. [VERIFICAR]
@@ -95,7 +95,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Definição:** intervalo entre a seleção de uma infração e a exibição completa de seus detalhes.
 - **Fórmula:** tempo final menos tempo inicial.
 - **Unidade:** segundos.
-- **Fonte dos dados:** gravação de tela com cronômetro; ferramentas de inspeção do navegador e do aplicativo.
+- **Fonte dos dados:** gravação de tela nos dois canais, com contagem de quadros; no Portal, também o Chrome DevTools.
 - **Procedimento de coleta:** [VERIFICAR] usar a mesma infração anonimizada nos dois canais.
 - **Interpretação:** menor é melhor.
 - **Resultado reportado:** média, mediana e percentil 90.
