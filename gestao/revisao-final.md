@@ -2,13 +2,13 @@
 
 **Projeto Final FGA0315 Qualidade de Software 1 (UnB/FGA, 2026/2)**  
 *Responsável: Pedro Druck Montalvão Reis*  
-*Primeira passada: 19/10/2026, sobre as seções que estavam na `main` (base: commit `d5a5ae2`)*
+*Primeira passada: 19/10/2026, sobre as seções que estavam na `main` (base: commit `35d4e17`)*
 
 Este documento registra a revisão final do artigo: o padrão adotado, o que foi corrigido, o que ficou como observação para os autores e o roteiro da passada final depois da integração. Ele também alimenta a métrica M-DP1 do [plano PSM/CID](plano-psm.md), porque conta os defeitos encontrados na revisão.
 
 ## 1. Escopo e limites desta passada
 
-O artigo ainda não está integrado: não há `main.tex`, e as seções do Heitor (propósito e escopo, PR #16) e do Pedro Druck (priorização e referencial SQuaRE, PR #18) estavam em revisão. Esta passada cobriu as seções já mescladas na `main`:
+O artigo ainda não está integrado: não há `main.tex`. A seção do Pedro Druck (priorização e referencial SQuaRE) está no PR #18, aberto. A do Heitor (propósito, partes interessadas e escopo) **não está na `main`**: o PR #16 foi mesclado na branch `feat/gitpage-mkdocs` 37 segundos depois de o PR #15 ter ido para a `main`, e o conteúdo ficou de fora (`artigo/secoes/fase1-proposito.tex`, `docs/fase1-proposito.md`, `slides/conteudo-heitor.md`). Isso precisa de um novo PR a partir de `feat/heitor-proposito-escopo` ou de `feat/gitpage-mkdocs`. Esta passada cobriu as seções que estão na `main`:
 
 | Arquivo | Autor |
 |---|---|
@@ -128,7 +128,7 @@ Executar sábado à noite, depois da integração do Daniel, e repetir no doming
 
 | Critério | Situação |
 |---|---|
-| Revisão textual em todas as seções | Feita nas seções da `main`; faltam as do Heitor, do Pedro Druck, da Metodologia e da Introdução, que ainda não estão mescladas |
+| Revisão textual em todas as seções | Feita nas seções da `main`; faltam as do Heitor (fora da `main`, ver Seção 1), do Pedro Druck (PR #18), da Metodologia e da Introdução |
 | Legendas, numeração, fontes e chamadas | Verificadas por script e corrigidas; pendentes a tabela da declaração de IA e as seções ainda não mescladas |
 | Consistência do `.bib` | Verificada e corrigida (tipos, autoria, ano, chaves); revisar de novo depois do PR #18 |
 | Padronização de termos | Padrão definido (Seção 2) e aplicado às seções da `main` |
