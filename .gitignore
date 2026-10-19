@@ -1,0 +1,7 @@
+# Material de consulta local (especificação e rubricas da disciplina)
+*.pdf
+!artigo/**/*.pdf
+
+# Build do MkDocs
+site/
+.venv/
