@@ -5,7 +5,7 @@
 *Responsável: Pedro Druck Montalvão Reis*  
 *Data da conferência das fontes: 19/10/2026*
 
-Esta página é a versão completa da seção do artigo em `artigo/secoes/fase1-priorizacao.tex`. O artigo traz o resumo; aqui estão a justificativa de cada nota, a análise de sensibilidade e as fontes. As partes interessadas e as decisões D1 a D4 vêm de [Propósito, partes interessadas e escopo](fase1-proposito.md); as subcaracterísticas vêm de [Produto e modelo de qualidade](fase1-produto.md). O resultado alimenta os objetivos de [Fase 2](fase2-gqm.md).
+Esta página é a versão completa da seção do artigo em `artigo/secoes/fase1-priorizacao.tex`. O artigo traz o resumo; aqui estão a justificativa de cada nota, a análise de sensibilidade e as fontes. As partes interessadas e as decisões D1 a D4 vêm da seção de propósito, partes interessadas e escopo (Heitor); as subcaracterísticas vêm de [Produto e modelo de qualidade](fase1-produto.md). O resultado alimenta os objetivos de [Fase 2](fase2-gqm.md).
 
 ---
 

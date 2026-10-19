@@ -9,6 +9,6 @@ partes interessadas definidas aqui.
 |---|---|---|
 | Propósito, requisitante, partes interessadas e escopo | Heitor | Em elaboração |
 | Descrição do produto e modelo de qualidade adaptado | Hugo | [Produto e modelo de qualidade](fase1-produto.md) |
-| Priorização das características e ODS | Pedro Druck | Em elaboração |
+| Priorização das características e ODS | Pedro Druck | [Priorização, cobertura de contexto e ODS](fase1-priorizacao.md) |
 
 As páginas de cada tema serão adicionadas a esta seção à medida que forem revisadas.
