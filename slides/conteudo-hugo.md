@@ -9,8 +9,9 @@ Para o Pedro Henrique montar na apresentação. Figuras: `artigo/figuras/diagram
 | | Portal de Serviços | Aplicativo DETRAN-DF |
 |---|---|---|
 | Acesso | portal.detran.df.gov.br | Google Play e App Store, versão 2.6.9 |
-| Login | CPF/CNPJ + senha + reCAPTCHA, ou gov.br | [VERIFICAR] |
-| Abrangência | Só veículos do CPF logado | [VERIFICAR] |
+| Tecnologia | SPA em Angular 12, no navegador | React Native, Android 8.0+ e iOS 15.1+ |
+| Login | CPF/CNPJ + senha + reCAPTCHA, ou gov.br | CPF/CNPJ + senha, gov.br ou biometria, sem reCAPTCHA |
+| Abrangência | Só veículos do CPF logado | Área logada; só veículos do CPF logado, a confirmar com veículo real |
 
 Figura: diagrama de contexto (Figura 1 do artigo).
 
@@ -18,7 +19,7 @@ Figura: diagrama de contexto (Figura 1 do artigo).
 
 ## Slide 2 — Modelo de qualidade adaptado
 
-**Título:** Três características, oito subcaracterísticas
+**Título:** Três características, sete subcaracterísticas
 
 Figura: modelo de qualidade (Figura 2 do artigo).
 
