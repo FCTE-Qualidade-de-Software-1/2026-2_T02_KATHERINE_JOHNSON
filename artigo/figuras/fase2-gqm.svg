@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 1600 1240">
+  <title>Diagrama GQM da avaliação da consulta de infrações</title>
+  <style>
+    .goal { fill: #d9eaf7; stroke: #245a7a; }
+    .question { fill: #e6f4e6; stroke: #397344; }
+    .metric { fill: #fff0d9; stroke: #9a6718; }
+    .node { stroke-width: 2; rx: 10; }
+    text { font-family: Arial, sans-serif; fill: #1f1f1f; }
+    .label { font-size: 18px; font-weight: bold; }
+    .small { font-size: 14px; }
+    line { stroke: #666; stroke-width: 2; }
+  </style>
+  <text x="800" y="32" text-anchor="middle" class="label">GQM: Objetivos, Questões e Métricas</text>
+  <text x="160" y="70" text-anchor="middle" class="label">Objetivos</text>
+  <text x="510" y="70" text-anchor="middle" class="label">Questões</text>
+  <text x="1110" y="70" text-anchor="middle" class="label">Métricas</text>
+
+  <rect x="30" y="100" width="260" height="70" class="goal node"/>
+  <text x="160" y="130" text-anchor="middle" class="label">G1 - Adequação funcional</text>
+  <text x="160" y="153" text-anchor="middle" class="small">Nível conceitual</text>
+  <rect x="30" y="390" width="260" height="70" class="goal node"/>
+  <text x="160" y="420" text-anchor="middle" class="label">G2 - Eficiência de desempenho</text>
+  <text x="160" y="443" text-anchor="middle" class="small">Nível conceitual</text>
+  <rect x="30" y="700" width="260" height="70" class="goal node"/>
+  <text x="160" y="730" text-anchor="middle" class="label">G3 - Cobertura de contexto</text>
+  <text x="160" y="753" text-anchor="middle" class="small">Nível conceitual</text>
+
+  <g class="question node">
+    <rect x="350" y="100" width="320" height="58"/>
+    <text x="510" y="125" text-anchor="middle" class="label">Q1.1 - Completude funcional</text>
+    <text x="510" y="145" text-anchor="middle" class="small">Nível operacional</text>
+    <rect x="350" y="180" width="320" height="58"/>
+    <text x="510" y="205" text-anchor="middle" class="label">Q1.2 - Campos comuns</text>
+    <text x="510" y="225" text-anchor="middle" class="small">Nível operacional</text>
+    <rect x="350" y="260" width="320" height="58"/>
+    <text x="510" y="285" text-anchor="middle" class="label">Q1.3 - Adequação das operações</text>
+    <text x="510" y="305" text-anchor="middle" class="small">Nível operacional</text>
+    <rect x="350" y="390" width="320" height="58"/>
+    <text x="510" y="415" text-anchor="middle" class="label">Q2.1 - Tempo de exibição</text>
+    <text x="510" y="435" text-anchor="middle" class="small">Nível operacional</text>
+    <rect x="350" y="470" width="320" height="58"/>
+    <text x="510" y="495" text-anchor="middle" class="label">Q2.2 - Dados transferidos</text>
+    <text x="510" y="515" text-anchor="middle" class="small">Nível operacional</text>
+    <rect x="350" y="700" width="320" height="58"/>
+    <text x="510" y="725" text-anchor="middle" class="label">Q3.1 - Contexto tecnológico</text>
+    <text x="510" y="745" text-anchor="middle" class="small">Nível operacional</text>
+    <rect x="350" y="780" width="320" height="58"/>
+    <text x="510" y="805" text-anchor="middle" class="label">Q3.2 - Rede degradada</text>
+    <text x="510" y="825" text-anchor="middle" class="small">Nível operacional</text>
+  </g>
+
+  <g class="metric node">
+    <rect x="750" y="90" width="680" height="42"/>
+    <text x="1090" y="117" text-anchor="middle" class="small">M1.1.1 - Proporção de campos da lista exibidos</text>
+    <rect x="750" y="140" width="680" height="42"/>
+    <text x="1090" y="167" text-anchor="middle" class="small">M1.1.2 - Proporção de campos detalhados acessíveis</text>
+    <rect x="750" y="190" width="680" height="42"/>
+    <text x="1090" y="217" text-anchor="middle" class="small">M1.2.1 - Proporção de campos comuns consistentes</text>
+    <rect x="750" y="240" width="680" height="42"/>
+    <text x="1090" y="267" text-anchor="middle" class="small">M1.2.2 - Proporção de infrações sem divergência</text>
+    <rect x="750" y="290" width="680" height="42"/>
+    <text x="1090" y="317" text-anchor="middle" class="small">M1.3.1 - Número de passos até a lista</text>
+    <rect x="750" y="340" width="680" height="42"/>
+    <text x="1090" y="367" text-anchor="middle" class="small">M1.3.2 - Número de transições de tela</text>
+    <rect x="750" y="390" width="680" height="42"/>
+    <text x="1090" y="417" text-anchor="middle" class="small">M2.1.1 - Tempo até a lista</text>
+    <rect x="750" y="440" width="680" height="42"/>
+    <text x="1090" y="467" text-anchor="middle" class="small">M2.1.2 - Tempo até os detalhes</text>
+    <rect x="750" y="490" width="680" height="42"/>
+    <text x="1090" y="517" text-anchor="middle" class="small">M2.2.1 - Volume de dados transferidos</text>
+    <rect x="750" y="700" width="680" height="42"/>
+    <text x="1090" y="727" text-anchor="middle" class="small">M3.1.1 - Taxa de conclusão por plataforma</text>
+    <rect x="750" y="750" width="680" height="42"/>
+    <text x="1090" y="777" text-anchor="middle" class="small">M3.1.2 - Taxa de conclusão por navegador</text>
+    <rect x="750" y="800" width="680" height="42"/>
+    <text x="1090" y="827" text-anchor="middle" class="small">M3.2.1 - Taxa de conclusão por rede</text>
+    <rect x="750" y="850" width="680" height="42"/>
+    <text x="1090" y="877" text-anchor="middle" class="small">M3.2.2 - Taxa de falhas ou expiração</text>
+    <rect x="750" y="900" width="680" height="42"/>
+    <text x="1090" y="927" text-anchor="middle" class="small">M3.2.3 - Tempo de conclusão por rede</text>
+  </g>
+
+  <g>
+    <line x1="290" y1="135" x2="350" y2="129"/><line x1="290" y1="135" x2="350" y2="209"/><line x1="290" y1="135" x2="350" y2="289"/>
+    <line x1="290" y1="425" x2="350" y2="419"/><line x1="290" y1="425" x2="350" y2="499"/>
+    <line x1="290" y1="735" x2="350" y2="729"/><line x1="290" y1="735" x2="350" y2="809"/>
+    <line x1="670" y1="129" x2="750" y2="111"/><line x1="670" y1="129" x2="750" y2="161"/>
+    <line x1="670" y1="209" x2="750" y2="211"/><line x1="670" y1="209" x2="750" y2="261"/>
+    <line x1="670" y1="289" x2="750" y2="311"/><line x1="670" y1="289" x2="750" y2="361"/>
+    <line x1="670" y1="419" x2="750" y2="411"/><line x1="670" y1="419" x2="750" y2="461"/>
+    <line x1="670" y1="499" x2="750" y2="511"/>
+    <line x1="670" y1="729" x2="750" y2="721"/><line x1="670" y1="729" x2="750" y2="771"/>
+    <line x1="670" y1="809" x2="750" y2="821"/><line x1="670" y1="809" x2="750" y2="871"/><line x1="670" y1="809" x2="750" y2="921"/>
+  </g>
+</svg>
