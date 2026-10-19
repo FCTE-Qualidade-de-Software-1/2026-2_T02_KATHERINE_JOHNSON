@@ -14,7 +14,7 @@
 O levantamento usou apenas informações acessíveis a qualquer cidadão, sem credenciais e sem acesso à infraestrutura do Detran-DF:
 
 1. **Acesso público ao Portal de Serviços** em navegador desktop (Google Chrome, Linux), em 18/10/2026, com captura das telas públicas (ver Seção 1.6).
-2. **Páginas oficiais do aplicativo** na Google Play e na App Store, e consulta à interface pública de busca da App Store (iTunes Lookup), em 18/10/2026.
+2. **Páginas oficiais do aplicativo** na Google Play e na App Store, com capturas da parte superior das páginas, e consulta aos metadados públicos das duas lojas (iTunes Lookup e dados da página da Google Play), em 18/10/2026.
 3. **Inspeção do código cliente público do portal**, isto é, os arquivos que o próprio navegador baixa ao abrir a página e que qualquer usuário pode ver nas ferramentas de desenvolvedor. Essa inspeção não dá acesso ao código do servidor e serviu só para identificar rótulos de tela, rotas e serviços externos.
 
 Itens que dependem de login com um veículo real ou de um aparelho com o aplicativo instalado estão marcados com **[VERIFICAR]** e serão confirmados na sessão de levantamento com a massa de dados (ver `dados/massa-de-dados.md`).
@@ -25,12 +25,12 @@ Itens que dependem de login com um veículo real ou de um aparelho com o aplicat
 |---|---|---|
 | Nome oficial | "Detran Digital", apresentado como "Portal de Serviços do Departamento de Trânsito do Distrito Federal (Detran/DF)" | "DETRAN-DF" nas duas lojas; a descrição na Google Play o chama de "DETRAN DIGITAL" |
 | Endereço / identificador | <https://portal.detran.df.gov.br> | Android: `br.com.mesotec.detrandf` · iOS: `id1526746296` |
-| Publicador | Detran-DF | App Store: "Departamento de Trânsito do Distrito Federal". Google Play: [VERIFICAR nome do desenvolvedor exibido] |
+| Publicador | Detran-DF | App Store: "Departamento de Trânsito do Distrito Federal". Google Play: "DETRAN DF", com contato `appdetran@detran.df.gov.br` |
 | Versão avaliada | Não há número de versão público; o pacote principal carregado em 18/10/2026 é `main-es2017.638a2c0c922c0af94e51.js` | 2.6.9 no iOS (publicada em 13/10/2026) e na Google Play (atualizada em 09/10/2026) [VERIFICAR versão instalada no aparelho de teste] |
 | Primeira publicação | — | App Store: 17/08/2020 · Google Play: 14/08/2020 |
 | Plataformas | Navegador em desktop e em celular | Android e iOS |
-| Requisito mínimo | Não declarado [VERIFICAR navegadores suportados] | iOS 15.1 ou superior · Android: [VERIFICAR na página da Google Play, seção "Sobre este app"] |
-| Tamanho do pacote | — | 41,5 MB no iOS |
+| Requisito mínimo | Não declarado [VERIFICAR navegadores suportados] | iOS 15.1 ou superior · Android 8.0 ou superior |
+| Tamanho do pacote | — | 43,5 MB no iOS |
 | Instalações | — | Mais de 1 milhão na Google Play |
 | Autenticação | CPF/CNPJ e senha, com reCAPTCHA, ou botão "Entrar com gov.br" | [VERIFICAR: conta própria do Detran-DF, gov.br ou ambas] |
 | A consulta exige login? | Sim. As telas de infrações do veículo ficam na área logada e listam só os veículos vinculados ao CPF do usuário ("Veículos atuais de minha propriedade"). Há também a opção "Consultar veículo de outra UF". Não foi encontrada consulta de infrações por placa + RENAVAM sem login [VERIFICAR] | [VERIFICAR] |
@@ -94,6 +94,8 @@ Ficam fora da lista os incisos IV (prontuário do condutor) e VI (assinatura do 
 |---|---|---|
 | `evidencias/fase1/portal-pagina-inicial-2026-10-18.png` | Página inicial pública do Portal de Serviços, com o nome oficial e o menu "Infração" | Nenhum (imagem ilustrativa do próprio portal) |
 | `evidencias/fase1/portal-login-2026-10-18.png` | Tela de login: CPF/CNPJ, senha, reCAPTCHA e "Entrar com gov.br" | Nenhum (campos vazios) |
+| `evidencias/fase1/app-android-google-play-2026-10-18.png` | Página do aplicativo na Google Play: nome, desenvolvedor, instalações e telas de divulgação | Nenhum (avaliações de usuários fora do recorte) |
+| `evidencias/fase1/app-ios-app-store-2026-10-18.png` | Página do aplicativo na App Store: publicador, categoria, tamanho e telas de divulgação | Primeiro nome exibido numa tela de divulgação coberto com tarja |
 
 Prints pendentes, a fazer com veículo real e com tarja em placa, RENAVAM, CPF, nome, endereço e número do auto antes de entrar no repositório: lista de veículos, lista de infrações e detalhes de uma infração, nos dois canais. As regras de anonimização estão em `evidencias/fase1/README.md`.
 
