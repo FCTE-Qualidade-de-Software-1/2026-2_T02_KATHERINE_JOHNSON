@@ -1,6 +1,6 @@
 # Ata de Reunião — Projeto FGA0315
 
-**Projeto:** Avaliação da consulta de infrações do Detran-DF: Portal de Serviços × Aplicativo Mobile  
+**Projeto:** Avaliação da consulta de infrações do Detran-DF: Portal de Serviços × aplicativo  
 **Equipe:** Katherine Johnson (Turma T02)
 
 ---
