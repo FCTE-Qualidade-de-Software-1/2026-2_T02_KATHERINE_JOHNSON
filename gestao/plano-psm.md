@@ -9,30 +9,30 @@
 
 ## 1. Visão Geral e Alinhamento Metodológico
 
-Este documento estabelece o plano de acompanhamento quantitativo do projeto de avaliação da qualidade dos canais digitais do Detran-DF. Em conformidade com as exigências da disciplina (Premissa 3 e Seção 2 da especificação do trabalho final), o gerenciamento da equipe adota a estrutura do *Practical Software Measurement* (PSM) (McGarry et al., 2002) e o processo de medição da norma **ISO/IEC/IEEE 15939:2017**.
+Este documento estabelece o plano de acompanhamento quantitativo do projeto de avaliação da qualidade dos canais digitais do Detran-DF[cite: 18]. Em conformidade com as exigências da disciplina (Premissa 3 e Seção 2 da especificação do trabalho final), o gerenciamento da equipe adota a estrutura do *Practical Software Measurement* (PSM) (McGarry et al., 2002) e o processo de medição da norma **ISO/IEC/IEEE 15939:2017**[cite: 18].
 
-O objetivo deste plano é transformar os dados operacionais gerados no repositório Git da equipe (*issues*, *commits*, *pull requests* e registros de horas) em indicadores objetivos que apoiem a tomada de decisões corretivas de gestão durante a execução das entregas. As métricas foram estruturadas cobrindo obrigatoriamente as três categorias do modelo PSM/CID:
+O objetivo deste plano é transformar os dados operacionais gerados no repositório Git da equipe (*issues*, *commits*, *pull requests* e registros de horas) em indicadores objetivos que apoiem a tomada de decisões corretivas de gestão durante a execução das entregas[cite: 18]. As métricas foram estruturadas cobrindo obrigatoriamente as três categorias do modelo PSM/CID[cite: 18]:
 
-1. **Desempenho dos Processos** (*Process Performance*);
-2. **Calendário e Progresso** (*Schedule and Progress*);
-3. **Recursos e Custos** (*Resources and Cost*).
+1. **Desempenho dos Processos** (*Process Performance*);[cite: 18]
+2. **Calendário e Progresso** (*Schedule and Progress*);[cite: 18]
+3. **Recursos e Custos** (*Resources and Cost*).[cite: 18]
 
 ---
 
 ## 2. Infraestrutura de Rastreabilidade no GitHub
 
-Para assegurar que todas as medições possuam origem verificável (Premissas 4 e 5), a coleta de dados baseia-se nas seguintes convenções de uso do repositório:
+Para assegurar que todas as medições possuam origem verificável (Premissas 4 e 5), a coleta de dados baseia-se nas seguintes convenções de uso do repositório[cite: 18]:
 
-* **Milestones:** Agrupam a totalidade do escopo de cada marco avaliativo (`Milestone E1` para as Fases 1 e 2; `Milestone E2` para as Fases 3 e 4).
-* **Issues Padronizadas:** Toda tarefa técnica ou gerencial possui uma *issue* vinculada a um responsável, contendo um *checklist* de critérios de aceitação e campos explícitos para **Estimativa inicial de horas ($H_{est}$)** e **Horas reais executadas ($H_{real}$)**.
-* **Fluxo de Branches e Pull Requests (PRs):** Nenhuma alteração é enviada diretamente à *branch* `main`. Todo trabalho exige a abertura de um *Pull Request* revisado por um par designado na matriz de revisão cruzada da equipe.
-* **Labels de Categorização:** Identificam a natureza do artefato (`tipo:artigo`, `tipo:docs`, `tipo:gestao`, `tipo:dados`) e o status de revisão (`revisao:aprovada`, `revisao:ajustes-solicitados`).
+* **Milestones:** Agrupam a totalidade do escopo de cada marco avaliativo (`Milestone E1` para as Fases 1 e 2; `Milestone E2` para as Fases 3 e 4)[cite: 18].
+* **Issues Padronizadas:** Toda tarefa técnica ou gerencial possui uma *issue* vinculada a um responsável, contendo um *checklist* de critérios de aceitação e campos explícitos para **Estimativa inicial de horas ($H_{est}$)** e **Horas reais executadas ($H_{real}$)**[cite: 18].
+* **Fluxo de Branches e Pull Requests (PRs):** Nenhuma alteração é enviada diretamente à *branch* `main`[cite: 18]. Todo trabalho exige a abertura de um *Pull Request* revisado por um par designado na matriz de revisão cruzada da equipe[cite: 18].
+* **Labels de Categorização:** Identificam a natureza do artefato (`tipo:artigo`, `tipo:docs`, `tipo:gestao`, `tipo:dados`) e o status de revisão (`revisao:aprovada`, `revisao:ajustes-solicitados`)[cite: 18].
 
 ---
 
 ## 3. Especificação das Métricas de Gestão (PSM/CID)
 
-Foram definidas quatro métricas para o monitoramento da equipe: uma para Desempenho dos Processos (**M-DP1**), uma para Calendário e Progresso (**M-CP1**) e duas para Recursos e Custos (**M-RC1** e **M-RC2**), sendo esta última utilizada diretamente para quantificar o esforço individual exigido pelo critério **AG-C5** (Tabela de Contribuição).
+Foram definidas quatro métricas para o monitoramento da equipe: uma para Desempenho dos Processos (**M-DP1**), uma para Calendário e Progresso (**M-CP1**) e duas para Recursos e Custos (**M-RC1** e **M-RC2**), sendo esta última utilizada diretamente para quantificar o esforço individual exigido pelo critério **AG-C5** (Tabela de Contribuição)[cite: 18].
 
 ### 3.1. Categoria: Desempenho dos Processos
 
@@ -42,8 +42,8 @@ Foram definidas quatro métricas para o monitoramento da equipe: uma para Desemp
 | **Categoria PSM/CID** | Desempenho dos Processos — Qualidade do Processo e Conformidade |
 | **Definição** | Mede a proporção de *Pull Requests* (PRs) submetidos pelos integrantes que não foram aprovados na primeira inspeção do revisor designado, exigindo novos *commits* corretivos antes do *merge* na *branch* `main`. |
 | **Medidas Base** | 1. $N_{PR\_total}$: Número total de *Pull Requests* abertos e avaliados no período.<br>2. $N_{PR\_retrabalho}$: Número de *Pull Requests* que receberam solicitação de ajustes (*Changes Requested*) ou *commits* adicionais pós-revisão. |
-| **Procedimento de Cálculo** | $$TR_{PR} = \left( \frac{N_{PR\_retrabalho}}{N_{PR\_total}} \right) \times 100$$ |
-| **Unidade de Medida** | Percentual ($\%$) |
+| **Procedimento de Cálculo** | $TR_{PR} = \left( \frac{N_{PR\_retrabalho}}{N_{PR\_total}} \right) \times 100$ |
+| **Unidade de Medida** | Percentual (%) |
 | **Fonte dos Dados** | Histórico de *Pull Requests* e registros de *Code Review* no repositório GitHub da equipe. |
 | **Procedimento e Frequência de Coleta** | Coleta manual/automatizada via interface de *Pull Requests* do GitHub, realizada em dois momentos por entrega: no meio do ciclo (Quarta-feira, 21/10) e no fechamento da integração (Domingo, 25/10). |
 | **Critérios de Interpretação** | Orientação: **Menor é melhor**.<br>• **Adequado (Verde):** $TR_{PR} \le 25\%$ (alta aderência aos padrões de qualidade e checklists).<br>• **Alerta (Amarelo):** $25\% < TR_{PR} \le 50\%$ (inconsistências moderadas de formatação ou conteúdo).<br>• **Crítico (Vermelho):** $TR_{PR} > 50\%$ (falha sistemática no entendimento dos critérios da rubrica). |
@@ -59,8 +59,8 @@ Foram definidas quatro métricas para o monitoramento da equipe: uma para Desemp
 | **Categoria PSM/CID** | Calendário e Progresso — Progresso de Marcos e Tarefas |
 | **Definição** | Avalia a razão entre a quantidade de *issues* efetivamente concluídas (fechadas após aprovação de PR) e a quantidade de *issues* planejadas para estarem concluídas até a data da medição no *Milestone* ativo. |
 | **Medidas Base** | 1. $I_{concluidas}$: Quantidade acumulada de *issues* fechadas até a data de corte $t$.<br>2. $I_{planejadas}$: Quantidade acumulada de *issues* cujo prazo planejado vence até a data de corte $t$. |
-| **Procedimento de Cálculo** | $$ICM = \left( \frac{I_{concluidas}}{I_{planejadas}} \right) \times 100$$ |
-| **Unidade de Medida** | Percentual ($\%$) |
+| **Procedimento de Cálculo** | $ICM = \left( \frac{I_{concluidas}}{I_{planejadas}} \right) \times 100$ |
+| **Unidade de Medida** | Percentual (%) |
 | **Fonte dos Dados** | Painel do *Milestone* ativo (`Milestone E1`) e datas de fechamento das *issues* no GitHub. |
 | **Procedimento e Frequência de Coleta** | Verificação da listagem de *issues* do *Milestone* em dois pontos de controle internos: Quarta-feira (21/10 às 22h) e Sábado (24/10 às 20h, véspera da revisão cruzada final). |
 | **Critérios de Interpretação** | Orientação: **Maior é melhor** (idealmente $\ge 100\%$).<br>• **No Prazo (Verde):** $ICM \ge 85\%$.<br>• **Atraso Moderado (Amarelo):** $70\% \le ICM < 85\%$ (ou atraso de até $1$ dia em tarefa com dependência).<br>• **Atraso Crítico (Vermelho):** $ICM < 70\%$ (ou bloqueio na cadeia crítica: Fase 1 $\rightarrow$ Fase 2 $\rightarrow$ Integração). |
@@ -76,8 +76,8 @@ Foram definidas quatro métricas para o monitoramento da equipe: uma para Desemp
 | **Categoria PSM/CID** | Recursos e Custos — Esforço de Pessoal |
 | **Definição** | Quantifica o desvio percentual entre o esforço real despendido (em horas-pessoa) e o esforço inicialmente estimado para as tarefas da equipe, permitindo identificar subestimação de complexidade ou sobrecarga técnica. |
 | **Medidas Base** | 1. $H_{real\_i}$: Horas reais registradas pelo integrante $i$ nas suas *issues*.<br>2. $H_{est\_i}$: Horas estimadas inicialmente para as *issues* do integrante $i$. |
-| **Procedimento de Cálculo** | Cálculo por integrante ou global da equipe:<br>$$TVE = \left( \frac{\sum H_{real} - \sum H_{est}}{\sum H_{est}} \right) \times 100$$ |
-| **Unidade de Medida** | Percentual ($\%$) e Horas ($h$) |
+| **Procedimento de Cálculo** | Cálculo por integrante ou global da equipe:<br>$TVE = \left( \frac{\sum H_{real} - \sum H_{est}}{\sum H_{est}} \right) \times 100$ |
+| **Unidade de Medida** | Percentual (%) e Horas (h) |
 | **Fonte dos Dados** | Seção "Gestão de Esforço (PSM/CID)" preenchida no corpo de cada *issue* do GitHub. |
 | **Procedimento e Frequência de Coleta** | Consolidação em planilha na pasta `gestao/` na Quarta-feira (21/10 — parcial) e no Domingo (25/10 — fechamento da E1). |
 | **Critérios de Interpretação** | Orientação: **Próximo de $0\%$ é ideal**.<br>• **Controlado (Verde):** $-20\% \le TVE \le +20\%$.<br>• **Desvio Moderado (Amarelo):** $+20\% < TVE \le +40\%$ ou $-40\% \le TVE < -20\%$.<br>• **Sobrecarga / Erro de Estimativa (Vermelho):** $TVE > +40\%$ (esforço real muito acima do previsto). |
@@ -91,8 +91,8 @@ Foram definidas quatro métricas para o monitoramento da equipe: uma para Desemp
 | **Categoria PSM/CID** | Recursos e Custos — Alocação e Distribuição de Esforço |
 | **Definição** | Determina a proporção exata do esforço total do projeto realizada por cada integrante $i$ da equipe, garantindo transparência na avaliação individual e equilíbrio na distribuição de trabalho. |
 | **Medidas Base** | 1. $H_{real\_i}$: Total de horas reais executadas e comprovadas via *commits*/PRs pelo integrante $i$.<br>2. $H_{real\_total} = \sum_{i=1}^{6} H_{real\_i}$: Esforço total em horas de todos os $6$ membros da equipe. |
-| **Procedimento de Cálculo** | $$PCI_i = \left( \frac{H_{real\_i}}{\sum_{j=1}^{6} H_{real\_j}} \right) \times 100$$<br>Restrição de fechamento: $\sum_{i=1}^{6} PCI_i = 100\%$. |
-| **Unidade de Medida** | Percentual ($\%$) |
+| **Procedimento de Cálculo** | $PCI_i = \left( \frac{H_{real\_i}}{\sum_{j=1}^{6} H_{real\_j}} \right) \times 100$<br>Restrição de fechamento: $\sum_{i=1}^{6} PCI_i = 100\%$. |
+| **Unidade de Medida** | Percentual (%) |
 | **Fonte dos Dados** | Horas reais registradas nas *issues* concluídas e auditadas contra o histórico de *commits* e *Pull Requests*. |
 | **Procedimento e Frequência de Coleta** | Apuração parcial na Quarta-feira (21/10) e apuração definitiva no Domingo (25/10) para geração do Apêndice de Contribuição do artigo. |
 | **Critérios de Interpretação** | Meta de equilíbrio para $6$ integrantes: $\approx 16,67\%$ por integrante.<br>• **Equilibrado (Verde):** $14\% \le PCI_i \le 20\%$.<br>• **Desbalanceado (Amarelo):** $11\% \le PCI_i < 14\%$ ou $20\% < PCI_i \le 23\%$.<br>• **Inaceitável (Vermelho):** $PCI_i < 11\%$ ou $PCI_i > 23\%$. |
@@ -102,7 +102,7 @@ Foram definidas quatro métricas para o monitoramento da equipe: uma para Desemp
 
 ## 4. Resumo do Ciclo de Coleta na Entrega 1 (Milestone E1)
 
-As medições serão coletadas, analisadas e documentadas em relatórios de acompanhamento na pasta `gestao/` seguindo o calendário abaixo:
+As medições serão coletadas, analisadas e documentadas em relatórios de acompanhamento na pasta `gestao/` seguindo o calendário abaixo[cite: 18]:
 
 | Ponto de Coleta | Data Prevista | Escopo da Medição | Artefato Gerado |
 | :--- | :--- | :--- | :--- |
@@ -113,7 +113,7 @@ As medições serão coletadas, analisadas e documentadas em relatórios de acom
 
 ## 5. Modelo de Registro de Medições e Decisões de Gestão
 
-A tabela abaixo será preenchida a cada coleta para compor a seção de Gestão da GitPage, os slides da apresentação e o histórico de evidências do repositório:
+A tabela abaixo será preenchida a cada coleta para compor a seção de Gestão da GitPage, os slides da apresentação e o histórico de evidências do repositório[cite: 18]:
 
 | Data da Coleta | Métrica | Valor Medido | Status (Cor) | Interpretação Técnica | Decisão de Gestão Tomada e Responsável |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -126,8 +126,8 @@ A tabela abaixo será preenchida a cada coleta para compor a seção de Gestão 
 
 ## Referências Normativas e Metodológicas
 
-* **ISO/IEC/IEEE 15939:2017.** *Systems and software engineering — Measurement process*. International Organization for Standardization, Geneva, Switzerland, 2017.
-* **McGarry, J., Card, D., Jones, C., Layman, B., Clark, E., Dean, J., & Hall, F.** *Practical Software Measurement: Objective Information for Decision Makers*. Addison-Wesley Professional, 2002.
+* **ISO/IEC/IEEE 15939:2017.** *Systems and software engineering — Measurement process*. International Organization for Standardization, Geneva, Switzerland, 2017.[cite: 18]
+* **McGarry, J., Card, D., Jones, C., Layman, B., Clark, E., Dean, J., & Hall, F.** *Practical Software Measurement: Objective Information for Decision Makers*. Addison-Wesley Professional, 2002.[cite: 18]
 
 ---
 *Versão 1.0 — 19/10/2026 — Equipe Katherine Johnson (FGA0315/UnB).*
