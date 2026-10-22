@@ -1,7 +1,7 @@
 # Plano de Medição e Gestão do Projeto (PSM/CID)
 
 **Projeto Final FGA0315 Qualidade de Software 1 (UnB/FGA, 2026/2)**  
-*Avaliação da consulta de infrações do Detran-DF: Portal de Serviços $\times$ Aplicativo Mobile*  
+*Avaliação da consulta de infrações do Detran-DF: Portal de Serviços × Aplicativo Mobile* 
 **Equipe:** Katherine Johnson (Turma T02)  
 **Responsável pela Gestão e Integração:** Daniel  
 
