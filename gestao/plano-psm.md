@@ -9,30 +9,30 @@
 
 ## 1. Visão Geral e Alinhamento Metodológico
 
-Este documento estabelece o plano de acompanhamento quantitativo do projeto de avaliação da qualidade dos canais digitais do Detran-DF[cite: 18]. Em conformidade com as exigências da disciplina (Premissa 3 e Seção 2 da especificação do trabalho final), o gerenciamento da equipe adota a estrutura do *Practical Software Measurement* (PSM) (McGarry et al., 2002) e o processo de medição da norma **ISO/IEC/IEEE 15939:2017**[cite: 18].
+Este documento estabelece o plano de acompanhamento quantitativo do projeto de avaliação da qualidade dos canais digitais do Detran-DF. Em conformidade com as exigências da disciplina (Premissa 3 e Seção 2 da especificação do trabalho final), o gerenciamento da equipe adota a estrutura do *Practical Software Measurement* (PSM) (McGarry et al., 2002) e o processo de medição da norma **ISO/IEC/IEEE 15939:2017**.
 
-O objetivo deste plano é transformar os dados operacionais gerados no repositório Git da equipe (*issues*, *commits*, *pull requests* e registros de horas) em indicadores objetivos que apoiem a tomada de decisões corretivas de gestão durante a execução das entregas[cite: 18]. As métricas foram estruturadas cobrindo obrigatoriamente as três categorias do modelo PSM/CID[cite: 18]:
+O objetivo deste plano é transformar os dados operacionais gerados no repositório Git da equipe (*issues*, *commits*, *pull requests* e registros de horas) em indicadores objetivos que apoiem a tomada de decisões corretivas de gestão durante a execução das entregas. As métricas foram estruturadas cobrindo obrigatoriamente as três categorias do modelo PSM/CID:
 
-1. **Desempenho dos Processos** (*Process Performance*);[cite: 18]
-2. **Calendário e Progresso** (*Schedule and Progress*);[cite: 18]
-3. **Recursos e Custos** (*Resources and Cost*).[cite: 18]
+1. **Desempenho dos Processos** (*Process Performance*);
+2. **Calendário e Progresso** (*Schedule and Progress*);
+3. **Recursos e Custos** (*Resources and Cost*).
 
 ---
 
 ## 2. Infraestrutura de Rastreabilidade no GitHub
 
-Para assegurar que todas as medições possuam origem verificável (Premissas 4 e 5), a coleta de dados baseia-se nas seguintes convenções de uso do repositório[cite: 18]:
+Para assegurar que todas as medições possuam origem verificável (Premissas 4 e 5), a coleta de dados baseia-se nas seguintes convenções de uso do repositório:
 
-* **Milestones:** Agrupam a totalidade do escopo de cada marco avaliativo (`Milestone E1` para as Fases 1 e 2; `Milestone E2` para as Fases 3 e 4)[cite: 18].
-* **Issues Padronizadas:** Toda tarefa técnica ou gerencial possui uma *issue* vinculada a um responsável, contendo um *checklist* de critérios de aceitação e campos explícitos para **Estimativa inicial de horas ($H_{est}$)** e **Horas reais executadas ($H_{real}$)**[cite: 18].
-* **Fluxo de Branches e Pull Requests (PRs):** Nenhuma alteração é enviada diretamente à *branch* `main`[cite: 18]. Todo trabalho exige a abertura de um *Pull Request* revisado por um par designado na matriz de revisão cruzada da equipe[cite: 18].
-* **Labels de Categorização:** Identificam a natureza do artefato (`tipo:artigo`, `tipo:docs`, `tipo:gestao`, `tipo:dados`) e o status de revisão (`revisao:aprovada`, `revisao:ajustes-solicitados`)[cite: 18].
+* **Milestones:** Agrupam a totalidade do escopo de cada marco avaliativo (`Milestone E1` para as Fases 1 e 2; `Milestone E2` para as Fases 3 e 4).
+* **Issues Padronizadas:** Toda tarefa técnica ou gerencial possui uma *issue* vinculada a um responsável, contendo um *checklist* de critérios de aceitação e campos explícitos para **Estimativa inicial de horas ($H_{est}$)** e **Horas reais executadas ($H_{real}$)**.
+* **Fluxo de Branches e Pull Requests (PRs):** Nenhuma alteração é enviada diretamente à *branch* `main`. Todo trabalho exige a abertura de um *Pull Request* revisado por um par designado na matriz de revisão cruzada da equipe.
+* **Labels de Categorização:** Identificam a natureza do artefato (`tipo:artigo`, `tipo:docs`, `tipo:gestao`, `tipo:dados`) e o status de revisão (`revisao:aprovada`, `revisao:ajustes-solicitados`).
 
 ---
 
 ## 3. Especificação das Métricas de Gestão (PSM/CID)
 
-Foram definidas quatro métricas para o monitoramento da equipe: uma para Desempenho dos Processos (**M-DP1**), uma para Calendário e Progresso (**M-CP1**) e duas para Recursos e Custos (**M-RC1** e **M-RC2**), sendo esta última utilizada diretamente para quantificar o esforço individual exigido pelo critério **AG-C5** (Tabela de Contribuição)[cite: 18].
+Foram definidas quatro métricas para o monitoramento da equipe: uma para Desempenho dos Processos (**M-DP1**), uma para Calendário e Progresso (**M-CP1**) e duas para Recursos e Custos (**M-RC1** e **M-RC2**), sendo esta última utilizada diretamente para quantificar o esforço individual exigido pelo critério **AG-C5** (Tabela de Contribuição).
 
 ### 3.1. Categoria: Desempenho dos Processos
 
@@ -102,7 +102,7 @@ Foram definidas quatro métricas para o monitoramento da equipe: uma para Desemp
 
 ## 4. Resumo do Ciclo de Coleta na Entrega 1 (Milestone E1)
 
-As medições serão coletadas, analisadas e documentadas em relatórios de acompanhamento na pasta `gestao/` seguindo o calendário abaixo[cite: 18]:
+As medições serão coletadas, analisadas e documentadas em relatórios de acompanhamento na pasta `gestao/` seguindo o calendário abaixo:
 
 | Ponto de Coleta | Data Prevista | Escopo da Medição | Artefato Gerado |
 | :--- | :--- | :--- | :--- |
@@ -113,7 +113,7 @@ As medições serão coletadas, analisadas e documentadas em relatórios de acom
 
 ## 5. Modelo de Registro de Medições e Decisões de Gestão
 
-A tabela abaixo será preenchida a cada coleta para compor a seção de Gestão da GitPage, os slides da apresentação e o histórico de evidências do repositório[cite: 18]:
+A tabela abaixo será preenchida a cada coleta para compor a seção de Gestão da GitPage, os slides da apresentação e o histórico de evidências do repositório:
 
 | Data da Coleta | Métrica | Valor Medido | Status (Cor) | Interpretação Técnica | Decisão de Gestão Tomada e Responsável |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -126,8 +126,8 @@ A tabela abaixo será preenchida a cada coleta para compor a seção de Gestão 
 
 ## Referências Normativas e Metodológicas
 
-* **ISO/IEC/IEEE 15939:2017.** *Systems and software engineering — Measurement process*. International Organization for Standardization, Geneva, Switzerland, 2017.[cite: 18]
-* **McGarry, J., Card, D., Jones, C., Layman, B., Clark, E., Dean, J., & Hall, F.** *Practical Software Measurement: Objective Information for Decision Makers*. Addison-Wesley Professional, 2002.[cite: 18]
+* **ISO/IEC/IEEE 15939:2017.** *Systems and software engineering — Measurement process*. International Organization for Standardization, Geneva, Switzerland, 2017.
+* **McGarry, J., Card, D., Jones, C., Layman, B., Clark, E., Dean, J., & Hall, F.** *Practical Software Measurement: Objective Information for Decision Makers*. Addison-Wesley Professional, 2002.
 
 ---
 *Versão 1.0 — 19/10/2026 — Equipe Katherine Johnson (FGA0315/UnB).*
