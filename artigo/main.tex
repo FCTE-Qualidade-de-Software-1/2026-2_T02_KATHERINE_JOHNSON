@@ -1,5 +1,5 @@
 % Artigo do projeto final de FGA0315 Qualidade de Software 1 (UnB/FGA, 2026/2).
-% Modelo SBC (sbc-template.sty e sbc.bst, da página de modelos da SBC).
+% Modelo SBC (sbc-template.sty e sbc.bst).
 % Compilação: pdflatex main && bibtex main && pdflatex main && pdflatex main
 % (ou tectonic -X compile main.tex).
 
@@ -11,22 +11,22 @@
 \usepackage[brazil]{babel}
 \usepackage{graphicx,url}
 \usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{positioning,fit,backgrounds,arrows.meta,shapes.geometric}
 
 \sloppy
 
-% Inclui uma seção só se o arquivo já existir, para o artigo compilar enquanto
-% as seções chegam por pull request. A ausência fica registrada no log.
+% Inclui uma seção só se o arquivo já existir, para o artigo compilar incrementalmente.
 \newcommand{\incluir}[1]{%
-  \IfFileExists{#1.tex}{\input{#1}}{\typeout{AVISO: seção #1.tex ausente}}}
+  \IfFileExists{#1.tex}{\input{#1}}{\typeout{AVISO: arquivo #1.tex ausente}}}
 
 \title{Avaliação da Consulta de Infrações do Detran-DF:\\
-  Portal de Serviços $\times$ Aplicativo}
+  Portal de Serviços $\times$ Aplicativo\thanks{Repositório oficial do projeto com dados e evidências: \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON}}}
 
-% Nomes completos a confirmar com cada integrante.
-\author{Daniel, Heitor, Hugo Freitas Silva, Pedro Druck,\\
-  Pedro Henrique, Philipe Caetano}
+\author{Daniel de Oliveira Lira, Heitor Soares, Hugo Freitas Silva,\\
+  Pedro Druck, Pedro Henrique, Philipe Caetano}
 
 \address{Faculdade de Ciências e Tecnologias em Engenharia (FCTE)\\
   Universidade de Brasília (UnB) -- Brasília, DF -- Brasil}
@@ -36,28 +36,33 @@
 \maketitle
 
 \incluir{secoes/resumo}
-
 \incluir{secoes/introducao}
-
 \incluir{secoes/referencial-square}
 \incluir{secoes/referencial-gqm}
-
 \incluir{secoes/metodologia}
 
 \section{Fase 1: Definição da Avaliação}
 \label{sec:fase1}
-
 \incluir{secoes/fase1-proposito}
 \incluir{secoes/fase1-produto}
 \incluir{secoes/fase1-priorizacao}
 
+% Seções declaradas internamente em cada arquivo (.tex)
 \incluir{secoes/fase2-objetivos}
 \incluir{secoes/fase2-metricas}
 
-\incluir{secoes/contribuicao}
+\incluir{secoes/fase3-coleta-dados}
+\incluir{secoes/fase3-analise-metricas}
+
+\incluir{secoes/fase4-conclusoes}
+
 \incluir{secoes/declaracao-ia}
 
 \bibliographystyle{sbc}
 \bibliography{referencias}
+
+% Apêndice: Tabela de contribuição individual (não conta no limite de páginas)
+\appendix
+\incluir{secoes/contribuicao}
 
 \end{document}
