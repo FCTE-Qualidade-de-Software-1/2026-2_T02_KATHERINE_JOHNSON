@@ -5,10 +5,10 @@ e com quais características de qualidade. Os resultados desta fase orientam dir
 [Fase 2](fase2.md): os objetivos de medição derivam das características priorizadas e das
 partes interessadas definidas aqui.
 
-| Tema | Responsável | Situação |
+| Tema | Responsável | Página |
 |---|---|---|
-| Propósito, requisitante, partes interessadas e escopo | Heitor | Em elaboração |
+| Propósito, requisitante, partes interessadas e escopo | Heitor | [Propósito, partes interessadas e escopo](fase1-proposito.md) |
 | Descrição do produto e modelo de qualidade adaptado | Hugo | [Produto e modelo de qualidade](fase1-produto.md) |
 | Priorização das características e ODS | Pedro Druck | [Priorização, cobertura de contexto e ODS](fase1-priorizacao.md) |
 
-As páginas de cada tema serão adicionadas a esta seção à medida que forem revisadas.
+O passo a passo da fase, com o resultado de cada etapa, está em [Metodologia](metodologia.md).
