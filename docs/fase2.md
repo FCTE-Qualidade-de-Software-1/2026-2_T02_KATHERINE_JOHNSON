@@ -9,3 +9,5 @@ de pontuação e critérios de julgamento.
 |---|---|---|
 | Objetivos, questões e hipóteses | Pedro Henrique | [Objetivos, questões e hipóteses](fase2-gqm.md) |
 | Métricas, níveis de pontuação, critérios de julgamento e diagrama GQM | Philipe | [Métricas, níveis e critérios de julgamento](fase2-metricas.md) |
+
+O passo a passo da fase, com o resultado de cada etapa, está em [Metodologia](metodologia.md).

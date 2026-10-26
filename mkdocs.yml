@@ -33,7 +33,7 @@ theme:
 
 # Versão exibida no rodapé de todas as páginas; atualizar a cada release.
 extra:
-  versao: "0.1.0 (pré-E1)"
+  versao: "1.0 (Entrega 1)"
   generator: false
 
 markdown_extensions:
@@ -55,15 +55,20 @@ plugins:
 # Ao adicionar uma página nova em docs/, incluí-la aqui na seção correspondente.
 nav:
   - Início: index.md
+  - Metodologia: metodologia.md
   - Fase 1:
       - Visão geral: fase1.md
+      - Propósito, partes interessadas e escopo: fase1-proposito.md
       - Produto e modelo de qualidade: fase1-produto.md
       - Priorização, cobertura de contexto e ODS: fase1-priorizacao.md
   - Fase 2:
       - Visão geral: fase2.md
       - Objetivos, questões e hipóteses: fase2-gqm.md
       - Métricas, níveis e critérios de julgamento: fase2-metricas.md
-  - Gestão (PSM/CID): gestao.md
+  - Gestão (PSM/CID):
+      - Medições e decisões: gestao.md
+      - Registro de horas por issue: gestao-horas.md
+      - Quadro do backlog: https://github.com/users/pedruck/projects/1
   - Atas: atas.md
   - Equipe: equipe.md
   - Declaração de IA: declaracao-ia.md
