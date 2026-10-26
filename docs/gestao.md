@@ -13,7 +13,7 @@ pull request revisado por outro integrante. Esses registros são a fonte das med
 - [Issues do projeto](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues)
 - [Pull requests](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pulls)
 - [Milestones](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/milestones)
-- [Quadro do backlog (GitHub Project)](https://github.com/users/pedruck/projects/1)
+- [Quadro do backlog (GitHub Project)](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38)
 
 O tempo gasto em cada issue é registrado pelos próprios integrantes em
 [Registro de horas por issue](gestao-horas.md).
@@ -28,7 +28,7 @@ valores abaixo foram obtidos do histórico de issues e pull requests do reposit�
 | 21/10/2026 | M-CP1 (cumprimento de marcos) | 3 de 12 issues fechadas | — | Produção adiantada, mas o fechamento formal dependia das revisões dos PRs abertos ([ata 02](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/atas/ata-02-2026-10-21.md)) | Priorizar a revisão e o merge dos PRs #18, #19 e #21 |
 | 21/10/2026 | M-RC1 e M-RC2 (esforço) | Não calculável | — | Campo de horas reais em branco em todas as issues | Todos preenchem as horas reais nas suas issues |
 | 26/10/2026 | M-DP1 (retrabalho em revisão) | 0 de 12 PRs (0%) | Verde | Nenhum PR integrado à `main` recebeu pedido de ajustes ou commits corretivos após a revisão. A métrica não capta a demora na revisão: os PRs #18, #19, #21, #23 e #24 esperaram de 2 a 7 dias pela aprovação | Manter a revisão por pares; acompanhar o tempo de revisão na Entrega 2 |
-| 26/10/2026 | M-CP1 (cumprimento de marcos) | 11 de 15 issues da E1 fechadas (73,3%) | Amarelo | Seguem abertas #2 e #27 (integração e limite de páginas) e #25 e #26 (sem entrega registrada) | Fechamento das issues entregues em 25/10, registrado abaixo |
+| 26/10/2026 | M-CP1 (cumprimento de marcos) | 11 de 15 issues da E1 fechadas (73,3%) | Amarelo | Seguem abertas a #2 (integração, que depois absorveu a #27) e as suas sub-issues #25 e #26 (sem entrega registrada) e #45 (ajustes da professora) | Fechamento das issues entregues em 25/10, registrado abaixo |
 | 26/10/2026 | M-RC1 e M-RC2 (esforço) | Aguardando registro | — | Depende das horas em [Registro de horas por issue](gestao-horas.md) | Calcular após o preenchimento pelos integrantes |
 
 ## Registro de fechamento de issues da Entrega 1

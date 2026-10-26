@@ -42,7 +42,7 @@ na Fase 4.
   agrupada no *milestone* da entrega correspondente.
 - O trabalho é feito em uma *branch* própria e integrado à `main` por *pull request* revisado
   por outro integrante.
-- O andamento é acompanhado no [quadro do backlog](https://github.com/users/pedruck/projects/1),
+- O andamento é acompanhado no [quadro do backlog](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38),
   e o tempo gasto em cada issue é registrado em [Registro de horas](gestao-horas.md).
 - As decisões de equipe ficam nas [Atas](atas.md), e as medições de gestão em
   [Gestão (PSM/CID)](gestao.md).

@@ -36,7 +36,9 @@ A estimativa é a registrada na abertura de cada issue e não deve ser alterada.
 | [#12](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/12) | Critérios de Julgamento e Diagrama GQM | Philipe | Fechada | 3 h | |
 | [#25](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/25) | Declaração de Uso de IA: linhas individuais de todos os integrantes | Todos | Aberta | 1 h (equipe) | |
 | [#26](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/26) | Revisar hipótese H1.1 e largura das Tabelas 3 e 5 da Fase 2 | Pedro Henrique | Aberta | 1 h | |
-| [#27](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/27) | Controle do limite de 15 páginas na integração do artigo | Pedro Druck, Daniel | Aberta | 2 h | |
-| | **Total** | | | **50 h** | |
+| [#27](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/27) | Controle do limite de 15 páginas na integração do artigo | Pedro Druck, Daniel | Fechada (duplicada da #2) | — | — |
+| [#45](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/45) | Ajustes da professora na estrutura do artigo | Pedro Druck | Aberta | a definir | |
+| | **Total** | | | **48 h** | |
 
-As issues da Entrega 2 serão incluídas nesta página quando forem planejadas.
+A #27 foi incorporada ao checklist da #2, e sua estimativa deixou de contar no total. As issues da
+Entrega 2 serão incluídas nesta página quando forem planejadas.

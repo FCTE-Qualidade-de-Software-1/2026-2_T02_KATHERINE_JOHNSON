@@ -38,7 +38,7 @@ A execução do projeto é acompanhada com métricas PSM/CID, descritas em
 
 O trabalho está na **Entrega 1** (Fases 1 e 2), com prazo em 26/10/2026. As Fases 3 e 4 fazem
 parte da Entrega 2. O andamento das tarefas pode ser acompanhado no
-[quadro do backlog](https://github.com/users/pedruck/projects/1).
+[quadro do backlog](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38).
 
 ## Onde estão as evidências
 
