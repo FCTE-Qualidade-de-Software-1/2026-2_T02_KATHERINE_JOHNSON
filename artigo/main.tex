@@ -18,6 +18,9 @@
 
 \sloppy
 
+% Permite quebra de linha em URLs longas
+\def\UrlBreaks{\do\/\do-\do\_}
+
 % Inclui uma seção só se o arquivo já existir, para o artigo compilar incrementalmente.
 \newcommand{\incluir}[1]{%
   \IfFileExists{#1.tex}{\input{#1}}{\typeout{AVISO: arquivo #1.tex ausente}}}
@@ -26,7 +29,8 @@
   Portal de Serviços $\times$ Aplicativo}
 
 \author{Daniel de Oliveira Lira, Heitor Macedo Ricardo, Hugo Freitas Silva,\\
-  Pedro Druck Montalvão Reis, Pedro Henrique Ferreira Xavier, Philipe Amancio Reis Caetano}
+  Pedro Druck Montalvão Reis, Pedro Henrique Ferreira Xavier,\\
+  Philipe Amancio Reis Caetano}
 
 \address{Faculdade de Ciências e Tecnologias em Engenharia (FCTE)\\
   Universidade de Brasília (UnB) -- Brasília, DF -- Brasil}
@@ -37,8 +41,9 @@
 
 \begin{center}
   \small
-  Repositório oficial do projeto com dados e evidências:
-  \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON}
+  Repositório oficial do projeto com dados e evidências:\\[2pt]
+  \url{https://github.com/FCTE-Qualidade-de-Software-1/}\\
+  \url{2026-2_T02_KATHERINE_JOHNSON}
 \end{center}
 
 \incluir{secoes/resumo}
