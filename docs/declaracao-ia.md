@@ -31,6 +31,8 @@ A Tabela abaixo documenta pormenorizadamente a ferramenta empregada, a finalidad
 | **Pedro Henrique** | Gemini 1.5 Pro / Antigravity | Elaboração do rascunho dos objetivos no template GQM, formulação das hipóteses e referencial teórico GQM/PSM | Auditoria minuciosa para garantir ausência de termos de usabilidade (proibida pela professora); reestruturação das questões para eliminar métricas disfarçadas; checagem das citações bibliográficas de Basili et al. (1994) e McGarry et al. (2002); validação de consistência dos slides em Beamer. |
 | **Philipe** | ChatGPT / Claude 3.5 Sonnet | Estruturação tabular das fichas de métricas e formulação preliminar dos níveis de pontuação | Conferência manual da viabilidade de coleta em caixa-preta sem acesso ao código-fonte; ajuste dos limiares de julgamento conforme referências técnicas de mercado. |
 
+**Fonte:** elaborada pela equipe com base nas declarações individuais de uso de ferramentas de inteligência artificial.
+
 ---
 
 *Versão 1.0 — 18/10/2026 — Documento de conformidade da equipe KATHERINE JOHNSON.*
