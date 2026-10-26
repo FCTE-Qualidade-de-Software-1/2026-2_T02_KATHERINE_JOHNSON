@@ -1,6 +1,6 @@
 # Fase 1 — Propósito, partes interessadas e escopo
 
-*Responsável: Heitor · Versão 0.1 — 19/10/2026 — rascunho para revisão*
+*Responsável: Heitor · Versão 1.0 — revisada e integrada à `main` em 25/10/2026 ([PR #24](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/24))*
 
 Esta página define por que a avaliação existe, para quem ela serve e até onde ela vai. Os
 pontos de vista dos objetivos de medição da [Fase 2](fase2-gqm.md) derivam das partes

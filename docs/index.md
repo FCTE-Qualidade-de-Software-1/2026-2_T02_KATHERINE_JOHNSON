@@ -21,7 +21,8 @@ As características avaliadas são:
 
 ## Como o trabalho está organizado
 
-A avaliação segue o processo de avaliação de produto da ISO/IEC 25040, dividido em quatro fases:
+A avaliação segue o processo de avaliação de produto da ISO/IEC 25040, dividido em quatro fases.
+A [Metodologia](metodologia.md) descreve o método em visão geral e o passo a passo de cada fase.
 
 1. **[Fase 1](fase1.md)** — estabelecer os requisitos da avaliação: propósito, partes
    interessadas, descrição do produto, modelo de qualidade, priorização e escopo.
@@ -35,15 +36,20 @@ A execução do projeto é acompanhada com métricas PSM/CID, descritas em
 
 ## Situação atual
 
-O trabalho está na **Entrega 1** (Fases 1 e 2), com prazo em 26/10/2026.
+O trabalho está na **Entrega 1** (Fases 1 e 2), com prazo em 26/10/2026. As Fases 3 e 4 fazem
+parte da Entrega 2. O andamento das tarefas pode ser acompanhado no
+[quadro do backlog](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38).
 
 ## Onde estão as evidências
 
 - [Repositório do projeto](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON)
-- [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases) — a release E1 será publicada na data da Entrega 1
+- [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases) — versões entregues, com o PDF do artigo
 - [Artigo em LaTeX](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/artigo)
 - [Plano de gestão PSM/CID](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/gestao)
-- [Atas de reunião](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/atas)
+- [Atas de reunião](atas.md)
+- [Evidências do levantamento da Fase 1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/evidencias/fase1)
+- [Dados da avaliação e termo de consentimento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/dados)
+- [Registro de horas por issue](gestao-horas.md)
 
 Dados pessoais de condutores e veículos usados na avaliação não são publicados. Prints e
 registros aparecem anonimizados, com códigos como "Veículo V1".

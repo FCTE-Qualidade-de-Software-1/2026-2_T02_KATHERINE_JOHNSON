@@ -13,4 +13,4 @@ Soares Ramos.
 | Philipe | Métricas, níveis de pontuação, critérios de julgamento e diagrama GQM |
 
 A contribuição de cada integrante, quantificada em percentual de esforço, é apresentada na
-tabela de contribuição do artigo.
+tabela de contribuição do artigo, calculada a partir do [registro de horas por issue](gestao-horas.md).
