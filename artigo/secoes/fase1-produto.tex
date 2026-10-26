@@ -1,26 +1,22 @@
 % Fase 1 --- Descrição do produto e modelo de qualidade (responsável: Hugo).
-% Pacotes usados: tikz (bibliotecas positioning, fit, backgrounds, arrows.meta,
-% shapes.geometric) e url. Versão completa para a GitPage: docs/fase1-produto.md.
+% Versão completa para a GitPage: docs/fase1-produto.md.
 
-\subsection{Descrição do Produto}
+\subsubsection{Passo 1.3: Descrição do Produto e Arquitetura de Contexto}
 \label{subsec:produto}
 
-O objeto da avaliação é a consulta de infrações de trânsito oferecida pelo Detran-DF em dois canais: o Portal de Serviços, apresentado como ``Detran Digital'' \cite{detrandf2026portal}, e o aplicativo ``DETRAN-DF'', versão 2.6.9, distribuído na Google Play e na App Store \cite{detrandf2026app}. O levantamento, feito em 18/10/2026, usou apenas informações públicas: telas do portal, páginas das lojas e os arquivos que o navegador baixa ao abrir o portal; o registro completo está no repositório.
-
-Trata-se de um serviço digital governamental ao cidadão, prestado por um sistema de informação com dois clientes. O portal é uma aplicação web de página única executada no navegador; o aplicativo é um cliente móvel multiplataforma em React Native para Android e iOS. Nenhum dos dois guarda as infrações: ambos usam o mesmo servidor de identidade e a mesma família de APIs do Detran-DF, com serviços distintos para a consulta, que reúnem dados próprios e do Registro Nacional de Infrações de Trânsito (RENAINF). A Tabela~\ref{tab:canais} compara os canais e a Figura~\ref{fig:contexto} mostra o contexto do sistema.
+O serviço avaliado é prestado por dois clientes que consomem a mesma família de APIs do Detran-DF e do RENAINF: o Portal de Serviços (aplicação web \textit{single-page}) \cite{detrandf2026portal} e o aplicativo móvel ``DETRAN-DF'' (v.~2.6.9 em React Native) \cite{detrandf2026app}. A Tabela~\ref{tab:canais} sintetiza a comparação levantada em 18/10/2026 (detalhamento completo em \texttt{docs/fase1-produto.md}), e a Figura~\ref{fig:contexto} ilustra o contexto arquitetural.
 
 \begin{table}[htbp]
 \centering
-\caption{Comparação entre os canais da consulta de infrações (levantamento de 18/10/2026)}
+\caption{Síntese de comparação entre os canais de consulta (levantamento de 18/10/2026)}
 \label{tab:canais}
 \footnotesize
 \begin{tabular}{|p{2.5cm}|p{5.5cm}|p{5.5cm}|}
 \hline
 \textbf{Aspecto} & \textbf{Portal de Serviços} & \textbf{Aplicativo} \\ \hline
-Acesso & \url{portal.detran.df.gov.br}, em navegador de desktop ou celular & Google Play e App Store; Android 8.0 ou iOS 15.1 ou superior \\ \hline
-Autenticação & CPF/CNPJ e senha com reCAPTCHA, ou conta gov.br & Mesma conta: CPF/CNPJ e senha, gov.br ou biometria, sem reCAPTCHA \\ \hline
-Abrangência da consulta & Só veículos vinculados ao CPF autenticado; opção separada para veículo de outra UF & Igual ao portal \\ \hline
-Dados por infração & 31 rótulos previstos na tela de detalhes, entre eles auto, enquadramento, local, data, hora, órgão autuador, natureza, pontuação, valores, prazos e situação & Os mesmos rótulos, exceto UF, mais a data de opção pelo desconto do SNE (a confirmar com veículo real) \\ \hline
+Acesso & \url{portal.detran.df.gov.br} (Navegador) & Google Play e App Store (Android/iOS) \\ \hline
+Autenticação & CPF/senha com reCAPTCHA, ou gov.br & CPF/senha, gov.br ou biometria (sem reCAPTCHA) \\ \hline
+Dados retornados & Veículos do CPF; 31 rótulos de detalhes & Veículos do CPF; mesmos rótulos (exceto UF, mais SNE) \\ \hline
 \end{tabular}
 \par\smallskip
 \raggedright\scriptsize Fonte: elaborada pela equipe a partir de \cite{detrandf2026portal} e \cite{detrandf2026app}.
@@ -35,37 +31,32 @@ Dados por infração & 31 rótulos previstos na tela de detalhes, entre eles aut
 \scriptsize Fonte: elaborada pela equipe.
 \end{figure}
 
-Por ser caixa-preta, a avaliação alcança apenas o que chega ao avaliador: campos exibidos, passos até o resultado, tempo percebido, dados transferidos e conclusão da consulta em cada contexto de uso. Ficam fora o tempo de processamento no servidor, a capacidade da infraestrutura, a disponibilidade ao longo do tempo e a correção absoluta dos dados, sem acesso à base oficial. O produto impõe ainda três condições ao plano: só o proprietário que consentiu pode fazer login, pois a consulta lista apenas veículos do CPF autenticado; o login difere entre canais (reCAPTCHA no portal, biometria no aplicativo), então a medição de tempo começa após a autenticação; e o perfilador do Android Studio não funciona com aplicativos de loja, o que restringe a utilização de recursos ao volume de dados transferidos.
-
-\subsection{Modelo de Qualidade Adaptado}
+\subsubsection{Passo 1.4: Modelo de Qualidade Adaptado}
 \label{subsec:modelo-qualidade}
 
-O modelo parte de duas fontes da família SQuaRE. Adequação funcional e eficiência de desempenho vêm do modelo de qualidade do produto da ISO/IEC 25010:2023 \cite{iso25010_2023}. A cobertura de contexto vem do modelo de qualidade em uso da ISO/IEC 25010:2011 \cite{iso25010_2011}, com medidas na ISO/IEC 25022:2016 \cite{iso25022_2016}. O uso da edição anterior é deliberado: a ISO/IEC 25019:2023, que substituiu esse modelo, removeu a cobertura de contexto \cite{iso25019_2023}, mas a comparação entre canais depende justamente dos contextos em que cada um é usado, e as medidas correspondentes continuam vigentes na ISO/IEC 25022:2016.
-
-A Tabela~\ref{tab:modelo-qualidade} registra a decisão sobre cada subcaracterística das três características escolhidas e a parte interessada que a motiva. As demais características da ISO/IEC 25010:2023 ficam fora: capacidade de interação, por corresponder à antiga usabilidade; compatibilidade, porque a troca de dados com gov.br e RENAINF ocorre no servidor; confiabilidade, porque disponibilidade exige monitoramento por semanas; segurança, que exigiria autorização formal do órgão; e manutenibilidade, flexibilidade e segurança operacional, que dependem de código-fonte ou não se aplicam a uma consulta de dados. Quatro adaptações distinguem o modelo do original. A completude de contexto é medida só pela conclusão da consulta e pelo tempo, sem satisfação, que pertence à usabilidade e está fora do escopo. A correção funcional é julgada pela consistência entre os canais e com a notificação recebida pelo proprietário. A apropriação funcional segue o exemplo da própria norma, que fala em passos necessários e suficientes para concluir a tarefa, e é medida pela contagem objetiva de passos. A utilização de recursos se restringe à rede. Para a completude funcional, propõe-se uma lista de referência externa aos dois canais, derivada do conteúdo obrigatório do auto de infração (art.~280 do Código de Trânsito Brasileiro) e das informações de natureza, pontuação e valor (arts.~258 e 259) \cite{brasil1997ctb}. A Figura~\ref{fig:modelo-qualidade} apresenta a hierarquia resultante.
+O modelo de qualidade combina Adequação Funcional e Eficiência de Desempenho do modelo de produto da ISO/IEC 25010:2023 \cite{iso25010_2023} com a Cobertura de Contexto do modelo de qualidade em uso da ISO/IEC 25010:2011 \cite{iso25010_2011} e medidas da ISO/IEC 25022:2016 \cite{iso25022_2016}, preservada deliberadamente frente à ISO/IEC 25019:2023 \cite{iso25019_2023} por ser indispensável à comparação multiplataforma. A Tabela~\ref{tab:modelo-qualidade} sintetiza o escopo selecionado e a Figura~\ref{fig:modelo-qualidade} apresenta a hierarquia resultante. Para a completude funcional, adota-se lista de referência externa baseada nos arts.~280, 258 e 259 do CTB \cite{brasil1997ctb}.
 
 \begin{table}[htbp]
 \centering
-\caption{Seleção das subcaracterísticas do modelo de qualidade adaptado}
+\caption{Seleção consolidada do modelo de qualidade adaptado}
 \label{tab:modelo-qualidade}
 \footnotesize
-\begin{tabular}{|p{3.2cm}|p{1.8cm}|p{7.0cm}|}
+\begin{tabular}{|p{3.8cm}|p{1.8cm}|p{6.4cm}|}
 \hline
-\textbf{Subcaracterística} & \textbf{Decisão} & \textbf{Justificativa} \\ \hline
+\textbf{Subcaracterística} & \textbf{Decisão} & \textbf{Foco principal na avaliação} \\ \hline
 \multicolumn{3}{|l|}{\textit{Adequação funcional (ISO/IEC 25010:2023)}} \\ \hline
-Completude funcional & Incluída & O cidadão precisa de todos os dados da autuação para pagar, recorrer ou indicar condutor \\ \hline
-Correção funcional & Adaptada & Divergência entre canais leva a pagamento errado ou perda de prazo; medida como consistência entre canais \\ \hline
-Apropriação funcional & Adaptada & Passos desnecessários atrasam o cidadão; medida pela contagem de passos, sem opinião \\ \hline
+Completude funcional & Incluída & Presença dos dados obrigatórios do auto (CTB) \\ \hline
+Correção funcional & Adaptada & Medida como consistência de dados entre os canais \\ \hline
+Apropriação funcional & Adaptada & Contagem objetiva de passos, sem percepção subjetiva \\ \hline
 \multicolumn{3}{|l|}{\textit{Eficiência de desempenho (ISO/IEC 25010:2023)}} \\ \hline
-Comportamento temporal & Incluída & A equipe técnica do Detran-DF precisa comparar tempos entre canais e redes \\ \hline
-Utilização de recursos & Adaptada & Só dados transferidos, que pesam no plano de dados do cidadão e são medidos igualmente nos dois canais \\ \hline
-Capacidade & Excluída & Exige teste de carga sobre a infraestrutura do órgão \\ \hline
+Comportamento temporal & Incluída & Comparação de tempos de resposta entre canais e redes \\ \hline
+Utilização de recursos & Adaptada & Restrita ao volume de dados transferidos na rede (MB) \\ \hline
 \multicolumn{3}{|l|}{\textit{Cobertura de contexto (ISO/IEC 25010:2011, qualidade em uso)}} \\ \hline
-Completude de contexto & Adaptada & O requisitante precisa saber se a consulta funciona em todos os dispositivos e redes previstos; sem satisfação \\ \hline
-Flexibilidade & Incluída & Cidadãos com rede degradada ou sistema antigo, fora dos contextos previstos \\ \hline
+Completude de contexto & Adaptada & Conclusão da consulta em desktops e celulares previstos \\ \hline
+Flexibilidade & Incluída & Resiliência e conclusão sob rede degradada simulada \\ \hline
 \end{tabular}
 \par\smallskip
-\raggedright\scriptsize Fonte: elaborada pela equipe com base em \cite{iso25010_2023} e \cite{iso25010_2011}.
+\raggedright\scriptsize Fonte: elaborada pela equipe. Justificativas das exclusões documentadas em \texttt{docs/fase1-produto.md}.
 \end{table}
 
 \begin{figure}[htbp]
