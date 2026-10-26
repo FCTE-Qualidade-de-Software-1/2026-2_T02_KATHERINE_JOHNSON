@@ -1,42 +1,25 @@
-\section{Fase 2: Especificação da Avaliação --- Objetivos, Questões e Hipóteses}
-\label{sec:fase2-gqm}
-
-Em conformidade com o processo de avaliação da ISO/IEC 25040 \cite{iso25040_2011} e com a abordagem \textit{Goal Question Metric} (GQM) \cite{basili1994gqm}, esta seção transforma as características priorizadas na Fase 1 em objetivos de medição, questões e hipóteses.
-
-\subsection{Rastreabilidade entre a Fase 1 e a Fase 2}
+\subsubsection{Passo 2.1: Rastreabilidade e Objetivos de Medição (GQM)}
 \label{subsec:rastreabilidade}
+\label{subsec:objetivos-gqm}
 
-A definição dos elementos da Fase 2 mantém a rastreabilidade com as decisões da Fase 1. O foco de qualidade de cada objetivo GQM deriva de uma das características priorizadas: adequação funcional (ISO/IEC 25010:2023), eficiência de desempenho (ISO/IEC 25010:2023) e cobertura de contexto (ISO/IEC 25010:2011 e ISO/IEC 25022:2016).
-
-O ponto de vista de cada objetivo vem das partes interessadas mapeadas na Fase 1:
-\begin{itemize}
-    \item O \textbf{Cidadão/Condutor} subsidia o ponto de vista prioritário sobre a adequação funcional e a cobertura de contexto, visto que necessita de dados íntegros e acesso contínuo independentemente do dispositivo ou da infraestrutura de telecomunicações disponível;
-    \item A \textbf{Equipe técnica de TI e gestão de serviços digitais do Detran-DF} orienta o ponto de vista de eficiência de desempenho, cujo interesse recai sobre a otimização de banda e a estabilidade dos tempos de execução da consulta;
-    \item O \textbf{Requisitante da Avaliação (Área de Governança Digital do Detran-DF)} fundamenta transversalmente a busca pela paridade e consistência entre os canais de atendimento prestados pelo órgão.
-\end{itemize}
-
-A Tabela~\ref{tab:rastreabilidade-fase1-fase2} sintetiza as relações de rastreabilidade entre as fases.
+Em conformidade com a ISO/IEC 25040 \cite{iso25040_2011} e a abordagem GQM \cite{basili1994gqm}, as características priorizadas na Fase 1 são transformadas em objetivos formais de medição. A Tabela~\ref{tab:rastreabilidade-fase1-fase2} estabelece a rastreabilidade entre as fases, e a Tabela~\ref{tab:objetivos-gqm} formaliza os três objetivos segundo o \textit{template} de cinco elementos de Basili, Caldiera e Rombach \cite{basili1994gqm}.
 
 \begin{table}[htbp]
 \centering
 \caption{Rastreabilidade entre a Fase 1 e a Fase 2}
 \label{tab:rastreabilidade-fase1-fase2}
 \footnotesize
-\begin{tabular}{|p{2.8cm}|p{3.2cm}|p{2.8cm}|p{2.8cm}|p{1.8cm}|}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|p{2.6cm}|p{2.8cm}|p{2.8cm}|p{2.8cm}|p{1.4cm}|}
 \hline
 \textbf{Característica (Fase 1)} & \textbf{Subcaracterísticas consideradas} & \textbf{Foco de qualidade (GQM)} & \textbf{Ponto de vista (parte interessada)} & \textbf{Objetivo GQM} \\ \hline
-Adequação funcional (ISO/IEC 25010:2023) & Completude funcional, correção funcional, apropriação funcional & Completude, correção e adequação do fluxo de consulta & Cidadão/condutor e requisitante & \textbf{G1} \\ \hline
-Eficiência de desempenho (ISO/IEC 25010:2023) & Comportamento temporal, utilização de recursos & Tempo até a exibição completa da lista de infrações e volume de dados transferidos via rede & Equipe técnica de TI e gestão de serviços digitais do Detran-DF & \textbf{G2} \\ \hline
-Cobertura de contexto (Qualidade em Uso) & Completude de contexto, flexibilidade de contexto & Sucesso da tarefa em condições diversas de hardware e conectividade & Cidadão/condutor e requisitante & \textbf{G3} \\ \hline
+Adequação funcional (ISO/IEC 25010:2023) & Completude, correção e apropriação funcional & Completude, consistência e fluxo da consulta & Cidadão/condutor e requisitante & \textbf{G1} \\ \hline
+Eficiência de desempenho (ISO/IEC 25010:2023) & Comportamento temporal e utilização de recursos & Tempo de exibição e volume de dados em rede & Equipe técnica de TI do Detran-DF & \textbf{G2} \\ \hline
+Cobertura de contexto (Qualidade em Uso) & Completude e flexibilidade de contexto & Conclusão em diversos hardwares e redes & Cidadão/condutor e requisitante & \textbf{G3} \\ \hline
 \end{tabular}
 \par\smallskip
-\raggedright\scriptsize Fonte: elaborada pela equipe, a partir das partes interessadas e do modelo de qualidade da Fase 1.
+\raggedright\scriptsize Fonte: elaborada pela equipe.
 \end{table}
-
-\subsection{Objetivos de Medição no Modelo Estruturado GQM}
-\label{subsec:objetivos-gqm}
-
-Para cada uma das características selecionadas, formulou-se um objetivo de medição formal seguindo o \textit{template} de cinco elementos proposto por Basili, Caldiera e Rombach \cite{basili1994gqm}. A Tabela~\ref{tab:objetivos-gqm} especifica os objetivos concebidos para a avaliação comparativa dos canais digitais do Detran-DF.
 
 \begin{table}[htbp]
 \centering
@@ -46,102 +29,35 @@ Para cada uma das características selecionadas, formulou-se um objetivo de medi
 \begin{tabular}{|l|p{12.2cm}|}
 \hline
 \textbf{ID} & \textbf{Especificação Estruturada do Objetivo} \\ \hline
-\textbf{G1} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \newline
-\textbf{com o propósito de} comparar e avaliar \newline
-\textbf{com respeito à} adequação funcional (completude funcional, correção funcional e apropriação funcional da consulta) \newline
-\textbf{do ponto de vista do} cidadão/condutor e do requisitante institucional \newline
-\textbf{no contexto da} execução da consulta por meio do Portal de Serviços e do aplicativo oficial do Detran-DF com veículos reais registrados no DF. \\ \hline
-\textbf{G2} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \newline
-\textbf{com o propósito de} comparar e avaliar \newline
-\textbf{com respeito à} eficiência de desempenho (tempo até a exibição completa da lista de infrações e volume de dados transferidos via rede) \newline
-\textbf{do ponto de vista da} Equipe técnica de TI e gestão de serviços digitais do Detran-DF e do requisitante institucional \newline
-\textbf{no contexto de} requisições repetidas de consulta executadas em ambientes controlados sob condições de rede estável e degradada. \\ \hline
-\textbf{G3} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \newline
-\textbf{com o propósito de} comparar e avaliar \newline
-\textbf{com respeito à} cobertura de contexto (capacidade de conclusão da tarefa mandatória de consulta frente à diversidade de ambientes operacionais) \newline
-\textbf{do ponto de vista do} cidadão/condutor sob restrições técnicas \newline
-\textbf{no contexto de} variação de plataformas de acesso (sistemas operacionais Android/iOS, navegadores web modernos) e perfis de conectividade (banda larga Wi-Fi, dados móveis 4G e conexões com latência simulada). \\ \hline
+\textbf{G1} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \textbf{com o propósito de} comparar e avaliar \textbf{com respeito à} adequação funcional (completude, correção e apropriação funcional) \textbf{do ponto de vista do} cidadão/condutor e do requisitante institucional \textbf{no contexto da} execução da consulta no Portal de Serviços e no aplicativo oficial do Detran-DF com veículos reais registrados no DF. \\ \hline
+\textbf{G2} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \textbf{com o propósito de} comparar e avaliar \textbf{com respeito à} eficiência de desempenho (tempo até a exibição completa e volume de dados transferidos via rede) \textbf{do ponto de vista da} Equipe técnica de TI do Detran-DF e do requisitante \textbf{no contexto de} requisições repetidas em ambientes controlados sob rede estável e degradada. \\ \hline
+\textbf{G3} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \textbf{com o propósito de} comparar e avaliar \textbf{com respeito à} cobertura de contexto (conclusão da tarefa frente à diversidade operacional) \textbf{do ponto de vista do} cidadão/condutor sob restrições técnicas \textbf{no contexto de} variação de plataformas (Android/iOS, navegadores web) e conectividade (Wi-Fi, 4G e latência simulada). \\ \hline
 \end{tabular}
 \par\smallskip
 \raggedright\scriptsize Fonte: elaborada pela equipe, com o \textit{template} de \cite{basili1994gqm}.
 \end{table}
 
-\subsection{Questões de Medição e Hipóteses}
+\subsubsection{Passo 2.2: Questões de Medição e Hipóteses}
 \label{subsec:questoes-hipoteses}
 
-A derivação do nível operacional desdobra cada objetivo em questões analíticas que abordam os atributos essenciais de qualidade do produto, deliberadamente evitando formular métricas diretas em formato interrogativo. Para cada questão formulada, estabeleceu-se uma hipótese verificável por meio das medições definidas para a Fase 3.
-\subsubsection{Desdobramento do objetivo G1 (adequação funcional)}
-
-O foco de adequação funcional investiga se ambos os canais entregam ao cidadão as informações necessárias à identificação e compreensão da autuação, conforme lista de referência definida na Fase 1, e se mantêm consistentes entre si, além de permitirem concluir a consulta sem passos desnecessários.
-
-\begin{itemize}
-    \item \textbf{Questão Q1.1 (Completude funcional):} Os dois canais apresentam as informações necessárias à identificação e compreensão da autuação de trânsito, conforme lista de referência definida na Fase 1?
-    \begin{quote}
-        \textbf{Hipótese H1.1:} O Portal de Serviços apresenta maior detalhamento e completude dos campos informativos definidos na lista de referência da Fase 1 do que o aplicativo.
-    \end{quote}
-    
-    \item \textbf{Questão Q1.2 (Correção e consistência funcional):} As informações referentes ao status, valores monetários, pontuação e prazos das autuações apresentam consistência observável dos campos comuns entre os canais?
-    \begin{quote}
-        \textbf{Hipótese H1.2:} Não há divergências observáveis entre os canais para uma mesma infração consultada em intervalo temporal próximo.
-    \end{quote}
-
-    \item \textbf{Questão Q1.3 (Adequação das operações):} O caminho até a exibição das infrações inclui passos desnecessários em algum dos canais?
-    \begin{quote}
-        \textbf{Hipótese H1.3:} O aplicativo proporciona um caminho operacional mais enxuto (menor número de cliques e transições de tela) até a exibição das infrações do que o Portal de Serviços.
-    \end{quote}
-\end{itemize}
-
-\subsubsection{Desdobramento do objetivo G2 (eficiência de desempenho)}
-
-O objetivo de eficiência de desempenho avalia o tempo necessário para a conclusão da consulta e o volume de dados transferidos, respeitando a premissa de medição em caixa-preta:
-
-\begin{itemize}
-    \item \textbf{Questão Q2.1 (Comportamento temporal):} Qual canal apresenta menor tempo decorrido até a exibição completa da lista de infrações?
-    \begin{quote}
-        \textbf{Hipótese H2.1:} O aplicativo apresenta tempo médio inferior ao do Portal de Serviços para exibir completamente a lista de infrações, nas mesmas condições de rede e para o mesmo veículo consultado.
-    \end{quote}
-
-    \item \textbf{Questão Q2.2 (Utilização de recursos de rede):} Qual canal transfere menor volume de dados para concluir a consulta de infrações?
-
-    \begin{quote}
-        \textbf{Hipótese H2.2:} O aplicativo apresenta menor volume médio de dados transferidos via rede na transação de consulta quando comparado ao Portal de Serviços.
-    \end{quote}
-
-\end{itemize}
-
-\subsubsection{Desdobramento do objetivo G3 (cobertura de contexto)}
-
-A cobertura de contexto vem do modelo de qualidade em uso e verifica se a tarefa é concluída em diferentes sistemas, dispositivos e redes. Não trata de usabilidade, que está fora do escopo:
-
-\begin{itemize}
-    \item \textbf{Questão Q3.1 (Completude de contexto tecnológico):} A funcionalidade de consulta de infrações é concluída com sucesso em todos os ambientes operacionais definidos no escopo da avaliação (combinações de sistemas operacionais e navegadores)?
-    \begin{quote}
-        \textbf{Hipótese H3.1:} O Portal de Serviços e o aplicativo permitem a conclusão integral da tarefa de consulta em 100\% dos ambientes especificados no escopo (computador e celular), sem bloqueios impeditivos decorrentes da plataforma.
-    \end{quote}
-
-    \item \textbf{Questão Q3.2 (Flexibilidade em condições de rede degradada):} A consulta de infrações continua sendo concluída quando os canais são submetidos a condições de rede degradada, em comparação com as condições de referência Wi-Fi e 4G?
-    \begin{quote}
-        \textbf{Hipótese H3.2:} A taxa de conclusão da consulta de infrações é menor sob conexões com latência simulada do que sob Wi-Fi e 4G em pelo menos um dos canais.
-    \end{quote}
-\end{itemize}
-
-A Tabela~\ref{tab:resumo-questoes-hipoteses} consolida o arcabouço conceitual e operacional derivado, servindo de insumo formal e direto para a especificação das métricas quantitativas, níveis de julgamento e do diagrama GQM a serem desenvolvidos na continuidade da Fase 2.
+No nível operacional, cada objetivo é desdobrado em questões analíticas acompanhadas de hipóteses verificáveis pelas medições externas. No objetivo \textbf{G1}, avalia-se se ambos os canais entregam os campos de referência da Fase 1 (Q1.1), se há consistência de status, valores, pontos e prazos entre os canais (Q1.2) e qual canal exige menos passos e transições pós-login (Q1.3). No objetivo \textbf{G2}, investiga-se qual canal apresenta menor tempo decorrido até a renderização da lista e dos detalhes (Q2.1) e menor consumo de tráfego de dados em rede (Q2.2). No objetivo \textbf{G3}, verifica-se se a consulta conclui sem bloqueios em 100\% das combinações de SO/navegador do escopo (Q3.1) e como a taxa de conclusão se comporta sob rede degradada frente a Wi-Fi e 4G (Q3.2). A Tabela~\ref{tab:resumo-questoes-hipoteses} consolida formalmente as questões e hipóteses (texto integral detalhado em \texttt{docs/fase2-objetivos.md}).
 
 \begin{table}[htbp]
 \centering
-\caption{Objetivos, questões e hipóteses de medição}
+\caption{Objetivos, questões analíticas e hipóteses de medição}
 \label{tab:resumo-questoes-hipoteses}
 \footnotesize
-\begin{tabular}{|c|p{3.0cm}|c|p{4.2cm}|p{4.5cm}|}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|c|p{2.6cm}|c|p{4.1cm}|p{4.3cm}|}
 \hline
-\textbf{Objetivo} & \textbf{Foco de Qualidade} & \textbf{ID} & \textbf{Questão de Medição} & \textbf{Hipótese Formulada} \\ \hline
-\multirow{3}{*}{\textbf{G1}} & \multirow{3}{=}{Adequação funcional (ISO/IEC 25010:2023)} & \textbf{Q1.1} & Integralidade dos dados do auto de infração entre os canais & \textbf{H1.1:} Portal de Serviços apresenta maior completude de dados detalhados que o aplicativo. \\ \cline{3-5}
-& & \textbf{Q1.2} & Consistência observável dos campos comuns entre os canais & \textbf{H1.2:} Não há divergências observáveis nos campos comuns entre os canais. \\ \cline{3-5}
-& & \textbf{Q1.3} & Número de etapas até a exibição da lista de infrações & \textbf{H1.3:} Aplicativo requer menos passos operacionais que o Portal de Serviços. \\ \hline
-\multirow{2}{*}{\textbf{G2}} & \multirow{2}{=}{Eficiência de desempenho (ISO/IEC 25010:2023)} & \textbf{Q2.1} & Tempo até a exibição completa da lista de infrações & \textbf{H2.1:} Aplicativo possui menor tempo de resposta que o Portal de Serviços. \\ \cline{3-5}
-& & \textbf{Q2.2} & Volume total de dados transferidos via rede na transação & \textbf{H2.2:} Aplicativo consome menor volume de tráfego de rede que o Portal de Serviços. \\ \hline
-\multirow{2}{*}{\textbf{G3}} & \multirow{2}{=}{Cobertura de contexto (Qualidade em Uso)} & \textbf{Q3.1} & Conclusão da tarefa na ambientes especificados no escopo & \textbf{H3.1:} Ambos os canais concluem a consulta em 100\% dos ambientes-alvo. \\ \cline{3-5}
-& & \textbf{Q3.2} & Operabilidade e resiliência sob redes de alta latência e baixa banda & \textbf{H3.2:} Taxa de conclusão é menor sob latência simulada do que sob Wi-Fi e 4G em pelo menos um dos canais. \\ \hline
+\textbf{Obj.} & \textbf{Foco de Qualidade} & \textbf{ID} & \textbf{Questão de Medição} & \textbf{Hipótese Formulada} \\ \hline
+\multirow{3}{*}{\textbf{G1}} & \multirow{3}{=}{Adequação funcional (ISO/IEC 25010:2023)} & \textbf{Q1.1} & Os canais apresentam as informações da lista de referência da Fase 1? & \textbf{H1.1:} Ambos apresentam paridade na completude dos rótulos essenciais. \\ \cline{3-5}
+& & \textbf{Q1.2} & Há consistência observável nos campos comuns entre os canais? & \textbf{H1.2:} Não há divergências para uma mesma infração consultada. \\ \cline{3-5}
+& & \textbf{Q1.3} & O caminho até as infrações inclui passos desnecessários? & \textbf{H1.3:} O aplicativo requer menos cliques e telas que o Portal de Serviços. \\ \hline
+\multirow{2}{*}{\textbf{G2}} & \multirow{2}{=}{Eficiência de desempenho (ISO/IEC 25010:2023)} & \textbf{Q2.1} & Qual canal apresenta menor tempo até a exibição completa? & \textbf{H2.1:} O aplicativo possui tempo médio inferior ao do Portal nas mesmas redes. \\ \cline{3-5}
+& & \textbf{Q2.2} & Qual canal transfere menor volume de dados na consulta? & \textbf{H2.2:} O aplicativo consome menor volume médio de dados que o Portal. \\ \hline
+\multirow{2}{*}{\textbf{G3}} & \multirow{2}{=}{Cobertura de contexto (Qualidade em Uso)} & \textbf{Q3.1} & A consulta é concluída em todos os ambientes operacionais do escopo? & \textbf{H3.1:} Ambos concluem a consulta em 100\% dos ambientes especificados. \\ \cline{3-5}
+& & \textbf{Q3.2} & A consulta conclui sob rede degradada frente a Wi-Fi e 4G? & \textbf{H3.2:} A taxa de conclusão cai sob latência simulada em pelo menos um canal. \\ \hline
 \end{tabular}
 \par\smallskip
 \raggedright\scriptsize Fonte: elaborada pela equipe.

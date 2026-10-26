@@ -14,19 +14,27 @@
 \usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{tikz}
+\setlength{\textfloatsep}{6pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{3pt}
+\setlength{\belowcaptionskip}{3pt}
 \usetikzlibrary{positioning,fit,backgrounds,arrows.meta,shapes.geometric}
 
 \sloppy
+
+% Permite quebra de linha em URLs longas
+\def\UrlBreaks{\do\/\do-\do\_}
 
 % Inclui uma seção só se o arquivo já existir, para o artigo compilar incrementalmente.
 \newcommand{\incluir}[1]{%
   \IfFileExists{#1.tex}{\input{#1}}{\typeout{AVISO: arquivo #1.tex ausente}}}
 
-\title{Avaliação da Consulta de Infrações do Detran-DF:\\
-  Portal de Serviços $\times$ Aplicativo\thanks{Repositório oficial do projeto com dados e evidências: \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON}}}
+\title{Avaliação Comparativa de Qualidade em Serviços Digitais de Governo:\\
+  Portal Web $\times$ Aplicativo Móvel na Consulta de Infrações do Detran-DF}
 
-\author{Daniel de Oliveira Lira, Heitor Soares, Hugo Freitas Silva,\\
-  Pedro Druck, Pedro Henrique, Philipe Caetano}
+\author{Daniel de Oliveira Lira, Heitor Macedo Ricardo, Hugo Freitas Silva,\\
+  Pedro Druck Montalvão Reis, Pedro Henrique Ferreira Xavier,\\
+  Philipe Amancio Reis Caetano}
 
 \address{Faculdade de Ciências e Tecnologias em Engenharia (FCTE)\\
   Universidade de Brasília (UnB) -- Brasília, DF -- Brasil}
@@ -35,19 +43,31 @@
 
 \maketitle
 
+\begin{center}
+  \small
+  Repositório oficial do projeto com dados e evidências:\\[2pt]
+  \url{https://github.com/FCTE-Qualidade-de-Software-1/}\\
+  \url{2026-2_T02_KATHERINE_JOHNSON}
+\end{center}
+
 \incluir{secoes/resumo}
 \incluir{secoes/introducao}
+
+\section{Referencial Teórico}
+\label{sec:referencial-teorico}
 \incluir{secoes/referencial-square}
 \incluir{secoes/referencial-gqm}
+
 \incluir{secoes/metodologia}
 
-\section{Fase 1: Definição da Avaliação}
+\subsection{Fase 1: Estabelecimento dos Requisitos da Avaliação}
 \label{sec:fase1}
 \incluir{secoes/fase1-proposito}
 \incluir{secoes/fase1-produto}
 \incluir{secoes/fase1-priorizacao}
 
-% Seções declaradas internamente em cada arquivo (.tex)
+\subsection{Fase 2: Especificação da Avaliação}
+\label{sec:fase2-gqm}
 \incluir{secoes/fase2-objetivos}
 \incluir{secoes/fase2-metricas}
 
