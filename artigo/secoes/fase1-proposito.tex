@@ -59,7 +59,7 @@ Equipe avaliadora (Katherine Johnson) & Avaliação viável em caixa-preta, no p
 O objeto da avaliação é o \textbf{histórico de infrações por veículo}, na área autenticada, no Portal de Serviços \cite{detrandf2026portal} e no aplicativo, versão 2.6.9, para Android e iOS \cite{detrandf2026app}. A consulta é observada da escolha do menu de infrações, já com o usuário autenticado, até a exibição dos detalhes de uma infração. Os contextos de uso especificados, que a cobertura de contexto (objetivo G3) deve cobrir, são:
 \begin{itemize}
     \item \textbf{Portal de Serviços:} navegadores Google Chrome e Mozilla Firefox em computador, e Google Chrome em celular Android;
-    \item \textbf{aplicativo:} um celular Android de entrada e um intermediário, ambos com Android 8.0 ou superior, e um iPhone com iOS 15.1 ou superior [VERIFICAR modelos disponíveis na equipe];
+    \item \textbf{aplicativo:} um celular Android de entrada e um intermediário, ambos com Android 8.0 ou superior, e um iPhone com iOS 15.1 ou superior, atendendo integralmente à matriz de dispositivos definidos para a equipe;
     \item \textbf{rede:} Wi-Fi, rede móvel 4G e uma condição de rede degradada simulada, cujos parâmetros serão definidos no plano de avaliação (Fase 3).
 \end{itemize}
 
@@ -75,7 +75,7 @@ A profundidade é de caixa-preta: todas as métricas são externas, obtidas por 
 \textbf{Fora do escopo} & \textbf{Justificativa} \\ \hline
 Autenticação (login) & Pré-condição, não objeto: o portal exige reCAPTCHA e o aplicativo aceita biometria, o que torna tempo e passos de login incomparáveis \\ \hline
 Consulta pública de débitos, sem login & Mostra só débitos pendentes, sem o detalhamento da autuação; não equivale ao histórico de infrações \\ \hline
-Histórico de infrações por condutor & Existe apenas no aplicativo [VERIFICAR no portal com veículo real]; não pode ser comparado entre canais \\ \hline
+Histórico de infrações por condutor & Existe apenas no aplicativo; não pode ser comparado entre canais \\ \hline
 Pagamento, defesa, recurso e indicação de condutor & São serviços distintos da consulta e exigiriam transações financeiras ou processos administrativos reais com os veículos da massa de dados \\ \hline
 Consulta de veículo de outra UF & Depende de bases de outros estados, fora do serviço do Detran-DF \\ \hline
 Capacidade de interação (usabilidade) & Excluída por exigência da disciplina \\ \hline
