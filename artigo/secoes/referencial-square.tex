@@ -1,0 +1,16 @@
+% Referencial teórico --- família SQuaRE (responsável: Pedro Druck). Orçamento: 0,75 página.
+% Textos das normas conferidos nos prefácios de ISO/IEC 25010:2023 e 25019:2023 (prévias públicas)
+% e nas páginas da ISO; detalhes e fontes na Seção 6 de docs/fase1-priorizacao.md.
+
+\section{Referencial Teórico: Família SQuaRE}
+\label{sec:referencial-square}
+
+A família ISO/IEC 25000 (\textit{Systems and software Quality Requirements and Evaluation}, SQuaRE) reúne normas organizadas em divisões de gestão da qualidade, modelos de qualidade, medição, requisitos e avaliação \cite{iso25010_2023}. Este trabalho usa apenas quatro partes: o modelo de qualidade do produto, o modelo de qualidade em uso, as medidas e o processo de avaliação.
+
+\textbf{Modelo de qualidade do produto.} A ISO/IEC 25010:2023 define nove características de produto \cite{iso25010_2023}. Duas são avaliadas aqui. A adequação funcional é a capacidade de o produto fornecer funções que atendam às necessidades declaradas e implícitas de seus usuários, e se divide em completude funcional, correção funcional e apropriação funcional. A eficiência de desempenho trata do tempo e dos recursos usados para executar as funções, com as subcaracterísticas comportamento temporal, utilização de recursos e capacidade. Nesta edição, a antiga usabilidade passou a se chamar capacidade de interação, e a norma a trata como pré-requisito da usabilidade do modelo de qualidade em uso \cite{iso25010_2023}. Como a disciplina veda a avaliação de usabilidade, essa característica não é considerada.
+
+\textbf{Modelo de qualidade em uso.} A edição de 2011 da ISO/IEC 25010 trazia, além de eficácia, eficiência, satisfação e ausência de risco, a cobertura de contexto, formada por completude de contexto e flexibilidade \cite{iso25010_2011}. As ISO/IEC 25010:2023 e 25019:2023 substituíram essa edição; a ISO/IEC 25019:2023 passou a conter o modelo de qualidade em uso e dele retirou a cobertura de contexto como característica, mantendo o contexto de uso como pré-requisito da qualidade em uso \cite{iso25019_2023}. A justificativa para o uso da edição de 2011 neste trabalho está na Seção~\ref{subsec:cobertura-contexto}. Para evitar confusão com a eficiência desse modelo, o termo ``eficiência'' designa neste artigo sempre a eficiência de desempenho.
+
+\textbf{Medidas.} A ISO/IEC 25023:2016 propõe medidas para as características do modelo de produto \cite{iso25023_2016}, e a ISO/IEC 25022:2016 faz o mesmo para a qualidade em uso \cite{iso25022_2016}. Ambas servem de referência para as métricas da Fase 2, adaptadas às restrições da avaliação em caixa-preta.
+
+\textbf{Processo de avaliação.} A ISO/IEC 25040 estabelece o processo de avaliação de produto que organiza as fases deste projeto \cite{iso25040_2011}. Sua segunda edição foi publicada em 2024 e substituiu a de 2011 \cite{iso25040_2024}.

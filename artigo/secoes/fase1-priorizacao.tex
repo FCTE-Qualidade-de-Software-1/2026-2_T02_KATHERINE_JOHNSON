@@ -1,0 +1,101 @@
+% Fase 1 --- Priorização das características, cobertura de contexto e ODS (responsável: Pedro Druck).
+% Versão completa, com a justificativa de cada nota: docs/fase1-priorizacao.md.
+% Referências cruzadas: subsec:modelo-qualidade e subsec:proposito (fase1-produto.tex e fase1-proposito.tex),
+% subsec:rastreabilidade (fase2-objetivos.tex), sec:referencial-square (referencial-square.tex).
+
+\subsection{Priorização das Características}
+\label{subsec:priorizacao}
+
+O conjunto de candidatas parte das características da ISO/IEC 25010:2023 \cite{iso25010_2023} e da cobertura de contexto do modelo de qualidade em uso \cite{iso25010_2011}. Antes da pontuação, três foram excluídas por não se aplicarem a uma consulta de dados avaliada em caixa-preta: manutenibilidade e flexibilidade do produto, que dependem do código-fonte, e segurança operacional, que trata de evitar danos a pessoas e bens. A capacidade de interação, antiga usabilidade, foi excluída por exigência da disciplina. Restaram seis candidatas: adequação funcional, eficiência de desempenho, cobertura de contexto, confiabilidade, segurança e compatibilidade.
+
+O método é uma matriz de pontuação ponderada seguida de classificação MoSCoW \cite{clegg1994case}. Cada candidata recebe nota de 1 a 5 em cinco critérios, derivados das necessidades das partes interessadas (Seção~\ref{subsec:stakeholders}); a nota final é a soma ponderada, com máximo de 55. A Tabela~\ref{tab:criterios-prioridade} apresenta os critérios, os pesos e a justificativa de cada peso.
+
+\begin{table}[htbp]
+\centering
+\caption{Critérios de priorização e justificativa dos pesos}
+\label{tab:criterios-prioridade}
+\footnotesize
+\begin{tabular}{|p{3.6cm}|c|p{8.4cm}|}
+\hline
+\textbf{Critério} & \textbf{Peso} & \textbf{Justificativa} \\ \hline
+Impacto para o cidadão & 3 & O cidadão é quem usa a consulta e fornece o ponto de vista de G1 e G3 \\ \hline
+Risco para o requisitante & 2 & Consequência para o Detran-DF de uma falha não detectada. Pesa menos que o impacto, porque o risco institucional decorre em grande parte do dano ao cidadão \\ \hline
+Relação com o propósito comparativo & 3 & A avaliação existe para comparar os dois canais e apoiar as decisões D1 a D4 (Tabela~\ref{tab:decisoes}) \\ \hline
+Viabilidade de medir em caixa-preta & 2 & Sem código, servidores ou base do órgão, o que não é observável não gera evidência válida. Peso intermediário para que uma característica importante e inviável apareça na discussão de trade-offs, e não só no cálculo \\ \hline
+Esforço de coleta (5 = baixo) & 1 & O prazo é limitado, mas esforço é custo e não valor: pesa menos que os demais \\ \hline
+\end{tabular}
+\par\smallskip
+\raggedright\scriptsize Fonte: elaborada pela equipe.
+\end{table}
+
+A Tabela~\ref{tab:matriz-prioridade} mostra as notas. A classificação usa o corte natural entre a terceira e a quarta colocadas (41 e 31 pontos): \textit{Must} para 40 pontos ou mais, \textit{Could} de 25 a 39 e \textit{Won't} abaixo de 25, no sentido de ``não nesta avaliação''. A justificativa de cada nota está em \texttt{docs/fase1-priorizacao.md}.
+
+\begin{table}[htbp]
+\centering
+\caption{Matriz de priorização das características candidatas (notas de 1 a 5; máximo de 55 pontos)}
+\label{tab:matriz-prioridade}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|p{3.6cm}|c|c|c|c|c|c|c|}
+\hline
+\textbf{Característica} & \shortstack{\textbf{Impacto}\\\textbf{(3)}} & \shortstack{\textbf{Risco}\\\textbf{(2)}} & \shortstack{\textbf{Propósito}\\\textbf{(3)}} & \shortstack{\textbf{Viabilidade}\\\textbf{(2)}} & \shortstack{\textbf{Esforço}\\\textbf{(1)}} & \textbf{Total} & \textbf{MoSCoW} \\ \hline
+Adequação funcional & 5 & 4 & 5 & 5 & 4 & \textbf{52} & Must \\ \hline
+Cobertura de contexto & 4 & 4 & 5 & 4 & 2 & \textbf{45} & Must \\ \hline
+Eficiência de desempenho & 4 & 3 & 4 & 4 & 3 & \textbf{41} & Must \\ \hline
+Segurança & 5 & 5 & 1 & 1 & 1 & 31 & Could \\ \hline
+Confiabilidade & 4 & 4 & 2 & 1 & 1 & 29 & Could \\ \hline
+Compatibilidade & 2 & 2 & 2 & 1 & 3 & 21 & Won't \\ \hline
+\end{tabular}
+\par\smallskip
+\raggedright\scriptsize Fonte: elaborada pela equipe, com base nas partes interessadas (Tabela~\ref{tab:stakeholders}) e no modelo da Seção~\ref{subsec:modelo-qualidade}.
+\end{table}
+
+A ordem de prioridade é adequação funcional, cobertura de contexto e eficiência de desempenho. A numeração dos objetivos G1 a G3 (Seção~\ref{subsec:rastreabilidade}) segue a ordem de apresentação do modelo de qualidade, e não a prioridade. Variando cada peso entre 1 e 3 (243 combinações), as três características escolhidas permanecem as três primeiras em 242 combinações e a adequação funcional fica em primeiro em todas; a cobertura de contexto supera a eficiência de desempenho em 207, de modo que a ordem entre as duas é menos robusta que a escolha do conjunto.
+
+Três perdas decorrem da escolha. Deixar a segurança de fora, a quarta colocada, evita testes sem autorização do órgão, mas a avaliação nada conclui sobre a proteção dos dados pessoais exibidos, como CPF e placa. A confiabilidade exigiria monitorar a disponibilidade por semanas; só as falhas pontuais entram, como consulta não concluída na métrica M3.2.2. A compatibilidade ocorre no servidor, na troca de dados com o gov.br e o RENAINF, e não é observável. Em contrapartida, incluir a cobertura de contexto, a mais cara por exigir vários aparelhos e redes (esforço 2), é o que permite diferenciar os canais.
+
+\subsection{Justificativa da Cobertura de Contexto}
+\label{subsec:cobertura-contexto}
+
+A cobertura de contexto vem do modelo de qualidade em uso, e não do modelo de produto, e a premissa da disciplina fala em qualidade do produto. A inclusão se justifica pelo propósito: os dois canais são usados em contextos diferentes, como computador ou celular e rede estável ou degradada, e a decisão D3 (Tabela~\ref{tab:decisoes}) pede justamente saber qual canal recomendar em cada contexto. O modelo de produto descreve propriedades do produto, mas não tem característica cuja pergunta seja se a tarefa se conclui em cada contexto especificado. A ISO/IEC 25019:2023 mantém o contexto de uso como pré-requisito da qualidade em uso e prevê que mudanças de contexto sejam monitoradas por avaliações da qualidade em uso \cite{iso25019_2023}, o que sustenta esse tipo de avaliação mesmo sem a característica. Registra-se como limitação que a definição adotada vem de uma edição substituída \cite{iso25010_2011}; as medidas associadas constam da ISO/IEC 25022:2016 \cite{iso25022_2016}.
+
+A cobertura de contexto não é usabilidade. A Tabela~\ref{tab:cobertura-usabilidade} compara as duas. Aqui a pergunta é binária e verificável pelo avaliador: a consulta foi concluída no contexto? Não se mede satisfação, facilidade de aprendizado, estética, acessibilidade da interface nem proteção contra erro do usuário, e nenhum dado vem de opinião.
+
+\begin{table}[htbp]
+\centering
+\caption{Cobertura de contexto neste trabalho e usabilidade (capacidade de interação)}
+\label{tab:cobertura-usabilidade}
+\footnotesize
+\begin{tabular}{|p{2.6cm}|p{5.2cm}|p{5.2cm}|}
+\hline
+\textbf{Aspecto} & \textbf{Cobertura de contexto (incluída)} & \textbf{Usabilidade (excluída)} \\ \hline
+Pergunta & A consulta é concluída neste dispositivo, navegador, sistema e rede? & O usuário opera a interface com eficácia, eficiência e satisfação? \\ \hline
+Evidência & Conclusão e tempo, registrados por roteiro fixo & Desempenho e opinião de usuários \\ \hline
+Quem mede & Avaliadores da equipe & Usuários representativos \\ \hline
+Resultado & Conclui ou não, por contexto & Escala de facilidade ou satisfação \\ \hline
+\end{tabular}
+\par\smallskip
+\raggedright\scriptsize Fonte: elaborada pela equipe, com base em \cite{iso25010_2023}, que trata a capacidade de interação como pré-requisito da usabilidade.
+\end{table}
+
+\subsection{Objetivos de Desenvolvimento Sustentável}
+\label{subsec:ods}
+
+A Tabela~\ref{tab:ods} relaciona o projeto aos ODS \cite{un2015agenda,onubr2026ods}, com metas e indicadores do quadro global \cite{un2025indicadores}; os textos dos indicadores são traduzidos pela equipe.
+
+\begin{table}[htbp]
+\centering
+\caption{ODS, metas e indicadores relacionados à consulta de infrações}
+\label{tab:ods}
+\footnotesize
+\begin{tabular}{|p{2.0cm}|p{3.4cm}|p{3.2cm}|p{4.4cm}|}
+\hline
+\textbf{ODS} & \textbf{Meta} & \textbf{Indicador} & \textbf{Pertinência ao software} \\ \hline
+16 --- Paz, justiça e instituições eficazes & 16.6 Desenvolver instituições eficazes, responsáveis e transparentes em todos os níveis & 16.6.2 Proporção da população satisfeita com a última experiência com serviços públicos & A consulta é um serviço público digital. Os resultados mostram onde ele deixa de ser equivalente entre os canais, lento ou inacessível \\ \hline
+9 --- Indústria, inovação e infraestrutura & 9.c Aumentar significativamente o acesso às tecnologias de informação e comunicação [\ldots] nos países menos desenvolvidos, até 2020 & 9.c.1 Proporção da população coberta por rede móvel, por tecnologia & Vínculo indireto: ter rede móvel não garante acessar o serviço, e G3 mede se a consulta conclui nessa rede \\ \hline
+\end{tabular}
+\par\smallskip
+\raggedright\scriptsize Fonte: textos das metas conforme \cite{onubr2026ods}; indicadores conforme \cite{un2025indicadores}.
+\end{table}
+
+O vínculo principal é com a meta 16.6. A avaliação não mede o indicador 16.6.2, que depende de opinião e pertence à usabilidade, fora do escopo; ela produz evidências sobre causas objetivas, como divergência de dados, tempo e falha de conclusão, que afetam a experiência do cidadão e alimentam as decisões D1 a D4. O vínculo com o ODS 9 é secundário: o texto da meta 9.c se dirige aos países menos desenvolvidos e a 2020, de modo que a relação é temática, e o indicador 9.c.1 mede cobertura de rede, não conclusão de serviço. Foi considerada e descartada a meta 3.6, sobre mortes e ferimentos em acidentes de trânsito: o vínculo é com a fiscalização, e a qualidade do software de consulta não permite inferir efeito sobre acidentes.
