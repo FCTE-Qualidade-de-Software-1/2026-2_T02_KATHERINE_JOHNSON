@@ -53,12 +53,12 @@ O $PCI_i$ medido segue o plano ($PCI_i = H_{reais,i} / \sum H_{reais} \times 100
 
 | Integrante | Papel Principal na E1 | $PCI_i$ medido (horas) | Contribuição final (decisão da equipe) |
 | :--- | :--- | :---: | :---: |
-| Daniel de Oliveira Lira | Gestão do repositório, integração, Metodologia e métricas CID | 18,5% | 16,67% |
-| Heitor Macedo Ricardo | Definição de propósito, restrições, escopo, Introdução e GitPage | 18,5% | 16,67% |
-| Hugo Freitas Silva | Revisão técnica, testes locais e validação de Pull Requests | 13,0% | 16,67% |
-| Pedro Druck Montalvão Reis | Revisão ortográfica, padronização e enquadramento ODS | 18,5% | 16,67% |
-| Pedro Henrique Ferreira Xavier | Definição de métricas GQM, hipóteses e estruturação da Fase 2 | 14,8% | 16,66% |
-| Philipe Amâncio Reis Caetano | Elaboração da abordagem GQM e geração de diagramas e tabelas | 16,7% | 16,66% |
+| Daniel de Oliveira Lira | Gestão do repositório e das métricas PSM/CID, Introdução, Metodologia e integração do artigo | 18,5% | 16,67% |
+| Heitor Macedo Ricardo | Propósito, partes interessadas e escopo; GitPage | 18,5% | 16,67% |
+| Hugo Freitas Silva | Levantamento dos canais, descrição do produto e modelo de qualidade | 13,0% | 16,67% |
+| Pedro Druck Montalvão Reis | Priorização das características, ODS, referencial SQuaRE e revisão de português e padronização | 18,5% | 16,67% |
+| Pedro Henrique Ferreira Xavier | Objetivos, questões e hipóteses GQM, referencial GQM/PSM, declaração de IA e slides | 14,8% | 16,66% |
+| Philipe Amâncio Reis Caetano | Métricas, níveis de pontuação, critérios de julgamento e diagrama GQM | 16,7% | 16,66% |
 | **Total** | — | **100,0%** | **100,00%** |
 
 ---

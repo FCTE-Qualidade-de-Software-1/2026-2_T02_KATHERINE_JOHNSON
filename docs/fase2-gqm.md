@@ -19,7 +19,7 @@ A fundamentação da Fase 2 preserva estrita rastreabilidade com as decisões to
 | Característica (Fase 1) | Subcaracterísticas Consideradas | Foco de Qualidade (GQM) | Ponto de vista (parte interessada) | Objetivo GQM |
 |---|---|---|---|---|
 | **Adequação funcional** (ISO/IEC 25010:2023) | Completude funcional, correção funcional, adequação funcional | Completude, correção e adequação do fluxo de consulta | Cidadão / Condutor e Requisitante Institucional | **G1** |
-| **Eficiência de desempenho** (ISO/IEC 25010:2023) | Comportamento temporal, utilização de recursos | Tempo até a exibição completa da lista de infrações e volume de dados transferidos via rede | Equipe Técnica de TI e Gestão de Serviços Digitais do Detran-DF | **G2** |
+| **Eficiência de desempenho** (ISO/IEC 25010:2023) | Comportamento temporal, utilização de recursos | Tempo até a exibição completa da lista de infrações e volume de dados transferidos via rede | Equipe Técnica de TI e Gestão de Serviços Digitais do Detran-DF e Requisitante Institucional | **G2** |
 | **Cobertura de contexto** (Qualidade em Uso) | Completude de contexto, flexibilidade de contexto | Sucesso da tarefa em condições diversas de hardware e conectividade | Cidadão / Condutor e Requisitante | **G3** |
 
 ---
@@ -62,12 +62,12 @@ Para evitar a formulação de métricas diretas disfarçadas de questões, cada 
 * **Questão Q1.2 (Correção e Consistência Funcional):** As informações referentes ao status, valores monetários, pontuação e prazos das autuações apresentam consistência observável dos campos comuns entre os canais?
   * **Hipótese H1.2:** Não há divergências observáveis entre os canais para uma mesma infração consultada em intervalo temporal próximo.
 * **Questão Q1.3 (Adequação das Operações):** A sequência operacional exigida para atingir o extrato final de infrações impõe etapas redundantes ou passos transacionais desnecessários em algum dos canais?
-  * **Hipótese H1.3:** O aplicativo proporciona um caminho operacional mais enxuto (menor número de cliques e transições de tela) até a exibição das infrações do que o Portal de Serviços.
+  * **Hipótese H1.3:** Os dois canais exigem o mesmo número de cliques e transições de tela até a exibição das infrações, como prevê o levantamento do produto na Fase 1.
 
 ### Objetivo G2 — Eficiência de Desempenho
 
 * **Questão Q2.1 (Comportamento Temporal):** Qual canal apresenta menor tempo decorrido até a exibição completa da lista de infrações?
-  * **Hipótese H2.1:** O aplicativo apresenta tempo médio inferior ao do Portal de Serviços para exibir completamente a lista de infrações, nas mesmas condições de rede e para o mesmo veículo consultado.
+  * **Hipótese H2.1:** O aplicativo apresenta tempo mediano inferior ao do Portal de Serviços para exibir completamente a lista de infrações, nas mesmas condições de rede e para o mesmo veículo consultado.
 * **Questão Q2.2 (Utilização de Recursos de Rede):** Qual o impacto de consumo de tráfego de rede gerado pela operação completa de consulta de infrações em cada canal?
   * **Hipótese H2.2:** O aplicativo apresenta menor volume médio de dados transferidos via rede na transação de consulta quando comparado ao Portal de Serviços.
 

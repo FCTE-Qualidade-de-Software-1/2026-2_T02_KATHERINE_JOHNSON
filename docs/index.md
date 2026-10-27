@@ -1,4 +1,4 @@
-# Avaliação Comparativa de Qualidade em Serviços Digitais de Governo: Portal Web × Aplicativo Móvel na Consulta de Infrações do Detran-DF
+# Avaliação Comparativa de Qualidade em Serviços Digitais de Governo: Portal de Serviços × Aplicativo na Consulta de Infrações do Detran-DF
 
 Este site apresenta o Projeto Final da disciplina FGA0315 Qualidade de Software 1
 (Engenharia de Software, UnB/FGA, semestre 2026/2), desenvolvido pela equipe Katherine Johnson.

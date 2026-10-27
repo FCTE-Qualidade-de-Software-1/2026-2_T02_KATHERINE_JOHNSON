@@ -14,7 +14,7 @@ Em conformidade com a ISO/IEC 25040 \cite{iso25040_2011} e a abordagem GQM \cite
 \hline
 \textbf{Característica (Fase 1)} & \textbf{Subcaracterísticas consideradas} & \textbf{Foco de qualidade (GQM)} & \textbf{Ponto de vista (parte interessada)} & \textbf{Objetivo GQM} \\ \hline
 Adequação funcional (ISO/IEC 25010:2023) & Completude, correção e apropriação funcional & Completude, consistência e fluxo da consulta & Cidadão/condutor e requisitante & \textbf{G1} \\ \hline
-Eficiência de desempenho (ISO/IEC 25010:2023) & Comportamento temporal e utilização de recursos & Tempo de exibição e volume de dados em rede & Equipe técnica de TI do Detran-DF & \textbf{G2} \\ \hline
+Eficiência de desempenho (ISO/IEC 25010:2023) & Comportamento temporal e utilização de recursos & Tempo de exibição e volume de dados em rede & Equipe técnica de TI e requisitante & \textbf{G2} \\ \hline
 Cobertura de contexto (Qualidade em Uso) & Completude e flexibilidade de contexto & Conclusão em diversos hardwares e redes & Cidadão/condutor e requisitante & \textbf{G3} \\ \hline
 \end{tabular}
 \par\smallskip
@@ -31,7 +31,7 @@ Cobertura de contexto (Qualidade em Uso) & Completude e flexibilidade de context
 \textbf{ID} & \textbf{Especificação Estruturada do Objetivo} \\ \hline
 \textbf{G1} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \textbf{com o propósito de} comparar e avaliar \textbf{com respeito à} adequação funcional (completude, correção e apropriação funcional) \textbf{do ponto de vista do} cidadão/condutor e do requisitante institucional \textbf{no contexto da} execução da consulta no Portal de Serviços e no aplicativo oficial do Detran-DF com veículos reais registrados no DF. \\ \hline
 \textbf{G2} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \textbf{com o propósito de} comparar e avaliar \textbf{com respeito à} eficiência de desempenho (tempo até a exibição completa e volume de dados transferidos via rede) \textbf{do ponto de vista da} Equipe técnica de TI do Detran-DF e do requisitante \textbf{no contexto de} requisições repetidas em ambientes controlados sob rede estável e degradada. \\ \hline
-\textbf{G3} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \textbf{com o propósito de} comparar e avaliar \textbf{com respeito à} cobertura de contexto (conclusão da tarefa frente à diversidade operacional) \textbf{do ponto de vista do} cidadão/condutor sob restrições técnicas \textbf{no contexto de} variação de plataformas (Android/iOS, navegadores web) e conectividade (Wi-Fi, 4G e latência simulada). \\ \hline
+\textbf{G3} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \textbf{com o propósito de} comparar e avaliar \textbf{com respeito à} cobertura de contexto (conclusão da tarefa frente à diversidade operacional) \textbf{do ponto de vista do} cidadão/condutor sob restrições técnicas e do requisitante \textbf{no contexto de} variação de plataformas (Android/iOS, navegadores web) e conectividade (Wi-Fi, 4G e latência simulada). \\ \hline
 \end{tabular}
 \par\smallskip
 \raggedright\scriptsize Fonte: elaborada pela equipe, com o \textit{template} de \cite{basili1994gqm}.
@@ -53,8 +53,8 @@ No nível operacional, cada objetivo é desdobrado em questões analíticas acom
 \textbf{Obj.} & \textbf{Foco de Qualidade} & \textbf{ID} & \textbf{Questão de Medição} & \textbf{Hipótese Formulada} \\ \hline
 \multirow{3}{*}{\textbf{G1}} & \multirow{3}{=}{Adequação funcional (ISO/IEC 25010:2023)} & \textbf{Q1.1} & Os canais apresentam as informações da lista de referência da Fase 1? & \textbf{H1.1:} Ambos apresentam paridade na completude dos rótulos essenciais. \\ \cline{3-5}
 & & \textbf{Q1.2} & Há consistência observável nos campos comuns entre os canais? & \textbf{H1.2:} Não há divergências para uma mesma infração consultada. \\ \cline{3-5}
-& & \textbf{Q1.3} & O caminho até as infrações inclui passos desnecessários? & \textbf{H1.3:} O aplicativo requer menos cliques e telas que o Portal de Serviços. \\ \hline
-\multirow{2}{*}{\textbf{G2}} & \multirow{2}{=}{Eficiência de desempenho (ISO/IEC 25010:2023)} & \textbf{Q2.1} & Qual canal apresenta menor tempo até a exibição completa? & \textbf{H2.1:} O aplicativo possui tempo médio inferior ao do Portal nas mesmas redes. \\ \cline{3-5}
+& & \textbf{Q1.3} & O caminho até as infrações inclui passos desnecessários? & \textbf{H1.3:} Os dois canais exigem o mesmo número de passos e telas, como previsto no levantamento. \\ \hline
+\multirow{2}{*}{\textbf{G2}} & \multirow{2}{=}{Eficiência de desempenho (ISO/IEC 25010:2023)} & \textbf{Q2.1} & Qual canal apresenta menor tempo até a exibição completa? & \textbf{H2.1:} O aplicativo possui tempo mediano inferior ao do Portal nas mesmas redes. \\ \cline{3-5}
 & & \textbf{Q2.2} & Qual canal transfere menor volume de dados na consulta? & \textbf{H2.2:} O aplicativo consome menor volume médio de dados que o Portal. \\ \hline
 \multirow{2}{*}{\textbf{G3}} & \multirow{2}{=}{Cobertura de contexto (Qualidade em Uso)} & \textbf{Q3.1} & A consulta é concluída em todos os ambientes operacionais do escopo? & \textbf{H3.1:} Ambos concluem a consulta em 100\% dos ambientes especificados. \\ \cline{3-5}
 & & \textbf{Q3.2} & A consulta conclui sob rede degradada frente a Wi-Fi e 4G? & \textbf{H3.2:} A taxa de conclusão cai sob latência simulada em pelo menos um canal. \\ \hline

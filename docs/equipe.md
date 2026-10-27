@@ -5,11 +5,11 @@ Soares Ramos.
 
 | Integrante | Responsabilidade principal |
 |---|---|
-| Daniel de Oliveira Lira | Gestão PSM/CID, repositório, metodologia e integração do artigo |
-| Heitor Macedo Ricardo | Propósito, partes interessadas e escopo; Introdução; GitPage |
-| Hugo Freitas Silva | Descrição do produto, modelo de qualidade e massa de dados |
-| Pedro Druck Montalvão Reis | Priorização das características, ODS, referencial SQuaRE e revisão de português |
-| Pedro Henrique Ferreira Xavier | Objetivos, questões e hipóteses GQM; slides; declaração de uso de IA |
+| Daniel de Oliveira Lira | Gestão PSM/CID, repositório, Introdução, Metodologia e integração do artigo |
+| Heitor Macedo Ricardo | Propósito, partes interessadas e escopo; GitPage |
+| Hugo Freitas Silva | Levantamento dos canais, descrição do produto, modelo de qualidade e massa de dados |
+| Pedro Druck Montalvão Reis | Priorização das características, ODS, referencial SQuaRE e revisão de português e padronização |
+| Pedro Henrique Ferreira Xavier | Objetivos, questões e hipóteses GQM; referencial GQM/PSM; slides; declaração de uso de IA |
 | Philipe Amâncio Reis Caetano | Métricas, níveis de pontuação, critérios de julgamento e diagrama GQM |
 
 A contribuição de cada integrante, quantificada em percentual de esforço, é apresentada na
