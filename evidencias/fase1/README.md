@@ -22,6 +22,7 @@ Nenhum print entra no repositório sem passar por estas regras:
 |---|---|
 | [`levantamento-publico-2026-10-26.md`](levantamento-publico-2026-10-26.md) | Metadados públicos do aplicativo nas lojas; no portal, recursos carregados pelo navegador, arquivo principal do código cliente e rótulos de "Detalhes da infração" encontrados nele |
 | [`app-ios-app-store-metadados-2026-10-26.json`](app-ios-app-store-metadados-2026-10-26.json) | Resposta da consulta pública da App Store sobre o aplicativo |
+| [`app-android-pacote-2026-10-26.md`](app-android-pacote-2026-10-26.md) | Pacote do aplicativo Android 2.6.9 instalado pela Google Play: versão, bibliotecas, bytecode Hermes e rótulos encontrados |
 | [`roteiro-levantamento.md`](roteiro-levantamento.md) | Roteiro da sessão com veículo real |
 
 ## Prints pendentes
