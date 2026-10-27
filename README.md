@@ -1,4 +1,4 @@
-# Avaliação da consulta de infrações do Detran-DF: Portal de Serviços × Aplicativo
+# Avaliação Comparativa de Qualidade em Serviços Digitais de Governo: Portal Web × Aplicativo Móvel na Consulta de Infrações do Detran-DF
 
 Projeto final da disciplina **FGA0315 Qualidade de Software 1** (Engenharia de Software,
 UnB/FCTE, semestre 2026/2), turma T02, professora Cristiane Soares Ramos. Equipe **Katherine
@@ -84,11 +84,11 @@ mkdocs serve                   # http://127.0.0.1:8000
 | Integrante | GitHub |
 |---|---|
 | Daniel de Oliveira Lira | [@Daniellira540](https://github.com/Daniellira540) |
-| Heitor Soares | [@HeitorM50](https://github.com/HeitorM50) |
+| Heitor Macedo Ricardo | [@HeitorM50](https://github.com/HeitorM50) |
 | Hugo Freitas Silva | [@HugoFreitass](https://github.com/HugoFreitass) |
-| Pedro Druck | [@pedruck](https://github.com/pedruck) |
-| Pedro Henrique | [@PedroGTG](https://github.com/PedroGTG) |
-| Philipe Caetano | [@Phill-Chill](https://github.com/Phill-Chill) |
+| Pedro Druck Montalvão Reis | [@pedruck](https://github.com/pedruck) |
+| Pedro Henrique Ferreira Xavier | [@PedroGTG](https://github.com/PedroGTG) |
+| Philipe Amâncio Reis Caetano | [@Phill-Chill](https://github.com/Phill-Chill) |
 
 As responsabilidades de cada integrante estão na página
 [Equipe](https://fcte-qualidade-de-software-1.github.io/2026-2_T02_KATHERINE_JOHNSON/equipe/) da

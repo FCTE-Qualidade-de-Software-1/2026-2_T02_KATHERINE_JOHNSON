@@ -1,4 +1,4 @@
-# Avaliação da consulta de infrações do Detran-DF
+# Avaliação Comparativa de Qualidade em Serviços Digitais de Governo: Portal Web × Aplicativo Móvel na Consulta de Infrações do Detran-DF
 
 Este site apresenta o Projeto Final da disciplina FGA0315 Qualidade de Software 1
 (Engenharia de Software, UnB/FGA, semestre 2026/2), desenvolvido pela equipe Katherine Johnson.
@@ -36,8 +36,8 @@ A execução do projeto é acompanhada com métricas PSM/CID, descritas em
 
 ## Situação atual
 
-O trabalho está na **Entrega 1** (Fases 1 e 2), com prazo em 26/10/2026. As Fases 3 e 4 fazem
-parte da Entrega 2. O andamento das tarefas pode ser acompanhado no
+A **Entrega 1** (Fases 1 e 2) foi concluída em 26/10/2026; a versão entregue, com o PDF do artigo,
+está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases). As Fases 3 e 4 fazem parte da Entrega 2. O andamento das tarefas pode ser acompanhado no
 [quadro do backlog](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38).
 
 ## Onde estão as evidências

@@ -13,7 +13,7 @@ cmd = [
     "--repo", REPO,
     "--milestone", "Entrega 1 (E1) - Fases 1 e 2 GQM",
     "--state", "all",
-    "--json", "number,title,assignees,body,state"
+    "--json", "number,title,assignees,body,state,stateReason"
 ]
 
 print("Coletando issues da API do GitHub via gh CLI...")
@@ -45,12 +45,14 @@ for issue in issues_data:
     body = issue.get("body", "") or ""
     assignees = [a["login"] for a in issue.get("assignees", [])]
     
-    # Define o responsável principal
-    responsavel_login = assignees[0] if assignees else None
-    responsavel_nome = LOGIN_TO_NOME.get(responsavel_login, "Daniel" if num == 2 else "Outros")
+    # Issues fechadas como duplicadas não entram na medição (ex.: #27, incorporada à #2)
+    if issue.get("stateReason") == "DUPLICATE":
+        continue
 
-    if responsavel_nome not in membros_esforco:
-        membros_esforco[responsavel_nome] = {"est": 0, "real": 0, "issues": 0}
+    # Issues com mais de um responsável têm as horas divididas igualmente entre eles
+    nomes = [LOGIN_TO_NOME[a] for a in assignees if a in LOGIN_TO_NOME] or (["Daniel"] if num == 2 else ["Outros"])
+    for nome in nomes:
+        membros_esforco.setdefault(nome, {"est": 0, "real": 0, "issues": 0})
 
     m_est = re_est.search(body)
     m_real = re_real.search(body)
@@ -59,13 +61,14 @@ for issue in issues_data:
     h_est = int(m_est.group(1)) if m_est else (5 if num == 2 else 0)
     h_real = int(m_real.group(1)) if m_real else (5 if num == 2 else 0)
 
-    membros_esforco[responsavel_nome]["est"] += h_est
-    membros_esforco[responsavel_nome]["real"] += h_real
-    membros_esforco[responsavel_nome]["issues"] += 1
+    for nome in nomes:
+        membros_esforco[nome]["est"] += h_est / len(nomes)
+        membros_esforco[nome]["real"] += h_real / len(nomes)
+        membros_esforco[nome]["issues"] += 1
 
 print("\n--- DADOS EXTRAÍDOS COM SUCESSO ---")
 for membro, dados in membros_esforco.items():
-    print(f"{membro:15}: Estimado = {dados['est']}h | Real = {dados['real']}h | Issues = {dados['issues']}")
+    print(f"{membro:15}: Estimado = {dados['est']:.2f}h | Real = {dados['real']:.2f}h | Issues = {dados['issues']}")
 
 # 1. Gráfico PSM/CID: Recursos e Custos (Horas Estimadas vs. Reais)
 membros = list(membros_esforco.keys())

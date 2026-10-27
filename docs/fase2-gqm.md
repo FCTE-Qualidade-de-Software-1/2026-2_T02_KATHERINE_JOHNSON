@@ -58,7 +58,7 @@ Para evitar a formulação de métricas diretas disfarçadas de questões, cada 
 ### Objetivo G1 — Adequação Funcional
 
 * **Questão Q1.1 (Completude Funcional):** Os dois canais apresentam as informações necessárias à identificação e compreensão da autuação de trânsito, conforme lista de referência definida na Fase 1?
-  * **Hipótese H1.1:** O Portal de Serviços apresenta maior detalhamento e completude dos campos informativos definidos na lista de referência da Fase 1 do que o aplicativo.
+  * **Hipótese H1.1:** Os dois canais apresentam paridade na completude dos rótulos essenciais da lista de referência da Fase 1. A hipótese foi revista porque o levantamento do produto mostrou que portal e aplicativo usam praticamente os mesmos rótulos ([ata 02](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/atas/ata-02-2026-10-21.md)).
 * **Questão Q1.2 (Correção e Consistência Funcional):** As informações referentes ao status, valores monetários, pontuação e prazos das autuações apresentam consistência observável dos campos comuns entre os canais?
   * **Hipótese H1.2:** Não há divergências observáveis entre os canais para uma mesma infração consultada em intervalo temporal próximo.
 * **Questão Q1.3 (Adequação das Operações):** A sequência operacional exigida para atingir o extrato final de infrações impõe etapas redundantes ou passos transacionais desnecessários em algum dos canais?

@@ -2,7 +2,8 @@
 
 Esta página descreve como a avaliação é conduzida. Primeiro apresenta a visão geral do método,
 com o processo de avaliação, os modelos e as técnicas adotadas; depois detalha, passo a passo, o
-que foi feito em cada fase já concluída e o que está previsto para as próximas.
+que foi feito em cada fase já concluída e o que está previsto para as próximas. A numeração dos passos
+é a mesma das subseções da Metodologia no artigo.
 
 ## Visão geral
 
@@ -54,13 +55,12 @@ características de qualidade.
 
 | Passo | O que foi feito | Resultado |
 |---|---|---|
-| 1. Propósito e requisitante | Definição do propósito, de quem solicita a avaliação e das decisões que ela apoia | [Propósito, partes interessadas e escopo](fase1-proposito.md) |
-| 2. Partes interessadas | Identificação dos interessados, com papel, critérios de sucesso e influência | [Propósito, partes interessadas e escopo](fase1-proposito.md) |
-| 3. Escopo e profundidade | Delimitação dos objetos avaliados, dos contextos de uso, do que fica fora e dos limites de validade dos resultados | [Propósito, partes interessadas e escopo](fase1-proposito.md) |
-| 4. Descrição do produto | Levantamento público dos dois canais (telas, passos da consulta, campos exibidos) e diagrama de contexto | [Produto e modelo de qualidade](fase1-produto.md) |
-| 5. Modelo de qualidade | Adaptação do modelo SQuaRE ao produto, com a seleção das subcaracterísticas | [Produto e modelo de qualidade](fase1-produto.md) |
-| 6. Priorização | Matriz de priorização ponderada, análise de sensibilidade e discussão de trade-offs, resultando em adequação funcional, eficiência de desempenho e cobertura de contexto | [Priorização, cobertura de contexto e ODS](fase1-priorizacao.md) |
-| 7. Relação com os ODS | Vínculo da avaliação com metas e indicadores dos Objetivos de Desenvolvimento Sustentável | [Priorização, cobertura de contexto e ODS](fase1-priorizacao.md) |
+| 1.1 Propósito, requisitante e partes interessadas | Definição do propósito, de quem solicita a avaliação, das decisões que ela apoia e dos interessados, com papel, critérios de sucesso e influência | [Propósito, partes interessadas e escopo](fase1-proposito.md) |
+| 1.2 Escopo, profundidade e limites de validade | Delimitação dos objetos avaliados, dos contextos de uso, do que fica fora e dos limites de validade dos resultados | [Propósito, partes interessadas e escopo](fase1-proposito.md) |
+| 1.3 Descrição do produto e arquitetura de contexto | Levantamento público dos dois canais (telas, passos da consulta, campos exibidos) e diagrama de contexto | [Produto e modelo de qualidade](fase1-produto.md) |
+| 1.4 Modelo de qualidade adaptado | Adaptação do modelo SQuaRE ao produto, com a seleção das subcaracterísticas | [Produto e modelo de qualidade](fase1-produto.md) |
+| 1.5 Priorização das características e cobertura de contexto | Matriz de priorização ponderada, análise de sensibilidade e trade-offs, resultando em adequação funcional, eficiência de desempenho e cobertura de contexto, e a distinção entre cobertura de contexto e usabilidade | [Priorização, cobertura de contexto e ODS](fase1-priorizacao.md) |
+| 1.6 Alinhamento aos ODS | Vínculo da avaliação com metas e indicadores dos Objetivos de Desenvolvimento Sustentável | [Priorização, cobertura de contexto e ODS](fase1-priorizacao.md) |
 
 ## Fase 2 — Especificação da avaliação
 
@@ -69,13 +69,10 @@ verificável, usando o método GQM.
 
 | Passo | O que foi feito | Resultado |
 |---|---|---|
-| 1. Rastreabilidade com a Fase 1 | Cada característica priorizada e cada parte interessada originam um objetivo de medição | [Objetivos, questões e hipóteses](fase2-gqm.md) |
-| 2. Objetivos de medição | Três objetivos (G1 a G3) escritos no modelo estruturado do GQM | [Objetivos, questões e hipóteses](fase2-gqm.md) |
-| 3. Questões e hipóteses | Sete questões, cada uma com hipótese explícita | [Objetivos, questões e hipóteses](fase2-gqm.md) |
-| 4. Métricas | Quatorze métricas caixa-preta, cada uma com definição, cálculo, fonte, coleta e interpretação | [Métricas, níveis e critérios de julgamento](fase2-metricas.md) |
-| 5. Níveis de pontuação | Faixas de aceitação definidas para todas as métricas | [Métricas, níveis e critérios de julgamento](fase2-metricas.md) |
-| 6. Critérios de julgamento | Regras para passar dos resultados das métricas às respostas das questões e dos objetivos | [Métricas, níveis e critérios de julgamento](fase2-metricas.md) |
-| 7. Diagrama GQM | Hierarquia completa objetivos → questões → métricas | [Métricas, níveis e critérios de julgamento](fase2-metricas.md) |
+| 2.1 Rastreabilidade e objetivos de medição | Cada característica priorizada e cada parte interessada originam um objetivo; três objetivos (G1 a G3) no modelo estruturado do GQM | [Objetivos, questões e hipóteses](fase2-gqm.md) |
+| 2.2 Questões de medição e hipóteses | Sete questões, cada uma com hipótese explícita | [Objetivos, questões e hipóteses](fase2-gqm.md) |
+| 2.3 Especificação das métricas | Quatorze métricas caixa-preta, cada uma com definição, cálculo, fonte, coleta e interpretação | [Métricas, níveis e critérios de julgamento](fase2-metricas.md) |
+| 2.4 Níveis de pontuação, critérios de julgamento e diagrama GQM | Faixas de aceitação para todas as métricas, regras para passar dos resultados às respostas das questões e dos objetivos, e a hierarquia objetivos → questões → métricas | [Métricas, níveis e critérios de julgamento](fase2-metricas.md) |
 
 ## Fase 3 — Projeto da avaliação (Entrega 2)
 

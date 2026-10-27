@@ -99,12 +99,19 @@ Ficam fora da lista os incisos IV (prontuário do condutor) e VI (assinatura do 
 
 | Arquivo | Conteúdo | Dados pessoais |
 |---|---|---|
-| `evidencias/fase1/portal-pagina-inicial-2026-10-18.png` | Página inicial pública do Portal de Serviços, com o nome oficial e o menu "Infração" | Nenhum (imagem ilustrativa do próprio portal) |
-| `evidencias/fase1/portal-login-2026-10-18.png` | Tela de login: CPF/CNPJ, senha, reCAPTCHA e "Entrar com gov.br" | Nenhum (campos vazios) |
-| `evidencias/fase1/app-android-google-play-2026-10-18.png` | Página do aplicativo na Google Play: nome, desenvolvedor, instalações e telas de divulgação | Nenhum (avaliações de usuários fora do recorte) |
-| `evidencias/fase1/app-ios-app-store-2026-10-18.png` | Página do aplicativo na App Store: publicador, categoria, tamanho e telas de divulgação | Primeiro nome exibido numa tela de divulgação coberto com tarja |
+| [`evidencias/fase1/portal-pagina-inicial-2026-10-18.png`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase1/portal-pagina-inicial-2026-10-18.png) | Página inicial pública do Portal de Serviços, com o nome oficial e o menu "Infração" | Nenhum (imagem ilustrativa do próprio portal) |
+| [`evidencias/fase1/portal-login-2026-10-18.png`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase1/portal-login-2026-10-18.png) | Tela de login: CPF/CNPJ, senha, reCAPTCHA e "Entrar com gov.br" | Nenhum (campos vazios) |
+| [`evidencias/fase1/app-android-google-play-2026-10-18.png`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase1/app-android-google-play-2026-10-18.png) | Página do aplicativo na Google Play: nome, desenvolvedor, instalações e telas de divulgação | Nenhum (avaliações de usuários fora do recorte) |
+| [`evidencias/fase1/app-ios-app-store-2026-10-18.png`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase1/app-ios-app-store-2026-10-18.png) | Página do aplicativo na App Store: publicador, categoria, tamanho e telas de divulgação | Primeiro nome exibido numa tela de divulgação coberto com tarja |
 
-Prints pendentes, a fazer com veículo real e com tarja em placa, RENAVAM, CPF, nome, endereço e número do auto antes de entrar no repositório: lista de veículos, lista de infrações e detalhes de uma infração, nos dois canais. As regras de anonimização estão em `evidencias/fase1/README.md`.
+Prints pendentes, a fazer com veículo real e com tarja em placa, RENAVAM, CPF, nome, endereço e número do auto antes de entrar no repositório: lista de veículos, lista de infrações e detalhes de uma infração, nos dois canais. As regras de anonimização estão em [`evidencias/fase1/README.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase1/README.md).
+
+**Capturas do levantamento**
+
+![Página inicial pública do Portal de Serviços do Detran-DF, com o menu Infração](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/main/evidencias/fase1/portal-pagina-inicial-2026-10-18.png){ width="420" loading=lazy }
+![Tela de login do Portal de Serviços com campos de CPF ou CNPJ, senha, reCAPTCHA e botão Entrar com gov.br](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/main/evidencias/fase1/portal-login-2026-10-18.png){ width="420" loading=lazy }
+![Página do aplicativo do Detran-DF na Google Play, com nome, desenvolvedor e telas de divulgação](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/main/evidencias/fase1/app-android-google-play-2026-10-18.png){ width="420" loading=lazy }
+![Página do aplicativo do Detran-DF na App Store, com publicador, categoria e telas de divulgação](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/main/evidencias/fase1/app-ios-app-store-2026-10-18.png){ width="420" loading=lazy }
 
 ---
 

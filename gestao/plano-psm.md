@@ -46,7 +46,7 @@ Foram definidas quatro métricas para o monitoramento da equipe: uma para Desemp
 | **Unidade de Medida** | Percentual (%) |
 | **Fonte dos Dados** | Histórico de *Pull Requests* e registros de *Code Review* no repositório GitHub da equipe. |
 | **Procedimento e Frequência de Coleta** | Coleta manual/automatizada via interface de *Pull Requests* do GitHub, realizada em dois momentos por entrega: no meio do ciclo (Quarta-feira, 21/10) e no fechamento da integração (Domingo, 25/10). |
-| **Critérios de Interpretação** | Orientação: **Menor é melhor**.<br>• **Adequado (Verde):** $TR_{PR} \le 25\%$ (alta aderência aos padrões de qualidade e checklists).<br>• **Alerta (Amarelo):** $25\% < TR_{PR} \le 50\%$ (inconsistências moderadas de formatação ou conteúdo).<br>• **Crítico (Vermelho):** $TR_{PR} > 50\%$ (falha sistemática no entendimento dos critérios da rubrica). |
+| **Critérios de Interpretação** | Orientação: **Menor é melhor**.<br>• **Adequado (Verde):** $TR_{PR} \le 30\%$ (alta aderência aos padrões de qualidade e checklists).<br>• **Alerta (Amarelo):** $30\% < TR_{PR} \le 50\%$ (inconsistências moderadas de formatação ou conteúdo).<br>• **Crítico (Vermelho):** $TR_{PR} > 50\%$ (falha sistemática no entendimento dos critérios da rubrica). |
 | **Decisão de Gestão Disparada** | • Se **Alerta**: O integrador (Daniel) e o revisor de padronização (Pedro Druck) reforçarão os itens de verificação nos comentários das *issues* ativas.<br>• Se **Crítico**: Realizar reunião extraordinária de alinhamento de 15 minutos e tornar obrigatório o preenchimento de autoavaliação contra a rubrica da professora na descrição do PR antes de solicitar revisão. |
 
 ---
