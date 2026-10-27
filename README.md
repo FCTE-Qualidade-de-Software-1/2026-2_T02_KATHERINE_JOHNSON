@@ -15,7 +15,7 @@ ISO/IEC 25000 (SQuaRE).
 | | |
 |---|---|
 | GitPage do projeto | <https://fcte-qualidade-de-software-1.github.io/2026-2_T02_KATHERINE_JOHNSON/> |
-| Quadro do backlog (GitHub Project) | <https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38> |
+| Quadro do backlog (GitHub Project, acesso restrito aos membros da organização) | <https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38> |
 | Releases (versões entregues, com o PDF do artigo) | <https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases> |
 | Issues e milestones | [Issues](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues) · [Milestones](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/milestones) |
 
@@ -44,7 +44,7 @@ calendário e progresso, recursos e custos), descritas em [`gestao/plano-psm.md`
 | [`atas/`](atas) | Atas das reuniões da equipe e modelo de ata |
 | [`dados/`](dados) | Massa de dados da avaliação e termo de consentimento |
 | [`evidencias/`](evidencias) | Capturas de tela e roteiros de coleta, anonimizados conforme a LGPD |
-| [`slides/`](slides) | Conteúdo dos slides das apresentações |
+| [`slides/`](slides) | Slides apresentados (PDF do Ponto de Controle 1) e o conteúdo de cada integrante |
 
 Dados pessoais de condutores e veículos não são publicados. As regras de anonimização estão em
 [`evidencias/fase1/README.md`](evidencias/fase1/README.md).

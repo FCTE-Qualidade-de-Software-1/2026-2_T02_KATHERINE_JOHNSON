@@ -1,0 +1,59 @@
+% Diagrama GQM (Figura fig:diagrama-gqm), em três colunas: um objetivo por coluna, com
+% as questões e, abaixo de cada questão, as suas métricas.
+% Fonte editável em TikZ. Requer no preâmbulo:
+%   \usepackage{tikz}
+%   \usetikzlibrary{positioning,arrows.meta}
+% Versão Mermaid equivalente: artigo/figuras/diagram_code.mmd e docs/fase2-metricas.md.
+\begin{tikzpicture}[
+    font=\scriptsize,
+    obj/.style={draw, thick, rounded corners=2pt, fill=black!10, align=left, text width=44mm, inner sep=1.2mm, font=\scriptsize\bfseries},
+    que/.style={draw, rounded corners=2pt, fill=black!4, align=left, text width=41mm, inner sep=1.0mm},
+    met/.style={draw, align=left, text width=37mm, inner sep=0.8mm},
+    liga/.style={-{Stealth[length=1.2mm]}},
+  ]
+  % Objetivos
+  \node[obj, anchor=north west] (G1) at (0,0) {G1 --- Adequação funcional da consulta de infrações};
+  \node[obj, anchor=north west] (G2) at ([xshift=2.5mm]G1.north east) {G2 --- Eficiência de desempenho da consulta de infrações};
+  \node[obj, anchor=north west] (G3) at ([xshift=2.5mm]G2.north east) {G3 --- Cobertura de contexto da consulta de infrações};
+
+  \foreach \g in {G1,G2,G3} {
+    \coordinate (\g q) at ([xshift=4mm]\g.west);
+    \coordinate (\g m) at ([xshift=8mm]\g.west);
+  }
+
+  % G1
+  \node[que, anchor=north west] (Q11) at ([yshift=-1.5mm]G1.south -| G1q) {Q1.1 Completude funcional};
+  \node[met, anchor=north west] (M111) at ([yshift=-1.0mm]Q11.south -| G1m) {M1.1.1 Campos da lista de referência exibidos (\%)};
+  \node[met, anchor=north west] (M112) at ([yshift=-1.0mm]M111.south -| G1m) {M1.1.2 Campos detalhados acessíveis (\%)};
+  \node[que, anchor=north west] (Q12) at ([yshift=-1.5mm]M112.south -| G1q) {Q1.2 Consistência entre os canais};
+  \node[met, anchor=north west] (M121) at ([yshift=-1.0mm]Q12.south -| G1m) {M1.2.1 Campos comuns consistentes (\%)};
+  \node[met, anchor=north west] (M122) at ([yshift=-1.0mm]M121.south -| G1m) {M1.2.2 Infrações sem divergência (\%)};
+  \node[que, anchor=north west] (Q13) at ([yshift=-1.5mm]M122.south -| G1q) {Q1.3 Adequação das operações};
+  \node[met, anchor=north west] (M131) at ([yshift=-1.0mm]Q13.south -| G1m) {M1.3.1 Passos até a lista de infrações};
+  \node[met, anchor=north west] (M132) at ([yshift=-1.0mm]M131.south -| G1m) {M1.3.2 Transições de tela};
+
+  % G2
+  \node[que, anchor=north west] (Q21) at ([yshift=-1.5mm]G2.south -| G2q) {Q2.1 Comportamento temporal};
+  \node[met, anchor=north west] (M211) at ([yshift=-1.0mm]Q21.south -| G2m) {M2.1.1 Tempo até exibir a lista (s)};
+  \node[met, anchor=north west] (M212) at ([yshift=-1.0mm]M211.south -| G2m) {M2.1.2 Tempo até exibir os detalhes (s)};
+  \node[que, anchor=north west] (Q22) at ([yshift=-1.5mm]M212.south -| G2q) {Q2.2 Utilização de recursos de rede};
+  \node[met, anchor=north west] (M221) at ([yshift=-1.0mm]Q22.south -| G2m) {M2.2.1 Volume de dados transferidos (MB)};
+
+  % G3
+  \node[que, anchor=north west] (Q31) at ([yshift=-1.5mm]G3.south -| G3q) {Q3.1 Completude de contexto};
+  \node[met, anchor=north west] (M311) at ([yshift=-1.0mm]Q31.south -| G3m) {M3.1.1 Conclusão por plataforma (\%)};
+  \node[met, anchor=north west] (M312) at ([yshift=-1.0mm]M311.south -| G3m) {M3.1.2 Conclusão por navegador (\%)};
+  \node[que, anchor=north west] (Q32) at ([yshift=-1.5mm]M312.south -| G3q) {Q3.2 Flexibilidade em rede degradada};
+  \node[met, anchor=north west] (M321) at ([yshift=-1.0mm]Q32.south -| G3m) {M3.2.1 Conclusão por condição de rede (\%)};
+  \node[met, anchor=north west] (M322) at ([yshift=-1.0mm]M321.south -| G3m) {M3.2.2 Falhas ou expiração de sessão (\%)};
+  \node[met, anchor=north west] (M323) at ([yshift=-1.0mm]M322.south -| G3m) {M3.2.3 Tempo de conclusão por condição de rede (s)};
+
+  % Ligações objetivo -> questão -> métrica
+  \foreach \g/\qs in {G1/{Q11,Q12,Q13}, G2/{Q21,Q22}, G3/{Q31,Q32}}
+    \foreach \q in \qs
+      \draw[liga] ([xshift=2mm]\g.south west) |- (\q.west);
+  \foreach \q/\ms in {Q11/{M111,M112}, Q12/{M121,M122}, Q13/{M131,M132}, Q21/{M211,M212}, Q22/{M221},
+                      Q31/{M311,M312}, Q32/{M321,M322,M323}}
+    \foreach \m in \ms
+      \draw[liga] ([xshift=2mm]\q.south west) |- (\m.west);
+\end{tikzpicture}

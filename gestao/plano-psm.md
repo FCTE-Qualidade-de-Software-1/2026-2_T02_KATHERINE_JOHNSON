@@ -26,7 +26,7 @@ Para assegurar que todas as medições possuam origem verificável (Premissas 4 
 * **Milestones:** Agrupam a totalidade do escopo de cada marco avaliativo (`Milestone E1` para as Fases 1 e 2; `Milestone E2` para as Fases 3 e 4).
 * **Issues Padronizadas:** Toda tarefa técnica ou gerencial possui uma *issue* vinculada a um responsável, contendo um *checklist* de critérios de aceitação e campos explícitos para **Estimativa inicial de horas ($H_{est}$)** e **Horas reais executadas ($H_{real}$)**.
 * **Fluxo de Branches e Pull Requests (PRs):** Nenhuma alteração é enviada diretamente à *branch* `main`. Todo trabalho exige a abertura de um *Pull Request* revisado por um par designado na matriz de revisão cruzada da equipe.
-* **Labels de Categorização:** Identificam a natureza do artefato (`tipo:artigo`, `tipo:docs`, `tipo:gestao`, `tipo:dados`) e o status de revisão (`revisao:aprovada`, `revisao:ajustes-solicitados`).
+* **Labels de Categorização:** Identificam a natureza do artefato (`tipo:artigo`, `tipo:docs`, `tipo:gestao`, `tipo:dados`) ; o status de revisão é registrado pelo próprio fluxo de revisão do pull request no GitHub (*Approved* ou *Changes requested*).
 
 ---
 
@@ -79,7 +79,7 @@ Foram definidas quatro métricas para o monitoramento da equipe: uma para Desemp
 | **Procedimento de Cálculo** | Cálculo por integrante ou global da equipe:<br>$TVE = \left( \frac{\sum H_{real} - \sum H_{est}}{\sum H_{est}} \right) \times 100$ |
 | **Unidade de Medida** | Percentual (%) e Horas (h) |
 | **Fonte dos Dados** | Seção "Gestão de Esforço (PSM/CID)" preenchida no corpo de cada *issue* do GitHub. |
-| **Procedimento e Frequência de Coleta** | Consolidação em planilha na pasta `gestao/` na Quarta-feira (21/10 — parcial) e no Domingo (25/10 — fechamento da E1). |
+| **Procedimento e Frequência de Coleta** | Consolidação no [registro de horas da GitPage](https://fcte-qualidade-de-software-1.github.io/2026-2_T02_KATHERINE_JOHNSON/gestao-horas/) e no relatório de métricas em `gestao/` na Quarta-feira (21/10 — parcial) e no Domingo (25/10 — fechamento da E1). |
 | **Critérios de Interpretação** | Orientação: **Próximo de $0\%$ é ideal**.<br>• **Controlado (Verde):** $-20\% \le TVE \le +20\%$.<br>• **Desvio Moderado (Amarelo):** $+20\% < TVE \le +40\%$ ou $-40\% \le TVE < -20\%$.<br>• **Sobrecarga / Erro de Estimativa (Vermelho):** $TVE > +40\%$ (esforço real muito acima do previsto). |
 | **Decisão de Gestão Disparada** | • Se $TVE > +40\%$ para um integrante específico na medição de quarta-feira: O gestor transferirá a tarefa secundária desse membro (ex.: formatação de tabelas em Markdown para a GitPage ou revisão preliminar) para o integrante com menor $TVE$ acumulado.<br>• Para a Entrega 2: Recalibrar a estimativa base de horas das *issues* futuras utilizando o fator de correção observado na Entrega 1. |
 
@@ -106,7 +106,7 @@ As medições serão coletadas, analisadas e documentadas em relatórios de acom
 
 | Ponto de Coleta | Data Prevista | Escopo da Medição | Artefato Gerado |
 | :--- | :--- | :--- | :--- |
-| **Coleta 1 (Intermediária)** | Quarta-feira, 21/10/2026 | Rascunhos da Fase 1, referenciais e objetivos/questões GQM | Atualização da planilha de horas, cálculo parcial de **M-DP1**, **M-CP1**, **M-RC1** e registro da 1ª decisão de gestão. |
+| **Coleta 1 (Intermediária)** | Quarta-feira, 21/10/2026 | Rascunhos da Fase 1, referenciais e objetivos/questões GQM | Atualização do registro de horas, cálculo parcial de **M-DP1**, **M-CP1**, **M-RC1** e registro da 1ª decisão de gestão. |
 | **Coleta 2 (Fechamento E1)** | Domingo, 25/10/2026 | Fase 2 completa, GitPage, integração do artigo e revisões cruzadas | Gráficos consolidados das 3 categorias, registro final de decisões e geração da Tabela de Contribuição (**M-RC2**). |
 
 ---
@@ -130,4 +130,13 @@ A tabela abaixo será preenchida a cada coleta para compor a seção de Gestão 
 * **McGarry, J., Card, D., Jones, C., Layman, B., Clark, E., Dean, J., & Hall, F.** *Practical Software Measurement: Objective Information for Decision Makers*. Addison-Wesley Professional, 2002.
 
 ---
-*Versão 1.0 — 19/10/2026 — Equipe Katherine Johnson (FGA0315/UnB).*
+## Histórico de alterações
+
+| Versão | Data | Alteração |
+|---|---|---|
+| 1.0 | 19/10/2026 | Versão inicial do plano |
+| 1.1 | 26/10/2026 | Faixa verde da M-DP1 passa de $\le 25\%$ para $\le 30\%$, por decisão da equipe no fechamento da E1 |
+| 1.1 | 26/10/2026 | As horas passam a ser consolidadas no registro de horas da GitPage e no `gestao/relatorio-metricas-e1.md`, em vez de planilha; os gráficos de esforço e de issues por integrante são gerados por `gestao/gerar_metricas_psm.py`, e M-DP1 e M-CP1 são apresentadas em tabela |
+| 1.1 | 26/10/2026 | As labels `revisao:*` foram substituídas pelo estado de revisão do próprio pull request no GitHub |
+
+*Versão 1.1 — 26/10/2026 — Equipe Katherine Johnson (FGA0315/UnB).*

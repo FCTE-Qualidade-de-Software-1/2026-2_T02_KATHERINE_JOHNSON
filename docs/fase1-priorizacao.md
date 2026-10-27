@@ -170,21 +170,21 @@ Não se mede satisfação, facilidade de aprendizado, estética, acessibilidade 
 | A 25019:2023 mantém o contexto de uso como pré-requisito da qualidade em uso | Escopo e introdução da ISO/IEC 25019:2023 |
 | Capacidade de interação é pré-requisito da usabilidade (modelo de qualidade em uso) | ISO/IEC 25010:2023, definição 3.4, nota 2 |
 | Definições de adequação funcional, completude, correção e apropriação funcional, eficiência de desempenho, comportamento temporal, utilização de recursos e capacidade | ISO/IEC 25010:2023, definições 3.1 e 3.2 |
-| A ISO/IEC 25040 teve segunda edição em setembro de 2024 | Página da norma em iso.org (<https://www.iso.org/standard/83467.html>), conforme listagem de busca; página não abriu para leitura direta |
-| A ISO/IEC 25022:2016 foi confirmada em revisão de 2022 | Listagem de lojas de normas (SAI Global); [VERIFICAR em iso.org/standard/35746.html] |
+| A ISO/IEC 25040 teve segunda edição em setembro de 2024 | Página da norma em iso.org (<https://www.iso.org/standard/83467.html>), conferida em 26/10/2026: edição 2, publicada em 2024-09 |
+| A ISO/IEC 25022:2016 foi confirmada em revisão de 2022 | Página da norma em iso.org (<https://www.iso.org/standard/35746.html>), conferida em 26/10/2026: "last reviewed and confirmed in 2022"; a norma está no estágio 90.92 (a ser revisada) |
 
 ## 9. Fontes dos ODS
 
 - Textos das metas em português: Nações Unidas Brasil, páginas dos ODS [3](https://brasil.un.org/pt-br/sdgs/3), [9](https://brasil.un.org/pt-br/sdgs/9) e [16](https://brasil.un.org/pt-br/sdgs/16), acesso em 19/10/2026.
 - Textos dos indicadores (em inglês, traduzidos pela equipe): [Global indicator framework for the Sustainable Development Goals](https://unstats.un.org/sdgs/indicators/Global-Indicator-Framework-after-2025-review-English.pdf) (A/RES/71/313; E/CN.3/2025/6), acesso em 19/10/2026.
-- **[VERIFICAR]** Disponibilidade dos dados brasileiros dos indicadores 16.6.2 e 9.c.1 na plataforma ODS Brasil do IBGE (<https://odsbrasil.gov.br>). As páginas não abriram na conferência; o artigo não afirma que haja dados nacionais.
+- Dados brasileiros na plataforma ODS Brasil do IBGE (<https://odsbrasil.gov.br>), conferidos em 26/10/2026 nas páginas dos objetivos 16 e 9: o indicador 16.6.2 está classificado como "Sem dados", e o 9.c.1, como "Produzido". O artigo não afirma que haja dados nacionais para os indicadores.
 
-## 10. Pendências
+## 10. Situação após a Entrega 1
 
-- Notas e pesos da matriz são uma proposta; confirmar com a equipe, em especial Heitor (partes interessadas) e Hugo (viabilidade e esforço).
-- Confirmar com a professora, no ponto de controle, a inclusão da cobertura de contexto.
-- Alinhar com Daniel qual edição da ISO/IEC 25040 o artigo cita (2011 na Metodologia e na Fase 2; 2024 é a vigente).
-- Declaração de IA: linha de Pedro Druck em `docs/declaracao-ia.md` e `artigo/secoes/declaracao-ia.tex` ainda não atualizada.
+- Notas e pesos da matriz: revisados e aprovados no [PR #18](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/18) e integrados ao artigo.
+- Edição da ISO/IEC 25040: o artigo usa a edição de 2011 como base do processo e registra, no referencial teórico, que a segunda edição (2024) a substituiu.
+- Declaração de uso de IA: linha de Pedro Druck atualizada na GitPage e no artigo.
+- Pendente: confirmar com a professora, no ponto de controle, a inclusão da cobertura de contexto.
 
 ---
 

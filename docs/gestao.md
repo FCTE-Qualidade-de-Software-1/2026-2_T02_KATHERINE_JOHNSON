@@ -13,7 +13,7 @@ pull request revisado por outro integrante. Esses registros são a fonte das med
 - [Issues do projeto](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues)
 - [Pull requests](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pulls)
 - [Milestones](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/milestones)
-- [Quadro do backlog (GitHub Project)](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38)
+- [Quadro do backlog (GitHub Project)](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38), com acesso restrito aos membros da organização
 
 O tempo gasto em cada issue é registrado pelos próprios integrantes em
 [Registro de horas por issue](gestao-horas.md).

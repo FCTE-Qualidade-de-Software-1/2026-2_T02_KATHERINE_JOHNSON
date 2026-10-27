@@ -1,5 +1,10 @@
 # Deck do Ponto de Controle 1 — conteúdo geral e direção visual
 
+> **Nota de 27/10/2026.** Estes arquivos registram o conteúdo preparado para o Ponto de Controle 1, em
+> 19/10. Eles não refletem a versão final da Entrega 1 (por exemplo, a hipótese H1.1 foi revista e o
+> artigo foi integrado); a versão final está em `artigo/main.pdf` e na GitPage. Os slides apresentados
+> estão em [`ponto-de-controle-1-2026-10-19.pdf`](ponto-de-controle-1-2026-10-19.pdf).
+
 Documento-base para gerar os slides da apresentação do Ponto de Controle 1 (19/10/2026). Ele
 reúne, em ordem, o conteúdo de todos os integrantes e define o estilo visual. Os arquivos
 `slides/conteudo-<nome>.md` têm o mesmo conteúdo com mais detalhe e a fala de cada um.

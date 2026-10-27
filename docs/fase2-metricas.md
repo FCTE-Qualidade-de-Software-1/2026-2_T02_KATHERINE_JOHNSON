@@ -59,7 +59,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Fórmula:** contagem direta das ações realizadas.
 - **Unidade:** passos.
 - **Fonte dos dados:** gravação de tela e roteiro de execução.
-- **Procedimento de coleta:** executar o mesmo roteiro no Portal e no aplicativo, com o mesmo veículo anonimizado; contar cada ação necessária. O fluxo começa na tela inicial já autenticada: o login não é comparável entre canais (CPF e senha com reCAPTCHA no portal; biometria opcional no aplicativo) e é registrado à parte. Pelo levantamento da Fase 1, o caminho previsto é o mesmo nos dois canais: grupo de infrações, "Histórico de infrações por veículo", seleção do veículo e lista (`docs/fase1-produto.md`, Seção 1.3) [VERIFICAR contagem com veículo real].
+- **Procedimento de coleta:** executar o mesmo roteiro no Portal e no aplicativo, com o mesmo veículo anonimizado; contar cada ação necessária. O fluxo começa na tela inicial já autenticada: o login não é comparável entre canais (CPF e senha com reCAPTCHA no portal; biometria opcional no aplicativo) e é registrado à parte. Pelo levantamento da Fase 1, o caminho previsto é o mesmo nos dois canais: grupo de infrações, "Histórico de infrações por veículo", seleção do veículo e lista (`docs/fase1-produto.md`, Seção 1.3) A contagem efetiva será confirmada com veículo real na Fase 3.
 - **Interpretação:** menor é melhor.
 - **Justificativa dos níveis:** o número de passos mede a extensão objetiva do fluxo necessário para concluir a consulta, sem avaliar a facilidade percebida.
 - **Níveis:** faixas provisionais. Excelente até 4 passos; Alvo de 5 a 6 passos; Mínimo aceitável de 7 a 8 passos; Inaceitável acima de 8 passos.
@@ -108,7 +108,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Definição:** volume total de dados transferidos durante a execução completa da consulta de infrações.
 - **Fórmula:** soma dos bytes transferidos durante a consulta.
 - **Unidade:** megabytes.
-- **Fonte dos dados:** Chrome DevTools, aba Network, no Portal; no aplicativo Android, contadores de tráfego do sistema por aplicativo (`adb shell dumpsys netstats detail`, filtrado pelo UID do pacote `br.com.mesotec.detrandf`), lidos antes e depois da consulta. O iOS não oferece contador equivalente por aplicativo [VERIFICAR alternativa ou restringir a medição do aplicativo ao Android].
+- **Fonte dos dados:** Chrome DevTools, aba Network, no Portal; no aplicativo Android, contadores de tráfego do sistema por aplicativo (`adb shell dumpsys netstats detail`, filtrado pelo UID do pacote `br.com.mesotec.detrandf`), lidos antes e depois da consulta. O iOS não oferece contador equivalente por aplicativo A alternativa para o iOS será definida no plano da Fase 3; se não houver uma, a medição do aplicativo se restringe ao Android.
 - **Procedimento de coleta:** definir condições de rede, dispositivo e número de repetições; medir a consulta completa nos dois canais, da abertura do grupo de infrações (já autenticado) até a lista completa, como em M1.3.1. Definir no plano se o cache é limpo antes de cada repetição, e aplicar a mesma regra aos dois canais.
 - **Interpretação:** menor é melhor.
 - **Justificativa dos níveis:** o volume transferido afeta o consumo de dados móveis do cidadão.
@@ -121,7 +121,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Fórmula:** (número de plataformas com consulta concluída / número total de plataformas testadas) × 100.
 - **Unidade:** percentual.
 - **Fonte dos dados:** registro de execução por plataforma.
-- **Procedimento de coleta:** definir plataformas com Heitor; executar o mesmo roteiro em cada plataforma. Pelo levantamento da Fase 1, as plataformas candidatas são o portal em navegador de desktop e de celular e o aplicativo em Android 8.0 ou superior e iOS 15.1 ou superior. Aparelhos abaixo dessas versões não instalam o aplicativo e ficam fora do escopo; não contam como falha de conclusão.
+- **Procedimento de coleta:** definir plataformas com Heitor; executar o mesmo roteiro em cada plataforma. Pelo levantamento da Fase 1, as plataformas candidatas são o portal em navegador de desktop e de celular e o aplicativo em Android 8.0 ou superior e iOS 15.1 ou superior. Como nenhum integrante da equipe possui iPhone, o iOS só entra na medição se houver um aparelho emprestado na Fase 3. Aparelhos abaixo dessas versões não instalam o aplicativo e ficam fora do escopo; não contam como falha de conclusão.
 - **Interpretação:** maior é melhor.
 - **Justificativa dos níveis:** a cobertura de contexto avalia se a tarefa de consulta é concluída nos ambientes definidos. A faixa Excelente representa conclusão integral ou quase integral; valores abaixo de 60% indicam que a maior parte das plataformas não permite concluir a consulta.
 - **Níveis:** Inaceitável abaixo de 60%; Mínimo aceitável de 60% a 79%; Alvo de 80% a 94%; Excelente de 95% a 100%.

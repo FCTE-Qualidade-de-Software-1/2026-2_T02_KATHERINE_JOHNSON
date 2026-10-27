@@ -1,5 +1,10 @@
 # Revisão Final de Português e Padronização do Artigo
 
+> **Atualização de 27/10/2026.** Este documento registra a revisão feita em 19/10, antes da integração
+> do artigo. Desde então, o artigo foi integrado no PR #50, as marcas `[VERIFICAR]` do LaTeX foram
+> resolvidas, a declaração de IA ganhou a linha de fonte e o `artigo/scripts/verificar.py` termina sem
+> erros. O padrão de redação da Seção 2 continua valendo para a Entrega 2.
+
 **Projeto Final FGA0315 Qualidade de Software 1 (UnB/FGA, 2026/2)**  
 *Responsável: Pedro Druck Montalvão Reis*  
 *Primeira passada: 19/10/2026, sobre as seções que estavam na `main` (base: commit `35d4e17`)*
