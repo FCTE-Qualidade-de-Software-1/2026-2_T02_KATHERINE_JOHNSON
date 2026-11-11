@@ -1,6 +1,6 @@
 # Registro de horas por issue
 
-Esta página registra o tempo gasto em cada issue da Entrega 1. As horas reais alimentam as
+Esta página registra o tempo gasto em cada issue das Entregas 1 e 2. As horas reais alimentam as
 métricas de Recursos e Custos do [plano de gestão](gestao.md): a Taxa de Variação de Esforço
 (M-RC1) e o Percentual de Contribuição Individual (M-RC2), que gera a tabela de contribuição do
 artigo.
@@ -44,5 +44,21 @@ As horas reais da Entrega 1 foram registradas em 26/10/2026 no campo *Horas reai
 cada issue e consolidadas pelo responsável pela gestão (Daniel). No total, foram 55 h executadas
 para 50 h estimadas (variação de +10%); a análise está no
 [relatório de métricas da Release E1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/relatorio-metricas-e1.md).
-A #27 foi incorporada ao checklist da #2 e não entra no total. As issues da
-Entrega 2 serão incluídas nesta página quando forem planejadas.
+A #27 foi incorporada ao checklist da #2 e não entra no total.
+
+## Entrega 2
+
+As estimativas da E2 aplicam o fator de correção da E1 (+10%) e a margem de segurança de +20%
+([coleta intermediária da E2](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/coleta-intermediaria-e2.md)).
+
+| Issue | Tarefa | Responsável | Situação | Estimativa | Horas gastas |
+|---|---|---|---|---|---|
+| [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/28) | Correções do Ponto de Controle 1 | Daniel | Aberta | 3 h | |
+| [#46](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46) | Fase 3: plano de avaliação | Hugo, Philipe | Aberta | 11 h | |
+| [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Fase 4: coleta das medições e dados brutos | Hugo, Pedro Druck, Philipe | Aberta | 16 h | |
+| [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Fase 4: análise, respostas GQM e julgamento | Pedro Henrique, Philipe | Aberta | 11 h | |
+| [#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36) | Ação de melhoria obrigatória | Pedro Druck | Aberta | 8 h | |
+| [#49](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/49) | Fechamento da Entrega 2 | Daniel, Heitor | Aberta | 13 h | |
+| [#53](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/53) | Coleta intermediária PSM/CID e slides de 11/11 | Heitor | Aberta | 4 h | |
+| | **Total** | | | **66 h** | |
+

@@ -56,7 +56,7 @@ o valor sai dessa faixa. As fichas completas estão no
 | M-RC1 — Variação de esforço | (horas reais − estimadas) ÷ estimadas | de −20% a +20% | de +20% a +40% ou de −40% a −20% | acima de +40% | Acima de +40%: transferir a tarefa secundária. Na entrega seguinte: recalibrar as estimativas |
 | M-RC2 — Contribuição individual | Horas do integrante ÷ horas da equipe | de 14% a 20% | de 11% a 14% ou de 20% a 23% | abaixo de 11% ou acima de 23% | Abaixo de 14%: tarefas extras de apoio. No fechamento: tabela de contribuição do artigo |
 
-*Tabela 2 — Métricas de gestão, faixas de interpretação e decisões. Fonte: `gestao/plano-psm.md`, versão 1.1 (26/10/2026). Na versão 1.1, a faixa verde da M-DP1 passou de até 25% para até 30%, por decisão da equipe.*
+*Tabela 2 — Métricas de gestão, faixas de interpretação e decisões. Fonte: `gestao/plano-psm.md`, versão 1.2 (10/11/2026). Na versão 1.1, a faixa verde da M-DP1 passou de até 25% para até 30%, por decisão da equipe.*
 
 ## Antes do plano: o ponto de partida
 
@@ -178,15 +178,46 @@ métrica de acompanhamento (Tabela 6).
 
 *Tabela 6 — Ações da retrospectiva para a E2. Fonte: `gestao/retrospectiva-e1.pdf` (28/10/2026), atividade Quê, Quem, Quando.*
 
-## Situação da Entrega 2 em 04/11/2026
+## Coleta intermediária da Entrega 2 (10/11/2026)
 
-| Categoria | Situação no GitHub | Próximo passo previsto no plano |
+A primeira coleta da E2 mediu as quatro métricas do plano e as ações da retrospectiva
+([ata 03](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/atas/ata-03-2026-10-28.md)). O resultado é claro: a E2 ainda não tem
+planejamento suficiente para medir calendário e esforço (Tabela 7). O registro completo está em
+[`gestao/coleta-intermediaria-e2.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/coleta-intermediaria-e2.md).
+
+| Métrica ou ação | Valor em 10/11 | Situação |
 |---|---|---|
-| Calendário e progresso | 6 issues abertas (#28, #36, #46 a #49), nenhuma concluída e sem data planejada | Dar data a cada issue no cronograma da Fase 3 (#46), para calcular o ICM |
-| Recursos e custos | Estimativa de horas "a definir" nas 6 issues: M-RC1 ainda não calculável | Estimar as horas com o fator de correção da E1 (+10%) e a margem de segurança de +20% do relatório |
-| Desempenho dos processos | Nenhum PR aberto desde 26/10: tempo até a 1ª revisão sem dado na E2 | Registrar as coletas intermediária e de fechamento em `gestao/`, com as decisões em ata |
+| M-CP1 — Cumprimento de marcos | 0 de 6 issues da E2 fechadas; 0 com data planejada | Não calculável (bloqueio na cadeia crítica) |
+| M-RC1 e M-RC2 — Esforço | 0 de 6 issues com estimativa ou responsável | Não calculável |
+| M-DP1 — Retrabalho em revisão | 0 de 1 PR (#52) | Verde, amostra de um PR |
+| C1 — Tempo até a 1ª revisão | #52 revisado em 5 min | Verde |
+| C3 — Bloqueios da #46 com responsável e data | Lista sem responsável e sem data (prazo era 30/10) | Não cumprida |
+| C5 — Revisor em rodízio definido na criação | 0 de 6 issues com revisor (prazo era 30/10) | Não cumprida |
+| C6 — Sem commit direto na `main` | 3 commits diretos entre 26 e 28/10; nenhum depois | Amarelo |
+| C7 — Atas ÷ reuniões | 1 de 1 (ata da retrospectiva escrita em 10/11, fora do prazo de 24 h) | Amarelo |
+| C7 — Semanas com reunião | 1 de 2 semanas completas | Vermelho |
 
-*Tabela 7 — Situação da E2 antes da primeira coleta. Fonte: issues #28, #36 e #46 a #49 e lista de PRs no GitHub, consultadas em 04/11/2026.*
+*Tabela 7 — Coleta intermediária da E2. Fonte: issues #28, #36, #46 a #49 e #51, PRs depois de 26/10 e histórico da `main` no GitHub, consultados em 10/11/2026; pasta `atas/`.*
+
+As decisões tomadas a partir da coleta estão na Tabela 8.
+
+| Gatilho | Decisão | Responsável |
+|---|---|---|
+| M-CP1, M-RC1 e M-RC2 não calculáveis; C5 não cumprida | Dar responsável, revisor em rodízio, data e estimativa às issues da E2 (estimativa com o fator +10% da E1 e margem de +20%) | Heitor aplica; equipe confirma |
+| Bloqueio na cadeia crítica | Priorizar a Fase 3 (#46), que trava a coleta (#47) e a análise (#48) | Hugo e Philipe |
+| Semana sem reunião; C3 sem reunião de abertura | Reunião nesta semana, com ata e repasse das pendências | Heitor e Pedro Henrique |
+| C3 não cumprida | Completar na reunião a lista de bloqueios da #46 com responsável e data | Hugo |
+| C6 em Amarelo | Manter a regra e conferir de novo na próxima coleta | Pedro Druck |
+
+*Tabela 8 — Decisões da coleta intermediária da E2. Fonte: `gestao/coleta-intermediaria-e2.md`.*
+
+O plano passou para a versão 1.2: as medidas da retrospectiva entraram como métricas
+complementares e a E2 ganhou um calendário de coletas (intermediária em 10/11, acompanhamento na
+semana de 16/11 e fechamento antes da Release E2).
+
+Os slides da apresentação de gestão estão em
+[`slides/apresentacao-psm-cid-2026-11-11.pdf`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/slides/apresentacao-psm-cid-2026-11-11.pdf)
+(versão de 04/11 com os slides da coleta da E2).
 
 ## Registro de fechamento de issues da Entrega 1
 

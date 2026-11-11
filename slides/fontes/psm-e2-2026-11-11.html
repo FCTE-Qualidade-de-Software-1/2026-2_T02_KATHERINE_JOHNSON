@@ -1,0 +1,154 @@
+<!doctype html>
+<!--
+  Slides 10 a 14 da apresentação de gestão PSM/CID (coleta intermediária da E2).
+  Os slides 1 a 9 vêm de slides/apresentacao-psm-cid-2026-11-04.pdf, que não tem arquivo-fonte.
+  Gerar o PDF final:
+    chromium --headless --no-pdf-header-footer --print-to-pdf=/tmp/psm-e2.pdf slides/fontes/psm-e2-2026-11-11.html
+    qpdf --empty --pages slides/apresentacao-psm-cid-2026-11-04.pdf 1-9 /tmp/psm-e2.pdf -- slides/apresentacao-psm-cid-2026-11-11.pdf
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Gestão do projeto com PSM/CID — Entrega 2</title>
+<style>
+  @page { size: 960pt 540pt; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { font-family: "Liberation Sans", Arial, sans-serif; color: #2e3338; }
+  .slide { width: 960pt; height: 540pt; position: relative; overflow: hidden;
+           background: #f5f7f8; page-break-after: always; padding: 0 43pt; }
+  .slide:last-child { page-break-after: auto; }
+  h1 { position: absolute; top: 36pt; left: 43pt; right: 43pt; font-size: 32pt; line-height: 1.1;
+       color: #123e8c; font-weight: bold; }
+  .sub { position: absolute; top: 80pt; left: 43pt; right: 43pt; font-size: 13pt; color: #5b6168; }
+  .body { position: absolute; top: 108pt; left: 43pt; right: 43pt; }
+  table { width: 100%; border-collapse: collapse; background: #fff; font-size: 13pt; }
+  th { background: #123e8c; color: #fff; text-align: left; font-weight: bold; padding: 8pt 10pt; font-size: 13pt; }
+  td { border: 0.75pt solid #d3d7db; padding: 8pt 10pt; vertical-align: middle; line-height: 1.25; }
+  td.k { color: #123e8c; font-weight: bold; }
+  .st { font-weight: bold; white-space: nowrap; }
+  .verde { color: #1e7b34; } .amarelo { color: #a66d00; } .vermelho { color: #b3261e; } .cinza { color: #5b6168; }
+  .fonte { position: absolute; left: 43pt; right: 43pt; bottom: 44pt; font-size: 8.5pt; color: #5b6168; }
+  .rodape { position: absolute; left: 43pt; bottom: 16pt; font-size: 8.5pt; color: #5b6168; }
+  .num { position: absolute; right: 52pt; bottom: 16pt; font-size: 8.5pt; color: #5b6168; }
+  .nota { margin-top: 14pt; font-size: 13pt; background: #fff; border-left: 4pt solid #f2b807; padding: 7pt 10pt; line-height: 1.3; }
+  .cols { display: flex; gap: 24pt; }
+  .cols > div { flex: 1; }
+  .rot { font-size: 12.5pt; font-weight: bold; color: #2e3338; margin-bottom: 6pt; }
+  /* Slide de fechamento */
+  .escuro { background: #2e3338; }
+  .escuro .traco { position: absolute; top: 0; bottom: 0; left: 778pt; border-left: 4pt dashed #f2b807; }
+  .escuro h2 { position: absolute; top: 175pt; left: 43pt; width: 620pt; font-size: 34pt; line-height: 1.15; color: #fff; }
+  .escuro p.t { position: absolute; top: 300pt; left: 43pt; width: 600pt; font-size: 14pt; line-height: 1.35; color: #aab7d4; }
+  .escuro p.q { position: absolute; top: 400pt; left: 43pt; font-size: 17pt; font-weight: bold; color: #fff; }
+  .escuro p.r { position: absolute; top: 430pt; left: 43pt; font-size: 10pt; color: #d5d9de; }
+</style>
+</head>
+<body>
+
+<!-- 10 -->
+<section class="slide">
+  <h1>Coleta intermediária da E2: sem plano, sem medida</h1>
+  <p class="sub">Primeira coleta da Entrega 2, em 10/11/2026, com o plano na versão 1.2</p>
+  <div class="body">
+    <table>
+      <tr><th style="width:30%">Métrica</th><th>Valor em 10/11</th><th style="width:20%">Situação</th></tr>
+      <tr><td class="k">M-CP1 · Cumprimento de marcos</td><td>0 de 6 issues fechadas; nenhuma com data planejada</td><td class="st vermelho">Não calculável</td></tr>
+      <tr><td class="k">M-RC1 · Variação de esforço</td><td>0 de 6 issues com estimativa de horas</td><td class="st vermelho">Não calculável</td></tr>
+      <tr><td class="k">M-RC2 · Contribuição individual</td><td>0 de 6 issues com responsável; nenhuma hora real na E2</td><td class="st vermelho">Não calculável</td></tr>
+      <tr><td class="k">M-DP1 · Retrabalho em revisão</td><td>0 de 1 PR com pedido de ajuste (#52)</td><td class="st verde">Verde, amostra de 1</td></tr>
+      <tr><td class="k">Tempo até a 1ª revisão</td><td>#52 revisado em 5 min, por quem não revisou na E1</td><td class="st verde">Verde (até 48 h)</td></tr>
+    </table>
+    <p class="nota">Sem data, nenhuma issue vence até a data de corte e o ICM fica sem denominador. Pelo plano, isso é bloqueio na cadeia crítica Fase 3 → Fase 4: o critério da faixa vermelha.</p>
+  </div>
+  <p class="fonte">Fonte: issues #28, #36 e #46 a #49 e PRs depois de 26/10 no GitHub, consultados em 10/11/2026; gestao/coleta-intermediaria-e2.md</p>
+  <p class="rodape">Gestão PSM/CID &nbsp;·&nbsp; Equipe Katherine Johnson &nbsp;·&nbsp; FGA0315</p>
+  <p class="num">10</p>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <h1>Ações da retrospectiva: o que a equipe manteve</h1>
+  <p class="sub">Situação em 10/11 das ações votadas em 28/10</p>
+  <div class="body">
+    <table>
+      <tr><th style="width:21%">Tópico</th><th style="width:15%">Quem acompanha</th><th>Medido em 10/11</th><th style="width:17%">Situação</th></tr>
+      <tr><td class="k">C1 Revisão em até 48 h</td><td>Daniel</td><td>1 PR desde 30/10 (#52), revisado em 5 min</td><td class="st verde">Cumprida</td></tr>
+      <tr><td class="k">C3 Bloqueios da #46</td><td>Hugo</td><td>iPhone, veículo real e termos listados, mas sem responsável e sem data (prazo: 30/10)</td><td class="st vermelho">Não cumprida</td></tr>
+      <tr><td class="k">C3 Pendências na reunião</td><td>Pedro Henrique</td><td>Nenhuma reunião depois de 28/10</td><td class="st cinza">Não aplicada</td></tr>
+      <tr><td class="k">C5 Revisor em rodízio</td><td>Philipe</td><td>0 de 6 issues da E2 com revisor (prazo: 30/10)</td><td class="st vermelho">Não cumprida</td></tr>
+      <tr><td class="k">C6 Sem commit na main</td><td>Pedro Druck</td><td>3 commits diretos entre 26 e 28/10; nenhum depois</td><td class="st amarelo">Amarelo</td></tr>
+      <tr><td class="k">C7 Atas ÷ reuniões</td><td>Heitor</td><td>1 de 1: ata da retrospectiva escrita em 10/11, fora do prazo de 24 h</td><td class="st amarelo">Amarelo</td></tr>
+      <tr><td class="k">C7 Reunião semanal</td><td>Heitor</td><td>1 de 2 semanas completas com reunião</td><td class="st vermelho">Vermelho</td></tr>
+    </table>
+  </div>
+  <p class="fonte">Fonte: atas/ata-03-2026-10-28.md; issues, PRs e git log --first-parent da main no GitHub, consultados em 10/11/2026</p>
+  <p class="rodape">Gestão PSM/CID &nbsp;·&nbsp; Equipe Katherine Johnson &nbsp;·&nbsp; FGA0315</p>
+  <p class="num">11</p>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <h1>Decisões da coleta de 10/11</h1>
+  <p class="sub">Cada decisão parte de uma medida fora da faixa</p>
+  <div class="body">
+    <table>
+      <tr><th style="width:30%">Gatilho</th><th>Decisão</th><th style="width:19%">Responsável</th></tr>
+      <tr><td class="k">M-CP1, M-RC1 e M-RC2 não calculáveis; C5</td><td>Dar responsável, revisor em rodízio, data e estimativa às issues da E2</td><td>Heitor aplica; equipe confirma</td></tr>
+      <tr><td class="k">Bloqueio na cadeia crítica</td><td>Priorizar a Fase 3 (#46), que trava a coleta (#47) e a análise (#48)</td><td>Hugo e Philipe</td></tr>
+      <tr><td class="k">C7 e C3 sem reunião</td><td>Reunião nesta semana, com ata; ela vale como abertura da E2 e repassa as pendências</td><td>Heitor e Pedro Henrique</td></tr>
+      <tr><td class="k">C3 não cumprida</td><td>Completar na reunião os bloqueios da #46 com responsável e data</td><td>Hugo</td></tr>
+      <tr><td class="k">C6 em Amarelo</td><td>Manter a regra e conferir de novo na próxima coleta</td><td>Pedro Druck</td></tr>
+      <tr><td class="k">Plano sem ciclo da E2</td><td>Plano v1.2: medidas da retrospectiva como métricas complementares e calendário de coletas da E2</td><td>Heitor</td></tr>
+    </table>
+  </div>
+  <p class="fonte">Fonte: gestao/coleta-intermediaria-e2.md (decisões D1 a D7) e gestao/plano-psm.md, versão 1.2</p>
+  <p class="rodape">Gestão PSM/CID &nbsp;·&nbsp; Equipe Katherine Johnson &nbsp;·&nbsp; FGA0315</p>
+  <p class="num">12</p>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <h1>Planejamento da E2 e próximas coletas</h1>
+  <p class="sub">Estimativa = base × 1,1 (desvio da E1) × 1,2 (margem de segurança)</p>
+  <div class="body cols">
+    <div style="flex:1.55">
+      <p class="rot">Issues da E2</p>
+      <table style="font-size:12pt">
+        <tr><th>Issue</th><th>Responsável</th><th>Revisor</th><th style="text-align:right">Horas</th></tr>
+        <tr><td class="k">#28 Correções do PC1</td><td>Daniel</td><td>Hugo</td><td style="text-align:right">3</td></tr>
+        <tr><td class="k">#46 Fase 3: plano</td><td>Hugo, Philipe</td><td>Pedro Henrique</td><td style="text-align:right">11</td></tr>
+        <tr><td class="k">#47 Fase 4: coleta</td><td>Hugo, Pedro Druck, Philipe</td><td>Daniel</td><td style="text-align:right">16</td></tr>
+        <tr><td class="k">#48 Fase 4: análise</td><td>Pedro Henrique, Philipe</td><td>Heitor</td><td style="text-align:right">11</td></tr>
+        <tr><td class="k">#36 Ação de melhoria</td><td>Pedro Druck</td><td>Daniel</td><td style="text-align:right">8</td></tr>
+        <tr><td class="k">#49 Fechamento</td><td>Daniel, Heitor</td><td>Pedro Druck</td><td style="text-align:right">13</td></tr>
+        <tr><td class="k">#53 Coleta PSM e slides</td><td>Heitor</td><td>Pedro Henrique</td><td style="text-align:right">4</td></tr>
+        <tr><td class="k">Total</td><td></td><td></td><td style="text-align:right"><b>66</b></td></tr>
+      </table>
+    </div>
+    <div>
+      <p class="rot">Ciclo de coleta da E2</p>
+      <table style="font-size:12pt">
+        <tr><th>Coleta</th><th>Quando</th></tr>
+        <tr><td class="k">1 Intermediária</td><td>10/11 (esta)</td></tr>
+        <tr><td class="k">2 Acompanhamento</td><td>Semana de 16/11: 1º cálculo de M-CP1 e M-RC1 na E2</td></tr>
+        <tr><td class="k">3 Fechamento</td><td>Antes da Release E2: M-RC2 e tabela de contribuição</td></tr>
+      </table>
+      <p class="nota" style="font-size:12pt">Medidas complementares em todas as coletas: tempo até a 1ª revisão, revisões por integrante e atas ÷ reuniões.</p>
+    </div>
+  </div>
+  <p class="fonte">Fonte: gestao/coleta-intermediaria-e2.md (Seção 4), gestao/plano-psm.md (Seções 3.4 e 4.1) e registro de horas da GitPage</p>
+  <p class="rodape">Gestão PSM/CID &nbsp;·&nbsp; Equipe Katherine Johnson &nbsp;·&nbsp; FGA0315</p>
+  <p class="num">13</p>
+</section>
+
+<!-- 14 -->
+<section class="slide escuro">
+  <div class="traco"></div>
+  <h2>A medição também mostra o que falta planejar</h2>
+  <p class="t">A E1 fechou no verde. Na E2, a primeira coleta encontrou issues sem data, sem estimativa e sem revisor. A decisão foi planejar antes de medir de novo.</p>
+  <p class="q">Perguntas</p>
+  <p class="r">Plano, coletas e registro de horas: gestao/ e página Gestão da GitPage</p>
+</section>
+
+</body>
+</html>
