@@ -182,7 +182,9 @@ métrica de acompanhamento (Tabela 6).
 
 A primeira coleta da E2 mediu as quatro métricas do plano e as ações da retrospectiva
 ([ata 03](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/atas/ata-03-2026-10-28.md)). O resultado é claro: a E2 ainda não tem
-planejamento suficiente para medir calendário e esforço (Tabela 7). O registro completo está em
+planejamento suficiente para medir calendário e esforço (Tabela 7). A equipe confirmou a coleta e
+o planejamento das issues na reunião de 10/11
+([ata 04](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/atas/ata-04-2026-11-10.md)). O registro completo está em
 [`gestao/coleta-intermediaria-e2.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/coleta-intermediaria-e2.md).
 
 | Métrica ou ação | Valor em 10/11 | Situação |
@@ -191,11 +193,12 @@ planejamento suficiente para medir calendário e esforço (Tabela 7). O registro
 | M-RC1 e M-RC2 — Esforço | 0 de 6 issues com estimativa ou responsável | Não calculável |
 | M-DP1 — Retrabalho em revisão | 0 de 1 PR (#52) | Verde, amostra de um PR |
 | C1 — Tempo até a 1ª revisão | #52 revisado em 5 min | Verde |
-| C3 — Bloqueios da #46 com responsável e data | Lista sem responsável e sem data (prazo era 30/10) | Não cumprida |
-| C5 — Revisor em rodízio definido na criação | 0 de 6 issues com revisor (prazo era 30/10) | Não cumprida |
-| C6 — Sem commit direto na `main` | 3 commits diretos entre 26 e 28/10; nenhum depois | Amarelo |
-| C7 — Atas ÷ reuniões | 1 de 1 (ata da retrospectiva escrita em 10/11, fora do prazo de 24 h) | Amarelo |
-| C7 — Semanas com reunião | 1 de 2 semanas completas | Vermelho |
+| C3 — Bloqueios da #46 com responsável e data | Lista sem responsável e sem data | Não cumprida |
+| C3 — Pendências repassadas em reunião | Nenhuma reunião de 29/10 a 09/11; a de 10/11 repassou as pendências | Retomada em 10/11 |
+| C5 — Revisor em rodízio definido na criação | 0 de 6 issues com revisor antes da reunião; aplicado a todas em 10/11 | Cumprida em 10/11 |
+| C6 — Sem commit direto na `main` | 2 commits diretos em 28/10 (o `2186819`, de 26/10, já entra na Tabela 3); nenhum depois | Amarelo |
+| C7 — Atas ÷ reuniões | 2 de 2 (28/10 e 10/11); a ata da retrospectiva foi escrita só em 10/11, fora do prazo de 24 h | Amarelo |
+| C7 — Semanas com reunião | 2 de 3 semanas (nenhuma reunião na semana de 02/11) | Vermelho |
 
 *Tabela 7 — Coleta intermediária da E2. Fonte: issues #28, #36, #46 a #49 e #51, PRs depois de 26/10 e histórico da `main` no GitHub, consultados em 10/11/2026; pasta `atas/`.*
 
@@ -205,8 +208,8 @@ As decisões tomadas a partir da coleta estão na Tabela 8.
 |---|---|---|
 | M-CP1, M-RC1 e M-RC2 não calculáveis; C5 não cumprida | Dar responsável, revisor em rodízio, prazo e estimativa às issues da E2 (estimativa com o fator +10% da E1 e margem de +20%; prazos até a Entrega 2, em 22/11). Aplicado em 10/11 | Heitor; equipe confirmou |
 | Bloqueio na cadeia crítica | Priorizar a Fase 3 (#46), que trava a coleta (#47) e a análise (#48) | Hugo e Philipe |
-| Semana sem reunião; C3 sem reunião de abertura | Reunião nesta semana, com ata e repasse das pendências | Heitor e Pedro Henrique |
-| C3 não cumprida | Completar na reunião a lista de bloqueios da #46 com responsável e data | Hugo |
+| Semana de 02/11 sem reunião; C3 sem reunião de abertura | A reunião de 10/11 vale como abertura da E2; ata registrada e uma reunião por semana até 22/11 | Heitor e Pedro Henrique |
+| C3 não cumprida | Completar a lista de bloqueios da #46 com responsável e data | Hugo |
 | C6 em Amarelo | Manter a regra e conferir de novo na próxima coleta | Pedro Druck |
 
 *Tabela 8 — Decisões da coleta intermediária da E2. Fonte: `gestao/coleta-intermediaria-e2.md`.*
@@ -215,9 +218,26 @@ O plano passou para a versão 1.2: as medidas da retrospectiva entraram como mé
 complementares e a E2 ganhou um calendário de coletas (intermediária em 10/11, acompanhamento na
 17/11 e fechamento em 21/11, antes da Release E2 de 22/11).
 
+### Situação em 11/11/2026
+
+Com o planejamento aplicado, as métricas voltaram a ser calculáveis (Tabela 9). Duas issues da E2
+estavam fechadas: a [#53](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/53), da coleta e dos slides, e a
+[#55](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/55), que corrigiu inconsistências dos registros de gestão.
+
+| Métrica ou ação | Valor em 11/11 | Situação |
+|---|---|---|
+| M-CP1 — Cumprimento de marcos | 8 de 8 issues com prazo; até 11/11 vencia só a #53, fechada no prazo (1 de 1) | Verde, amostra de 1 |
+| M-RC1 — Variação de esforço | #53: 3 h para 4 h (−25%); #55: 1 h para 1 h (0%); total 4 h para 5 h (−20%) | Verde, no limite da faixa |
+| M-RC2 — Contribuição individual | 8 de 8 issues com responsável; 4 h reais na E2 | Cálculo no fechamento (21/11) |
+| M-DP1 — Retrabalho em revisão | 0 de 3 PRs com pedido de ajuste (#52, #54 e #56) | Verde |
+| C1 — Tempo até a 1ª revisão | #52 em 5 min, #54 em 11,4 h e #56 dentro de 48 h | Verde |
+| C5 — Revisor em rodízio | 8 de 8 issues com revisor; revisões da E2 por Pedro Henrique (2) e Philipe (1) | Cumprida |
+
+*Tabela 9 — Situação das métricas da E2 em 11/11/2026. Fonte: issues #53 e #55 e PRs #52, #54 e #56 no GitHub; [registro de horas](gestao-horas.md).*
+
 Os slides da apresentação de gestão estão em
 [`slides/apresentacao-psm-cid-2026-11-11.pdf`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/slides/apresentacao-psm-cid-2026-11-11.pdf)
-(versão de 04/11 com os slides da coleta da E2).
+(versão de 04/11 com os slides da coleta da E2, atualizados em 11/11 com a situação das métricas, a reunião de 10/11 e as issues #53 e #55).
 
 ## Registro de fechamento de issues da Entrega 1
 

@@ -10,6 +10,7 @@ resumidas em [Gestão (PSM/CID)](gestao.md).
 | [Ata 02](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/atas/ata-02-2026-10-21.md) | 21/10/2026 | Ponto de controle interno e coleta intermediária PSM/CID |
 | [Registro de decisões](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/atas/registro-decisoes-2026-10-27.md) | 25 a 27/10/2026 | Decisões de gestão do fechamento da Entrega 1, tomadas fora de reunião |
 | [Ata 03](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/atas/ata-03-2026-10-28.md) | 28/10/2026 | Retrospectiva da Entrega 1 e ações para a Entrega 2 |
+| [Ata 04](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/atas/ata-04-2026-11-10.md) | 10/11/2026 | Coleta intermediária PSM/CID e planejamento da Entrega 2 |
 
 - [Pasta de atas no repositório](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/atas)
 - [Modelo de ata](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/atas/modelo-ata.md)
