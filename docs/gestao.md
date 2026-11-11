@@ -203,7 +203,7 @@ As decisões tomadas a partir da coleta estão na Tabela 8.
 
 | Gatilho | Decisão | Responsável |
 |---|---|---|
-| M-CP1, M-RC1 e M-RC2 não calculáveis; C5 não cumprida | Dar responsável, revisor em rodízio, data e estimativa às issues da E2 (estimativa com o fator +10% da E1 e margem de +20%) | Heitor aplica; equipe confirma |
+| M-CP1, M-RC1 e M-RC2 não calculáveis; C5 não cumprida | Dar responsável, revisor em rodízio, prazo e estimativa às issues da E2 (estimativa com o fator +10% da E1 e margem de +20%; prazos até a Entrega 2, em 22/11). Aplicado em 10/11 | Heitor; equipe confirmou |
 | Bloqueio na cadeia crítica | Priorizar a Fase 3 (#46), que trava a coleta (#47) e a análise (#48) | Hugo e Philipe |
 | Semana sem reunião; C3 sem reunião de abertura | Reunião nesta semana, com ata e repasse das pendências | Heitor e Pedro Henrique |
 | C3 não cumprida | Completar na reunião a lista de bloqueios da #46 com responsável e data | Hugo |
@@ -213,7 +213,7 @@ As decisões tomadas a partir da coleta estão na Tabela 8.
 
 O plano passou para a versão 1.2: as medidas da retrospectiva entraram como métricas
 complementares e a E2 ganhou um calendário de coletas (intermediária em 10/11, acompanhamento na
-semana de 16/11 e fechamento antes da Release E2).
+17/11 e fechamento em 21/11, antes da Release E2 de 22/11).
 
 Os slides da apresentação de gestão estão em
 [`slides/apresentacao-psm-cid-2026-11-11.pdf`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/slides/apresentacao-psm-cid-2026-11-11.pdf)

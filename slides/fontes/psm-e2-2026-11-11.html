@@ -33,6 +33,7 @@
   .nota { margin-top: 14pt; font-size: 13pt; background: #fff; border-left: 4pt solid #f2b807; padding: 7pt 10pt; line-height: 1.3; }
   .cols { display: flex; gap: 24pt; }
   .cols > div { flex: 1; }
+  table.apertada td, table.apertada th { padding: 5pt 8pt; }
   .rot { font-size: 12.5pt; font-weight: bold; color: #2e3338; margin-bottom: 6pt; }
   /* Slide de fechamento */
   .escuro { background: #2e3338; }
@@ -93,7 +94,7 @@
   <div class="body">
     <table>
       <tr><th style="width:30%">Gatilho</th><th>Decisão</th><th style="width:19%">Responsável</th></tr>
-      <tr><td class="k">M-CP1, M-RC1 e M-RC2 não calculáveis; C5</td><td>Dar responsável, revisor em rodízio, data e estimativa às issues da E2</td><td>Heitor aplica; equipe confirma</td></tr>
+      <tr><td class="k">M-CP1, M-RC1 e M-RC2 não calculáveis; C5</td><td>Dar responsável, revisor em rodízio, prazo e estimativa às issues da E2 (feito em 10/11)</td><td>Heitor; equipe confirmou</td></tr>
       <tr><td class="k">Bloqueio na cadeia crítica</td><td>Priorizar a Fase 3 (#46), que trava a coleta (#47) e a análise (#48)</td><td>Hugo e Philipe</td></tr>
       <tr><td class="k">C7 e C3 sem reunião</td><td>Reunião nesta semana, com ata; ela vale como abertura da E2 e repassa as pendências</td><td>Heitor e Pedro Henrique</td></tr>
       <tr><td class="k">C3 não cumprida</td><td>Completar na reunião os bloqueios da #46 com responsável e data</td><td>Hugo</td></tr>
@@ -109,20 +110,20 @@
 <!-- 13 -->
 <section class="slide">
   <h1>Planejamento da E2 e próximas coletas</h1>
-  <p class="sub">Estimativa = base × 1,1 (desvio da E1) × 1,2 (margem de segurança)</p>
+  <p class="sub">Estimativa = base × 1,1 (desvio da E1) × 1,2 (margem); prazos até a Entrega 2, em 22/11</p>
   <div class="body cols">
-    <div style="flex:1.55">
+    <div style="flex:2.3">
       <p class="rot">Issues da E2</p>
-      <table style="font-size:12pt">
-        <tr><th>Issue</th><th>Responsável</th><th>Revisor</th><th style="text-align:right">Horas</th></tr>
-        <tr><td class="k">#28 Correções do PC1</td><td>Daniel</td><td>Hugo</td><td style="text-align:right">3</td></tr>
-        <tr><td class="k">#46 Fase 3: plano</td><td>Hugo, Philipe</td><td>Pedro Henrique</td><td style="text-align:right">11</td></tr>
-        <tr><td class="k">#47 Fase 4: coleta</td><td>Hugo, Pedro Druck, Philipe</td><td>Daniel</td><td style="text-align:right">16</td></tr>
-        <tr><td class="k">#48 Fase 4: análise</td><td>Pedro Henrique, Philipe</td><td>Heitor</td><td style="text-align:right">11</td></tr>
-        <tr><td class="k">#36 Ação de melhoria</td><td>Pedro Druck</td><td>Daniel</td><td style="text-align:right">8</td></tr>
-        <tr><td class="k">#49 Fechamento</td><td>Daniel, Heitor</td><td>Pedro Druck</td><td style="text-align:right">13</td></tr>
-        <tr><td class="k">#53 Coleta PSM e slides</td><td>Heitor</td><td>Pedro Henrique</td><td style="text-align:right">4</td></tr>
-        <tr><td class="k">Total</td><td></td><td></td><td style="text-align:right"><b>66</b></td></tr>
+      <table class="apertada" style="font-size:11.5pt">
+        <tr><th>Issue</th><th>Responsável</th><th>Revisor</th><th style="text-align:right">Horas</th><th>Prazo</th></tr>
+        <tr><td class="k">#28 Correções do PC1</td><td>Daniel</td><td>Hugo</td><td style="text-align:right">3</td><td>15/11</td></tr>
+        <tr><td class="k">#46 Fase 3: plano</td><td>Hugo, Philipe</td><td>Pedro Henrique</td><td style="text-align:right">11</td><td>15/11</td></tr>
+        <tr><td class="k">#47 Fase 4: coleta</td><td>Hugo, Pedro Druck, Philipe</td><td>Daniel</td><td style="text-align:right">16</td><td>18/11</td></tr>
+        <tr><td class="k">#48 Fase 4: análise</td><td>Pedro Henrique, Philipe</td><td>Heitor</td><td style="text-align:right">11</td><td>20/11</td></tr>
+        <tr><td class="k">#36 Ação de melhoria</td><td>Pedro Druck</td><td>Daniel</td><td style="text-align:right">8</td><td>21/11</td></tr>
+        <tr><td class="k">#49 Fechamento</td><td>Daniel, Heitor</td><td>Pedro Druck</td><td style="text-align:right">13</td><td>22/11</td></tr>
+        <tr><td class="k">#53 Coleta PSM e slides</td><td>Heitor</td><td>Pedro Henrique</td><td style="text-align:right">4</td><td>11/11</td></tr>
+        <tr><td class="k">Total</td><td></td><td></td><td style="text-align:right"><b>66</b></td><td></td></tr>
       </table>
     </div>
     <div>
@@ -130,8 +131,8 @@
       <table style="font-size:12pt">
         <tr><th>Coleta</th><th>Quando</th></tr>
         <tr><td class="k">1 Intermediária</td><td>10/11 (esta)</td></tr>
-        <tr><td class="k">2 Acompanhamento</td><td>Semana de 16/11: 1º cálculo de M-CP1 e M-RC1 na E2</td></tr>
-        <tr><td class="k">3 Fechamento</td><td>Antes da Release E2: M-RC2 e tabela de contribuição</td></tr>
+        <tr><td class="k">2 Acompanhamento</td><td>17/11: 1º cálculo de M-CP1 e M-RC1 na E2</td></tr>
+        <tr><td class="k">3 Fechamento</td><td>21/11: M-RC2 e tabela de contribuição (Release E2 em 22/11)</td></tr>
       </table>
       <p class="nota" style="font-size:12pt">Medidas complementares em todas as coletas: tempo até a 1ª revisão, revisões por integrante e atas ÷ reuniões.</p>
     </div>

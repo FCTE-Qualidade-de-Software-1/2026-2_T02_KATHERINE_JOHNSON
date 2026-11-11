@@ -126,8 +126,8 @@ As medições serão coletadas, analisadas e documentadas em relatórios de acom
 | Ponto de Coleta | Data | Escopo da Medição | Artefato Gerado |
 | :--- | :--- | :--- | :--- |
 | **Coleta 1 (Intermediária)** | Terça-feira, 10/11/2026 | Planejamento das issues da E2 e ações da retrospectiva | [`gestao/coleta-intermediaria-e2.md`](coleta-intermediaria-e2.md), com as decisões D1 a D7 |
-| **Coleta 2 (Acompanhamento)** | Semana de 16/11/2026, depois de as issues terem data e estimativa | Fase 3 (#46) e início da Fase 4; primeiro cálculo de **M-CP1** e **M-RC1** na E2 | Relatório em `gestao/` e decisões em ata |
-| **Coleta 3 (Fechamento E2)** | Antes da Release E2 [CONFIRMAR data no cronograma da disciplina] | Fases 3 e 4, ação de melhoria, artigo v2 e GitPage | Relatório de métricas da E2 e Tabela de Contribuição (**M-RC2**) |
+| **Coleta 2 (Acompanhamento)** | Terça-feira, 17/11/2026 | Fase 3 (#46) e início da Fase 4; primeiro cálculo de **M-CP1** e **M-RC1** na E2 | Relatório em `gestao/` e decisões em ata |
+| **Coleta 3 (Fechamento E2)** | Sábado, 21/11/2026 (Release E2 em 22/11/2026) | Fases 3 e 4, ação de melhoria, artigo v2 e GitPage | Relatório de métricas da E2 e Tabela de Contribuição (**M-RC2**) |
 
 As medidas complementares da Seção 3.4 são coletadas nos mesmos pontos.
 

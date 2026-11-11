@@ -36,7 +36,7 @@ as issues antes de medir de novo.
 
 | # | Gatilho | Decisão | Responsável | Prazo |
 |---|---|---|---|---|
-| D1 | M-CP1, M-RC1 e M-RC2 não calculáveis; C5 não cumprida | Dar responsável, revisor em rodízio, data e estimativa às 6 issues da E2 (proposta na Seção 4) | Heitor aplica; equipe confirma na reunião | 11/11/2026 |
+| D1 | M-CP1, M-RC1 e M-RC2 não calculáveis; C5 não cumprida | Dar responsável, revisor em rodízio, data e estimativa às 6 issues da E2 (proposta na Seção 4) | Heitor aplica; equipe confirmou em 10/11 | Feito em 10/11/2026 |
 | D2 | Bloqueio na cadeia crítica (regra da faixa vermelha da M-CP1) | Priorizar a #46 (Fase 3), que trava a coleta (#47) e a análise (#48) | Hugo e Philipe | Antes do ponto de controle de 16/11 |
 | D3 | C7: semana de 02/11 sem reunião; C3 sem reunião de abertura da E2 | Fazer a reunião desta semana com ata; ela também cumpre a reunião de abertura da E2 da ação C3 | Heitor (ata); Pedro Henrique (pauta de pendências) | Semana de 09/11 |
 | D4 | C3 não cumprida | Na reunião, completar a lista de bloqueios da #46 com responsável e data | Hugo | Na reunião de D3 |
@@ -49,22 +49,23 @@ as issues antes de medir de novo.
 Estimativa = base × 1,1 (fator de correção da E1, TVE = +10%) × 1,2 (margem de segurança do
 relatório da E1), arredondada para cima. O revisor segue um rodízio diferente dos pares da E1.
 
-| Issue | Responsável | Revisor | Base | Estimativa |
-|---|---|---|---:|---:|
-| #28 Correções do Ponto de Controle 1 | Daniel | Hugo | 2 h | 3 h |
-| #46 Fase 3: plano de avaliação | Hugo, Philipe | Pedro Henrique | 8 h | 11 h |
-| #47 Fase 4: coleta e dados brutos | Hugo, Pedro Druck, Philipe | Daniel | 12 h | 16 h |
-| #48 Fase 4: análise, respostas GQM e julgamento | Pedro Henrique, Philipe | Heitor | 8 h | 11 h |
-| #36 Ação de melhoria | Pedro Druck | Daniel | 6 h | 8 h |
-| #49 Fechamento da E2 | Daniel, Heitor | Pedro Druck | 10 h | 13 h |
-| #53 Coleta intermediária PSM/CID e slides | Heitor | Pedro Henrique | 3 h | 4 h |
-| **Total** | | | **49 h** | **66 h** |
+| Issue | Responsável | Revisor | Base | Estimativa | Prazo |
+|---|---|---|---:|---:|---|
+| #28 Correções do Ponto de Controle 1 | Daniel | Hugo | 2 h | 3 h | 15/11 |
+| #46 Fase 3: plano de avaliação | Hugo, Philipe | Pedro Henrique | 8 h | 11 h | 15/11 |
+| #47 Fase 4: coleta e dados brutos | Hugo, Pedro Druck, Philipe | Daniel | 12 h | 16 h | 18/11 |
+| #48 Fase 4: análise, respostas GQM e julgamento | Pedro Henrique, Philipe | Heitor | 8 h | 11 h | 20/11 |
+| #36 Ação de melhoria | Pedro Druck | Daniel | 6 h | 8 h | 21/11 |
+| #49 Fechamento da E2 | Daniel, Heitor | Pedro Druck | 10 h | 13 h | 22/11 |
+| #53 Coleta intermediária PSM/CID e slides | Heitor | Pedro Henrique | 3 h | 4 h | 11/11 |
+| **Total** | | | **49 h** | **66 h** | |
 
-As datas das issues dependem da data da Entrega 2 no cronograma da disciplina. [CONFIRMAR a data
-da Entrega 2 e preencher as datas de cada issue.]
+Os prazos partem da Entrega 2 em 22/11/2026 e do ponto de controle em 16/11/2026: a Fase 3 (#46) e
+as correções do PC1 (#28) fecham antes do ponto de controle. A equipe confirmou a proposta em
+10/11/2026, e os prazos, responsáveis, revisores e estimativas foram aplicados nas issues no mesmo dia.
 
 ## 5. Próxima coleta
 
-A próxima coleta acontece depois que as issues tiverem data e estimativa, na semana de 16/11, e
-calcula M-CP1 e M-RC1 pela primeira vez na E2. A coleta de fechamento acontece antes da Release E2,
-conforme a Seção 4 do plano.
+A próxima coleta acontece em 17/11/2026, depois do ponto de controle, e calcula M-CP1 e M-RC1 pela
+primeira vez na E2: até essa data vencem as issues #53, #28 e #46. A coleta de fechamento acontece em
+21/11/2026, antes da Release E2 (22/11), conforme a Seção 4.1 do plano.
