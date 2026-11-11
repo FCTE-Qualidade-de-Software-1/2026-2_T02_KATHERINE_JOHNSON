@@ -100,6 +100,18 @@ Foram definidas quatro métricas para o monitoramento da equipe: uma para Desemp
 
 ---
 
+### 3.4. Métricas complementares (a partir da Entrega 2)
+
+A retrospectiva da Entrega 1 (28/10/2026, [ata 03](../atas/ata-03-2026-10-28.md)) mostrou um gargalo que as quatro métricas não captam: a espera pela revisão. As ações da retrospectiva passaram a ser acompanhadas por três medidas complementares. Elas usam a mesma fonte das métricas principais (histórico do GitHub e pasta `atas/`).
+
+| Medida | Categoria PSM/CID | Cálculo | Fonte | Verde | Amarelo | Vermelho | Decisão se sair da faixa |
+| :--- | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| Tempo até a 1ª revisão (ação C1) | Desempenho dos processos | Horas entre a abertura do PR e a primeira revisão; mediana e número de PRs acima de 48 h | Pull requests no GitHub | todos os PRs até 48 h | 1 PR acima de 48 h | 2 ou mais PRs acima de 48 h | Cobrar o revisor no grupo e colocar o PR na pauta da reunião |
+| Revisões por integrante (ação C5) | Recursos e custos (M-RC2 aplicada às revisões) | Revisões do integrante ÷ revisões da equipe × 100 | Pull requests no GitHub | de 14% a 20% | de 11% a 14% ou de 20% a 23% | abaixo de 11% ou acima de 23% | Ajustar o rodízio de revisores das próximas issues |
+| Atas ÷ reuniões (ação C7) | Calendário e progresso | Reuniões com ata em `atas/` ÷ reuniões feitas × 100; e semanas com reunião ÷ semanas da entrega | Pasta `atas/` | 100% | — | abaixo de 100% | Escrever a ata que falta e marcar a reunião da semana |
+
+---
+
 ## 4. Resumo do Ciclo de Coleta na Entrega 1 (Milestone E1)
 
 As medições serão coletadas, analisadas e documentadas em relatórios de acompanhamento na pasta `gestao/` seguindo o calendário abaixo:
@@ -108,6 +120,16 @@ As medições serão coletadas, analisadas e documentadas em relatórios de acom
 | :--- | :--- | :--- | :--- |
 | **Coleta 1 (Intermediária)** | Quarta-feira, 21/10/2026 | Rascunhos da Fase 1, referenciais e objetivos/questões GQM | Atualização do registro de horas, cálculo parcial de **M-DP1**, **M-CP1**, **M-RC1** e registro da 1ª decisão de gestão. |
 | **Coleta 2 (Fechamento E1)** | Domingo, 25/10/2026 | Fase 2 completa, GitPage, integração do artigo e revisões cruzadas | Gráficos consolidados das 3 categorias, registro final de decisões e geração da Tabela de Contribuição (**M-RC2**). |
+
+### 4.1. Ciclo de Coleta na Entrega 2 (Milestone E2)
+
+| Ponto de Coleta | Data | Escopo da Medição | Artefato Gerado |
+| :--- | :--- | :--- | :--- |
+| **Coleta 1 (Intermediária)** | Terça-feira, 10/11/2026 | Planejamento das issues da E2 e ações da retrospectiva | [`gestao/coleta-intermediaria-e2.md`](coleta-intermediaria-e2.md), com as decisões D1 a D7 |
+| **Coleta 2 (Acompanhamento)** | Terça-feira, 17/11/2026 | Fase 3 (#46) e início da Fase 4; primeiro cálculo de **M-CP1** e **M-RC1** na E2 | Relatório em `gestao/` e decisões em ata |
+| **Coleta 3 (Fechamento E2)** | Sábado, 21/11/2026 (Release E2 em 22/11/2026) | Fases 3 e 4, ação de melhoria, artigo v2 e GitPage | Relatório de métricas da E2 e Tabela de Contribuição (**M-RC2**) |
+
+As medidas complementares da Seção 3.4 são coletadas nos mesmos pontos.
 
 ---
 
@@ -138,5 +160,6 @@ A tabela abaixo será preenchida a cada coleta para compor a seção de Gestão 
 | 1.1 | 26/10/2026 | Faixa verde da M-DP1 passa de $\le 25\%$ para $\le 30\%$, por decisão da equipe no fechamento da E1 |
 | 1.1 | 26/10/2026 | As horas passam a ser consolidadas no registro de horas da GitPage e no `gestao/relatorio-metricas-e1.md`, em vez de planilha; os gráficos de esforço e de issues por integrante são gerados por `gestao/gerar_metricas_psm.py`, e M-DP1 e M-CP1 são apresentadas em tabela |
 | 1.1 | 26/10/2026 | As labels `revisao:*` foram substituídas pelo estado de revisão do próprio pull request no GitHub |
+| 1.2 | 10/11/2026 | Seção 3.4 com as medidas complementares da retrospectiva (tempo até a 1ª revisão, revisões por integrante, atas ÷ reuniões) e Seção 4.1 com o ciclo de coleta da Entrega 2 |
 
 *Versão 1.1 — 26/10/2026 — Equipe Katherine Johnson (FGA0315/UnB).*
