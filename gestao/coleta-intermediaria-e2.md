@@ -58,7 +58,7 @@ relatório da E1), arredondada para cima. O revisor segue um rodízio diferente 
 | #36 Ação de melhoria | Pedro Druck | Daniel | 6 h | 8 h | 21/11 |
 | #49 Fechamento da E2 | Daniel, Heitor | Pedro Druck | 10 h | 13 h | 22/11 |
 | #53 Coleta intermediária PSM/CID e slides | Heitor | Pedro Henrique | 3 h | 4 h | 11/11 |
-| #55 Inconsistências nos registros de gestão PSM/CID | Pedro Druck | Philipe | — | 1 h | 17/11 |
+| #55 Inconsistências nos registros de gestão PSM/CID | Pedro Druck | Philipe | — | 1 h | 11/11 |
 | **Total** | | | **49 h** | **67 h** | |
 
 Os prazos partem da Entrega 2 em 22/11/2026 e do ponto de controle em 16/11/2026: a Fase 3 (#46) e
@@ -82,7 +82,7 @@ da E2 estavam fechadas: a #53 (PR #54) e a #55 (PR #56).
 
 | Métrica | Valor em 11/11 | Situação |
 |---|---|---|
-| M-CP1 — Cumprimento de marcos | 8 de 8 issues com prazo. Até 11/11 vencia só a #53, fechada no prazo (1 de 1, 100%). A #55 (prazo 17/11) fechou antes do prazo | Verde, amostra de 1 |
+| M-CP1 — Cumprimento de marcos | 8 de 8 issues com prazo. Até 11/11 venciam a #53 e a #55, as duas fechadas no prazo (2 de 2, 100%) | Verde, amostra de 2 |
 | M-RC1 — Variação de esforço | 8 de 8 issues com estimativa (67 h). Fechadas: #53, 3 h para 4 h (−25%), e #55, 1 h para 1 h (0%). Total: 4 h para 5 h (−20%) | Verde, no limite da faixa |
 | M-RC2 — Contribuição individual | 8 de 8 issues com responsável; 4 h reais na E2 (Heitor 3 h, Pedro Druck 1 h) | Cálculo no fechamento (21/11) |
 | M-DP1 — Retrabalho em revisão | 0 de 3 PRs com pedido de ajuste (#52, #54 e #56) | Verde, amostra de 3 |

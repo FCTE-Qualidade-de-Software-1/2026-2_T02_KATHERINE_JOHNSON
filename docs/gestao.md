@@ -226,7 +226,7 @@ estavam fechadas: a [#53](https://github.com/FCTE-Qualidade-de-Software-1/2026-2
 
 | Métrica ou ação | Valor em 11/11 | Situação |
 |---|---|---|
-| M-CP1 — Cumprimento de marcos | 8 de 8 issues com prazo; até 11/11 vencia só a #53, fechada no prazo (1 de 1) | Verde, amostra de 1 |
+| M-CP1 — Cumprimento de marcos | 8 de 8 issues com prazo; até 11/11 venciam a #53 e a #55, as duas fechadas no prazo (2 de 2) | Verde, amostra de 2 |
 | M-RC1 — Variação de esforço | #53: 3 h para 4 h (−25%); #55: 1 h para 1 h (0%); total 4 h para 5 h (−20%) | Verde, no limite da faixa |
 | M-RC2 — Contribuição individual | 8 de 8 issues com responsável; 4 h reais na E2 | Cálculo no fechamento (21/11) |
 | M-DP1 — Retrabalho em revisão | 0 de 3 PRs com pedido de ajuste (#52, #54 e #56) | Verde |
