@@ -162,4 +162,4 @@ A tabela abaixo será preenchida a cada coleta para compor a seção de Gestão 
 | 1.1 | 26/10/2026 | As labels `revisao:*` foram substituídas pelo estado de revisão do próprio pull request no GitHub |
 | 1.2 | 10/11/2026 | Seção 3.4 com as medidas complementares da retrospectiva (tempo até a 1ª revisão, revisões por integrante, atas ÷ reuniões) e Seção 4.1 com o ciclo de coleta da Entrega 2 |
 
-*Versão 1.1 — 26/10/2026 — Equipe Katherine Johnson (FGA0315/UnB).*
+*Versão 1.2 — 10/11/2026 — Equipe Katherine Johnson (FGA0315/UnB).*
