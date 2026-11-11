@@ -197,7 +197,7 @@ o planejamento das issues na reunião de 10/11
 | C3 — Pendências repassadas em reunião | Nenhuma reunião de 29/10 a 09/11; a de 10/11 repassou as pendências | Retomada em 10/11 |
 | C5 — Revisor em rodízio definido na criação | 0 de 6 issues com revisor antes da reunião; aplicado a todas em 10/11 | Cumprida em 10/11 |
 | C6 — Sem commit direto na `main` | 2 commits diretos em 28/10 (o `2186819`, de 26/10, já entra na Tabela 3); nenhum depois | Amarelo |
-| C7 — Atas ÷ reuniões | 2 de 2 (28/10 e 10/11); a ata da retrospectiva foi escrita só em 10/11, fora do prazo de 24 h | Amarelo |
+| C7 — Atas ÷ reuniões | 2 de 2 (28/10 e 10/11); a ata da retrospectiva foi escrita fora do prazo de 24 h | Amarelo |
 | C7 — Semanas com reunião | 2 de 3 semanas (nenhuma reunião na semana de 02/11) | Vermelho |
 
 *Tabela 7 — Coleta intermediária da E2. Fonte: issues #28, #36, #46 a #49 e #51, PRs depois de 26/10 e histórico da `main` no GitHub, consultados em 10/11/2026; pasta `atas/`.*

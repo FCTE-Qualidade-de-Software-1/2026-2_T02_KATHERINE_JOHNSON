@@ -29,7 +29,7 @@ as issues antes de medir de novo.
 | C3 — Repassar pendências em toda reunião (Pedro Henrique) | M-CP1 | Nenhuma reunião de 29/10 a 09/11; a reunião de 10/11 ([ata 04](../atas/ata-04-2026-11-10.md)) repassou as pendências e confirmou o planejamento da E2 | Retomada em 10/11 |
 | C5 — Revisor em rodízio definido na criação (Philipe, prazo 30/10) | M-RC2 aplicada às revisões | 0 de 6 issues da E2 com revisor. Na única revisão da E2, o revisor foi Pedro Henrique, que tinha 0 revisões na E1 | Não cumprida |
 | C6 — Sem commit direto na `main` (Pedro Druck) | M-DP1 e commits diretos | 2 commits diretos depois de 26/10: `0c32d68` e `c29861b` (28/10, registro da retrospectiva). O `2186819` (26/10) já entra nos 5 commits diretos de 26/10 do fechamento da E1 e não é contado de novo. Nenhum depois de 28/10 | Amarelo |
-| C7 — Uma reunião por semana com ata (Heitor) | Atas ÷ reuniões | 2 reuniões (28/10 e 10/11), as 2 com ata: [ata 03](../atas/ata-03-2026-10-28.md), escrita só em 10/11 (fora do prazo de 24 h), e [ata 04](../atas/ata-04-2026-11-10.md). Resultado: 2 de 2 (100%) | Amarelo |
+| C7 — Uma reunião por semana com ata (Heitor) | Atas ÷ reuniões | 2 reuniões (28/10 e 10/11), as 2 com ata: [ata 03](../atas/ata-03-2026-10-28.md), escrita fora do prazo de 24 h, e [ata 04](../atas/ata-04-2026-11-10.md). Resultado: 2 de 2 (100%) | Amarelo |
 | C7 — Frequência das reuniões | Semanas com reunião ÷ semanas | Semana de 26/10: 1; semana de 02/11: 0; semana de 09/11: 1 (10/11). Resultado: 2 de 3 semanas (67%) | Vermelho |
 
 ## 3. Decisões de gestão
