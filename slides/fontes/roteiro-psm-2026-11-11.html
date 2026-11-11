@@ -1,0 +1,231 @@
+<!doctype html>
+<!--
+  Roteiro da apresentação de gestão PSM/CID (versão de 11/11/2026, slides com a coleta da E2).
+  Gerar o PDF:
+    chromium --headless --no-pdf-header-footer --print-to-pdf=slides/roteiro-psm-cid-2026-11-11.pdf slides/fontes/roteiro-psm-2026-11-11.html
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Roteiro da apresentação: gestão do projeto com PSM/CID</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Liberation Sans", Arial, sans-serif; color: #2e3338; font-size: 10.5pt; line-height: 1.45; margin: 0; }
+  h1 { color: #123e8c; font-size: 20pt; line-height: 1.25; margin: 0 0 10pt; }
+  h2 { color: #123e8c; font-size: 14pt; margin: 18pt 0 8pt; padding-bottom: 4pt; border-bottom: 0.75pt solid #d3d7db; }
+  h3 { font-size: 11.5pt; margin: 16pt 0 6pt; }
+  h4 { color: #123e8c; font-size: 10.5pt; margin: 10pt 0 4pt; }
+  p { margin: 0 0 7pt; }
+  code { font-family: "Liberation Mono", monospace; font-size: 9pt; background: #eef1f4; padding: 0 2pt; }
+  table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt; font-size: 9.5pt; }
+  th { background: #123e8c; color: #fff; text-align: left; padding: 4pt 6pt; }
+  td { border: 0.75pt solid #d3d7db; padding: 4pt 6pt; vertical-align: top; }
+  .fala { background: #f5f7f8; border: 0.75pt solid #d3d7db; border-radius: 3pt; padding: 7pt 9pt; margin: 0 0 6pt; }
+  .passa { color: #5b6168; font-style: italic; margin: 2pt 0 8pt; }
+  .bloco { break-inside: avoid; }
+  ul { margin: 0 0 7pt; padding-left: 16pt; }
+  li { margin-bottom: 3pt; }
+</style>
+</head>
+<body>
+
+<h1>Roteiro da apresentação: gestão do projeto com PSM/CID</h1>
+<p>Equipe Katherine Johnson, T02, FGA0315 Qualidade de Software 1, 2026/2. Versão de 11/11/2026.
+Arquivo dos slides: <code>slides/apresentacao-psm-cid-2026-11-11.pdf</code> (14 slides; cópia em
+<code>Apresentacao_PSM-CID_Katherine_Johnson.pdf</code>).</p>
+<p>Apresentam os seis integrantes: Pedro Henrique, Philipe, Daniel, Heitor, Pedro Druck e Hugo.
+Duração estimada: cerca de 10 minutos, mais as perguntas.</p>
+
+<h2>Ordem e tempo</h2>
+<table>
+  <tr><th style="width:9%">Slide</th><th>Assunto</th><th style="width:18%">Quem fala</th><th style="width:11%">Tempo</th></tr>
+  <tr><td>1</td><td>Capa</td><td>Pedro Henrique</td><td>20 s</td></tr>
+  <tr><td>2</td><td>A medição sai do próprio fluxo de trabalho no GitHub</td><td>Pedro Henrique</td><td>50 s</td></tr>
+  <tr><td>3</td><td>Quatro métricas, cada uma com sua decisão</td><td>Philipe</td><td>50 s</td></tr>
+  <tr><td>4</td><td>Antes do plano: de onde as métricas partiram</td><td>Daniel</td><td>50 s</td></tr>
+  <tr><td>5</td><td>O ciclo de medição da Entrega 1</td><td>Heitor</td><td>45 s</td></tr>
+  <tr><td>6</td><td>Fechamento da E1: as três categorias na faixa verde</td><td>Heitor</td><td>45 s</td></tr>
+  <tr><td>7</td><td>Esforço por integrante e a decisão sobre a contribuição</td><td>Heitor</td><td>50 s</td></tr>
+  <tr><td>8</td><td>O que as métricas não mostraram: a espera pela revisão</td><td>Philipe</td><td>50 s</td></tr>
+  <tr><td>9</td><td>Ações para a E2, cada uma com responsável e métrica</td><td>Pedro Druck</td><td>40 s</td></tr>
+  <tr><td>10</td><td>Coleta intermediária da E2: sem plano, sem medida</td><td>Daniel</td><td>1 min</td></tr>
+  <tr><td>11</td><td>Ações da retrospectiva: o que a equipe manteve</td><td>Pedro Druck</td><td>50 s</td></tr>
+  <tr><td>12</td><td>Decisões da coleta de 10/11</td><td>Hugo</td><td>45 s</td></tr>
+  <tr><td>13</td><td>Planejamento da E2 e próximas coletas</td><td>Hugo</td><td>45 s</td></tr>
+  <tr><td>14</td><td>Encerramento e perguntas</td><td>Daniel</td><td>20 s</td></tr>
+</table>
+<p>Cada integrante fala em um bloco ou dois. A ordem acompanha o papel de cada um: Pedro Henrique
+fez o referencial GQM/PSM; Philipe, as métricas; Daniel é o responsável pela gestão e montou o plano;
+Heitor acompanhou a coleta da E1, fez a coleta intermediária da E2 e é responsável pelas atas; Pedro
+Druck foi o relator da retrospectiva; Hugo é responsável pela Fase 3 (#46), que as decisões priorizam.</p>
+
+<h2>Falas</h2>
+
+<h3>Pedro Henrique</h3>
+<div class="bloco">
+<h4>Slide 1, capa (20 s)</h4>
+<div class="fala">Bom dia. Somos a equipe Katherine Johnson. Nosso trabalho avalia a consulta de infrações do
+Detran-DF no Portal de Serviços e no aplicativo. Hoje mostramos como gerenciamos o projeto com o
+PSM/CID: o que medimos, o que os números deram na Entrega 1 e o que a primeira coleta da Entrega 2
+mostrou.</div>
+</div>
+<div class="bloco">
+<h4>Slide 2, a medição sai do fluxo de trabalho (50 s)</h4>
+<div class="fala">O PSM, Practical Software Measurement, junto com o processo de medição da ISO/IEC/IEEE 15939,
+organiza a gestão em três categorias: desempenho dos processos, calendário e progresso, e recursos e
+custos. A medição sai do próprio trabalho, sem planilha paralela. Cada tarefa é uma issue com estimativa
+de horas; o trabalho vai numa branch própria e só entra na main por pull request revisado por outro
+integrante. Esses registros são a fonte das métricas, coletadas em datas fixas.</div>
+<p class="passa">Passa para o Philipe: "O Philipe mostra as métricas."</p>
+</div>
+
+<h3>Philipe</h3>
+<div class="bloco">
+<h4>Slide 3, as quatro métricas (50 s)</h4>
+<div class="fala">Definimos quatro métricas. Cada uma tem fórmula, faixa e a decisão que ela dispara quando sai da
+faixa. A M-DP1 mede o retrabalho: PRs que voltaram com pedido de ajuste; verde até 30%. A M-CP1 é o
+cumprimento de marcos: issues concluídas sobre as planejadas até a data; verde a partir de 85%. A M-RC1
+compara horas reais com estimadas, verde entre menos 20 e mais 20%. A M-RC2 é a fatia de cada integrante
+nas horas da equipe, verde entre 14 e 20%, e gera a tabela de contribuição do artigo. Na versão 1.1 do
+plano, a faixa verde da M-DP1 passou de 25 para 30%.</div>
+<p class="passa">Passa para o Daniel: "O Daniel mostra de onde partimos."</p>
+</div>
+
+<h3>Daniel</h3>
+<div class="bloco">
+<h4>Slide 4, antes do plano (50 s)</h4>
+<div class="fala">Antes do plano, até 18/10, as tarefas estavam só na ata 01: nenhuma issue, nenhum PR e seis
+commits direto na main. Por isso a primeira coluna não tem dado. Na coleta intermediária, em 21/10, já
+eram 12 issues e 5 PRs revisados, mas a M-CP1 estava no vermelho: das 10 issues que venciam, só 3
+estavam fechadas, e as horas reais estavam em branco. No fechamento, em 26/10, as quatro métricas
+foram calculadas: zero de retrabalho, 15 de 15 issues e mais 10% de esforço. Ainda houve cinco commits
+direto na main no dia da entrega, e isso voltou na retrospectiva.</div>
+<p class="passa">Passa para o Heitor: "O Heitor mostra como foi o ciclo da Entrega 1."</p>
+</div>
+
+<h3>Heitor</h3>
+<div class="bloco">
+<h4>Slide 5, o ciclo de medição da E1 (45 s)</h4>
+<div class="fala">Esse foi o ciclo da Entrega 1. Em 19/10 publicamos o plano e abrimos 12 issues, com 46 horas
+estimadas. Na coleta intermediária, em 21/10, só 3 das 12 issues estavam fechadas e nenhuma tinha horas
+reais. Isso gerou duas decisões, registradas na ata 02: priorizar a revisão dos PRs 18, 19 e 21, e todos
+preencherem as horas reais. No fechamento, em 25 e 26/10, o plano foi para a versão 1.1. Em 28/10 a
+retrospectiva transformou os problemas em ações para a E2.</div>
+</div>
+<div class="bloco">
+<h4>Slide 6, fechamento da E1 (45 s)</h4>
+<div class="fala">No fechamento, as três categorias ficaram no verde. Retrabalho: zero de 14 PRs. Marcos: 15 de 15
+issues, 100%. Esforço: 55 horas reais para 50 estimadas, mais 10%. Sobre o zero de retrabalho: houve
+correções, como o limite de 15 páginas e a hipótese H1.1, mas elas viraram sub-issues próprias, a 25, a
+26 e a 45, e não ajustes dentro do PR. Por isso aparecem no calendário, e não na M-DP1.</div>
+</div>
+<div class="bloco">
+<h4>Slide 7, esforço e contribuição (50 s)</h4>
+<div class="fala">Por integrante, a variação ficou controlada para quase todos. O Daniel e eu fomos para o amarelo,
+com mais 24,5%, por causa da configuração do repositório, da seção de propósito e da GitPage. Pelas
+horas, a contribuição foi de 13 a 18,5%; o Hugo, com 13%, ficaria no amarelo. A equipe decidiu publicar
+16,67% para todos no apêndice do artigo, porque as horas não registram a revisão do trabalho dos colegas,
+o retorno a cada entrega e a organização da equipe. Os valores medidos continuam no relatório de
+métricas.</div>
+<p class="passa">Passa para o Philipe: "Mas nem tudo apareceu nas métricas. O Philipe explica."</p>
+</div>
+
+<h3>Philipe</h3>
+<div class="bloco">
+<h4>Slide 8, a espera pela revisão (50 s)</h4>
+<div class="fala">As métricas ficaram no verde, mas na retrospectiva a demora na revisão recebeu 6 votos de 6. O plano
+não media isso. Levantamos no GitHub o tempo entre a abertura de cada PR e a primeira revisão. A mediana
+foi de 6,2 horas, mas 6 dos 15 PRs esperaram mais de 48 horas, e o maior chegou a 7,3 dias, o PR 19. À
+direita, as revisões por integrante: três pessoas fizeram 12 das 15. Esses são os tópicos C1 e C5 da
+retrospectiva.</div>
+<p class="passa">Passa para o Pedro Druck: "O Pedro Druck mostra o que a retrospectiva decidiu."</p>
+</div>
+
+<h3>Pedro Druck</h3>
+<div class="bloco">
+<h4>Slide 9, ações para a E2 (40 s)</h4>
+<div class="fala">Da retrospectiva saíram seis ações, cada uma com responsável e métrica. Para a demora, todo PR é
+revisado em até 48 horas, com o Daniel. Para os problemas que só apareciam no fim, o Hugo lista na issue
+46 os riscos da avaliação, e o Pedro Henrique repassa as pendências em toda reunião. Para a revisão
+concentrada, o Philipe define o revisor de cada issue em rodízio. E mantemos o fluxo de PR revisado,
+comigo, e as atas semanais, com o Heitor.</div>
+<p class="passa">Passa para o Daniel: "O Daniel mostra a primeira coleta da Entrega 2."</p>
+</div>
+
+<h3>Daniel</h3>
+<div class="bloco">
+<h4>Slide 10, coleta intermediária da E2 (1 min)</h4>
+<div class="fala">A primeira coleta da E2 foi ontem, 10/11, já com o plano na versão 1.2. O resultado mais importante
+é o que não deu para medir. As seis issues da E2 estavam sem data, sem estimativa e sem responsável.
+Sem data, nenhuma issue vence até a data de corte, e a M-CP1 fica sem denominador. Pelo plano, isso é um
+bloqueio na cadeia crítica, o critério da faixa vermelha. Pelo mesmo motivo, a M-RC1 e a M-RC2 não
+puderam ser calculadas. O que deu para medir está no verde: o único PR da E2, o 52, não voltou para
+ajuste e foi revisado em 5 minutos, por quem não tinha revisado nenhum PR na E1. Mas é uma amostra de um
+PR.</div>
+<p class="passa">Passa para o Pedro Druck: "O Pedro Druck mostra como ficaram as ações da retrospectiva."</p>
+</div>
+
+<h3>Pedro Druck</h3>
+<div class="bloco">
+<h4>Slide 11, situação das ações (50 s)</h4>
+<div class="fala">A coleta também mediu as ações da retrospectiva. A revisão em até 48 horas foi cumprida. Duas ações
+com prazo em 30/10 não foram cumpridas: a lista de bloqueios da issue 46 ficou sem responsável e sem
+data, e nenhuma issue da E2 tinha revisor. A regra de não fazer commit direto na main está no amarelo:
+houve três commits diretos entre 26 e 28/10, dois deles meus, no registro da retrospectiva; depois de
+28/10, nenhum. As atas estão no amarelo, porque a ata da retrospectiva só foi escrita ontem. E a reunião
+semanal está no vermelho: uma de duas semanas.</div>
+<p class="passa">Passa para o Hugo: "O Hugo mostra o que a equipe decidiu."</p>
+</div>
+
+<h3>Hugo</h3>
+<div class="bloco">
+<h4>Slide 12, decisões da coleta (45 s)</h4>
+<div class="fala">Cada decisão parte de uma medida fora da faixa. A principal já foi cumprida ontem: as issues da E2
+ganharam responsável, revisor em rodízio, prazo e estimativa. Como a Fase 3 trava a coleta e a análise,
+ela é a prioridade, comigo e com o Philipe. Esta semana tem reunião com ata, que também vale como a
+abertura da E2; nela completamos a lista de bloqueios da issue 46. A regra da main continua, e o plano
+foi para a versão 1.2, com as medidas da retrospectiva e o calendário de coletas da E2.</div>
+</div>
+<div class="bloco">
+<h4>Slide 13, planejamento da E2 (45 s)</h4>
+<div class="fala">Esse é o planejamento. Cada estimativa aplica o desvio da E1, mais 10%, e a margem de segurança de
+20%: são 66 horas no total. Os prazos partem da Entrega 2, em 22/11, e do ponto de controle, em 16/11:
+a Fase 3 e as correções do ponto de controle 1 fecham em 15/11. A próxima coleta é em 17/11, e nela a
+M-CP1 e a M-RC1 da E2 são calculadas pela primeira vez. A coleta de fechamento é em 21/11, com a tabela
+de contribuição.</div>
+<p class="passa">Passa para o Daniel: "O Daniel fecha."</p>
+</div>
+
+<h3>Daniel</h3>
+<div class="bloco">
+<h4>Slide 14, encerramento (20 s)</h4>
+<div class="fala">Resumindo: os números saem do repositório e cada um vem com uma decisão. A Entrega 1 fechou no
+verde. Na Entrega 2, a primeira coleta mostrou o que faltava planejar, e a decisão foi planejar antes de
+medir de novo. Obrigado, estamos abertos a perguntas.</div>
+</div>
+
+<h2>Perguntas prováveis e quem responde</h2>
+<table>
+  <tr><th style="width:30%">Pergunta</th><th style="width:15%">Quem responde</th><th>Resposta curta</th></tr>
+  <tr><td>Como os dados foram coletados?</td><td>Daniel</td><td>Pelo histórico do GitHub: issues (estimativa e horas reais no corpo da issue), PRs e revisões. O script <code>gestao/gerar_metricas_psm.py</code> lê as issues da E1 pelo <code>gh</code> e gera os gráficos de esforço.</td></tr>
+  <tr><td>"Não calculável" não é só falta de dado?</td><td>Daniel</td><td>É o resultado da coleta. O plano trata bloqueio na cadeia crítica como vermelho, e a decisão foi planejar as issues no mesmo dia. A M-CP1 é calculada em 17/11.</td></tr>
+  <tr><td>Por que mudar a faixa verde da M-DP1 de 25% para 30%?</td><td>Pedro Druck</td><td>Decisão da equipe no fechamento da E1, registrada na versão 1.1 do plano. Não mudou o resultado: a medida foi 0%, verde nas duas faixas.</td></tr>
+  <tr><td>Se houve correções, por que o retrabalho deu 0%?</td><td>Heitor</td><td>As correções viraram sub-issues (#25, #26 e #45), e não pedidos de ajuste dentro do PR. Elas aparecem na M-CP1. É uma limitação da M-DP1 que a equipe reconhece.</td></tr>
+  <tr><td>Por que 16,67% para todos se as horas deram de 13% a 18,5%?</td><td>Heitor</td><td>Decisão de gestão de 26/10: as horas não captam revisão, retorno e organização. Os valores medidos estão no relatório de métricas.</td></tr>
+  <tr><td>O tempo até a 1ª revisão fazia parte do plano?</td><td>Philipe</td><td>Não na E1. Entrou na retrospectiva, com meta de 48 h, e agora está na Seção 3.4 do plano v1.2. Os números da E1 servem de linha de base.</td></tr>
+  <tr><td>Como foram feitas as estimativas da E2?</td><td>Hugo</td><td>Base de cada issue × 1,1 (TVE da E1) × 1,2 (margem do relatório da E1), arredondado para cima: 66 h no total.</td></tr>
+  <tr><td>Por que a ata da retrospectiva foi escrita depois?</td><td>Heitor</td><td>O registro original é o PDF da retrospectiva, de 28/10. A ata em <code>atas/</code> foi escrita na coleta de 10/11 e conta como fora do prazo de 24 h; por isso a ação C7 está no amarelo.</td></tr>
+  <tr><td>Como vão saber se as ações funcionaram?</td><td>Pedro Druck</td><td>Cada ação tem métrica e responsável, e a situação de cada uma é medida em toda coleta, como no slide 11.</td></tr>
+</table>
+
+<h2>Antes de apresentar</h2>
+<ul>
+  <li>Os números dos slides 10 e 11 são da coleta de 10/11. Se a professora perguntar pela situação de hoje, diga que as issues já têm prazo, estimativa, responsável e revisor (decisão D1) e que a próxima coleta é em 17/11.</li>
+  <li>O PR #54, com a coleta e estes slides, foi aberto depois da data de corte e não entra na M-DP1 de 10/11.</li>
+  <li>Fontes, se a professora pedir: <code>gestao/coleta-intermediaria-e2.md</code>, <code>gestao/plano-psm.md</code> (v1.2), <code>atas/ata-03-2026-10-28.md</code> e a página Gestão da GitPage.</li>
+  <li>Ensaiar uma vez cronometrado. A meta é ficar perto de 10 minutos.</li>
+</ul>
+
+</body>
+</html>
