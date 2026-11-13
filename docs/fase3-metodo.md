@@ -5,7 +5,7 @@
 Esta página define como cada uma das quatorze métricas da [Fase 2](fase2-metricas.md) será obtida
 na Fase 4. O objetivo é que outro avaliador, seguindo apenas estas instruções, chegue às mesmas
 medidas. Recursos, ambiente, massa de dados e cronograma completam o plano em páginas próprias
-da Fase 3.
+da Fase 3: [ambiente](fase3-ambiente.md), [massa e instrumentos](fase3-dados.md) e [cronograma](fase3-cronograma.md).
 
 ## 1. Método
 
@@ -38,7 +38,7 @@ A Fase 2 deixou alguns parâmetros para o plano de avaliação. Eles valem para 
 | Ponto de partida | Tela inicial já autenticada | O login está fora do escopo ([Fase 1](fase1-proposito.md)); é feito pelo proprietário antes de cada bloco |
 | Ordem dos canais | Alterna a cada bloco: o primeiro bloco da sessão começa pelo portal, o seguinte pelo aplicativo, e assim por diante | Evita que um canal seja sempre medido depois do outro, com o servidor já "aquecido" pela consulta anterior |
 | Repetições de tempo e volume | 10 válidas por canal e contexto, mais 1 de aquecimento descartada no início de cada bloco | Permite calcular mediana e percentil 90 com o mínimo de dados para isso, dentro do tempo de uma sessão |
-| Cache | Não é limpo em nenhum dos canais; a sessão do usuário é mantida | No aplicativo de loja não há como limpar só o cache sem apagar os dados e perder o login; a mesma regra é aplicada ao portal. A repetição de aquecimento garante que todas as repetições válidas partam do mesmo estado |
+| Cache | Não é limpo em nenhum dos canais; a sessão do usuário é mantida | Evita alterar a sessão autenticada entre repetições. O aquecimento padroniza a preparação, mas não garante estados internos equivalentes de cache; essa limitação deve acompanhar os resultados |
 | Tempo limite | 60 s sem a lista completa contam como falha por tempo limite | Bem acima da faixa Inaceitável de M3.2.3 (20 s), para não confundir lentidão com falha |
 | Intervalo entre canais (M1.2.x) | No máximo 10 minutos entre a consulta de uma infração no portal e no aplicativo, com hora registrada | Reduz o risco de divergência causada por atualização da infração entre as consultas, como prevê a Fase 2 |
 | Taxa de quadros da gravação | 60 quadros por segundo; 30 se o aparelho não suportar, com o valor registrado | A resolução da medida de tempo é de um quadro (17 ms a 60 qps; 33 ms a 30 qps) |
@@ -61,7 +61,7 @@ e não no navegador, porque o perfil de rede do DevTools não afeta o aplicativo
 
 *Tabela 2 — Condições de rede. Fonte: elaborada pela equipe.*
 
-Os valores da rede degradada representam uma rede móvel congestionada e ficam fixos durante toda
+Os valores da rede degradada definem um cenário experimental fixo, sem alegar equivalência com uma rede real. São aplicados por sentido, conforme a preparação do [ambiente](fase3-ambiente.md), e ficam fixos durante toda
 a coleta. Antes de cada bloco, o registrador anota a velocidade medida no próprio ponto de
 acesso, para documentar a condição real.
 
@@ -93,7 +93,7 @@ tenha respeitado o limite de 10 minutos.
 
 1. Para cada infração, listar os campos de R01 a R15 aplicáveis a ela, mais velocidade
    permitida e aferida nas infrações de velocidade (comparadas separadamente).
-2. Para cada campo aplicável, transcrever o valor exibido no portal e no aplicativo e
+2. Para cada campo aplicável, transcrever **somente no registro privado** o valor exibido no portal e no aplicativo e
    classificar como **paritário**, **divergente** ou **ausente em um canal**, seguindo as regras
    de formatação da [M1.2.1](fase2-metricas.md): diferença só de formato (maiúsculas, acentos,
    símbolo monetário, separador decimal, formato de data) não é divergência.
@@ -129,8 +129,7 @@ tenha respeitado o limite de 10 minutos.
    e o **quadro final** (primeiro quadro em que a lista ou o detalhamento aparece completo, sem
    indicador de carregamento, e não muda nos quadros seguintes). O tempo é a diferença de quadros
    dividida pela taxa de quadros.
-5. No portal, conferir o resultado com o tempo do evento `load` da navegação na aba Network do
-   DevTools. Diferença maior que 0,5 s é anotada como observação.
+5. No portal, usar a aba Network do DevTools apenas como apoio diagnóstico. O evento `load` não mede necessariamente a conclusão visual de uma consulta assíncrona e não substitui a marcação na gravação.
 6. O segundo avaliador marca os quadros de novo, de forma independente. Se a diferença passar
    de 3 quadros, os dois marcam juntos e a marcação final é registrada.
 
@@ -144,11 +143,13 @@ tenha respeitado o limite de 10 minutos.
 3. Executar a consulta completa: da abertura do grupo de infrações, já autenticado, até a lista
    completa (mesmo intervalo de P3).
 4. **Portal:** anotar o total "transferred" exibido no rodapé da aba Network e salvar o arquivo
-   HAR. **Aplicativo:** ler o contador de novo; o volume é a diferença entre as duas leituras
+   HAR **apenas no armazenamento privado**, pois pode conter credenciais e dados pessoais. **Aplicativo:** ler o contador de novo; o volume é a diferença entre as duas leituras
    (recebidos mais enviados).
 5. Repetir até completar 10 repetições válidas, depois da repetição de aquecimento.
 6. **iOS:** não há contador equivalente por aplicativo. Se houver iPhone emprestado, a M2.2.1 do
    iOS fica registrada como não medida; o resultado do aplicativo vale para o Android.
+
+A equivalência do escopo e a atualização dos contadores precisam ser verificadas no [piloto](fase3-ambiente.md). Sem essa verificação, não classificar um canal como superior pelo volume. Usar MB decimal (1.000.000 bytes) e registrar leituras e instrumento.
 
 ### P6 — Execução por contexto (M3.1.1 e M3.1.2)
 
@@ -159,7 +160,7 @@ tenha respeitado o limite de 10 minutos.
       emprestado, iPhone.
 2. Fazer três tentativas por contexto. O contexto conta como **concluído** quando pelo menos duas
    das três tentativas chegam ao detalhamento sem erro.
-3. **M3.1.1** usa as plataformas (computador e celular Android, no portal; Android de entrada,
+3. **M3.1.1** usa as plataformas (computador, aprovado quando Chrome e Firefox forem aprovados, e celular Android, no portal; Android de entrada,
    Android intermediário e iOS, no aplicativo). **M3.1.2** usa os navegadores do portal (Chrome e
    Firefox em computador, Chrome em celular).
 4. Registrar versão do sistema, do navegador e do aplicativo de cada contexto. Contexto sem
@@ -186,8 +187,7 @@ tenha respeitado o limite de 10 minutos.
 
 A tabela liga cada métrica da Fase 2 ao procedimento que a obtém, aos contextos medidos, ao
 instrumento e ao arquivo de dados. Os arquivos ficam em `dados/brutos/` e as evidências em
-`evidencias/fase4/`, com nome `<canal>-<metrica>-<veiculo>-<AAAA-MM-DD>`; os modelos dos
-arquivos de coleta são preparados junto com os instrumentos, antes da primeira sessão.
+`evidencias/fase4/`, com nome `<sessao>-<bloco>-<canal>-<metrica>-<veiculo>-<repeticao>-<AAAA-MM-DD>` para evitar sobrescritas. Os modelos CSV já estão em `dados/brutos/`; o dicionário, os denominadores, as regras para falhas e os cálculos estão em `dados/README.md`.
 
 | Questão | Métrica | Procedimento | Contextos | Instrumento | Arquivo de dados | Resultado comparado com |
 |---|---|---|---|---|---|---|
@@ -218,3 +218,9 @@ Qualquer mudança em relação a estas instruções durante a coleta (repetiçã
 indisponível, parâmetro alterado, falha de gravação) é registrada no arquivo de desvios da
 Fase 4, com data, procedimento afetado, motivo e efeito sobre a métrica. Medidas obtidas com
 desvio continuam no repositório, marcadas, e a análise da Fase 4 decide se entram no cálculo.
+
+## 6. Regras complementares de execução
+
+Em P4/P5, limitar cada bloco a vinte tentativas medidas para obter dez válidas; se não for possível, reportar a amostra efetiva e o bloqueio. Em P7, manter dez tentativas após aquecimento sem substituir falhas do serviço. Erros de instrumento são registrados separadamente e sua reposição deve ser vinculada ao registro original. Aquecimentos e dados do piloto não entram nos resultados.
+
+Métrica não medida é inconclusiva, nunca zero ou aprovação. A M3.1.2 aplica-se somente ao portal. Congelar no piloto o conjunto aplicável de P2, registrando a resolução da ambiguidade do denominador da ficha M1.2.1 antes da coleta. As regras de agregação por plataforma, P90, unidades e arredondamento estão no dicionário `dados/README.md`.
