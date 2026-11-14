@@ -1,12 +1,16 @@
 # Fase 3 — Massa e instrumentos de coleta
 
-A [massa de dados](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/46-e2-fase-3-plano-de-avaliacao-metodo-ambiente-massa-de-dados-e-cronograma/dados/massa-de-dados.md) prevê até três veículos consentidos, com mínimo de um veículo com infração nos dois canais. A diversidade de situações, órgãos e infrações de velocidade é desejada, mas ainda não confirmada. A amostra é intencional e não permite generalização estatística para a frota.
+A [massa de dados](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/massa-de-dados.md) prevê até três veículos consentidos, com mínimo de um veículo com infração nos dois canais. A diversidade de situações, órgãos e infrações de velocidade é desejada, mas ainda não confirmada. A amostra é intencional e não permite generalização estatística para a frota.
 
-O titular assina o termo em `dados/consentimento.md` antes da coleta e faz o login sem compartilhar a senha. Somente código do veículo e data do consentimento são públicos. Originais, termos e correspondências ficam privados; prints e vídeos só são publicados após anonimização e revisão independente.
+O titular assina o [termo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/consentimento.md) antes da coleta e faz o login sem compartilhar a senha. Somente código do veículo e data do consentimento são públicos. Originais, termos e correspondências ficam privados; prints e vídeos só são publicados após anonimização e revisão independente.
 
 ## Instrumentos entregues
 
-Os arquivos em `dados/brutos/` contêm apenas cabeçalhos, sem dados fictícios. O dicionário e as regras de cálculo estão em `dados/README.md`.
+Os arquivos em `dados/brutos/` contêm apenas cabeçalhos, sem dados fictícios. O
+[dicionário e as regras de cálculo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/README.md)
+definem chaves, denominadores e exclusões. O
+[modelo de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md)
+registra liberação do piloto, blocos, conferência independente e encerramento.
 
 | Arquivo | Finalidade / procedimento |
 |---|---|

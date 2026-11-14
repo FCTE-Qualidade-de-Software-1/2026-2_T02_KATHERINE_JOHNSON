@@ -28,7 +28,8 @@ A [Metodologia](metodologia.md) descreve o método em visão geral e o passo a p
    interessadas, descrição do produto, modelo de qualidade, priorização e escopo.
 2. **[Fase 2](fase2.md)** — especificar a avaliação com o método GQM: objetivos, questões,
    hipóteses, métricas, níveis de pontuação e critérios de julgamento.
-3. **Fase 3** — planejar a avaliação (prevista para a Entrega 2).
+3. **[Fase 3](fase3.md)** — plano de avaliação: método, ambiente, massa de dados e cronograma
+   (documentação preparada para revisão na Entrega 2; sessões reais pendentes).
 4. **Fase 4** — executar a avaliação e julgar os resultados (prevista para a Entrega 2).
 
 A execução do projeto é acompanhada com métricas PSM/CID, descritas em
