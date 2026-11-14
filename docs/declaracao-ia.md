@@ -36,3 +36,7 @@ A Tabela abaixo documenta pormenorizadamente a ferramenta empregada, a finalidad
 ---
 
 *Versão 1.0 — 18/10/2026 — Documento de conformidade da equipe KATHERINE JOHNSON.*
+
+## Complemento da Fase 3 — 13/11/2026
+
+Codex (OpenAI) apoiou a complementação documental da issue #46: ambiente planejado, massa justificada, cronograma, modelos CSV e síntese LaTeX, a partir da issue e dos arquivos existentes. Foram preservadas as pendências empíricas e não foram gerados resultados de coleta. A verificação técnica inclui construção da GitPage e o verificador disponível no repositório; a revisão humana por autores e revisor designado permanece pendente, assim como a validação dos instrumentos no piloto. Este registro não declara aprovação humana nem execução de sessões.

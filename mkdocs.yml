@@ -65,6 +65,12 @@ nav:
       - Visão geral: fase2.md
       - Objetivos, questões e hipóteses: fase2-gqm.md
       - Métricas, níveis e critérios de julgamento: fase2-metricas.md
+  - Fase 3:
+      - Visão geral: fase3.md
+      - Método e instruções para o avaliador: fase3-metodo.md
+      - Recursos e ambiente: fase3-ambiente.md
+      - Massa e instrumentos de coleta: fase3-dados.md
+      - Cronograma e bloqueios: fase3-cronograma.md
   - Gestão (PSM/CID):
       - Medições e decisões: gestao.md
       - Registro de horas por issue: gestao-horas.md
