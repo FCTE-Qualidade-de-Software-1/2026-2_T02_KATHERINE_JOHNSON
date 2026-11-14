@@ -1,6 +1,6 @@
 # Fase 3 — Recursos, ambiente e preparação
 
-Versão 0.1 — 13/11/2026. Responsáveis: Hugo e Philipe. Plano proposto para revisão de Pedro Henrique.
+Versão 0.2 — 13/11/2026. Responsáveis: Hugo e Philipe. Plano proposto para revisão de Pedro Henrique.
 
 Este plano complementa os [procedimentos P1–P7](fase3-metodo.md). **Os equipamentos, versões atuais e consentimentos ainda não foram confirmados.** As linhas abaixo são requisitos de preparação, não registros de testes executados. As versões levantadas na Fase 1 não substituem a leitura da versão instalada no dia da coleta.
 
@@ -20,6 +20,18 @@ Este plano complementa os [procedimentos P1–P7](fase3-metodo.md). **Os equipam
 D02 e D03 devem ser aparelhos distintos; a equipe justifica a classificação entrada/intermediário pelas especificações registradas, sem presumir modelos disponíveis. Respeitar os mínimos levantados na Fase 1 (Android 8.0 e iOS 15.1), verificando a compatibilidade da versão instalada. Sem D04, CT06 é **não avaliado**, não falha, e os resultados do aplicativo ficam restritos ao Android. Sem outro recurso obrigatório, registrar bloqueio; não substituir silenciosamente o contexto.
 
 Registrar o inventário efetivo em `dados/brutos/ambientes.csv`: uma linha por contexto e sessão, incluindo resolução, taxa efetiva da gravação, versões das ferramentas e perfil de rede. Mudança de versão ou aparelho exige nova linha e registro em `desvios.csv`. Não atualizar o aplicativo durante um bloco.
+
+No portal, registrar URL de entrada e data/hora; se a interface não informar versão, anotar
+`não informada pelo serviço`, sem atribuir uma versão presumida. No aplicativo, conferir
+versão instalada e build nas informações do aparelho, além do identificador do pacote.
+Guardar esses detalhes no registro de sessão quando não houver coluna específica no CSV.
+O notebook que compartilha a rede é um recurso adicional a D01; confirmar sua placa/adaptador
+Wi-Fi, modo de compartilhamento, distribuição Linux, kernel e versão do `tc` no mesmo registro.
+
+Os avaliadores são integrantes da equipe que ensaiaram P1–P7 no piloto; não representam uma
+amostra de usuários finais. O executor precisa conhecer o fluxo e o registrador, as regras de
+contagem e os instrumentos. O conferente não participa da execução que revisa. Registrar os
+papéis por sessão; o titular autentica, mas não recebe tarefa de julgamento ou questionário.
 
 ## 2. Recursos e responsabilidades
 
@@ -55,4 +67,9 @@ Executar antes das sessões oficiais, sem misturar seus dados com resultados:
 - Confirmar o que cada instrumento de P5 inclui. DevTools e contadores do sistema podem medir camadas diferentes; sem equivalência demonstrada, reportar valores separados, com limitação, sem declarar um canal superior em M2.2.1. Uma troca de instrumento exige revisar a ficha da Fase 2 antes da coleta.
 - Testar os perfis de rede e o preenchimento dos CSV; revisar uma captura anonimizada e uma medida de tempo com avaliador independente.
 
-Hugo e Philipe registram data, resultado e evidência do piloto em `desvios.csv`; Pedro Henrique revisa o plano. Consentimento ou veículo ausentes bloqueiam a coleta. Falha de um instrumento bloqueia sua métrica, sem transformar ausência de medida em zero. O [cronograma](fase3-cronograma.md) identifica responsáveis e prazos de resolução.
+Hugo e Philipe preenchem data, resultado, evidências e liberação por procedimento no
+[modelo de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md);
+somente bloqueios e mudanças vão para `desvios.csv`. Pedro Henrique revisa o plano.
+Consentimento ou veículo ausentes bloqueiam a coleta. Falha de um instrumento bloqueia sua
+métrica, sem transformar ausência de medida em zero. O [cronograma](fase3-cronograma.md)
+identifica responsáveis e prazos de resolução.
