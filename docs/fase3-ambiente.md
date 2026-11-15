@@ -2,7 +2,7 @@
 
 Versão 0.2 — 13/11/2026. Responsáveis: Hugo e Philipe. Plano proposto para revisão de Pedro Henrique.
 
-Este plano complementa os [procedimentos P1–P7](fase3-metodo.md). **Os equipamentos, versões atuais e consentimentos ainda não foram confirmados.** As linhas abaixo são requisitos de preparação, não registros de testes executados. As versões levantadas na Fase 1 não substituem a leitura da versão instalada no dia da coleta.
+Este plano complementa os [procedimentos P1–P7](fase3-metodo.md). **Os equipamentos e versões atuais ainda não foram confirmados.** As linhas abaixo são requisitos de preparação, não registros de testes executados. As versões levantadas na Fase 1 não substituem a leitura da versão instalada no dia da coleta.
 
 ## 1. Inventário e contextos
 
@@ -10,9 +10,9 @@ Este plano complementa os [procedimentos P1–P7](fase3-metodo.md). **Os equipam
 |---|---|---|---|
 | CT01 | Portal; computador D01; Chrome | Wi-Fi: P1–P6; Wi-Fi, 4G e degradada: P7 | Modelo, processador, RAM, SO/build e versão do Chrome |
 | CT02 | Portal; mesmo D01; Firefox | Wi-Fi: P6 | Versão do Firefox |
-| CT03 | Portal; Android intermediário D03; Chrome | Wi-Fi: P6 | Modelo, RAM, Android/build e versão do Chrome |
+| CT03 | Portal; Android intermediário D03; Chrome | Wi-Fi: P6 | Modelo: Motorola edge 60 neo, RAM: 12 RAM, Android 16 e versão do Chrome: 156.0.8078.79 |
 | CT04 | Aplicativo; Android de entrada D02 | Wi-Fi: P6 | Modelo, RAM, Android/build, pacote e versão instalada |
-| CT05 | Aplicativo; Android intermediário D03 | Wi-Fi: P1–P6; Wi-Fi, 4G e degradada: P7 | Mesmos dados de D02; usar o mesmo D03 de CT03 |
+| CT05 | Aplicativo; Android intermediário D03 | Wi-Fi: P1–P6; Wi-Fi, 4G e degradada: P7 | Modelo: Motorola edge 60 neo, RAM: 12 RAM, Android 16 e versão do Chrome: 156.0.8078.79|
 | CT06 | Aplicativo; iPhone D04, se emprestado | Wi-Fi: P6 | Modelo, iOS/build e versão instalada; indisponível até confirmação |
 
 *Tabela 1 — Contextos planejados. Fonte: elaborada para o plano de avaliação.*

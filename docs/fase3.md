@@ -14,7 +14,7 @@ O passo a passo da fase está em [Metodologia](metodologia.md).
 
 ## Estado do plano em 13/11/2026
 
-A documentação e os modelos de coleta estão preparados para revisão. Inventário efetivo, consentimentos, sessão com veículo real, telas autenticadas e aprovação do PR continuam pendentes. O plano não comprova execução; as condições para iniciar a coleta estão no checklist do ambiente e no quadro de bloqueios. A seção correspondente do artigo está em `artigo/secoes/fase3-plano.tex`.
+ Inventário efetivo, consentimentos. O plano não comprova execução; as condições para iniciar a coleta estão no checklist do ambiente e no quadro de bloqueios. A seção correspondente do artigo está em `artigo/secoes/fase3-plano.tex`.
 
 ## Cobertura dos critérios da issue #46
 
@@ -32,3 +32,26 @@ A documentação e os modelos de coleta estão preparados para revisão. Invent�
 
 Os critérios empíricos só podem ser marcados como concluídos após as sessões e a conferência
 das evidências. A integração documental não encerra automaticamente a issue.
+
+## Levantamento autenticado
+
+### 1. Passos da consulta
+Sequência de telas e ações para consulta de infrações com usuário autenticado.
+
+| # | Portal de Serviços | Telas |
+|---|---|---|
+| 1 | Abrir <https://portal.detran.df.gov.br> | ![Página inicial pública do Portal de Serviços do Detran-DF, com o menu Infração](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/main/evidencias/fase1/portal-pagina-inicial-2026-10-18.png){ width="420" loading=lazy } |
+| 2 | "Fazer login" e autenticar (CPF/CNPJ + senha + reCAPTCHA, ou gov.br) | ![Tela de login do Portal de Serviços com campos de CPF ou CNPJ, senha, reCAPTCHA e botão Entrar com gov.br](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/main/evidencias/fase1/portal-login-2026-10-18.png){ width="420" loading=lazy } |
+| 3 | Na área de serviços, abrir o grupo de consultas de infração | ![Infrações](./img/passoApassoConsulta/dropDownInfrações.png) |
+| 4 | Escolher "Histórico de infrações por veículo" | ![tela1](./img/passoApassoConsulta/pageConsultaDeInfrções.png) |
+| 5 | Selecionar o veículo na lista "Veículos atuais de minha propriedade" | ![tela2](./img/passoApassoConsulta/pageSeleçãoDeUmDosVeículos.png) |
+| 6 | Selecionar período de tempo de emissão da infração e selcionar consultar|![tela3](./img/passoApassoConsulta/pageConsultaDeInfraçõesDefinindoData.png)
+ |
+| 7 | Ver resultado da consulta e selecionar, caso exista, uma infração para ver detalhes | ![tela4](./img/passoApassoConsulta/pageDetalhesDaInfração.png) |
+
+
+
+
+> Tela de exceção para tentativas de consultas de infrações emitidas a mais de 5 anos atrás. ![telaExc](./img/passoApassoConsulta/pageSeleçãoDeUmDosVeículosLimite5Anos.png)
+
+
