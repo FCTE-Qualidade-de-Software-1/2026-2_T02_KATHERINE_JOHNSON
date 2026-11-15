@@ -44,6 +44,7 @@ papéis por sessão; o titular autentica, mas não recebe tarefa de julgamento o
 | Veículo, titular presente e termo assinado | Mesma massa nos dois canais | Hugo |
 | Armazenamento privado e editor para tarjas | Originais e anonimização | Hugo |
 | Modelos CSV e revisão independente | Rastreabilidade e conferência | Philipe; revisor conforme cronograma |
+| [Termo de consentimento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/consentimento.md)| Resposibilidades da equipe com o manuseio dos dados forncidos| O responsável pela sessão|
 
 *Tabela 2 — Recursos necessários, ainda sujeitos à confirmação. Fonte: elaborada para o plano.*
 

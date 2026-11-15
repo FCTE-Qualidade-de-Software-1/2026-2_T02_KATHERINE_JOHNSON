@@ -12,9 +12,6 @@ ambiente e massa de dados, e cronograma das sessões de coleta.
 
 O passo a passo da fase está em [Metodologia](metodologia.md).
 
-## Estado do plano em 13/11/2026
-
- Inventário efetivo, consentimentos. O plano não comprova execução; as condições para iniciar a coleta estão no checklist do ambiente e no quadro de bloqueios. A seção correspondente do artigo está em `artigo/secoes/fase3-plano.tex`.
 
 ## Cobertura dos critérios da issue #46
 
