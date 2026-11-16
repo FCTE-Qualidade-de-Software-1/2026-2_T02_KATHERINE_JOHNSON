@@ -53,7 +53,7 @@ As estimativas da E2 aplicam o fator de correção da E1 (+10%) e a margem de se
 
 | Issue | Tarefa | Responsável | Situação | Estimativa | Horas gastas |
 |---|---|---|---|---|---|
-| [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/28) | Correções do Ponto de Controle 1 | Daniel | Aberta | 3 h | |
+| [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/28) | Correções do Ponto de Controle 1 | Daniel | Fechada | 3 h | 1 h |
 | [#46](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46) | Fase 3: plano de avaliação | Hugo, Philipe | Aberta | 11 h | |
 | [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Fase 4: coleta das medições e dados brutos | Hugo, Pedro Druck, Philipe | Aberta | 16 h | |
 | [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Fase 4: análise, respostas GQM e julgamento | Pedro Henrique, Philipe | Aberta | 11 h | |
@@ -61,5 +61,5 @@ As estimativas da E2 aplicam o fator de correção da E1 (+10%) e a margem de se
 | [#49](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/49) | Fechamento da Entrega 2 | Daniel, Heitor | Aberta | 13 h | |
 | [#53](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/53) | Coleta intermediária PSM/CID e slides de 11/11 | Heitor | Fechada | 4 h | 3 h |
 | [#55](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/55) | Inconsistências nos registros de gestão PSM/CID | Pedro Druck | Fechada | 1 h | 1 h |
-| | **Total** | | | **67 h** | **4 h** (2 issues fechadas) |
+| | **Total** | | | **67 h** | **5 h** (3 issues fechadas) |
 
