@@ -39,16 +39,15 @@ Sequência de telas e ações para consulta de infrações com usuário autentic
 |---|---|---|
 | 1 | Abrir <https://portal.detran.df.gov.br> | ![Página inicial pública do Portal de Serviços do Detran-DF, com o menu Infração](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/main/evidencias/fase1/portal-pagina-inicial-2026-10-18.png){ width="420" loading=lazy } |
 | 2 | "Fazer login" e autenticar (CPF/CNPJ + senha + reCAPTCHA, ou gov.br) | ![Tela de login do Portal de Serviços com campos de CPF ou CNPJ, senha, reCAPTCHA e botão Entrar com gov.br](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/main/evidencias/fase1/portal-login-2026-10-18.png){ width="420" loading=lazy } |
-| 3 | Na área de serviços, abrir o grupo de consultas de infração | ![Infrações](./img/passoApassoConsulta/dropDownInfrações.png) |
-| 4 | Escolher "Histórico de infrações por veículo" | ![tela1](./img/passoApassoConsulta/pageConsultaDeInfrções.png) |
-| 5 | Selecionar o veículo na lista "Veículos atuais de minha propriedade" | ![tela2](./img/passoApassoConsulta/pageSeleçãoDeUmDosVeículos.png) |
-| 6 | Selecionar período de tempo de emissão da infração e selcionar consultar|![tela3](./img/passoApassoConsulta/pageConsultaDeInfraçõesDefinindoData.png)
- |
-| 7 | Ver resultado da consulta e selecionar, caso exista, uma infração para ver detalhes | ![tela4](./img/passoApassoConsulta/pageDetalhesDaInfração.png) |
+| 3 | Na área de serviços, abrir o grupo de consultas de infração | ![Menu Infração aberto no Portal de Serviços, com as consultas Identificar Condutor Infrator, Histórico de infrações do condutor, Histórico de infrações por veículo e Processos de penalidade de suspensão de CNH](./img/passoApassoConsulta/dropDownInfrações.png){ width="420" loading=lazy } |
+| 4 | Escolher "Histórico de infrações por veículo" | ![Tela Histórico de Infrações por Veículo com a lista de veículos atuais do titular, com placa tarjada, e o botão Selecionar em cada linha](./img/passoApassoConsulta/pageConsultaDeInfrções.png){ width="420" loading=lazy } |
+| 5 | Selecionar o veículo na lista "Veículos atuais de minha propriedade" | ![Formulário de período do histórico de infrações, com placa tarjada, datas inicial e final e situação da pontuação, e o botão Consultar](./img/passoApassoConsulta/pageSeleçãoDeUmDosVeículos.png){ width="420" loading=lazy } |
+| 6 | Selecionar o período de emissão da infração e clicar em "Consultar" |![Resultado da consulta com uma infração listada: auto tarjado, órgão autuador, pontuação, data e situação da multa](./img/passoApassoConsulta/pageConsultaDeInfraçõesDefinindoData.png){ width="420" loading=lazy } |
+| 7 | Ver resultado da consulta e selecionar, caso exista, uma infração para ver detalhes | ![Detalhes da infração, com placa, Renavam e auto tarjados, e campos de datas, natureza, descrição, local, valores e velocidades](./img/passoApassoConsulta/pageDetalhesDaInfração.png){ width="420" loading=lazy } |
 
 
 
 
-> Tela de exceção para tentativas de consultas de infrações emitidas a mais de 5 anos atrás. ![telaExc](./img/passoApassoConsulta/pageSeleçãoDeUmDosVeículosLimite5Anos.png)
+> Tela de exceção para tentativas de consultas de infrações emitidas a mais de 5 anos atrás. ![Formulário de período com a mensagem de erro "Data informada não pode ser anterior à 5 anos"](./img/passoApassoConsulta/pageSeleçãoDeUmDosVeículosLimite5Anos.png){ width="420" loading=lazy }
 
 

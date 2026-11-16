@@ -94,3 +94,6 @@ Passos previstos: execução das medições com registro de evidências; organiz
 brutos; cálculo das métricas e comparação com os níveis de pontuação; julgamento e conclusões
 em relação ao propósito da Fase 1; e execução de uma ação de melhoria justificada pelos
 resultados.
+
+O andamento da fase, as responsabilidades e as limitações já conhecidas estão em
+[Fase 4](fase4.md); a ação de melhoria tem página própria em [Ação de melhoria](fase4-melhoria.md).
