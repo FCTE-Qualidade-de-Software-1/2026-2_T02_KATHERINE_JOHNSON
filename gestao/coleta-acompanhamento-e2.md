@@ -11,8 +11,9 @@ depois que a equipe as confirmar em ata.
 
 Esta é a segunda coleta da Entrega 2 e o primeiro cálculo de M-CP1 e M-RC1 com a E2 planejada.
 Em 16/11, 4 das 8 issues da E2 estavam fechadas (#28, #46, #53 e #55). A #46 (Fase 3) foi fechada
-às 08h34 de 16/11, um dia depois do prazo, com 3 de 14 critérios marcados e sem hora real. Os PRs
-#61 (plano da Fase 3) e #62 (preparo da análise da Fase 4) entraram na `main` no mesmo minuto.
+às 08h34 de 16/11, um dia depois do prazo e sem hora real. Dos 14 critérios, 7 estão cumpridos (a
+parte documental, na `main`) e 7 dependem de execução real: 3 parciais e 4 pendentes (Seção 1.1). Os
+PRs #61 (plano da Fase 3) e #62 (preparo da análise da Fase 4) entraram na `main` no mesmo minuto.
 Restam 4 issues abertas (#36, #47, #48 e #49), com 48 h estimadas, para 6 dias até a Entrega 2
 (22/11).
 
@@ -20,7 +21,7 @@ Restam 4 issues abertas (#36, #47, #48 e #49), com 48 h estimadas, para 6 dias a
 
 | Métrica | Valor em 16/11 | Situação | Interpretação |
 |---|---|---|---|
-| M-CP1 — Cumprimento de marcos | Data de corte 17/11: vencem 4 issues (#53, #28, #46 e #55); as 4 estão fechadas. ICM = 4 de 4 (100%). Das 8 issues da E2, 4 estão fechadas | Verde, com ressalva | O valor está na faixa Verde (85% ou mais). A ressalva: a #46 fechou 1 dia depois do prazo e com 11 de 14 critérios sem marcação (veículo real, piloto, prints com login, iPhone, rótulos confirmados). Esses critérios empíricos não têm issue que os acompanhe, e o ICM não os vê |
+| M-CP1 — Cumprimento de marcos | Data de corte 17/11: vencem 4 issues (#53, #28, #46 e #55); as 4 estão fechadas. ICM = 4 de 4 (100%). Das 8 issues da E2, 4 estão fechadas | Verde, com ressalva | O valor está na faixa Verde (85% ou mais). A ressalva: a #46 fechou 1 dia depois do prazo e com 7 dos 14 critérios abertos, 3 parciais e 4 pendentes, todos dependentes de execução real (Seção 1.1). O ICM conta a issue como fechada e não vê esses critérios |
 | M-RC1 — Variação de esforço | Issues fechadas com horas: #28 (1 h para 3 h), #53 (3 h para 4 h) e #55 (1 h para 1 h). Total: 5 h reais para 8 h estimadas (−37,5%). A #46 (11 h estimadas) fechou sem hora real e fica fora do cálculo | Amarelo (−40% a −20%) | A estimativa inclui a margem de 32% (fator 1,1 × 1,2). Contra a base de 6 h, o real de 5 h dá −17%. A amostra são 3 issues pequenas; as 4 abertas somam 48 h estimadas, sem hora real registrada, e vão decidir o resultado |
 | M-RC2 — Contribuição individual | 5 h reais registradas na E2: Heitor 3 h, Daniel 1 h, Pedro Druck 1 h; Hugo, Pedro Henrique e Philipe com 0 h | Não interpretável | Só 3 dos 6 integrantes têm hora registrada. A #46 fechou com 0 h reais, e o PR #57 tem 5 commits (Hugo 3, Philipe 2). O cálculo definitivo é na coleta de 21/11 |
 | M-DP1 — Retrabalho em revisão | 0 de 7 PRs com pedido de ajuste ou commit depois da revisão (#52, #54, #56, #57, #58, #59 e #62) | Verde (até 30%) | Nenhum dos 7 PRs recebeu *Changes Requested* nem commit posterior à primeira revisão. O #61 foi mesclado sem revisão registrada e fica fora do denominador. Em 6 dos 7 PRs, o merge ocorreu até 1 minuto depois da aprovação (exceto o #57): a métrica só vê o retrabalho que deixa rastro no GitHub |
@@ -30,6 +31,25 @@ Restam 4 issues abertas (#36, #47, #48 e #49), com 48 h estimadas, para 6 dias a
 Desvio de esforço por integrante nas issues fechadas com horas: Daniel −66,7% (#28), Heitor −25,0%
 (#53) e Pedro Druck 0% (#55). O plano só define faixa de alerta acima de +40%; o desvio abaixo de
 −40% não tem cor definida.
+
+### 1.1. Situação real dos critérios da #46
+
+A #46 tem 14 critérios. Em 16/11, 7 estavam marcados e 7 dependem de execução real e **não estão
+cumpridos**. A lista, com responsável e prazo do cronograma da Fase 3, está no
+[comentário da #46](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46)
+e foi sinalizada na #47.
+
+| Situação | Critérios |
+|---|---|
+| Cumpridos (7) | Roteiro por métrica; rastreabilidade métrica para procedimento; branch criada; seção `.tex` e páginas da GitPage; massa de dados justificada; cronograma com responsável e data; PR aprovado pelo revisor designado |
+| Parciais (3) | Ambiente detalhado (falta registrar os demais aparelhos); prints com login (só o portal no computador); iPhone (a equipe tem o aparelho, falta registrar modelo e versões) |
+| Pendentes (4) | Termo de consentimento aplicado; cronograma refletido no Project; sessão com veículo real; rótulos e contagem de passos confirmados com veículo real |
+
+*Tabela 1.1 — Critérios da #46 em 16/11/2026. Fonte: corpo e comentário da issue #46 no GitHub; `docs/fase3-cronograma.md`.*
+
+Quatro dos critérios marcados foram marcados em 16/11, depois do fechamento, porque o trabalho já
+existia na `main` e a issue não refletia isso. "Sem marcação" e "sem cumprir" não são a mesma
+coisa: só os 7 acima estão em aberto.
 
 ## 2. Ações da retrospectiva
 
@@ -55,7 +75,7 @@ para o merge do #61, mas ela não foi confirmada.
 | # | Decisão da coleta de 10/11 | Situação em 16/11 |
 |---|---|---|
 | D1 | Dar responsável, revisor, data e estimativa às issues da E2 | Feita em 10/11 |
-| D2 | Priorizar a #46 antes do ponto de controle | Cumprida com 1 dia de atraso: a #46 foi fechada em 16/11 às 08h34, e o plano da Fase 3 está na `main`. Ficam 11 de 14 critérios sem marcação |
+| D2 | Priorizar a #46 antes do ponto de controle | Cumprida com 1 dia de atraso: a #46 foi fechada em 16/11 às 08h34, e o plano da Fase 3 está na `main`. A parte documental está cumprida; ficam 7 critérios de execução abertos (3 parciais e 4 pendentes) |
 | D3 | Reunião da semana com ata | Feita em 10/11; falta a da semana de 16/11 |
 | D4 | Completar a lista de bloqueios da #46 | Feita (13/11) e na `main` desde 16/11 |
 | D5 | Conferir de novo os commits diretos na `main` | Conferido: nenhum commit direto novo depois de 11/11 |
@@ -68,7 +88,7 @@ para o merge do #61, mas ela não foi confirmada.
 
 | # | Gatilho | Decisão proposta | Responsável | Prazo |
 |---|---|---|---|---|
-| D8 | M-CP1: #46 fechada com 11 de 14 critérios sem marcação | Registrar na #47 (ou em uma issue nova) os critérios empíricos que ficaram sem cumprir (veículo real e consentimento, piloto, prints com login nos dois canais, iPhone, rótulos confirmados), com responsável e data; ou reabrir a #46 | Hugo e Philipe; Pedro Henrique confirma | 17/11 |
+| D8 | M-CP1: #46 fechada com 7 critérios de execução abertos | Decidir como acompanhar os 7 critérios listados no comentário da #46 (3 parciais e 4 pendentes): na #47, em uma issue nova ou reabrindo a #46; reagendar os prazos vencidos (14 e 15/11) e registrar as novas datas | Hugo e Philipe; Pedro Henrique confirma | 17/11 |
 | D9 | M-RC2: só 3 de 6 integrantes com hora registrada; a #46 fechou sem hora | Registrar as horas reais nas issues à medida que o trabalho acontece e, no máximo, até 20/11, antes da coleta de fechamento | Todos; Daniel confere | 20/11 |
 | D10 | C6 reincidente e merge do #61 sem aprovação registrada | Ativar a regra para administradores na proteção da `main` e combinar que só se mescla PR com aprovação de outra pessoa | Quem tiver permissão de administrador; Pedro Druck confirma | 17/11 |
 | D11 | C1: #57 acima de 48 h; #60 em espera | Avisar o revisor no grupo ao abrir o PR; o #60 vence em 18/11 | Autor de cada PR; revisor | Contínuo |
@@ -83,7 +103,7 @@ para o merge do #61, mas ela não foi confirmada.
 
 | Risco | Evidência | Efeito |
 |---|---|---|
-| Critérios empíricos da Fase 3 sem dono | A #46 foi fechada com 3 de 14 critérios marcados; nenhuma issue aberta acompanha veículo real, piloto, prints com login e iPhone | A coleta da #47 depende deles; sem acompanhamento, ficam sem data |
+| Critérios empíricos da Fase 3 sem dono | A #46 foi fechada com 7 critérios de execução abertos (3 parciais e 4 pendentes). Eles estão listados em comentário da #46, e a #47 recebeu um aviso, mas o corpo de nenhuma issue aberta os traz; os prazos de 14 e 15/11 já venceram | A coleta da #47 depende deles; sem acompanhamento formal e sem nova data, a sessão com veículo real e o termo aplicado podem atrasar |
 | Cadeia crítica curta | #47 vence em 18/11, #48 em 20/11, #36 em 21/11 e #49 em 22/11; 48 h estimadas nas 4 issues abertas | Qualquer atraso da #47 empurra a análise, a ação de melhoria e o fechamento |
 | Recursos da coleta não confirmados | Veículo com infração e consentimento dependem de terceiros (B01); o plano informa que não há confirmação nem evidência de execução. A equipe informou em 16/11 que tem um iPhone, mas modelo e versões ainda não estão registrados (B03) | Sem veículo real, as sessões da #47 não acontecem; sem o registro do iPhone, o iOS continua como contexto não avaliado |
 | Esforço pouco registrado | 0 h reais nas 4 issues abertas e na #46, que fechou sem hora | PCI e TVE do fechamento ficam sem base; a tabela de contribuição do artigo depende dessas horas |
@@ -96,7 +116,7 @@ para o merge do #61, mas ela não foi confirmada.
 
 Antes da reunião, conferir de novo e atualizar a Tabela 1 com:
 
-- critérios empíricos da Fase 3: se foram migrados para a #47 ou se a #46 foi reaberta (D8);
+- critérios de execução da Fase 3: onde foram acompanhados (#47, issue nova ou #46 reaberta) e as novas datas (D8);
 - horas reais lançadas nas issues, que mudam o M-RC1 e o M-RC2;
 - revisão do PR #60 (tempo até a 1ª revisão, M-DP1 e revisões por integrante) e novos PRs;
 - novos commits diretos na `main` (`git log origin/main --first-parent --no-merges`) e merges sem aprovação;
