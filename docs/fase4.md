@@ -56,8 +56,8 @@ Regras de integridade que valem para toda a fase:
 
 *Tabela 2 — Materiais da Fase 4. Fonte: elaborada pela equipe.*
 
-Os links para `dados/` e `evidencias/fase4/` passam a funcionar na `main` quando o plano da
-Fase 3 for mesclado.
+Os links para `dados/` e `evidencias/fase4/` apontam para a `main` e só funcionam quando o plano
+da Fase 3, hoje na branch da issue #46, chegar à `main` por um pull request próprio.
 
 ## 4. Resultados e julgamento
 
@@ -75,8 +75,10 @@ e o julgamento por característica e por canal.
 
 ## 5. Limitações já conhecidas
 
-- **iOS:** nenhum integrante possui iPhone. Sem aparelho emprestado, o contexto CT06 fica como
-  não avaliado e as conclusões sobre o aplicativo valem apenas para o Android (bloqueio B03 em
+- **iOS:** a equipe informou em 16/11 que tem um iPhone, então o contexto CT06 pode ser avaliado.
+  O modelo, a versão do iOS e a versão do aplicativo ainda precisam ser registrados no inventário
+  ([Recursos e ambiente](fase3-ambiente.md)). Sem esse registro, o CT06 continua não avaliado e as
+  conclusões sobre o aplicativo valem apenas para o Android (bloqueio B03 em
   [Cronograma e bloqueios](fase3-cronograma.md)).
 - **Veículo real:** a coleta depende de um veículo com infração e do consentimento do titular
   (bloqueio B01). Sem eles, as sessões são adiadas e o impacto é registrado na #47.
