@@ -158,7 +158,7 @@ final no [registro de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2
    HAR **apenas no armazenamento privado**, pois pode conter credenciais e dados pessoais. **Aplicativo:** ler o contador de novo; o volume é a diferença entre as duas leituras
    (recebidos mais enviados).
 5. Repetir até completar 10 repetições válidas, depois da repetição de aquecimento.
-6. **iOS:** não há contador equivalente por aplicativo. Se houver iPhone emprestado, a M2.2.1 do
+6. **iOS:** não há contador equivalente por aplicativo. No iPhone (de Heitor), a M2.2.1 do
    iOS fica registrada como não medida; o resultado do aplicativo vale para o Android.
 
 A equivalência do escopo e a atualização dos contadores precisam ser verificadas no [piloto](fase3-ambiente.md). Sem essa verificação, não classificar um canal como superior pelo volume. Usar MB decimal (1.000.000 bytes) e registrar leituras e instrumento.
@@ -168,8 +168,7 @@ A equivalência do escopo e a atualização dos contadores precisam ser verifica
 1. Em Wi-Fi, executar a consulta completa (até o detalhamento de uma infração) em cada contexto
    especificado na [Fase 1](fase1-proposito.md):
     - portal: Chrome em computador, Firefox em computador e Chrome em celular Android;
-    - aplicativo: celular Android de entrada, celular Android intermediário e, se houver aparelho
-      emprestado, iPhone.
+    - aplicativo: celular Android de entrada, celular Android intermediário e iPhone (de Heitor, CT06).
 2. Fazer três tentativas por contexto. O contexto conta como **concluído** quando pelo menos duas
    das três tentativas chegam ao detalhamento sem erro.
 3. **M3.1.1** usa as plataformas (computador, aprovado quando Chrome e Firefox forem aprovados, e celular Android, no portal; Android de entrada,
