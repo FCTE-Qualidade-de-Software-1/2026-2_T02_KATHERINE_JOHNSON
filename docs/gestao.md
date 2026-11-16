@@ -253,7 +253,7 @@ D8 a D14, está em
 | M-RC2 — Contribuição individual | 5 h registradas, de 3 dos 6 integrantes | Não interpretável |
 | M-DP1 — Retrabalho em revisão | 0 de 5 PRs com pedido de ajuste | Verde |
 | C1 — Tempo até a 1ª revisão | Mediana de 2,2 h; o PR #57 esperou 48,4 h | Amarelo |
-| C5 — Revisor em rodízio | Designado em 8 de 8 issues; revisões de Pedro Henrique 3, Philipe 1 e Hugo 1 | Cumprida na designação |
+| C5 — Revisor em rodízio | Designado em 8 de 8 issues; revisões de Pedro Henrique 3, Philipe 1, Hugo 1 e Heitor 1 | Cumprida na designação |
 | C6 — Sem commit direto na `main` | 2 commits diretos novos em 11/11 | Vermelho (proposto) |
 | C7 — Semanas com reunião | 2 de 3 semanas fechadas; semana de 16/11 sem reunião até agora | Vermelho |
 
