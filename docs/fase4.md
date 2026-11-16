@@ -16,7 +16,7 @@ pelas evidências coletadas.
 | Atividade | Issue | Responsáveis | Prazo | Situação em 16/11 | Onde ficará o resultado |
 |---|---|---|---|---|---|
 | Coleta das medições e dados brutos (sessões S02 a S05) | [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Hugo, Pedro Druck, Philipe | 18/11/2026 | Sem execução registrada; depende do piloto (S01) da Fase 3 | `dados/brutos/` e `evidencias/fase4/` |
-| Análise, respostas às questões GQM e julgamento | [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Pedro Henrique, Philipe; revisão de Heitor | 20/11/2026 | Aguarda os dados conferidos da #47 | Seção 4 desta página e artigo |
+| Análise, respostas às questões GQM e julgamento | [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Pedro Henrique, Philipe; revisão de Heitor | 20/11/2026 | Aguarda os dados conferidos da #47 | [Análise e julgamento GQM](fase4-analise.md) e artigo |
 | Ação de melhoria obrigatória | [#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36) | Pedro Druck | 21/11/2026 | Ação ainda não escolhida | [Ação de melhoria](fase4-melhoria.md) |
 
 *Tabela 1 — Atividades da Fase 4. Fonte: issues #36, #47 e #48 e coleta intermediária PSM/CID de 10/11/2026.*
@@ -52,16 +52,16 @@ Regras de integridade que valem para toda a fase:
 | Instrumentos e dicionário de dados | Oito CSV-modelo e as convenções de cálculo | [`dados/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/dados) |
 | Evidências anonimizadas | Capturas, vídeos tratados e configuração de rede | [`evidencias/fase4/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/evidencias/fase4) |
 | Registro de sessão | Piloto, blocos, conferência e desvios | [`evidencias/fase4/modelo-sessao.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md) |
+| Estrutura da análise | Procedimento, dependências da #47 e modelos de consolidação | [Análise e julgamento GQM](fase4-analise.md); [`dados/consolidados/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/dados/consolidados) |
 | Release da Entrega 2 | Tag e PDF do artigo | [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases); publicação prevista para 22/11/2026 |
 
 *Tabela 2 — Materiais da Fase 4. Fonte: elaborada pela equipe.*
 
-Os links para `dados/` e `evidencias/fase4/` apontam para a `main` e só funcionam quando o plano
-da Fase 3, hoje na branch da issue #46, chegar à `main` por um pull request próprio.
-
 ## 4. Resultados e julgamento
 
-Nenhum resultado foi publicado. Depois da análise (#48), esta seção terá um resultado por
+Nenhum resultado foi publicado. A página [Análise e julgamento GQM](fase4-analise.md) descreve o
+procedimento de análise e mostra o estado de cada questão, hoje inconclusiva por falta de
+medições. Depois da análise (#48), esta seção terá um resultado por
 objetivo de medição, com o valor de cada métrica, o nível de pontuação, a resposta a cada questão
 e o julgamento por característica e por canal.
 
