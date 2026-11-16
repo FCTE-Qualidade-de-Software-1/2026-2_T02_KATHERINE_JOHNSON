@@ -33,7 +33,7 @@ theme:
 
 # Versão exibida no rodapé de todas as páginas; atualizar a cada release.
 extra:
-  versao: "1.0 (Entrega 1)"
+  versao: "1.1 (Entrega 2, em andamento)"
   generator: false
 
 markdown_extensions:
@@ -72,7 +72,9 @@ nav:
       - Massa e instrumentos de coleta: fase3-dados.md
       - Cronograma e bloqueios: fase3-cronograma.md
   - Fase 4:
+      - Visão geral: fase4.md
       - Análise e julgamento GQM: fase4-analise.md
+      - Ação de melhoria: fase4-melhoria.md
   - Gestão (PSM/CID):
       - Medições e decisões: gestao.md
       - Registro de horas por issue: gestao-horas.md
