@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page and page.file.src_uri == "index.md" %}
+    {# Reutiliza o HTML original: a apresentação muda, o conteúdo não. #}
+    {% set opening = page.content.split('</p>', 1) %}
+    <div class="kj-home">
+      <header class="kj-hero">
+        {{ opening[0] }}</p>
+      </header>
+      {{ opening[1] }}
+    </div>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}

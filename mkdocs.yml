@@ -10,6 +10,9 @@ theme:
   name: material
   language: pt-BR
   custom_dir: overrides
+  font: false
+  icon:
+    logo: material/chart-timeline-variant-shimmer
   features:
     - navigation.tabs
     - navigation.sections
@@ -20,16 +23,19 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: custom
       toggle:
         icon: material/brightness-7
         name: Mudar para tema escuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
+      primary: custom
       toggle:
         icon: material/brightness-4
         name: Mudar para tema claro
+
+extra_css:
+  - assets/stylesheets/visual.css
 
 # Versão exibida no rodapé de todas as páginas; atualizar a cada release.
 extra:
