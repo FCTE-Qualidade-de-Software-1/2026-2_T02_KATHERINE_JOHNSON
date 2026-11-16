@@ -24,6 +24,21 @@ Cada titular precisa aceitar o [termo de consentimento](consentimento.md), fazer
 
 Atribuir V1-I1, V1-I2 etc. às infrações na tabela privada; manter os códigos estáveis entre sessões. Registrar no conjunto público apenas código, categoria necessária ao cálculo e indicadores de presença/consistência. Valores pessoais são comparados em ambiente privado, nunca transcritos no CSV público. Documentar a seleção e eventuais exclusões antes do cálculo.
 
+### Seleção por procedimento
+
+- P1/P2: usar todas as infrações selecionadas e cadastradas antes da sessão, nos dois canais.
+  Se o titular disponibilizar muitas, escolher previamente até três por veículo, priorizando
+  as categorias distintas acima; registrar quantidade disponível, quantidade selecionada e
+  motivo da seleção no registro de sessão. Não excluir uma infração porque expôs divergência.
+- P3–P7: escolher antes do piloto um veículo de referência e uma de suas infrações para o
+  detalhamento; manter ambos em todas as repetições e contextos. Os dez registros de tempo
+  são repetições do mesmo caso, não dez veículos nem dez participantes independentes.
+- Veículos adicionais ampliam a verificação de campos e consistência; blocos adicionais de
+  desempenho, se realizados, são analisados separadamente, com o tamanho da lista registrado.
+- Se o vínculo, a infração ou sua situação mudar entre sessões, preservar o registro anterior,
+  documentar a mudança e refazer o par afetado. Ausência de veículo elegível bloqueia a coleta;
+  ausência de uma categoria apenas limita a cobertura da amostra.
+
 ## 3. Guarda e anonimização
 
 Guardar termos assinados, correspondência código–titular, originais de vídeo/prints e HAR em `dados/privado/`, ignorado pelo Git, ou em armazenamento privado sob controle de Hugo. A pasta ignorada é uma precaução, não controle de acesso; restringir o acesso aos avaliadores e não anexar esses arquivos a issues ou PRs. Apagar os originais e a correspondência ao fim da disciplina, conforme o termo.
@@ -35,7 +50,7 @@ Se houver retirada do consentimento, interromper o uso, retirar registros/evidê
 ## 4. Checklist de recrutamento e preparação
 
 - [ ] Hugo confirma um titular e agenda S00/S01 até 14/11/2026.
-- [ ] Preencher o contato do responsável no termo e colher assinatura antes da captura.
+- [ ] Apresentar o termo, disponibilizar uma cópia ao titular e colher assinatura antes da captura.
 - [ ] Registrar data do consentimento e códigos na tabela, sem assinatura ou identidade.
 - [ ] Registrar as categorias disponíveis e a justificativa das lacunas da amostra.
 - [ ] Executar o roteiro de `evidencias/fase1/roteiro-levantamento.md` em S01.

@@ -1,6 +1,6 @@
 # Fase 3 — Método de avaliação e instruções para o avaliador
 
-*Responsável: Pedro Druck · Versão 0.1 — rascunho em 13/11/2026 ([issue #46](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46))*
+*Responsáveis: Hugo e Pedro Druck · Versão 0.2 — plano para revisão em 13/11/2026 ([issue #46](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46))*
 
 Esta página define como cada uma das quatorze métricas da [Fase 2](fase2-metricas.md) será obtida
 na Fase 4. O objetivo é que outro avaliador, seguindo apenas estas instruções, chegue às mesmas
@@ -91,18 +91,26 @@ registro.
 Usa as telas capturadas em P1; não exige nova consulta, desde que o intervalo entre os canais
 tenha respeitado o limite de 10 minutos.
 
-1. Para cada infração, listar os campos de R01 a R15 aplicáveis a ela, mais velocidade
-   permitida e aferida nas infrações de velocidade (comparadas separadamente).
+1. Para cada infração, comparar os detalhes usando R01–R15, mais velocidade permitida e
+   aferida nas infrações de velocidade (comparadas separadamente). O denominador é 15 ou 17,
+   independentemente de haver valor preenchido em um canal. Registrar a seleção antes de P1.
 2. Para cada campo aplicável, transcrever **somente no registro privado** o valor exibido no portal e no aplicativo e
-   classificar como **paritário**, **divergente** ou **ausente em um canal**, seguindo as regras
+   classificar como **paritário**, **divergente**, **ausente no portal**, **ausente no aplicativo**
+   ou **ausente em ambos**, seguindo as regras
    de formatação da [M1.2.1](fase2-metricas.md): diferença só de formato (maiúsculas, acentos,
    símbolo monetário, separador decimal, formato de data) não é divergência.
 3. Se houver divergência em valor devido, vencimento, desconto, prazo ou situação, conferir se a
    diferença de horário entre as consultas explica o caso; anotar a conclusão na coluna de
    observação.
-4. **M1.2.2:** marcar a infração como "sem divergência" quando nenhum campo foi classificado
-   como divergente ou ausente em um canal.
+4. **M1.2.2:** marcar a infração como "sem divergência" somente quando todos os campos
+   aplicáveis forem paritários; ausências, inclusive nos dois canais, impedem essa classificação.
 5. Um segundo avaliador refaz a classificação a partir dos prints, sem ver a primeira.
+
+P1/P2 são executados em pares por infração: lista e detalhes no primeiro canal, depois no outro,
+antes de passar à próxima infração. Registrar o horário de cada captura; se a janela de dez
+minutos for excedida, preservar o par como inelegível e refazer ambos os canais, com vínculo
+em `desvios.csv`. M1.2.1/M1.2.2 são resultados do par de canais; não indicam qual canal contém
+o valor correto e não permitem atribuir superioridade individual.
 
 ### P3 — Contagem do fluxo (M1.3.1 e M1.3.2)
 
@@ -132,6 +140,10 @@ tenha respeitado o limite de 10 minutos.
 5. No portal, usar a aba Network do DevTools apenas como apoio diagnóstico. O evento `load` não mede necessariamente a conclusão visual de uma consulta assíncrona e não substitui a marcação na gravação.
 6. O segundo avaliador marca os quadros de novo, de forma independente. Se a diferença passar
    de 3 quadros, os dois marcam juntos e a marcação final é registrada.
+
+Usar um bloco separado para cada métrica, com aquecimento próprio. Em gravação de taxa variável,
+usar os timestamps dos quadros, conforme o dicionário. Manter as duas marcações e a decisão
+final no [registro de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md).
 
 ### P5 — Medição de volume (M2.2.1)
 
@@ -223,4 +235,8 @@ desvio continuam no repositório, marcadas, e a análise da Fase 4 decide se ent
 
 Em P4/P5, limitar cada bloco a vinte tentativas medidas para obter dez válidas; se não for possível, reportar a amostra efetiva e o bloqueio. Em P7, manter dez tentativas após aquecimento sem substituir falhas do serviço. Erros de instrumento são registrados separadamente e sua reposição deve ser vinculada ao registro original. Aquecimentos e dados do piloto não entram nos resultados.
 
-Métrica não medida é inconclusiva, nunca zero ou aprovação. A M3.1.2 aplica-se somente ao portal. Congelar no piloto o conjunto aplicável de P2, registrando a resolução da ambiguidade do denominador da ficha M1.2.1 antes da coleta. As regras de agregação por plataforma, P90, unidades e arredondamento estão no dicionário `dados/README.md`.
+Métrica não medida é inconclusiva, nunca zero ou aprovação. A M3.1.2 aplica-se somente ao portal.
+O conjunto de P2 é R01–R15 mais os dois campos condicionais para velocidade; sua definição
+acompanha a ficha M1.2.1 antes da coleta. As regras de agregação por plataforma, P90, unidades e
+limites contínuos estão no dicionário `dados/README.md`. O piloto verifica a execução do plano;
+alterações de critérios exigem revisão documentada antes das sessões oficiais.

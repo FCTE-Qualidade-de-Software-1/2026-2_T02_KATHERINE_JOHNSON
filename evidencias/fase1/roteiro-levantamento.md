@@ -9,7 +9,7 @@
 - [ ] Termo de consentimento assinado (`dados/consentimento.md`) e código do veículo atribuído (V1, V2...).
 - [ ] Aplicativo DETRAN-DF instalado e atualizado no aparelho de teste; anotar versão em Configurações > Apps.
 - [ ] Navegador Chrome atualizado no computador de teste.
-- [ ] Gravação de tela ligada nos dois aparelhos (servirá também para contar passos).
+- [ ] Gravação de tela preparada nos dois aparelhos, desligada durante a autenticação.
 - [ ] Rede Wi-Fi estável; anotar o tipo de rede no formulário.
 
 ## 2. Durante a sessão
@@ -18,8 +18,8 @@ O proprietário digita a própria senha. A equipe não anota nem guarda credenci
 
 Para cada canal (portal no computador, aplicativo no celular):
 
-1. Abrir o canal e iniciar a gravação.
-2. Fazer login. Para o portal, anotar o caminho usado (CPF + senha + reCAPTCHA ou gov.br).
+1. Abrir o canal com a gravação desligada.
+2. O titular faz login. Para o portal, anotar apenas o caminho usado (CPF + senha + reCAPTCHA ou gov.br). Iniciar a gravação na tela autenticada; interrompê-la caso seja necessário autenticar novamente.
 3. Ir até "Histórico de infrações por veículo", anotando o nome exato de cada menu e botão.
 4. Selecionar o veículo e abrir a lista de infrações.
 5. Abrir o detalhamento de uma infração (de preferência, uma de velocidade e uma de outro órgão).
@@ -34,9 +34,10 @@ Para cada canal (portal no computador, aplicativo no celular):
 | Aparelho, sistema e navegador ou versão do app | | |
 | Rede | | |
 | Rótulo do item de menu do passo 3 | | |
-| Rótulo da tela de seleção do veículo (passo 5) | | |
-| Número de telas do login até o detalhamento | | |
-| Número de ações (toques/cliques) do login até o detalhamento | | |
+| Rótulo da tela de seleção do veículo (passo 4) | | |
+| Número de transições da tela inicial autenticada até a lista | | |
+| Número de ações (toques/cliques) da tela inicial autenticada até a lista | | |
+| Ações/transições adicionais até o detalhamento (separadas de M1.3.x) | | |
 | Campos da lista de referência (R01 a R15) exibidos preenchidos | | |
 | Campos exibidos que não estão na lista de referência | | |
 | Divergências entre canais para a mesma infração | | |
@@ -59,4 +60,5 @@ Antes do commit, aplicar as regras de anonimização do `README.md` desta pasta:
 - [ ] Atualizar a tabela anonimizada em `dados/massa-de-dados.md`.
 - [ ] Atualizar a tabela "Prints pendentes" do `README.md` desta pasta.
 - [ ] Se a contagem de passos ou os campos mudarem algo do artigo, ajustar `artigo/secoes/fase1-produto.tex`.
-- [ ] Registrar as horas na issue #5.
+- [ ] Registrar o resultado do piloto no modelo `evidencias/fase4/modelo-sessao.md`, incluindo a indisponibilidade do iOS, se aplicável.
+- [ ] Registrar as horas efetivas na #46, que consolidou a pendência da #5.
