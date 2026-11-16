@@ -81,6 +81,10 @@ verificável, usando o método GQM.
 Passos previstos: definição do método e das instruções para o avaliador; especificação dos
 recursos, do ambiente e da massa de dados; e cronograma das sessões de coleta.
 
+| Passo | O que foi feito | Resultado |
+|---|---|---|
+| 3.1 Método e instruções para o avaliador | Método caixa-preta roteirizado, parâmetros comuns (repetições, cache, tempo limite, condições de rede) e sete procedimentos que cobrem as quatorze métricas, com a rastreabilidade de cada métrica até o arquivo de dados | [Método e instruções para o avaliador](fase3-metodo.md) |
+
 ## Fase 4 — Execução e julgamento (Entrega 2)
 
 **Objetivo:** obter as medidas, calcular as métricas, responder às questões do GQM e julgar a

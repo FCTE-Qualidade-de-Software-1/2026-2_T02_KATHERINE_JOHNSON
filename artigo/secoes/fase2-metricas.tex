@@ -2,7 +2,7 @@
 \subsubsection{Passo 2.3: Especificação das Métricas de Medição}
 \label{subsec:metricas-gqm}
 
-Para responder às questões da Seção~\ref{subsec:questoes-hipoteses}, foram especificadas 14 métricas externas e objetivas aplicáveis a ambos os canais sob a mesma massa de dados e contextos de acesso. A formulação algébrica completa, os protocolos de instrumentação e as tabelas detalhadas de faixas encontram-se em \texttt{docs/fase2-metricas.md}. A Tabela~\ref{tab:metricas-gqm} consolida o mapeamento das métricas.
+Para responder às questões da Seção~\ref{subsec:questoes-hipoteses}, foram especificadas 14 métricas externas e objetivas, com M3.1.2 exclusiva do portal, sob a mesma massa de dados e contextos de acesso. A formulação algébrica completa, os protocolos de instrumentação e as tabelas detalhadas de faixas encontram-se em \texttt{docs/fase2-metricas.md}. A Tabela~\ref{tab:metricas-gqm} consolida o mapeamento das métricas.
 
 \begin{table}[htbp]
 \centering
@@ -35,9 +35,9 @@ Na \textbf{adequação funcional}, M1.1.1 e M1.1.2 avaliam a presença dos 15 ca
 \label{subsec:criterios-julgamento}
 \label{subsec:diagrama-gqm}
 
-Adotam-se quatro níveis de pontuação para métricas percentuais diretas: \textbf{Excelente} (95\%--100\%), \textbf{Alvo} (80\%--94\%), \textbf{Mínimo aceitável} (60\%--79\%) e \textbf{Inaceitável} ($<60\%$), com escala invertida para taxas de falha (M3.2.2). Para métricas absolutas, o nível Excelente compreende: $\le 4$ passos (M1.3.1), $\le 3$ telas (M1.3.2), $\le 3\,\text{s}$ na lista (M2.1.1), $\le 2\,\text{s}$ nos detalhes (M2.1.2), $\le 2\,\text{MB}$ (M2.2.1) e $\le 5\,\text{s}$ sob rede degradada (M3.2.3), conforme tabelas completas em \texttt{docs/fase2-metricas.md}.
+Adotam-se quatro níveis de pontuação para métricas percentuais diretas: \textbf{Excelente} (95\%--100\%), \textbf{Alvo} ($80\% \le x < 95\%$), \textbf{Mínimo aceitável} ($60\% \le x < 80\%$) e \textbf{Inaceitável} ($<60\%$), com escala invertida para taxas de falha (M3.2.2). Para métricas absolutas, o nível Excelente compreende: $\le 4$ passos (M1.3.1), $\le 3$ telas (M1.3.2), $\le 3\,\text{s}$ na lista (M2.1.1), $\le 2\,\text{s}$ nos detalhes (M2.1.2), $\le 2\,\text{MB}$ (M2.2.1) e $\le 5\,\text{s}$ sob rede degradada (M3.2.3), conforme tabelas completas em \texttt{docs/fase2-metricas.md}.
 
-No julgamento comparativo, um canal supera o outro quando atinge faixa superior; níveis iguais configuram paridade. Uma questão é atendida se todas as suas métricas atingirem ao menos o Mínimo aceitável, e um objetivo é atendido se todas as suas questões forem satisfeitas sem nenhuma métrica Inaceitável (usando a mediana como critério primário em Q2.1). A Figura~\ref{fig:diagrama-gqm} sintetiza a árvore GQM completa.
+No julgamento comparativo, um canal supera o outro quando atinge faixa superior; níveis iguais configuram paridade. Uma questão é atendida se todas as suas métricas atingirem ao menos o Mínimo aceitável, e um objetivo é atendido se todas as suas questões forem satisfeitas sem nenhuma métrica Inaceitável (usando a mediana como critério primário em Q2.1). M1.2.1 e M1.2.2 avaliam o par de canais, sem superioridade individual; o denominador considera R01--R15 e dois campos condicionais nas infrações de velocidade, mantendo ausências. Os limites são aplicados antes do arredondamento. Métricas aplicáveis sem medição deixam o julgamento inconclusivo. A Figura~\ref{fig:diagrama-gqm} sintetiza a árvore GQM completa.
 
 \begin{figure}[htbp]
 \centering
