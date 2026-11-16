@@ -239,6 +239,26 @@ Os slides da apresentação de gestão estão em
 [`slides/apresentacao-psm-cid-2026-11-11.pdf`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/slides/apresentacao-psm-cid-2026-11-11.pdf)
 (versão de 04/11 com os slides da coleta da E2, atualizados em 11/11 com a situação das métricas, a reunião de 10/11 e as issues #53 e #55).
 
+### Coleta de acompanhamento (17/11/2026)
+
+A segunda coleta da E2 calcula M-CP1 e M-RC1 com as issues já planejadas (Tabela 10). Os valores
+são de 16/11 às 08h40 e serão conferidos de novo em 17/11. O registro completo, com as decisões
+propostas D8 a D15, está em
+[`gestao/coleta-acompanhamento-e2.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/coleta-acompanhamento-e2.md).
+
+| Métrica ou ação | Valor em 16/11 | Situação |
+|---|---|---|
+| M-CP1 — Cumprimento de marcos | 4 de 4 issues que vencem até 17/11 (100%); 4 de 8 issues da E2 fechadas. A #46 fechou 1 dia depois do prazo, com 3 de 14 critérios marcados | Verde, com ressalva |
+| M-RC1 — Variação de esforço | 5 h reais para 8 h estimadas (−37,5%) nas 3 issues fechadas com horas; a #46 fechou sem hora real | Amarelo |
+| M-RC2 — Contribuição individual | 5 h registradas, de 3 dos 6 integrantes | Não interpretável |
+| M-DP1 — Retrabalho em revisão | 0 de 7 PRs com pedido de ajuste | Verde |
+| C1 — Tempo até a 1ª revisão | Mediana de 7,3 h; o PR #57 esperou 48,4 h; o #61 foi mesclado sem revisão registrada | Amarelo |
+| C5 — Revisor em rodízio | Designado em 8 de 8 issues; 8 revisões: Pedro Henrique 3, Philipe 2, Heitor 2, Hugo 1, Daniel 0 e Pedro Druck 0 | Cumprida na designação; concentrada na execução |
+| C6 — Sem commit direto na `main` | 2 commits diretos em 11/11 e nenhum depois; o #61 foi mesclado sem aprovação | Vermelho (proposto) |
+| C7 — Semanas com reunião | 2 de 3 semanas fechadas; semana de 16/11 sem reunião até agora | Vermelho |
+
+*Tabela 10 — Coleta de acompanhamento da E2, com dados de 16/11/2026. Fonte: issues #28, #36, #46 a #49, #53 e #55 e PRs #52, #54, #56, #57, #58, #59, #61 e #62 no GitHub; histórico da `main`; pasta `atas/`.*
+
 ## Registro de fechamento de issues da Entrega 1
 
 Em 25/10/2026, as issues abaixo foram fechadas por Pedro Druck, por decisão do grupo. Os
