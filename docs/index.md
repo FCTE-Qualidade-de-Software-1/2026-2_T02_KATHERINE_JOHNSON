@@ -30,7 +30,8 @@ A [Metodologia](metodologia.md) descreve o método em visão geral e o passo a p
    hipóteses, métricas, níveis de pontuação e critérios de julgamento.
 3. **[Fase 3](fase3.md)** — plano de avaliação: método, ambiente, massa de dados e cronograma
    (documentação preparada para revisão na Entrega 2; sessões reais pendentes).
-4. **Fase 4** — executar a avaliação e julgar os resultados (prevista para a Entrega 2).
+4. **[Fase 4](fase4.md)** — executar a avaliação e julgar os resultados, com a
+   [ação de melhoria](fase4-melhoria.md) (Entrega 2; execução ainda não iniciada).
 
 A execução do projeto é acompanhada com métricas PSM/CID, descritas em
 [Gestão](gestao.md), e as decisões da equipe ficam registradas nas [Atas](atas.md).
@@ -38,7 +39,7 @@ A execução do projeto é acompanhada com métricas PSM/CID, descritas em
 ## Situação atual
 
 A **Entrega 1** (Fases 1 e 2) foi concluída em 26/10/2026; a versão entregue, com o PDF do artigo,
-está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases). As Fases 3 e 4 fazem parte da Entrega 2. O andamento das tarefas pode ser acompanhado no
+está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases). As Fases 3 e 4 fazem parte da Entrega 2, prevista para 22/11/2026: o plano da Fase 3 está documentado e a Fase 4 aguarda a execução das sessões de coleta. O andamento das tarefas pode ser acompanhado no
 [quadro do backlog](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38) (acesso restrito aos membros da organização; as
 [issues](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues) e os [milestones](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/milestones) são públicos).
 
@@ -51,6 +52,7 @@ está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_K
 - [Atas de reunião](atas.md)
 - [Slides do Ponto de Controle 1 (PDF, 19/10/2026)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/slides/ponto-de-controle-1-2026-10-19.pdf)
 - [Evidências do levantamento da Fase 1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/evidencias/fase1)
+- [Evidências e registro de sessão da Fase 4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/evidencias/fase4)
 - [Dados da avaliação e termo de consentimento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/dados)
 - [Registro de horas por issue](gestao-horas.md)
 
