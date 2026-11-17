@@ -13,7 +13,7 @@ Este plano complementa os [procedimentos P1–P7](fase3-metodo.md). **Os equipam
 | CT03 | Portal; Android intermediário D03; Chrome | Wi-Fi: P6 | Modelo: Motorola edge 60 neo, RAM: 12 RAM, Android 16 e versão do Chrome: 156.0.8078.79 |
 | CT04 | Aplicativo; Android de entrada D02 | Wi-Fi: P6 | Modelo, RAM, Android/build, pacote e versão instalada |
 | CT05 | Aplicativo; Android intermediário D03 | Wi-Fi: P1–P6; Wi-Fi, 4G e degradada: P7 | Modelo: Motorola edge 60 neo, RAM: 12 RAM, Android 16 e versão do Chrome: 156.0.8078.79|
-| CT06 | Aplicativo; iPhone D04, se emprestado | Wi-Fi: P6 | Modelo, iOS/build e versão instalada; indisponível até confirmação |
+| CT06 | Aplicativo; iPhone D04 (de Heitor) | Wi-Fi: P6 | Modelo, iOS/build e versão instalada; a registrar |
 
 *Tabela 1 — Contextos planejados. Fonte: elaborada para o plano de avaliação.*
 
@@ -37,7 +37,8 @@ papéis por sessão; o titular autentica, mas não recebe tarefa de julgamento o
 
 | Recurso | Finalidade | Responsável por disponibilizar/verificar |
 |---|---|---|
-| D01, D02, D03 e empréstimo D04 | Contextos da Tabela 1 | Hugo |
+| D01, D02 e D03 | Contextos CT01 a CT05 da Tabela 1 | Hugo |
+| D04 (iPhone de Heitor) | CT06 e telas com login no iOS | Heitor |
 | Notebook Linux, adaptador Wi-Fi com modo ponto de acesso e acesso à internet | Condição comum aos dois canais | Philipe |
 | Celular com chip e roteamento USB | Saída 4G do ponto de acesso | Philipe |
 | Cabo USB, ADB, DevTools e gravador de tela | P1–P7 | Philipe |

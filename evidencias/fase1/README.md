@@ -30,14 +30,14 @@ Nenhum print entra no repositório sem passar por estas regras:
 | Tela | Portal | Android | iOS |
 |---|---|---|---|
 | Página da loja | — | feito | feito |
-| Tela inicial (sem login) | feito | feito | não realizado (sem iPhone) |
-| Login (campos vazios) | feito | feito | não realizado (sem iPhone) |
+| Tela inicial (sem login) | feito | feito | pendente (iPhone de Heitor) |
+| Login (campos vazios) | feito | feito | pendente (iPhone de Heitor) |
 | Lista de veículos | pendente | pendente | pendente |
 | Lista de infrações | pendente | pendente | pendente |
 | Detalhes de uma infração | pendente | pendente | pendente |
 
 As telas pendentes exigem login do proprietário com veículo real. O procedimento está em `roteiro-levantamento.md`.
 
-**Limitação: aplicativo no iOS.** Nenhum integrante da equipe possui iPhone, por isso as telas do aplicativo no iOS
-não foram capturadas; do iOS há apenas a página da App Store. Para a Fase 3, a equipe tentará um aparelho emprestado;
-sem ele, a avaliação do aplicativo se restringe ao Android, e o iOS fica registrado como contexto não avaliado.
+**Aplicativo no iOS.** As telas do aplicativo no iOS não foram capturadas na Entrega 1; do iOS há apenas a página da
+App Store. O iPhone é de Heitor e será usado para as capturas e medições na Fase 3. Sem o registro do aparelho, a
+avaliação do aplicativo se restringe ao Android, e o iOS fica registrado como contexto não avaliado.

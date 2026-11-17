@@ -76,7 +76,7 @@ M3.1.1, M3.1.2 e M3.2.1.
 | Dimensão | Contextos |
 |---|---|
 | Portal de Serviços | Google Chrome e Mozilla Firefox em computador; Google Chrome em celular Android |
-| Aplicativo | Um celular Android de entrada e um intermediário (Android 8.0 ou superior); um iPhone (iOS 15.1 ou superior), mas nenhum integrante da equipe possui iPhone: o iOS depende de um aparelho emprestado na Fase 3 e, sem ele, fica fora da avaliação (os modelos dos aparelhos são definidos na preparação do ambiente, na Fase 3) |
+| Aplicativo | Um celular Android de entrada e um intermediário (Android 8.0 ou superior); um iPhone (iOS 15.1 ou superior), de Heitor, cujo modelo e versão do iOS serão registrados na Fase 3; sem esse registro, o iOS fica fora da avaliação (os modelos dos aparelhos são definidos na preparação do ambiente, na Fase 3) |
 | Rede | Wi-Fi; rede móvel 4G; rede degradada simulada, com parâmetros definidos no plano de avaliação (Fase 3) |
 
 *Tabela 3 — Contextos de uso especificados. Fonte: elaborada pela equipe.*
@@ -114,5 +114,5 @@ capacidade e outras) estão justificadas no modelo de qualidade adaptado da Fase
 - **Rede degradada:** é simulada, e não uma rede real com problemas.
 - **Correção dos dados:** é julgada pela consistência entre os canais e com a notificação
   recebida pelo proprietário, e não contra a base oficial.
-- **Aplicativo no iOS:** nenhum integrante da equipe possui iPhone. Se não houver um aparelho emprestado na Fase 3, os
-  resultados do aplicativo valem apenas para o Android.
+- **Aplicativo no iOS:** o iPhone é de Heitor e será usado na Fase 3. Se o aparelho não for registrado ou a coleta no iOS
+  não puder ser feita, os resultados do aplicativo valem apenas para o Android.

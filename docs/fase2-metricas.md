@@ -121,7 +121,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 - **Fórmula:** (número de plataformas com consulta concluída / número total de plataformas testadas) × 100.
 - **Unidade:** percentual.
 - **Fonte dos dados:** registro de execução por plataforma.
-- **Procedimento de coleta:** definir plataformas com Heitor; executar o mesmo roteiro em cada plataforma. Pelo levantamento da Fase 1, as plataformas candidatas são o portal em navegador de desktop e de celular e o aplicativo em Android 8.0 ou superior e iOS 15.1 ou superior. Como nenhum integrante da equipe possui iPhone, o iOS só entra na medição se houver um aparelho emprestado na Fase 3. Aparelhos abaixo dessas versões não instalam o aplicativo e ficam fora do escopo; não contam como falha de conclusão.
+- **Procedimento de coleta:** definir plataformas com Heitor; executar o mesmo roteiro em cada plataforma. Pelo levantamento da Fase 1, as plataformas candidatas são o portal em navegador de desktop e de celular e o aplicativo em Android 8.0 ou superior e iOS 15.1 ou superior. O iOS entra na medição com o iPhone de Heitor, desde que o aparelho seja registrado na Fase 3. Aparelhos abaixo dessas versões não instalam o aplicativo e ficam fora do escopo; não contam como falha de conclusão.
 - **Interpretação:** maior é melhor.
 - **Justificativa dos níveis:** a cobertura de contexto avalia se a tarefa de consulta é concluída nos ambientes definidos. A faixa Excelente representa conclusão integral ou quase integral; valores abaixo de 60% indicam que a maior parte das plataformas não permite concluir a consulta.
 - **Níveis:** Inaceitável abaixo de 60%; Mínimo aceitável de 60% a menos de 80%; Alvo de 80% a menos de 95%; Excelente de 95% a 100%.
