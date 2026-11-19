@@ -371,7 +371,7 @@ def executar(root, output, validate_only=False, require_data=False):
         row['commit_dados'] = commit
     output.mkdir(parents=True, exist_ok=True)
     with (output / 'resultados-metricas.csv').open('w', encoding='utf-8', newline='') as handle:
-        writer = csv.DictWriter(handle, fieldnames=OUTPUT)
+        writer = csv.DictWriter(handle, fieldnames=OUTPUT, lineterminator='\n')
         writer.writeheader()
         writer.writerows(results)
     manifest = {'commit_base': commit, 'sha256': hashes, 'linhas_brutas': {k: len(v) for k, v in tables.items()},
