@@ -2,6 +2,47 @@
 
 Os CSV em `brutos/` são modelos vazios (UTF-8, vírgula, ponto decimal). Não são evidência de execução. Preencher após consentimento e piloto. Aspas delimitam textos com vírgulas. Não publicar identificadores, credenciais, valores pessoais ou HAR original.
 
+## Validação e cálculo reproduzível
+
+Requer Python 3.10 ou superior, sem dependências externas. Executar na raiz do repositório:
+
+```bash
+python3 dados/scripts/calcular.py --validar
+python3 -m unittest discover -s dados/tests -v
+python3 dados/scripts/calcular.py
+```
+
+O último comando gera `consolidados/resultados-metricas.csv` e
+`consolidados/manifesto-calculo.json`. Não altera os dados brutos, respostas GQM ou oportunidades
+de melhoria. Para experimentar sem sobrescrever a consolidação versionada, usar
+`--saida /tmp/calculo-fase4`. O manifesto registra SHA-256 de cada entrada e do script, além do
+commit de base. Os hashes identificam também arquivos alterados depois desse commit.
+
+Com os instrumentos vazios, a saída tem 25 linhas inconclusivas e uma não aplicável
+(M3.1.2 no aplicativo), sem valor nem nível: são registros de cobertura, não resultados medidos.
+As métricas M1.2.x têm uma linha para o par. `--exigir-dados` retorna erro quando não há nenhum
+resultado calculável; essa opção **não certifica que a coleta inteira está completa**.
+
+Antes de calcular, o validador rejeita cabeçalhos incorretos, chaves duplicadas, números
+negativos/não finitos, evidências inexistentes ou fora da pasta pública, falta de conferente,
+inventário ausente, denominadores incompletos, tempos/contadores inconsistentes e divergência
+entre tentativas e tempos de P7. Pares de P2 acima de dez minutos devem ser preservados com
+`elegivel=nao` em **todos os campos daquela infração**, motivo e desvio; a reposição usa outra
+sessão conforme a regra de chaves. A nova coluna `elegivel` de `comparacao-canais.csv` permite
+essa exclusão explícita sem apagar a tentativa original.
+
+O cálculo exclui S01 (piloto) e aquecimentos, preserva falhas do serviço nas taxas e separa
+sessões, blocos, veículos, contextos e redes. P1 inclui linhas por infração e o agregado
+`infracao=todas`; não somar ambas as visões. P6 informa os contextos avaliados e o denominador de
+plataformas/navegadores. P4/P5 com amostra reduzida continuam com estatísticas descritivas e
+limitação explícita; P6 incompleto e P3 sem recorrência ficam inconclusivos.
+
+Uma execução sem erros verifica consistência dos registros, **não comprova consentimento,
+anonimização, independência do revisor ou liberação do piloto**. Conferir esses itens no registro
+de sessão, assim como seleção dos campos condicionais, equivalência de instrumentos, motivos
+de exclusão/reposição e limitações de amostra. A análise e as respostas GQM continuam na #48.
+Os testes usam somente dados sintéticos em diretórios temporários, sem gerar evidências públicas.
+
 ## Dicionário e convenções
 
 - `sessao`: S01–S05; `contexto`: CT01–CT06; `canal`: portal ou aplicativo; `rede`: wifi, 4g ou degradada; `veiculo`/`infracao`: códigos V1/V1-I1; `procedimento`: P1–P7; `metrica`: identificador da Fase 2.
