@@ -6,10 +6,15 @@ Portal de Serviços e do aplicativo em relação ao propósito definido na [Fase
 Ela também inclui a [ação de melhoria](fase4-melhoria.md), exigida na Entrega 2 e justificada
 pelas evidências coletadas.
 
-> **Situação em 16/11/2026.** O repositório não registra nenhuma medição executada. Os arquivos
+> **Situação em 19/11/2026.** O repositório não registra nenhuma medição executada. Os arquivos
 > em `dados/brutos/` são modelos vazios e a pasta `evidencias/fase4/` não tem evidências. Esta
 > página não publica resultados e será atualizada depois que as sessões forem executadas e
 > conferidas.
+
+O [acompanhamento da coleta](fase4-coleta.md) reúne as pendências da #46, a proposta de
+reagendamento e o cálculo reproduzível da #47. O prazo original da coleta (18/11) está vencido;
+a nova agenda depende de confirmação. A consolidação sem medições registra apenas estados
+inconclusivos/não aplicáveis, sem valores nem níveis de qualidade.
 
 ## 1. Atividades, responsáveis e prazos
 
