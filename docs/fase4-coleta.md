@@ -16,7 +16,7 @@ com veículos e a aplicação dos termos ainda precisam ser conferidas com os ti
 | Item do acompanhamento | Situação verificada agora | Próximo passo |
 |---|---|---|
 | B01 — titular, veículo e consentimento | Concordância de três integrantes comunicada por Hugo; vias individuais preparadas | Conferir aplicação do termo e veículo com infração acessível nos dois canais |
-| B02 — aparelhos | D03 tem caracterização parcial; computador candidato a D01 foi inspecionado | Confirmar Samsung 750XGK como D01; completar D02/D03 e instrumentos por sessão |
+| B02 — aparelhos | D03 tem caracterização parcial; computador Linux candidato a D01 foi inspecionado | Confirmar o computador inspecionado como D01; completar D02/D03 e instrumentos por sessão |
 | B03 — iPhone | PR #66 continua aberto; aparelho sob responsabilidade de Heitor | Heitor registra modelo, iOS e versão do app |
 | B05 — telas e rótulos | Seis capturas do portal disponíveis; levantamento autenticado dos apps sem registro | Titulares fazem login pessoalmente; executar e conferir as capturas dos apps |
 | B08 — Project 38 | Nova consulta de 20/11 ainda sem escopo `read:project` | Conta autorizada sincroniza as datas confirmadas |
