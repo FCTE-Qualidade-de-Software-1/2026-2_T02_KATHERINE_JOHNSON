@@ -15,7 +15,7 @@ com veículos e a aplicação dos termos ainda precisam ser conferidas com os ti
 
 | Item do acompanhamento | Situação verificada agora | Próximo passo |
 |---|---|---|
-| B01 — titular, veículo e consentimento | Concordância de três integrantes comunicada por Hugo; vias individuais preparadas | Conferir aplicação do termo e veículo com infração acessível nos dois canais |
+| B01 — titular, veículo e consentimento | Concordância de três integrantes comunicada pelo responsável pela coleta; vias individuais preparadas | Conferir aplicação do termo e veículo com infração acessível nos dois canais |
 | B02 — aparelhos | D03 tem caracterização parcial; computador Linux candidato a D01 foi inspecionado | Confirmar o computador inspecionado como D01; completar D02/D03 e instrumentos por sessão |
 | B03 — iPhone | PR #66 continua aberto; aparelho sob responsabilidade de Heitor | Heitor registra modelo, iOS e versão do app |
 | B05 — telas e rótulos | Seis capturas do portal disponíveis; levantamento autenticado dos apps sem registro | Titulares fazem login pessoalmente; executar e conferir as capturas dos apps |
@@ -27,9 +27,10 @@ com veículos e a aplicação dos termos ainda precisam ser conferidas com os ti
 *Quadro de situação — Declaração recebida, inspeção local e consultas ao GitHub em 20/11/2026.*
 
 O [registro de preparação do computador](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/preparacao-ambiente-2026-11-20.json)
-documenta sistema e versões dos navegadores, sem a configuração detalhada do equipamento. Nenhum navegador estava
-conectado à ferramenta e nenhum Android foi identificado por USB. Não foram coletadas senhas,
-capturadas telas de autenticação ou executadas operações sobre infrações.
+documenta sistema e versões dos navegadores, sem a configuração detalhada do equipamento. Na
+inspeção técnica inicial nenhum navegador estava conectado; depois a aba do portal foi localizada,
+mas a leitura da interface expirou. Nenhum Android foi identificado por USB. Não foram coletadas
+senhas, capturadas telas de autenticação ou executadas operações sobre infrações.
 
 ## S00 e S01: evidências e critérios de conclusão
 
@@ -37,6 +38,10 @@ capturadas telas de autenticação ou executadas operações sobre infrações.
 |---|---|---|---|
 | **S00 — preparação** | **Parcial** | Concordância informada para três integrantes, vias individuais preparadas, computador candidato a D01 inspecionado e D03 parcialmente caracterizado | Conferir aplicação dos termos, códigos da massa, disponibilidade dos titulares e inventário efetivo por sessão |
 | **S01 — piloto** | **Parcial, sem liberação registrada** | Seis capturas do percurso autenticado do portal; índice abaixo | Completar levantamento nos apps, validar instrumentos e redes, realizar conferência independente e registrar liberação por procedimento |
+
+O [roteiro de medições e capturas](../evidencias/fase4/roteiro-medicoes-e-capturas.md) consolida
+as repetições, os oito CSV, o estado factual da preparação e os nomes/destinos exatos das imagens
+que devem ser produzidas e revisadas antes de entrarem no repositório.
 
 **A revisão documental está concluída; as sessões continuam sem comprovação de conclusão.**
 As capturas demonstram telas acessadas no portal, mas não identificam por si só executor,
