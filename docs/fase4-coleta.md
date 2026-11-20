@@ -8,7 +8,7 @@ O script de cálculo e os testes estão preparados; isso não conclui a coleta.
 
 ## Atualização dos bloqueios em 20/11
 
-Hugo informou que três integrantes concordam em usar suas próprias contas na avaliação.
+Foi comunicada a concordância de três integrantes para usar suas próprias contas na avaliação.
 O [registro da concordância](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/consentimento.md)
 foi atualizado; as vias individuais e a declaração nominal permanecem privadas. A correspondência
 com veículos e a aplicação dos termos ainda precisam ser conferidas com os titulares.
@@ -20,14 +20,14 @@ com veículos e a aplicação dos termos ainda precisam ser conferidas com os ti
 | B03 — iPhone | PR #66 continua aberto; aparelho sob responsabilidade de Heitor | Heitor registra modelo, iOS e versão do app |
 | B05 — telas e rótulos | Seis capturas do portal disponíveis; levantamento autenticado dos apps sem registro | Titulares fazem login pessoalmente; executar e conferir as capturas dos apps |
 | B08 — Project 38 | Nova consulta de 20/11 ainda sem escopo `read:project` | Conta autorizada sincroniza as datas confirmadas |
-| S01 — piloto | Não há registro de liberação; nenhuma sessão foi executada nesta interação | Conectar navegador e Android, validar instrumentos e registrar execução/conferência |
+| S01 — piloto | Não há registro de liberação nem sessão executada; aba do portal localizada, mas a leitura da interface expirou | Restabelecer leitura suportada, conectar Android, validar instrumentos e só então registrar execução/conferência |
 | Script e branch da #47 | Entregues no PR #67 | Revisar o código e usar o cálculo após as medições |
 | Aprovação da entrega | Checks automáticos aprovados no commit a90f6fe; nenhuma revisão humana registrada no PR #67 | Daniel realiza a revisão designada; conferentes registram somente leituras que executarem |
 
 *Quadro de situação — Declaração recebida, inspeção local e consultas ao GitHub em 20/11/2026.*
 
 O [registro de preparação do computador](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/preparacao-ambiente-2026-11-20.json)
-documenta CPU, RAM utilizável, sistema e versões dos navegadores. Nenhum navegador estava
+documenta sistema e versões dos navegadores, sem a configuração detalhada do equipamento. Nenhum navegador estava
 conectado à ferramenta e nenhum Android foi identificado por USB. Não foram coletadas senhas,
 capturadas telas de autenticação ou executadas operações sobre infrações.
 

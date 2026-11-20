@@ -2,7 +2,6 @@
   "verificado_em": "2026-11-20T17:04:22.675416+00:00",
   "finalidade": "preparacao; ainda nao e inventario de sessao nem medicao do produto",
   "sistema": "Linux",
-  "kernel": "7.0.0-38-generic",
   "arquitetura": "x86_64",
   "ferramentas": {
     "adb": null,
@@ -12,10 +11,7 @@
     "chromium": null,
     "firefox": "/usr/bin/firefox"
   },
-  "sys_vendor": "SAMSUNG ELECTRONICS CO., LTD.",
-  "product_name": "750XGK",
-  "ram_gib": 14.79,
-  "cpu": "13th Gen Intel(R) Core(TM) i5-1335U",
+  "hardware_detalhado": "omitido do registro publico para reduzir identificabilidade do equipamento",
   "sistema_distribuicao": "Ubuntu 26.04 LTS",
   "chrome_versao": "157.0.8103.78",
   "firefox_versao": "158.0",
@@ -25,9 +21,6 @@
   "medicoes_do_produto_executadas": false,
   "liberacao_piloto": "nao_registrada",
   "fontes": [
-    "/sys/class/dmi/id/sys_vendor e product_name (sem números de série)",
-    "/proc/cpuinfo: model name",
-    "/proc/meminfo: MemTotal, convertido de KiB para GiB",
     "/etc/os-release",
     "google-chrome --version",
     "firefox --version (leitura fora do sandbox)",

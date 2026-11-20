@@ -1,8 +1,8 @@
 # Massa de dados da avaliação
 
-Responsável: Hugo Freitas Silva. Situação documental atualizada em 20/11/2026.
+Responsável: integrante designado. Situação documental atualizada em 20/11/2026.
 
-**Situação:** Hugo comunicou a concordância de três integrantes para usar as próprias contas
+**Situação:** Foi comunicada a concordância de três integrantes para usar as próprias contas
 na avaliação, conforme o [registro de consentimento](consentimento.md#8-concordância-comunicada-em-20112026).
 As declarações nominais e vias preparadas ficam privadas. A aplicação dos termos, o vínculo
 com os veículos e a disponibilidade de infrações nos dois canais ainda precisam ser conferidos.
