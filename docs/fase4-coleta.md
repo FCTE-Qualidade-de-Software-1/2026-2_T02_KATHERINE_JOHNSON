@@ -1,17 +1,64 @@
 # Fase 4 — Coleta, pendências e cálculo
 
-Situação conferida em **19/11/2026**. Responsáveis pela
+Situação documental conferida em **20/11/2026**. Responsáveis pela
 [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47):
 Hugo, Pedro Druck e Philipe; revisão da entrega por Daniel.
 O prazo planejado de 18/11 venceu e os oito instrumentos brutos continuam sem medições.
 O script de cálculo e os testes estão preparados; isso não conclui a coleta.
 
+## S00 e S01: evidências e critérios de conclusão
+
+| Etapa | Estado documental | Evidência disponível | Condição para concluir |
+|---|---|---|---|
+| **S00 — preparação** | **Parcial** | Caracterização parcial do Android D03 no [inventário planejado](fase3-ambiente.md); modelo de termo e cadastro preparados | Registrar consentimento aplicado, códigos da massa, disponibilidade do titular e inventário efetivo por sessão |
+| **S01 — piloto** | **Parcial, sem liberação registrada** | Seis capturas do percurso autenticado do portal; índice abaixo | Completar levantamento nos apps, validar instrumentos e redes, realizar conferência independente e registrar liberação por procedimento |
+
+**A revisão documental está concluída; as sessões continuam sem comprovação de conclusão.**
+As capturas demonstram telas acessadas no portal, mas não identificam por si só executor,
+registrador, horário da sessão ou consentimento aplicado. Também não demonstram as repetições
+exigidas para as métricas. A data desta revisão não é uma data de coleta.
+
+### Percurso do portal já documentado
+
+As imagens abaixo foram incorporadas no
+[commit aa9d3bb](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/commit/aa9d3bb38b0b905219004a005edffb9691daadee),
+de 15/11/2026, cujo autor no Git é Philipe Caetano. Essa informação identifica a inclusão dos
+arquivos, sem atribuir a execução da sessão a um integrante. Os nomes originais foram preservados;
+a descrição desta tabela segue o conteúdo visível de cada imagem.
+
+| Evidência | O que a captura permite conferir |
+|---|---|
+| [Menu de infrações](img/passoApassoConsulta/dropDownInfrações.png) | Acesso à opção de histórico por veículo |
+| [Lista de veículos](img/passoApassoConsulta/pageConsultaDeInfrções.png) | Seleção de veículo na área autenticada |
+| [Filtro de período](img/passoApassoConsulta/pageSeleçãoDeUmDosVeículos.png) | Campos de início/fim e ação Consultar |
+| [Resultado da consulta](img/passoApassoConsulta/pageConsultaDeInfraçõesDefinindoData.png) | Lista com infração e acesso ao detalhamento |
+| [Detalhamento](img/passoApassoConsulta/pageDetalhesDaInfração.png) | Rótulos e campos exibidos para a infração consultada |
+| [Limite temporal](img/passoApassoConsulta/pageSeleçãoDeUmDosVeículosLimite5Anos.png) | Mensagem de erro para período anterior ao limite informado |
+
+*Quadro de evidências — Inspeção documental das seis imagens versionadas, em 20/11/2026.*
+
+### O que falta registrar para encerrar as sessões
+
+| Registro | Quem providencia | Evidência mínima |
+|---|---|---|
+| Consentimento e massa de dados | Hugo | Código do veículo, data do consentimento e conferência da via privada; assinatura e identidade permanecem privadas |
+| Inventário efetivo | Hugo (D01–D03); Heitor (D04) | Aparelhos, versões instaladas e instrumentos usados em cada sessão/contexto/rede |
+| Levantamento dos aplicativos | Hugo e Philipe (Android); Heitor (iOS) | Lista de veículos, lista de infrações e detalhes, com capturas revisadas e correspondência com a massa |
+| Validação técnica do piloto | Philipe, com os executores | Rede comum, perfis nos dois sentidos, contador de volume e método de marcação de tempo verificados |
+| Conferência e liberação | Hugo e Philipe registram; conferente independente identificado | Registro de sessão preenchido, duas leituras e decisão por procedimento: liberado, parcial ou bloqueado |
+
+Usar o [modelo de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md)
+para registrar fatos observados. A ausência de registro não determina se a atividade ocorreu
+fora do repositório; até sua comprovação, o critério permanece pendente. O campo de revisor e a
+liberação devem ser preenchidos somente depois da conferência efetiva.
+
 ## 1. Pendências herdadas da Fase 3
 
 O [comentário de acompanhamento da #46](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46#issuecomment-6922711169)
 identifica sete critérios ainda parciais ou pendentes. Esta página reúne seu acompanhamento
-para a #47. Novas datas abaixo são **propostas**, sujeitas à disponibilidade do titular e à
+para a #47. As datas abaixo preservam a **proposta de 19/11**, sujeita à disponibilidade do titular e à
 confirmação de Hugo e Philipe com Pedro Henrique; não são sessões realizadas ou acordos registrados.
+Na conferência de 20/11, não foi localizado registro de confirmação dessa agenda.
 
 | Critério | Responsável | Situação verificada | Próxima ação / evidência de conclusão | Data proposta |
 |---|---|---|---|---|

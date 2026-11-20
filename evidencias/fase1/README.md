@@ -32,11 +32,17 @@ Nenhum print entra no repositório sem passar por estas regras:
 | Página da loja | — | feito | feito |
 | Tela inicial (sem login) | feito | feito | não realizado (sem iPhone) |
 | Login (campos vazios) | feito | feito | não realizado (sem iPhone) |
-| Lista de veículos | pendente | pendente | pendente |
-| Lista de infrações | pendente | pendente | pendente |
-| Detalhes de uma infração | pendente | pendente | pendente |
+| Lista de veículos | [captura disponível](../../docs/img/passoApassoConsulta/pageConsultaDeInfrções.png) | pendente | pendente |
+| Lista de infrações | [captura disponível](../../docs/img/passoApassoConsulta/pageConsultaDeInfraçõesDefinindoData.png) | pendente | pendente |
+| Detalhes de uma infração | [captura disponível](../../docs/img/passoApassoConsulta/pageDetalhesDaInfração.png) | pendente | pendente |
 
 As telas pendentes exigem login do proprietário com veículo real. O procedimento está em `roteiro-levantamento.md`.
+
+**Conferência documental em 20/11/2026:** as capturas do portal já estavam em
+`docs/img/passoApassoConsulta/`, incorporadas pelo commit `aa9d3bb` em 15/11. A tabela acima
+reconhece sua existência; não certifica consentimento, autoria da execução, revisão independente
+ou conclusão do piloto. O [acompanhamento de S00/S01](../../docs/fase4-coleta.md) reúne o índice
+das seis capturas, seus limites e os registros necessários para concluir as sessões.
 
 **Limitação: aplicativo no iOS.** Nenhum integrante da equipe possui iPhone, por isso as telas do aplicativo no iOS
 não foram capturadas; do iOS há apenas a página da App Store. Para a Fase 3, a equipe tentará um aparelho emprestado;

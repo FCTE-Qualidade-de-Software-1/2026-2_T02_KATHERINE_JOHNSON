@@ -1,6 +1,9 @@
 # Evidências da Fase 4
 
-Pasta preparada para receber somente evidências anonimizadas. Nenhuma sessão foi executada nesta entrega documental.
+Pasta preparada para receber somente evidências anonimizadas. Em 20/11/2026, não há registro
+preenchido de conclusão de S00/S01 nesta pasta. As capturas preexistentes do portal estão
+indexadas no [acompanhamento da coleta](../../docs/fase4-coleta.md); constituem evidência parcial
+do levantamento autenticado, sem comprovar a liberação do piloto.
 
 Copiar o [modelo de sessão](modelo-sessao.md) para registrar a liberação do piloto, os blocos,
 as duas leituras da conferência e os desvios. Preencher somente após execução, sem transformar
