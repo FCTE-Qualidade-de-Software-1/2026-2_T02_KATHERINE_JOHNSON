@@ -6,6 +6,15 @@ Este plano complementa os [procedimentos P1–P7](fase3-metodo.md). **Os equipam
 
 ## 1. Inventário e contextos
 
+**Verificação de preparação em 20/11:** o computador acessível nesta execução é um Samsung
+750XGK, com Intel Core i5-1335U, 14,79 GiB de RAM utilizável, Ubuntu 26.04 LTS, Chrome
+157.0.8103.78 e Firefox 158.0. Ele é candidato a D01, ainda sujeito à confirmação do responsável.
+O [registro técnico](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/preparacao-ambiente-2026-11-20.json)
+identifica as fontes verificadas, sem números de série ou identificadores de rede.
+Não houve navegador conectado à ferramenta de coleta nem Android identificado na leitura USB;
+`adb` e `ffmpeg` não foram encontrados no PATH. Essa inspeção prepara o ambiente, mas não
+registra uma sessão de avaliação nem preenche `ambientes.csv` com uma sessão presumida.
+
 | ID | Canal e ambiente planejado | Rede / procedimento | Confirmação antes do piloto |
 |---|---|---|---|
 | CT01 | Portal; computador D01; Chrome | Wi-Fi: P1–P6; Wi-Fi, 4G e degradada: P7 | Modelo, processador, RAM, SO/build e versão do Chrome |

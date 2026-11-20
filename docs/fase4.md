@@ -6,8 +6,9 @@ Portal de Serviços e do aplicativo em relação ao propósito definido na [Fase
 Ela também inclui a [ação de melhoria](fase4-melhoria.md), exigida na Entrega 2 e justificada
 pelas evidências coletadas.
 
-> **Situação em 19/11/2026.** O repositório não registra nenhuma medição executada. Os arquivos
-> em `dados/brutos/` são modelos vazios e a pasta `evidencias/fase4/` não tem evidências. Esta
+> **Situação em 20/11/2026.** O repositório não registra nenhuma medição executada. Os arquivos
+> em `dados/brutos/` são modelos vazios. A pasta `evidencias/fase4/` registra a preparação do
+> ambiente em 20/11, mas ainda não contém evidências de medições do produto. Esta
 > página não publica resultados e será atualizada depois que as sessões forem executadas e
 > conferidas.
 

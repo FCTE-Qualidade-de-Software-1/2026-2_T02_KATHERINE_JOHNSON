@@ -5,6 +5,10 @@ preenchido de conclusão de S00/S01 nesta pasta. As capturas preexistentes do po
 indexadas no [acompanhamento da coleta](../../docs/fase4-coleta.md); constituem evidência parcial
 do levantamento autenticado, sem comprovar a liberação do piloto.
 
+O arquivo [preparacao-ambiente-2026-11-20.json](preparacao-ambiente-2026-11-20.json) registra
+uma inspeção real do computador acessível e a disponibilidade das ferramentas. É evidência de
+preparação: não contém medição do Detran, não atribui uma sessão ao aparelho e não libera S01.
+
 Copiar o [modelo de sessão](modelo-sessao.md) para registrar a liberação do piloto, os blocos,
 as duas leituras da conferência e os desvios. Preencher somente após execução, sem transformar
 o modelo em evidência de uma sessão ainda não realizada.

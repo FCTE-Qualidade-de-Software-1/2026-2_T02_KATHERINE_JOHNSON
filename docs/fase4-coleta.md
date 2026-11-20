@@ -6,11 +6,36 @@ Hugo, Pedro Druck e Philipe; revisão da entrega por Daniel.
 O prazo planejado de 18/11 venceu e os oito instrumentos brutos continuam sem medições.
 O script de cálculo e os testes estão preparados; isso não conclui a coleta.
 
+## Atualização dos bloqueios em 20/11
+
+Hugo informou que três integrantes concordam em usar suas próprias contas na avaliação.
+O [registro da concordância](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/consentimento.md)
+foi atualizado; as vias individuais e a declaração nominal permanecem privadas. A correspondência
+com veículos e a aplicação dos termos ainda precisam ser conferidas com os titulares.
+
+| Item do acompanhamento | Situação verificada agora | Próximo passo |
+|---|---|---|
+| B01 — titular, veículo e consentimento | Concordância de três integrantes comunicada por Hugo; vias individuais preparadas | Conferir aplicação do termo e veículo com infração acessível nos dois canais |
+| B02 — aparelhos | D03 tem caracterização parcial; computador candidato a D01 foi inspecionado | Confirmar Samsung 750XGK como D01; completar D02/D03 e instrumentos por sessão |
+| B03 — iPhone | PR #66 continua aberto; aparelho sob responsabilidade de Heitor | Heitor registra modelo, iOS e versão do app |
+| B05 — telas e rótulos | Seis capturas do portal disponíveis; levantamento autenticado dos apps sem registro | Titulares fazem login pessoalmente; executar e conferir as capturas dos apps |
+| B08 — Project 38 | Nova consulta de 20/11 ainda sem escopo `read:project` | Conta autorizada sincroniza as datas confirmadas |
+| S01 — piloto | Não há registro de liberação; nenhuma sessão foi executada nesta interação | Conectar navegador e Android, validar instrumentos e registrar execução/conferência |
+| Script e branch da #47 | Entregues no PR #67 | Revisar o código e usar o cálculo após as medições |
+| Aprovação da entrega | Checks automáticos aprovados no commit a90f6fe; nenhuma revisão humana registrada no PR #67 | Daniel realiza a revisão designada; conferentes registram somente leituras que executarem |
+
+*Quadro de situação — Declaração recebida, inspeção local e consultas ao GitHub em 20/11/2026.*
+
+O [registro de preparação do computador](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/preparacao-ambiente-2026-11-20.json)
+documenta CPU, RAM utilizável, sistema e versões dos navegadores. Nenhum navegador estava
+conectado à ferramenta e nenhum Android foi identificado por USB. Não foram coletadas senhas,
+capturadas telas de autenticação ou executadas operações sobre infrações.
+
 ## S00 e S01: evidências e critérios de conclusão
 
 | Etapa | Estado documental | Evidência disponível | Condição para concluir |
 |---|---|---|---|
-| **S00 — preparação** | **Parcial** | Caracterização parcial do Android D03 no [inventário planejado](fase3-ambiente.md); modelo de termo e cadastro preparados | Registrar consentimento aplicado, códigos da massa, disponibilidade do titular e inventário efetivo por sessão |
+| **S00 — preparação** | **Parcial** | Concordância informada para três integrantes, vias individuais preparadas, computador candidato a D01 inspecionado e D03 parcialmente caracterizado | Conferir aplicação dos termos, códigos da massa, disponibilidade dos titulares e inventário efetivo por sessão |
 | **S01 — piloto** | **Parcial, sem liberação registrada** | Seis capturas do percurso autenticado do portal; índice abaixo | Completar levantamento nos apps, validar instrumentos e redes, realizar conferência independente e registrar liberação por procedimento |
 
 **A revisão documental está concluída; as sessões continuam sem comprovação de conclusão.**
@@ -63,12 +88,12 @@ Na conferência de 20/11, não foi localizado registro de confirmação dessa ag
 | Critério | Responsável | Situação verificada | Próxima ação / evidência de conclusão | Data proposta |
 |---|---|---|---|---|
 | Ambiente detalhado (B02) | Hugo | Parcial: modelo do Android intermediário registrado; demais versões pendentes | Preencher inventário por sessão/contexto/rede, incluindo versão instalada do app | 19/11 |
-| Consentimento aplicado (B01) | Hugo | Sem comprovação registrada | Titular lê e assina o termo; guardar via privada, publicar apenas código e data | 19/11, antes do piloto |
+| Consentimento aplicado (B01) | Hugo | Concordância informada em 20/11; aplicação dos termos ainda não conferida | Titular lê e assina o termo; guardar via privada, publicar apenas código e data | 19/11, antes do piloto (proposta histórica) |
 | Sessão com veículo real (S01/S02) | Hugo; Philipe registra; Pedro Druck confere | Sem registro de execução | Confirmar infração acessível nos dois canais; executar piloto e registrar sua liberação | 19/11, após consentimento |
 | Prints autenticados (B05) | Hugo e Philipe no Android; Heitor no iOS | Portal tem seis capturas; capturas dos apps pendentes | Lista de veículos, lista de infrações e detalhes; revisão das tarjas por outro integrante | 19–20/11 |
 | Rótulos, campos e passos (B05) | Hugo e Philipe | Confirmação com veículo real pendente | Registrar roteiro e contagens; atualizar Fase 1 apenas com evidência | 19–20/11 |
 | Registro do iPhone (B03) | Heitor | Aparelho de Heitor; modelo/iOS/app ainda não registrados | Inventário D04 e execução de CT06; declarar não avaliado se não executado | 20/11 |
-| Datas das issues no Project (B08) | Hugo | Consulta de 19/11 bloqueada por falta de `read:project` | Conferir e sincronizar #47/#48 com conta autorizada; registrar data e link do quadro | Até 20/11 |
+| Datas das issues no Project (B08) | Hugo | Consultas de 19 e 20/11 bloqueadas por falta de `read:project` | Conferir e sincronizar #47/#48 com conta autorizada; registrar data e link do quadro | Até 20/11 |
 
 *Tabela 1 — Acompanhamento dos critérios de execução. Fonte: #46, #47 e consulta ao Project em 19/11.*
 

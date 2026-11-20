@@ -1,8 +1,14 @@
 # Massa de dados da avaliação
 
-Responsável: Hugo Freitas Silva. Plano atualizado em 13/11/2026.
+Responsável: Hugo Freitas Silva. Situação documental atualizada em 20/11/2026.
 
-**Situação:** não há comprovação de consentimentos, veículos recrutados ou sessão autenticada no repositório. Os códigos abaixo são reservas de identificação, não dados observados.
+**Situação:** Hugo comunicou a concordância de três integrantes para usar as próprias contas
+na avaliação, conforme o [registro de consentimento](consentimento.md#8-concordância-comunicada-em-20112026).
+As declarações nominais e vias preparadas ficam privadas. A aplicação dos termos, o vínculo
+com os veículos e a disponibilidade de infrações nos dois canais ainda precisam ser conferidos.
+Os códigos abaixo continuam como reservas, sem atribuição automática aos participantes.
+Há capturas preexistentes do portal, indexadas no [acompanhamento da coleta](../docs/fase4-coleta.md),
+mas elas não estabelecem correspondência com os novos participantes nem comprovam conclusão de S01.
 
 ## 1. Seleção e justificativa
 
@@ -49,6 +55,7 @@ Se houver retirada do consentimento, interromper o uso, retirar registros/evidê
 
 ## 4. Checklist de recrutamento e preparação
 
+- [x] Registrar o recebimento, em 20/11, da concordância informada para três integrantes; vias individuais preparadas e guardadas privadamente.
 - [ ] Hugo confirma um titular e agenda S00/S01 até 14/11/2026.
 - [ ] Apresentar o termo, disponibilizar uma cópia ao titular e colher assinatura antes da captura.
 - [ ] Registrar data do consentimento e códigos na tabela, sem assinatura ou identidade.
