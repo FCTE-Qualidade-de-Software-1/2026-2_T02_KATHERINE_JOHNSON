@@ -12,8 +12,11 @@ primeiro relógio consultado durante a inspeção e anterior à revisão atual, 
 em 20/11/2026; portanto, a cronologia é compatível com uma sessão ocorrida mais tarde no mesmo
 dia. A tabela de dez repetições enviada com o PDF é tratada como atualização da medição. O PDF
 anterior ainda descreve tempo e volume como não medidos; a tabela atualiza esses campos, mas não
-informa método de marcação do tempo, instrumento/unidade-base do volume nem repetição de
-aquecimento. Esses limites ficam explícitos e impedem validar a série como resultado oficial.
+informa o procedimento de início/fim, unidade-base/instrumento do volume nem repetição de
+aquecimento. O responsável informou depois que usou um cronômetro digital para os tempos. Isso
+identifica o instrumento, mas não fornece marcações independentes de início/fim nem substitui a
+repetição de aquecimento; o instrumento do volume continua sem identificação. Esses limites ficam
+explícitos e impedem validar a série como resultado oficial.
 
 S01 é piloto e não entra nos resultados oficiais da Fase 4. Este registro preserva o que as fontes
 relatam sem transformar o piloto em resultado oficial.
@@ -61,9 +64,10 @@ extraída nem incluída.
 
 O PDF informa que, quando foi gerado, não havia aquecimento nem tentativas cronometradas e que a
 interface não expunha o total Transferred. A tabela de dez repetições fornecida junto ao PDF
-atualiza esses valores. A tabela identifica as repetições, mas não traz timestamps/quadros, método
-de timing, instrumento de volume, unidade-base nem aquecimento separado. As estatísticas abaixo
-são cálculo descritivo dos números recebidos, não validação independente dos instrumentos.
+atualiza os valores. O responsável esclareceu que usou cronômetro digital para os tempos; não foram
+fornecidos registros independentes de início/fim, repetição de aquecimento ou instrumento/unidade-
+base para o volume. As estatísticas abaixo são cálculo descritivo dos números recebidos, não
+validação independente do procedimento.
 
 | Repetição | Abrir lista (ms) | Abrir detalhe (ms) | Transferido (kB) |
 |---:|---:|---:|---:|
@@ -82,9 +86,10 @@ são cálculo descritivo dos números recebidos, não validação independente d
 | **P90 (posto mais próximo)** | **913** | **521** | **38,7** |
 
 Não atribuir nível de qualidade nem incorporar esses valores ao cálculo automatizado como
-resultado oficial. Para isso, a sessão precisa ter inventário correspondente, aquecimento
-registrado, método de timing reproduzível e unidade/instrumento de transferência confirmados.
-Como os valores estão associados ao piloto S01, eles também permanecem fora do cálculo oficial.
+resultado oficial. Para isso, seria necessária uma sessão oficial com inventário correspondente,
+aquecimento registrado, procedimento de timing reproduzível, conferência independente e
+instrumento/unidade-base de transferência confirmados. Como os valores estão associados ao piloto
+S01, eles permanecem fora do cálculo oficial mesmo com o instrumento de timing agora identificado.
 
 ## Registros oficiais
 

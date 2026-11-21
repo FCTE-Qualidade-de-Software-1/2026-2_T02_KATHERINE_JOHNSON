@@ -44,6 +44,11 @@ O [roteiro de medições e capturas](../evidencias/fase4/roteiro-medicoes-e-capt
 as repetições, os oito CSV, o estado factual da preparação e os nomes/destinos exatos das imagens
 que devem ser produzidas e revisadas antes de entrarem no repositório.
 
+O responsável informou que os dez tempos foram medidos com cronômetro digital. Essa informação
+foi acrescentada ao relatório S01; ela identifica o instrumento, mas não muda o status de piloto
+nem comprova aquecimento ou conferência independente. A origem e a unidade do volume também
+precisam ser identificadas antes de seu uso oficial.
+
 O [relatório recebido da sessão S01 no portal para PC](../evidencias/fase4/relatorio-s01-portal-2026-11-20.md)
 registra a contagem de campos, três percursos, três acessos ao detalhe, duas capturas anonimizadas
 e os dez valores de tempo/volume enviados na tabela. Esses dados são do piloto, não entram no
