@@ -3,6 +3,11 @@
 Este registro separa o que foi comunicado, observado e ainda não executado. Não é sessão de
 coleta nem evidência de medição.
 
+Foi redigido antes do recebimento do relatório S01. A transcrição posterior, com as observações
+que constam no PDF e as limitações de proveniência, está em
+[relatorio-s01-portal-2026-11-20.md](relatorio-s01-portal-2026-11-20.md); ela complementa este
+instantâneo sem alterar o que foi observado diretamente durante esta preparação.
+
 | Item | Registro factual |
 |---|---|
 | Consentimento | Foi comunicada concordância de três integrantes para uso das próprias contas. Não foi verificada nesta interação a apresentação/leitura dos termos, assinatura, vínculo com veículo ou disponibilidade de infração elegível. As vias ficam privadas. |

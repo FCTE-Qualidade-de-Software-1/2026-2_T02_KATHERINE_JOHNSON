@@ -3,8 +3,9 @@
 Situação documental conferida em **20/11/2026**. Responsáveis pela
 [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47):
 Hugo, Pedro Druck e Philipe; revisão da entrega por Daniel.
-O prazo planejado de 18/11 venceu e os oito instrumentos brutos continuam sem medições.
-O script de cálculo e os testes estão preparados; isso não conclui a coleta.
+O prazo planejado de 18/11 venceu. O relatório recebido registra observações do piloto no portal
+e dez valores informados para tempo/transferência; S01 não entra nos resultados oficiais. O script
+de cálculo e os instrumentos estão preparados; isso não conclui a coleta.
 
 ## Atualização dos bloqueios em 20/11
 
@@ -37,11 +38,18 @@ senhas, capturadas telas de autenticação ou executadas operações sobre infra
 | Etapa | Estado documental | Evidência disponível | Condição para concluir |
 |---|---|---|---|
 | **S00 — preparação** | **Parcial** | Concordância informada para três integrantes, vias individuais preparadas, computador candidato a D01 inspecionado e D03 parcialmente caracterizado | Conferir aplicação dos termos, códigos da massa, disponibilidade dos titulares e inventário efetivo por sessão |
-| **S01 — piloto** | **Parcial, sem liberação registrada** | Seis capturas do percurso autenticado do portal; índice abaixo | Completar levantamento nos apps, validar instrumentos e redes, realizar conferência independente e registrar liberação por procedimento |
+| **S01 — piloto** | **Parcial, sem liberação registrada** | Relatório do portal registra presença de campos, três percursos, três acessos ao detalhe e duas capturas anonimizadas; dez valores de tempo/volume foram informados em tabela separada | Conferir instrumento, aquecimento e evidências; completar captura da lista de infrações e registrar liberação por procedimento |
 
 O [roteiro de medições e capturas](../evidencias/fase4/roteiro-medicoes-e-capturas.md) consolida
 as repetições, os oito CSV, o estado factual da preparação e os nomes/destinos exatos das imagens
 que devem ser produzidas e revisadas antes de entrarem no repositório.
+
+O [relatório recebido da sessão S01 no portal para PC](../evidencias/fase4/relatorio-s01-portal-2026-11-20.md)
+registra a contagem de campos, três percursos, três acessos ao detalhe, duas capturas anonimizadas
+e os dez valores de tempo/volume enviados na tabela. Esses dados são do piloto, não entram no
+cálculo oficial e ainda não têm evidência suficiente do aquecimento/método de timing/instrumento
+de transferência para validação. A cronologia de 21:38–21:41 BRT é compatível com a revisão feita
+às 21:54 BRT em 20/11.
 
 **A revisão documental está concluída; as sessões continuam sem comprovação de conclusão.**
 As capturas demonstram telas acessadas no portal, mas não identificam por si só executor,
