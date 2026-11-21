@@ -29,7 +29,9 @@ A participação é voluntária. Você pode retirar o consentimento a qualquer m
 
 ## 5. Responsável
 
-Hugo Freitas Silva — responsável pela massa de dados. Contato: videogame041@gmail.com.
+Integrante designado como responsável pela massa de dados. O canal de contato é informado
+diretamente ao participante na via privada do termo; dados de contato não são publicados no
+repositório.
 
 ## 6. Autorização
 
@@ -53,3 +55,16 @@ desistência, esclarece dúvidas e oferece uma cópia do termo ao titular. Após
 confere a via privada e registra somente código e data na massa de dados. No início de cada
 sessão confirma a continuidade da autorização. Sem concordância ou com retirada, interrompe
 a coleta e registra o bloqueio sem identificar a pessoa nos documentos públicos.
+
+## 8. Concordância comunicada em 20/11/2026
+
+Foi comunicada a concordância de três integrantes para uso das próprias contas na avaliação.
+A declaração nominal foi guardada em armazenamento privado, junto a três vias individuais
+preparadas a partir deste modelo. As vias mantêm assinatura, data de aplicação e código de
+veículo em branco até o preenchimento pelos titulares.
+
+Este registro comprova o recebimento da informação de concordância, sem atestar assinatura,
+leitura integral do termo por terceiros ou disponibilidade de veículo com infração. Antes da
+sessão, confirmar com cada titular o uso descrito, seu vínculo com o veículo e a continuidade
+da autorização. A aplicação prevista na Seção 7 permanece a conferir. Não publicar as vias
+nominais, nem reproduzir assinaturas em nome dos participantes.

@@ -1,0 +1,30 @@
+{
+  "commit_base": "f925c1d4011e3c4650cde3fcf958f1d8efc5a0df",
+  "sha256": {
+    "dados/brutos/ambientes.csv": "e758e40ed7a57b17877ea768a0e2c4dfd1d03653d7accde7e8b9efa18548b8a5",
+    "dados/brutos/campos-por-infracao.csv": "c3564d29dfc71bfc9d3f8714fd3e9a2a8b8216dbc37b9dd29e0c882fbb2af98f",
+    "dados/brutos/comparacao-canais.csv": "f953c345ddad28f7df661df7e32516bd6ec56db1079794abce43a7904cf2dcce",
+    "dados/brutos/desvios.csv": "9ac24c211f87723b30d01c2d7afb897f23108c03de883b39dc0b55303ba7de7a",
+    "dados/brutos/fluxo.csv": "45f95bb7d016cf0fb801d0ee79e401e30cc77406972aea35fc517308694d111d",
+    "dados/brutos/tempos.csv": "93ef87971e900049ac75db74d89a761ef1af92c3c64f23fa8e265700dcb2f3d8",
+    "dados/brutos/tentativas.csv": "a10237226fc9635e27a306d0a1a4c0a2926b0a710dec94c6b9bcfc5956ed6514",
+    "dados/brutos/volume.csv": "914b64e6dab0838030433896bbd745c05ff7cfd23e1c416aff39dc3b1bd3b8cb",
+    "dados/scripts/calcular.py": "e1cbdd2c597ebcea7ed4a75b135c8fb5c855ade9001288bb64bb58270551923a"
+  },
+  "linhas_brutas": {
+    "ambientes": 0,
+    "campos-por-infracao": 0,
+    "comparacao-canais": 0,
+    "desvios": 0,
+    "fluxo": 0,
+    "tempos": 0,
+    "tentativas": 0,
+    "volume": 0
+  },
+  "resultados_calculados": 0,
+  "estados": {
+    "inconclusivo": 25,
+    "nao_aplicavel": 1
+  },
+  "observacao": "Hashes identificam os arquivos efetivamente lidos, inclusive alterações ainda não commitadas. Validação estrutural não atesta consentimento, anonimização ou revisão humana."
+}
