@@ -4,7 +4,14 @@ Este roteiro deixa a coleta pronta para execução e conferência. Os CSV perman
 medição até haver observações reais. Não preencher com zero, estimativa, simulação ou valor de
 exemplo. `não executado` e `não avaliado` são estados documentais, não resultados de métrica.
 
-## Estado observado em 20/11/2026
+## Estado da preparação e atualização posterior
+
+Os itens abaixo descrevem a preparação feita antes do recebimento do relatório de sessão. As
+observações posteriores de S01 e as dez repetições de tempo/transferência estão transcritas em
+[relatorio-s01-portal-2026-11-20.md](relatorio-s01-portal-2026-11-20.md); S01 continua sendo piloto,
+fora dos resultados oficiais.
+
+### Preparação anterior ao relatório
 
 - S00: foi comunicada a concordância de três integrantes para usar as próprias contas. As vias
   individuais foram preparadas, mas não há comprovação de apresentação/leitura e assinatura dos
@@ -16,8 +23,9 @@ exemplo. `não executado` e `não avaliado` são estados documentais, não resul
 - Aparelhos: o computador Linux de 64 bits foi inspecionado como candidato a D01, sujeito a
   confirmação. Não foi identificado Android via USB nesta execução. O detalhamento de hardware
   foi omitido dos registros públicos para reduzir a identificabilidade do equipamento.
-- Medições: não executadas. Não há observação real de P1–P7 nesta interação. Nenhuma sessão foi
-  liberada e nenhum CSV de medição foi preenchido.
+- Medições nesta interação de preparação: não executadas. Nenhuma sessão foi liberada pelo agente
+  do navegador. O relatório posterior documenta observações comunicadas pelo executor, sem alterar
+  a limitação desta preparação nem promover S01 a resultado oficial.
 
 ## Valores que cada procedimento exige
 
