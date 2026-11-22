@@ -1,1 +1,7 @@
 sessao,bloco,contexto,canal,veiculo,repeticao,passos,transicoes,rolagens,sequencia,data_hora,evidencia,revisor
+S02,B01,CT01,portal,V2,1,4,3,0,"Infração > Histórico de infrações por veículo > Selecionar > Consultar",2026-11-22T17:17:32-03:00,evidencias/fase4/S02-registro-2026-11-22.md,
+S02,B01,CT01,portal,V2,2,4,3,0,"Infração > Histórico de infrações por veículo > Selecionar > Consultar",2026-11-22T17:17:52-03:00,evidencias/fase4/S02-registro-2026-11-22.md,
+S02,B01,CT01,portal,V2,3,4,3,0,"Infração > Histórico de infrações por veículo > Selecionar > Consultar",2026-11-22T17:18:13-03:00,evidencias/fase4/S02-registro-2026-11-22.md,
+S02,B02,CT05,aplicativo,V2,1,6,5,2,"Infrações > Histórico de infrações por veículo > veículo > Situação da Multa: Selecionar > Todas > Consultar",2026-11-22T17:10:10-03:00,evidencias/fase4/S02-registro-2026-11-22.md,
+S02,B02,CT05,aplicativo,V2,2,6,5,2,"Infrações > Histórico de infrações por veículo > veículo > Situação da Multa: Selecionar > Todas > Consultar",2026-11-22T17:11:17-03:00,evidencias/fase4/S02-registro-2026-11-22.md,
+S02,B02,CT05,aplicativo,V2,3,6,5,2,"Infrações > Histórico de infrações por veículo > veículo > Situação da Multa: Selecionar > Todas > Consultar",2026-11-22T17:12:24-03:00,evidencias/fase4/S02-registro-2026-11-22.md,

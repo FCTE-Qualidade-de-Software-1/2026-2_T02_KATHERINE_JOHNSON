@@ -5,6 +5,12 @@ A branch `feat/pedro-s03-fase4` registra tentativas P6 em CT01/CT03/CT05 de 21/1
 conferência independente; a [análise](fase4-analise.md) referencia a fonte imutável e suas
 limitações. Os quadros datados de 20/11 abaixo preservam a situação daquela revisão.
 
+**Situação em 22/11, 17h40:** com o veículo V2, a S05 tem P6 concluído em CT05, CT02 e CT01 (3/3
+cada) e a S02 tem P1, P2 e P3 registrados nos contextos de referência; P4 e P5 não foram executados.
+Todas as linhas aguardam a conferência independente. O resumo do que foi feito, do que falta e dos
+pontos de atenção está em
+[situação da coleta em 22/11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/feat/pedro-s03-fase4/gestao/situacao-coleta-2026-11-22.md).
+
 Situação documental conferida em **20/11/2026**. Responsáveis pela
 [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47):
 Hugo, Pedro Druck e Philipe; revisão da entrega por Daniel.
