@@ -23,7 +23,7 @@ Cada titular precisa aceitar o [termo de consentimento](consentimento.md), fazer
 | Código reservado | Tipo de veículo | Nº de infrações selecionadas | Situações | Outro órgão? | Velocidade? | Consentimento (data) | Sessão |
 |---|---|---|---|---|---|---|---|
 | V1 | A confirmar | A confirmar | A confirmar | A confirmar | A confirmar | Não confirmado | S01, a agendar |
-| V2 | A confirmar | A confirmar | A confirmar | A confirmar | A confirmar | Não confirmado | A agendar |
+| V2 | Automóvel | 1 (V2-I1) | A ser lançada; multa com autuação notificada | Sim | Sim | Confirmado pelo executor em 22/11; data e via privada a conferir por Hugo | S01 (piloto, 22/11) |
 | V3 | A confirmar | A confirmar | A confirmar | A confirmar | A confirmar | Não confirmado | A agendar |
 
 *Tabela 1 — Cadastro a preencher após recrutamento. Fonte: plano de avaliação.*
