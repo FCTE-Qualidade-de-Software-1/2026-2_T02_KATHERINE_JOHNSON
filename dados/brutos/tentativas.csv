@@ -13,3 +13,6 @@ S03,B02,CT05,aplicativo,wifi,V1,P6,3,nao,falha,sim,"App exibiu ""Ocorreu um erro
 S03,B03,CT03,portal,wifi,V1,P6,1,nao,concluida,sim,,2026-11-21T23:10:15-03:00,evidencias/fase4/capturas/S03/S03-B03-portal-P6-V1-1-2026-11-21.png,
 S03,B03,CT03,portal,wifi,V1,P6,2,nao,concluida,sim,,2026-11-21T23:10:35-03:00,evidencias/fase4/capturas/S03/S03-B03-portal-P6-V1-2-2026-11-21.png,
 S03,B03,CT03,portal,wifi,V1,P6,3,nao,sessao_expirada,sim,Sessão do portal expirou durante a tentativa (cerca de 12 min após o login); página voltou à tela inicial deslogada,2026-11-21T23:10:54-03:00,evidencias/fase4/capturas/S03/S03-B03-portal-P6-V1-3-2026-11-21.png,
+S05,B01,CT05,aplicativo,wifi,V2,P6,1,nao,concluida,sim,,2026-11-22T11:26:20-03:00,evidencias/fase4/capturas/S05/S05-B01-aplicativo-P6-V2-1-2026-11-22.png,
+S05,B01,CT05,aplicativo,wifi,V2,P6,2,nao,concluida,sim,,2026-11-22T11:27:31-03:00,evidencias/fase4/capturas/S05/S05-B01-aplicativo-P6-V2-2-2026-11-22.png,
+S05,B01,CT05,aplicativo,wifi,V2,P6,3,nao,concluida,sim,,2026-11-22T11:28:42-03:00,evidencias/fase4/capturas/S05/S05-B01-aplicativo-P6-V2-3-2026-11-22.png,

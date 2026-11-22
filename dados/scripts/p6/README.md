@@ -13,6 +13,7 @@ feito pelo titular; os scripts não digitam credenciais nem tocam em "Sair".
 | `levantamento.js` | Conta as infrações do veículo em janelas de 1 ano nos últimos 5 anos, sem guardar valores |
 | `app.py` | Lê a árvore de interface do app pelo `adb` (uiautomator) e toca nos elementos |
 | `tentativa_app.py` | Uma tentativa no app: Infrações → Histórico de infrações por veículo → lista; reconhece a mensagem de erro do app |
+| `tentativa_app_detalhe.py` | Uma tentativa no app 2.7.0 até o detalhe: rola a tela inicial, Infrações → Histórico de infrações por veículo → veículo → Situação "Todas" → Consultar → infração da data informada → detalhe; fecha o detalhe pelo cabeçalho do app (S05, D010) |
 
 ## Preparação
 
@@ -57,3 +58,13 @@ BLOCO=B02 python3 tentativa_app.py 1 capturas
 Cada execução imprime uma linha JSON com resultado, motivo, início, passos e nome da captura, que
 alimenta `dados/brutos/tentativas.csv`. Conferir cada captura antes de copiá-la para
 `evidencias/fase4/capturas/`. A `SESSAO` padrão é S03.
+
+Aplicativo 2.7.0 até o detalhe (S05, CT05), com o app aberto e logado. O terceiro argumento é a
+data da infração como aparece no resultado; não registrá-la no repositório. `VEICULO` é a posição
+do veículo na lista de veículos atuais:
+
+```bash
+SESSAO=S05 BLOCO=B01 VEIC=V2 VEICULO=1 python3 tentativa_app_detalhe.py 1 capturas <data-da-infracao>
+```
+
+No PowerShell do Windows, definir as variáveis com `$env:SESSAO='S05'` etc. e chamar `python`.
