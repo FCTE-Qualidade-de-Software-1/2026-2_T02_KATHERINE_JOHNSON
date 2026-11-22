@@ -63,3 +63,19 @@ As estimativas da E2 aplicam o fator de correção da E1 (+10%) e a margem de se
 | [#55](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/55) | Inconsistências nos registros de gestão PSM/CID | Pedro Druck | Fechada | 1 h | 1 h |
 | | **Total** | | | **67 h** | **5 h** (4 issues fechadas; a #46 sem hora registrada) |
 
+
+
+## Declaração individual da E2 — 22/11/2026
+
+Hugo declarou ter trabalhado **1 h a mais do que o estimado na E2**. Pelo rateio das estimativas
+coletivas dos responsáveis no planejamento, sua base é 5 h 30 min na #46 e 5 h 20 min na #47:
+**10 h 50 min estimadas e 11 h 50 min reais declaradas** (+9,23%). O registro é total da E2;
+não foi declarada a distribuição real entre as issues, por isso os campos coletivos acima não
+foram preenchidos com esse total individual.
+
+As 5 h registradas na tabela por issue e as 11 h 50 min declaradas por Hugo perfazem **16 h 50 min
+conhecidas**, não o esforço final da equipe. Daniel, Heitor e Pedro Druck possuem registros
+parciais; Pedro Henrique e Philipe não têm horas reais informadas no corte. Isso não significa
+zero horas trabalhadas. A [coleta final documental](gestao-fechamento-e2.md) registra a fonte,
+a conciliação, as estimativas por integrante e a contribuição parcial. A E1 permanece histórica;
+a decisão de dividir sua contribuição igualmente não foi aplicada à E2.

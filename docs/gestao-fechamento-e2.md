@@ -1,0 +1,68 @@
+# Fechamento documental PSM/CID da Entrega 2
+
+**Consulta:** 2026-11-22T02:00:20-03:00. **Corte:** 2026-11-22. A coleta prevista para 21/11 foi realizada em 22/11; não foi retrodatada.
+
+**Estado:** fechamento apurado com as evidências disponíveis; contribuição final e esforço global incompletos por falta de declarações dos demais integrantes. Ausência de horas não é zero.
+
+## Indicadores e alcance
+
+| Indicador | Resultado | Interpretação |
+|---|---|---|
+| M-CP1 | 4/8 = 50,00% | Vermelho; issues fechadas [28, 46, 53, 55]. A #46 foi fechada com critérios empíricos pendentes e um dia de atraso |
+| M-RC1 | 5,00 h / 8,00 h = -37,50% | Amarelo, somente issues fechadas com horas [28, 53, 55]; não é TVE global |
+| M-RC2 | 16 h 50 min conhecidas; PCI final não apurável | Declaração total de Hugo e registros parciais de três integrantes; dois sem horas informadas |
+| M-DP1 | 0/13 = 0,00% | Conta PR com revisão humana; PRs sem revisão excluídos: [61]; verde não comprova revisão profunda |
+
+*Tabela 1 — Indicadores no corte. Fonte: consulta de issues e PRs e plano PSM/CID.*
+
+O ICM conta fechamento formal, sem converter critérios pendentes em entregas concluídas. Até 21/11 venciam sete issues e quatro estavam fechadas (57,14%); em 22/11 a #49 entra no denominador (50,00%). As datas de fechamento são preservadas na fonte.
+
+M-DP1: avaliados [52, 54, 56, 57, 58, 59, 60, 62, 63, 64, 65, 66, 67]; com retrabalho []. Inclui PRs avaliados ainda abertos e PRs de conteúdo integrados na branch da Fase 3, seguindo o alcance da coleta anterior. Bots não contam como revisão humana. Retrabalho é Changes Requested ou commit posterior à primeira revisão humana, dentro do corte.
+
+Daniellira540: 2Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: , HeitorM50: 3Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: , HugoFreitass: 1Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: , PedroGTG: 5Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: , Phill-Chill: 2Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: , pedruck: 1.
+
+## Horas e contribuição da E2
+
+| Integrante | Estimativa individual | Horas conhecidas | Alcance | Participação nas horas conhecidas |
+|---|---|---|---|---|
+| Daniel | 9 h 30 min | 1 h 00 min | Parcial | 5,94% |
+| Heitor | 10 h 30 min | 3 h 00 min | Parcial | 17,82% |
+| Hugo | 10 h 50 min | 11 h 50 min | Total individual declarado | 70,30% |
+| Pedro Druck | 14 h 20 min | 1 h 00 min | Parcial | 5,94% |
+| Pedro Henrique | 5 h 30 min | Não informado | Não informado | Não apurável |
+| Philipe | 16 h 20 min | Não informado | Não informado | Não apurável |
+
+*Tabela 2 — Contribuição parcial, sem imputar zero às lacunas. Fonte: mesma consulta e declaração de Hugo.*
+
+O denominador da última coluna contém apenas as horas conhecidas; ele não é o esforço total da equipe e os percentuais não são o PCI final. A decisão de contribuição igual da E1 não foi estendida à E2.
+
+Hugo declarou nesta sessão, em 22/11, ter trabalhado **1 h a mais do que o estimado na E2**. A base de planejamento é #46 (11 h ÷ Hugo e Philipe = 5 h 30 min) mais #47 (16 h ÷ três responsáveis = 5 h 20 min): **10 h 50 min estimadas; 11 h 50 min reais declaradas; variação individual +9,23%**. Esse rateio é apenas da estimativa. Não foi inventada a distribuição real entre #46 e #47, nem atribuídas horas de Hugo a Pedro Druck ou aos demais. O total individual não é somado novamente aos totais por issue.
+
+O planejamento no corpo da #46 identifica Hugo e Philipe, embora a lista de assignees da API contenha só Hugo. Usou-se o planejamento explícito para ratear estimativas, coerente com a tabela histórica de horas. Estimativas individuais fracionárias são mantidas sem arredondamento no cálculo; a exibição em minutos arredonda apenas ao final.
+
+## Resposta aos desvios
+
+| Evidência | Encaminhamento documentado | Responsável designado | Estado |
+|---|---|---|---|
+| ICM abaixo de 70%; coleta/análise atrasadas | Priorizar conferência de S03 e registrar limitações antes da integração da análise | Equipe da #47; Heitor revisa #48 | Proposta para confirmação no PR |
+| Esforço individual incompleto | Registrar totais individuais e atribuição por issue, conciliando totais sem duplicidade | Cada integrante; Daniel consolida | Hugo declarou total; demais declarações pendentes |
+| Tabela de contribuição ainda era da E1 | Substituir pelo retrato parcial E2; publicar final somente após todas as declarações | Integrador da #49 | Atualizada nesta branch |
+| Relato de falha no aplicativo | Entregar proposta de processo, ficha e matriz de regressão da #36 | Revisão designada a Daniel | Artefato entregue; revisão e eficácia pendentes |
+| Coleta final prevista para 21/11 sem registro | Apurar em 22/11 com data real, fontes e reprodução local | Consolidação desta entrega | Realizada; sem simular reunião da equipe |
+
+*Tabela 3 — Tratamento dos desvios. Fonte: indicadores e issues #36, #47, #48 e #49.*
+
+Esses encaminhamentos são propostas documentadas nesta revisão, não deliberações de uma reunião que não ocorreu. Não foram inventadas atas nem aprovações dos demais autores.
+
+## Fontes e reprodução
+
+- [Consulta datada e declaração individual](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/dados/fechamento-e2-2026-11-22.json).
+- [Cálculo e testes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/gestao/scripts).
+- [Planejamento e histórico](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/plano-psm.md).
+
+```bash
+python3 gestao/scripts/fechar_e2.py
+python3 -m unittest discover -s gestao/tests -v
+```
+
+O script não consulta a rede nem modifica issues. Recalcula JSON, este relatório e a página de fechamento da GitPage a partir da fonte datada. Novas horas exigem nova declaração identificada; não alterar a fonte histórica para simular disponibilidade anterior.
