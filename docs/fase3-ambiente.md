@@ -83,3 +83,12 @@ somente bloqueios e mudanças vão para `desvios.csv`. Pedro Henrique revisa o p
 Consentimento ou veículo ausentes bloqueiam a coleta. Falha de um instrumento bloqueia sua
 métrica, sem transformar ausência de medida em zero. O [cronograma](fase3-cronograma.md)
 identifica responsáveis e prazos de resolução.
+
+**Piloto de 22/11:** o D01 passou a ser um Acer Nitro AN515-57 com Ubuntu 26.04 LTS e Google Chrome
+158.0.8127.36 (desvio D011). O `adb` reconheceu o D03 por USB. A gravação foi testada nos dois
+canais: no portal, screencast do Chrome com horário por quadro e marcação dos cliques; no app,
+`adb screenrecord` com "Mostrar toques". As duas têm taxa variável, e o P4 usa os horários dos
+quadros. O contador do app por UID atualizou na consulta e ficou estável sem consulta; a
+equivalência com o total do DevTools não foi demonstrada, e o P5 fica sem comparação direta entre
+canais. A rede controlada (itens 3.1 a 3.6) não foi montada (B04). Detalhes no
+[registro do piloto](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S01-registro-2026-11-22.md).
