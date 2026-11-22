@@ -1,10 +1,40 @@
 \subsection{Fase 4: Análise e Julgamento da Avaliação}
 \label{sec:fase4-analise}
 
-Na preparação da análise em 16/11/2026, os arquivos de coleta disponíveis contêm apenas cabeçalhos. O cálculo e o julgamento dependem da entrega dos dados brutos, evidências, desvios e procedimentos reproduzíveis da issue \#47. Assim, as quatorze métricas, as sete questões e os objetivos G1, G2 e G3 permanecem inconclusivos nos dois canais.
+\subsubsection{Execução Documentada e Elegibilidade}
 
-A análise seguirá os critérios da Fase 2 e as regras operacionais da Fase 3. Os resultados serão apresentados por veículo, contexto e rede, com tamanho da amostra, níveis calculados antes do arredondamento e ligação às evidências. Tempos serão descritos por média, mediana e P90. O julgamento de volume usará a mediana, enquanto a hipótese H2.2 compara médias. As medidas de consistência avaliam o par de canais e a medida por navegador aplica-se somente ao portal.
+O corte documental de 22/11/2026 distingue os resultados oficiais dos relatos preliminares. Na \texttt{main} (commit \texttt{da717f2}), os oito CSV brutos continuam vazios: o cálculo reproduzível gera 25 registros inconclusivos e um não aplicável (M3.1.2 no aplicativo), sem valores ou níveis. O piloto S01 do portal, de 20/11, informa campos, percursos e dez tempos/volumes, mas não integra o cálculo oficial: faltam aquecimento, marcações independentes e identificação do instrumento de volume.
 
-O julgamento da adequação funcional apoiará as decisões de investimento e correção de divergências (D1 e D2). A eficiência de desempenho e a cobertura de contexto subsidiarão a recomendação de canal e os contextos de suporte (D3 e D4), para o requisitante, a equipe técnica e o atendimento ao cidadão. Cada questão exige suas métricas aplicáveis no mínimo aceitável e cada objetivo exige suas questões atendidas, conforme a especificação.
+A branch \texttt{feat/pedro-s03-fase4}, no commit \texttt{14ab804}, acrescenta a sessão S03 de 21/11. A Tabela~\ref{tab:fase4-observacoes} resume as tentativas P6 relatadas. A conferência independente está pendente nas 14 linhas; o validador rejeita sua promoção a dados oficiais. O relato também mantém pendentes a conferência do consentimento e o vínculo privado de V1. Os arquivos e a fonte imutável são referenciados em \texttt{docs/fase4-analise.md}.
 
-Serão investigadas relações entre tempo e conclusão sob degradação de rede, bem como entre completude, volume e tempo no mesmo contexto. O tempo das consultas concluídas será interpretado junto às falhas para explicitar possível viés de seleção. Amostra intencional, contextos ausentes e diferenças de instrumentação limitarão a comparação. As oportunidades de melhoria serão priorizadas com evidências após a coleta. O roteiro completo e os modelos de consolidação estão em \texttt{docs/fase4-analise.md} e \texttt{dados/consolidados/}.
+\begin{table}[htbp]
+\centering
+\caption{Observações preliminares de S03/P6; não são níveis oficiais.}
+\label{tab:fase4-observacoes}
+\footnotesize
+\begin{tabular}{P{2.1cm}P{3.2cm}P{7.2cm}}
+\toprule
+Contexto & Tentativas elegíveis relatadas & Resultado e limite \\
+\midrule
+CT01: portal/Chrome & 3 conclusões em 3 & Cinco erros de instrumento preservados à parte; execução automatizada. \\
+CT03: portal/Android & 2 conclusões em 3 & Uma sessão expirada durante a consulta, preservada como falha. \\
+CT05: aplicativo & 0 conclusões em 3 & Erro ao buscar veículos; Aplicativo 2.6.3 e aparelho superior ao planejado (D006). \\
+\bottomrule
+\end{tabular}
+\par\smallskip{\footnotesize Fonte: registro S03, commit \texttt{14ab804}; conferência independente pendente.}
+\end{table}
+
+CT02, CT04 e CT06 não têm execução nesse relato. O impedimento de login no Firefox ocorreu fora das tentativas e não foi contado como falha do portal. As durações dos scripts incluem esperas fixas e não substituem P4; P6 não mede as taxas por rede de P7. Versões e aparelhos diferentes, automação e ausência de pares temporais válidos impedem inferir consistência, causa técnica ou superioridade geral.
+
+\subsubsection{Respostas GQM e Relações entre Características}
+
+Q1.1, Q1.2 e Q1.3 permanecem inconclusivas: não há registros oficiais de completude, consistência e fluxo. Q2.1 e Q2.2 também são inconclusivas: os números do piloto não atendem à instrumentação definida. Q3.1 tem um relato de bloqueio no aplicativo, ainda sem conferência e sem todos os contextos; Q3.2 não possui tentativas oficiais nas três redes. Assim, as sete hipóteses não recebem julgamento definitivo e G1, G2 e G3 permanecem inconclusivos nos dois canais. A ausência de dados não equivale a paridade nem a aprovação.
+
+A falha antes da lista em CT05 impede observar campos e detalhes, relacionando cobertura de contexto e adequação funcional; não se atribui completude zero a uma tela não alcançada. A expiração em CT03 mostra por que falhas devem acompanhar tempos, evitando considerar apenas consultas concluídas. Não há dados elegíveis para associar volume, tempo e completude ou medir efeitos da rede degradada. Cada questão exige todas as métricas aplicáveis no mínimo aceitável e cada objetivo exige todas as suas questões atendidas.
+
+\subsubsection{Ação de Melhoria Entregue}
+\label{subsec:acao-melhoria}
+
+O bloqueio relatado em CT05 motivou uma proposta de processo com templates técnicos, tipo aceito na issue \#36. O artefato em \texttt{melhorias/consulta-infracoes/} entrega ficha de incidente, matriz de quatro cenários e inspeção automática: conferir a evidência, reproduzir a configuração, separar intervenções por versão, preparar diagnóstico e repetir três tentativas P6 por contexto. Apoia D4 (suporte por plataforma) e D1 (investimento), priorizando conclusão da tarefa sem avaliar usabilidade.
+
+A aprovação do contexto preserva o mínimo de duas conclusões em três; três em três é apenas meta local de regressão. A proposta foi incorporada ao repositório, mas não altera o serviço do Detran-DF. Revisão humana e eficácia sobre o produto permanecem pendentes. Não se declara defeito corrigido, causa identificada ou encaminhamento ao órgão.

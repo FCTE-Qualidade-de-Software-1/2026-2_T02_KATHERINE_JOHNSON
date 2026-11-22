@@ -8,10 +8,22 @@
 \usepackage{sbc-template}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[brazil]{babel}
+\usepackage[brazilian]{babel}
 \usepackage{graphicx,url}
 \usepackage{multirow}
 \usepackage{booktabs}
+\usepackage{placeins}
+\usepackage{microtype}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+% Mantém tabelas e figuras próximas à chamada, sem páginas de floats esparsas.
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.8}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{4}
+\setcounter{totalnumber}{8}
 \usepackage{amsmath}
 \usepackage{tikz}
 \setlength{\textfloatsep}{6pt plus 2pt minus 2pt}
@@ -25,9 +37,8 @@
 % Permite quebra de linha em URLs longas
 \def\UrlBreaks{\do\/\do-\do\_}
 
-% Inclui uma seção só se o arquivo já existir, para o artigo compilar incrementalmente.
-\newcommand{\incluir}[1]{%
-  \IfFileExists{#1.tex}{\input{#1}}{\typeout{AVISO: arquivo #1.tex ausente}}}
+% Uma seção obrigatória ausente deve interromper a compilação.
+\newcommand{\incluir}[1]{\input{#1}}
 
 \title{Avaliação Comparativa de Qualidade em Serviços Digitais de Governo:\\
   Portal de Serviços $\times$ Aplicativo na Consulta de Infrações do Detran-DF}
@@ -44,10 +55,8 @@
 \maketitle
 
 \begin{center}
-  \small
-  Repositório oficial do projeto com dados e evidências:\\[2pt]
-  \url{https://github.com/FCTE-Qualidade-de-Software-1/}\\
-  \url{2026-2_T02_KATHERINE_JOHNSON}
+  \small Repositório com dados e evidências:\\
+  \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON}
 \end{center}
 
 \incluir{secoes/resumo}
@@ -66,24 +75,28 @@
 \incluir{secoes/fase1-produto}
 \incluir{secoes/fase1-priorizacao}
 
+\FloatBarrier
 \subsection{Fase 2: Especificação da Avaliação}
 \label{sec:fase2-gqm}
 \incluir{secoes/fase2-objetivos}
 \incluir{secoes/fase2-metricas}
 
+\FloatBarrier
 \incluir{secoes/fase3-plano}
 
-\incluir{secoes/fase3-coleta-dados}
+\FloatBarrier
 \incluir{secoes/fase4-analise}
 
 \incluir{secoes/fase4-conclusoes}
 
+\FloatBarrier
 \incluir{secoes/declaracao-ia}
 
+\FloatBarrier
 \bibliographystyle{sbc}
 \bibliography{referencias}
 
-% Apêndice: Tabela de contribuição individual (não conta no limite de páginas)
+% Apêndice de contribuição incluído no limite total de páginas
 \appendix
 \incluir{secoes/contribuicao}
 

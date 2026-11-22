@@ -44,3 +44,14 @@ Codex (OpenAI) apoiou a complementação documental da issue #46: ambiente plane
 ## Preparação da análise da Fase 4 — 16/11/2026
 
 Codex (OpenAI) apoiou o roteiro de análise da issue #48, os modelos de consolidação e a síntese LaTeX. As regras foram cotejadas com as Fases 1–3 e os CSV disponíveis. A revisão humana por Pedro Henrique, Philipe e Heitor permanece pendente. Resultados e conclusões aguardam a coleta da #47.
+
+
+## Fechamento documental — 22/11/2026
+
+Codex (OpenAI) apoiou a entrega da proposta de processo e templates da #36, a atualização do
+artigo e sua compilação, a consulta de issues/PRs e o fechamento PSM da E2. As observações S03
+foram atribuídas à branch e ao commit de origem, sem converter registros não conferidos em
+medições oficiais. A declaração de Hugo sobre +1 h na E2 foi registrada com a base de estimativa
+explicitada, sem inventar a distribuição real por issue ou as horas dos demais integrantes.
+As verificações automáticas e a inspeção do PDF são técnicas; a aprovação dos autores e dos
+revisores designados permanece dependente de registro humano no PR.

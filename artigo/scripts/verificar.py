@@ -44,6 +44,18 @@ def main():
     fontes = {p: sem_comentarios(p.read_text(encoding="utf-8")) for p in TEX}
     tudo = "\n".join(fontes.values())
 
+    # A compilação final não pode omitir silenciosamente uma seção obrigatória.
+    for p, t in fontes.items():
+        for m in re.finditer(r"\\(?:incluir|input|include)\{([^}]+)\}", t):
+            nome = m.group(1)
+            if "#" in nome:  # argumento da definição do comando, não um arquivo
+                continue
+            destino = RAIZ / "artigo" / nome
+            if not destino.suffix:
+                destino = destino.with_suffix(".tex")
+            if not destino.is_file():
+                erros.append(f"{p.name}: inclusão obrigatória ausente '{nome}'")
+
     # 1. rótulos
     rotulos = {}
     for p, t in fontes.items():

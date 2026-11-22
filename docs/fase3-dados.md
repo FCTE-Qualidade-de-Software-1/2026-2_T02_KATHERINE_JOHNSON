@@ -2,11 +2,13 @@
 
 A [massa de dados](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/massa-de-dados.md) prevê até três veículos consentidos, com mínimo de um veículo com infração nos dois canais. A diversidade de situações, órgãos e infrações de velocidade é desejada, mas ainda não confirmada. A amostra é intencional e não permite generalização estatística para a frota.
 
+**Atualização em 22/11:** a S03 usou o V1 (infração de referência V1-I1, de 04/2024) e a S05 usou o V2 (V2-I1, de 10/2026, infração de velocidade autuada por outro órgão). Os dois códigos são provisórios até a conferência da tabela privada e dos termos por Hugo. O V2-I1 atende às metas de diversidade "outro órgão" e "velocidade"; as metas de situação (a vencer, vencida e paga) ainda não foram conferidas.
+
 O titular assina o [termo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/consentimento.md) antes da coleta e faz o login sem compartilhar a senha. Somente código do veículo e data do consentimento são públicos. Originais, termos e correspondências ficam privados; prints e vídeos só são publicados após anonimização e revisão independente.
 
 ## Instrumentos entregues
 
-Os arquivos em `dados/brutos/` contêm apenas cabeçalhos, sem dados fictícios. O
+Os arquivos em `dados/brutos/` foram entregues apenas com cabeçalhos, sem dados fictícios. Desde 21/11, `tentativas.csv`, `ambientes.csv` e `desvios.csv` recebem os registros reais da P6 (S03 e S05); os demais continuam só com cabeçalhos. O
 [dicionário e as regras de cálculo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/README.md)
 definem chaves, denominadores e exclusões. O
 [modelo de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md)

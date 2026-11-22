@@ -1,0 +1,60 @@
+# Scripts da S02 (P1–P5, contexto de referência)
+
+Apoio à execução da S02 no contexto de referência: portal no Google Chrome do D01 (CT01) e
+aplicativo no D03 (CT05), Wi-Fi, veículo V2 e infração V2-I1. O titular faz o login; os scripts não
+digitam credenciais nem tocam em "Sair", e no app nunca usam o "voltar" do sistema.
+
+**Privacidade:** valores dos campos, gravações, listas de requisições e saídas completas do `adb`
+vão só para `dados/privado/S02/`, que o Git ignora. A saída padrão traz apenas presença, contagens,
+horários e bytes. As capturas de P1 saem tarjadas e também ficam em `dados/privado/S02/` até a
+revisão; só depois vão para `evidencias/fase4/capturas/S02/`.
+
+| Arquivo | Uso |
+|---|---|
+| `campos.py` | Mapa dos rótulos de cada canal para R01–R15 e as velocidades (lista de referência da Fase 1) e normalização de valores da M1.2.1 |
+| `portal_s02.js` | Portal: `campos`, `fluxo`, `tempo` e `volume` |
+| `app_s02.py` | Aplicativo: `campos`, `fluxo`, `tempo` e `volume` |
+| `consolidar_s02.py` | Gera as linhas propostas de `campos-por-infracao.csv` (P1) e `comparacao-canais.csv` (P2) a partir dos registros privados |
+
+## Execução
+
+`VEICULO_HASH` é o SHA-256 da placa do veículo de referência, calculado na página ou na tela; a
+placa não é gravada. No app, `DATA=<data-da-infracao>` faz `fluxo` e `volume` irem até o cartão da
+infração.
+
+```bash
+# P1/P2: lista e detalhe nos dois canais, com até 10 min entre eles
+node portal_s02.js campos <data-da-infracao>
+python3 app_s02.py campos <data-da-infracao>
+python3 consolidar_s02.py campos --velocidade
+python3 consolidar_s02.py paridade --velocidade
+
+# P3: 3 execuções por canal (transições contadas na gravação)
+node portal_s02.js fluxo 1
+python3 app_s02.py fluxo 1
+
+# P4: 1 aquecimento + 10 válidas por métrica e canal
+node portal_s02.js tempo M2.1.1 1 <data-da-infracao>
+python3 app_s02.py tempo M2.1.2 1 <data-da-infracao>
+
+# P5: 1 aquecimento + 10 válidas por canal
+node portal_s02.js volume 1
+python3 app_s02.py volume 1
+```
+
+## Limites
+
+- **P1/P2:** a presença vem do rótulo com valor preenchido (hífen conta como vazio). A comparação
+  aplica a normalização da M1.2.1 (maiúsculas, acentos, símbolo monetário, separador decimal e
+  formato de data); a segunda classificação independente continua obrigatória.
+- **P3:** o script conta os cliques e as rolagens e grava o percurso; as transições são contadas na
+  gravação.
+- **P4:** o portal grava pelo screencast do Chrome (horário por quadro, marcação de clique) e propõe
+  os quadros inicial e final; o app grava com `adb screenrecord` e "Mostrar toques", e dá só uma dica
+  de tempo. A marcação final é feita na gravação, com segunda leitura independente. Início da
+  M2.1.1 nos dois canais: toque ou clique em "Consultar", porque os dois canais exigem o filtro antes
+  da lista; a equipe confirma essa definição antes da coleta.
+- **P5:** portal pela soma de `encodedDataLength` do DevTools; app pela diferença do contador do UID.
+  Os escopos diferem (piloto S01): os valores ficam separados, sem declarar um canal superior.
+- Os scripts não foram executados contra o serviço; fazer um ensaio não contado de cada modo no
+  início da S02.

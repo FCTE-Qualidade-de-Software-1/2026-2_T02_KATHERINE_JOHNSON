@@ -1,0 +1,5 @@
+caso,contexto,canal,condicao,procedimento,repeticoes,criterio,estado
+RG01,CT05,aplicativo,Mesma versão e aparelho do incidente,P6,3,Pelo menos duas conclusões em três; preservar falhas,planejado
+RG02,CT05,aplicativo,Após intervenção identificada; registrar versão e aparelho,P6,3,Pelo menos duas conclusões em três; comparar blocos equivalentes,planejado
+RG03,CT01,portal,Controle com mesmo veículo e rede; registrar versão,P6,3,Pelo menos duas conclusões em três; não inferir paridade de dados,planejado
+RG04,CT03,portal,Controle no Chrome Android; autenticação antes do início,P6,3,Preservar expiração durante tentativa como falha,planejado

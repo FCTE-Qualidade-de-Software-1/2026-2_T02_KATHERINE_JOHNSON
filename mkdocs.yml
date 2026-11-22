@@ -85,6 +85,7 @@ nav:
   - Gestão (PSM/CID):
       - Medições e decisões: gestao.md
       - Registro de horas por issue: gestao-horas.md
+      - Fechamento documental da E2: gestao-fechamento-e2.md
       - Quadro do backlog (acesso restrito): https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38
   - Atas: atas.md
   - Equipe: equipe.md
