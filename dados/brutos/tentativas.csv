@@ -1,1 +1,9 @@
 sessao,bloco,contexto,canal,rede,veiculo,procedimento,repeticao,aquecimento,resultado,elegivel,motivo,data_hora,evidencia,revisor
+S03,B01,CT01,portal,wifi,V1,P6,1,nao,erro_instrumento,nao,"Script não fechava o aviso ""É GOLPE!"" que cobre o menu; reposto pela repetição 6 (D004)",2026-11-21T22:01:12-03:00,evidencias/fase4/S03-registro-2026-11-21.md,
+S03,B01,CT01,portal,wifi,V1,P6,2,nao,erro_instrumento,nao,Script buscava o item de menu por elemento de largura zero; reposto pela repetição 7 (D004),2026-11-21T22:02:56-03:00,evidencias/fase4/S03-registro-2026-11-21.md,
+S03,B01,CT01,portal,wifi,V1,P6,3,nao,erro_instrumento,nao,Calendário não abriu no primeiro clique do script; reposto pela repetição 8 (D004),2026-11-21T22:13:33-03:00,evidencias/fase4/S03-registro-2026-11-21.md,
+S03,B01,CT01,portal,wifi,V1,P6,4,nao,erro_instrumento,nao,Calendário não abriu no primeiro clique do script; reposição vinculada a D004,2026-11-21T22:13:48-03:00,evidencias/fase4/S03-registro-2026-11-21.md,
+S03,B01,CT01,portal,wifi,V1,P6,5,nao,erro_instrumento,nao,Calendário não abriu no primeiro clique do script; reposição vinculada a D004,2026-11-21T22:14:05-03:00,evidencias/fase4/S03-registro-2026-11-21.md,
+S03,B01,CT01,portal,wifi,V1,P6,6,nao,concluida,sim,,2026-11-21T22:14:59-03:00,evidencias/fase4/capturas/S03/S03-B01-portal-P6-V1-6-2026-11-21.png,
+S03,B01,CT01,portal,wifi,V1,P6,7,nao,concluida,sim,,2026-11-21T22:15:15-03:00,evidencias/fase4/capturas/S03/S03-B01-portal-P6-V1-7-2026-11-21.png,
+S03,B01,CT01,portal,wifi,V1,P6,8,nao,concluida,sim,,2026-11-21T22:15:31-03:00,evidencias/fase4/capturas/S03/S03-B01-portal-P6-V1-8-2026-11-21.png,
