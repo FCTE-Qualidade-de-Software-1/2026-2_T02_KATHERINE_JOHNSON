@@ -2,6 +2,8 @@
 // (fecha o aviso "É GOLPE!" se aparecer) → Selecionar → período 01/01/2024–31/12/2024 → Consultar → seta da infração escolhida → detalhe.
 // Antes da captura, todo texto que não é rótulo vira tarja preta na própria página.
 // Uso: node tentativa.js <chrome|firefox|android> <repeticao> <data-da-infracao-V1-I1> <bloco>
+// Opcional (S05, V2): PERIODO_PADRAO=1 usa o período que o filtro abre (últimos 12 meses), sem calendário;
+// VEICULO_HASH=<sha256 da placa> escolhe o veículo da lista sem gravar a placa; VEIC=<código> entra no nome da captura.
 const { conectar } = require('./conectar');
 const { escolherData } = require('./calendario');
 const espera = ms => new Promise(r => setTimeout(r, ms));
@@ -90,13 +92,28 @@ async function clicar(page, fn, arg) {
       const fechar = await page.evaluateHandle(() => [...document.querySelectorAll('button')].find(b => b.innerText.trim() === 'close' && b.getBoundingClientRect().width > 0) || null);
       if (fechar.asElement()) { await acionar(fechar.asElement()); passos.push('fechar_menu'); await espera(800); }
     }
-    await clicar(page, () => [...document.querySelectorAll('button')].find(b => b.innerText.trim() === 'Selecionar' && b.getBoundingClientRect().width > 0) || null);
+    let indice = 0;
+    if (process.env.VEICULO_HASH) {  // localiza o veículo pelo hash da placa; a placa não sai da página
+      await aguardar(page, () => [...document.querySelectorAll('button')].find(b => b.innerText.trim() === 'Selecionar' && b.getBoundingClientRect().width > 0) || null);
+      indice = await page.evaluate(async h => {
+        const bs = [...document.querySelectorAll('button')].filter(b => b.innerText.trim() === 'Selecionar');
+        const sha = async t => [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)))].map(x => x.toString(16).padStart(2, '0')).join('');
+        for (let i = 0; i < bs.length; i++) for (const t of (bs[i].closest('tr, mat-card, div').innerText.match(/[A-Z]{3}[0-9][A-Z0-9][0-9]{2}/g) || [])) if (await sha(t) === h) return i;
+        return -1;
+      }, process.env.VEICULO_HASH);
+      if (indice < 0) throw new Error('veículo não encontrado na lista');
+    }
+    await clicar(page, i => [...document.querySelectorAll('button')].filter(b => b.innerText.trim() === 'Selecionar' && b.getBoundingClientRect().width > 0)[i] || null, indice);
     passos.push('selecionar_veiculo');
     // As datas são somente leitura: o período é escolhido pelo calendário.
     await aguardar(page, () => [...document.querySelectorAll('mat-form-field')].find(f => f.innerText.includes('Data início')) || null);
-    const ini = await escolherData(page, 'Data início', 2024, 'JAN', 1);
-    const fim = await escolherData(page, 'Data final', 2024, 'DEZ', 31);
-    passos.push(`periodo ${ini}-${fim}`);
+    if (process.env.PERIODO_PADRAO) {
+      passos.push('periodo_padrao');
+    } else {
+      const ini = await escolherData(page, 'Data início', 2024, 'JAN', 1);
+      const fim = await escolherData(page, 'Data final', 2024, 'DEZ', 31);
+      passos.push(`periodo ${ini}-${fim}`);
+    }
     await clicar(page, () => [...document.querySelectorAll('button')].find(b => b.innerText.trim() === 'Consultar' && b.getBoundingClientRect().width > 0) || null);
     passos.push('consultar');
     const seta = await aguardar(page, d => {
@@ -129,7 +146,7 @@ async function clicar(page, fn, arg) {
   const pad = n => String(n).padStart(2, '0');
   const local = new Date(inicio.getTime() - 3 * 3600e3);
   const dataHora = `${local.getUTCFullYear()}-${pad(local.getUTCMonth() + 1)}-${pad(local.getUTCDate())}T${pad(local.getUTCHours())}:${pad(local.getUTCMinutes())}:${pad(local.getUTCSeconds())}-03:00`;
-  const nome = `${process.env.SESSAO || 'S03'}-${bloco}-portal-P6-V1-${repeticao}-${dataHora.slice(0, 10)}.png`;
+  const nome = `${process.env.SESSAO || 'S03'}-${bloco}-portal-P6-${process.env.VEIC || 'V1'}-${repeticao}-${dataHora.slice(0, 10)}.png`;
   await page.screenshot({ path: `${process.env.CAPTURAS || 'capturas'}/${nome}`, fullPage: true });
   console.log(JSON.stringify({ nav, repeticao: Number(repeticao), resultado, motivo, data_hora: dataHora, duracao_s: ((Date.now() - inicio) / 1000).toFixed(1), passos, tarjados, captura: nome }));
   await browser.disconnect();

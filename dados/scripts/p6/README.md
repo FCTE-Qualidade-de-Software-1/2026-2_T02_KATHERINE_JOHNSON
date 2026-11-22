@@ -68,3 +68,18 @@ SESSAO=S05 BLOCO=B01 VEIC=V2 VEICULO=1 python3 tentativa_app_detalhe.py 1 captur
 ```
 
 No PowerShell do Windows, definir as variáveis com `$env:SESSAO='S05'` etc. e chamar `python`.
+
+Portal com o V2 (S05): o titular do V2 tem dois veículos e a infração de referência está nos
+últimos 12 meses. `PERIODO_PADRAO=1` mantém o período que o filtro abre, `VEICULO_HASH` escolhe o
+veículo pelo SHA-256 da placa (calculado na página, sem gravar a placa) e `VEIC` entra no nome da
+captura. Sem essas variáveis, o script funciona como na S03:
+
+```bash
+SESSAO=S05 PERIODO_PADRAO=1 VEIC=V2 VEICULO_HASH=<sha256-da-placa> CAPTURAS=capturas node tentativa.js firefox 1 <data-da-infracao> B02
+```
+
+Firefox (CT02): abrir primeiro **sem** controle remoto, num perfil dedicado, para o titular fazer o
+login (`firefox --new-instance --profile <dir>`); depois ativar a restauração de sessão no perfil
+(`browser.startup.page` = 3 no `user.js`), fechar e reabrir o mesmo perfil com
+`--remote-debugging-port 9223`. Aberto direto com controle remoto, o login pelo gov.br falhou (D005).
+
