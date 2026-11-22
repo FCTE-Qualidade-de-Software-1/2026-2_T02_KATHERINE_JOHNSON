@@ -1,5 +1,10 @@
 # Fase 4 — Coleta, pendências e cálculo
 
+**Atualização documental em 22/11:** o PR #67 foi aprovado por Daniel em 21/11 antes do merge.
+A branch `feat/pedro-s03-fase4` registra tentativas P6 em CT01/CT03/CT05 de 21/11, ainda sem
+conferência independente; a [análise](fase4-analise.md) referencia a fonte imutável e suas
+limitações. Os quadros datados de 20/11 abaixo preservam a situação daquela revisão.
+
 Situação documental conferida em **20/11/2026**. Responsáveis pela
 [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47):
 Hugo, Pedro Druck e Philipe; revisão da entrega por Daniel.
@@ -40,7 +45,7 @@ senhas, capturadas telas de autenticação ou executadas operações sobre infra
 | **S00 — preparação** | **Parcial** | Concordância informada para três integrantes, vias individuais preparadas, computador candidato a D01 inspecionado e D03 parcialmente caracterizado | Conferir aplicação dos termos, códigos da massa, disponibilidade dos titulares e inventário efetivo por sessão |
 | **S01 — piloto** | **Parcial, sem liberação registrada** | Relatório do portal registra presença de campos, três percursos, três acessos ao detalhe e duas capturas anonimizadas; dez valores de tempo/volume foram informados em tabela separada | Conferir instrumento, aquecimento e evidências; completar captura da lista de infrações e registrar liberação por procedimento |
 
-O [roteiro de medições e capturas](../evidencias/fase4/roteiro-medicoes-e-capturas.md) consolida
+O [roteiro de medições e capturas](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/roteiro-medicoes-e-capturas.md) consolida
 as repetições, os oito CSV, o estado factual da preparação e os nomes/destinos exatos das imagens
 que devem ser produzidas e revisadas antes de entrarem no repositório.
 
@@ -49,7 +54,7 @@ foi acrescentada ao relatório S01; ela identifica o instrumento, mas não muda 
 nem comprova aquecimento ou conferência independente. A origem e a unidade do volume também
 precisam ser identificadas antes de seu uso oficial.
 
-O [relatório recebido da sessão S01 no portal para PC](../evidencias/fase4/relatorio-s01-portal-2026-11-20.md)
+O [relatório recebido da sessão S01 no portal para PC](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/relatorio-s01-portal-2026-11-20.md)
 registra a contagem de campos, três percursos, três acessos ao detalhe, duas capturas anonimizadas
 e os dez valores de tempo/volume enviados na tabela. Esses dados são do piloto, não entram no
 cálculo oficial e ainda não têm evidência suficiente do aquecimento/método de timing/instrumento

@@ -1,15 +1,33 @@
 # Fase 4 — Análise e julgamento GQM
 
-Preparação da issue #48 em 16/11/2026. Responsáveis pela análise: Pedro Henrique e Philipe. Revisor designado: Heitor.
+Atualização documental em **22/11/2026**, referente à #48. Responsáveis pela análise: Pedro Henrique
+e Philipe; revisor designado: Heitor. O roteiro abaixo permanece aplicável, mas seu estado agora
+distingue a `main` da coleta recente ainda não integrada.
 
 ## Situação e dependência
 
-Os oito CSV de `dados/brutos/` contêm apenas cabeçalhos nesta revisão. As quatorze métricas e todas as questões e objetivos permanecem inconclusivos por ausência de medições. A issue #47 deve entregar os dados elegíveis, evidências anonimizadas, desvios e procedimento de cálculo reproduzível. O levantamento autenticado da Fase 3 contribui para preparar a coleta, mas ainda faltam as repetições e registros requeridos para o julgamento.
+Na `main` (`da717f2`), os oito CSV brutos têm apenas cabeçalhos. A validação calcula zero métricas:
+25 registros inconclusivos e um não aplicável (M3.1.2 no aplicativo). S01 é piloto e não entra no
+cálculo oficial; seu relatório não comprova aquecimento, marcações independentes ou instrumento
+de volume.
 
-O [acompanhamento da #47](fase4-coleta.md) apresenta o cálculo automatizado e as pendências de
-execução. `python3 dados/scripts/calcular.py` gera a tabela de métricas e o manifesto das
-entradas; os estados sem medição não respondem às questões GQM. A interpretação e o julgamento
-continuam sob responsabilidade da #48.
+A branch `feat/pedro-s03-fase4`, no
+[commit 14ab804](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/14ab804210f4b1be2aaa84e1946d9e11079a9a28),
+contém o [relato S03 de 21/11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/14ab804210f4b1be2aaa84e1946d9e11079a9a28/evidencias/fase4/S03-registro-2026-11-21.md).
+Ele relata CT01 com 3/3 conclusões, CT03 com 2/3 e uma expiração, e CT05 com 0/3 e erro ao buscar
+veículos. São contagens preliminares: a validação rejeita as 14 linhas por falta de conferência
+independente. Consentimento e vínculo privado do veículo também estão a conferir; CT05 usa
+aparelho/versão diferentes do planejamento (D006). CT02, CT04 e CT06 não foram executados no relato.
+
+As sete questões e hipóteses e os três objetivos permanecem **inconclusivos no julgamento
+oficial**. O relato de falha não deve ser apagado nem convertido em aprovação, mas ainda não
+sustenta nível definitivo, ranking geral ou causa técnica. Tempos dos scripts não substituem P4;
+P6 não mede taxas por rede de P7. Os arquivos dessa branch não foram copiados sobre os instrumentos
+da `main`: a conferência da #47 precede sua integração como dados oficiais.
+
+O bloqueio no aplicativo motivou a [ação de melhoria entregue](fase4-melhoria.md): proposta de
+processo e templates de diagnóstico/regressão. A entrega não depende de inventar resultados;
+sua eficácia e a revisão humana permanecem pendentes.
 
 ## Procedimento de análise
 
