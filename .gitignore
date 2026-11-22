@@ -18,3 +18,7 @@ dados/privado/
 # Build do MkDocs
 site/
 .venv/
+
+# Cache dos validadores Python
+__pycache__/
+*.pyc

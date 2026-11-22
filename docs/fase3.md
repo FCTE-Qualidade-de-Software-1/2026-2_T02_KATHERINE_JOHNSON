@@ -23,9 +23,9 @@ O passo a passo da fase está em [Metodologia](metodologia.md).
 | F3-C3: cronograma | [Sessões e responsáveis](fase3-cronograma.md) | Datas propostas; horários com titulares e sincronização do Project pendentes |
 | F3-C8: coerência com a Fase 2 | [Tabela de rastreabilidade](fase3-metodo.md#4-rastreabilidade-entre-as-fases-2-e-3) | Quatorze métricas ligadas a procedimentos, instrumentos e registros |
 | Artigo e GitPage | Seção `fase3-plano.tex` e páginas desta fase | Disponíveis nesta branch para revisão |
-| Levantamento autenticado e atualização da Fase 1 | S01 e roteiro do levantamento | Pendente de veículo real; nenhuma captura autenticada produzida |
+| Levantamento autenticado e atualização da Fase 1 | S01 e roteiro do levantamento | Parcial: seis capturas autenticadas do portal disponíveis; apps e liberação do piloto pendentes. Ver [evidências de S00/S01](fase4-coleta.md) |
 | iOS | CT06 e bloqueio B03 | iPhone de Heitor; modelo e versões a registrar; contexto não avaliado até haver evidências |
-| Revisão | Pedro Henrique, até 15/11/2026 | Aprovação pendente |
+| Revisão do plano documental | Pedro Henrique | PR #57 aprovado; execução de S00/S01 ainda depende de comprovação |
 
 Os critérios empíricos só podem ser marcados como concluídos após as sessões e a conferência
 das evidências. A integração documental não encerra automaticamente a issue.

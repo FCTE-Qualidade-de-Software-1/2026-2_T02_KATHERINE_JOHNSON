@@ -248,7 +248,7 @@ propostas D8 a D15, está em
 
 | Métrica ou ação | Valor em 16/11 | Situação |
 |---|---|---|
-| M-CP1 — Cumprimento de marcos | 4 de 4 issues que vencem até 17/11 (100%); 4 de 8 issues da E2 fechadas. A #46 fechou 1 dia depois do prazo, com 3 de 14 critérios marcados | Verde, com ressalva |
+| M-CP1 — Cumprimento de marcos | 4 de 4 issues que vencem até 17/11 (100%); 4 de 8 issues da E2 fechadas. A #46 fechou 1 dia depois do prazo; a parte documental está cumprida e 7 critérios de execução seguem abertos (3 parciais e 4 pendentes) | Verde, com ressalva |
 | M-RC1 — Variação de esforço | 5 h reais para 8 h estimadas (−37,5%) nas 3 issues fechadas com horas; a #46 fechou sem hora real | Amarelo |
 | M-RC2 — Contribuição individual | 5 h registradas, de 3 dos 6 integrantes | Não interpretável |
 | M-DP1 — Retrabalho em revisão | 0 de 7 PRs com pedido de ajuste | Verde |

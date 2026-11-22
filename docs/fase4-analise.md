@@ -6,6 +6,11 @@ Preparação da issue #48 em 16/11/2026. Responsáveis pela análise: Pedro Henr
 
 Os oito CSV de `dados/brutos/` contêm apenas cabeçalhos nesta revisão. As quatorze métricas e todas as questões e objetivos permanecem inconclusivos por ausência de medições. A issue #47 deve entregar os dados elegíveis, evidências anonimizadas, desvios e procedimento de cálculo reproduzível. O levantamento autenticado da Fase 3 contribui para preparar a coleta, mas ainda faltam as repetições e registros requeridos para o julgamento.
 
+O [acompanhamento da #47](fase4-coleta.md) apresenta o cálculo automatizado e as pendências de
+execução. `python3 dados/scripts/calcular.py` gera a tabela de métricas e o manifesto das
+entradas; os estados sem medição não respondem às questões GQM. A interpretação e o julgamento
+continuam sob responsabilidade da #48.
+
 ## Procedimento de análise
 
 1. Registrar o commit dos dados recebidos da #47 e a versão do procedimento de cálculo em cada linha de `dados/consolidados/resultados-metricas.csv`.

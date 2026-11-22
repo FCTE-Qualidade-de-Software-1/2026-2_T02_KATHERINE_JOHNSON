@@ -6,6 +6,14 @@ Este plano complementa os [procedimentos P1–P7](fase3-metodo.md). **Os equipam
 
 ## 1. Inventário e contextos
 
+**Verificação de preparação em 20/11:** foi inspecionado um computador Linux de 64 bits, candidato
+a D01, ainda sujeito à confirmação do responsável. O [registro técnico](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/preparacao-ambiente-2026-11-20.json)
+mantém sistema, ferramentas e versões de software relevantes; a configuração detalhada do
+equipamento foi omitida para reduzir sua identificabilidade.
+Não houve navegador conectado à ferramenta de coleta nem Android identificado na leitura USB;
+`adb` e `ffmpeg` não foram encontrados no PATH. Essa inspeção prepara o ambiente, mas não
+registra uma sessão de avaliação nem preenche `ambientes.csv` com uma sessão presumida.
+
 | ID | Canal e ambiente planejado | Rede / procedimento | Confirmação antes do piloto |
 |---|---|---|---|
 | CT01 | Portal; computador D01; Chrome | Wi-Fi: P1–P6; Wi-Fi, 4G e degradada: P7 | Modelo, processador, RAM, SO/build e versão do Chrome |

@@ -1,0 +1,31 @@
+{
+  "verificado_em": "2026-11-20T17:04:22.675416+00:00",
+  "finalidade": "preparacao; ainda nao e inventario de sessao nem medicao do produto",
+  "sistema": "Linux",
+  "arquitetura": "x86_64",
+  "ferramentas": {
+    "adb": null,
+    "ffmpeg": null,
+    "tc": "/usr/sbin/tc",
+    "google-chrome": "/usr/bin/google-chrome",
+    "chromium": null,
+    "firefox": "/usr/bin/firefox"
+  },
+  "hardware_detalhado": "omitido do registro publico para reduzir identificabilidade do equipamento",
+  "sistema_distribuicao": "Ubuntu 26.04 LTS",
+  "chrome_versao": "157.0.8103.78",
+  "firefox_versao": "158.0",
+  "papel_planejado": "Candidato a D01; aguarda confirmação do responsável",
+  "navegadores_conectados_a_ferramenta": 0,
+  "android_identificado_via_usb": false,
+  "medicoes_do_produto_executadas": false,
+  "liberacao_piloto": "nao_registrada",
+  "fontes": [
+    "/etc/os-release",
+    "google-chrome --version",
+    "firefox --version (leitura fora do sandbox)",
+    "lsusb (leitura fora do sandbox, sem Android identificado)",
+    "descoberta da ferramenta de navegador: lista vazia",
+    "command -v / shutil.which para ferramentas disponíveis no PATH"
+  ]
+}

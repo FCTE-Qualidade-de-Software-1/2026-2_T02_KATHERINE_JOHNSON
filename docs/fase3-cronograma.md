@@ -62,3 +62,13 @@ coleta. Na medição PSM/CID de 17/11, relatar bloqueios e horas efetivas; não 
 da tabela como horas trabalhadas.
 
 Para entregar #47 à #48, conferir: arquivos sem dados pessoais, inventário preenchido, consentimentos válidos, tentativas e desvios preservados, revisão independente e indicação de métricas/contextos não medidos. A issue #46 não deve ser considerada integralmente concluída enquanto faltarem os critérios empíricos e a aprovação do PR.
+
+## Acompanhamento em 19/11/2026
+
+O plano documental da #46 foi aprovado, mas os sete critérios de execução ainda estão parciais
+ou pendentes. O prazo original da #47 venceu em 18/11. A
+[página de coleta](fase4-coleta.md) registra responsáveis, evidências necessárias e a proposta de
+reagendamento sujeita à confirmação da equipe. O iPhone é de Heitor, responsável pelas
+atividades de iOS; a correção das tabelas anteriores está no PR #66.
+Uma nova consulta ao Project 38 em 19/11 continuou bloqueada por falta de `read:project`;
+nenhum campo remoto foi alterado.

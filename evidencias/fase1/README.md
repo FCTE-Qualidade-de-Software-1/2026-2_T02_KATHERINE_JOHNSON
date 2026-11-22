@@ -32,12 +32,19 @@ Nenhum print entra no repositório sem passar por estas regras:
 | Página da loja | — | feito | feito |
 | Tela inicial (sem login) | feito | feito | pendente (iPhone de Heitor) |
 | Login (campos vazios) | feito | feito | pendente (iPhone de Heitor) |
-| Lista de veículos | pendente | pendente | pendente |
-| Lista de infrações | pendente | pendente | pendente |
-| Detalhes de uma infração | pendente | pendente | pendente |
+| Lista de veículos | [captura disponível](../../docs/img/passoApassoConsulta/pageConsultaDeInfrções.png) | pendente | pendente |
+| Lista de infrações | [captura disponível](../../docs/img/passoApassoConsulta/pageConsultaDeInfraçõesDefinindoData.png) | pendente | pendente |
+| Detalhes de uma infração | [captura disponível](../../docs/img/passoApassoConsulta/pageDetalhesDaInfração.png) | pendente | pendente |
 
 As telas pendentes exigem login do proprietário com veículo real. O procedimento está em `roteiro-levantamento.md`.
 
-**Aplicativo no iOS.** As telas do aplicativo no iOS não foram capturadas na Entrega 1; do iOS há apenas a página da
-App Store. O iPhone é de Heitor e será usado para as capturas e medições na Fase 3. Sem o registro do aparelho, a
-avaliação do aplicativo se restringe ao Android, e o iOS fica registrado como contexto não avaliado.
+**Conferência documental em 20/11/2026:** as capturas do portal já estavam em
+`docs/img/passoApassoConsulta/`, incorporadas pelo commit `aa9d3bb` em 15/11. Sua inclusão
+reconhece os arquivos disponíveis, mas não certifica consentimento, executor, revisão independente
+ou liberação do piloto. O [acompanhamento de S00/S01](../../docs/fase4-coleta.md) descreve os
+limites e registros ainda necessários.
+
+**Aplicativo no iOS.** As telas do aplicativo no iOS não foram capturadas na Entrega 1; do iOS há
+apenas a página da App Store. O iPhone é de Heitor e será usado para as capturas e medições na
+Fase 3. Sem o inventário e as evidências da sessão, CT06 permanece não avaliado; as conclusões do
+aplicativo ficam restritas aos contextos Android efetivamente avaliados.

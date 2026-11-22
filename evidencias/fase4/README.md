@@ -1,10 +1,26 @@
 # Evidências da Fase 4
 
-Pasta preparada para receber somente evidências anonimizadas. Nenhuma sessão foi executada nesta entrega documental.
+Pasta preparada para receber somente evidências anonimizadas. Em 20/11/2026, não há registro
+preenchido de conclusão de S00/S01 nesta pasta. As capturas preexistentes do portal estão
+indexadas no [acompanhamento da coleta](../../docs/fase4-coleta.md); constituem evidência parcial
+do levantamento autenticado, sem comprovar a liberação do piloto.
+
+O arquivo [preparacao-ambiente-2026-11-20.json](preparacao-ambiente-2026-11-20.json) registra
+uma inspeção real do computador acessível e a disponibilidade das ferramentas. É evidência de
+preparação: não contém medição do Detran, não atribui uma sessão ao aparelho e não libera S01.
 
 Copiar o [modelo de sessão](modelo-sessao.md) para registrar a liberação do piloto, os blocos,
 as duas leituras da conferência e os desvios. Preencher somente após execução, sem transformar
 o modelo em evidência de uma sessão ainda não realizada.
+
+O [registro factual de preparação](registro-de-situacao-2026-11-20.md) consolida o estado real
+de S00/S01 sem atribuir medições que não foram executadas. O
+[roteiro de medições e capturas](roteiro-medicoes-e-capturas.md) especifica os valores exigidos
+por P1–P7, o destino dos CSV e cada captura necessária, com as regras para evitar dados pessoais.
+
+O [relatório S01 do portal no PC](relatorio-s01-portal-2026-11-20.md) incorpora os dados e as
+capturas anonimizadas recebidos. Ele separa as observações do piloto dos resultados oficiais e
+documenta a divergência entre o PDF e a tabela de tempos/volume enviada com ele.
 
 Usar nomes `<sessao>-<bloco>-<canal>-<metrica>-<veiculo>-<repeticao>-<AAAA-MM-DD>.<extensao>`, correspondentes aos CSV de `dados/brutos/`. Guardar aqui capturas, vídeos tratados e configuração de rede revisada. Seguir `dados/README.md` para vínculo com métricas e `dados/massa-de-dados.md` para tratamento dos dados.
 
