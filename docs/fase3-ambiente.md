@@ -18,12 +18,27 @@ registra uma sessão de avaliação nem preenche `ambientes.csv` com uma sessão
 |---|---|---|---|
 | CT01 | Portal; computador D01; Chrome | Wi-Fi: P1–P6; Wi-Fi, 4G e degradada: P7 | Modelo, processador, RAM, SO/build e versão do Chrome |
 | CT02 | Portal; mesmo D01; Firefox | Wi-Fi: P6 | Versão do Firefox |
-| CT03 | Portal; Android intermediário D03; Chrome | Wi-Fi: P6 | Modelo: Motorola edge 60 neo, RAM: 12 RAM, Android 16 e versão do Chrome: 156.0.8078.79 |
+| CT03 | Portal; Android intermediário D03; Chrome | Wi-Fi: P6 | Modelo: Motorola edge 60 neo, RAM: 12 GB, Android 16 e versão do Chrome: 156.0.8078.79 |
 | CT04 | Aplicativo; Android de entrada D02 | Wi-Fi: P6 | Modelo, RAM, Android/build, pacote e versão instalada |
-| CT05 | Aplicativo; Android intermediário D03 | Wi-Fi: P1–P6; Wi-Fi, 4G e degradada: P7 | Modelo: Motorola edge 60 neo, RAM: 12 RAM, Android 16 e versão do Chrome: 156.0.8078.79|
+| CT05 | Aplicativo; Android intermediário D03 | Wi-Fi: P1–P6; Wi-Fi, 4G e degradada: P7 | Modelo: Motorola edge 60 neo, RAM: 12 GB, Android 16 e versão instalada do app |
 | CT06 | Aplicativo; iPhone D04 (de Heitor) | Wi-Fi: P6 | Modelo, iOS/build e versão instalada; a registrar |
 
 *Tabela 1 — Contextos planejados. Fonte: elaborada para o plano de avaliação.*
+
+**Ambientes efetivamente usados até 22/11** (detalhes em `dados/brutos/ambientes.csv` e nos
+desvios D002, D005, D006, D007, D009 e D010):
+
+| ID | Sessão | Ambiente registrado | Diferença em relação ao plano |
+|---|---|---|---|
+| CT01 | S03 | Lenovo IdeaPad Slim 3, Arch Linux (Omarchy), Google Chrome 156.0.8078.47 | Computador do executor no lugar do candidato a D01 (D002) |
+| CT02 | S03 | Firefox 158.0.1 no mesmo computador | Login pelo gov.br não funcionou; sem tentativas (D005, pendente) |
+| CT03 | S03 | Galaxy S24+ (SM-S926B), Android 17, Chrome 157.0.8103.78 | Aparelho topo de linha no lugar do D03 (D007) |
+| CT05 | S03 | Galaxy S24+, app 2.6.3 (232) | Aparelho topo de linha e versão anterior do app (D006) |
+| CT05 | S05 | Motorola edge 60 neo, Android 16, app 2.7.0 (246), tela 1200x2670 | Modelo previsto para o D03; outro titular e veículo (D009) e novo script (D010) |
+| CT06 | S03 | iPhone 16e, iOS 27.2.1 (a conferir no aparelho), app DETRAN-DF 2.7.1 | Inventário registrado; P6 ainda não executado ([registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S03-CT06-iphone-registro-2026-11-22.md)) |
+| CT04 | — | Sem aparelho | Não avaliado até o momento |
+
+*Tabela 1a — Inventário efetivo por contexto. Fonte: `ambientes.csv` e registros da S03 e da S05.*
 
 D02 e D03 devem ser aparelhos distintos; a equipe justifica a classificação entrada/intermediário pelas especificações registradas, sem presumir modelos disponíveis. Respeitar os mínimos levantados na Fase 1 (Android 8.0 e iOS 15.1), verificando a compatibilidade da versão instalada. Sem D04, CT06 é **não avaliado**, não falha, e os resultados do aplicativo ficam restritos ao Android. Sem outro recurso obrigatório, registrar bloqueio; não substituir silenciosamente o contexto.
 
