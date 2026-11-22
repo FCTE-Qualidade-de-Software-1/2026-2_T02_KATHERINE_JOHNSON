@@ -73,9 +73,17 @@ coletivas dos responsáveis no planejamento, sua base é 5 h 30 min na #46 e 5 h
 não foi declarada a distribuição real entre as issues, por isso os campos coletivos acima não
 foram preenchidos com esse total individual.
 
-As 5 h registradas na tabela por issue e as 11 h 50 min declaradas por Hugo perfazem **16 h 50 min
-conhecidas**, não o esforço final da equipe. Daniel, Heitor e Pedro Druck possuem registros
-parciais; Pedro Henrique e Philipe não têm horas reais informadas no corte. Isso não significa
-zero horas trabalhadas. A [coleta final documental](gestao-fechamento-e2.md) registra a fonte,
-a conciliação, as estimativas por integrante e a contribuição parcial. A E1 permanece histórica;
-a decisão de dividir sua contribuição igualmente não foi aplicada à E2.
+Heitor declarou, em 22/11, o total individual de **11 h** na E2, contra **10 h 30 min estimadas**
+(+4,76%): a metade da #49 (6 h 30 min) mais a #53 (4 h). O valor é uma **estimativa calculada
+com apoio de Claude Code** a partir de registros datados (commits, PRs, revisões, comentários e
+arquivos locais), agrupados em blocos de trabalho, e não uma cronometragem: 3 h da #53, cerca de
+5,3 h em 16/11 e cerca de 2,9 h em 22/11 até 12:58, somando 11,2 h. O total substitui as 3 h já
+registradas na #53, sem somá-las de novo, e não inclui trabalho posterior a 13:15 de 22/11.
+
+Com as duas declarações, as horas conhecidas somam **24 h 50 min**: 11 h 50 min de Hugo, 11 h de
+Heitor, 1 h de Daniel (#28) e 1 h de Pedro Druck (#55). Isso **não é o esforço final da equipe**:
+Daniel e Pedro Druck possuem registros parciais; Pedro Henrique e Philipe não têm horas reais
+informadas no corte. Isso não significa zero horas trabalhadas, e os percentuais da tabela de
+contribuição mudam quando os demais declararem. A [coleta final documental](gestao-fechamento-e2.md)
+registra a fonte, a conciliação, as estimativas por integrante e a contribuição parcial. A E1
+permanece histórica; a decisão de dividir sua contribuição igualmente não foi aplicada à E2.

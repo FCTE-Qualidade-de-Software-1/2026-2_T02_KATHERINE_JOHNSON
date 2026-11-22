@@ -39,6 +39,7 @@ def calcular(snapshot):
             m = issue['responsaveis'][0]
             individuais[m]['real_min'] = (individuais[m]['real_min'] or 0) + Fraction(str(issue['real_h'])) * 60
     declarados = set()
+    detalhes = []
     for d in snapshot['declaracoes']:
         membro = d['integrante']
         if membro in declarados:
@@ -56,6 +57,8 @@ def calcular(snapshot):
             raise ValueError('Total declarado incompatível com horas já registradas')
         # A declaração é um total: substitui a soma conhecida, não a acumula.
         individuais[membro].update(real_min=total, completo=d['completo'])
+        detalhes.append(dict(integrante=membro, data=d['data'], fonte=d['fonte'], metodo_estimativa=d['metodo_estimativa'],
+                             escopo=d['escopo'], base_min=float(base), acrescimo_min=d['acrescimo_min'], total_min=float(total)))
     total_conhecido = sum(i['real_min'] or 0 for i in individuais.values())
     pci_completo = all(i['completo'] for i in individuais.values()) and total_conhecido > 0
     for item in individuais.values():
@@ -89,11 +92,35 @@ def calcular(snapshot):
                          percentual=float((reais-estimadas)/estimadas*100) if estimadas else None,
                          completo=len(com_horas)==len(fechadas)),
                 individuais=individuais,total_conhecido_min=float(total_conhecido),pci_completo=pci_completo,
+                declaracoes=detalhes,
                 retrabalho=dict(avaliados=avaliados,com_retrabalho=retrabalho,sem_revisao=sem_revisao,
                                 percentual=100*len(retrabalho)/len(avaliados) if avaliados else None),
                 revisoes_por_login=revisoes_por_membro,
                 espera_mediana_h=statistics.median(esperas) if esperas else None,
                 esperas_acima_48h=sum(h>48 for h in esperas))
+
+
+def lista_nomes(nomes):
+    nomes = list(nomes)
+    if len(nomes) <= 1:
+        return ''.join(nomes)
+    return ', '.join(nomes[:-1]) + ' e ' + nomes[-1]
+
+
+def quantidade(n):
+    return {0: 'nenhum', 1: 'um', 2: 'dois', 3: 'três', 4: 'quatro', 5: 'cinco', 6: 'seis'}.get(n, str(n))
+
+
+def declaracoes_texto(result):
+    paragrafos = []
+    for d in result['declaracoes']:
+        pct = d['acrescimo_min'] / d['base_min'] * 100 if d['base_min'] else 0
+        sinal = '+' if d['acrescimo_min'] >= 0 else '−'
+        paragrafos += [f"**{d['integrante']}** declarou, em {d['data'][8:10]}/{d['data'][5:7]}/{d['data'][:4]}, o total individual de "
+                       f"**{duracao(d['total_min'])}** na E2, contra {duracao(d['base_min'])} estimadas "
+                       f"(variação individual {sinal}{numero(abs(pct))}%). Fonte: {d['fonte']} "
+                       f"Estimativa-base: {d['metodo_estimativa']} Escopo: {d['escopo']}", '']
+    return paragrafos
 
 
 def numero(value):
@@ -110,7 +137,7 @@ def duracao(minutes):
 def contribuicao(result):
     """Apêndice permitido pela #49; indicadores de gestão ficam fora do artigo."""
     lines = [r'\section{Tabela de Contribuição Individual}', r'\label{sec:contribuicao}', '',
-        r'A Tabela~\ref{tab:contribuicao} resume as horas conhecidas da E2 em 22/11/2026. Só Hugo declarou o total individual; os demais registros são parciais ou ausentes. Os percentuais não são a contribuição final e não atribuem zero a horas desconhecidas. A conciliação está em \texttt{docs/gestao-fechamento-e2.md}.', '',
+        r'A Tabela~\ref{tab:contribuicao} resume as horas conhecidas da E2 em 22/11/2026. Declararam o total individual: ' + lista_nomes(d['integrante'] for d in result['declaracoes']) + r'; os demais registros são parciais ou ausentes. Os percentuais não são a contribuição final e não atribuem zero a horas desconhecidas. A conciliação está em \texttt{docs/gestao-fechamento-e2.md}.', '',
         r'\begin{table}[htbp]', r'\centering', r'\scriptsize',
         r'\caption{Contribuição documentada da E2 (parcial; não é o percentual final).}',
         r'\label{tab:contribuicao}', r'\begin{tabular}{P{3.1cm}P{6.0cm}P{2.2cm}}',
@@ -120,12 +147,15 @@ def contribuicao(result):
         percentual = numero(item['percentual_conhecido']) + r'\%' if item['percentual_conhecido'] is not None else 'Não apurável'
         lines.append(NOMES[m]+' & '+PAPEIS[m]+' & '+percentual+r' \\')
     lines += [r'\bottomrule', r'\end{tabular}', r'\par\smallskip',
-        r'\raggedright\scriptsize Fonte: issues da E2 e declaração individual de Hugo em 22/11/2026. Os percentuais conhecidos somam 100\% apenas do esforço informado; faltam declarações dos demais integrantes.',
+        r'\raggedright\scriptsize Fonte: issues da E2 e declarações individuais de ' + lista_nomes(d['integrante'] for d in result['declaracoes']) + r' em 22/11/2026. Os percentuais conhecidos somam 100\% apenas do esforço informado; faltam declarações dos demais integrantes.',
         r'\end{table}', '']
     return '\n'.join(lines)
 
 
-def relatorio(snapshot, result):
+def relatorio(snapshot, result, fonte='gestao/dados/fechamento-e2-2026-11-22.json'):
+    nomes = lista_nomes(d['integrante'] for d in result['declaracoes'])
+    parciais = sum(1 for i in result['individuais'].values() if i['real_min'] is not None and not i['completo'])
+    sem_horas = sum(1 for i in result['individuais'].values() if i['real_min'] is None)
     icm, tve, dp = result['icm'], result['tve'], result['retrabalho']
     lines = ['# Fechamento documental PSM/CID da Entrega 2', '',
              f"**Consulta:** {snapshot['consultado_em']}. **Corte:** {snapshot['corte']}. "
@@ -139,7 +169,7 @@ def relatorio(snapshot, result):
              f"| M-RC1 | {numero(tve['real_h'])} h / {numero(tve['estimativa_h'])} h = {numero(tve['percentual'])}% | "
              f"Amarelo, somente issues fechadas com horas {tve['issues']}; não é TVE global |",
              f"| M-RC2 | {duracao(result['total_conhecido_min'])} conhecidas; PCI final não apurável | "
-             'Declaração total de Hugo e registros parciais de três integrantes; dois sem horas informadas |',
+             f'Declaração total de {nomes} e registros parciais de {quantidade(parciais)} {"integrante" if parciais == 1 else "integrantes"}; {quantidade(sem_horas)} sem horas informadas |',
              f"| M-DP1 | {len(dp['com_retrabalho'])}/{len(dp['avaliados'])} = {numero(dp['percentual'])}% | "
              f"Conta PR com revisão humana; PRs sem revisão excluídos: {dp['sem_revisao']}; verde não comprova revisão profunda |", '',
              '*Tabela 1 — Indicadores no corte. Fonte: consulta de issues e PRs e plano PSM/CID.*', '',
@@ -160,16 +190,11 @@ def relatorio(snapshot, result):
         status = 'Total individual declarado' if item['completo'] else 'Parcial' if item['real_min'] is not None else 'Não informado'
         percent = numero(item['percentual_conhecido']) + '%' if item['percentual_conhecido'] is not None else 'Não apurável'
         lines.append(f"| {m} | {duracao(item['estimativa_min'])} | {duracao(item['real_min'])} | {status} | {percent} |")
-    lines += ['', '*Tabela 2 — Contribuição parcial, sem imputar zero às lacunas. Fonte: mesma consulta e declaração de Hugo.*', '',
+    lines += ['', '*Tabela 2 — Contribuição parcial, sem imputar zero às lacunas. Fonte: mesma consulta e declarações de ' + nomes + '.*', '',
               'O denominador da última coluna contém apenas as horas conhecidas; ele não é o esforço '
               'total da equipe e os percentuais não são o PCI final. A decisão de contribuição igual '
               'da E1 não foi estendida à E2.', '',
-              'Hugo declarou nesta sessão, em 22/11, ter trabalhado **1 h a mais do que o estimado na E2**. '
-              'A base de planejamento é #46 (11 h ÷ Hugo e Philipe = 5 h 30 min) mais #47 '
-              '(16 h ÷ três responsáveis = 5 h 20 min): **10 h 50 min estimadas; 11 h 50 min reais '
-              'declaradas; variação individual +9,23%**. Esse rateio é apenas da estimativa. '
-              'Não foi inventada a distribuição real entre #46 e #47, nem atribuídas horas de Hugo '
-              'a Pedro Druck ou aos demais. O total individual não é somado novamente aos totais por issue.', '',
+              *declaracoes_texto(result),
               'O planejamento no corpo da #46 identifica Hugo e Philipe, embora a lista de assignees '
               'da API contenha só Hugo. Usou-se o planejamento explícito para ratear estimativas, '
               'coerente com a tabela histórica de horas. Estimativas individuais fracionárias são '
@@ -178,7 +203,7 @@ def relatorio(snapshot, result):
               '| Evidência | Encaminhamento documentado | Responsável designado | Estado |',
               '|---|---|---|---|',
               '| ICM abaixo de 70%; coleta/análise atrasadas | Priorizar conferência de S03 e registrar limitações antes da integração da análise | Equipe da #47; Heitor revisa #48 | Proposta para confirmação no PR |',
-              '| Esforço individual incompleto | Registrar totais individuais e atribuição por issue, conciliando totais sem duplicidade | Cada integrante; Daniel consolida | Hugo declarou total; demais declarações pendentes |',
+              '| Esforço individual incompleto | Registrar totais individuais e atribuição por issue, conciliando totais sem duplicidade | Cada integrante; Daniel consolida | ' + nomes + (' declarou' if len(result['declaracoes']) == 1 else ' declararam') + ' total; demais declarações pendentes |',
               '| Tabela de contribuição ainda era da E1 | Substituir pelo retrato parcial E2; publicar final somente após todas as declarações | Integrador da #49 | Atualizada nesta branch |',
               '| Relato de falha no aplicativo | Entregar proposta de processo, ficha e matriz de regressão da #36 | Revisão designada a Daniel | Artefato entregue; revisão e eficácia pendentes |',
               '| Coleta final prevista para 21/11 sem registro | Apurar em 22/11 com data real, fontes e reprodução local | Consolidação desta entrega | Realizada; sem simular reunião da equipe |', '',
@@ -186,7 +211,7 @@ def relatorio(snapshot, result):
               'Esses encaminhamentos são propostas documentadas nesta revisão, não deliberações '
               'de uma reunião que não ocorreu. Não foram inventadas atas nem aprovações dos demais autores.', '',
               '## Fontes e reprodução', '',
-              '- [Consulta datada e declaração individual](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/dados/fechamento-e2-2026-11-22.json).',
+              f'- [Consulta datada e declarações individuais](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/{fonte}).',
               '- [Cálculo e testes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/gestao/scripts).',
               '- [Planejamento e histórico](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/plano-psm.md).', '',
               '```bash', 'python3 gestao/scripts/fechar_e2.py', 'python3 -m unittest discover -s gestao/tests -v', '```', '',
@@ -198,12 +223,12 @@ def relatorio(snapshot, result):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--fonte', type=Path, default=ROOT/'gestao/dados/fechamento-e2-2026-11-22.json')
+    parser.add_argument('--fonte', type=Path, default=ROOT/'gestao/dados/fechamento-e2-2026-11-22-v2.json')
     args = parser.parse_args()
     snapshot = json.loads(args.fonte.read_text(encoding='utf-8'))
     result = calcular(snapshot)
     (ROOT/'gestao/dados/indicadores-e2.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    report = relatorio(snapshot,result)
+    report = relatorio(snapshot,result,str(args.fonte.resolve().relative_to(ROOT)))
     for path in ('gestao/relatorio-metricas-e2.md','docs/gestao-fechamento-e2.md'):
         (ROOT/path).write_text(report,encoding='utf-8')
     (ROOT/'artigo/secoes/contribuicao.tex').write_text(contribuicao(result),encoding='utf-8')
