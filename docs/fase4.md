@@ -81,8 +81,8 @@ e o julgamento por característica e por canal.
 
 ## 5. Limitações já conhecidas
 
-- **iOS:** a equipe informou em 16/11 que tem um iPhone, então o contexto CT06 pode ser avaliado.
-  O modelo, a versão do iOS e a versão do aplicativo ainda precisam ser registrados no inventário
+- **iOS:** o iPhone é de Heitor, então o contexto CT06 pode ser avaliado. O modelo, a versão do
+  iOS e a versão do aplicativo ainda precisam ser registrados no inventário
   ([Recursos e ambiente](fase3-ambiente.md)). Sem esse registro, o CT06 continua não avaliado e as
   conclusões sobre o aplicativo valem apenas para o Android (bloqueio B03 em
   [Cronograma e bloqueios](fase3-cronograma.md)).
