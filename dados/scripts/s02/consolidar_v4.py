@@ -101,7 +101,8 @@ def main():
     portal = ler(PRIV / 'ambiente-portal.json')
     viewport = ler(PRIV / 'viewport-portal.json')
     app = ler(PRIV / 'ambiente-app.json')
-    agora = datetime.now().astimezone().isoformat(timespec='seconds')
+    data_portal = datetime.fromtimestamp((PRIV / 'ambiente-portal.json').stat().st_mtime).astimezone().isoformat(timespec='seconds')
+    data_app = datetime.fromtimestamp((PRIV / 'ambiente-app.json').stat().st_mtime).astimezone().isoformat(timespec='seconds')
     ambientes.append(base('ambientes', contexto='CT01', canal='portal', dispositivo='D06',
         modelo=portal['modelo'], cpu=portal['cpu'], ram_gb=portal['ram_gb'],
         so_build=portal['so'] + '; kernel ' + portal['kernel'], navegador_versao=portal['navegador'],
@@ -109,14 +110,14 @@ def main():
         resolucao=f"{viewport['largura']}x{viewport['altura']} CSS; DPR {viewport['dpr']}",
         gravador_versao='puppeteer-core 24.43.1; CDP screencast com timestamps; taxa variável',
         configuracao_rede='Wi-Fi corrente sem limitação; carga externa não controlada; velocidade não aferida',
-        data_hora=agora))
+        data_hora=data_portal))
     ambientes.append(base('ambientes', contexto='CT05', canal='aplicativo', dispositivo='D05',
         modelo=app['modelo'], cpu=app['cpu'], ram_gb=app['ram_gb'],
         so_build='Android ' + app['so'] + '; ' + app['build'], navegador_versao='nao_se_aplica',
         aplicativo_versao='br.com.mesotec.detrandf ' + app['versao_app'], resolucao=app['resolucao'],
         gravador_versao='adb 37.0.1; screenrecord com Mostrar toques; timestamps por quadro (taxa variável)',
         configuracao_rede='Wi-Fi corrente sem limitação; carga externa não controlada; velocidade não aferida',
-        data_hora=agora))
+        data_hora=data_app))
     gravar('ambientes', ambientes)
     # A lista explícita de campos impede copiar nomes, placas, datas de infração ou URLs.
     gravar('volume', volumes)

@@ -39,6 +39,13 @@ def main():
                 concluidas += 1
             # Preservar o erro: a reposição ganha novo número, sem sobrescrever registros.
             continue
+        try:
+            conectado = instrumento.app.adb('get-state').strip() == 'device'
+        except Exception:
+            conectado = False
+        if not conectado:
+            print(json.dumps({'bloco': args.bloco, 'etapa': 'aguardando_usb', 'proxima_repeticao': rep}), flush=True)
+            return 2
         print(json.dumps({'bloco': args.bloco, 'repeticao': rep, 'etapa': 'iniciando'}), flush=True)
         inicio = instrumento.agora()
         try:

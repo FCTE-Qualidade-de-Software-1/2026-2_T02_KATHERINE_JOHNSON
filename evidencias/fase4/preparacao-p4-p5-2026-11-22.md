@@ -34,3 +34,15 @@ ficam no privado. As gravações recusam sobrescrita de uma repetição já exis
 Sintaxe Python e JavaScript verificadas. Navegação de preparação validada no grupo Infrações,
 com gesto adaptado à tela do Samsung. Isso não comprova o ensaio dos modos de medição, marcação
 visual de tempos, equivalência de contadores ou conferência independente.
+
+## Continuação autorizada após autenticação
+
+- O responsável confirmou que se trata de outro titular e veículo e que o consentimento já
+  aplicado cobre esse participante. Código reservado para este caso: V4; a seleção é mantida
+  na correspondência privada, sem publicar placa ou identificação.
+- Início em Consultar confirmado antes da primeira medição; P4/M2.1.1 e P7/M3.2.3 usam esse
+  marco nos dois canais. A seleção e os filtros ficam fora do intervalo cronometrado.
+- Chrome de medição aberto em perfil separado, privado, por autorização explícita do responsável;
+  o titular autenticou pessoalmente. A conexão integrada havia falhado na leitura de tela.
+- A consulta de ensaio no aplicativo retornou infrações; o portal carregou a lista de veículos.
+  Esses passos são preparação e não entram nos denominadores das medições.
