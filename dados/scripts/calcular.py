@@ -109,7 +109,7 @@ def ler_validar(root):
                 if not all(key) or key in seen:
                     raise ValueError('chave vazia ou duplicada')
                 seen.add(key)
-                if row['sessao'] not in {'S01', 'S02', 'S03', 'S04', 'S05'}:
+                if row['sessao'] not in {'S01', 'S02', 'S03', 'S04', 'S05', 'S06'}:
                     raise ValueError('sessão inválida')
                 if 'contexto' in row and CONTEXTOS.get(row['contexto']) != row['canal']:
                     raise ValueError('contexto incompatível com canal')

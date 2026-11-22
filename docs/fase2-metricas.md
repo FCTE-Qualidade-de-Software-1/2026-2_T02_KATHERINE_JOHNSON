@@ -79,7 +79,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 ## M2.1.1 — Tempo até a exibição completa da lista de infrações
 
 - **Questão respondida:** Q2.1
-- **Definição:** intervalo entre a seleção do veículo (clique ou toque que dispara a consulta, já que nenhum dos canais tem formulário de busca) e a primeira exibição completa da lista de infrações.
+- **Definição:** intervalo entre o clique ou toque em “Consultar”, após a seleção do veículo e o preenchimento dos filtros, e a primeira exibição completa da lista de infrações. Definição operacional confirmada por Hugo em 22/11/2026 para a sessão S06 (V4), pois os canais apresentam filtros antes da lista; a seleção e o preenchimento ficam fora do intervalo cronometrado.
 - **Fórmula:** tempo final menos tempo inicial.
 - **Unidade:** segundos.
 - **Fonte dos dados:** gravação de tela nos dois canais, com contagem de quadros entre o toque e a lista completa; no Portal, também o Chrome DevTools. O perfilador do Android Studio não serve, porque não funciona com aplicativos de loja (não depuráveis).

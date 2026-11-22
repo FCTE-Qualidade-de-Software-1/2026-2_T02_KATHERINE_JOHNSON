@@ -104,8 +104,8 @@ def veiculo(lista):
     raise RuntimeError('veículo não encontrado na lista')
 
 
-def ate_filtro(rotulos, rolagens):
-    tocar(inicio(rolagens), rotulos, 'Infrações')
+def ate_filtro(rotulos, rolagens, card_inicio=None):
+    tocar(card_inicio if card_inicio is not None else inicio(rolagens), rotulos, 'Infrações')
     tocar(esperar(lambda n: texto(n).startswith('Histórico de infrações por veículo, ')), rotulos, 'Histórico de infrações por veículo')
     esperar(lambda n: n['texto'] == 'Veículos atuais de minha propriedade'); time.sleep(1.5)
     tocar(veiculo(ler()), rotulos, 'veículo')
@@ -212,7 +212,9 @@ def parar(p, disp, nome):
     local = os.path.join(PRIV, f'{nome}.mp4')
     if os.path.exists(local):
         raise FileExistsError('Gravação já existe; use repetição diferente')
-    subprocess.run(['adb', 'pull', disp, local], capture_output=True); sh('rm', disp)
+    subprocess.run(['adb', 'pull', disp, local], capture_output=True, check=True, timeout=30)
+    os.chmod(local, 0o600)
+    sh('rm', disp)
     return os.path.relpath(local, RAIZ)
 
 
@@ -260,6 +262,33 @@ def tempo(metrica, rep, data):
             'observacao': 'quadros inicial e final marcados na gravação (indicador de toque e tela completa); a dica é só apoio'}
 
 
+def tempo_detalhe_na_lista(rep, data):
+    """Repete da lista ao detalhe, sem refazer a navegação inicial a cada tentativa."""
+    c = cartao(data, [])
+    ponto = [(c['caixa'][0] + c['caixa'][2]) // 2, (c['caixa'][1] + c['caixa'][3]) // 2]
+    antes = sh('settings', 'get', 'system', 'show_touches').strip()
+    sh('settings', 'put', 'system', 'show_touches', '1')
+    nome = f'tempo-app-M2.1.2-{rep}'
+    p = None
+    try:
+        p, disp, t0 = gravar(nome)
+        t_toque = tocar(c)
+        esperar(lambda n: n['texto'] == 'Confira o detalhamento da infração')
+        t_fim = time.time()
+        time.sleep(1.5)
+        video = parar(p, disp, nome)
+        p = None
+        fechar_detalhe()
+    finally:
+        if p is not None:
+            parar(p, disp, nome)
+        sh('settings', 'put', 'system', 'show_touches', '1' if antes == '1' else '0')
+    return {'metrica': 'M2.1.2', 'repeticao': rep, 'data_hora': agora(),
+            'inicio_evento': 'toque na infração', 'fim_evento': 'detalhe visível e estável',
+            'ponto_toque': ponto, 'dica_tempo_s': round(t_fim - t_toque, 2), 'gravacao': video,
+            'observacao': 'Dica por sondagem da interface; marcar início e fim no vídeo, com segunda leitura.'}
+
+
 def bytes_uid(uid):
     sh('dumpsys', 'netstats', '--poll'); time.sleep(1)
     tot, dentro = 0, False
@@ -276,9 +305,9 @@ def bytes_uid(uid):
 def volume(rep):
     uid = re.search(r'uid:(\d+)', subprocess.run(['adb', 'shell', 'pm', 'list', 'packages', '-U', PKG], capture_output=True, text=True).stdout).group(1)
     rol = []
-    inicio(rol)
+    card_inicio = inicio(rol)
     b0 = bytes_uid(uid)
-    tocar(ate_filtro([], rol)); ate_resultado(rol); cartao(os.environ.get('DATA', ''), rol) if os.environ.get('DATA') else None
+    tocar(ate_filtro([], rol, card_inicio)); ate_resultado(rol); cartao(os.environ.get('DATA', ''), rol) if os.environ.get('DATA') else None
     time.sleep(3)
     b1 = bytes_uid(uid)
     return {'repeticao': rep, 'data_hora': agora(), 'instrumento': 'adb dumpsys netstats detail (UID do pacote, tag 0x0)',

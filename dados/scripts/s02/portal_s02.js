@@ -13,8 +13,11 @@ const fs = require('fs');
 const puppeteer = require(path.join(__dirname, '..', 'p6', 'node_modules', 'puppeteer-core'));
 
 const RAIZ = path.resolve(__dirname, '..', '..', '..');
-const PRIV = path.join(RAIZ, 'dados', 'privado', 'S02');
-fs.mkdirSync(PRIV, { recursive: true });
+const caso = process.env.CASO || '';
+if (caso && !/^V[1-9][0-9]*$/.test(caso)) throw new Error('Código de caso inválido');
+const PRIV = path.join(RAIZ, 'dados', 'privado', 'S02', caso);
+fs.mkdirSync(PRIV, { recursive: true, mode: 0o700 });
+fs.chmodSync(PRIV, 0o700);
 const espera = ms => new Promise(r => setTimeout(r, ms));
 const LIMITE = 60000;
 const HOME = 'https://portal.detran.df.gov.br/#/home';
@@ -115,7 +118,8 @@ async function tarjarECapturar(page, arquivo) {
 
 // Gravação: screencast do Chrome, um JPEG com horário a cada mudança da tela (taxa variável).
 async function gravar(page, pasta) {
-  fs.rmSync(pasta, { recursive: true, force: true }); fs.mkdirSync(pasta, { recursive: true });
+  if (fs.existsSync(pasta)) throw new Error('Gravação já existe; use repetição diferente');
+  fs.mkdirSync(pasta, { recursive: true, mode: 0o700 });
   const cdp = await page.createCDPSession(); const quadros = [];
   cdp.on('Page.screencastFrame', f => {
     fs.writeFileSync(path.join(pasta, String(quadros.length).padStart(5, '0') + '.jpg'), Buffer.from(f.data, 'base64'));
@@ -179,7 +183,7 @@ async function tempo(page, metrica, rep, data) {
   const consultar = () => [...document.querySelectorAll('button')].find(b => b.innerText.trim() === 'Consultar' && b.getBoundingClientRect().width > 0) || null;
   let tClique, tFim;
   const pasta = path.join(PRIV, `tempo-portal-${metrica}-${rep}`);
-  if (metrica === 'M2.1.1') {
+  if (metrica === 'M2.1.1' || metrica === 'M3.2.3') {
     const parar = await gravar(page, pasta); await espera(800);
     tClique = await clicar(page, consultar);
     await aguardar(page, listaVisivel); tFim = Date.now() / 1000; await espera(1500);
@@ -209,7 +213,7 @@ async function volume(page, rep) {
     escopo: 'da abertura do menu Infração até a lista completa (mesmo intervalo do P3)', privado: `dados/privado/S02/volume-portal-${rep}.json` };
 }
 
-(async () => {
+async function main() {
   const [modo, a, b2, c] = process.argv.slice(2);
   const { b, page } = await conectar();
   let r;
@@ -221,9 +225,12 @@ async function volume(page, rep) {
     else throw new Error('modo: campos | fluxo | tempo | volume');
     r.resultado = 'concluida';
   } catch (e) {
+    fs.writeFileSync(path.join(PRIV, 'erro-' + Date.now() + '.json'), JSON.stringify({tipo:e.name,mensagem:e.message}), {mode:0o600});
     const exp = e.message === 'sessao_expirada' || !(await logado(page).catch(() => false));
-    r = { modo, resultado: exp ? 'sessao_expirada' : e.message === 'tempo_limite' ? 'tempo_limite' : 'falha', motivo: e.message, data_hora: agora() };
+    r = { modo, resultado: exp ? 'sessao_expirada' : e.message === 'tempo_limite' ? 'tempo_limite' : 'falha', motivo: e.name, data_hora: agora() };
   }
   console.log(JSON.stringify(r));
   b.disconnect();
-})().catch(e => { console.error(e.message); process.exit(1); });
+}
+module.exports = { conectar, inicio, irAoHistorico, selecionar, clicar, aguardar, gravar, tempo, volume, listaVisivel, detalheVisivel, seta, PRIV };
+if (require.main === module) main().catch(e => { console.error(e.name); process.exit(1); });
