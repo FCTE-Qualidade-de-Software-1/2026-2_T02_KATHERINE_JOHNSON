@@ -5,7 +5,7 @@
 \label{subsec:proposito}
 \label{subsec:partes-interessadas}
 
-O Detran-DF oferece a consulta de infrações no Portal de Serviços e no aplicativo móvel. Embora compartilhem o servidor de identidade, os canais consultam serviços de \textit{backend} distintos (Seção~\ref{subsec:produto}), o que pode gerar diferenças de completude, tempo de resposta ou conclusão da tarefa. Esta avaliação comparativa tem como propósito verificar se os dois canais entregam qualidade equivalente e apoiar quatro decisões institucionais da \textbf{Área de Governança Digital do Detran-DF} (requisitante hipotético adotado para orientar a avaliação, sem vínculo oficial com o órgão), sintetizadas na Tabela~\ref{tab:decisoes}.
+A consulta de infrações é avaliada para comparar a qualidade dos dois canais e apoiar as decisões da Tabela~\ref{tab:decisoes}. A Área de Governança Digital do Detran-DF é o requisitante hipotético, sem vínculo oficial com o órgão. Cidadão, requisitante e equipe técnica fornecem os pontos de vista dos objetivos GQM.
 
 \begin{table}[htbp]
 \centering
@@ -13,7 +13,7 @@ O Detran-DF oferece a consulta de infrações no Portal de Serviços e no aplica
 \label{tab:decisoes}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
-\begin{tabular}{|c|p{6.5cm}|p{3.4cm}|p{2.7cm}|}
+\begin{tabular}{|c|P{6.5cm}|P{3.4cm}|P{2.7cm}|}
 \hline
 \textbf{ID} & \textbf{Decisão} & \textbf{Quem decide} & \textbf{Evidência usada} \\ \hline
 D1 & Em qual canal e característica investir primeiro & Requisitante & Objetivos G1, G2 e G3 \\ \hline
@@ -25,32 +25,32 @@ D4 & Quais plataformas e redes devem ter suporte garantido & Equipe técnica de 
 \raggedright\scriptsize Fonte: elaborada pela equipe.
 \end{table}
 
-A Tabela~\ref{tab:partes-interessadas} sintetiza as partes interessadas mapeadas, seus critérios de sucesso e sua influência direta na avaliação (o detalhamento estendido encontra-se na GitPage em \texttt{docs/fase1-proposito.md}). As três primeiras fornecem os pontos de vista dos objetivos GQM (Seção~\ref{subsec:rastreabilidade}).
+As partes interessadas e seus critérios estão na Tabela~\ref{tab:partes-interessadas}. O detalhamento completo permanece na GitPage, em \texttt{docs/fase1-proposito.md}.
 
 \begin{table}[htbp]
 \centering
-\caption{Síntese das partes interessadas, critérios de sucesso e influência}
+\caption{Partes interessadas, critérios de sucesso e influência.}
 \label{tab:partes-interessadas}
 \footnotesize
-\setlength{\tabcolsep}{2.5pt}
-\begin{tabular}{|p{3.0cm}|p{3.4cm}|p{3.6cm}|p{3.2cm}|}
-\hline
-\textbf{Parte interessada} & \textbf{Necessidade principal} & \textbf{Critério de sucesso} & \textbf{Influência (GQM)} \\ \hline
-Requisitante: Gov. Digital Detran-DF (hipotético) & Verificar paridade entre canais e priorizar melhorias & Julgamento por canal para apoiar D1 & Propósito comparativo transversal \\ \hline
-Cidadão/condutor proprietário do veículo & Dados completos e corretos para pagar ou recorrer & Consulta concluída e consistente nos dois canais & Adequação funcional e contexto (G1 e G3) \\ \hline
-Equipe técnica de TI do Detran-DF & Identificar lentidão, consumo de rede ou falhas & Medições reproduzíveis por canal e rede (D2, D4) & Eficiência de desempenho (G2) e cobertura de contexto (G3) \\ \hline
-Atendimento, Controle e Equipe Avaliadora & Orientar uso (D3), auditar transparência e viabilizar coleta & Recomendação por contexto e execução em caixa-preta & Comparação em G2/G3 e cortes de escopo \\ \hline
+\begin{tabular}{P{3.6cm}P{6.6cm}P{2.5cm}}
+\toprule
+Parte interessada & Critério de sucesso & Influência \\
+\midrule
+Requisitante hipotético & Julgamento por canal para priorizar investimento & D1; G1--G3 \\
+Cidadão/condutor & Consulta concluída com informação completa e consistente & G1 e G3 \\
+Equipe técnica de TI & Medições reproduzíveis de tempo, volume e conclusão & D2/D4; G2/G3 \\
+Atendimento e avaliadores & Recomendação por contexto e evidência auditável & D3; G2/G3 \\
+\bottomrule
 \end{tabular}
-\par\smallskip
-\raggedright\scriptsize Fonte: elaborada pela equipe. Tabela completa na GitPage (\texttt{docs/fase1-proposito.md}).
+\par\smallskip{\footnotesize Fonte: elaborada pela equipe.}
 \end{table}
 
 \subsubsection{Passo 1.2: Escopo, Profundidade e Limites de Validade}
 \label{subsec:escopo}
 
-O objeto da avaliação é o \textbf{histórico de infrações por veículo}, na área autenticada, no Portal de Serviços \cite{detrandf2026portal} e no aplicativo (v.~2.6.9, Android e iOS) \cite{detrandf2026app}, observado da escolha do menu de infrações (pós-login) até a exibição dos detalhes da autuação. Os contextos avaliados compreendem: (i) \textbf{Portal:} Chrome e Firefox em desktop, e Chrome em Android; (ii) \textbf{Aplicativo:} smartphones Android de entrada e intermediário (Android $\ge 8.0$) e iPhone (iOS $\ge 15.1$); e (iii) \textbf{Rede:} Wi-Fi, 4G e rede degradada simulada.
+O objeto é o histórico de infrações por veículo na área autenticada, da escolha do menu até o detalhe. Planejam-se Chrome e Firefox no computador, Chrome no Android, aplicativo Android de entrada/intermediário ($\ge 8.0$) e iOS ($\ge 15.1$), com Wi-Fi, 4G e rede degradada. Os canais e versões observadas são registrados por sessão; não se presume que a versão do levantamento seja a executada. O escopo é externo, em caixa-preta; exclusões constam da Tabela~\ref{tab:fora-escopo}.
 
-A avaliação adota profundidade de caixa-preta com métricas estritamente externas. A Tabela~\ref{tab:fora-escopo} sintetiza os cortes de escopo. Como limites de validade, a massa de dados restringe-se a veículos reais com consentimento escrito de integrantes e familiares, os tempos refletem o período de coleta sem controle de carga dos servidores, e a correção funcional baseia-se na consistência mútua entre os canais. O aplicativo no iOS depende do iPhone de um integrante, a ser registrado na Fase 3; sem o registro, os resultados do aplicativo valem apenas para o Android.
+A validade limita-se aos veículos consentidos, configurações e período medidos, sem controlar carga do servidor. Consistência entre canais não comprova correção perante uma base oficial independente. O iOS depende do inventário e da execução efetiva do aparelho; sem eles, o contexto é não avaliado.
 
 \begin{table}[htbp]
 \centering
@@ -58,7 +58,7 @@ A avaliação adota profundidade de caixa-preta com métricas estritamente exter
 \label{tab:fora-escopo}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
-\begin{tabular}{|p{4.2cm}|p{8.8cm}|}
+\begin{tabular}{|P{4.2cm}|P{8.8cm}|}
 \hline
 \textbf{Item fora do escopo} & \textbf{Justificativa do corte} \\ \hline
 Autenticação (login) e Consulta pública sem login & Login usa mecanismos incomparáveis (reCAPTCHA vs. biometria); consulta pública omite o detalhamento da autuação. \\ \hline

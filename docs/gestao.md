@@ -1,5 +1,7 @@
 # Gestão do projeto (PSM/CID)
 
+**Fechamento em 22/11/2026:** a [coleta final documental da E2](gestao-fechamento-e2.md) atualiza os indicadores, registra a declaração de Hugo e distingue horas conhecidas de totais ainda não informados. Os valores históricos abaixo preservam suas datas de corte.
+
 A execução do projeto é acompanhada com métricas baseadas no PSM/CID, em três categorias:
 
 - **Desempenho dos processos** — por exemplo, retrabalho e revisões aprovadas de primeira;

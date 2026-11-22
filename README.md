@@ -67,9 +67,8 @@ Dados pessoais de condutores e veículos não são publicados. As regras de anon
 **Artigo (PDF):**
 
 ```bash
-cd artigo
-latexmk -pdf main.tex          # ou: tectonic main.tex
-python3 scripts/verificar.py   # checagens mecânicas de citações, rótulos e termos
+bash artigo/scripts/compilar.sh # usa tectonic ou latexmk; requer pdfinfo/pdftotext
+python3 artigo/scripts/verificar.py # inclui checagem de seções ausentes
 ```
 
 **GitPage (pré-visualização local):**
@@ -77,6 +76,19 @@ python3 scripts/verificar.py   # checagens mecânicas de citações, rótulos e 
 ```bash
 pip install -r requirements-docs.txt
 mkdocs serve                   # http://127.0.0.1:8000
+```
+
+## Melhoria e fechamento da E2
+
+A [proposta de processo de diagnóstico e regressão](melhorias/consulta-infracoes/README.md)
+trata o bloqueio relatado no aplicativo, com fonte e limites explícitos. O
+[fechamento documental PSM/CID](gestao/relatorio-metricas-e2.md) registra indicadores, horas
+conhecidas e as declarações ainda necessárias para calcular a contribuição final da E2.
+
+```bash
+python3 melhorias/consulta-infracoes/verificar.py
+python3 gestao/scripts/fechar_e2.py
+python3 -m unittest discover -s gestao/tests -v
 ```
 
 ## Equipe

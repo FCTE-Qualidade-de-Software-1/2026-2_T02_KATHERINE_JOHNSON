@@ -163,3 +163,16 @@ A tabela abaixo será preenchida a cada coleta para compor a seção de Gestão 
 | 1.2 | 10/11/2026 | Seção 3.4 com as medidas complementares da retrospectiva (tempo até a 1ª revisão, revisões por integrante, atas ÷ reuniões) e Seção 4.1 com o ciclo de coleta da Entrega 2 |
 
 *Versão 1.2 — 10/11/2026 — Equipe Katherine Johnson (FGA0315/UnB).*
+
+## 7. Registro da coleta de fechamento da E2
+
+A coleta prevista para 21/11 foi apurada em **22/11/2026**, com a data real e o desvio de agenda
+registrados em [`relatorio-metricas-e2.md`](relatorio-metricas-e2.md). A consulta de issues e PRs,
+a declaração de Hugo e os resultados reproduzíveis estão em `gestao/dados/` e
+`gestao/scripts/fechar_e2.py`. Horas ausentes permanecem desconhecidas; uma declaração de total
+individual substitui a soma parcial correspondente, sem dupla contagem. O rateio de estimativas
+coletivas serve somente ao planejamento e não é uma atribuição de horas reais.
+
+O fechamento documental foi realizado, mas o PCI final e a variação global dependem das
+outras declarações individuais e da conciliação por issue. Os encaminhamentos da coleta são
+propostas para revisão no PR; não se registra reunião ou aprovação humana sem evidência.

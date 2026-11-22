@@ -1,43 +1,33 @@
 \subsection{Fase 3: Projeto da Avaliação}
 \label{sec:fase3-plano}
 
-A avaliação será externa, em caixa-preta, com roteiro fixo e o mesmo veículo nos dois canais. O plano operacional e os instrumentos estão em \texttt{docs/fase3-*.md} e \texttt{dados/} no repositório. A Tabela~\ref{tab:fase3-procedimentos} resume a rastreabilidade entre as métricas da Fase 2 e os procedimentos. Cada sessão terá executor, registrador e conferência posterior por avaliador independente, com vínculo entre registro, contexto e evidência anonimizada.
+O plano em \texttt{docs/fase3-*.md} fixa veículo e infração nos dois canais, após autenticação pelo titular. Executor, registrador e conferente independente vinculam cada tentativa ao inventário e à evidência anonimizada. A Tabela~\ref{tab:fase3-procedimentos} relaciona instrumentos e métricas.
 
 \begin{table}[htbp]
 \centering
-\caption{Procedimentos e registros planejados para a avaliação.}
+\caption{Procedimentos e instrumentos da avaliação.}
 \label{tab:fase3-procedimentos}
 \small
-\begin{tabular}{p{0.08\textwidth}p{0.28\textwidth}p{0.51\textwidth}}
+\begin{tabular}{P{0.08\textwidth}P{0.28\textwidth}P{0.51\textwidth}}
 \toprule
 Roteiro & Métricas & Instrumento e registro \\
 \midrule
-P1 & M1.1.1, M1.1.2 & Capturas; presença dos campos por infração. \\
-P2 & M1.2.1, M1.2.2 & Capturas pareadas; classificação da consistência. \\
-P3 & M1.3.1, M1.3.2 & Vídeo; passos e transições em três execuções. \\
-P4 & M2.1.1, M2.1.2 & Vídeo; quadros ou timestamps e tempos. \\
-P5 & M2.2.1 & DevTools e contador por UID no Android; bytes. \\
-P6 & M3.1.1, M3.1.2 & Três tentativas por contexto; registro de conclusão. \\
-P7 & M3.2.1--M3.2.3 & Vídeo e registro de tentativas por canal e rede. \\
+P1 & M1.1.1, M1.1.2 & Capturas; presença de campos por infração. \\
+P2 & M1.2.1, M1.2.2 & Capturas pareadas; consistência. \\
+P3 & M1.3.1, M1.3.2 & Vídeo; passos e telas em três execuções. \\
+P4 & M2.1.1, M2.1.2 & Vídeo; quadros ou timestamps. \\
+P5 & M2.2.1 & DevTools e contador por UID no Android. \\
+P6 & M3.1.1, M3.1.2 & Três tentativas de conclusão por contexto. \\
+P7 & M3.2.1--M3.2.3 & Tentativas e tempos por canal/rede. \\
 \bottomrule
 \end{tabular}
-\par\smallskip{\footnotesize Fonte: elaborado para o plano de avaliação.}
+\par\smallskip{\footnotesize Fonte: plano da Fase 3.}
 \end{table}
 
-O contexto de referência será o Portal de Serviços no Chrome em computador e o aplicativo em Android intermediário, ambos em Wi-Fi. Para cobertura, acrescentam-se Firefox no computador, Chrome no Android, Android de entrada e iOS, no iPhone de um integrante. Modelos, memória, sistema, versões instaladas e taxa de gravação serão registrados por sessão; esses recursos ainda não foram confirmados. Sem o registro do iPhone, o iOS será não avaliado e as conclusões do aplicativo se restringirão ao Android.
+A referência é Chrome no computador e aplicativo Android intermediário, em Wi-Fi. Acrescentam-se Firefox, Chrome no Android, Android de entrada e iOS conforme inventário disponível. Versões efetivamente usadas são registradas por sessão; diferenças do plano exigem desvio. Recursos e contextos indisponíveis são declarados, sem resultados presumidos.
 
-As consultas começam após autenticação pelo titular. Mantém-se o cache nos dois canais e descarta-se um aquecimento por bloco, sem presumir equivalência interna dos caches. P4 e P5 terão dez medidas válidas por canal, com limite de vinte tentativas; P7 terá dez tentativas por canal e condição, preservando falhas. O limite de espera será 60~s. Os tempos serão resumidos por média, mediana e P90 pelo posto mais próximo; o julgamento usa a mediana. P6 considera concluído o contexto com sucesso em pelo menos duas de três tentativas.
+P4/P5 exigem aquecimento e dez medidas válidas por bloco, limitadas a vinte tentativas; P7, aquecimento e dez tentativas por canal/rede, preservando falhas. Mantém-se cache, sem presumir equivalência interna. A espera máxima é 60~s. Reportam-se média, mediana e P90 pelo posto mais próximo; o julgamento usa mediana. P6 aprova o contexto com pelo menos duas conclusões em três. Computador exige CT01 e CT02; contextos ausentes limitam a cobertura.
 
-As condições de rede serão Wi-Fi, saída 4G e perfil degradado aplicado no ponto de acesso Linux aos dois clientes: atraso de 300~ms com variação de 50~ms, banda de 1~Mbit/s e perda de 1\% por sentido. O piloto deve validar interfaces, configuração e instrumentos. O volume só permitirá comparação direta se os contadores medirem escopos equivalentes; caso contrário, será reportado separadamente, com limitação explícita. Métricas indisponíveis não recebem valor zero nem julgamento favorável.
+As redes são Wi-Fi, 4G e perfil degradado no ponto de acesso Linux: atraso de 300~ms com variação de 50~ms, banda de 1~Mbit/s e perda de 1\% por sentido. O piloto valida configuração e escopo dos contadores; volume só permite comparação direta com instrumentos equivalentes. Sem essa validação, reporta-se a limitação.
 
-A amostra intencional prevê até três veículos, com mínimo de um veículo com infração e consentimento escrito. Busca-se diversidade de situações, órgãos e infrações de velocidade, sem pressupor sua disponibilidade. Selecionam-se previamente até três infrações por veículo para P1/P2; P3--P7 mantêm um veículo de referência e a mesma infração de detalhamento, sem tratar repetições como casos independentes. A mesma infração será comparada em intervalo de até dez minutos; pares fora dessa janela serão preservados como inelegíveis e refeitos. Termos, correspondências, vídeos originais e HAR permanecerão privados; somente códigos e evidências anonimizadas serão publicados. A gravação começa após o login. A ausência de veículo ou consentimento bloqueia a coleta.
-
-O denominador de P2 contém os 15 campos de referência e dois campos adicionais apenas nas infrações de velocidade; ausências não são paridade. M1.2.1 e M1.2.2 descrevem consistência do par, sem indicar qual canal está correto. Aplicam-se os limites contínuos da Fase 2 aos valores sem arredondamento. O registro de sessão preservará a versão do plano, a liberação do piloto, as duas leituras da conferência e a decisão final; os arquivos CSV conterão a medida conferida e sua evidência.
-
-Propõem-se preparação em 14/11/2026 (Hugo), piloto em 15/11 (Hugo e Philipe), coleta de referência em 16/11 (Hugo e Philipe), contextos e redes em 17/11 (Pedro Druck, Hugo e Philipe) e contingência/revisão em 18/11 (equipe de coleta; Daniel revisa). Pedro Henrique revisará o plano até 15/11. Esses marcos preservam os prazos de coleta em 18/11 e análise em 20/11; horários com titulares ainda dependem de agendamento. O plano não constitui evidência de execução: consentimentos, inventário efetivo, capturas autenticadas e aprovação do revisor permanecem pendentes.
-
-A análise será conduzida por Pedro Henrique e Philipe em 19--20/11, com revisão de Heitor,
-antes da Entrega 2 em 22/11. Os prazos constam das issues \#47 e \#48; a conferência dos campos
-de data no Project permanece pendente por restrição de acesso. O quadro de bloqueios e o
-cronograma operacional em \texttt{docs/fase3-cronograma.md} registram responsáveis, datas e
-condições para replanejar sem omitir métricas não medidas.
+A amostra intencional prevê até três veículos, mínimo de um com infração e consentimento. P1/P2 selecionam até três infrações por veículo antes da coleta; os demais procedimentos mantêm o caso de referência, sem tratar repetições como veículos independentes. P2 usa intervalo de até dez minutos e denominador de 15 campos, mais dois para infrações de velocidade. Ausências não contam como paridade. Termos, correspondência de códigos, vídeos originais e HAR ficam privados; registros públicos são anonimizados e conferidos. Métrica não medida é inconclusiva, nunca zero. O cronograma e os bloqueios constam da GitPage; execução efetiva é distinguida do plano na Fase 4.

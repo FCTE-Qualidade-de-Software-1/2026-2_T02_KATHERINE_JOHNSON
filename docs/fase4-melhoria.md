@@ -1,44 +1,45 @@
 # Fase 4 — Ação de melhoria
 
-A Entrega 2 exige executar ao menos uma ação de melhoria justificada pelas evidências da
-[Fase 4](fase4.md) e incorporada ao repositório como entrega técnica (issue
-[#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36),
-responsável: Pedro Druck, prazo planejado: 21/11/2026).
+**Atualização em 22/11/2026.** Foi entregue uma **proposta de processo com templates técnicos**
+para tratar e reavaliar falhas na consulta. A entrega da
+[issue #36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36)
+contém processo, ficha de incidente, matriz de regressão e inspeção automática. Sua revisão humana
+permanece pendente. Não foi alterado o serviço do Detran-DF nem medida a eficácia da ação.
 
-> **Situação em 16/11/2026.** A ação ainda não foi escolhida. A escolha depende do julgamento da
-> #48, previsto para 20/11/2026. Esta página não registra nenhuma ação como feita.
+## Evidência e escolha
 
-## 1. Tipos de ação aceitos
+O [registro S03 no commit 14ab804](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/14ab804210f4b1be2aaa84e1946d9e11079a9a28/evidencias/fase4/S03-registro-2026-11-21.md)
+relata três falhas em três tentativas no aplicativo Android 2.6.3 (CT05/B02), ao buscar veículos.
+No portal, CT01 teve três conclusões em três tentativas; CT03 teve duas conclusões e uma expiração.
+As contagens são preliminares: conferência independente, consentimento e vínculo do veículo estão
+pendentes, e o aparelho/versão do app diferem do planejamento (D006). Não se atribui nível oficial,
+causa técnica nem superioridade geral. O achado pertence a Q3.1/P6, não às taxas de rede de P7.
 
-| Tipo de ação | Observação |
-|---|---|
-| Protótipo de alta fidelidade | Versionar o link do protótipo e a exportação das telas |
-| Modificação de código | Versionar a alteração no repositório |
-| Templates técnicos | Versionar os modelos produzidos |
-| Proposta de processo | Versionar o documento da proposta |
+O bloqueio completo antes da lista motiva priorizar a investigação de cobertura de contexto,
+apoiando D4 (plataformas com suporte) e D1 (investimento), sem avaliar usabilidade. Não se compara
+a recorrência com contextos não executados nem se presume o resultado final da #48.
 
-*Tabela 1 — Tipos de ação de melhoria. Fonte: enunciado do projeto.*
-
-## 2. Critérios para escolher a ação
-
-1. Partir de um achado medido na Fase 4, por exemplo uma métrica abaixo do nível esperado ou uma
-   divergência entre os canais, e não de uma preferência da equipe.
-2. Ligar o achado a uma decisão da [Fase 1](fase1-proposito.md), como investir primeiro em um
-   canal, corrigir divergências de dados ou garantir suporte a um contexto.
-3. Respeitar o escopo: a ação não pode ser justificada por usabilidade nem por opinião de usuários.
-4. Caber no prazo, com um artefato que outro integrante consiga abrir e conferir.
-
-## 3. Registro da ação
-
-Depois da escolha, a tabela abaixo é preenchida com a ação, o achado que a motivou e o
-artefato versionado.
+## Entrega técnica
 
 | Item | Registro |
 |---|---|
-| Achado da Fase 4 que justifica a ação | A preencher após a #48 |
-| Ação escolhida e tipo | A preencher |
-| Decisão da Fase 1 que ela apoia | A preencher |
-| Artefato versionado | A preencher |
-| Como foi conferido e por quem | A preencher |
+| Tipo da ação | Proposta de processo com templates técnicos |
+| Processo e artefatos | [Pasta da melhoria](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/melhorias/consulta-infracoes) |
+| Fluxo entregue | Conferir incidente → reproduzir configuração → isolar intervenção → preparar diagnóstico → reavaliar |
+| Templates | Ficha INC-01 preenchida com o achado e matriz RG01–RG04 com quatro cenários planejados |
+| Métrica e decisões | G3/Q3.1/M3.1.1; D4 e D1 |
+| Reavaliação | Três tentativas P6 por contexto/versão; mínimo 2/3 para aprovação; meta local 3/3, sem mudar os níveis da Fase 2 |
+| Inspeção técnica | Script offline confere fonte imutável, condições e critérios da matriz; não executa consultas |
+| Revisão humana | Daniel é o revisor designado da #36; aprovação não presumida |
+| Eficácia no produto | Não medida; depende de intervenção identificada e nova execução equivalente |
 
-*Tabela 2 — Registro da ação de melhoria. Fonte: elaborada pela equipe; campos pendentes.*
+*Tabela 1 — Rastreabilidade da ação. Fonte: S03, Fases 1–3 e issue #36.*
+
+```bash
+python3 melhorias/consulta-infracoes/verificar.py
+```
+
+A inspeção não substitui a revisão humana nem certifica correção do serviço. As novas execuções
+usam os instrumentos existentes de P6; não houve duplicação dos scripts da branch de coleta.
+Falhas permanecem no denominador, versões são separadas por bloco e contextos indisponíveis
+ficam não avaliados. O incidente só pode ser encerrado como corrigido após reavaliação conferida.

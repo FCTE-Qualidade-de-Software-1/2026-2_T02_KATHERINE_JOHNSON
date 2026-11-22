@@ -1,0 +1,101 @@
+{
+  "corte": "2026-11-22",
+  "estimativa_equipe_h": 67.0,
+  "icm": {
+    "concluidas": 4,
+    "planejadas": 8,
+    "percentual": 50.0,
+    "fechadas": [
+      28,
+      46,
+      53,
+      55
+    ],
+    "atrasadas": [
+      46
+    ]
+  },
+  "tve": {
+    "issues": [
+      28,
+      53,
+      55
+    ],
+    "real_h": 5.0,
+    "estimativa_h": 8.0,
+    "percentual": -37.5,
+    "completo": false
+  },
+  "individuais": {
+    "Daniel": {
+      "estimativa_min": 570.0,
+      "real_min": 60.0,
+      "completo": false,
+      "percentual_conhecido": 5.9405940594059405
+    },
+    "Heitor": {
+      "estimativa_min": 630.0,
+      "real_min": 180.0,
+      "completo": false,
+      "percentual_conhecido": 17.821782178217823
+    },
+    "Hugo": {
+      "estimativa_min": 650.0,
+      "real_min": 710.0,
+      "completo": true,
+      "percentual_conhecido": 70.29702970297029
+    },
+    "Pedro Druck": {
+      "estimativa_min": 860.0,
+      "real_min": 60.0,
+      "completo": false,
+      "percentual_conhecido": 5.9405940594059405
+    },
+    "Pedro Henrique": {
+      "estimativa_min": 330.0,
+      "real_min": null,
+      "completo": false,
+      "percentual_conhecido": null
+    },
+    "Philipe": {
+      "estimativa_min": 980.0,
+      "real_min": null,
+      "completo": false,
+      "percentual_conhecido": null
+    }
+  },
+  "total_conhecido_min": 1010.0,
+  "pci_completo": false,
+  "retrabalho": {
+    "avaliados": [
+      52,
+      54,
+      56,
+      57,
+      58,
+      59,
+      60,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67
+    ],
+    "com_retrabalho": [],
+    "sem_revisao": [
+      61
+    ],
+    "percentual": 0.0
+  },
+  "revisoes_por_login": {
+    "PedroGTG": 5,
+    "Phill-Chill": 2,
+    "HeitorM50": 3,
+    "HugoFreitass": 1,
+    "Daniellira540": 2,
+    "pedruck": 1
+  },
+  "espera_mediana_h": 8.23611111111111,
+  "esperas_acima_48h": 2
+}
