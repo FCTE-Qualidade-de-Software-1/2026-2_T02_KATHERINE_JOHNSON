@@ -41,7 +41,8 @@ As telas pendentes exigem login do proprietário com veículo real. O procedimen
 **Conferência documental em 20/11/2026:** as capturas do portal já estavam em
 `docs/img/passoApassoConsulta/`, incorporadas pelo commit `aa9d3bb` em 15/11. Sua inclusão
 reconhece os arquivos disponíveis, mas não certifica consentimento, executor, revisão independente
-ou liberação do piloto. O [acompanhamento de S00/S01](../../docs/fase4-coleta.md) descreve os
+ou liberação do piloto. **Atualização em 22/11/2026:** Hugo confirmou a aplicação dos termos;
+as vias assinadas permanecem privadas. O [acompanhamento de S00/S01](../../docs/fase4-coleta.md) descreve os
 limites e registros ainda necessários.
 
 **Aplicativo no iOS.** As telas do aplicativo no iOS não foram capturadas na Entrega 1; do iOS há

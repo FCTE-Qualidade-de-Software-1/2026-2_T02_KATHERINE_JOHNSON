@@ -86,8 +86,8 @@ e o julgamento por característica e por canal.
   ([Recursos e ambiente](fase3-ambiente.md)). Sem esse registro, o CT06 continua não avaliado e as
   conclusões sobre o aplicativo valem apenas para o Android (bloqueio B03 em
   [Cronograma e bloqueios](fase3-cronograma.md)).
-- **Veículo real:** a coleta depende de um veículo com infração e do consentimento do titular
-  (bloqueio B01). Sem eles, as sessões são adiadas e o impacto é registrado na #47.
+- **Veículo real:** os termos foram aplicados, conforme confirmação de Hugo em 22/11/2026, e permanecem privados; a coleta depende de veículo com infração e titular disponível
+  (bloqueio B01, com consentimento concluído). Sem veículo elegível ou titular disponível, as sessões são adiadas e o impacto é registrado na #47.
 - **Métrica M3.1.2:** é exclusiva do portal e não serve para comparar com o aplicativo.
 - **Validade dos resultados:** os resultados valem para os veículos, aparelhos, redes e datas
   efetivamente medidos e não representam todos os usuários do Detran-DF.

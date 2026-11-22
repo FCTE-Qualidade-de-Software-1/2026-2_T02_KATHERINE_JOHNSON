@@ -16,7 +16,8 @@ A branch `feat/pedro-s03-fase4`, no
 contém o [relato S03 de 21/11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/14ab804210f4b1be2aaa84e1946d9e11079a9a28/evidencias/fase4/S03-registro-2026-11-21.md).
 Ele relata CT01 com 3/3 conclusões, CT03 com 2/3 e uma expiração, e CT05 com 0/3 e erro ao buscar
 veículos. São contagens preliminares: a validação rejeita as 14 linhas por falta de conferência
-independente. Consentimento e vínculo privado do veículo também estão a conferir; CT05 usa
+independente. O consentimento foi aplicado, conforme confirmação de Hugo em 22/11/2026, com
+vias assinadas privadas; a conciliação do vínculo dos códigos dos veículos continua pendente. CT05 usa
 aparelho/versão diferentes do planejamento (D006). CT02, CT04 e CT06 não foram executados no relato.
 
 As sete questões e hipóteses e os três objetivos permanecem **inconclusivos no julgamento

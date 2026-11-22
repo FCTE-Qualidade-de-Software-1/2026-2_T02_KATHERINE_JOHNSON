@@ -19,7 +19,7 @@ O passo a passo da fase está em [Metodologia](metodologia.md).
 |---|---|---|
 | F3-C1: método e instruções | [P1–P7](fase3-metodo.md), parâmetros e registro de sessão | Documentado para revisão |
 | F3-C2: recursos e ambiente | [Inventário e piloto](fase3-ambiente.md) | Planejado; modelos e versões reais pendentes |
-| F3-C2: massa e consentimento | [Massa e instrumentos](fase3-dados.md) | Seleção justificada e termo preparado; recrutamento e assinaturas pendentes |
+| F3-C2: massa e consentimento | [Massa e instrumentos](fase3-dados.md) | Seleção justificada; termos aplicados, conforme confirmação de Hugo em 22/11/2026; vias assinadas privadas |
 | F3-C3: cronograma | [Sessões e responsáveis](fase3-cronograma.md) | Datas propostas; horários com titulares e sincronização do Project pendentes |
 | F3-C8: coerência com a Fase 2 | [Tabela de rastreabilidade](fase3-metodo.md#4-rastreabilidade-entre-as-fases-2-e-3) | Quatorze métricas ligadas a procedimentos, instrumentos e registros |
 | Artigo e GitPage | Seção `fase3-plano.tex` e páginas desta fase | Disponíveis nesta branch para revisão |

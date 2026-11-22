@@ -70,7 +70,7 @@ papéis por sessão; o titular autentica, mas não recebe tarefa de julgamento o
 
 Executar antes das sessões oficiais, sem misturar seus dados com resultados:
 
-- Confirmar consentimento, vínculo do veículo ao titular e pelo menos uma infração acessível nos dois canais.
+- Consentimentos aplicados, conforme confirmação de Hugo em 22/11/2026; vias assinadas privadas. Confirmar vínculo dos códigos dos veículos e pelo menos uma infração acessível nos dois canais.
 - Executar o [roteiro de levantamento autenticado](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase1/roteiro-levantamento.md); confirmar rótulos e caminho real, capturando as três telas pendentes por canal disponível.
 - Preencher inventário e versões; testar gravação com indicação de toque/clique e conferir taxa de quadros. Preferir taxa constante; se variável, usar os timestamps dos quadros e registrar essa adaptação.
 - Validar o contador por UID do Android: a leitura deve mudar após transferência conhecida e estabilizar sem consulta. Contadores atrasados, indisponíveis ou agregados de modo ambíguo impedem medir P5; zero sem validação não significa ausência de tráfego.

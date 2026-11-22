@@ -11,8 +11,9 @@ permanece pendente. Não foi alterado o serviço do Detran-DF nem medida a efic�
 O [registro S03 no commit 14ab804](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/14ab804210f4b1be2aaa84e1946d9e11079a9a28/evidencias/fase4/S03-registro-2026-11-21.md)
 relata três falhas em três tentativas no aplicativo Android 2.6.3 (CT05/B02), ao buscar veículos.
 No portal, CT01 teve três conclusões em três tentativas; CT03 teve duas conclusões e uma expiração.
-As contagens são preliminares: conferência independente, consentimento e vínculo do veículo estão
-pendentes, e o aparelho/versão do app diferem do planejamento (D006). Não se atribui nível oficial,
+Os consentimentos foram aplicados, conforme confirmação de Hugo em 22/11/2026; as vias assinadas
+permanecem privadas. As contagens são preliminares: conferência independente e conciliação do vínculo
+dos códigos dos veículos estão pendentes, e o aparelho/versão do app diferem do planejamento (D006). Não se atribui nível oficial,
 causa técnica nem superioridade geral. O achado pertence a Q3.1/P6, não às taxas de rede de P7.
 
 O bloqueio completo antes da lista motiva priorizar a investigação de cobertura de contexto,

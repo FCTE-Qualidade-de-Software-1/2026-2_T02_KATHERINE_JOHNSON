@@ -37,19 +37,22 @@ Desvio de esforço por integrante nas issues fechadas com horas: Daniel −66,7%
 A #46 tem 14 critérios. Em 16/11, 7 estavam marcados e 7 dependem de execução real e **não estão
 cumpridos**. A lista, com responsável e prazo do cronograma da Fase 3, está no
 [comentário da #46](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46)
-e foi sinalizada na #47.
+e foi sinalizada na #47. **Atualização em 22/11/2026:** Hugo confirmou a aplicação dos termos
+de consentimento; esse item está concluído, com vias assinadas privadas. A tabela abaixo preserva
+o retrato dos demais critérios em 16/11 e incorpora a conclusão do consentimento em 22/11.
 
 | Situação | Critérios |
 |---|---|
 | Cumpridos (7) | Roteiro por métrica; rastreabilidade métrica para procedimento; branch criada; seção `.tex` e páginas da GitPage; massa de dados justificada; cronograma com responsável e data; PR aprovado pelo revisor designado |
 | Parciais (3) | Ambiente detalhado (falta registrar os demais aparelhos); prints com login (só o portal no computador); iPhone (a equipe tem o aparelho, falta registrar modelo e versões) |
-| Pendentes (4) | Termo de consentimento aplicado; cronograma refletido no Project; sessão com veículo real; rótulos e contagem de passos confirmados com veículo real |
+| Concluído em 22/11 (1) | Termos de consentimento aplicados, conforme confirmação de Hugo; vias assinadas privadas |
+| Demais pendentes no corte (3) | Cronograma refletido no Project; sessão com veículo real; rótulos e contagem de passos confirmados com veículo real |
 
-*Tabela 1.1 — Critérios da #46 em 16/11/2026. Fonte: corpo e comentário da issue #46 no GitHub; `docs/fase3-cronograma.md`.*
+*Tabela 1.1 — Critérios da #46 no corte de 16/11/2026, com atualização do consentimento em 22/11. Fonte: corpo e comentário da issue #46 no GitHub; `docs/fase3-cronograma.md`.*
 
 Quatro dos critérios marcados foram marcados em 16/11, depois do fechamento, porque o trabalho já
 existia na `main` e a issue não refletia isso. "Sem marcação" e "sem cumprir" não são a mesma
-coisa: só os 7 acima estão em aberto.
+coisa: havia 7 critérios em aberto naquele corte; o consentimento foi concluído conforme a atualização de 22/11.
 
 ## 2. Ações da retrospectiva
 
@@ -103,9 +106,9 @@ para o merge do #61, mas ela não foi confirmada.
 
 | Risco | Evidência | Efeito |
 |---|---|---|
-| Critérios empíricos da Fase 3 sem dono | A #46 foi fechada com 7 critérios de execução abertos (3 parciais e 4 pendentes). Eles estão listados em comentário da #46, e a #47 recebeu um aviso, mas o corpo de nenhuma issue aberta os traz; os prazos de 14 e 15/11 já venceram | A coleta da #47 depende deles; sem acompanhamento formal e sem nova data, a sessão com veículo real e o termo aplicado podem atrasar |
+| Critérios empíricos da Fase 3 sem dono | A #46 foi fechada com 7 critérios de execução abertos (3 parciais e 4 pendentes). Eles estão listados em comentário da #46, e a #47 recebeu um aviso, mas o corpo de nenhuma issue aberta os traz; os prazos de 14 e 15/11 já venceram | A coleta da #47 depende deles; sem acompanhamento formal e sem nova data, a sessão com veículo real pode atrasar; o consentimento foi posteriormente concluído, conforme confirmação em 22/11 |
 | Cadeia crítica curta | #47 vence em 18/11, #48 em 20/11, #36 em 21/11 e #49 em 22/11; 48 h estimadas nas 4 issues abertas | Qualquer atraso da #47 empurra a análise, a ação de melhoria e o fechamento |
-| Recursos da coleta não confirmados | Veículo com infração e consentimento dependem de terceiros (B01); o plano informa que não há confirmação nem evidência de execução. A equipe informou em 16/11 que tem um iPhone, mas modelo e versões ainda não estão registrados (B03) | Sem veículo real, as sessões da #47 não acontecem; sem o registro do iPhone, o iOS continua como contexto não avaliado |
+| Recursos da coleta não confirmados | No corte de 16/11, veículo com infração e consentimento dependiam de terceiros (B01; consentimento concluído conforme confirmação de Hugo em 22/11); o plano informa que não há confirmação nem evidência de execução. A equipe informou em 16/11 que tem um iPhone, mas modelo e versões ainda não estão registrados (B03) | Sem veículo real, as sessões da #47 não acontecem; sem o registro do iPhone, o iOS continua como contexto não avaliado |
 | Esforço pouco registrado | 0 h reais nas 4 issues abertas e na #46, que fechou sem hora | PCI e TVE do fechamento ficam sem base; a tabela de contribuição do artigo depende dessas horas |
 | Limite de 15 páginas do artigo | O `main.tex` na `main` já inclui `fase3-plano.tex` e `fase4-analise.tex`; o PDF versionado, de 15 páginas, é da E1 e não tem essas seções. A contagem atual não foi verificada | Risco de passar de 15 páginas (regra do projeto) quando a Fase 4 e a conclusão entrarem |
 | Qualidade e rigor da revisão pouco visíveis | 6 de 7 PRs mesclados até 1 minuto depois da aprovação; o #61 foi mesclado sem revisão | M-DP1 em 0% pode esconder retrabalho que não deixa rastro |

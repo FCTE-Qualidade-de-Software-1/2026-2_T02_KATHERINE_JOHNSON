@@ -25,7 +25,7 @@ Situação documental em 13/11/2026: não há confirmação dos recursos nem evi
 
 | ID | Pendência | Responsável | Prazo | Evidência para resolver / contingência |
 |---|---|---|---|---|
-| B01 | Veículo com infração e consentimento | Hugo | 14/11 | Código e data na massa; termo guardado privadamente. Sem isso, adiar sessões e comunicar impacto na #47 |
+| B01 | Veículo com infração e consentimento | Hugo | 14/11 | Consentimentos aplicados, conforme confirmação de Hugo em 22/11/2026; vias assinadas e datas privadas. Conciliar códigos e confirmar veículo com infração; sem veículo elegível, adiar sessões e comunicar impacto na #47 |
 | B02 | Modelos, SO e versões dos dispositivos | Hugo | 14/11 | Inventário efetivo; sem aparelho obrigatório, registrar cobertura reduzida |
 | B03 | Registro do iPhone (D04), que é de Heitor | Heitor | 15/11 | Inventário e telas; sem o registro do aparelho, CT06 não avaliado e conclusão limitada ao Android |
 | B04 | Rede controlada e contador de volume | Philipe | 15/11 | Piloto documentado; métrica/cenário inviável fica não medido |

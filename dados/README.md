@@ -1,6 +1,6 @@
 # Instrumentos da Fase 4
 
-Os CSV em `brutos/` são modelos vazios (UTF-8, vírgula, ponto decimal). Não são evidência de execução. Preencher após consentimento e piloto. Aspas delimitam textos com vírgulas. Não publicar identificadores, credenciais, valores pessoais ou HAR original.
+Os CSV em `brutos/` são modelos vazios (UTF-8, vírgula, ponto decimal). Não são evidência de execução. Os termos foram aplicados, conforme confirmação de Hugo em 22/11/2026, com vias assinadas privadas. Preencher os CSV após piloto e medições efetivas. Aspas delimitam textos com vírgulas. Não publicar identificadores, credenciais, valores pessoais ou HAR original.
 
 ## Validação e cálculo reproduzível
 

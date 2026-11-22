@@ -2,7 +2,7 @@
 
 A [massa de dados](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/massa-de-dados.md) prevê até três veículos consentidos, com mínimo de um veículo com infração nos dois canais. A diversidade de situações, órgãos e infrações de velocidade é desejada, mas ainda não confirmada. A amostra é intencional e não permite generalização estatística para a frota.
 
-O titular assina o [termo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/consentimento.md) antes da coleta e faz o login sem compartilhar a senha. Somente código do veículo e data do consentimento são públicos. Originais, termos e correspondências ficam privados; prints e vídeos só são publicados após anonimização e revisão independente.
+Os termos foram aplicados aos participantes da coleta, conforme confirmação de Hugo em 22/11/2026. As vias assinadas permanecem privadas; a GitPage registra a conclusão, sem publicar os documentos preenchidos. Para novos participantes, o titular assina o [termo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/consentimento.md) antes da coleta e faz o login sem compartilhar a senha. O registro público informa a aplicação e sua confirmação; datas individuais e correspondências ficam no armazenamento privado. Originais, termos e correspondências ficam privados; prints e vídeos só são publicados após anonimização e revisão independente.
 
 ## Instrumentos entregues
 
