@@ -17,17 +17,17 @@ def verificar(path):
                      if re.search(r'^\s*A\.\s+Tabela de Contribuição Individual', page, re.M)), None)
     if appendix is None:
         raise ValueError('Apêndice de contribuição não encontrado')
-    if appendix > 15:
-        raise ValueError(f'{appendix} páginas antes da contribuição; máximo de 15')
-    if total - appendix != 1:
-        raise ValueError('A tabela de contribuição deve ocupar uma página separada')
+    if total > 15:
+        raise ValueError(f'{total} páginas no PDF; máximo total de 15')
+    if appendix >= total:
+        raise ValueError('Apêndice de contribuição fora do PDF')
     if '??' in text:
         raise ValueError('Referência indefinida (??) no PDF')
     for required in ('Fase 4:', 'Considerações Finais', 'Ação de Melhoria Entregue', 'Referências'):
         if required not in text:
             raise ValueError(f'Seção obrigatória ausente no PDF: {required}')
-    print(f'PDF validado: {appendix} páginas de artigo e referências + 1 de contribuição; '
-          f'{total} páginas no total; seções finais presentes, sem referências indefinidas.')
+    print(f'PDF validado: {total} páginas no total (limite 15); contribuição na página '
+          f'{appendix + 1}; seções presentes, sem referências indefinidas.')
 
 
 if __name__ == '__main__':

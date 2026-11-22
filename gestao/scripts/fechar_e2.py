@@ -110,10 +110,10 @@ def duracao(minutes):
 def contribuicao(result):
     """Apêndice permitido pela #49; indicadores de gestão ficam fora do artigo."""
     lines = [r'\section{Tabela de Contribuição Individual}', r'\label{sec:contribuicao}', '',
-        r'A Tabela~\ref{tab:contribuicao} apresenta a contribuição documentada na Entrega 2, no corte de 22/11/2026. Os percentuais consideram somente o esforço informado até o corte, sem reproduzir a divisão igual adotada na E1. Apenas Hugo declarou seu total individual da E2; os registros dos demais integrantes são parciais ou ausentes. Portanto, a distribuição abaixo não constitui a contribuição final da equipe. Ausência de declaração não significa ausência de trabalho. A fonte e a conciliação estão na GitPage, em \texttt{docs/gestao-fechamento-e2.md}.', '',
-        r'\begin{table}[htbp]', r'\centering', r'\footnotesize',
+        r'A Tabela~\ref{tab:contribuicao} resume as horas conhecidas da E2 em 22/11/2026. Só Hugo declarou o total individual; os demais registros são parciais ou ausentes. Os percentuais não são a contribuição final e não atribuem zero a horas desconhecidas. A conciliação está em \texttt{docs/gestao-fechamento-e2.md}.', '',
+        r'\begin{table}[htbp]', r'\centering', r'\scriptsize',
         r'\caption{Contribuição documentada da E2 (parcial; não é o percentual final).}',
-        r'\label{tab:contribuicao}', r'\begin{tabular}{P{3.4cm}P{6.5cm}P{2.6cm}}',
+        r'\label{tab:contribuicao}', r'\begin{tabular}{P{3.1cm}P{6.0cm}P{2.2cm}}',
         r'\toprule', r'\textbf{Integrante} & \textbf{Atividades registradas / atribuídas} & \textbf{Participação conhecida} \\',
         r'\midrule']
     for m, item in result['individuais'].items():
