@@ -6,11 +6,11 @@ Portal de Serviços e do aplicativo em relação ao propósito definido na [Fase
 Ela também inclui a [ação de melhoria](fase4-melhoria.md), exigida na Entrega 2 e justificada
 pelas evidências coletadas.
 
-> **Situação em 20/11/2026.** O repositório não registra nenhuma medição executada. Os arquivos
-> em `dados/brutos/` são modelos vazios. A pasta `evidencias/fase4/` registra a preparação do
-> ambiente em 20/11, mas ainda não contém evidências de medições do produto. Esta
-> página não publica resultados e será atualizada depois que as sessões forem executadas e
-> conferidas.
+> **Situação em 22/11/2026.** A `main` continua sem linhas nos oito CSV oficiais. O piloto S01
+> tem relato no portal e a branch `feat/pedro-s03-fase4` acrescenta tentativas P6 de 21/11,
+> ainda pendentes de conferência. A [análise atualizada](fase4-analise.md) distingue essas
+> observações dos resultados oficiais, ainda inconclusivos. A [proposta de processo e templates
+> de melhoria](fase4-melhoria.md) está entregue, sem comprovação de eficácia no serviço.
 
 O [acompanhamento da coleta](fase4-coleta.md) reúne as pendências da #46, a proposta de
 reagendamento e o cálculo reproduzível da #47. O prazo original da coleta (18/11) está vencido;
@@ -19,11 +19,11 @@ inconclusivos/não aplicáveis, sem valores nem níveis de qualidade.
 
 ## 1. Atividades, responsáveis e prazos
 
-| Atividade | Issue | Responsáveis | Prazo | Situação em 16/11 | Onde ficará o resultado |
+| Atividade | Issue | Responsáveis | Prazo | Situação em 22/11 | Onde ficará o resultado |
 |---|---|---|---|---|---|
-| Coleta das medições e dados brutos (sessões S02 a S05) | [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Hugo, Pedro Druck, Philipe | 18/11/2026 | Sem execução registrada; depende do piloto (S01) da Fase 3 | `dados/brutos/` e `evidencias/fase4/` |
+| Coleta das medições e dados brutos (sessões S02 a S05) | [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Hugo, Pedro Druck, Philipe | 18/11/2026 | S01 e S03 com relatos; dados oficiais pendentes de conferência | `dados/brutos/` e `evidencias/fase4/` |
 | Análise, respostas às questões GQM e julgamento | [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Pedro Henrique, Philipe; revisão de Heitor | 20/11/2026 | Aguarda os dados conferidos da #47 | [Análise e julgamento GQM](fase4-analise.md) e artigo |
-| Ação de melhoria obrigatória | [#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36) | Pedro Druck | 21/11/2026 | Ação ainda não escolhida | [Ação de melhoria](fase4-melhoria.md) |
+| Ação de melhoria obrigatória | [#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36) | Pedro Druck | 21/11/2026 | Processo e templates entregues; revisão e eficácia pendentes | [Ação de melhoria](fase4-melhoria.md) |
 
 *Tabela 1 — Atividades da Fase 4. Fonte: issues #36, #47 e #48 e coleta intermediária PSM/CID de 10/11/2026.*
 
@@ -65,7 +65,7 @@ Regras de integridade que valem para toda a fase:
 
 ## 4. Resultados e julgamento
 
-Nenhum resultado foi publicado. A página [Análise e julgamento GQM](fase4-analise.md) descreve o
+Não há resultados oficiais elegíveis publicados. As observações preliminares estão identificadas na página [Análise e julgamento GQM](fase4-analise.md) descreve o
 procedimento de análise e mostra o estado de cada questão, hoje inconclusiva por falta de
 medições. Depois da análise (#48), esta seção terá um resultado por
 objetivo de medição, com o valor de cada métrica, o nível de pontuação, a resposta a cada questão
@@ -81,8 +81,8 @@ e o julgamento por característica e por canal.
 
 ## 5. Limitações já conhecidas
 
-- **iOS:** a equipe informou em 16/11 que tem um iPhone, então o contexto CT06 pode ser avaliado.
-  O modelo, a versão do iOS e a versão do aplicativo ainda precisam ser registrados no inventário
+- **iOS:** o iPhone é de Heitor, então o contexto CT06 pode ser avaliado. O modelo, a versão do
+  iOS e a versão do aplicativo ainda precisam ser registrados no inventário
   ([Recursos e ambiente](fase3-ambiente.md)). Sem esse registro, o CT06 continua não avaliado e as
   conclusões sobre o aplicativo valem apenas para o Android (bloqueio B03 em
   [Cronograma e bloqueios](fase3-cronograma.md)).

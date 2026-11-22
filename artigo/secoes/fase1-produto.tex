@@ -4,14 +4,14 @@
 \subsubsection{Passo 1.3: Descrição do Produto e Arquitetura de Contexto}
 \label{subsec:produto}
 
-O serviço avaliado é prestado por dois clientes que consomem a mesma família de APIs do Detran-DF e do RENAINF: o Portal de Serviços (aplicação web \textit{single-page}) \cite{detrandf2026portal} e o aplicativo móvel ``DETRAN-DF'' (v.~2.6.9 em React Native) \cite{detrandf2026app}. Os rótulos foram extraídos do código cliente do portal e do pacote público do aplicativo; as telas que exigem login ainda não foram observadas com veículo real e serão conferidas na Fase 3, o que é uma limitação desta entrega. A Tabela~\ref{tab:canais} sintetiza a comparação levantada em 18/10/2026 (detalhamento completo em \texttt{docs/fase1-produto.md}), e a Figura~\ref{fig:contexto} ilustra o contexto arquitetural.
+O serviço avaliado é prestado por dois clientes que consomem a mesma família de APIs do Detran-DF e do RENAINF: o Portal de Serviços (aplicação web \textit{single-page}) \cite{detrandf2026portal} e o aplicativo móvel ``DETRAN-DF'' (v.~2.6.9 em React Native) \cite{detrandf2026app}. Os rótulos foram extraídos do código cliente do portal e do pacote público do aplicativo; esse levantamento não comprova o comportamento autenticado. O piloto S01 e a sessão S03, discutidos na Fase 4, acrescentam relatos de execução, sem resolver a conferência completa dos campos. A Tabela~\ref{tab:canais} sintetiza a comparação levantada em 18/10/2026 (detalhamento completo em \texttt{docs/fase1-produto.md}), e a Figura~\ref{fig:contexto} ilustra o contexto arquitetural.
 
 \begin{table}[htbp]
 \centering
 \caption{Síntese de comparação entre os canais de consulta (levantamento de 18/10/2026)}
 \label{tab:canais}
 \footnotesize
-\begin{tabular}{|p{2.5cm}|p{5.5cm}|p{5.5cm}|}
+\begin{tabular}{|P{2.5cm}|P{5.5cm}|P{5.5cm}|}
 \hline
 \textbf{Aspecto} & \textbf{Portal de Serviços} & \textbf{Aplicativo} \\ \hline
 Acesso & \url{portal.detran.df.gov.br} (Navegador) & Google Play e App Store (Android/iOS) \\ \hline
@@ -41,7 +41,7 @@ O modelo de qualidade combina Adequação Funcional e Eficiência de Desempenho 
 \caption{Seleção consolidada do modelo de qualidade adaptado}
 \label{tab:modelo-qualidade}
 \footnotesize
-\begin{tabular}{|p{3.8cm}|p{1.8cm}|p{6.4cm}|}
+\begin{tabular}{|P{3.8cm}|P{1.8cm}|P{6.4cm}|}
 \hline
 \textbf{Subcaracterística} & \textbf{Decisão} & \textbf{Foco principal na avaliação} \\ \hline
 \multicolumn{3}{|l|}{\textit{Adequação funcional (ISO/IEC 25010:2023)}} \\ \hline

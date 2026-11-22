@@ -10,7 +10,7 @@ Em conformidade com a ISO/IEC 25040 \cite{iso25040_2011} e a abordagem GQM \cite
 \label{tab:rastreabilidade-fase1-fase2}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
-\begin{tabular}{|p{2.6cm}|p{2.8cm}|p{2.8cm}|p{2.8cm}|p{1.4cm}|}
+\begin{tabular}{|P{2.6cm}|P{2.8cm}|P{2.8cm}|P{2.8cm}|P{1.4cm}|}
 \hline
 \textbf{Característica (Fase 1)} & \textbf{Subcaracterísticas consideradas} & \textbf{Foco de qualidade (GQM)} & \textbf{Ponto de vista (parte interessada)} & \textbf{Objetivo GQM} \\ \hline
 Adequação funcional (ISO/IEC 25010:2023) & Completude, correção e apropriação funcional & Completude, consistência e fluxo da consulta & Cidadão/condutor e requisitante & \textbf{G1} \\ \hline
@@ -26,7 +26,7 @@ Cobertura de contexto (Qualidade em Uso) & Completude e flexibilidade de context
 \caption{Objetivos de medição no formato do \textit{template} GQM}
 \label{tab:objetivos-gqm}
 \footnotesize
-\begin{tabular}{|l|p{12.2cm}|}
+\begin{tabular}{|l|P{12.2cm}|}
 \hline
 \textbf{ID} & \textbf{Especificação Estruturada do Objetivo} \\ \hline
 \textbf{G1} & \textbf{Analisar} o serviço de consulta de infrações de trânsito \textbf{com o propósito de} comparar e avaliar \textbf{com respeito à} adequação funcional (completude, correção e apropriação funcional) \textbf{do ponto de vista do} cidadão/condutor e do requisitante institucional \textbf{no contexto da} execução da consulta no Portal de Serviços e no aplicativo oficial do Detran-DF com veículos reais registrados no DF. \\ \hline
@@ -40,7 +40,7 @@ Cobertura de contexto (Qualidade em Uso) & Completude e flexibilidade de context
 \subsubsection{Passo 2.2: Questões de Medição e Hipóteses}
 \label{subsec:questoes-hipoteses}
 
-No nível operacional, cada objetivo é desdobrado em questões analíticas acompanhadas de hipóteses verificáveis pelas medições externas. No objetivo \textbf{G1}, avalia-se se ambos os canais entregam os campos de referência da Fase 1 (Q1.1), se há consistência de status, valores, pontos e prazos entre os canais (Q1.2) e qual canal exige menos passos e transições pós-login (Q1.3). No objetivo \textbf{G2}, investiga-se qual canal apresenta menor tempo decorrido até a renderização da lista e dos detalhes (Q2.1) e menor consumo de tráfego de dados em rede (Q2.2). No objetivo \textbf{G3}, verifica-se se a consulta conclui sem bloqueios em 100\% das combinações de SO/navegador do escopo (Q3.1) e como a taxa de conclusão se comporta sob rede degradada frente a Wi-Fi e 4G (Q3.2). A Tabela~\ref{tab:resumo-questoes-hipoteses} consolida formalmente as questões e hipóteses (texto integral detalhado em \texttt{docs/fase2-gqm.md}).
+Cada objetivo é desdobrado em questões e hipóteses verificáveis pelas medições externas. A Tabela~\ref{tab:resumo-questoes-hipoteses} reúne as sete questões e suas hipóteses: G1 trata de completude, consistência e fluxo; G2, de tempo e volume de dados; e G3, da conclusão por contexto e sob rede degradada. O detalhamento encontra-se em \texttt{docs/fase2-gqm.md}.
 
 \begin{table}[htbp]
 \centering
@@ -48,15 +48,15 @@ No nível operacional, cada objetivo é desdobrado em questões analíticas acom
 \label{tab:resumo-questoes-hipoteses}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
-\begin{tabular}{|c|p{2.6cm}|c|p{4.1cm}|p{4.3cm}|}
+\begin{tabular}{|c|P{2.6cm}|c|P{4.1cm}|P{4.3cm}|}
 \hline
 \textbf{Obj.} & \textbf{Foco de Qualidade} & \textbf{ID} & \textbf{Questão de Medição} & \textbf{Hipótese Formulada} \\ \hline
-\multirow{3}{*}{\textbf{G1}} & \multirow{3}{=}{Adequação funcional (ISO/IEC 25010:2023)} & \textbf{Q1.1} & Os canais apresentam as informações da lista de referência da Fase 1? & \textbf{H1.1:} Ambos apresentam paridade na completude dos rótulos essenciais. \\ \cline{3-5}
+\multirow{3}{*}{\textbf{G1}} & \multirow[t]{3}{=}{\raggedright Adequação funcional} & \textbf{Q1.1} & Os canais apresentam as informações da lista de referência da Fase 1? & \textbf{H1.1:} Ambos apresentam paridade na completude dos rótulos essenciais. \\ \cline{3-5}
 & & \textbf{Q1.2} & Há consistência observável nos campos comuns entre os canais? & \textbf{H1.2:} Não há divergências para uma mesma infração consultada. \\ \cline{3-5}
 & & \textbf{Q1.3} & O caminho até as infrações inclui passos desnecessários? & \textbf{H1.3:} Os dois canais exigem o mesmo número de passos e telas, como previsto no levantamento. \\ \hline
-\multirow{2}{*}{\textbf{G2}} & \multirow{2}{=}{Eficiência de desempenho (ISO/IEC 25010:2023)} & \textbf{Q2.1} & Qual canal apresenta menor tempo até a exibição completa? & \textbf{H2.1:} O aplicativo possui tempo mediano inferior ao do Portal nas mesmas redes. \\ \cline{3-5}
+\multirow{2}{*}{\textbf{G2}} & \multirow[t]{2}{=}{\raggedright Eficiência de desempenho} & \textbf{Q2.1} & Qual canal apresenta menor tempo até a exibição completa? & \textbf{H2.1:} O aplicativo possui tempo mediano inferior ao do Portal nas mesmas redes. \\ \cline{3-5}
 & & \textbf{Q2.2} & Qual canal transfere menor volume de dados na consulta? & \textbf{H2.2:} O aplicativo consome menor volume médio de dados que o Portal. \\ \hline
-\multirow{2}{*}{\textbf{G3}} & \multirow{2}{=}{Cobertura de contexto (Qualidade em Uso)} & \textbf{Q3.1} & A consulta é concluída em todos os ambientes operacionais do escopo? & \textbf{H3.1:} Ambos concluem a consulta em 100\% dos ambientes especificados. \\ \cline{3-5}
+\multirow{2}{*}{\textbf{G3}} & \multirow[t]{2}{=}{\raggedright Cobertura de contexto} & \textbf{Q3.1} & A consulta é concluída em todos os ambientes operacionais do escopo? & \textbf{H3.1:} Ambos concluem a consulta em 100\% dos ambientes especificados. \\ \cline{3-5}
 & & \textbf{Q3.2} & A consulta conclui sob rede degradada frente a Wi-Fi e 4G? & \textbf{H3.2:} A taxa de conclusão cai sob latência simulada em pelo menos um canal. \\ \hline
 \end{tabular}
 \par\smallskip
