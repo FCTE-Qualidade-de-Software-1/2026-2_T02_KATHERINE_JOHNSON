@@ -1,0 +1,48 @@
+name: Verificar artigo, melhoria e fechamento
+
+on:
+  pull_request:
+    paths:
+      - 'artigo/**'
+      - 'gestao/**'
+      - 'melhorias/**'
+      - 'docs/gestao-fechamento-e2.md'
+      - '.github/workflows/artigo-gestao.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'artigo/**'
+      - 'gestao/**'
+      - 'melhorias/**'
+      - '.github/workflows/artigo-gestao.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 artigo/scripts/verificar.py
+      - run: python3 melhorias/consulta-infracoes/verificar.py
+      - run: python3 -m unittest discover -s gestao/tests -v
+      - name: Reproduzir fechamento versionado
+        run: |
+          python3 gestao/scripts/fechar_e2.py
+          git diff --exit-code -- gestao/dados/indicadores-e2.json gestao/relatorio-metricas-e2.md docs/gestao-fechamento-e2.md artigo/secoes/contribuicao.tex
+      - uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: artigo
+          args: -pdf -interaction=nonstopmode -halt-on-error -file-line-error
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: python3 artigo/scripts/validar_pdf.py artigo/main.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artigo-e2-verificado
+          path: artigo/main.pdf
