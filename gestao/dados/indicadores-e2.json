@@ -29,42 +29,42 @@
   "individuais": {
     "Daniel": {
       "estimativa_min": 570.0,
-      "real_min": 60.0,
-      "completo": false,
-      "percentual_conhecido": 1.702127659574468
+      "real_min": 560.0,
+      "completo": true,
+      "percentual_conhecido": 13.91304347826087
     },
     "Heitor": {
       "estimativa_min": 630.0,
       "real_min": 930.0,
       "completo": true,
-      "percentual_conhecido": 26.382978723404257
+      "percentual_conhecido": 23.1055900621118
     },
     "Hugo": {
       "estimativa_min": 650.0,
       "real_min": 865.0,
       "completo": true,
-      "percentual_conhecido": 24.53900709219858
+      "percentual_conhecido": 21.490683229813666
     },
     "Pedro Druck": {
       "estimativa_min": 860.0,
       "real_min": 60.0,
       "completo": false,
-      "percentual_conhecido": 1.702127659574468
+      "percentual_conhecido": 1.4906832298136645
     },
     "Pedro Henrique": {
       "estimativa_min": 330.0,
       "real_min": 750.0,
       "completo": true,
-      "percentual_conhecido": 21.27659574468085
+      "percentual_conhecido": 18.633540372670808
     },
     "Philipe": {
       "estimativa_min": 980.0,
       "real_min": 860.0,
       "completo": true,
-      "percentual_conhecido": 24.397163120567377
+      "percentual_conhecido": 21.366459627329192
     }
   },
-  "total_conhecido_min": 3525.0,
+  "total_conhecido_min": 4025.0,
   "pci_completo": false,
   "declaracoes": [
     {
@@ -106,6 +106,16 @@
       "base_min": 330.0,
       "acrescimo_min": 420,
       "total_min": 750.0
+    },
+    {
+      "integrante": "Daniel",
+      "data": "2026-11-23",
+      "fonte": "Declaração de Daniel (total de 9 h 20 min na E2, valor aproximado segundo a própria pessoa), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR.",
+      "metodo_estimativa": "Estimativa individual de Daniel na #28 (3 h) mais a metade da #49 (13 h ÷ 2 = 6 h 30 min): 9 h 30 min; não é rateio de horas reais.",
+      "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
+      "base_min": 570.0,
+      "acrescimo_min": -10,
+      "total_min": 560.0
     }
   ],
   "retrabalho": {

@@ -127,5 +127,28 @@ class DeclaracaoAtualizadaHugoTest(unittest.TestCase):
         v2 = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-22-v2.json').read_text())
         self.assertEqual(fechar.calcular(v2)['individuais']['Hugo']['real_min'], 710)
 
+class DeclaracoesV5Test(unittest.TestCase):
+    def setUp(self):
+        self.snapshot = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-23-v5.json').read_text())
+
+    def test_daniel_declara_o_total_e_a_estimativa_base_nao_muda(self):
+        ind = fechar.calcular(self.snapshot)['individuais']
+        self.assertEqual(ind['Daniel']['estimativa_min'], 570)
+        self.assertEqual(ind['Daniel']['real_min'], 560)
+        self.assertTrue(ind['Daniel']['completo'])
+        self.assertFalse(ind['Pedro Druck']['completo'])
+
+    def test_total_conhecido_com_cinco_declaracoes(self):
+        result = fechar.calcular(self.snapshot)
+        # 865 (Hugo) + 930 (Heitor) + 860 (Philipe) + 750 (Pedro Henrique) + 560 (Daniel) + 60 (Pedro Druck).
+        self.assertEqual(result['total_conhecido_min'], 4025)
+        self.assertFalse(result['pci_completo'])
+        self.assertIn('13,91', fechar.contribuicao(result).replace('\\%', ''))
+
+    def test_v4_permanece_como_historico(self):
+        v4 = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-23-v4.json').read_text())
+        self.assertEqual(fechar.calcular(v4)['total_conhecido_min'], 3525)
+
+
 if __name__ == '__main__':
     unittest.main()

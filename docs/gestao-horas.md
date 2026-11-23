@@ -89,11 +89,16 @@ coletiva de cada issue entre os responsáveis). Os dois estavam sem computador e
 verbalmente a Heitor, que os registrou a pedido: são estimativas das próprias pessoas, não
 cronometragem, e cada uma confirma o valor em comentário no próprio PR.
 
-Com as quatro declarações totais, as horas conhecidas somam **58 h 45 min**: 15 h 30 min de Heitor,
-14 h 25 min de Hugo, 14 h 20 min de Philipe, 12 h 30 min de Pedro Henrique, 1 h de Daniel (#28) e
-1 h de Pedro Druck (#55). Isso **não é o esforço final da equipe**: Daniel e Pedro Druck possuem
-registros parciais e ainda não declararam o total. Isso não significa zero horas trabalhadas, e os
-percentuais da tabela de contribuição mudam quando os dois declararem. A
+Daniel declarou **9 h 20 min** como total individual na E2, em 23/11, contra 9 h 30 min estimadas
+(a #28 mais a metade da #49). Ele deu o valor verbalmente a Heitor, que o registrou a pedido: é
+estimativa da própria pessoa, aproximada segundo ela, e não cronometragem. Ele confirma o valor em
+comentário no próprio PR.
+
+Com as cinco declarações totais, as horas conhecidas somam **67 h 05 min**: 15 h 30 min de Heitor,
+14 h 25 min de Hugo, 14 h 20 min de Philipe, 12 h 30 min de Pedro Henrique, 9 h 20 min de Daniel e
+1 h de Pedro Druck (#55). Isso **não é o esforço final da equipe**: Pedro Druck possui registro
+parcial e ainda não declarou o total. Isso não significa zero horas trabalhadas, e os percentuais da
+tabela de contribuição mudam quando ele declarar. A
 [coleta final documental](gestao-fechamento-e2.md) registra a fonte, a conciliação, as estimativas
 por integrante e a contribuição parcial. A E1
 permanece histórica; a decisão de dividir sua contribuição igualmente não foi aplicada à E2.

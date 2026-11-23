@@ -72,3 +72,9 @@ revisores designados permanece dependente de registro humano no PR.
 *Declaração dada verbalmente a Heitor, que a registrou a pedido porque Pedro Henrique estava sem computador. O texto-base é o da declaração de Heitor, que Pedro Henrique aprovou como sua em 23/11/2026; a confirmação fica registrada em comentário da própria pessoa no PR.*
 
 > Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.
+
+## Declaração individual da Entrega 2: Daniel — 23/11/2026
+
+*Declaração dada verbalmente a Heitor, que a registrou a pedido. O texto-base é o da declaração de Heitor, que Daniel autorizou usar como sua em 23/11/2026; a confirmação fica registrada em comentário da própria pessoa no PR.*
+
+> Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.
