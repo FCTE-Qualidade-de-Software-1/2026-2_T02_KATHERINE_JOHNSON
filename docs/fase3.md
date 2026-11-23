@@ -30,6 +30,17 @@ O passo a passo da fase está em [Metodologia](metodologia.md).
 Os critérios empíricos só podem ser marcados como concluídos após as sessões e a conferência
 das evidências. A integração documental não encerra automaticamente a issue.
 
+## Piloto S01 (22/11/2026)
+
+O piloto foi executado em 22/11 com o V2 nos dois canais: portal no Google Chrome 158 do D01
+(Ubuntu 26.04 LTS) e aplicativo 2.7.0 no Motorola edge 60 neo (D03). Resultado das 11 verificações
+do modelo de sessão: 8 aprovadas (consentimento e login, veículo e infração nos dois canais,
+inventário, gravação com indicação de clique/toque, rótulos e caminho, capturas, iOS), 1 parcial
+(contador de volume, sem equivalência entre os instrumentos dos dois canais) e 2 bloqueadas (rede
+controlada, B04). Revisão independente pendente. Liberação registrada por Hugo e Philipe em 22/11: P1, P2, P4 e P6
+liberados; P3 e P5 parciais; P7 bloqueado
+([registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S01-registro-2026-11-22.md); desvio D011).
+
 ## Levantamento autenticado
 
 ### 1. Passos da consulta
