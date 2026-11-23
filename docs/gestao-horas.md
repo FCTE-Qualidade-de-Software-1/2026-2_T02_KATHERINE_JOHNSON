@@ -65,11 +65,12 @@ As estimativas da E2 aplicam o fator de correção da E1 (+10%) e a margem de se
 
 
 
-## Declaração individual da E2 — 22/11/2026
+## Declarações individuais da E2 — 22 e 23/11/2026
 
-Hugo declarou ter trabalhado **1 h a mais do que o estimado na E2**. Pelo rateio das estimativas
+Hugo declarou, em 23/11, o total individual de **14 h 25 min** na E2. Pelo rateio das estimativas
 coletivas dos responsáveis no planejamento, sua base é 5 h 30 min na #46 e 5 h 20 min na #47:
-**10 h 50 min estimadas e 11 h 50 min reais declaradas** (+9,23%). O registro é total da E2;
+**10 h 50 min estimadas e 14 h 25 min reais declaradas** (+33,08%). A declaração substitui a de
+22/11 (11 h 50 min, 1 h acima do estimado), que fica preservada na fonte v2. O registro é total da E2;
 não foi declarada a distribuição real entre as issues, por isso os campos coletivos acima não
 foram preenchidos com esse total individual.
 
@@ -88,8 +89,8 @@ coletiva de cada issue entre os responsáveis). Os dois estavam sem computador e
 verbalmente a Heitor, que os registrou a pedido: são estimativas das próprias pessoas, não
 cronometragem, e cada uma confirma o valor em comentário no próprio PR.
 
-Com as quatro declarações totais, as horas conhecidas somam **56 h 10 min**: 15 h 30 min de Heitor,
-14 h 20 min de Philipe, 12 h 30 min de Pedro Henrique, 11 h 50 min de Hugo, 1 h de Daniel (#28) e
+Com as quatro declarações totais, as horas conhecidas somam **58 h 45 min**: 15 h 30 min de Heitor,
+14 h 25 min de Hugo, 14 h 20 min de Philipe, 12 h 30 min de Pedro Henrique, 1 h de Daniel (#28) e
 1 h de Pedro Druck (#55). Isso **não é o esforço final da equipe**: Daniel e Pedro Druck possuem
 registros parciais e ainda não declararam o total. Isso não significa zero horas trabalhadas, e os
 percentuais da tabela de contribuição mudam quando os dois declararem. A

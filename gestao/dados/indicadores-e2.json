@@ -31,51 +31,51 @@
       "estimativa_min": 570.0,
       "real_min": 60.0,
       "completo": false,
-      "percentual_conhecido": 1.7804154302670623
+      "percentual_conhecido": 1.702127659574468
     },
     "Heitor": {
       "estimativa_min": 630.0,
       "real_min": 930.0,
       "completo": true,
-      "percentual_conhecido": 27.596439169139465
+      "percentual_conhecido": 26.382978723404257
     },
     "Hugo": {
       "estimativa_min": 650.0,
-      "real_min": 710.0,
+      "real_min": 865.0,
       "completo": true,
-      "percentual_conhecido": 21.068249258160236
+      "percentual_conhecido": 24.53900709219858
     },
     "Pedro Druck": {
       "estimativa_min": 860.0,
       "real_min": 60.0,
       "completo": false,
-      "percentual_conhecido": 1.7804154302670623
+      "percentual_conhecido": 1.702127659574468
     },
     "Pedro Henrique": {
       "estimativa_min": 330.0,
       "real_min": 750.0,
       "completo": true,
-      "percentual_conhecido": 22.255192878338278
+      "percentual_conhecido": 21.27659574468085
     },
     "Philipe": {
       "estimativa_min": 980.0,
       "real_min": 860.0,
       "completo": true,
-      "percentual_conhecido": 25.519287833827892
+      "percentual_conhecido": 24.397163120567377
     }
   },
-  "total_conhecido_min": 3370.0,
+  "total_conhecido_min": 3525.0,
   "pci_completo": false,
   "declaracoes": [
     {
       "integrante": "Hugo",
-      "data": "2026-11-22",
-      "fonte": "Declaração do próprio Hugo nesta sessão: trabalhei 1h a mais do que o estimado na E2.",
+      "data": "2026-11-23",
+      "fonte": "Declaração do próprio Hugo em 23/11/2026: total de 14 h 25 min na E2. Substitui a declaração de 22/11 (11 h 50 min).",
       "metodo_estimativa": "Rateio igual das estimativas coletivas pelos responsáveis do planejamento; não é rateio de horas reais.",
       "escopo": "Total individual da E2, sem distribuição declarada entre issues; substitui qualquer soma parcial das mesmas atividades, nunca adiciona duas vezes.",
       "base_min": 650.0,
-      "acrescimo_min": 60,
-      "total_min": 710.0
+      "acrescimo_min": 215,
+      "total_min": 865.0
     },
     {
       "integrante": "Heitor",
