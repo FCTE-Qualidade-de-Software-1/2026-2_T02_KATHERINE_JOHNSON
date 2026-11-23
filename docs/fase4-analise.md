@@ -1,34 +1,58 @@
 # Fase 4 — Análise e julgamento GQM
 
-Atualização documental em **22–23/11/2026**, referente à #48. Responsáveis pela análise: Pedro Henrique
-e Philipe; revisor designado: Heitor. O roteiro abaixo permanece aplicável, mas seu estado agora
-distingue a `main` da coleta recente ainda não integrada.
+Atualização documental em **23/11/2026**, referente à #48. Responsáveis pela análise: Pedro Henrique
+e Philipe; revisor designado: Heitor. Todos os valores abaixo são **primeira leitura**: o campo
+`revisor` está vazio até a segunda leitura independente, e o validador recusa promover as linhas a
+dados oficiais. Por isso não há nível de pontuação.
 
 ## Situação e dependência
 
-Na `main` (`da717f2`), os oito CSV brutos têm apenas cabeçalhos. A validação calcula zero métricas:
-25 registros inconclusivos e um não aplicável (M3.1.2 no aplicativo). S01 é piloto e não entra no
-cálculo oficial; seu relatório não comprova aquecimento, marcações independentes ou instrumento
-de volume.
+Os registros reúnem seis sessões entre 21 e 23/11/2026: o piloto S01, a S02 (P1 a P3), a S03 e a S05
+(P6), a S06 (P4 e P5) e a S08 (P7). S01 é piloto e não entra no cálculo oficial. Os casos usam
+veículos diferentes (V1, V2, V4 e V5), com aparelhos e versões distintos, e não são reunidos em uma
+única mediana. O consentimento foi aplicado, conforme confirmação de Hugo em 22/11/2026, com vias
+assinadas privadas; a conciliação do vínculo dos códigos dos veículos continua pendente.
 
-A branch `feat/pedro-s03-fase4`, no
-[commit 14ab804](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/14ab804210f4b1be2aaa84e1946d9e11079a9a28),
-contém o [relato S03 de 21/11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/14ab804210f4b1be2aaa84e1946d9e11079a9a28/evidencias/fase4/S03-registro-2026-11-21.md).
-Ele relata CT01 com 3/3 conclusões, CT03 com 2/3 e uma expiração, e CT05 com 0/3 e erro ao buscar
-veículos. São contagens preliminares: a validação rejeita as 14 linhas por falta de conferência
-independente. O consentimento foi aplicado, conforme confirmação de Hugo em 22/11/2026, com
-vias assinadas privadas; a conciliação do vínculo dos códigos dos veículos continua pendente. CT05 usa
-aparelho/versão diferentes do planejamento (D006). CT02, CT04 e CT06 não foram executados no relato.
+### P1 a P3: S02 (caso V2, Wi-Fi, portal no Chrome e aplicativo 2.7.0 no Android)
 
-As sete questões e hipóteses e os três objetivos permanecem **inconclusivos no julgamento
-oficial**. O relato de falha não deve ser apagado nem convertido em aprovação, mas ainda não
-sustenta nível definitivo, ranking geral ou causa técnica. Tempos dos scripts não substituem P4;
-P6 não mede taxas por rede de P7. Os arquivos dessa branch não foram copiados sobre os instrumentos
-da `main`: a conferência da #47 precede sua integração como dados oficiais.
+| Métrica | Portal | Aplicativo |
+|---|---|---|
+| M1.1.1, campos na lista (de 15) | 5 | 5 |
+| M1.1.2, campos no detalhe (de 17) | 17 | 16 (sem R14) |
+| M1.2.1, campos paritários (par) | 16 de 17; R14 ausente no aplicativo | |
+| M1.2.2, infrações sem divergência (par) | 0 de 1, pela ausência de R14 | |
+| M1.3.1, passos até a lista | 4 | 6 |
+| M1.3.2, transições; rolagens | 3; 0 | 5; 2 |
+
+*Tabela — Observações provisórias de S02. Fonte: `evidencias/fase4/S02-registro-2026-11-22.md`; conferência independente pendente.*
+
+Nenhum campo divergiu em valor. A regra de contagem das transições (D015) e a execução por script (D014)
+estão registradas como desvios.
+
+### P6: contextos (S03 e S05)
+
+| Contexto | Concluídas | Resultado e limite |
+|---|---|---|
+| CT01: portal/Chrome | 3/3 (V1); 3/3 (V2) | Cinco erros de instrumento da S03 preservados à parte |
+| CT02: portal/Firefox | 3/3 (V2) | Falha de login na S03 (D005), fora das tentativas; resolvida na S05 |
+| CT03: portal/Chrome Android | 2/3 (V1) | Sessão expirada, preservada como falha |
+| CT05: aplicativo 2.6.3 | 0/3 (V1) | Erro ao buscar veículos; aparelho superior ao planejado (D006) |
+| CT05: aplicativo 2.7.0 | 3/3 (V2) | Outro aparelho, titular e veículo (D009) |
+| CT06: aplicativo iOS 2.7.1 | 3/3 (V5) | Executor é o titular (D028); filtro de período (D030); M2.2.1 não medida no iOS (D008) |
+| CT04 | Sem execução | Sem aparelho; contexto não avaliado |
+
+*Tabela — Observações provisórias de P6. Fonte: registros S03, S05 e do CT06; conferência independente pendente.*
+
+Versões, aparelhos, titulares e veículos diferentes impedem atribuir a diferença entre 2.6.3 e 2.7.0 a
+uma causa técnica. As durações dos scripts de P6 não substituem P4, e P6 não mede as taxas por rede de P7.
+
+As sete questões e hipóteses e os três objetivos permanecem **inconclusivos no julgamento oficial**
+até a segunda leitura. O relato de falha não deve ser apagado nem convertido em aprovação, e a
+ausência de dado ou de conferência não equivale a paridade nem a aprovação.
 
 ## Continuação com o caso V4 (S06 e S08)
 
-Em 22 e 23/11/2026, a coleta prosseguiu nesta branch com outro titular coberto pelo consentimento
+Em 22 e 23/11/2026, a coleta prosseguiu com outro titular coberto pelo consentimento
 (caso V4), no computador D06 (Chrome 157) e no Samsung SM-S731B (Aplicativo 2.7.0). Os registros
 estão em `evidencias/fase4/S06-registro-2026-11-22.md` e `evidencias/fase4/S08-registro-2026-11-22.md`.
 Os tempos abaixo são **propostas automáticas de primeira leitura**, pelos timestamps dos quadros,
