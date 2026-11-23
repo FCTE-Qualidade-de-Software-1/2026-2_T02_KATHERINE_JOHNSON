@@ -660,7 +660,7 @@
         46,
         47
       ],
-      "metodo_estimativa": "Rateio igual das estimativas coletivas pelos responsáveis do planejamento; não é rateio de horas reais.",
+      "metodo_estimativa": "Estimativa individual do planejamento: 5 h 30 min na #46 e 5 h 20 min na #47.",
       "escopo": "Total individual da E2, sem distribuição declarada entre issues; substitui qualquer soma parcial das mesmas atividades, nunca adiciona duas vezes.",
       "completo": true
     },
@@ -673,7 +673,7 @@
         49,
         53
       ],
-      "metodo_estimativa": "Rateio igual da estimativa coletiva da #49 entre Daniel e Heitor (13 h ÷ 2 = 6 h 30 min) mais a #53 (4 h): 10 h 30 min; não é rateio de horas reais.",
+      "metodo_estimativa": "Estimativa individual do planejamento: 6 h 30 min na #49 e 4 h na #53.",
       "escopo": "Total individual da E2 até cerca de 12:00 de 23/11, sem distribuição declarada entre issues; substitui as 3 h já registradas na #53 e a declaração de 11 h de 22/11, nunca adiciona duas vezes. Trabalho posterior a esse horário não está incluído.",
       "completo": true
     },
@@ -687,7 +687,7 @@
         47,
         48
       ],
-      "metodo_estimativa": "Rateio igual da estimativa coletiva de cada issue entre os responsáveis (#46: 11 h ÷ 2; #47: 16 h ÷ 3; #48: 11 h ÷ 2): 16 h 20 min; não é rateio de horas reais.",
+      "metodo_estimativa": "Estimativa individual do planejamento: 5 h 30 min na #46, 5 h 20 min na #47 e 5 h 30 min na #48.",
       "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
       "completo": true
     },
@@ -699,7 +699,7 @@
       "issues_estimativa": [
         48
       ],
-      "metodo_estimativa": "Rateio igual da estimativa coletiva da #48 entre os responsáveis (11 h ÷ 2): 5 h 30 min; não é rateio de horas reais.",
+      "metodo_estimativa": "Estimativa individual do planejamento: 5 h 30 min na #48.",
       "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
       "completo": true
     },
@@ -712,7 +712,7 @@
         28,
         49
       ],
-      "metodo_estimativa": "Estimativa individual de Daniel na #28 (3 h) mais a metade da #49 (13 h ÷ 2 = 6 h 30 min): 9 h 30 min; não é rateio de horas reais.",
+      "metodo_estimativa": "Estimativa individual do planejamento: 3 h na #28 e 6 h 30 min na #49.",
       "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
       "completo": true
     }

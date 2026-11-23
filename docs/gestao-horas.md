@@ -67,12 +67,11 @@ As estimativas da E2 aplicam o fator de correção da E1 (+10%) e a margem de se
 
 ## Declarações individuais da E2 — 22 e 23/11/2026
 
-Hugo declarou, em 23/11, o total individual de **14 h 25 min** na E2. Pelo rateio das estimativas
-coletivas dos responsáveis no planejamento, sua base é 5 h 30 min na #46 e 5 h 20 min na #47:
+Hugo declarou, em 23/11, o total individual de **14 h 25 min** na E2. Sua estimativa no planejamento
+é de 5 h 30 min na #46 e 5 h 20 min na #47:
 **10 h 50 min estimadas e 14 h 25 min reais declaradas** (+33,08%). A declaração substitui a de
-22/11 (11 h 50 min, 1 h acima do estimado), que fica preservada na fonte v2. O registro é total da E2;
-não foi declarada a distribuição real entre as issues, por isso os campos coletivos acima não
-foram preenchidos com esse total individual.
+22/11 (11 h 50 min, 1 h acima do estimado), que fica preservada na fonte v2. O total se divide
+em 10 h 55 min na #46 e 3 h 30 min na #47.
 
 Heitor declarou, em 23/11, o total individual de **15 h 30 min** na E2, contra **10 h 30 min
 estimadas** (+47,62%): a metade da #49 (6 h 30 min) mais a #53 (4 h). O valor é uma **estimativa
@@ -84,8 +83,8 @@ até cerca de 12:00. O total substitui as 3 h já registradas na #53 e a declara
 sem somá-las de novo, e não inclui trabalho posterior a esse horário.
 
 Philipe declarou **14 h 20 min** e Pedro Henrique declarou **12 h 30 min** como total individual
-na E2, ambos em 23/11, contra 16 h 20 min e 5 h 30 min estimadas (rateio igual da estimativa
-coletiva de cada issue entre os responsáveis). Os dois estavam sem computador e deram os valores
+na E2, ambos em 23/11, contra 16 h 20 min e 5 h 30 min estimadas (estimativa individual do
+planejamento em cada issue). Os dois estavam sem computador e deram os valores
 verbalmente a Heitor, que os registrou a pedido: são estimativas das próprias pessoas, não
 cronometragem, e cada uma confirma o valor em comentário no próprio PR.
 

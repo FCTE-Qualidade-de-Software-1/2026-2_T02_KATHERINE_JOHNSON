@@ -205,7 +205,7 @@ def relatorio(snapshot, result, fonte='gestao/dados/fechamento-e2-2026-11-22.jso
                'da E1 não foi estendida à E2.'), '',
               *declaracoes_texto(result),
               'O planejamento no corpo da #46 identifica Hugo e Philipe, embora a lista de assignees '
-              'da API contenha só Hugo. Usou-se o planejamento explícito para ratear estimativas, '
+              'da API contenha só Hugo. As estimativas individuais seguem o planejamento explícito, '
               'coerente com a tabela histórica de horas. Estimativas individuais fracionárias são '
               'mantidas sem arredondamento no cálculo; a exibição em minutos arredonda apenas ao final.', '',
               '## Resposta aos desvios', '',
