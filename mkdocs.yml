@@ -39,7 +39,7 @@ extra_css:
 
 # Versão exibida no rodapé de todas as páginas; atualizar a cada release.
 extra:
-  versao: "1.1 (Entrega 2, em andamento)"
+  versao: "2.0 (Entrega 2)"
   generator: false
 
 markdown_extensions:
