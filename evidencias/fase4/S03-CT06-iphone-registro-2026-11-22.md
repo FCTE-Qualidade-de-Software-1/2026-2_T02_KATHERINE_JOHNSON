@@ -35,7 +35,7 @@ aprovação de piloto.
 ## Caminho executado em cada tentativa
 
 Tela inicial autenticada, Infrações, Histórico de infrações por veículo, escolha do veículo V5,
-período ampliado até o limite permitido, com "Todas" as situações, Consultar, escolha da infração V5-I1 e
+período ajustado para incluir a infração, dentro do limite de 5 anos do aplicativo, com "Todas" as situações, Consultar, escolha da infração V5-I1 e
 detalhe (folha "Confira o detalhamento da infração"). Critério de conclusão: o detalhe exibe o rótulo
 "Descrição da Infração", como nas demais tentativas do P6.
 
@@ -60,8 +60,8 @@ presente momento, não há registros", e a seção de veículos atuais listava d
 
 Capturas feitas durante a primeira passagem pelo caminho (12:06 a 12:09, conforme os metadados dos
 originais). Antes de entrar no repositório, foram cobertos com tarja opaca: a barra de status, o nome do
-usuário, os modelos e as placas dos veículos, o nome e o número do auto, a data da infração e
-o valor da placa e do modelo no detalhe. As cópias não têm metadados. Os originais, sem tarja, ficam
+usuário, os modelos e as placas dos veículos, o nome e o número do auto, a data da infração,
+o valor da placa e do modelo no detalhe e as datas do filtro de período. As cópias não têm metadados. Os originais, sem tarja, ficam
 em `dados/privado/`, ignorado pelo Git.
 
 | Arquivo | Conteúdo |
