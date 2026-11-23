@@ -73,17 +73,32 @@ Hugo declarou, em 23/11, o total individual de **14 h 25 min** na E2. Sua estima
 22/11 (11 h 50 min, 1 h acima do estimado), que fica preservada na fonte v2. O total se divide
 em 10 h 55 min na #46 e 3 h 30 min na #47.
 
-Heitor declarou, em 22/11, o total individual de **11 h** na E2, contra **10 h 30 min estimadas**
-(+4,76%): a metade da #49 (6 h 30 min) mais a #53 (4 h). O valor é uma **estimativa calculada
-com apoio de Claude Code** a partir de registros datados (commits, PRs, revisões, comentários e
-arquivos locais), agrupados em blocos de trabalho, e não uma cronometragem: 3 h da #53, cerca de
-5,3 h em 16/11 e cerca de 2,9 h em 22/11 até 12:58, somando 11,2 h. O total substitui as 3 h já
-registradas na #53, sem somá-las de novo, e não inclui trabalho posterior a 13:15 de 22/11.
+Heitor declarou, em 23/11, o total individual de **15 h 30 min** na E2, contra **10 h 30 min
+estimadas** (+47,62%): a metade da #49 (6 h 30 min) mais a #53 (4 h). O valor é uma **estimativa
+calculada com apoio de Claude Code** a partir de registros datados (commits, PRs, revisões,
+comentários e horários da sessão de trabalho), agrupados em blocos, e não uma cronometragem. Ele
+soma as 11 h declaradas em 22/11 (até 13:15) e cerca de 4,5 h depois disso: 0,6 h em 22/11 à noite,
+3,0 h em 23/11 de 08:20 a 11:21 (incluindo a segunda leitura da S02, que não deixa commit) e 0,7 h
+até cerca de 12:00. O total substitui as 3 h já registradas na #53 e a declaração anterior de 11 h,
+sem somá-las de novo, e não inclui trabalho posterior a esse horário.
 
-Com as duas declarações, as horas conhecidas somam **27 h 25 min**: 14 h 25 min de Hugo, 11 h de
-Heitor, 1 h de Daniel (#28) e 1 h de Pedro Druck (#55). Isso **não é o esforço final da equipe**:
-Daniel e Pedro Druck possuem registros parciais; Pedro Henrique e Philipe não têm horas reais
-informadas no corte. Isso não significa zero horas trabalhadas, e os percentuais da tabela de
-contribuição mudam quando os demais declararem. A [coleta final documental](gestao-fechamento-e2.md)
-registra a fonte, a conciliação, as estimativas por integrante e a contribuição parcial. A E1
+Philipe declarou **14 h 20 min** e Pedro Henrique declarou **12 h 30 min** como total individual
+na E2, ambos em 23/11, contra 16 h 20 min e 5 h 30 min estimadas (estimativa individual do
+planejamento em cada issue). Os dois estavam sem computador e deram os valores
+verbalmente a Heitor, que os registrou a pedido: são estimativas das próprias pessoas, não
+cronometragem, e cada uma confirma o valor em comentário no próprio PR.
+
+Daniel declarou **9 h 20 min** como total individual na E2, em 23/11, contra 9 h 30 min estimadas
+(a #28 mais a metade da #49). Ele deu o valor verbalmente a Heitor, que o registrou a pedido: é
+estimativa da própria pessoa, aproximada segundo ela, e não cronometragem. Ele confirma o valor em
+comentário no próprio PR.
+
+Pedro Druck declarou **13 h** como total individual na E2, em 23/11, no PR #83: 6 h na #47, 6 h na
+#36 e 1 h na #55, contra 14 h 20 min estimadas (a #36, a #55 e um terço da #47). A 1 h já registrada
+na #55 faz parte desse total e não é somada de novo.
+
+Com as seis declarações totais, as horas da E2 somam **79 h 05 min**: 15 h 30 min de Heitor,
+14 h 25 min de Hugo, 14 h 20 min de Philipe, 13 h de Pedro Druck, 12 h 30 min de Pedro Henrique e
+9 h 20 min de Daniel. A [coleta final documental](gestao-fechamento-e2.md) registra a fonte, a
+conciliação, as estimativas por integrante e a contribuição de cada um. A E1
 permanece histórica; a decisão de dividir sua contribuição igualmente não foi aplicada à E2.
