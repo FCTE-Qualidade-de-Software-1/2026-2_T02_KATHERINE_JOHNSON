@@ -1,0 +1,10 @@
+{
+  "name": "katherine-johnson-p6",
+  "private": true,
+  "description": "Execução automatizada da P6 (S03) no portal do Detran-DF",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer-core": "24.43.1"
+  }
+}
