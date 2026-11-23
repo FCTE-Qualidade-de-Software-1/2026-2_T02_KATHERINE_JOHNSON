@@ -10,9 +10,9 @@ aprovação de piloto.
 | Item | Registro |
 |---|---|
 | Sessão, bloco, data, início e fim (Brasília) | S03, B04, 22/11/2026, das 12:06:20 às 12:10:45 |
-| Executor / registrador / conferente independente | Heitor (executor); sem registrador (D016); conferente indicado: Philipe (pendente) |
-| Veículo e infração (somente códigos) | V2 (código provisório, a confirmar por Hugo na tabela privada) e V2-I1 (infração de 08/2025) (D010) |
-| Titular | O executor é também o titular e fez o login pessoalmente; os dados do titular ficam só no registro privado (D009) |
+| Executor / registrador / conferente independente | Heitor (executor); sem registrador (D028); conferente indicado: Philipe (pendente) |
+| Veículo e infração (somente códigos) | V5 (código novo, titular Heitor; Hugo confirma o vínculo na tabela privada) e V5-I1 (D029) |
+| Titular | O executor é também o titular e fez o login pessoalmente; os dados do titular ficam só no registro privado (D028) |
 | Contexto e rede | CT06 (iPhone D04, aplicativo 2.7.1), Wi-Fi sem limitação; linha `S03,CT06,...,wifi` em `ambientes.csv` |
 | Versão e build do iOS | Heitor informou ter conferido em Ajustes > Geral > Sobre antes da sessão e não pediu correção do valor registrado |
 | Versão do plano (commit) | Branch do S03 após o PR #69 |
@@ -34,8 +34,8 @@ aprovação de piloto.
 
 ## Caminho executado em cada tentativa
 
-Tela inicial autenticada, Infrações, Histórico de infrações por veículo, escolha do veículo V2,
-período de 01/02/2024 a 22/11/2026 com "Todas" as situações, Consultar, escolha da infração V2-I1 e
+Tela inicial autenticada, Infrações, Histórico de infrações por veículo, escolha do veículo V5,
+período ampliado até o limite permitido, com "Todas" as situações, Consultar, escolha da infração V5-I1 e
 detalhe (folha "Confira o detalhamento da infração"). Critério de conclusão: o detalhe exibe o rótulo
 "Descrição da Infração", como nas demais tentativas do P6.
 
@@ -52,7 +52,7 @@ inícios das tentativas 2 e 3 foram **calculados** pela soma das durações a pa
 intervalo entre elas. A duração inclui a operação manual e não é medida de tempo da Fase 2. O CT06 fica
 com **3 de 3** tentativas concluídas, pendente de conferência.
 
-Observações: a tela do aplicativo iOS informa que o período máximo de busca é de 5 anos (D018).
+Observações: a tela do aplicativo iOS informa que o período máximo de busca é de 5 anos (D030).
 Na lista de veículos, a seção "Veículos de minha propriedade à época da infração" mostrou "Até o
 presente momento, não há registros", e a seção de veículos atuais listava dois veículos da conta.
 
@@ -67,10 +67,10 @@ em `dados/privado/`, ignorado pelo Git.
 | Arquivo | Conteúdo |
 |---|---|
 | `capturas/S01/S01-ios-lista-veiculos.png` | Histórico de infrações por veículo: lista de veículos |
-| `capturas/S01/S01-ios-lista-infracoes-V2.png` | Resultado da pesquisa: lista de infrações |
-| `capturas/S01/S01-ios-detalhe-V2-I1.png` | Detalhe da infração |
-| `capturas/S03/S03-B04-aplicativo-P6-V2-resultado-2026-11-22.png` | Resultado do contexto CT06 (mesma tela do detalhe) |
-| `capturas/S03/S03-B04-aplicativo-P6-V2-periodo-2026-11-22.png` | Formulário de período (D018) |
+| `capturas/S01/S01-ios-lista-infracoes-V5.png` | Resultado da pesquisa: lista de infrações |
+| `capturas/S01/S01-ios-detalhe-V5-I1.png` | Detalhe da infração |
+| `capturas/S03/S03-B04-aplicativo-P6-V5-resultado-2026-11-22.png` | Resultado do contexto CT06 (mesma tela do detalhe) |
+| `capturas/S03/S03-B04-aplicativo-P6-V5-periodo-2026-11-22.png` | Formulário de período (D030) |
 
 **Limite da evidência:** as capturas não são uma por tentativa e não mostram o rótulo "Descrição da
 Infração": o detalhe aparece só na parte superior. A conclusão das 3 tentativas e a presença desse
@@ -80,9 +80,9 @@ resultados em `tentativas.csv`, o que foi feito.
 ## Desvios registrados
 
 - **D008:** M2.2.1 não medida no iOS (sem contador de bytes por aplicativo).
-- **D016:** executor e titular são a mesma pessoa, sem registrador.
-- **D017:** CT06 usou o V2 (provisório), e não o V1 do S03; infrações de datas diferentes.
-- **D018:** o app iOS tem filtro de período, e o do Android não tinha.
+- **D028:** executor e titular são a mesma pessoa, sem registrador.
+- **D029:** CT06 usou o V5 (código novo), e não o V1 do S03; infrações diferentes.
+- **D030:** o app iOS tem filtro de período, e o do Android não tinha.
 
 ## Conferência independente
 
