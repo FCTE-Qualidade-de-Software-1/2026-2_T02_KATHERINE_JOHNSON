@@ -660,7 +660,7 @@
         46,
         47
       ],
-      "metodo_estimativa": "Rateio igual das estimativas coletivas pelos responsáveis do planejamento; não é rateio de horas reais.",
+      "metodo_estimativa": "Estimativa individual do planejamento: 5 h 30 min na #46 e 5 h 20 min na #47.",
       "escopo": "Total individual da E2, sem distribuição declarada entre issues; substitui qualquer soma parcial das mesmas atividades, nunca adiciona duas vezes.",
       "completo": true
     }
