@@ -11,7 +11,7 @@ aprovação de piloto.
 |---|---|
 | Sessão, bloco, data, início e fim (Brasília) | S03, B04, 22/11/2026, das 12:06:20 às 12:10:45 |
 | Executor / registrador / conferente independente | Heitor (executor); sem registrador (D028); conferente indicado: Philipe (pendente) |
-| Veículo e infração (somente códigos) | V5 (código novo, titular Heitor; Hugo confirma o vínculo na tabela privada) e V5-I1 (D029) |
+| Veículo e infração (somente códigos) | V5 (código novo, titular Heitor; vínculo conciliado com a tabela privada por Hugo, PR #84) e V5-I1 (D029) |
 | Titular | O executor é também o titular e fez o login pessoalmente; os dados do titular ficam só no registro privado (D028) |
 | Contexto e rede | CT06 (iPhone D04, aplicativo 2.7.1), Wi-Fi sem limitação; linha `S03,CT06,...,wifi` em `ambientes.csv` |
 | Versão e build do iOS | Heitor informou ter conferido em Ajustes > Geral > Sobre antes da sessão e não pediu correção do valor registrado |
@@ -35,7 +35,7 @@ aprovação de piloto.
 ## Caminho executado em cada tentativa
 
 Tela inicial autenticada, Infrações, Histórico de infrações por veículo, escolha do veículo V5,
-período ampliado até o limite permitido, com "Todas" as situações, Consultar, escolha da infração V5-I1 e
+período ajustado para incluir a infração, dentro do limite de 5 anos do aplicativo, com "Todas" as situações, Consultar, escolha da infração V5-I1 e
 detalhe (folha "Confira o detalhamento da infração"). Critério de conclusão: o detalhe exibe o rótulo
 "Descrição da Infração", como nas demais tentativas do P6.
 
@@ -60,8 +60,8 @@ presente momento, não há registros", e a seção de veículos atuais listava d
 
 Capturas feitas durante a primeira passagem pelo caminho (12:06 a 12:09, conforme os metadados dos
 originais). Antes de entrar no repositório, foram cobertos com tarja opaca: a barra de status, o nome do
-usuário, os modelos e as placas dos veículos, o nome e o número do auto, a data da infração e
-o valor da placa e do modelo no detalhe. As cópias não têm metadados. Os originais, sem tarja, ficam
+usuário, os modelos e as placas dos veículos, o nome e o número do auto, a data da infração,
+o valor da placa e do modelo no detalhe e as datas do filtro de período. As cópias não têm metadados. Os originais, sem tarja, ficam
 em `dados/privado/`, ignorado pelo Git.
 
 | Arquivo | Conteúdo |

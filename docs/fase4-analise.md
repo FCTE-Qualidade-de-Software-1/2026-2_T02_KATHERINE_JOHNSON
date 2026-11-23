@@ -1,17 +1,18 @@
 # Fase 4 — Análise e julgamento GQM
 
 Atualização documental em **23/11/2026**, referente à #48. Responsáveis pela análise: Pedro Henrique
-e Philipe; revisor designado: Heitor. Todos os valores abaixo são **primeira leitura**: o campo
-`revisor` está vazio até a segunda leitura independente, e o validador recusa promover as linhas a
-dados oficiais. Por isso não há nível de pontuação.
+e Philipe; revisor designado: Heitor. Os valores abaixo são **primeira leitura**, exceto P1 a P3 da S02,
+que tiveram [segunda leitura independente](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S02-segunda-leitura-2026-11-23.md)
+(86 de 87 linhas; uma rolagem do P3 segue pendente). Nas demais, o campo `revisor` está vazio e o
+validador recusa promover as linhas a dados oficiais. Por isso não há nível de pontuação.
 
 ## Situação e dependência
 
-Os registros reúnem seis sessões entre 21 e 23/11/2026: o piloto S01, a S02 (P1 a P3), a S03 e a S05
+Os registros reúnem seis sessões, em 21 e 22/11/2026: o piloto S01, a S02 (P1 a P3), a S03 e a S05
 (P6), a S06 (P4 e P5) e a S08 (P7). S01 é piloto e não entra no cálculo oficial. Os casos usam
 veículos diferentes (V1, V2, V4 e V5), com aparelhos e versões distintos, e não são reunidos em uma
 única mediana. O consentimento foi aplicado, conforme confirmação de Hugo em 22/11/2026, com vias
-assinadas privadas; a conciliação do vínculo dos códigos dos veículos continua pendente.
+assinadas privadas; os códigos V1, V2, V4 e V5 foram conciliados com a tabela privada por Hugo (PR #84).
 
 ### P1 a P3: S02 (caso V2, Wi-Fi, portal no Chrome e aplicativo 2.7.0 no Android)
 
@@ -24,7 +25,7 @@ assinadas privadas; a conciliação do vínculo dos códigos dos veículos conti
 | M1.3.1, passos até a lista | 4 | 6 |
 | M1.3.2, transições; rolagens | 3; 0 | 5; 2 |
 
-*Tabela — Observações provisórias de S02. Fonte: `evidencias/fase4/S02-registro-2026-11-22.md`; conferência independente pendente.*
+*Tabela — Observações provisórias de S02. Fonte: `evidencias/fase4/S02-registro-2026-11-22.md`; segunda leitura independente concluída (86 de 87 linhas; uma rolagem do aplicativo pendente).*
 
 Nenhum campo divergiu em valor. A regra de contagem das transições (D015) e a execução por script (D014)
 estão registradas como desvios.
@@ -52,7 +53,7 @@ ausência de dado ou de conferência não equivale a paridade nem a aprovação.
 
 ## Continuação com o caso V4 (S06 e S08)
 
-Em 22 e 23/11/2026, a coleta prosseguiu com outro titular coberto pelo consentimento
+Em 22/11/2026, a coleta prosseguiu com outro titular coberto pelo consentimento
 (caso V4), no computador D06 (Chrome 157) e no Samsung SM-S731B (Aplicativo 2.7.0). Os registros
 estão em `evidencias/fase4/S06-registro-2026-11-22.md` e `evidencias/fase4/S08-registro-2026-11-22.md`.
 Os tempos abaixo são **propostas automáticas de primeira leitura**, pelos timestamps dos quadros,

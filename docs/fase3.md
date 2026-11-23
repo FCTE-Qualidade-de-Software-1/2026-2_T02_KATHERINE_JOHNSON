@@ -19,7 +19,7 @@ O passo a passo da fase está em [Metodologia](metodologia.md).
 |---|---|---|
 | F3-C1: método e instruções | [P1–P7](fase3-metodo.md), parâmetros e registro de sessão | Documentado para revisão |
 | F3-C2: recursos e ambiente | [Inventário e piloto](fase3-ambiente.md) | Parcial: inventário efetivo de CT01, CT03 e CT05 registrado em `ambientes.csv` (S03 e S05) e do iPhone D04 (CT06, com P6 executado e a conferir no aparelho); D02 pendente; S06/S08 com D05 (Samsung) e D06 (computador) |
-| F3-C2: massa e consentimento | [Massa e instrumentos](fase3-dados.md) | Termos aplicados, conforme confirmação de Hugo em 22/11/2026; vias assinadas privadas; V1 e V2 com códigos provisórios; V4 usado em S06/S08; V5 usado no CT06 (iPhone) |
+| F3-C2: massa e consentimento | [Massa e instrumentos](fase3-dados.md) | Termos aplicados, conforme confirmação de Hugo em 22/11/2026; vias assinadas privadas; códigos V1, V2, V4 e V5 conciliados com a tabela privada por Hugo (PR #84); V4 usado em S06/S08 e V5 no CT06 (iPhone) |
 | F3-C3: cronograma | [Sessões e responsáveis](fase3-cronograma.md) | Datas propostas; horários com titulares e sincronização do Project pendentes |
 | F3-C8: coerência com a Fase 2 | [Tabela de rastreabilidade](fase3-metodo.md#4-rastreabilidade-entre-as-fases-2-e-3) | Quatorze métricas ligadas a procedimentos, instrumentos e registros |
 | Artigo e GitPage | Seção `fase3-plano.tex` e páginas desta fase | Disponíveis nesta branch para revisão |

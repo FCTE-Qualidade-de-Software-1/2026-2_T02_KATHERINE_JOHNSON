@@ -147,6 +147,16 @@ class ColetaTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'tempo incompatível'):
             self.run_calc()
 
+    def test_tempo_timestamps_aceita_arredondamento_de_microssegundo(self):
+        # Casos reais de S06/S08: fim_s - inicio_s e tempo_s, todos a 6 casas, diferem em 1 microssegundo.
+        for ini, fim, tempo in (('1.410489', '2.009144', '0.598656'), ('1.736256', '2.077644', '0.341389'),
+                                ('1.998867', '2.380622', '0.381756')):
+            calc.validar_tempo({'quadro_inicial': '', 'quadro_final': '', 'fps': '',
+                                'inicio_s': ini, 'fim_s': fim, 'tempo_s': tempo})
+        with self.assertRaisesRegex(ValueError, 'tempo incompatível'):
+            calc.validar_tempo({'quadro_inicial': '', 'quadro_final': '', 'fps': '',
+                                'inicio_s': '1.410489', 'fim_s': '2.009144', 'tempo_s': '0.6'})
+
     def test_p5_mb_decimal_e_contador(self):
         self.ambiente('CT05')
         row = self.row('volume', canal='aplicativo', contexto='CT05', instrumento='Contador sintético',

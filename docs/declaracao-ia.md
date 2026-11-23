@@ -40,6 +40,27 @@ documenta a conferência e a divergência identificada.
 | Heitor | Claude Code | Apoio aos registros de gestão, à redação da GitPage e dos slides de PSM/CID, à documentação da coleta em iOS e à estimativa das próprias horas. | Conferiu os registros nas issues, nos PRs, no histórico de commits e nas atas. Conferiu as descrições das imagens uma a uma, forneceu os dados da coleta em iOS e revisou e aceitou a estimativa de horas. |
 | Registros técnicos da equipe | Codex (OpenAI) | Apoio aos roteiros e modelos de coleta e análise (#46 e #48), à documentação da proposta de melhoria (#36), à atualização do artigo e à preparação desta declaração. | Cotejo com as fases anteriores, os dados disponíveis e os registros no GitHub, além das verificações de compilação e do PDF. A revisão da declaração pela equipe é acompanhada na [issue #49](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/49). |
 
+### Declarações individuais da Entrega 2
+
+Declarações dadas pelas próprias pessoas em 23/11/2026, registradas como indicado em cada uma.
+
+#### Heitor — 23/11/2026
+
+> Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.
+
+#### Philipe — 23/11/2026
+
+*Declaração dada verbalmente a Heitor, que a registrou a pedido porque Philipe estava sem computador. O texto-base é o da declaração de Heitor, que Philipe aprovou como sua em 23/11/2026; a confirmação fica registrada em comentário da própria pessoa no PR.*
+
+> Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.
+
+
+#### Pedro Henrique — 23/11/2026
+
+*Declaração dada verbalmente a Heitor, que a registrou a pedido porque Pedro Henrique estava sem computador. O texto-base é o da declaração de Heitor, que Pedro Henrique aprovou como sua em 23/11/2026; a confirmação fica registrada em comentário da própria pessoa no PR.*
+
+> Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.
+
 ## 3. Registro individual da Entrega 1
 
 A Tabela abaixo documenta pormenorizadamente a ferramenta empregada, a finalidade específica e o procedimento de auditoria e ajuste humano realizado por cada integrante da equipe.
