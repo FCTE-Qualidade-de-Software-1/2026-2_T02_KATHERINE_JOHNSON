@@ -53,7 +53,7 @@ ausência de dado ou de conferência não equivale a paridade nem a aprovação.
 
 ## Continuação com o caso V4 (S06 e S08)
 
-Em 22 e 23/11/2026, a coleta prosseguiu com outro titular coberto pelo consentimento
+Em 22/11/2026, a coleta prosseguiu com outro titular coberto pelo consentimento
 (caso V4), no computador D06 (Chrome 157) e no Samsung SM-S731B (Aplicativo 2.7.0). Os registros
 estão em `evidencias/fase4/S06-registro-2026-11-22.md` e `evidencias/fase4/S08-registro-2026-11-22.md`.
 Os tempos abaixo são **propostas automáticas de primeira leitura**, pelos timestamps dos quadros,
