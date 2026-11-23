@@ -45,5 +45,37 @@ class FechamentoTest(unittest.TestCase):
         self.assertIn(67,result['retrabalho']['avaliados'])
 
 
+class DeclaracaoHeitorTest(unittest.TestCase):
+    def setUp(self):
+        self.snapshot = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-22-v2.json').read_text())
+
+    def test_duas_declaracoes_totais_sem_duplicar_a_53(self):
+        result = fechar.calcular(self.snapshot)
+        heitor = result['individuais']['Heitor']
+        self.assertEqual(heitor['estimativa_min'], 630)
+        self.assertEqual(heitor['real_min'], 660)
+        self.assertTrue(heitor['completo'])
+        # 710 (Hugo) + 660 (Heitor) + 60 (Daniel) + 60 (Pedro Druck); as 180 min da #53 são substituídas.
+        self.assertEqual(result['total_conhecido_min'], 1490)
+        self.assertFalse(result['pci_completo'])
+
+    def test_historico_da_primeira_consulta_nao_muda(self):
+        original = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-22.json').read_text())
+        self.assertEqual([d['integrante'] for d in original['declaracoes']], ['Hugo'])
+        self.assertEqual(fechar.calcular(original)['total_conhecido_min'], 1010)
+
+    def test_rejeita_total_abaixo_das_horas_ja_registradas(self):
+        self.snapshot['declaracoes'][-1]['acrescimo_min'] = -500
+        with self.assertRaisesRegex(ValueError, 'incompatível'):
+            fechar.calcular(self.snapshot)
+
+    def test_relatorio_cita_as_duas_declaracoes(self):
+        result = fechar.calcular(self.snapshot)
+        texto = fechar.relatorio(self.snapshot, result, 'gestao/dados/fechamento-e2-2026-11-22-v2.json')
+        self.assertIn('Hugo e Heitor declararam total', texto)
+        self.assertIn('estimativa calculada', texto.replace('Estimativa de Heitor, calculada', 'estimativa calculada'))
+        self.assertIn('Hugo e Heitor', fechar.contribuicao(result))
+
+
 if __name__ == '__main__':
     unittest.main()
