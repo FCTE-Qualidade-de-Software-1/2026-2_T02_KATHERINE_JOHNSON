@@ -137,7 +137,7 @@ def duracao(minutes):
 def contribuicao(result):
     """Apêndice permitido pela #49; indicadores de gestão ficam fora do artigo."""
     lines = [r'\section{Tabela de Contribuição Individual}', r'\label{sec:contribuicao}', '',
-        r'A Tabela~\ref{tab:contribuicao} resume as horas conhecidas da E2 até 23/11/2026. Declararam o total individual: ' + lista_nomes(d['integrante'] for d in result['declaracoes']) + r'; os demais registros são parciais ou ausentes. Os percentuais não são a contribuição final e não atribuem zero a horas desconhecidas. A conciliação está em \texttt{docs/gestao-fechamento-e2.md}.', '',
+        r'A Tabela~\ref{tab:contribuicao} resume as horas conhecidas da E2 em 23/11/2026. Declararam o total individual: ' + lista_nomes(d['integrante'] for d in result['declaracoes']) + r'; os demais registros são parciais ou ausentes. A conciliação está em \texttt{docs/gestao-fechamento-e2.md}.', '',
         r'\begin{table}[htbp]', r'\centering', r'\scriptsize',
         r'\caption{Contribuição documentada da E2 (parcial; não é o percentual final).}',
         r'\label{tab:contribuicao}', r'\begin{tabular}{P{3.1cm}P{6.0cm}P{2.2cm}}',
@@ -147,7 +147,7 @@ def contribuicao(result):
         percentual = numero(item['percentual_conhecido']) + r'\%' if item['percentual_conhecido'] is not None else 'Não apurável'
         lines.append(NOMES[m]+' & '+PAPEIS[m]+' & '+percentual+r' \\')
     lines += [r'\bottomrule', r'\end{tabular}', r'\par\smallskip',
-        r'\raggedright\scriptsize Fonte: issues da E2 e declarações individuais de ' + lista_nomes(d['integrante'] for d in result['declaracoes']) + r' até 23/11/2026. Os percentuais conhecidos somam 100\% apenas do esforço informado; faltam declarações dos demais integrantes.',
+        r'\raggedright\scriptsize Fonte: issues da E2 e declarações individuais em 23/11/2026; os percentuais somam 100\% apenas do esforço informado.',
         r'\end{table}', '']
     return '\n'.join(lines)
 
@@ -223,7 +223,7 @@ def relatorio(snapshot, result, fonte='gestao/dados/fechamento-e2-2026-11-22.jso
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--fonte', type=Path, default=ROOT/'gestao/dados/fechamento-e2-2026-11-23-v3.json')
+    parser.add_argument('--fonte', type=Path, default=ROOT/'gestao/dados/fechamento-e2-2026-11-23-v4.json')
     args = parser.parse_args()
     snapshot = json.loads(args.fonte.read_text(encoding='utf-8'))
     result = calcular(snapshot)
