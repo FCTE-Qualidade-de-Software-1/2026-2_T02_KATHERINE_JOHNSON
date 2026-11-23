@@ -16,7 +16,9 @@ fora dos resultados oficiais.
 - S00: foi comunicada a concordância de três integrantes para usar as próprias contas. As vias
   individuais foram preparadas, mas não há comprovação de apresentação/leitura e assinatura dos
   termos, associação a veículos ou disponibilidade de infração elegível. Nenhuma identidade ou
-  assinatura entra nesta pasta.
+  assinatura entra nesta pasta. **Atualização em 22/11/2026:** Hugo confirmou que os termos foram
+  aplicados; a pendência de consentimento está concluída, com vias assinadas privadas. A associação
+  dos códigos aos veículos continua sendo uma verificação separada.
 - S01: o usuário informou que está autenticado no portal e a aba “Detran Digital” foi localizada
   no Chrome. As chamadas suportadas para ler a interface expiraram; não foi possível verificar a
   autenticação na página nem coletar uma tela. Nenhum dado da conta foi extraído.

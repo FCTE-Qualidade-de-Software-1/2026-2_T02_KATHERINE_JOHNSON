@@ -1,5 +1,18 @@
 # Fase 4 — Coleta, pendências e cálculo
 
+**Continuação S06/V4 em 22/11:** novo titular coberto pelo consentimento aplicado, com outro
+veículo, Samsung SM-S731B e computador 750XGK. Os registros brutos estão nesta branch;
+consulte `evidencias/fase4/S06-registro-2026-11-22.md` e `evidencias/fase4/S08-registro-2026-11-22.md`.
+P4 tem gravações provisórias; a lista do Android foi refeita no B09 com rolagem rápida contínua
+(o B04, contaminado por esperas do instrumento, segue excluído). P5 foi concluído nos dois canais
+(10 leituras válidas cada). P7 foi executado no portal em Wi-Fi, rede degradada e 4G e no aplicativo em Wi-Fi e 4G (S08);
+a rede degradada no aplicativo não pôde ser aplicada (D021). Os tempos são propostas automáticas pendentes de
+marcação visual e segunda leitura independente. Nenhum resultado dessa continuação foi promovido
+a julgamento oficial, e nenhum original identificável é público.
+
+**Consentimento concluído:** Hugo confirmou em 22/11/2026 a aplicação dos termos aos participantes
+da coleta. As vias assinadas e datas individuais permanecem privadas, sem publicação na GitPage.
+
 **Atualização documental em 22/11:** o PR #67 foi aprovado por Daniel em 21/11 antes do merge.
 A branch `feat/pedro-s03-fase4` registra tentativas P6 em CT01/CT03/CT05 de 21/11, ainda sem
 conferência independente; a [análise](fase4-analise.md) referencia a fonte imutável e suas
@@ -23,11 +36,12 @@ de cálculo e os instrumentos estão preparados; isso não conclui a coleta.
 Foi comunicada a concordância de três integrantes para usar suas próprias contas na avaliação.
 O [registro da concordância](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/consentimento.md)
 foi atualizado; as vias individuais e a declaração nominal permanecem privadas. A correspondência
-com veículos e a aplicação dos termos ainda precisam ser conferidas com os titulares.
+com veículos ainda precisa ser conciliada. **Atualização em 22/11:** Hugo confirmou a aplicação
+dos termos; as vias assinadas permanecem privadas e não são publicadas na GitPage.
 
 | Item do acompanhamento | Situação verificada agora | Próximo passo |
 |---|---|---|
-| B01 — titular, veículo e consentimento | Concordância de três integrantes comunicada pelo responsável pela coleta; vias individuais preparadas | Conferir aplicação do termo e veículo com infração acessível nos dois canais |
+| B01 — titular, veículo e consentimento | Termos aplicados, conforme confirmação de Hugo em 22/11; vias assinadas privadas | Conciliar códigos e confirmar veículo com infração acessível nos dois canais |
 | B02 — aparelhos | D03 tem caracterização parcial; computador Linux candidato a D01 foi inspecionado | Confirmar o computador inspecionado como D01; completar D02/D03 e instrumentos por sessão |
 | B03 — iPhone | PR #66 continua aberto; aparelho sob responsabilidade de Heitor | Heitor registra modelo, iOS e versão do app |
 | B05 — telas e rótulos | Seis capturas do portal disponíveis; levantamento autenticado dos apps sem registro | Titulares fazem login pessoalmente; executar e conferir as capturas dos apps |
@@ -48,7 +62,7 @@ senhas, capturadas telas de autenticação ou executadas operações sobre infra
 
 | Etapa | Estado documental | Evidência disponível | Condição para concluir |
 |---|---|---|---|
-| **S00 — preparação** | **Parcial** | Concordância informada para três integrantes, vias individuais preparadas, computador candidato a D01 inspecionado e D03 parcialmente caracterizado | Conferir aplicação dos termos, códigos da massa, disponibilidade dos titulares e inventário efetivo por sessão |
+| **S00 — preparação** | **Parcial** | Concordância informada para três integrantes, vias individuais preparadas, computador candidato a D01 inspecionado e D03 parcialmente caracterizado | Consentimentos concluídos (confirmação em 22/11); conferir códigos da massa, disponibilidade dos titulares e inventário efetivo por sessão |
 | **S01 — piloto** | **Parcial, sem liberação registrada** | Relatório do portal registra presença de campos, três percursos, três acessos ao detalhe e duas capturas anonimizadas; dez valores de tempo/volume foram informados em tabela separada | Conferir instrumento, aquecimento e evidências; completar captura da lista de infrações e registrar liberação por procedimento |
 
 O [roteiro de medições e capturas](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/roteiro-medicoes-e-capturas.md) consolida
@@ -95,7 +109,7 @@ a descrição desta tabela segue o conteúdo visível de cada imagem.
 
 | Registro | Quem providencia | Evidência mínima |
 |---|---|---|
-| Consentimento e massa de dados | Hugo | Código do veículo, data do consentimento e conferência da via privada; assinatura e identidade permanecem privadas |
+| Massa de dados (consentimento concluído) | Hugo | Aplicação confirmada em 22/11; conciliar códigos com a tabela privada. Vias assinadas, datas individuais e identidades permanecem privadas |
 | Inventário efetivo | Hugo (D01–D03); Heitor (D04) | Aparelhos, versões instaladas e instrumentos usados em cada sessão/contexto/rede |
 | Levantamento dos aplicativos | Hugo e Philipe (Android); Heitor (iOS) | Lista de veículos, lista de infrações e detalhes, com capturas revisadas e correspondência com a massa |
 | Validação técnica do piloto | Philipe, com os executores | Rede comum, perfis nos dois sentidos, contador de volume e método de marcação de tempo verificados |
@@ -117,7 +131,7 @@ Na conferência de 20/11, não foi localizado registro de confirmação dessa ag
 | Critério | Responsável | Situação verificada | Próxima ação / evidência de conclusão | Data proposta |
 |---|---|---|---|---|
 | Ambiente detalhado (B02) | Hugo | Parcial: modelo do Android intermediário registrado; demais versões pendentes | Preencher inventário por sessão/contexto/rede, incluindo versão instalada do app | 19/11 |
-| Consentimento aplicado (B01) | Hugo | Concordância informada em 20/11; aplicação dos termos ainda não conferida | Titular lê e assina o termo; guardar via privada, publicar apenas código e data | 19/11, antes do piloto (proposta histórica) |
+| Consentimento aplicado (B01) | Hugo | **Concluído:** aplicação dos termos confirmada por Hugo em 22/11/2026 | Vias assinadas e datas individuais mantidas privadas; nenhuma publicação das assinaturas na GitPage | Confirmação em 22/11; não representa a data de aplicação |
 | Sessão com veículo real (S01/S02) | Hugo; Philipe registra; Pedro Druck confere | Sem registro de execução | Confirmar infração acessível nos dois canais; executar piloto e registrar sua liberação | 19/11, após consentimento |
 | Prints autenticados (B05) | Hugo e Philipe no Android; Heitor no iOS | Portal tem seis capturas; capturas dos apps pendentes | Lista de veículos, lista de infrações e detalhes; revisão das tarjas por outro integrante | 19–20/11 |
 | Rótulos, campos e passos (B05) | Hugo e Philipe | Confirmação com veículo real pendente | Registrar roteiro e contagens; atualizar Fase 1 apenas com evidência | 19–20/11 |
@@ -144,7 +158,7 @@ ainda precisam ser confirmadas nas issues e no Project.
 | 2 | S01: piloto, telas e validação dos instrumentos | Hugo; Philipe registra | Pedro Druck | 19/11; após S00 |
 | 3 | S02: P1–P5 nos contextos de referência | Hugo; Philipe registra | Pedro Druck | 19–20/11; piloto liberado |
 | 4 | S03: P6 por plataforma/navegador | Pedro Druck; Hugo registra; Heitor executa CT06 | Philipe | 20/11; inventários confirmados |
-| 5 | S04: P7 nas três redes | Philipe; Pedro Druck registra | Hugo | 20/11; redes validadas nos dois sentidos |
+| 5 | S04: P7 nas três redes | Philipe; Pedro Druck registra | Hugo | 20/11; redes validadas nos dois sentidos. Executado como S08 em 22–23/11 (caso V4) |
 | 6 | S05: contingências, anonimização e cálculo | Hugo, Pedro Druck e Philipe | Daniel revisa a entrega | 20/11; antes de passar dados à #48 |
 
 *Tabela 2 — Proposta de recuperação da coleta. Fonte: sequência do plano da Fase 3.*
@@ -157,7 +171,7 @@ silenciosamente nem converter reservas de agenda em horas reais.
 
 ## 3. Validação e cálculo
 
-Depois de registrar consentimento, piloto, medições e conferência:
+Com os consentimentos aplicados, depois de registrar piloto, medições e conferência:
 
 ```bash
 python3 dados/scripts/calcular.py --validar
@@ -193,5 +207,5 @@ autorização `project`. A leitura bloqueada não permite saber se os itens ou c
 Depois de obter acesso, localizar as issues #47/#48, conferir os campos de início e prazo e
 aplicar as datas **confirmadas pela equipe**, preservando o histórico do atraso.
 
-Os resultados alimentam a [análise GQM](fase4-analise.md). Consentimento, coleta e revisão
-continuam pendentes; o PR de implementação do cálculo não deve encerrar automaticamente a #47.
+Os resultados alimentam a [análise GQM](fase4-analise.md). O consentimento está concluído,
+conforme confirmação de Hugo em 22/11; coleta e revisão continuam pendentes; o PR de implementação do cálculo não deve encerrar automaticamente a #47.

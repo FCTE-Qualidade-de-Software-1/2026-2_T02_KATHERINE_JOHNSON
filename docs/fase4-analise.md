@@ -1,29 +1,79 @@
 # Fase 4 — Análise e julgamento GQM
 
-Atualização documental em **22/11/2026**, referente à #48. Responsáveis pela análise: Pedro Henrique
-e Philipe; revisor designado: Heitor. O roteiro abaixo permanece aplicável, mas seu estado agora
-distingue a `main` da coleta recente ainda não integrada.
+Atualização documental em **23/11/2026**, referente à #48. Responsáveis pela análise: Pedro Henrique
+e Philipe; revisor designado: Heitor. Todos os valores abaixo são **primeira leitura**: o campo
+`revisor` está vazio até a segunda leitura independente, e o validador recusa promover as linhas a
+dados oficiais. Por isso não há nível de pontuação.
 
 ## Situação e dependência
 
-Na `main` (`da717f2`), os oito CSV brutos têm apenas cabeçalhos. A validação calcula zero métricas:
-25 registros inconclusivos e um não aplicável (M3.1.2 no aplicativo). S01 é piloto e não entra no
-cálculo oficial; seu relatório não comprova aquecimento, marcações independentes ou instrumento
-de volume.
+Os registros reúnem seis sessões entre 21 e 23/11/2026: o piloto S01, a S02 (P1 a P3), a S03 e a S05
+(P6), a S06 (P4 e P5) e a S08 (P7). S01 é piloto e não entra no cálculo oficial. Os casos usam
+veículos diferentes (V1, V2, V4 e V5), com aparelhos e versões distintos, e não são reunidos em uma
+única mediana. O consentimento foi aplicado, conforme confirmação de Hugo em 22/11/2026, com vias
+assinadas privadas; a conciliação do vínculo dos códigos dos veículos continua pendente.
 
-A branch `feat/pedro-s03-fase4`, no
-[commit 14ab804](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/14ab804210f4b1be2aaa84e1946d9e11079a9a28),
-contém o [relato S03 de 21/11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/14ab804210f4b1be2aaa84e1946d9e11079a9a28/evidencias/fase4/S03-registro-2026-11-21.md).
-Ele relata CT01 com 3/3 conclusões, CT03 com 2/3 e uma expiração, e CT05 com 0/3 e erro ao buscar
-veículos. São contagens preliminares: a validação rejeita as 14 linhas por falta de conferência
-independente. Consentimento e vínculo privado do veículo também estão a conferir; CT05 usa
-aparelho/versão diferentes do planejamento (D006). CT02, CT04 e CT06 não foram executados no relato.
+### P1 a P3: S02 (caso V2, Wi-Fi, portal no Chrome e aplicativo 2.7.0 no Android)
 
-As sete questões e hipóteses e os três objetivos permanecem **inconclusivos no julgamento
-oficial**. O relato de falha não deve ser apagado nem convertido em aprovação, mas ainda não
-sustenta nível definitivo, ranking geral ou causa técnica. Tempos dos scripts não substituem P4;
-P6 não mede taxas por rede de P7. Os arquivos dessa branch não foram copiados sobre os instrumentos
-da `main`: a conferência da #47 precede sua integração como dados oficiais.
+| Métrica | Portal | Aplicativo |
+|---|---|---|
+| M1.1.1, campos na lista (de 15) | 5 | 5 |
+| M1.1.2, campos no detalhe (de 17) | 17 | 16 (sem R14) |
+| M1.2.1, campos paritários (par) | 16 de 17; R14 ausente no aplicativo | |
+| M1.2.2, infrações sem divergência (par) | 0 de 1, pela ausência de R14 | |
+| M1.3.1, passos até a lista | 4 | 6 |
+| M1.3.2, transições; rolagens | 3; 0 | 5; 2 |
+
+*Tabela — Observações provisórias de S02. Fonte: `evidencias/fase4/S02-registro-2026-11-22.md`; conferência independente pendente.*
+
+Nenhum campo divergiu em valor. A regra de contagem das transições (D015) e a execução por script (D014)
+estão registradas como desvios.
+
+### P6: contextos (S03 e S05)
+
+| Contexto | Concluídas | Resultado e limite |
+|---|---|---|
+| CT01: portal/Chrome | 3/3 (V1); 3/3 (V2) | Cinco erros de instrumento da S03 preservados à parte |
+| CT02: portal/Firefox | 3/3 (V2) | Falha de login na S03 (D005), fora das tentativas; resolvida na S05 |
+| CT03: portal/Chrome Android | 2/3 (V1) | Sessão expirada, preservada como falha |
+| CT05: aplicativo 2.6.3 | 0/3 (V1) | Erro ao buscar veículos; aparelho superior ao planejado (D006) |
+| CT05: aplicativo 2.7.0 | 3/3 (V2) | Outro aparelho, titular e veículo (D009) |
+| CT06: aplicativo iOS 2.7.1 | 3/3 (V5) | Executor é o titular (D028); filtro de período (D030); M2.2.1 não medida no iOS (D008) |
+| CT04 | Sem execução | Sem aparelho; contexto não avaliado |
+
+*Tabela — Observações provisórias de P6. Fonte: registros S03, S05 e do CT06; conferência independente pendente.*
+
+Versões, aparelhos, titulares e veículos diferentes impedem atribuir a diferença entre 2.6.3 e 2.7.0 a
+uma causa técnica. As durações dos scripts de P6 não substituem P4, e P6 não mede as taxas por rede de P7.
+
+As sete questões e hipóteses e os três objetivos permanecem **inconclusivos no julgamento oficial**
+até a segunda leitura. O relato de falha não deve ser apagado nem convertido em aprovação, e a
+ausência de dado ou de conferência não equivale a paridade nem a aprovação.
+
+## Continuação com o caso V4 (S06 e S08)
+
+Em 22 e 23/11/2026, a coleta prosseguiu com outro titular coberto pelo consentimento
+(caso V4), no computador D06 (Chrome 157) e no Samsung SM-S731B (Aplicativo 2.7.0). Os registros
+estão em `evidencias/fase4/S06-registro-2026-11-22.md` e `evidencias/fase4/S08-registro-2026-11-22.md`.
+Os tempos abaixo são **propostas automáticas de primeira leitura**, pelos timestamps dos quadros,
+sem aquecimentos; sem a segunda leitura independente, nenhum nível é atribuído.
+
+| Métrica e rede | Portal (concluídas; mediana; P90) | Aplicativo (concluídas; mediana; P90) |
+|---|---|---|
+| M2.1.1, Wi-Fi | 10/10; 0,145 s; 0,683 s (B03) | 10/10; 0,774 s; 0,858 s (B09) |
+| M2.1.2, Wi-Fi | 10/10; 0,136 s; 0,153 s (B05) | 10/10; 0,641 s; 0,816 s (B06) |
+| M2.2.1, Wi-Fi | mediana 0,0107 MB, escopo do navegador (B07) | mediana 0,0649 MB, contador do UID (B08) |
+| M3.2.3, Wi-Fi | 10/10; 0,083 s; 0,083 s (B10) | 10/10; 0,408 s; 0,667 s (B11) |
+| M3.2.3, 4G | 10/10; 0,142 s; 0,183 s (B14) | 10/10; 0,726 s; 0,942 s (B15) |
+| M3.2.3, degradada | 8/10; 0,850 s; 1,500 s (B12) | Não avaliada (D021) |
+
+*Tabela — Observações provisórias de S06/S08. Fonte: `dados/brutos/`; conferência independente pendente.*
+
+- Os escopos de volume diferem (bytes codificados no navegador; recebidos + enviados pelo UID): não declarar superioridade.
+- No aplicativo, a lista fica abaixo da área visível. O B04 foi excluído por esperas do instrumento; o B09 usou rolagens rápidas feitas pelo aparelho desde o toque, cujo curso integra o tempo (D026).
+- Na rede degradada do portal, uma falha na preparação e um tempo limite ficam no denominador (D023).
+- A condição degradada não pôde ser imposta ao aplicativo: o adaptador Wi-Fi não sustentou ponto de acesso concorrente, e o app ignorou proxy e recusou VPN reversa. Tudo foi desfeito sem medições (D021). Com o computador ligado por cabo ao roteador, o Wi-Fi ficaria livre para o ponto de acesso.
+- Demais limitações: execução automatizada, Wi-Fi doméstico sem controle de carga externa e tráfego do agente de automação no enlace degradado (D016–D027).
 
 O bloqueio no aplicativo motivou a [ação de melhoria entregue](fase4-melhoria.md): proposta de
 processo e templates de diagnóstico/regressão. A entrega não depende de inventar resultados;
@@ -45,10 +95,10 @@ A Tabela 1 define a interpretação a ser preenchida após a coleta. “Compatí
 | Q1.1 / H1.1 | M1.1.1, M1.1.2 | Comparar completude por tela e infração nos dois canais. Distinguir rótulo existente de valor preenchido ao discutir a hipótese sobre rótulos | Inconclusivo |
 | Q1.2 / H1.2 | M1.2.1, M1.2.2 | Uma divergência ou ausência em campo aplicável contraria a paridade integral. Considerar apenas pares com intervalo válido | Inconclusivo |
 | Q1.3 / H1.3 | M1.3.1, M1.3.2 | Igualdade das contagens recorrentes de passos e transições sustenta paridade na amostra. Contagens diferentes a contrariam. Examinar o percurso para discutir redundância | Inconclusivo |
-| Q2.1 / H2.1 | M2.1.1, M2.1.2 | H2.1 compara a mediana da lista, no mesmo veículo/rede. Detalhes complementam Q2.1 e têm julgamento próprio | Inconclusivo |
-| Q2.2 / H2.2 | M2.2.1 | Comparar médias apenas com escopo dos instrumentos equivalente e contexto pareado. Sem equivalência, hipótese inconclusiva | Inconclusivo |
+| Q2.1 / H2.1 | M2.1.1, M2.1.2 | H2.1 compara a mediana da lista, no mesmo veículo/rede. Detalhes complementam Q2.1 e têm julgamento próprio | Inconclusivo; amostras V4 provisórias, segunda leitura pendente |
+| Q2.2 / H2.2 | M2.2.1 | Comparar médias apenas com escopo dos instrumentos equivalente e contexto pareado. Sem equivalência, hipótese inconclusiva | Inconclusivo; amostras V4 provisórias, segunda leitura pendente |
 | Q3.1 / H3.1 | M3.1.1, M3.1.2 | Verificar todos os contextos previstos. Taxa de 100% no subconjunto testado não confirma cobertura dos contextos ausentes | Inconclusivo |
-| Q3.2 / H3.2 | M3.2.1, M3.2.2, M3.2.3 | Verificar se a taxa degradada é menor que Wi-Fi e que 4G em pelo menos um canal. Discutir falhas e tempo junto das taxas | Inconclusivo |
+| Q3.2 / H3.2 | M3.2.1, M3.2.2, M3.2.3 | Verificar se a taxa degradada é menor que Wi-Fi e que 4G em pelo menos um canal. Discutir falhas e tempo junto das taxas | Inconclusivo; portal nas três redes e app em Wi-Fi/4G, provisórios; app degradado não avaliado |
 
 *Tabela 1 — Roteiro de resposta às questões e hipóteses. Fonte: especificação GQM da equipe.*
 

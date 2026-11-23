@@ -11,8 +11,9 @@ S03 de 21/11 relata **3/3 falhas** no aplicativo Android 2.6.3 (B02/CT05) ao bus
 No mesmo estudo, o portal teve 3/3 conclusões em B01/CT01 e duas conclusões e uma expiração em
 B03/CT03. Fonte imutável: [registro S03, commit 14ab804](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/14ab804210f4b1be2aaa84e1946d9e11079a9a28/evidencias/fase4/S03-registro-2026-11-21.md).
 
-São observações **preliminares**: conferência independente, consentimento e vínculo privado do
-veículo ainda pendentes. O aparelho e a versão do aplicativo diferem do planejamento (D006).
+Os termos de consentimento foram aplicados, conforme confirmação de Hugo em 22/11/2026;
+as vias assinadas permanecem privadas. São observações **preliminares**: conferência independente e conciliação do vínculo privado dos códigos dos
+veículos ainda pendentes. O aparelho e a versão do aplicativo diferem do planejamento (D006).
 Não sustentam ranking geral, causa técnica ou nível oficial. P6 não mede M3.2.2, exclusiva de
 P7, e as execuções não são pares válidos de P2.
 

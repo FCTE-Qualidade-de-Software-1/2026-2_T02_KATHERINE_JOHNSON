@@ -2,13 +2,13 @@
 import re, subprocess, sys, time, xml.etree.ElementTree as ET
 
 def adb(*a, binary=False):
-    r = subprocess.run(['adb', *a], capture_output=True, check=True)
+    r = subprocess.run(['adb', *a], capture_output=True, check=True, timeout=20)
     return r.stdout if binary else r.stdout.decode(errors='replace')
 
 def nos():
     for _ in range(3):
         try:
-            adb('shell', 'uiautomator', 'dump', '/sdcard/ui.xml')
+            adb('shell', 'uiautomator', 'dump', '--compressed', '/sdcard/ui.xml')
             raiz = ET.fromstring(adb('exec-out', 'cat', '/sdcard/ui.xml'))
             break
         except Exception:

@@ -16,11 +16,17 @@ from campos import presenca  # noqa: E402
 from PIL import Image, ImageDraw  # noqa: E402
 
 RAIZ = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..'))
-PRIV = os.path.join(RAIZ, 'dados', 'privado', 'S02')
-os.makedirs(PRIV, exist_ok=True)
+SESSAO = os.environ.get('SESSAO', 'S02')
+if not re.fullmatch(r'S[0-9]{2}', SESSAO):
+    raise ValueError('Código de sessão inválido')
+PRIV = os.path.join(RAIZ, 'dados', 'privado', SESSAO)
+os.makedirs(PRIV, mode=0o700, exist_ok=True)
+os.chmod(PRIV, 0o700)
 PKG = 'br.com.mesotec.detrandf'
-ABAS_Y = 2318      # topo da barra de abas no D03 (1200x2670)
-STATUS_Y = 130
+LARGURA = int(os.environ.get('TELA_LARGURA', '1200'))
+ALTURA = int(os.environ.get('TELA_ALTURA', '2670'))
+ABAS_Y = int(os.environ.get('ABAS_Y', str(round(2318 * ALTURA / 2670))))
+STATUS_Y = round(130 * ALTURA / 2670)
 LIMITE = 60
 PLACA = re.compile(r'^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$')
 agora = lambda: datetime.now(timezone(timedelta(hours=-3))).replace(microsecond=0).isoformat()
@@ -38,7 +44,7 @@ def ler():
         raise Expirou('sessao_expirada')
     for n in lista:
         if texto(n).startswith('Ocorreu um erro'):
-            raise RuntimeError(f'mensagem do app: "{texto(n)}"')
+            raise RuntimeError('mensagem_de_erro_no_aplicativo')
     return lista
 
 
@@ -54,7 +60,9 @@ def esperar(pred, limite=LIMITE):
 
 
 def rolar(y1=2000, y2=900):
-    app.adb('shell', 'input', 'swipe', '600', str(y1), '600', str(y2), '400')
+    x = str(LARGURA // 2)
+    app.adb('shell', 'input', 'swipe', x, str(round(y1 * ALTURA / 2670)),
+            x, str(round(y2 * ALTURA / 2670)), '400')
     time.sleep(1.2)
 
 
@@ -96,8 +104,8 @@ def veiculo(lista):
     raise RuntimeError('veículo não encontrado na lista')
 
 
-def ate_filtro(rotulos, rolagens):
-    tocar(inicio(rolagens), rotulos, 'Infrações')
+def ate_filtro(rotulos, rolagens, card_inicio=None):
+    tocar(card_inicio if card_inicio is not None else inicio(rolagens), rotulos, 'Infrações')
     tocar(esperar(lambda n: texto(n).startswith('Histórico de infrações por veículo, ')), rotulos, 'Histórico de infrações por veículo')
     esperar(lambda n: n['texto'] == 'Veículos atuais de minha propriedade'); time.sleep(1.5)
     tocar(veiculo(ler()), rotulos, 'veículo')
@@ -168,7 +176,7 @@ def pares_detalhe():
 
 
 def fechar_detalhe():
-    app.adb('shell', 'input', 'tap', '155', '265'); time.sleep(1.5)  # cabeçalho do próprio app
+    app.adb('shell', 'input', 'tap', str(round(155 * LARGURA / 1200)), str(round(265 * ALTURA / 2670))); time.sleep(1.5)  # cabeçalho do próprio app
 
 
 def campos(data):
@@ -187,11 +195,13 @@ def campos(data):
     json.dump({'data_hora_lista': h_lista, 'data_hora_detalhe': h_det, 'lista': lista, 'detalhe': detalhe},
               open(os.path.join(PRIV, 'app-campos.json'), 'w'), ensure_ascii=False, indent=1)
     return {'data_hora_lista': h_lista, 'data_hora_detalhe': h_det, 'rotulos_lista': sorted(nomes),
-            'rotulos_detalhe': [r for r, _ in detalhe], 'privado': 'dados/privado/S02/app-campos.json'}
+            'rotulos_detalhe': [r for r, _ in detalhe], 'privado': os.path.relpath(os.path.join(PRIV, 'app-campos.json'), RAIZ)}
 
 
 def gravar(nome):
-    disp = f'/sdcard/{nome}.mp4'
+    if os.path.exists(os.path.join(PRIV, f'{nome}.mp4')):
+        raise FileExistsError('Gravação já existe; use repetição diferente')
+    disp = f'/sdcard/katherine-{SESSAO}-{nome}.mp4'
     p = subprocess.Popen(['adb', 'shell', 'screenrecord', '--time-limit', '120', disp])
     time.sleep(1.5)
     return p, disp, time.time()
@@ -200,7 +210,11 @@ def gravar(nome):
 def parar(p, disp, nome):
     p.terminate(); time.sleep(1); sh('pkill', '-INT', 'screenrecord'); time.sleep(2.5)
     local = os.path.join(PRIV, f'{nome}.mp4')
-    subprocess.run(['adb', 'pull', disp, local], capture_output=True); sh('rm', disp)
+    if os.path.exists(local):
+        raise FileExistsError('Gravação já existe; use repetição diferente')
+    subprocess.run(['adb', 'pull', disp, local], capture_output=True, check=True, timeout=30)
+    os.chmod(local, 0o600)
+    sh('rm', disp)
     return os.path.relpath(local, RAIZ)
 
 
@@ -248,6 +262,125 @@ def tempo(metrica, rep, data):
             'observacao': 'quadros inicial e final marcados na gravação (indicador de toque e tela completa); a dica é só apoio'}
 
 
+def tempo_detalhe_na_lista(rep, data):
+    """Repete da lista ao detalhe, sem refazer a navegação inicial a cada tentativa."""
+    c = cartao(data, [])
+    ponto = [(c['caixa'][0] + c['caixa'][2]) // 2, (c['caixa'][1] + c['caixa'][3]) // 2]
+    antes = sh('settings', 'get', 'system', 'show_touches').strip()
+    sh('settings', 'put', 'system', 'show_touches', '1')
+    nome = f'tempo-app-M2.1.2-{rep}'
+    p = None
+    try:
+        p, disp, t0 = gravar(nome)
+        t_toque = tocar(c)
+        esperar(lambda n: n['texto'] == 'Confira o detalhamento da infração')
+        t_fim = time.time()
+        time.sleep(1.5)
+        video = parar(p, disp, nome)
+        p = None
+        fechar_detalhe()
+    finally:
+        if p is not None:
+            parar(p, disp, nome)
+        sh('settings', 'put', 'system', 'show_touches', '1' if antes == '1' else '0')
+    return {'metrica': 'M2.1.2', 'repeticao': rep, 'data_hora': agora(),
+            'inicio_evento': 'toque na infração', 'fim_evento': 'detalhe visível e estável',
+            'ponto_toque': ponto, 'dica_tempo_s': round(t_fim - t_toque, 2), 'gravacao': video,
+            'observacao': 'Dica por sondagem da interface; marcar início e fim no vídeo, com segunda leitura.'}
+
+
+def lista_visivel(lista):
+    """Primeira infração inteira na área útil, sem barra de status nem barra de abas."""
+    return next((n for n in lista if n['clicavel'] and 'Data: ' in texto(n)
+                 and n['caixa'][1] > STATUS_Y and n['caixa'][3] < ABAS_Y), None)
+
+
+ROLAGEM_PID = '/data/local/tmp/katherine-rolagem.pid'
+
+
+def rolagem_continua():
+    """Rolagens rápidas repetidas pelo próprio aparelho, na margem esquerda (fora dos cartões).
+
+    Começam logo após o toque, sem sondagem do computador: assim que a lista existe, a rolagem
+    seguinte a traz à tela. O atraso residual é o curso de uma rolagem rápida, visível no vídeo.
+    """
+    x = str(round(40 * LARGURA / 1080))
+    y1, y2 = str(round(1900 * ALTURA / 2340)), str(round(300 * ALTURA / 2340))
+    laco = f'echo $$ > {ROLAGEM_PID}; while true; do input swipe {x} {y1} {x} {y2} 60; done'
+    return subprocess.Popen(['adb', 'shell', laco], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
+def parar_rolagem(p):
+    sh('sh', '-c', f'kill $(cat {ROLAGEM_PID}) 2>/dev/null; rm -f {ROLAGEM_PID}')
+    p.terminate()
+
+
+def tempo_lista(metrica, rep, bloco):
+    """M2.1.1/M3.2.3: toque em Consultar até a primeira infração inteira visível.
+
+    Com ROLAGEM=continua (padrão), a rolagem rápida contínua começa logo após o toque; com
+    ROLAGEM=nenhuma, exige exibição em que a lista caiba na tela. O nome do vídeo inclui o bloco
+    para não colidir com gravações anteriores (B04 da S06).
+    Resultado: concluida, falha, sessao_expirada, tempo_limite ou erro_instrumento.
+    """
+    if not re.fullmatch(r'B[0-9]{2}', bloco) or metrica not in {'M2.1.1', 'M3.2.3'}:
+        raise ValueError('bloco ou métrica inválidos')
+    antes = sh('settings', 'get', 'system', 'show_touches').strip()
+    sh('settings', 'put', 'system', 'show_touches', '1')
+    nome = f'tempo-app-{bloco}-{metrica}-{rep}'
+    p = None
+    try:
+        consultar = ate_filtro([], [])
+        ponto = [(consultar['caixa'][0] + consultar['caixa'][2]) // 2, (consultar['caixa'][1] + consultar['caixa'][3]) // 2]
+        p, disp, t0 = gravar(nome)
+        t_toque = tocar(consultar)
+        rolagem = rolagem_continua() if os.environ.get('ROLAGEM', 'continua') == 'continua' else None
+        resultado, t_fim, diagnostico, anterior = 'concluida', None, '', None
+        try:
+            # Margem de 5 s para a latência da leitura; o limite de 60 s é conferido no vídeo.
+            while time.time() < t_toque + LIMITE + 5:
+                n = lista_visivel(ler())
+                if n and anterior and n['caixa'] == anterior['caixa']:
+                    t_fim = time.time()
+                    break
+                anterior = n
+                time.sleep(0.3)
+            else:
+                lista = app.nos()
+                foco = sh('dumpsys', 'window').split('mCurrentFocus', 1)[-1][:200]
+                if PKG not in foco:
+                    resultado, diagnostico = 'falha', 'aplicativo fora do primeiro plano'
+                elif any(x['texto'] == 'Informação não editável' for x in lista):
+                    # Tela de resultado carregada sem infração visível: conferir configuração/tela.
+                    resultado, diagnostico = 'erro_instrumento', 'resultado carregado sem infração visível'
+                else:
+                    resultado = 'tempo_limite'
+        except Expirou:
+            resultado = 'sessao_expirada'
+        except RuntimeError as erro:
+            if str(erro) != 'mensagem_de_erro_no_aplicativo':
+                raise  # leitor de interface (uiautomator) falhou: erro de instrumento, tratado pelo coletor
+            resultado = 'falha'
+            diagnostico = ' | '.join(texto(x) for x in app.nos() if texto(x).startswith('Ocorreu um erro'))
+        finally:
+            if rolagem is not None:
+                parar_rolagem(rolagem)
+        time.sleep(1.5)
+        video = parar(p, disp, nome)
+        p = None
+    finally:
+        if p is not None:
+            parar(p, disp, nome)
+        sh('settings', 'put', 'system', 'show_touches', '1' if antes == '1' else '0')
+    return {'metrica': metrica, 'repeticao': rep, 'data_hora': agora(), 'resultado': resultado,
+            'inicio_evento': 'toque em Consultar', 'fim_evento': 'primeira infração inteira visível e estável',
+            'rolagem': os.environ.get('ROLAGEM', 'continua'),
+            'ponto_toque': ponto, 'dica_tempo_s': round(t_fim - t_toque, 2) if t_fim else None,
+            'dica_s_desde_inicio_gravacao': {'toque': round(t_toque - t0, 2), 'fim': round(t_fim - t0, 2) if t_fim else None},
+            'diagnostico_privado': diagnostico, 'gravacao': video,
+            'observacao': 'Dica por sondagem da interface; marcar início e fim no vídeo, com segunda leitura.'}
+
+
 def bytes_uid(uid):
     sh('dumpsys', 'netstats', '--poll'); time.sleep(1)
     tot, dentro = 0, False
@@ -264,9 +397,9 @@ def bytes_uid(uid):
 def volume(rep):
     uid = re.search(r'uid:(\d+)', subprocess.run(['adb', 'shell', 'pm', 'list', 'packages', '-U', PKG], capture_output=True, text=True).stdout).group(1)
     rol = []
-    inicio(rol)
+    card_inicio = inicio(rol)
     b0 = bytes_uid(uid)
-    tocar(ate_filtro([], rol)); ate_resultado(rol); cartao(os.environ.get('DATA', ''), rol) if os.environ.get('DATA') else None
+    tocar(ate_filtro([], rol, card_inicio)); ate_resultado(rol); cartao(os.environ.get('DATA', ''), rol) if os.environ.get('DATA') else None
     time.sleep(3)
     b1 = bytes_uid(uid)
     return {'repeticao': rep, 'data_hora': agora(), 'instrumento': 'adb dumpsys netstats detail (UID do pacote, tag 0x0)',
@@ -285,5 +418,10 @@ if __name__ == '__main__':
     except TimeoutError:
         r = {'modo': modo, 'resultado': 'tempo_limite', 'data_hora': agora()}
     except Exception as e:  # noqa: BLE001
-        r = {'modo': modo, 'resultado': 'falha', 'motivo': str(e), 'data_hora': agora()}
+        r = {'modo': modo, 'resultado': 'falha', 'motivo': type(e).__name__, 'data_hora': agora()}
+        # Mensagens do serviço podem conter dados pessoais: guardar somente no privado.
+        destino = os.path.join(PRIV, 'erro-' + str(time.time_ns()) + '.json')
+        with open(destino, 'w') as arquivo:
+            json.dump({'tipo': type(e).__name__, 'mensagem': str(e)}, arquivo, ensure_ascii=False)
+        os.chmod(destino, 0o600)
     print(json.dumps(r, ensure_ascii=False))

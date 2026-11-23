@@ -14,7 +14,7 @@
 | Impacto | Interrupção da consulta antes da lista e do detalhe |
 | Métrica e decisões | Q3.1/M3.1.1; D4 e D1 |
 | Conferência | Philipe designado no relato; leitura independente pendente |
-| Consentimento e vínculo | Conferência pendente com Hugo |
+| Consentimento e vínculo | Termos aplicados, conforme confirmação de Hugo em 22/11/2026; vias assinadas privadas. Conciliação dos códigos dos veículos pendente |
 | Causa | Desconhecida; sem atribuição ao cliente, servidor, rede ou dados |
 | Tratamento | Processo e matriz de regressão desta pasta |
 | Encaminhamento | Não realizado; requisitante e equipe técnica são hipotéticos |

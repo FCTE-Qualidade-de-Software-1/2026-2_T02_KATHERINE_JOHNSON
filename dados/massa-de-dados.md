@@ -1,11 +1,12 @@
 # Massa de dados da avaliação
 
-Responsável: integrante designado. Situação documental atualizada em 20/11/2026.
+Responsável: integrante designado. Situação documental atualizada em 22/11/2026.
 
-**Situação:** Foi comunicada a concordância de três integrantes para usar as próprias contas
-na avaliação, conforme o [registro de consentimento](consentimento.md#8-concordância-comunicada-em-20112026).
-As declarações nominais e vias preparadas ficam privadas. A aplicação dos termos, o vínculo
-com os veículos e a disponibilidade de infrações nos dois canais ainda precisam ser conferidos.
+**Situação atualizada em 22/11/2026:** Hugo confirmou que os termos de consentimento foram
+aplicados aos participantes da coleta. O [registro de aplicação](consentimento.md#9-aplicação-confirmada-em-22112026)
+documenta a conclusão. As vias assinadas, datas de aplicação e correspondências permanecem
+em armazenamento privado. A conciliação dos códigos dos veículos e a disponibilidade de
+infrações nos dois canais são verificações separadas; não constituem pendência de consentimento.
 Os códigos abaixo continuam como reservas, sem atribuição automática aos participantes.
 Há capturas preexistentes do portal, indexadas no [acompanhamento da coleta](../docs/fase4-coleta.md),
 mas elas não estabelecem correspondência com os novos participantes nem comprovam conclusão de S01.
@@ -20,11 +21,12 @@ Cada titular precisa aceitar o [termo de consentimento](consentimento.md), fazer
 
 ## 2. Cadastro anonimizado
 
-| Código reservado | Tipo de veículo | Nº de infrações selecionadas | Situações | Outro órgão? | Velocidade? | Consentimento (data) | Sessão |
+| Código reservado | Tipo de veículo | Nº de infrações selecionadas | Situações | Outro órgão? | Velocidade? | Consentimento (registro privado) | Sessão |
 |---|---|---|---|---|---|---|---|
-| V1 | A confirmar | A confirmar | A confirmar | A confirmar | A confirmar | Não confirmado | S01, a agendar |
-| V2 | Automóvel | 1 (V2-I1) | A ser lançada; multa com autuação notificada | Sim | Sim | Confirmado pelo executor em 22/11; data e via privada a conferir por Hugo | S01 (piloto, 22/11) |
-| V3 | A confirmar | A confirmar | A confirmar | A confirmar | A confirmar | Não confirmado | A agendar |
+| V1 | A confirmar | A confirmar | A confirmar | A confirmar | A confirmar | Ver registro de aplicação; código reservado | S01, a agendar |
+| V2 | Automóvel | 1 (V2-I1) | A ser lançada; multa com autuação notificada | Sim | Sim | Termo aplicado (ver registro de aplicação); via privada | S01 (piloto, 22/11) |
+| V3 | A confirmar | A confirmar | A confirmar | A confirmar | A confirmar | Ver registro de aplicação; código reservado | A agendar |
+| V4 | A confirmar | 1 (V4-I1, referência) | A confirmar | A confirmar | A confirmar | Termo aplicado (ver registro de aplicação); via privada | S06 e S08 (22–23/11) |
 
 *Tabela 1 — Cadastro a preencher após recrutamento. Fonte: plano de avaliação.*
 
@@ -57,8 +59,9 @@ Se houver retirada do consentimento, interromper o uso, retirar registros/evidê
 
 - [x] Registrar o recebimento, em 20/11, da concordância informada para três integrantes; vias individuais preparadas e guardadas privadamente.
 - [ ] Hugo confirma um titular e agenda S00/S01 até 14/11/2026.
-- [ ] Apresentar o termo, disponibilizar uma cópia ao titular e colher assinatura antes da captura.
-- [ ] Registrar data do consentimento e códigos na tabela, sem assinatura ou identidade.
+- [x] Aplicar os termos aos participantes da coleta; conclusão confirmada por Hugo em 22/11/2026. Vias assinadas mantidas privadas.
+- [x] Registrar publicamente a aplicação dos termos, sem publicar assinaturas ou identidades; datas de aplicação mantidas nas vias privadas.
+- [ ] Conciliar os códigos reservados com a tabela privada, incluindo a ambiguidade de V2 entre sessões.
 - [ ] Registrar as categorias disponíveis e a justificativa das lacunas da amostra.
 - [ ] Executar o roteiro de `evidencias/fase1/roteiro-levantamento.md` em S01.
 - [ ] Revisar e publicar as capturas anonimizadas; atualizar os itens ainda não confirmados da Fase 1.

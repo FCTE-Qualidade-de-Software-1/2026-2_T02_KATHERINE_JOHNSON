@@ -45,26 +45,45 @@ Declaro que sou proprietário(a) do veículo ou responsável por ele, que li est
 | Data | ___/___/2026 |
 | Assinatura | |
 
-*A via assinada fica com o responsável pela massa de dados, fora do repositório. No repositório registra-se apenas o código do veículo e a data do consentimento (ver `dados/massa-de-dados.md`).*
+*A via assinada fica com o responsável pela massa de dados, fora do repositório. No repositório registra-se a aplicação, sem anexar vias preenchidas; códigos são anonimizados e datas individuais ficam nas vias privadas (ver `dados/massa-de-dados.md`).*
 
 ## 7. Aplicação pelo responsável
 
-Este arquivo é um modelo; não representa consentimento já obtido. Antes de qualquer captura,
+As seções 1–6 preservam o modelo público, sem dados nem assinaturas dos participantes. A aplicação
+dos termos foi confirmada por Hugo em 22/11/2026, conforme a Seção 9. Para novos participantes,
+antes de qualquer captura,
 Hugo apresenta a finalidade, as repetições, a publicação anonimizada e a possibilidade de
 desistência, esclarece dúvidas e oferece uma cópia do termo ao titular. Após a assinatura,
-confere a via privada e registra somente código e data na massa de dados. No início de cada
+confere a via privada, mantém a data individual no registro privado e registra publicamente
+a aplicação e o código anonimizado na massa de dados. No início de cada
 sessão confirma a continuidade da autorização. Sem concordância ou com retirada, interrompe
 a coleta e registra o bloqueio sem identificar a pessoa nos documentos públicos.
 
 ## 8. Concordância comunicada em 20/11/2026
 
+Registro histórico, anterior à confirmação de aplicação da Seção 9.
+
 Foi comunicada a concordância de três integrantes para uso das próprias contas na avaliação.
 A declaração nominal foi guardada em armazenamento privado, junto a três vias individuais
-preparadas a partir deste modelo. As vias mantêm assinatura, data de aplicação e código de
-veículo em branco até o preenchimento pelos titulares.
+preparadas a partir deste modelo. Naquele registro de preparação, as vias ainda tinham assinatura, data de aplicação e código de
+veículo em branco, para preenchimento pelos titulares; a aplicação foi confirmada posteriormente
+na Seção 9.
 
 Este registro comprova o recebimento da informação de concordância, sem atestar assinatura,
 leitura integral do termo por terceiros ou disponibilidade de veículo com infração. Antes da
 sessão, confirmar com cada titular o uso descrito, seu vínculo com o veículo e a continuidade
-da autorização. A aplicação prevista na Seção 7 permanece a conferir. Não publicar as vias
+da autorização. A aplicação, pendente naquele registro de 20/11, foi confirmada em 22/11 (Seção 9).
+Não publicar as vias
 nominais, nem reproduzir assinaturas em nome dos participantes.
+
+## 9. Aplicação confirmada em 22/11/2026
+
+Hugo, responsável pela massa de dados, confirmou em 22/11/2026 que os termos de consentimento
+foram aplicados aos participantes da coleta. **A pendência de aplicação está concluída.**
+Esta data identifica a confirmação documental, não substitui as datas de aplicação de cada via.
+
+As vias assinadas e suas datas ficam em armazenamento privado, fora do Git e da GitPage.
+O modelo público e este registro de conclusão documentam a aplicação sem expor assinaturas,
+identidades ou cópias preenchidas. Não é necessário publicar os termos assinados para concluir
+esse item. A conciliação dos códigos dos veículos e a revisão independente das medições
+permanecem verificações separadas.

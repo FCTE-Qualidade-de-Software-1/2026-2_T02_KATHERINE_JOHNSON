@@ -69,6 +69,15 @@ class ColetaTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Nenhuma métrica'):
             calc.executar(self.root, output, require_data=True)
 
+    def test_sessao_nova_mantem_caso_separado(self):
+        self.ambiente(sessao='S06')
+        self.row('volume', sessao='S06', veiculo='V4', instrumento='CDP sintético',
+                 bytes_transferidos='1000000', mb='1')
+        rows = self.run_calc()
+        result = self.result(rows, 'M2.2.1', sessao='S06', veiculo='V4')
+        self.assertEqual(result['n_valido'], 1)
+        self.assertFalse(any(r['estado'] == 'calculado' and r['veiculo'] == 'V1' for r in rows))
+
     def test_limites_sem_arredondar(self):
         for m in ('M1.1.1', 'M1.2.1', 'M3.1.1', 'M3.2.1'):
             for value, expected in [(59.999, 'Inaceitável'), (60, 'Mínimo aceitável'), (80, 'Alvo'), (95, 'Excelente')]:

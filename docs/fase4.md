@@ -6,16 +6,17 @@ Portal de Serviços e do aplicativo em relação ao propósito definido na [Fase
 Ela também inclui a [ação de melhoria](fase4-melhoria.md), exigida na Entrega 2 e justificada
 pelas evidências coletadas.
 
-> **Situação em 22/11/2026.** A `main` continua sem linhas nos oito CSV oficiais. O piloto S01
-> tem relato no portal e a branch `feat/pedro-s03-fase4` acrescenta tentativas P6 de 21/11,
-> ainda pendentes de conferência. A [análise atualizada](fase4-analise.md) distingue essas
-> observações dos resultados oficiais, ainda inconclusivos. A [proposta de processo e templates
-> de melhoria](fase4-melhoria.md) está entregue, sem comprovação de eficácia no serviço.
+> **Situação em 23/11/2026.** Os oito CSV têm registros de seis sessões (S01 a S08), cobrindo P1
+> a P7 com duas lacunas declaradas: o aplicativo na rede degradada e o contexto CT04. Todos os valores
+> são primeira leitura, pendentes de conferência independente, e por isso sem nível de pontuação. A
+> [análise](fase4-analise.md) traz os valores observados e mantém os objetivos inconclusivos. A
+> [proposta de processo e templates de melhoria](fase4-melhoria.md) está entregue, sem comprovação de
+> eficácia no serviço.
 
 O [acompanhamento da coleta](fase4-coleta.md) reúne as pendências da #46, a proposta de
-reagendamento e o cálculo reproduzível da #47. O prazo original da coleta (18/11) está vencido;
-a nova agenda depende de confirmação. A consolidação sem medições registra apenas estados
-inconclusivos/não aplicáveis, sem valores nem níveis de qualidade.
+reagendamento e o cálculo reproduzível da #47. O prazo original da coleta (18/11) foi
+reprogramado e a coleta ocorreu de 21 a 23/11. Sem a segunda leitura, a consolidação registra valores
+observados sem níveis de qualidade.
 
 ## 1. Atividades, responsáveis e prazos
 
@@ -65,29 +66,29 @@ Regras de integridade que valem para toda a fase:
 
 ## 4. Resultados e julgamento
 
-Não há resultados oficiais elegíveis publicados. As observações preliminares estão identificadas na página [Análise e julgamento GQM](fase4-analise.md) descreve o
-procedimento de análise e mostra o estado de cada questão, hoje inconclusiva por falta de
-medições. Depois da análise (#48), esta seção terá um resultado por
-objetivo de medição, com o valor de cada métrica, o nível de pontuação, a resposta a cada questão
-e o julgamento por característica e por canal.
+Não há resultados oficiais elegíveis: todos os valores são primeira leitura e dependem da segunda
+leitura independente. A página [Análise e julgamento GQM](fase4-analise.md) traz os valores
+observados e o estado de cada questão, hoje inconclusiva. Depois da conferência (#48), esta seção terá
+um resultado por objetivo, com o valor de cada métrica, o nível de pontuação, a resposta a cada
+questão e o julgamento por característica e por canal.
 
 | Objetivo GQM | Característica | Resultado |
 |---|---|---|
-| G1 | Adequação funcional | A publicar após a #48 |
-| G2 | Eficiência de desempenho | A publicar após a #48 |
-| G3 | Cobertura de contexto | A publicar após a #48 |
+| G1 | Adequação funcional | Primeira leitura: sem campo divergente; um campo ausente no aplicativo (16/17); 4 contra 6 passos. Inconclusivo |
+| G2 | Eficiência de desempenho | Primeira leitura (caso V4, Wi-Fi): portal mais rápido; volumes de escopos diferentes. Inconclusivo |
+| G3 | Cobertura de contexto | Primeira leitura: cinco contextos de P6; P7 sem o aplicativo na rede degradada. Inconclusivo |
 
 *Tabela 3 — Resultados por objetivo de medição. Fonte: [Objetivos, questões e hipóteses](fase2-gqm.md).*
 
 ## 5. Limitações já conhecidas
 
-- **iOS:** o iPhone é de Heitor, então o contexto CT06 pode ser avaliado. O modelo, a versão do
-  iOS e a versão do aplicativo ainda precisam ser registrados no inventário
-  ([Recursos e ambiente](fase3-ambiente.md)). Sem esse registro, o CT06 continua não avaliado e as
-  conclusões sobre o aplicativo valem apenas para o Android (bloqueio B03 em
-  [Cronograma e bloqueios](fase3-cronograma.md)).
-- **Veículo real:** a coleta depende de um veículo com infração e do consentimento do titular
-  (bloqueio B01). Sem eles, as sessões são adiadas e o impacto é registrado na #47.
+- **iOS:** o iPhone é de Heitor e o CT06 foi inventariado e executado em 22/11 (3 de 3, caso V5,
+  aplicativo 2.7.1), pendente de conferência independente. O iOS não oferece contador de bytes por
+  aplicativo, então a M2.2.1 não é medida nele (D008), e o executor é também o titular (D028).
+- **Lacunas de cobertura:** o aplicativo na rede degradada não foi medido (D021) e o CT04 não tem
+  aparelho; as duas ficam inconclusivas, nunca zero.
+- **Veículo real:** os termos foram aplicados, conforme confirmação de Hugo em 22/11/2026, e permanecem privados; a coleta depende de veículo com infração e titular disponível
+  (bloqueio B01, com consentimento concluído). Sem veículo elegível ou titular disponível, as sessões são adiadas e o impacto é registrado na #47.
 - **Métrica M3.1.2:** é exclusiva do portal e não serve para comparar com o aplicativo.
 - **Validade dos resultados:** os resultados valem para os veículos, aparelhos, redes e datas
   efetivamente medidos e não representam todos os usuários do Detran-DF.
