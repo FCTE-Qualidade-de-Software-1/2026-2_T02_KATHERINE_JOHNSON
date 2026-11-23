@@ -10,7 +10,7 @@ instantâneo sem alterar o que foi observado diretamente durante esta preparaç�
 
 | Item | Registro factual |
 |---|---|
-| Consentimento | Foi comunicada concordância de três integrantes para uso das próprias contas. Não foi verificada nesta interação a apresentação/leitura dos termos, assinatura, vínculo com veículo ou disponibilidade de infração elegível. As vias ficam privadas. |
+| Consentimento | Foi comunicada concordância de três integrantes para uso das próprias contas. Não foi verificada nesta interação a apresentação/leitura dos termos, assinatura, vínculo com veículo ou disponibilidade de infração elegível. As vias ficam privadas. **Atualização em 22/11/2026:** Hugo confirmou a aplicação dos termos; o consentimento está concluído. A confirmação não altera a observação histórica de 20/11 nem resolve a conciliação dos códigos dos veículos. |
 | Portal | O usuário informou estar autenticado. Foi localizada uma aba “Detran Digital” no endereço inicial do Portal Detran-DF. A leitura visual/DOM não respondeu pelas operações suportadas; portanto autenticação, telas de infrações e qualquer valor não foram verificados nem extraídos. |
 | Capturas | Nenhuma captura nova foi produzida ou anexada. As seis imagens preexistentes continuam sendo apenas evidência documental parcial. |
 | Android / iOS | Não houve sessão móvel nem identificação de Android por USB nesta execução. O estado do iPhone não foi medido aqui. |

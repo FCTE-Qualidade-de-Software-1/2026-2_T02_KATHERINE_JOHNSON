@@ -129,8 +129,10 @@ o valor correto e não permitem atribuir superioridade individual.
 
 1. No contexto de referência, abrir a tela de seleção do veículo e iniciar o bloco com uma
    repetição de aquecimento, que não entra no cálculo.
-2. **M2.1.1:** em cada repetição, tocar ou clicar no veículo e aguardar a lista de infrações.
-   Voltar à tela de seleção e repetir até completar 10 repetições válidas.
+2. **M2.1.1:** selecionar o veículo e preparar os filtros antes da gravação. Em cada repetição,
+   iniciar no clique ou toque em **Consultar** e aguardar a lista completa. Retornar ao filtro
+   e repetir até completar 10 repetições válidas. Esta definição foi confirmada por Hugo em
+   22/11/2026 para a sessão S06 (V4); o marco anterior era a seleção do veículo.
 3. **M2.1.2:** na lista, tocar ou clicar na mesma infração (V1-I1) e aguardar o detalhamento.
    Voltar à lista e repetir até completar 10 repetições válidas.
 4. Na gravação, marcar o **quadro inicial** (primeiro quadro com o indicador de toque ou clique)
@@ -181,8 +183,9 @@ A equivalência do escopo e a atualização dos contadores precisam ser verifica
 
 1. No contexto de referência, para cada condição da Tabela 2, aplicar a condição no ponto de
    acesso e anotar a velocidade medida.
-2. Fazer 10 tentativas por canal, depois da repetição de aquecimento. Cada tentativa vai da
-   seleção do veículo até a lista completa.
+2. Fazer 10 tentativas por canal, depois da repetição de aquecimento. Preparar o veículo e os filtros fora do intervalo medido. Cada tentativa vai do
+   clique ou toque em **Consultar** até a lista completa, seguindo a definição de M2.1.1
+   confirmada em 22/11/2026; preservar o marco anterior ao analisar registros antigos.
 3. Classificar cada tentativa como **concluída**, **falha** (mensagem de erro, tela em branco ou
    fechamento do aplicativo), **sessão expirada** (o canal pede login de novo) ou **tempo limite**
    (60 s sem a lista). Descrever a falha com as palavras exibidas na tela.
