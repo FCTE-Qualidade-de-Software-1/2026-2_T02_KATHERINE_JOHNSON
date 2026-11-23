@@ -55,24 +55,31 @@ As estimativas da E2 aplicam o fator de correção da E1 (+10%) e a margem de se
 |---|---|---|---|---|---|
 | [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/28) | Correções do Ponto de Controle 1 | Daniel | Fechada | 3 h | 1 h |
 | [#46](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46) | Fase 3: plano de avaliação | Hugo, Philipe | Fechada | 11 h | |
-| [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Fase 4: coleta das medições e dados brutos | Hugo, Pedro Druck, Philipe | Aberta | 16 h | |
-| [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Fase 4: análise, respostas GQM e julgamento | Pedro Henrique, Philipe | Aberta | 11 h | |
-| [#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36) | Ação de melhoria obrigatória | Pedro Druck | Aberta | 8 h | |
-| [#49](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/49) | Fechamento da Entrega 2 | Daniel, Heitor | Aberta | 13 h | |
+| [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Fase 4: coleta das medições e dados brutos | Hugo, Pedro Druck, Philipe | Aberta | 16 h | 13 h (Pedro Druck — 6 h, Hugo — 3,5 h por rateio, Philipe — 3,5 h por rateio) |
+| [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Fase 4: análise, respostas GQM e julgamento | Pedro Henrique, Philipe | Aberta | 11 h | 10 h (Pedro Henrique — 5 h por rateio, Philipe — 5 h por rateio) |
+| [#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36) | Ação de melhoria obrigatória | Pedro Druck | Fechada | 8 h | 6 h |
+| [#49](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/49) | Fechamento da Entrega 2 | Daniel, Heitor | Aberta | 13 h | 11 h (Heitor — 6 h por rateio, Daniel — 5 h por rateio) |
 | [#53](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/53) | Coleta intermediária PSM/CID e slides de 11/11 | Heitor | Fechada | 4 h | 3 h |
 | [#55](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/55) | Inconsistências nos registros de gestão PSM/CID | Pedro Druck | Fechada | 1 h | 1 h |
-| | **Total** | | | **67 h** | **5 h** (4 issues fechadas; a #46 sem hora registrada) |
+| | **Total registrado na tabela** | | | **67 h** | **45 h** |
 
+Na #47, as 6 h informadas por Pedro Druck foram descontadas das 13 h registradas. As 7 h restantes
+foram rateadas igualmente entre Hugo e Philipe.
 
+## Declarações individuais da E2
 
-## Declarações individuais da E2 — 22 e 23/11/2026
+### Registros de 23/11/2026
+
+Pedro Druck registrou **13 h** na Entrega 2, sendo **6 h** na coleta da Fase 4 (#47), **6 h** na
+ação de melhoria (#36) e **1 h** nas correções de gestão PSM/CID (#55).
 
 Hugo declarou, em 23/11, o total individual de **14 h 25 min** na E2. Pelo rateio das estimativas
 coletivas dos responsáveis no planejamento, sua base é 5 h 30 min na #46 e 5 h 20 min na #47:
 **10 h 50 min estimadas e 14 h 25 min reais declaradas** (+33,08%). A declaração substitui a de
-22/11 (11 h 50 min, 1 h acima do estimado), que fica preservada na fonte v2. O registro é total da E2;
-não foi declarada a distribuição real entre as issues, por isso os campos coletivos acima não
-foram preenchidos com esse total individual.
+22/11 (11 h 50 min, 1 h acima do estimado), preservada na fonte v2. O total da E2 já abrange
+as horas de Hugo na #47, que a tabela atribui por rateio.
+
+### Registro de 22/11/2026
 
 Heitor declarou, em 22/11, o total individual de **11 h** na E2, contra **10 h 30 min estimadas**
 (+4,76%): a metade da #49 (6 h 30 min) mais a #53 (4 h). O valor é uma **estimativa calculada
@@ -81,10 +88,6 @@ arquivos locais), agrupados em blocos de trabalho, e não uma cronometragem: 3 h
 5,3 h em 16/11 e cerca de 2,9 h em 22/11 até 12:58, somando 11,2 h. O total substitui as 3 h já
 registradas na #53, sem somá-las de novo, e não inclui trabalho posterior a 13:15 de 22/11.
 
-Com as duas declarações, as horas conhecidas somam **27 h 25 min**: 14 h 25 min de Hugo, 11 h de
-Heitor, 1 h de Daniel (#28) e 1 h de Pedro Druck (#55). Isso **não é o esforço final da equipe**:
-Daniel e Pedro Druck possuem registros parciais; Pedro Henrique e Philipe não têm horas reais
-informadas no corte. Isso não significa zero horas trabalhadas, e os percentuais da tabela de
-contribuição mudam quando os demais declararem. A [coleta final documental](gestao-fechamento-e2.md)
-registra a fonte, a conciliação, as estimativas por integrante e a contribuição parcial. A E1
-permanece histórica; a decisão de dividir sua contribuição igualmente não foi aplicada à E2.
+A consolidação v3 apurou **27 h 25 min** com as declarações de Hugo e Heitor e o levantamento
+anterior das issues. As fontes e os percentuais daquele levantamento constam na
+[coleta final documental](gestao-fechamento-e2.md).
