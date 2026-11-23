@@ -223,7 +223,7 @@ def relatorio(snapshot, result, fonte='gestao/dados/fechamento-e2-2026-11-22.jso
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--fonte', type=Path, default=ROOT/'gestao/dados/fechamento-e2-2026-11-22-v2.json')
+    parser.add_argument('--fonte', type=Path, default=ROOT/'gestao/dados/fechamento-e2-2026-11-23-v3.json')
     args = parser.parse_args()
     snapshot = json.loads(args.fonte.read_text(encoding='utf-8'))
     result = calcular(snapshot)

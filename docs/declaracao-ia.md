@@ -55,3 +55,7 @@ medições oficiais. A declaração de Hugo sobre +1 h na E2 foi registrada com 
 explicitada, sem inventar a distribuição real por issue ou as horas dos demais integrantes.
 As verificações automáticas e a inspeção do PDF são técnicas; a aprovação dos autores e dos
 revisores designados permanece dependente de registro humano no PR.
+
+## Declaração individual da Entrega 2: Heitor — 23/11/2026
+
+> Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.

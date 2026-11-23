@@ -73,14 +73,16 @@ coletivas dos responsáveis no planejamento, sua base é 5 h 30 min na #46 e 5 h
 não foi declarada a distribuição real entre as issues, por isso os campos coletivos acima não
 foram preenchidos com esse total individual.
 
-Heitor declarou, em 22/11, o total individual de **11 h** na E2, contra **10 h 30 min estimadas**
-(+4,76%): a metade da #49 (6 h 30 min) mais a #53 (4 h). O valor é uma **estimativa calculada
-com apoio de Claude Code** a partir de registros datados (commits, PRs, revisões, comentários e
-arquivos locais), agrupados em blocos de trabalho, e não uma cronometragem: 3 h da #53, cerca de
-5,3 h em 16/11 e cerca de 2,9 h em 22/11 até 12:58, somando 11,2 h. O total substitui as 3 h já
-registradas na #53, sem somá-las de novo, e não inclui trabalho posterior a 13:15 de 22/11.
+Heitor declarou, em 23/11, o total individual de **15 h 30 min** na E2, contra **10 h 30 min
+estimadas** (+47,62%): a metade da #49 (6 h 30 min) mais a #53 (4 h). O valor é uma **estimativa
+calculada com apoio de Claude Code** a partir de registros datados (commits, PRs, revisões,
+comentários e horários da sessão de trabalho), agrupados em blocos, e não uma cronometragem. Ele
+soma as 11 h declaradas em 22/11 (até 13:15) e cerca de 4,5 h depois disso: 0,6 h em 22/11 à noite,
+3,0 h em 23/11 de 08:20 a 11:21 (incluindo a segunda leitura da S02, que não deixa commit) e 0,7 h
+até cerca de 12:00. O total substitui as 3 h já registradas na #53 e a declaração anterior de 11 h,
+sem somá-las de novo, e não inclui trabalho posterior a esse horário.
 
-Com as duas declarações, as horas conhecidas somam **24 h 50 min**: 11 h 50 min de Hugo, 11 h de
+Com as duas declarações, as horas conhecidas somam **29 h 20 min**: 11 h 50 min de Hugo, 15 h 30 min de
 Heitor, 1 h de Daniel (#28) e 1 h de Pedro Druck (#55). Isso **não é o esforço final da equipe**:
 Daniel e Pedro Druck possuem registros parciais; Pedro Henrique e Philipe não têm horas reais
 informadas no corte. Isso não significa zero horas trabalhadas, e os percentuais da tabela de

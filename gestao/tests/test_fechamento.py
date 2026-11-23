@@ -77,5 +77,28 @@ class DeclaracaoHeitorTest(unittest.TestCase):
         self.assertIn('Hugo e Heitor', fechar.contribuicao(result))
 
 
+class DeclaracaoHeitorV3Test(unittest.TestCase):
+    def setUp(self):
+        self.snapshot = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-23-v3.json').read_text())
+
+    def test_total_de_15h30_substitui_a_declaracao_de_11h(self):
+        result = fechar.calcular(self.snapshot)
+        heitor = result['individuais']['Heitor']
+        self.assertEqual(heitor['estimativa_min'], 630)
+        self.assertEqual(heitor['real_min'], 930)
+        self.assertTrue(heitor['completo'])
+        # 710 (Hugo) + 930 (Heitor) + 60 (Daniel) + 60 (Pedro Druck); a declaração de 22/11 não é somada de novo.
+        self.assertEqual(result['total_conhecido_min'], 1760)
+        self.assertFalse(result['pci_completo'])
+
+    def test_versao_anterior_permanece_como_historico(self):
+        anterior = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-22-v2.json').read_text())
+        self.assertEqual(fechar.calcular(anterior)['individuais']['Heitor']['real_min'], 660)
+
+    def test_contribuicao_soma_100_do_informado(self):
+        result = fechar.calcular(self.snapshot)
+        self.assertIn('52,84', fechar.contribuicao(result).replace('\\%', ''))
+
+
 if __name__ == '__main__':
     unittest.main()
