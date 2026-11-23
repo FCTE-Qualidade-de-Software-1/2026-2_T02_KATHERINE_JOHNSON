@@ -42,6 +42,12 @@ Situação documental em 13/11/2026: não há confirmação dos recursos nem evi
 
 *Tabela 2 — Bloqueios com responsável e data. Fonte: elaborada para acompanhamento da #46.*
 
+**Situação em 22/11, após o piloto S01:** B01 parcial (consentimento do titular do V2 informado;
+data e via privada a conferir por Hugo); B02 parcial (D01, D03 e D04 inventariados; D02 sem
+aparelho); B03 resolvido (CT06 executado por Heitor); B04 aberto (rede controlada e equivalência
+do contador de volume); B05 resolvido, sujeito à revisão independente das capturas (lista de
+veículos, lista de infrações e detalhe nos dois canais); B06 resolvido (PR #57); B07 e B08 abertos.
+
 ## Sincronização e passagem para a Fase 4
 
 Os prazos finais preservam as datas registradas no corpo das issues e na
