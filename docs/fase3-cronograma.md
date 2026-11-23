@@ -20,7 +20,7 @@ Os marcos de 15/11 (#46), 18/11 (#47), 20/11 (#48) e 22/11 (Entrega 2) seguem o 
 **Execução efetiva até 22/11:** S03 foi executada em 21/11 (P6, parcial: CT01, CT03 e CT05;
 [registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S03-registro-2026-11-21.md)) e a contingência S05 em 22/11
 (CT05 com outro veículo; [registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S05-registro-2026-11-22.md)). O CT06 tem
-inventário registrado, sem tentativas. S00, S01, S02 e S04 não têm execução registrada. As datas da
+inventário registrado e três tentativas P6 em 22/11 (bloco B04, iPhone de Heitor), pendentes de conferência. S00, S01, S02 e S04 não têm execução registrada. As datas da
 tabela acima permanecem como proposta histórica.
 
 P4 e P5 exigem dez repetições válidas por canal no contexto de referência; P3 exige três. P6 tem quinze tentativas no mínimo (cinco contextos obrigatórios × três), mais três se houver iOS. P7 tem sessenta tentativas medidas (dois canais × três redes × dez), além de seis aquecimentos. Se houver mais veículos, ampliar a reserva; não reduzir a amostra silenciosamente para caber na sessão. O titular deve estar disponível para autenticar novamente quando necessário.

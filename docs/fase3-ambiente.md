@@ -21,7 +21,7 @@ registra uma sessão de avaliação nem preenche `ambientes.csv` com uma sessão
 | CT03 | Portal; Android intermediário D03; Chrome | Wi-Fi: P6 | Modelo: Motorola edge 60 neo, RAM: 12 GB, Android 16 e versão do Chrome: 156.0.8078.79 |
 | CT04 | Aplicativo; Android de entrada D02 | Wi-Fi: P6 | Modelo, RAM, Android/build, pacote e versão instalada |
 | CT05 | Aplicativo; Android intermediário D03 | Wi-Fi: P1–P6; Wi-Fi, 4G e degradada: P7 | Modelo: Motorola edge 60 neo, RAM: 12 GB, Android 16 e versão instalada do app |
-| CT06 | Aplicativo; iPhone D04 (de Heitor) | Wi-Fi: P6 | Modelo, iOS/build e versão instalada; a registrar |
+| CT06 | Aplicativo; iPhone D04 (de Heitor) | Wi-Fi: P6 | Modelo, iOS/build e versão instalada; registrados em `ambientes.csv` (S03) |
 
 *Tabela 1 — Contextos planejados. Fonte: elaborada para o plano de avaliação.*
 
@@ -35,7 +35,7 @@ desvios D002, D005, D006, D007, D009 e D010):
 | CT03 | S03 | Galaxy S24+ (SM-S926B), Android 17, Chrome 157.0.8103.78 | Aparelho topo de linha no lugar do D03 (D007) |
 | CT05 | S03 | Galaxy S24+, app 2.6.3 (232) | Aparelho topo de linha e versão anterior do app (D006) |
 | CT05 | S05 | Motorola edge 60 neo, Android 16, app 2.7.0 (246), tela 1200x2670 | Modelo previsto para o D03; outro titular e veículo (D009) e novo script (D010) |
-| CT06 | S03 | iPhone 16e, iOS 27.2.1 (a conferir no aparelho), app DETRAN-DF 2.7.1 | Inventário registrado; P6 ainda não executado ([registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S03-CT06-iphone-registro-2026-11-22.md)) |
+| CT06 | S03 | iPhone 16e, iOS 27.2.1 (a conferir no aparelho), app DETRAN-DF 2.7.1 | Inventário registrado; P6 executado em 22/11 (bloco B04, 3 de 3 concluídas, conferência pendente; [registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S03-CT06-iphone-registro-2026-11-22.md)) |
 | CT04 | — | Sem aparelho | Não avaliado até o momento |
 
 *Tabela 1a — Inventário efetivo por contexto. Fonte: `ambientes.csv` e registros da S03 e da S05.*
