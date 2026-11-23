@@ -12,8 +12,8 @@ O [registro S03 no commit 14ab804](https://github.com/FCTE-Qualidade-de-Software
 relata três falhas em três tentativas no aplicativo Android 2.6.3 (CT05/B02), ao buscar veículos.
 No portal, CT01 teve três conclusões em três tentativas; CT03 teve duas conclusões e uma expiração.
 Os consentimentos foram aplicados, conforme confirmação de Hugo em 22/11/2026; as vias assinadas
-permanecem privadas. As contagens são preliminares: conferência independente e conciliação do vínculo
-dos códigos dos veículos estão pendentes, e o aparelho/versão do app diferem do planejamento (D006). Não se atribui nível oficial,
+permanecem privadas. As contagens são preliminares: a conferência independente está pendente,
+e o aparelho/versão do app diferem do planejamento (D006). Não se atribui nível oficial,
 causa técnica nem superioridade geral. O achado pertence a Q3.1/P6, não às taxas de rede de P7.
 
 O bloqueio completo antes da lista motiva priorizar a investigação de cobertura de contexto,

@@ -85,5 +85,5 @@ Esta data identifica a confirmação documental, não substitui as datas de apli
 As vias assinadas e suas datas ficam em armazenamento privado, fora do Git e da GitPage.
 O modelo público e este registro de conclusão documentam a aplicação sem expor assinaturas,
 identidades ou cópias preenchidas. Não é necessário publicar os termos assinados para concluir
-esse item. A conciliação dos códigos dos veículos e a revisão independente das medições
-permanecem verificações separadas.
+esse item. A conciliação dos códigos dos veículos foi feita por Hugo com a tabela privada (PR #XXX); a revisão
+independente das medições permanece verificação separada.

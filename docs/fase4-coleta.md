@@ -109,7 +109,7 @@ a descrição desta tabela segue o conteúdo visível de cada imagem.
 
 | Registro | Quem providencia | Evidência mínima |
 |---|---|---|
-| Massa de dados (consentimento concluído) | Hugo | Aplicação confirmada em 22/11; conciliar códigos com a tabela privada. Vias assinadas, datas individuais e identidades permanecem privadas |
+| Massa de dados (consentimento concluído) | Hugo | Aplicação confirmada em 22/11; códigos V1, V2, V4 e V5 conciliados com a tabela privada por Hugo (PR #XXX). Vias assinadas, datas individuais e identidades permanecem privadas |
 | Inventário efetivo | Hugo (D01–D03); Heitor (D04) | Aparelhos, versões instaladas e instrumentos usados em cada sessão/contexto/rede |
 | Levantamento dos aplicativos | Hugo e Philipe (Android); Heitor (iOS) | Lista de veículos, lista de infrações e detalhes, com capturas revisadas e correspondência com a massa |
 | Validação técnica do piloto | Philipe, com os executores | Rede comum, perfis nos dois sentidos, contador de volume e método de marcação de tempo verificados |
