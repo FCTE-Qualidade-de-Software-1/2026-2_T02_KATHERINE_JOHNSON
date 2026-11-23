@@ -13,7 +13,7 @@ NOMES = dict(zip(MEMBROS, ('Daniel de Oliveira Lira', 'Heitor Macedo Ricardo',
     'Hugo Freitas Silva', 'Pedro Druck Montalvão Reis', 'Pedro Henrique Ferreira Xavier',
     'Philipe Amâncio Reis Caetano')))
 PAPEIS = dict(zip(MEMBROS, ('Gestão, metodologia, integração e revisão da coleta',
-    'GitPage, acompanhamento PSM e revisão da análise',
+    'GitPage, fechamento da E2 e revisão da análise',
     'Plano, preparação da coleta, instrumentos, artigo e integração documental',
     'Coleta por contexto e ação de melhoria', 'Objetivos GQM e análise comparativa',
     'Instrumentação, coleta e análise das métricas')))
