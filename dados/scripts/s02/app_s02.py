@@ -289,6 +289,72 @@ def tempo_detalhe_na_lista(rep, data):
             'observacao': 'Dica por sondagem da interface; marcar início e fim no vídeo, com segunda leitura.'}
 
 
+def lista_visivel(lista):
+    """Primeira infração inteira na área útil, sem barra de status nem barra de abas."""
+    return next((n for n in lista if n['clicavel'] and 'Data: ' in texto(n)
+                 and n['caixa'][1] > STATUS_Y and n['caixa'][3] < ABAS_Y), None)
+
+
+def tempo_lista(metrica, rep, bloco):
+    """M2.1.1/M3.2.3 sem rolagem: toque em Consultar até a primeira infração visível.
+
+    Exige exibição em que a lista caiba na tela; nenhum gesto é feito durante a gravação. O nome
+    do vídeo inclui o bloco para não colidir com gravações anteriores (B04 da S06).
+    Resultado: concluida, falha, sessao_expirada, tempo_limite ou erro_instrumento.
+    """
+    if not re.fullmatch(r'B[0-9]{2}', bloco) or metrica not in {'M2.1.1', 'M3.2.3'}:
+        raise ValueError('bloco ou métrica inválidos')
+    antes = sh('settings', 'get', 'system', 'show_touches').strip()
+    sh('settings', 'put', 'system', 'show_touches', '1')
+    nome = f'tempo-app-{bloco}-{metrica}-{rep}'
+    p = None
+    try:
+        consultar = ate_filtro([], [])
+        ponto = [(consultar['caixa'][0] + consultar['caixa'][2]) // 2, (consultar['caixa'][1] + consultar['caixa'][3]) // 2]
+        p, disp, t0 = gravar(nome)
+        t_toque = tocar(consultar)
+        resultado, t_fim, diagnostico, anterior = 'concluida', None, '', None
+        try:
+            # Margem de 5 s para a latência da leitura; o limite de 60 s é conferido no vídeo.
+            while time.time() < t_toque + LIMITE + 5:
+                n = lista_visivel(ler())
+                if n and anterior and n['caixa'] == anterior['caixa']:
+                    t_fim = time.time()
+                    break
+                anterior = n
+                time.sleep(0.3)
+            else:
+                lista = app.nos()
+                foco = sh('dumpsys', 'window').split('mCurrentFocus', 1)[-1][:200]
+                if PKG not in foco:
+                    resultado, diagnostico = 'falha', 'aplicativo fora do primeiro plano'
+                elif any(x['texto'] == 'Informação não editável' for x in lista):
+                    # Tela de resultado carregada sem infração visível: conferir configuração/tela.
+                    resultado, diagnostico = 'erro_instrumento', 'resultado carregado sem infração visível'
+                else:
+                    resultado = 'tempo_limite'
+        except Expirou:
+            resultado = 'sessao_expirada'
+        except RuntimeError as erro:
+            if str(erro) != 'mensagem_de_erro_no_aplicativo':
+                raise  # leitor de interface (uiautomator) falhou: erro de instrumento, tratado pelo coletor
+            resultado = 'falha'
+            diagnostico = ' | '.join(texto(x) for x in app.nos() if texto(x).startswith('Ocorreu um erro'))
+        time.sleep(1.5)
+        video = parar(p, disp, nome)
+        p = None
+    finally:
+        if p is not None:
+            parar(p, disp, nome)
+        sh('settings', 'put', 'system', 'show_touches', '1' if antes == '1' else '0')
+    return {'metrica': metrica, 'repeticao': rep, 'data_hora': agora(), 'resultado': resultado,
+            'inicio_evento': 'toque em Consultar', 'fim_evento': 'primeira infração inteira visível e estável, sem rolagem',
+            'ponto_toque': ponto, 'dica_tempo_s': round(t_fim - t_toque, 2) if t_fim else None,
+            'dica_s_desde_inicio_gravacao': {'toque': round(t_toque - t0, 2), 'fim': round(t_fim - t0, 2) if t_fim else None},
+            'diagnostico_privado': diagnostico, 'gravacao': video,
+            'observacao': 'Dica por sondagem da interface; marcar início e fim no vídeo, com segunda leitura.'}
+
+
 def bytes_uid(uid):
     sh('dumpsys', 'netstats', '--poll'); time.sleep(1)
     tot, dentro = 0, False

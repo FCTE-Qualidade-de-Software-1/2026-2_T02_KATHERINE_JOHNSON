@@ -92,3 +92,24 @@ Não sobrescreve linhas que já tenham revisor. As propostas numéricas não sã
 O inventário registra D05 (Samsung) e D06 (computador 750XGK), distintos dos aparelhos do plano
 anterior. Para validar a sessão sem ambiguidade, conferir também os desvios D016–D020 e o
 registro público `evidencias/fase4/S06-registro-2026-11-22.md`.
+
+## S08 / P7 no portal
+
+`coletar_portal.js` executa blocos de tempo da lista no portal (`--modo lista` para P4 ou
+`--modo p7` para M3.2.3), um registro privado por tentativa e vídeos nomeados com o bloco
+(`tempo-portal-<bloco>-<métrica>-<rep>`), sem sobrescrever. No P7, concluída, falha, sessão
+expirada e tempo limite entram no denominador; só erro de instrumento ganha novo número.
+Uma página que não carrega em 60 s na preparação conta como falha do serviço.
+
+```bash
+CASO=V4 node coletar_portal.js --bloco B10 --modo p7 --sessao S08 --rede wifi
+python3 propor_marcacoes.py ../../privado/S02/V4/B10-02.json
+```
+
+O Chrome de medição precisa estar visível ou iniciado com `--disable-backgrounding-occluded-windows`
+e `--disable-renderer-backgrounding`: com a janela encoberta, o clique sintético e o screencast param.
+
+`coletar_app.py --modo lista|p7` e `app_s02.tempo_lista` medem a lista do aplicativo **sem
+rolagem**, com o ponto de toque registrado e o bloco no nome do vídeo. Exigem exibição em que a
+primeira infração caiba na tela; na escala original do Samsung isso não ocorre, e esses modos
+não foram executados (desvios D020 e D021).

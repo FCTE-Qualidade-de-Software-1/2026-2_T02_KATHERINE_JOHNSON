@@ -59,12 +59,21 @@ def normal(estado):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('acao', choices=['preparar', 'degradar', 'normal', 'restaurar', 'estado'])
+    parser.add_argument('acao', choices=['preparar', 'uplink', 'degradar', 'normal', 'restaurar', 'estado'])
     args = parser.parse_args()
     arquivo = PRIV / 'estado.json'
     estado = json.loads(arquivo.read_text()) if arquivo.exists() else {}
     if args.acao == 'estado':
         print(json.dumps({k: v for k, v in estado.items() if k != 'senha'}))
+        return
+    if args.acao == 'uplink':
+        # Só o computador como cliente (P7 do portal): registra o uplink, sem criar ponto de acesso.
+        if estado and estado.get('preparacao') not in {'restaurado', 'falhou'}:
+            parser.error('já existe estado; conferir ou restaurar antes de preparar novamente')
+        rotas = json.loads(comando('ip', '-j', 'route', 'show', 'default'))
+        uplink = min((r for r in rotas if r.get('dev')), key=lambda r: r.get('metric', 0))['dev']
+        salvar({'uplink': uplink, 'ap': False, 'conexao': False, 'preparacao': 'uplink_sem_ponto_de_acesso'})
+        print(json.dumps({'uplink': uplink, 'preparacao': 'uplink_sem_ponto_de_acesso'}))
         return
     if os.geteuid() != 0:
         parser.error('executar esta ação com sudo no terminal local; nunca enviar a senha ao chat')

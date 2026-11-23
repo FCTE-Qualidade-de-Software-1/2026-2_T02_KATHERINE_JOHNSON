@@ -232,5 +232,5 @@ async function main() {
   console.log(JSON.stringify(r));
   b.disconnect();
 }
-module.exports = { conectar, inicio, irAoHistorico, selecionar, clicar, aguardar, gravar, tempo, volume, listaVisivel, detalheVisivel, seta, PRIV };
+module.exports = { conectar, inicio, irAoHistorico, selecionar, clicar, aguardar, gravar, proposta, tempo, volume, listaVisivel, detalheVisivel, seta, PRIV };
 if (require.main === module) main().catch(e => { console.error(e.name); process.exit(1); });

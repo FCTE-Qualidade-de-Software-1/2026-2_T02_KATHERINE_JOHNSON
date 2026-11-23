@@ -35,7 +35,7 @@ def propor(path, ponto=(540, 1854)):
             'quadro_inicial_proposto': inicial, 'quadro_final_proposto': final,
             'inicio_s_proposto': round(tempos[inicial], 6), 'fim_s_proposto': round(tempos[final], 6),
             'tempo_s_proposto': round(tempos[final] - tempos[inicial], 6),
-            'limite': 'Inclui a rolagem executada até o resultado ficar visível; conferir o indicador de toque e a lista completa na gravação.'}
+            'limite': 'Proposta por diferença de imagem; conferir o indicador de toque e a lista na gravação. No B04 inclui rolagem.'}
 
 
 def main():
@@ -45,15 +45,16 @@ def main():
     privado = Path(__file__).resolve().parents[3] / 'dados/privado'
     for nome in args.videos:
         path = Path(nome).resolve()
-        if not path.is_relative_to(privado) or not any(m in path.name for m in ['M2.1.1', 'M2.1.2']):
-            parser.error('usar somente vídeos privados de P4 no Samsung observado')
-        ponto = (540, 1854)
-        if 'M2.1.2' in path.name:
-            registro = next((json.loads(p.read_text()) for p in path.parent.glob('B06-*.json')
-                             if json.loads(p.read_text()).get('gravacao', '').endswith(path.name)), None)
-            if not registro or not registro.get('ponto_toque'):
-                parser.error('metadados do ponto de toque ausentes para o detalhe')
-            ponto = registro['ponto_toque']
+        if not path.is_relative_to(privado) or not any(m in path.name for m in ['M2.1.1', 'M2.1.2', 'M3.2.3']):
+            parser.error('usar somente vídeos privados de P4/P7 no Samsung observado')
+        # Registros novos guardam o ponto de toque; só o B04 antigo usa a posição fixa observada.
+        registro = next((json.loads(p.read_text()) for p in path.parent.glob('B[0-9][0-9]-[0-9][0-9].json')
+                         if json.loads(p.read_text()).get('gravacao', '').endswith(path.name)), None)
+        ponto = (registro or {}).get('ponto_toque')
+        if not ponto:
+            if 'M2.1.1' not in path.name or '-B' in path.name:
+                parser.error('metadados do ponto de toque ausentes')
+            ponto = (540, 1854)
         resultado = propor(path, ponto)
         destino = path.with_suffix('.marcacao-proposta.json')
         destino.write_text(json.dumps(resultado, ensure_ascii=False, indent=2))

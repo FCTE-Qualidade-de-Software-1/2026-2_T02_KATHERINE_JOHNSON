@@ -61,6 +61,22 @@ class RedeP7Test(unittest.TestCase):
                 rede.normal(estado)
         self.assertTrue(estado['egress'])
 
+    def test_uplink_registra_sem_criar_ponto_de_acesso(self):
+        (self.privado / 'estado.json').unlink()
+        rotas = json.dumps([{'dev': 'interface-sintetica', 'metric': 600}])
+        chamadas = []
+        def cmd(*args, **kwargs):
+            chamadas.append(args)
+            return rotas
+        with mock.patch.object(rede, 'PRIV', self.privado), \
+             mock.patch('sys.argv', ['rede.py', 'uplink']), \
+             mock.patch.object(rede, 'comando', side_effect=cmd), \
+             mock.patch('builtins.print'):
+            rede.main()
+        self.assertEqual(chamadas, [('ip', '-j', 'route', 'show', 'default')])
+        estado = json.loads((self.privado / 'estado.json').read_text())
+        self.assertEqual((estado['uplink'], estado['ap'], estado['conexao']), ('interface-sintetica', False, False))
+
 
 if __name__ == '__main__':
     unittest.main()

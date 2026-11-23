@@ -1,8 +1,8 @@
 # Preparação da rede de P7
 
 Não executar ações de escrita durante as medições de P4/P5. O roteiro usa somente comandos
-locais e exige senha administrativa no terminal do responsável, nunca no chat. Não foi
-executado na preparação de 22/11: `sudo -n true` informou que a autenticação interativa é necessária.
+locais e exige senha administrativa no terminal do responsável, nunca no chat. Na preparação
+de 22/11, `sudo -n true` informou que a autenticação interativa é necessária.
 
 ## Topologia proposta e limite
 
@@ -10,6 +10,19 @@ O Wi-Fi conectado é o uplink. Uma interface AP virtual, no mesmo canal, atende 
 Portal e app devem passar pelo mesmo uplink antes da coleta. O adaptador anuncia suporte
 simultâneo a modo cliente e AP no mesmo canal, mas isso ainda precisa ser validado na prática.
 Criar a interface não comprova que o perfil funciona nem libera o bloco.
+
+Quando só o portal participa (S08), `uplink` registra a interface de saída sem criar AP,
+e `degradar`/`restaurar` atuam sobre ela. Sem `sudo` interativo, usar `pkexec` com caminho
+absoluto; a senha é digitada na janela do sistema:
+
+```bash
+python3 dados/scripts/p7/rede.py uplink
+pkexec /usr/bin/python3 "$PWD/dados/scripts/p7/rede.py" degradar
+pkexec /usr/bin/python3 "$PWD/dados/scripts/p7/rede.py" restaurar
+```
+
+Em 22/11 esse fluxo foi executado no B12 da S08: o perfil foi aplicado no `wlo1` e na IFB,
+validado pelos contadores e removido, com a fila original conferida. O AP não foi criado nem testado.
 
 O comando abaixo cria apenas o AP temporário; não aplica degradação:
 
