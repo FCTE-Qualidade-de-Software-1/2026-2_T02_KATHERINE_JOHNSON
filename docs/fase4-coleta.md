@@ -2,11 +2,13 @@
 
 **Continuação S06/V4 em 22/11:** novo titular coberto pelo consentimento aplicado, com outro
 veículo, Samsung SM-S731B e computador 750XGK. Os registros brutos estão nesta branch;
-consulte `evidencias/fase4/S06-registro-2026-11-22.md`. P4 tem gravações provisórias, mas o bloco
-da lista no Android foi excluído do cálculo por esperas artificiais de rolagem; os demais
-aguardam marcação visual e segunda leitura. P5 do portal foi executado, e o Android está
-em andamento. P7 aguarda configuração e validação da rede. Nenhum resultado dessa continuação
-foi promovido a julgamento oficial, e nenhum original identificável é público.
+consulte `evidencias/fase4/S06-registro-2026-11-22.md` e `evidencias/fase4/S08-registro-2026-11-22.md`.
+P4 tem gravações provisórias; o bloco da lista no Android foi excluído por esperas artificiais
+de rolagem, e a M2.1.1 do aplicativo permanece inconclusiva. P5 foi concluído nos dois canais
+(10 leituras válidas cada). P7 foi executado só no portal, em Wi-Fi e rede degradada (S08);
+4G e P7 do aplicativo não foram avaliados. Os tempos são propostas automáticas pendentes de
+marcação visual e segunda leitura independente. Nenhum resultado dessa continuação foi promovido
+a julgamento oficial, e nenhum original identificável é público.
 
 **Consentimento concluído:** Hugo confirmou em 22/11/2026 a aplicação dos termos aos participantes
 da coleta. As vias assinadas e datas individuais permanecem privadas, sem publicação na GitPage.
