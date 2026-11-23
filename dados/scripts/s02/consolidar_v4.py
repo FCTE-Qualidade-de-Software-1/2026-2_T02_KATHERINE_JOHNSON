@@ -10,7 +10,8 @@ PRIV = RAIZ / 'dados/privado/S02/V4'
 EVIDENCIA = 'evidencias/fase4/S06-registro-2026-11-22.md'
 # S08: P7 do portal (Wi-Fi, rede degradada e 4G). Os blocos do app no P7 só entram se executados.
 EVIDENCIAS = {'S06': EVIDENCIA, 'S08': 'evidencias/fase4/S08-registro-2026-11-22.md'}
-TEMPO_APP = [('S06', 'B04', 'M2.1.1'), ('S06', 'B06', 'M2.1.2')]
+# B09 refaz a lista do app com rolagem rápida contínua iniciada no toque (sem sondagem antes de rolar).
+TEMPO_APP = [('S06', 'B04', 'M2.1.1'), ('S06', 'B06', 'M2.1.2'), ('S06', 'B09', 'M2.1.1')]
 # B04: lista abaixo da tela e esperas do instrumento para rolar; as gravações ficam preservadas.
 EXCLUIDOS = {('S06', 'B04')}
 P7 = [('B10', 'portal', 'wifi'), ('B11', 'aplicativo', 'wifi'), ('B12', 'portal', 'degradada'),
@@ -84,8 +85,7 @@ def main():
             r = ler(p)
             if r.get('resultado') != 'concluida':
                 tempos.append(base('tempos', sessao=sessao, bloco=bloco, contexto='CT05', canal='aplicativo',
-                    infracao='V4-I1', metrica=metrica, repeticao=r['repeticao'],
-                    aquecimento='sim' if r.get('aquecimento') else 'nao',
+                    infracao='V4-I1', metrica=metrica, repeticao=r['repeticao'], aquecimento='nao',
                     resultado='erro_instrumento', elegivel='nao',
                     motivo='Instrumento interrompido durante preparação; preservado, com reposição em novo número',
                     data_hora=r['inicio_execucao']))
@@ -101,7 +101,8 @@ def main():
                 infracao='V4-I1', metrica=metrica, repeticao=r['repeticao'],
                 aquecimento='sim' if r['aquecimento'] else 'nao', inicio_s=m['inicio_s_proposto'],
                 fim_s=m['fim_s_proposto'], tempo_s=m['tempo_s_proposto'], resultado='concluida',
-                elegivel='sim', motivo='Proposta automática pendente de marcação visual',
+                elegivel='sim', motivo='Proposta automática pendente de marcação visual'
+                + ('; rolagem rápida contínua desde o toque, fim inclui o curso de uma rolagem' if r.get('rolagem') == 'continua' else ''),
                 data_hora=r['data_hora']))
     for row in tempos:
         if (row['sessao'], row['bloco']) in EXCLUIDOS and row['resultado'] == 'concluida':
@@ -117,6 +118,7 @@ def main():
                          data_hora=r.get('data_hora') or r['inicio_execucao'])
             tempo = dict(infracao='V4-I1', metrica='M3.2.3')
             if resultado not in SERVICO:
+                comum['aquecimento'] = 'nao'  # o aquecimento é a primeira tentativa que conta
                 motivo = 'Erro de instrumento preservado; reposição em novo número'
                 tentativas.append(base('tentativas', **comum, procedimento='P7', resultado='erro_instrumento', elegivel='nao', motivo=motivo))
                 tempos.append(base('tempos', **comum, **tempo, resultado='erro_instrumento', elegivel='nao', motivo=motivo))
@@ -132,7 +134,8 @@ def main():
                     resultado = 'tempo_limite'
                 else:
                     marcas = dict(inicio_s=m['inicio_s_proposto'], fim_s=m['fim_s_proposto'], tempo_s=m['tempo_s_proposto'])
-            motivo = {'concluida': 'Marcação automática provisória; conferir vídeo e segunda leitura',
+            motivo = {'concluida': 'Marcação automática provisória; conferir vídeo e segunda leitura'
+                      + ('; rolagem rápida contínua desde o toque' if r.get('rolagem') == 'continua' else ''),
                       'falha': 'Falha do serviço' + (' na preparação, antes de Consultar' if r.get('etapa') == 'preparacao' else '')
                                + '; mensagem no registro privado; mantida no denominador',
                       'sessao_expirada': 'Sessão expirada; mantida no denominador',

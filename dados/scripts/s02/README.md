@@ -109,7 +109,7 @@ python3 propor_marcacoes.py ../../privado/S02/V4/B10-02.json
 O Chrome de medição precisa estar visível ou iniciado com `--disable-backgrounding-occluded-windows`
 e `--disable-renderer-backgrounding`: com a janela encoberta, o clique sintético e o screencast param.
 
-`coletar_app.py --modo lista|p7` e `app_s02.tempo_lista` medem a lista do aplicativo **sem
-rolagem**, com o ponto de toque registrado e o bloco no nome do vídeo. Exigem exibição em que a
-primeira infração caiba na tela; na escala original do Samsung isso não ocorre, e esses modos
-não foram executados (desvios D020 e D021).
+`coletar_app.py --modo lista|p7` e `app_s02.tempo_lista` medem a lista do aplicativo com o ponto
+de toque registrado e o bloco no nome do vídeo. Com `ROLAGEM=continua` (padrão), o próprio aparelho
+repete rolagens rápidas pela margem desde o toque, sem sondagem do computador; `propor_marcacoes_app.py`
+marca o primeiro quadro em repouso na lista (D026). Usado no B09 (S06) e em B11/B15 (S08).

@@ -104,6 +104,9 @@ def main():
             comando('iw', 'dev', uplink, 'interface', 'add', AP, 'type', '__ap')
             estado['ap'] = True
             salvar(estado)
+            # A interface virtual herda o MAC do uplink e o wpa_supplicant a recusa: usar MAC local.
+            mac = '02:' + ':'.join(f'{b:02x}' for b in secrets.token_bytes(5))
+            comando('ip', 'link', 'set', 'dev', AP, 'address', mac)
             comando('nmcli', 'device', 'set', AP, 'managed', 'yes')
             comando('nmcli', 'connection', 'add', 'type', 'wifi', 'ifname', AP,
                     'con-name', CONEXAO, 'ssid', SSID, 'wifi.mode', 'ap',

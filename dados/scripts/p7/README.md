@@ -22,7 +22,9 @@ pkexec /usr/bin/python3 "$PWD/dados/scripts/p7/rede.py" restaurar
 ```
 
 Em 22/11 esse fluxo foi executado no B12 da S08: o perfil foi aplicado no `wlo1` e na IFB,
-validado pelos contadores e removido, com a fila original conferida. O AP não foi criado nem testado.
+validado pelos contadores e removido, com a fila original conferida. Em 23/11 o `preparar` falhou
+duas vezes neste adaptador (o `wpa_supplicant` recusa a interface virtual, mesmo com MAC local) e
+desfez tudo automaticamente; o app também ignora proxy do sistema e não opera sobre VPN (D021).
 
 O comando abaixo cria apenas o AP temporário; não aplica degradação:
 

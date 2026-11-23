@@ -295,11 +295,32 @@ def lista_visivel(lista):
                  and n['caixa'][1] > STATUS_Y and n['caixa'][3] < ABAS_Y), None)
 
 
-def tempo_lista(metrica, rep, bloco):
-    """M2.1.1/M3.2.3 sem rolagem: toque em Consultar até a primeira infração visível.
+ROLAGEM_PID = '/data/local/tmp/katherine-rolagem.pid'
 
-    Exige exibição em que a lista caiba na tela; nenhum gesto é feito durante a gravação. O nome
-    do vídeo inclui o bloco para não colidir com gravações anteriores (B04 da S06).
+
+def rolagem_continua():
+    """Rolagens rápidas repetidas pelo próprio aparelho, na margem esquerda (fora dos cartões).
+
+    Começam logo após o toque, sem sondagem do computador: assim que a lista existe, a rolagem
+    seguinte a traz à tela. O atraso residual é o curso de uma rolagem rápida, visível no vídeo.
+    """
+    x = str(round(40 * LARGURA / 1080))
+    y1, y2 = str(round(1900 * ALTURA / 2340)), str(round(300 * ALTURA / 2340))
+    laco = f'echo $$ > {ROLAGEM_PID}; while true; do input swipe {x} {y1} {x} {y2} 60; done'
+    return subprocess.Popen(['adb', 'shell', laco], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
+def parar_rolagem(p):
+    sh('sh', '-c', f'kill $(cat {ROLAGEM_PID}) 2>/dev/null; rm -f {ROLAGEM_PID}')
+    p.terminate()
+
+
+def tempo_lista(metrica, rep, bloco):
+    """M2.1.1/M3.2.3: toque em Consultar até a primeira infração inteira visível.
+
+    Com ROLAGEM=continua (padrão), a rolagem rápida contínua começa logo após o toque; com
+    ROLAGEM=nenhuma, exige exibição em que a lista caiba na tela. O nome do vídeo inclui o bloco
+    para não colidir com gravações anteriores (B04 da S06).
     Resultado: concluida, falha, sessao_expirada, tempo_limite ou erro_instrumento.
     """
     if not re.fullmatch(r'B[0-9]{2}', bloco) or metrica not in {'M2.1.1', 'M3.2.3'}:
@@ -313,6 +334,7 @@ def tempo_lista(metrica, rep, bloco):
         ponto = [(consultar['caixa'][0] + consultar['caixa'][2]) // 2, (consultar['caixa'][1] + consultar['caixa'][3]) // 2]
         p, disp, t0 = gravar(nome)
         t_toque = tocar(consultar)
+        rolagem = rolagem_continua() if os.environ.get('ROLAGEM', 'continua') == 'continua' else None
         resultado, t_fim, diagnostico, anterior = 'concluida', None, '', None
         try:
             # Margem de 5 s para a latência da leitura; o limite de 60 s é conferido no vídeo.
@@ -340,6 +362,9 @@ def tempo_lista(metrica, rep, bloco):
                 raise  # leitor de interface (uiautomator) falhou: erro de instrumento, tratado pelo coletor
             resultado = 'falha'
             diagnostico = ' | '.join(texto(x) for x in app.nos() if texto(x).startswith('Ocorreu um erro'))
+        finally:
+            if rolagem is not None:
+                parar_rolagem(rolagem)
         time.sleep(1.5)
         video = parar(p, disp, nome)
         p = None
@@ -348,7 +373,8 @@ def tempo_lista(metrica, rep, bloco):
             parar(p, disp, nome)
         sh('settings', 'put', 'system', 'show_touches', '1' if antes == '1' else '0')
     return {'metrica': metrica, 'repeticao': rep, 'data_hora': agora(), 'resultado': resultado,
-            'inicio_evento': 'toque em Consultar', 'fim_evento': 'primeira infração inteira visível e estável, sem rolagem',
+            'inicio_evento': 'toque em Consultar', 'fim_evento': 'primeira infração inteira visível e estável',
+            'rolagem': os.environ.get('ROLAGEM', 'continua'),
             'ponto_toque': ponto, 'dica_tempo_s': round(t_fim - t_toque, 2) if t_fim else None,
             'dica_s_desde_inicio_gravacao': {'toque': round(t_toque - t0, 2), 'fim': round(t_fim - t0, 2) if t_fim else None},
             'diagnostico_privado': diagnostico, 'gravacao': video,

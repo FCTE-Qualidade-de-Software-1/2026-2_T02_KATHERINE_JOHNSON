@@ -3,10 +3,10 @@
 **Continuação S06/V4 em 22/11:** novo titular coberto pelo consentimento aplicado, com outro
 veículo, Samsung SM-S731B e computador 750XGK. Os registros brutos estão nesta branch;
 consulte `evidencias/fase4/S06-registro-2026-11-22.md` e `evidencias/fase4/S08-registro-2026-11-22.md`.
-P4 tem gravações provisórias; o bloco da lista no Android foi excluído por esperas artificiais
-de rolagem, e a M2.1.1 do aplicativo permanece inconclusiva. P5 foi concluído nos dois canais
-(10 leituras válidas cada). P7 foi executado só no portal, em Wi-Fi, rede degradada e 4G (S08);
-o P7 do aplicativo não foi avaliado. Os tempos são propostas automáticas pendentes de
+P4 tem gravações provisórias; a lista do Android foi refeita no B09 com rolagem rápida contínua
+(o B04, contaminado por esperas do instrumento, segue excluído). P5 foi concluído nos dois canais
+(10 leituras válidas cada). P7 foi executado no portal em Wi-Fi, rede degradada e 4G e no aplicativo em Wi-Fi e 4G (S08);
+a rede degradada no aplicativo não pôde ser aplicada (D021). Os tempos são propostas automáticas pendentes de
 marcação visual e segunda leitura independente. Nenhum resultado dessa continuação foi promovido
 a julgamento oficial, e nenhum original identificável é público.
 
