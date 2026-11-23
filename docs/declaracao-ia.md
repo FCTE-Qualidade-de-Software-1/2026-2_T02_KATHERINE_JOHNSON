@@ -8,7 +8,7 @@
 
 ## 1. Diretrizes de Uso Ético e Transparência
 
-Em estrito atendimento aos critérios de integridade acadêmica estabelecidos para a disciplina FGA0315 (critérios C10, F2-C9 e AG-C3), a equipe KATHERINE JOHNSON declara que utilizou ferramentas baseadas em Modelos de Linguagem de Grande Porte (LLMs) exclusivamente como suporte operacional à redação técnica, formatação de templates LaTeX/Markdown e estruturação inicial de ideias.
+Em atendimento aos critérios C10, F2-C9 e AG-C3 da disciplina FGA0315, a equipe Katherine Johnson registra o uso de ferramentas de inteligência artificial e os procedimentos de verificação adotados em cada entrega.
 
 **Compromissos assumidos por todos os membros da equipe:**
 1. Nenhuma decisão metodológica, julgamento de qualidade ou definição de métrica foi terceirizada sem validação técnica crítica;
@@ -18,14 +18,36 @@ Em estrito atendimento aos critérios de integridade acadêmica estabelecidos pa
 
 ---
 
-## 2. Registro Individual de Utilização de IA
+## 2. Declaração da Entrega 2 (AG-C3)
+
+Na Entrega 2, a equipe Katherine Johnson usou ferramentas de inteligência artificial como apoio à
+preparação dos roteiros e instrumentos de coleta da Fase 3 e à organização dos registros e à
+revisão do artigo e da GitPage na Fase 4. A IA também auxiliou na documentação da gestão do
+projeto e na elaboração da proposta de melhoria.
+
+Os integrantes conduziram ou supervisionaram as sessões de avaliação da consulta de infrações no
+Portal de Serviços e no aplicativo do Detran-DF. A equipe definiu o método, conferiu as evidências e
+interpretou os resultados segundo os critérios GQM. Na sessão S02, por exemplo, um segundo integrante
+fez uma leitura independente das capturas de tela, das gravações e dos demais registros originais
+para conferir os resultados de P1 a P3.
+O [registro da segunda leitura no PR #77](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/77)
+documenta a conferência e a divergência identificada.
+
+### Usos registrados na Entrega 2
+
+| Registro | Ferramenta | Tarefa | Conferência registrada |
+|---|---|---|---|
+| Heitor | Claude Code | Apoio aos registros de gestão, à redação da GitPage e dos slides de PSM/CID, à documentação da coleta em iOS e à estimativa das próprias horas. | Conferiu os registros nas issues, nos PRs, no histórico de commits e nas atas. Conferiu as descrições das imagens uma a uma, forneceu os dados da coleta em iOS e revisou e aceitou a estimativa de horas. |
+| Registros técnicos da equipe | Codex (OpenAI) | Apoio aos roteiros e modelos de coleta e análise (#46 e #48), à documentação da proposta de melhoria (#36), à atualização do artigo e à preparação desta declaração. | Cotejo com as fases anteriores, os dados disponíveis e os registros no GitHub, além das verificações de compilação e do PDF. A revisão da declaração pela equipe é acompanhada na [issue #49](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/49). |
+
+## 3. Registro individual da Entrega 1
 
 A Tabela abaixo documenta pormenorizadamente a ferramenta empregada, a finalidade específica e o procedimento de auditoria e ajuste humano realizado por cada integrante da equipe.
 
 | Integrante | Ferramenta e Versão | Tarefa Específica Executada | Procedimento de Verificação e Ajuste Humano |
 |---|---|---|---|
-| **Daniel** | Claude Sonnet 5.5 / ChatGPT | Auxílio na elaboração da estrutura da Seção Metodologia e scripts de automação Git | Revisão manual do fluxo de fases da ISO/IEC 25040, validação das fórmulas de métricas PSM/CID e adequação às regras do repositório. |
-| **Heitor** | Claude Sonnet 5.5 | Estruturação inicial do texto de introdução, tabela de partes interessadas e configuração MkDocs | Checagem de conformidade com os objetivos reais do Detran-DF, verificação dos critérios de sucesso por parte interessada e remoção de elementos visuais incompatíveis. Na E2, Claude Code (Claude Opus 5.5) apoiou o levantamento do histórico de commits, issues e PRs e a redação das seções novas da página Gestão e do slide "Antes do plano" da apresentação PSM/CID; os valores foram conferidos contra o GitHub e as atas 01 e 02. Em 10/11, a mesma ferramenta apoiou a coleta intermediária da E2 (`gestao/coleta-intermediaria-e2.md`), o plano PSM/CID v1.2, a ata 03 (transcrita de `gestao/retrospectiva-e1.pdf`) e os slides novos da apresentação PSM/CID; cada número foi conferido no GitHub (issues, PRs e `git log` da `main`) e as decisões foram aprovadas pelo autor antes da publicação. Em 16/11, Claude Code (Claude Sonnet 5.5) apoiou a redação das páginas da Fase 4 e da ação de melhoria da GitPage, o alt-text das imagens da Fase 3 e o rascunho da coleta de acompanhamento PSM/CID de 17/11; as situações, prazos e responsáveis foram conferidos contra as issues e os PRs no GitHub, o alt-text foi conferido imagem por imagem; o texto segue sujeito à revisão do autor e do revisor do PR. Em 22/11, a mesma ferramenta apoiou o registro do iPhone e da execução do P6 no iOS, o tratamento das capturas e a estimativa das horas da E2 (declaração individual), calculada a partir de registros datados; Heitor forneceu os dados da coleta, conferiu e aceitou os valores. |
+| **Daniel** | Claude Sonnet 5.5 / ChatGPT | Auxílio na elaboração da estrutura da Seção Metodologia e na automação de tarefas no Git | Revisão manual do fluxo de fases da ISO/IEC 25040, validação das fórmulas de métricas PSM/CID e adequação às regras do repositório. |
+| **Heitor** | Claude Sonnet 5.5 | Estruturação inicial do texto de introdução, tabela de partes interessadas e configuração MkDocs | Checagem de conformidade com os objetivos reais do Detran-DF, verificação dos critérios de sucesso por parte interessada e remoção de elementos visuais incompatíveis. |
 | **Hugo** | Claude Code (Claude Opus 5.5) | Apoio na organização do levantamento público dos canais e na revisão do texto da descrição do produto, do modelo de qualidade e dos diagramas | Levantamento e redação feitos pelo autor; dados conferidos nas telas públicas do portal, nas lojas de aplicativos, no CTB e na ISO/IEC 25010:2023. Limitação da Entrega 1: campos que dependem de login serão conferidos na Fase 3. |
 | **Pedro Druck** | Claude Sonnet 5.5 | Apoio na estruturação da matriz de priorização de características e síntese da família ISO/IEC 25000 | Verificação dos textos oficiais das metas dos ODS (ONU/IBGE) e conferência pontual das subcaracterísticas presentes na versão ISO/IEC 25010:2023. |
 | **Pedro Henrique** | Claude Sonnet 5.5 | Elaboração do rascunho dos objetivos no template GQM, formulação das hipóteses e referencial teórico GQM/PSM | Auditoria minuciosa para garantir ausência de termos de usabilidade (proibida pela professora); reestruturação das questões para eliminar métricas disfarçadas; checagem das citações bibliográficas de Basili et al. (1994) e McGarry et al. (2002); validação de consistência dos slides em Beamer. |
@@ -37,16 +59,36 @@ A Tabela abaixo documenta pormenorizadamente a ferramenta empregada, a finalidad
 
 *Versão 1.0 — 18/10/2026 — Documento de conformidade da equipe KATHERINE JOHNSON.*
 
-## Complemento da Fase 3 — 13/11/2026
+## 4. Histórico dos registros da Entrega 2
+
+As situações e pendências descritas abaixo correspondem às datas de cada registro.
+
+### Heitor — registros de acompanhamento e coleta
+
+Claude Code (Claude Opus 5.5, conforme o registro individual) apoiou o levantamento de commits,
+issues e PRs, as seções da página Gestão e o slide “Antes do plano”. Em 10/11, também apoiou a
+coleta intermediária da E2, o plano PSM/CID v1.2, a transcrição da ata 03 a partir do PDF da
+retrospectiva da E1 e os slides de PSM/CID. Na primeira atividade, Heitor conferiu os valores no
+GitHub e nas atas 01 e 02. Na atualização de 10/11, conferiu os números no GitHub e aprovou as
+decisões antes da publicação.
+
+Em 16/11, o registro cita Claude Code (Claude Sonnet 5.5) como apoio às páginas da Fase 4 e da
+ação de melhoria, às descrições das imagens da Fase 3 e ao rascunho do acompanhamento PSM/CID.
+Heitor conferiu situações, prazos e responsáveis nas issues e nos PRs e revisou as descrições
+imagem a imagem. Em 22/11, a ferramenta apoiou o registro do iPhone e da execução do P6 no iOS,
+o tratamento das capturas e a estimativa de horas com base em registros datados. Heitor forneceu
+os dados da coleta e conferiu e aceitou a estimativa.
+
+### Complemento da Fase 3 — 13/11/2026
 
 Codex (OpenAI) apoiou a complementação documental da issue #46: ambiente planejado, massa justificada, cronograma, modelos CSV e síntese LaTeX, a partir da issue e dos arquivos existentes. Foram preservadas as pendências empíricas e não foram gerados resultados de coleta. A verificação técnica inclui construção da GitPage e o verificador disponível no repositório; a revisão humana por autores e revisor designado permanece pendente, assim como a validação dos instrumentos no piloto. Este registro não declara aprovação humana nem execução de sessões.
 
-## Preparação da análise da Fase 4 — 16/11/2026
+### Preparação da análise da Fase 4 — 16/11/2026
 
 Codex (OpenAI) apoiou o roteiro de análise da issue #48, os modelos de consolidação e a síntese LaTeX. As regras foram cotejadas com as Fases 1–3 e os CSV disponíveis. A revisão humana por Pedro Henrique, Philipe e Heitor permanece pendente. Resultados e conclusões aguardam a coleta da #47.
 
 
-## Fechamento documental — 22/11/2026
+### Fechamento documental — 22/11/2026
 
 Codex (OpenAI) apoiou a entrega da proposta de processo e templates da #36, a atualização do
 artigo e sua compilação, a consulta de issues/PRs e o fechamento PSM da E2. As observações S03
