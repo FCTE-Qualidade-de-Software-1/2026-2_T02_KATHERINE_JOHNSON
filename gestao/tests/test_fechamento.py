@@ -77,5 +77,23 @@ class DeclaracaoHeitorTest(unittest.TestCase):
         self.assertIn('Hugo e Heitor', fechar.contribuicao(result))
 
 
+
+class DeclaracaoAtualizadaHugoTest(unittest.TestCase):
+    def setUp(self):
+        self.snapshot = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-23-v3.json').read_text())
+
+    def test_nova_declaracao_substitui_a_anterior(self):
+        result = fechar.calcular(self.snapshot)
+        hugo = result['individuais']['Hugo']
+        self.assertEqual(hugo['estimativa_min'], 650)
+        self.assertEqual(hugo['real_min'], 865)
+        self.assertTrue(hugo['completo'])
+        # 865 (Hugo) + 660 (Heitor) + 60 (Daniel) + 60 (Pedro Druck); a declaração de 22/11 não é somada.
+        self.assertEqual(result['total_conhecido_min'], 1645)
+
+    def test_fonte_v2_permanece_historica(self):
+        v2 = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-22-v2.json').read_text())
+        self.assertEqual(fechar.calcular(v2)['individuais']['Hugo']['real_min'], 710)
+
 if __name__ == '__main__':
     unittest.main()
