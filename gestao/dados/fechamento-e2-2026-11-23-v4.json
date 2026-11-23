@@ -676,7 +676,33 @@
       "metodo_estimativa": "Rateio igual da estimativa coletiva da #49 entre Daniel e Heitor (13 h ÷ 2 = 6 h 30 min) mais a #53 (4 h): 10 h 30 min; não é rateio de horas reais.",
       "escopo": "Total individual da E2 até cerca de 12:00 de 23/11, sem distribuição declarada entre issues; substitui as 3 h já registradas na #53 e a declaração de 11 h de 22/11, nunca adiciona duas vezes. Trabalho posterior a esse horário não está incluído.",
       "completo": true
+    },
+    {
+      "integrante": "Philipe",
+      "data": "2026-11-23",
+      "fonte": "Declaração de Philipe (total de 14 h 20 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Philipe estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR.",
+      "acrescimo_min": -120,
+      "issues_estimativa": [
+        46,
+        47,
+        48
+      ],
+      "metodo_estimativa": "Rateio igual da estimativa coletiva de cada issue entre os responsáveis (#46: 11 h ÷ 2; #47: 16 h ÷ 3; #48: 11 h ÷ 2): 16 h 20 min; não é rateio de horas reais.",
+      "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
+      "completo": true
+    },
+    {
+      "integrante": "Pedro Henrique",
+      "data": "2026-11-23",
+      "fonte": "Declaração de Pedro Henrique (total de 12 h 30 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Pedro Henrique estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR.",
+      "acrescimo_min": 420,
+      "issues_estimativa": [
+        48
+      ],
+      "metodo_estimativa": "Rateio igual da estimativa coletiva da #48 entre os responsáveis (11 h ÷ 2): 5 h 30 min; não é rateio de horas reais.",
+      "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
+      "completo": true
     }
   ],
-  "declaracoes_atualizadas_em": "2026-11-23T12:00:00-03:00"
+  "declaracoes_atualizadas_em": "2026-11-23T13:30:00-03:00"
 }

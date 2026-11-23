@@ -10,7 +10,7 @@
 |---|---|---|
 | M-CP1 | 4/8 = 50,00% | Vermelho; issues fechadas [28, 46, 53, 55]. A #46 foi fechada com critérios empíricos pendentes e um dia de atraso |
 | M-RC1 | 5,00 h / 8,00 h = -37,50% | Amarelo, somente issues fechadas com horas [28, 53, 55]; não é TVE global |
-| M-RC2 | 29 h 20 min conhecidas; PCI final não apurável | Declaração total de Hugo e Heitor e registros parciais de dois integrantes; dois sem horas informadas |
+| M-RC2 | 56 h 10 min conhecidas; PCI final não apurável | Declaração total de Hugo, Heitor, Philipe e Pedro Henrique e registros parciais de dois integrantes; nenhum sem horas informadas |
 | M-DP1 | 0/13 = 0,00% | Conta PR com revisão humana; PRs sem revisão excluídos: [61]; verde não comprova revisão profunda |
 
 *Tabela 1 — Indicadores no corte. Fonte: consulta de issues e PRs e plano PSM/CID.*
@@ -25,20 +25,24 @@ Daniellira540: 2Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 
 
 | Integrante | Estimativa individual | Horas conhecidas | Alcance | Participação nas horas conhecidas |
 |---|---|---|---|---|
-| Daniel | 9 h 30 min | 1 h 00 min | Parcial | 3,41% |
-| Heitor | 10 h 30 min | 15 h 30 min | Total individual declarado | 52,84% |
-| Hugo | 10 h 50 min | 11 h 50 min | Total individual declarado | 40,34% |
-| Pedro Druck | 14 h 20 min | 1 h 00 min | Parcial | 3,41% |
-| Pedro Henrique | 5 h 30 min | Não informado | Não informado | Não apurável |
-| Philipe | 16 h 20 min | Não informado | Não informado | Não apurável |
+| Daniel | 9 h 30 min | 1 h 00 min | Parcial | 1,78% |
+| Heitor | 10 h 30 min | 15 h 30 min | Total individual declarado | 27,60% |
+| Hugo | 10 h 50 min | 11 h 50 min | Total individual declarado | 21,07% |
+| Pedro Druck | 14 h 20 min | 1 h 00 min | Parcial | 1,78% |
+| Pedro Henrique | 5 h 30 min | 12 h 30 min | Total individual declarado | 22,26% |
+| Philipe | 16 h 20 min | 14 h 20 min | Total individual declarado | 25,52% |
 
-*Tabela 2 — Contribuição parcial, sem imputar zero às lacunas. Fonte: mesma consulta e declarações de Hugo e Heitor.*
+*Tabela 2 — Contribuição parcial, sem imputar zero às lacunas. Fonte: mesma consulta e declarações de Hugo, Heitor, Philipe e Pedro Henrique.*
 
 O denominador da última coluna contém apenas as horas conhecidas; ele não é o esforço total da equipe e os percentuais não são o PCI final. A decisão de contribuição igual da E1 não foi estendida à E2.
 
 **Hugo** declarou, em 22/11/2026, o total individual de **11 h 50 min** na E2, contra 10 h 50 min estimadas (variação individual +9,23%). Fonte: Declaração do próprio Hugo nesta sessão: trabalhei 1h a mais do que o estimado na E2. Estimativa-base: Rateio igual das estimativas coletivas pelos responsáveis do planejamento; não é rateio de horas reais. Escopo: Total individual da E2, sem distribuição declarada entre issues; substitui qualquer soma parcial das mesmas atividades, nunca adiciona duas vezes.
 
 **Heitor** declarou, em 23/11/2026, o total individual de **15 h 30 min** na E2, contra 10 h 30 min estimadas (variação individual +47,62%). Fonte: Estimativa de Heitor, calculada com apoio de Claude Code a partir de registros datados (commits, PRs, revisões, comentários e horários da sessão de trabalho), agrupados em blocos; não é cronometragem. Composição: 11 h declaradas em 22/11 (até 13:15), mais cerca de 4,5 h depois disso (22/11 à noite, 0,6 h; 23/11 de 08:20 a 11:21, 3,0 h, incluindo a segunda leitura da S02, que não deixa commit; e 0,7 h até cerca de 12:00), somando 15,5 h. Valor conferido e aceito por Heitor em 23/11/2026. Estimativa-base: Rateio igual da estimativa coletiva da #49 entre Daniel e Heitor (13 h ÷ 2 = 6 h 30 min) mais a #53 (4 h): 10 h 30 min; não é rateio de horas reais. Escopo: Total individual da E2 até cerca de 12:00 de 23/11, sem distribuição declarada entre issues; substitui as 3 h já registradas na #53 e a declaração de 11 h de 22/11, nunca adiciona duas vezes. Trabalho posterior a esse horário não está incluído.
+
+**Philipe** declarou, em 23/11/2026, o total individual de **14 h 20 min** na E2, contra 16 h 20 min estimadas (variação individual −12,24%). Fonte: Declaração de Philipe (total de 14 h 20 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Philipe estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR. Estimativa-base: Rateio igual da estimativa coletiva de cada issue entre os responsáveis (#46: 11 h ÷ 2; #47: 16 h ÷ 3; #48: 11 h ÷ 2): 16 h 20 min; não é rateio de horas reais. Escopo: Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.
+
+**Pedro Henrique** declarou, em 23/11/2026, o total individual de **12 h 30 min** na E2, contra 5 h 30 min estimadas (variação individual +127,27%). Fonte: Declaração de Pedro Henrique (total de 12 h 30 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Pedro Henrique estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR. Estimativa-base: Rateio igual da estimativa coletiva da #48 entre os responsáveis (11 h ÷ 2): 5 h 30 min; não é rateio de horas reais. Escopo: Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.
 
 O planejamento no corpo da #46 identifica Hugo e Philipe, embora a lista de assignees da API contenha só Hugo. Usou-se o planejamento explícito para ratear estimativas, coerente com a tabela histórica de horas. Estimativas individuais fracionárias são mantidas sem arredondamento no cálculo; a exibição em minutos arredonda apenas ao final.
 
@@ -47,7 +51,7 @@ O planejamento no corpo da #46 identifica Hugo e Philipe, embora a lista de assi
 | Evidência | Encaminhamento documentado | Responsável designado | Estado |
 |---|---|---|---|
 | ICM abaixo de 70%; coleta/análise atrasadas | Priorizar conferência de S03 e registrar limitações antes da integração da análise | Equipe da #47; Heitor revisa #48 | Proposta para confirmação no PR |
-| Esforço individual incompleto | Registrar totais individuais e atribuição por issue, conciliando totais sem duplicidade | Cada integrante; Daniel consolida | Hugo e Heitor declararam total; demais declarações pendentes |
+| Esforço individual incompleto | Registrar totais individuais e atribuição por issue, conciliando totais sem duplicidade | Cada integrante; Daniel consolida | Hugo, Heitor, Philipe e Pedro Henrique declararam total; demais declarações pendentes |
 | Tabela de contribuição ainda era da E1 | Substituir pelo retrato parcial E2; publicar final somente após todas as declarações | Integrador da #49 | Atualizada nesta branch |
 | Relato de falha no aplicativo | Entregar proposta de processo, ficha e matriz de regressão da #36 | Revisão designada a Daniel | Artefato entregue; revisão e eficácia pendentes |
 | Coleta final prevista para 21/11 sem registro | Apurar em 22/11 com data real, fontes e reprodução local | Consolidação desta entrega | Realizada; sem simular reunião da equipe |
@@ -58,7 +62,7 @@ Esses encaminhamentos são propostas documentadas nesta revisão, não delibera�
 
 ## Fontes e reprodução
 
-- [Consulta datada e declarações individuais](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/dados/fechamento-e2-2026-11-23-v3.json).
+- [Consulta datada e declarações individuais](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/dados/fechamento-e2-2026-11-23-v4.json).
 - [Cálculo e testes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/gestao/scripts).
 - [Planejamento e histórico](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/plano-psm.md).
 

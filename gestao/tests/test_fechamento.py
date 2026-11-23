@@ -77,9 +77,9 @@ class DeclaracaoHeitorTest(unittest.TestCase):
         self.assertIn('Hugo e Heitor', fechar.contribuicao(result))
 
 
-class DeclaracaoHeitorV3Test(unittest.TestCase):
+class DeclaracoesV4Test(unittest.TestCase):
     def setUp(self):
-        self.snapshot = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-23-v3.json').read_text())
+        self.snapshot = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-23-v4.json').read_text())
 
     def test_total_de_15h30_substitui_a_declaracao_de_11h(self):
         result = fechar.calcular(self.snapshot)
@@ -87,9 +87,18 @@ class DeclaracaoHeitorV3Test(unittest.TestCase):
         self.assertEqual(heitor['estimativa_min'], 630)
         self.assertEqual(heitor['real_min'], 930)
         self.assertTrue(heitor['completo'])
-        # 710 (Hugo) + 930 (Heitor) + 60 (Daniel) + 60 (Pedro Druck); a declaração de 22/11 não é somada de novo.
-        self.assertEqual(result['total_conhecido_min'], 1760)
+        # 710 (Hugo) + 930 (Heitor) + 860 (Philipe) + 750 (Pedro Henrique) + 60 (Daniel) + 60 (Pedro Druck).
+        self.assertEqual(result['total_conhecido_min'], 3370)
         self.assertFalse(result['pci_completo'])
+
+    def test_philipe_e_pedro_henrique_declararam_o_total(self):
+        ind = fechar.calcular(self.snapshot)['individuais']
+        self.assertEqual(ind['Philipe']['estimativa_min'], 980)
+        self.assertEqual(ind['Philipe']['real_min'], 860)
+        self.assertEqual(ind['Pedro Henrique']['estimativa_min'], 330)
+        self.assertEqual(ind['Pedro Henrique']['real_min'], 750)
+        self.assertTrue(ind['Philipe']['completo'] and ind['Pedro Henrique']['completo'])
+        self.assertFalse(ind['Daniel']['completo'] or ind['Pedro Druck']['completo'])
 
     def test_versao_anterior_permanece_como_historico(self):
         anterior = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-22-v2.json').read_text())
@@ -97,7 +106,7 @@ class DeclaracaoHeitorV3Test(unittest.TestCase):
 
     def test_contribuicao_soma_100_do_informado(self):
         result = fechar.calcular(self.snapshot)
-        self.assertIn('52,84', fechar.contribuicao(result).replace('\\%', ''))
+        self.assertIn('27,60', fechar.contribuicao(result).replace('\\%', ''))
 
 
 if __name__ == '__main__':

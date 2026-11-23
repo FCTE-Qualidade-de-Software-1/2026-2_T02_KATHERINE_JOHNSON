@@ -31,40 +31,40 @@
       "estimativa_min": 570.0,
       "real_min": 60.0,
       "completo": false,
-      "percentual_conhecido": 3.409090909090909
+      "percentual_conhecido": 1.7804154302670623
     },
     "Heitor": {
       "estimativa_min": 630.0,
       "real_min": 930.0,
       "completo": true,
-      "percentual_conhecido": 52.84090909090909
+      "percentual_conhecido": 27.596439169139465
     },
     "Hugo": {
       "estimativa_min": 650.0,
       "real_min": 710.0,
       "completo": true,
-      "percentual_conhecido": 40.34090909090909
+      "percentual_conhecido": 21.068249258160236
     },
     "Pedro Druck": {
       "estimativa_min": 860.0,
       "real_min": 60.0,
       "completo": false,
-      "percentual_conhecido": 3.409090909090909
+      "percentual_conhecido": 1.7804154302670623
     },
     "Pedro Henrique": {
       "estimativa_min": 330.0,
-      "real_min": null,
-      "completo": false,
-      "percentual_conhecido": null
+      "real_min": 750.0,
+      "completo": true,
+      "percentual_conhecido": 22.255192878338278
     },
     "Philipe": {
       "estimativa_min": 980.0,
-      "real_min": null,
-      "completo": false,
-      "percentual_conhecido": null
+      "real_min": 860.0,
+      "completo": true,
+      "percentual_conhecido": 25.519287833827892
     }
   },
-  "total_conhecido_min": 1760.0,
+  "total_conhecido_min": 3370.0,
   "pci_completo": false,
   "declaracoes": [
     {
@@ -86,6 +86,26 @@
       "base_min": 630.0,
       "acrescimo_min": 300,
       "total_min": 930.0
+    },
+    {
+      "integrante": "Philipe",
+      "data": "2026-11-23",
+      "fonte": "Declaração de Philipe (total de 14 h 20 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Philipe estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR.",
+      "metodo_estimativa": "Rateio igual da estimativa coletiva de cada issue entre os responsáveis (#46: 11 h ÷ 2; #47: 16 h ÷ 3; #48: 11 h ÷ 2): 16 h 20 min; não é rateio de horas reais.",
+      "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
+      "base_min": 980.0,
+      "acrescimo_min": -120,
+      "total_min": 860.0
+    },
+    {
+      "integrante": "Pedro Henrique",
+      "data": "2026-11-23",
+      "fonte": "Declaração de Pedro Henrique (total de 12 h 30 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Pedro Henrique estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR.",
+      "metodo_estimativa": "Rateio igual da estimativa coletiva da #48 entre os responsáveis (11 h ÷ 2): 5 h 30 min; não é rateio de horas reais.",
+      "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
+      "base_min": 330.0,
+      "acrescimo_min": 420,
+      "total_min": 750.0
     }
   ],
   "retrabalho": {
