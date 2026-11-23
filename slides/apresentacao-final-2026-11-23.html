@@ -7,630 +7,683 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!--
+    Gerar o PDF (16:9, leve: sem sombras, máscaras nem gradientes repetidos na impressão):
+      google-chrome --headless --no-pdf-header-footer --virtual-time-budget=8000 \
+        --print-to-pdf=slides/apresentacao-final-2026-11-23.pdf slides/apresentacao-final-2026-11-23.html
+  -->
 
   <style>
     :root {
-      --bg: #1C1B20;
-      --bg-soft: #23222A;
-      --surface: #2A2933;
-      --surface-2: #312F3D;
-      --text: #F5F7FB;
-      --text-soft: #B8BCC8;
-      --line: rgba(255,255,255,0.10);
+      --bg: #F5F6F9;
+      --surface: #FFFFFF;
+      --surface-2: #F0F2F6;
+      --text: #14161D;
+      --text-soft: #545B6C;
+      --text-faint: #8A90A0;
+      --line: #E1E4EB;
+      --line-strong: #CDD2DC;
 
-      --accent: #28C2C4;
-      --accent-2: #B0AFFA;
-      --accent-3: #7BE7E8;
+      --accent: #0A7C7E;
+      --accent-ink: #075E60;
+      --accent-tint: #E6F4F4;
+      --accent-line: #A9D6D6;
+      --accent-2: #5550C8;
+      --accent-2-tint: #EEEDFB;
+      --accent-2-line: #C7C4F1;
+      --lane: #E2A400;
+      --lane-tint: #FDF4DC;
 
-      --success: #6EE7B7;
-      --warning: #F6C177;
-      --danger: #FF7B9C;
+      --success: #1B8A56;
+      --success-tint: #E5F4EC;
+      --warning: #B07000;
+      --danger: #C23B63;
 
-      --shadow-soft: 0 10px 30px rgba(0,0,0,0.25);
-      --shadow-glow: 0 0 0 1px rgba(40,194,196,0.16), 0 0 32px rgba(40,194,196,0.12);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 22px;
 
-      --radius-sm: 12px;
-      --radius-md: 20px;
-      --radius-lg: 24px;
-      --radius-xl: 28px;
+      --fs-display: clamp(52px, 6vw, 112px);
+      --fs-h2: clamp(30px, 3.3vw, 62px);
+      --fs-h3: clamp(18px, 1.6vw, 31px);
+      --fs-body-lg: clamp(16px, 1.35vw, 27px);
+      --fs-body: clamp(14px, 1.15vw, 22px);
+      --fs-small: clamp(12px, 0.95vw, 18px);
+      --fs-mono: clamp(10px, 0.8vw, 15px);
 
-      --fs-display: clamp(52px, 6.4vw, 104px);
-      --fs-h2: clamp(28px, 3.3vw, 54px);
-      --fs-h3: clamp(19px, 1.75vw, 30px);
-      --fs-body-lg: clamp(16px, 1.35vw, 24px);
-      --fs-body: clamp(14px, 1.08vw, 20px);
-      --fs-small: clamp(12px, 0.85vw, 15px);
-      --fs-mono: clamp(11px, 0.78vw, 14px);
-
-      --container-pad-y: clamp(36px, 4.4vh, 56px);
-      --container-pad-x: clamp(40px, 4.4vw, 80px);
-      --content-max: 1480px;
+      --pad-x: clamp(40px, 4.6vw, 88px);
+      --content-max: 1520px;
+      --gap: clamp(14px, 1.3vw, 24px);
 
       --anim-duration: 0.7s;
       --anim-ease: cubic-bezier(.2,.7,.2,1);
     }
 
     * { box-sizing: border-box; }
-
-    html {
-      scroll-snap-type: y mandatory;
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
     body {
       margin: 0;
-      background: #17161B;
+      background: var(--bg);
       color: var(--text);
       font-family: "Chakra Petch", sans-serif;
       overflow-x: hidden;
     }
+    h1, h2, h3, p, ul, ol, dl, dd, blockquote { margin: 0; }
+    strong { color: var(--text); font-weight: 600; }
 
-    .presentation { position: relative; }
-
+    /* ---------- Estrutura do slide ---------- */
     .slide {
       position: relative;
       height: 100vh;
-      min-height: 100vh;
       width: 100%;
       scroll-snap-align: start;
       scroll-snap-stop: always;
-      display: grid;
       overflow: hidden;
-      isolation: isolate;
-      background:
-        radial-gradient(circle at 18% 18%, rgba(176,175,250,0.10), transparent 32%),
-        radial-gradient(circle at 82% 28%, rgba(40,194,196,0.10), transparent 30%),
-        linear-gradient(180deg, #1C1B20 0%, #17161B 100%);
+      background: var(--bg);
     }
-
-    .slide::before {
+    /* Faixa lateral: a marcação de via, assinatura visual do deck. */
+    .slide::after {
       content: "";
       position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background:
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-      background-size: 56px 56px;
-      mask-image: radial-gradient(circle at center, black 45%, transparent 100%);
-      opacity: 0.3;
-      z-index: 0;
+      top: 0; bottom: 0; left: 0;
+      width: 6px;
+      background: var(--accent);
     }
 
-    /* Faixa tracejada: a marcação de via que divide Portal e aplicativo. */
-    .lane {
-      height: 4px;
-      width: 100%;
-      background: repeating-linear-gradient(90deg, var(--warning) 0 28px, transparent 28px 52px);
-      opacity: 0.85;
-      border-radius: 2px;
+    .chrome {
+      position: absolute;
+      top: clamp(18px, 2.6vh, 32px);
+      left: var(--pad-x);
+      right: var(--pad-x);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 3;
     }
-    .lane-v {
-      width: 4px;
-      align-self: stretch;
-      background: repeating-linear-gradient(180deg, var(--warning) 0 22px, transparent 22px 40px);
-      opacity: 0.8;
-      border-radius: 2px;
+    .presenter {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 16px 7px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: var(--fs-mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-soft);
     }
+    .presenter b {
+      display: inline-grid;
+      place-items: center;
+      min-width: 26px;
+      height: 26px;
+      padding: 0 6px;
+      border-radius: 999px;
+      background: var(--accent-2);
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .presenter span { color: var(--accent-2); font-weight: 700; }
+    .meta {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: var(--fs-mono);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+    }
+    .meta strong { color: var(--text); font-weight: 700; }
 
     .slide-inner {
       position: relative;
       z-index: 1;
-      height: 100vh;
-      width: min(100%, calc(var(--content-max) + (var(--container-pad-x) * 2)));
+      height: 100%;
+      width: min(100%, calc(var(--content-max) + var(--pad-x) * 2));
       margin: 0 auto;
-      padding: calc(var(--container-pad-y) + 18px) var(--container-pad-x) var(--container-pad-y);
+      padding: clamp(84px, 11vh, 120px) var(--pad-x) clamp(76px, 10vh, 110px);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: clamp(16px, 2.6vh, 30px);
+      gap: clamp(16px, 2.6vh, 32px);
     }
 
-    .slide-counter {
+    /* Trilha de progresso por bloco do roteiro (montada pelo script). */
+    .track {
       position: absolute;
-      top: 26px;
-      right: 40px;
-      font-family: "JetBrains Mono", monospace;
-      font-size: var(--fs-mono);
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--text-soft);
+      left: var(--pad-x);
+      right: var(--pad-x);
+      bottom: clamp(18px, 2.8vh, 34px);
+      display: flex;
+      gap: 6px;
       z-index: 3;
     }
+    .track div {
+      flex: var(--w) 1 0;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: clamp(9px, 0.68vw, 13px);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      padding-top: 8px;
+      border-top: 3px solid var(--line);
+    }
+    .track div.done { border-top-color: var(--accent-line); }
+    .track div.on { border-top-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
 
-    .presenter {
-      position: absolute;
-      top: 20px;
-      left: var(--container-pad-x);
+    /* ---------- Tipografia ---------- */
+    .kicker {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 7px 14px 7px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(176,175,250,0.28);
-      background: rgba(176,175,250,0.08);
-      font-family: "JetBrains Mono", monospace;
+      font-family: "IBM Plex Mono", monospace;
       font-size: var(--fs-mono);
-      letter-spacing: 0.08em;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--text);
-      z-index: 3;
+      color: var(--accent);
     }
-    .presenter::before {
+    .kicker::before {
       content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--accent-2);
-      box-shadow: 0 0 12px rgba(176,175,250,0.7);
+      width: 22px;
+      height: 4px;
+      background: var(--lane);
+      border-radius: 2px;
     }
-    .presenter span { color: var(--accent-2); }
-
+    h1 { font-size: var(--fs-display); line-height: 0.95; letter-spacing: -0.035em; }
+    h2 { font-size: var(--fs-h2); line-height: 1.04; letter-spacing: -0.025em; max-width: 30ch; }
+    h3 { font-size: var(--fs-h3); line-height: 1.14; letter-spacing: -0.012em; }
+    p, li, dd { font-size: var(--fs-body); line-height: 1.42; color: var(--text-soft); }
+    .lead { font-size: var(--fs-body-lg); line-height: 1.4; color: var(--text-soft); max-width: 62ch; }
+    .hl { color: var(--accent); }
+    .hl-2 { color: var(--accent-2); }
+    .ok { color: var(--success); }
     .mono {
-      font-family: "JetBrains Mono", monospace;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: var(--fs-mono);
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
-
-    .eyebrow {
+    .note {
+      font-family: "IBM Plex Mono", monospace;
       font-size: var(--fs-mono);
-      color: var(--accent);
-    }
-
-    .subtitle {
-      max-width: 62ch;
-      font-size: var(--fs-body-lg);
-      line-height: 1.4;
       color: var(--text-soft);
-      margin: 0;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
     }
+    .head { display: flex; flex-direction: column; gap: 12px; }
 
-    h1, h2, h3, p, blockquote, ul, ol { margin: 0; }
-
-    h1 {
-      font-size: var(--fs-display);
-      line-height: 0.95;
-      letter-spacing: -0.03em;
-      max-width: 14ch;
-    }
-
-    h2 {
-      font-size: var(--fs-h2);
-      line-height: 1.05;
-      letter-spacing: -0.025em;
-      max-width: 26ch;
-    }
-
-    h3 {
-      font-size: var(--fs-h3);
-      line-height: 1.12;
-      letter-spacing: -0.015em;
-    }
-
-    p, li {
-      font-size: var(--fs-body);
-      line-height: 1.42;
-      color: var(--text-soft);
-    }
-
-    .accent-text {
-      color: var(--accent);
-      text-shadow: 0 0 24px rgba(40,194,196,0.22);
-    }
-    .accent-2-text { color: var(--accent-2); }
-    .warn-text { color: var(--warning); }
-    .ok-text { color: var(--success); }
-    .bad-text { color: var(--danger); }
-
-    .section-heading {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      max-width: 1100px;
-    }
-
-    .hero-badge {
-      align-self: flex-start;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(40,194,196,0.25);
-      background: rgba(40,194,196,0.08);
-      box-shadow: var(--shadow-glow);
-      color: var(--text);
-      font-size: var(--fs-mono);
-      font-family: "JetBrains Mono", monospace;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .pill {
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.03);
-      font-family: "JetBrains Mono", monospace;
-      font-size: var(--fs-mono);
-      letter-spacing: 0.06em;
-      color: var(--text);
-    }
-    .pill.accent {
-      border-color: rgba(40,194,196,0.35);
-      background: rgba(40,194,196,0.08);
-    }
-
-    .card-grid, .stats-grid {
-      display: grid;
-      gap: clamp(14px, 1.4vw, 22px);
-    }
-    .cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-
-    .card, .stat-card, .comparison-col {
-      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-soft);
-    }
+    /* ---------- Blocos ---------- */
+    .grid { display: grid; gap: var(--gap); }
+    .c2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .c3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .c4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .card {
-      padding: clamp(16px, 1.6vw, 26px);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: clamp(16px, 1.6vw, 28px);
       display: flex;
       flex-direction: column;
       gap: 10px;
+      box-shadow: 0 1px 2px rgba(20,22,29,0.04), 0 8px 24px rgba(20,22,29,0.05);
     }
-    .card--accent {
-      border-color: rgba(40,194,196,0.32);
-      box-shadow: var(--shadow-glow);
-    }
-    .card--violet {
-      border-color: rgba(176,175,250,0.30);
-      box-shadow: 0 0 0 1px rgba(176,175,250,0.12), 0 0 30px rgba(176,175,250,0.10);
-    }
+    .card.teal { background: var(--accent-tint); border-color: var(--accent-line); }
+    .card.violet { background: var(--accent-2-tint); border-color: var(--accent-2-line); }
+    .card.top-teal { border-top: 5px solid var(--accent); }
+    .card.top-violet { border-top: 5px solid var(--accent-2); }
+    .card.top-lane { border-top: 5px solid var(--lane); }
 
-    .card-label, .stat-label {
-      font-family: "JetBrains Mono", monospace;
+    .label {
+      font-family: "IBM Plex Mono", monospace;
       font-size: var(--fs-mono);
-      text-transform: uppercase;
+      font-weight: 700;
       letter-spacing: 0.1em;
+      text-transform: uppercase;
       color: var(--accent);
     }
-    .card-label.violet { color: var(--accent-2); }
+    .label.v { color: var(--accent-2); }
+    .label.n { color: var(--text-faint); }
 
-    .card-meta {
-      margin-top: auto;
-      font-family: "JetBrains Mono", monospace;
+    .big {
+      font-size: clamp(42px, 4.8vw, 96px);
+      font-weight: 600;
+      line-height: 0.9;
+      letter-spacing: -0.045em;
+      color: var(--text);
+    }
+    .big small { font-size: 0.42em; font-weight: 500; color: var(--text-soft); letter-spacing: -0.01em; }
+    .big.teal { color: var(--accent); }
+    .big.violet { color: var(--accent-2); }
+
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      padding: 7px 13px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      font-family: "IBM Plex Mono", monospace;
       font-size: var(--fs-mono);
+      letter-spacing: 0.03em;
       color: var(--text-soft);
-      letter-spacing: 0.04em;
     }
+    .chip.teal { background: var(--accent-tint); border-color: var(--accent-line); color: var(--accent-ink); font-weight: 700; }
+    .chip.violet { background: var(--accent-2-tint); border-color: var(--accent-2-line); color: var(--accent-2); font-weight: 700; }
 
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-      gap: clamp(16px, 1.8vw, 28px);
-      align-items: stretch;
-    }
-    .comparison-col {
-      padding: clamp(20px, 1.9vw, 30px);
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .comparison-col.accent {
-      border-color: rgba(40,194,196,0.3);
-      box-shadow: var(--shadow-glow);
-    }
-    .comparison-col ul {
-      padding: 0;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .comparison-col li {
-      padding-left: 22px;
-      position: relative;
-    }
-    .comparison-col li::before {
-      content: "";
+    .ticks { list-style: none; padding: 0; display: grid; gap: 10px; }
+    .ticks li { position: relative; padding-left: 30px; }
+    .ticks li::before {
+      content: "✓";
       position: absolute;
       left: 0;
-      top: 0.62em;
-      width: 9px;
-      height: 2px;
-      background: var(--accent);
-    }
-    .comparison-col.violet li::before { background: var(--accent-2); }
-
-    .statement {
-      max-width: 22ch;
-      font-size: clamp(34px, 4.4vw, 76px);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      color: var(--text);
-    }
-
-    /* Estatísticas */
-    .stats-grid .stat-card {
-      padding: clamp(20px, 1.8vw, 30px);
-      min-height: clamp(160px, 24vh, 260px);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      gap: 8px;
-    }
-    .stat-value {
-      font-size: clamp(40px, 5vw, 92px);
-      line-height: 0.92;
-      letter-spacing: -0.04em;
-      color: var(--text);
-      font-weight: 600;
-    }
-    .stat-value small {
-      font-size: 0.45em;
-      letter-spacing: -0.01em;
-      color: var(--text-soft);
-      font-weight: 500;
-    }
-    .stat-card.accent {
-      border-color: rgba(40,194,196,0.32);
-      box-shadow: var(--shadow-glow);
-    }
-    .stat-card.accent .stat-value { color: var(--accent); }
-
-    /* Diagrama */
-    .diagram {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: clamp(18px, 2vw, 30px);
-    }
-    .diagram-node {
-      padding: clamp(18px, 1.7vw, 26px);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(255,255,255,0.08);
-      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      position: relative;
-    }
-    .diagram-node:not(:last-child)::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: calc(-1 * clamp(18px, 2vw, 30px));
-      width: clamp(18px, 2vw, 30px);
-      height: 1px;
-      background: linear-gradient(90deg, rgba(40,194,196,0.5), rgba(176,175,250,0.5));
-    }
-    .diagram-node .big-num {
-      font-family: "JetBrains Mono", monospace;
-      font-size: clamp(28px, 2.6vw, 44px);
-      color: var(--accent);
-      line-height: 1;
-    }
-
-    /* Linha do tempo */
-    .timeline {
-      display: grid;
-      gap: clamp(10px, 1.6vh, 18px);
-    }
-    .timeline-item {
-      display: grid;
-      grid-template-columns: clamp(110px, 9vw, 150px) 22px 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-    .timeline-when {
-      font-family: "JetBrains Mono", monospace;
-      font-size: var(--fs-mono);
-      color: var(--accent);
-      letter-spacing: 0.08em;
-      padding-top: 6px;
-      text-transform: uppercase;
-    }
-    .timeline-dot {
-      width: 14px;
-      height: 14px;
+      top: 0.1em;
+      width: 20px;
+      height: 20px;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 0 6px rgba(40,194,196,0.08);
-      margin-top: 7px;
-    }
-    .timeline-copy {
-      padding-bottom: clamp(8px, 1.4vh, 14px);
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    /* Etapas */
-    .steps-list {
+      background: var(--success-tint);
+      color: var(--success);
+      font-size: 13px;
+      font-weight: 700;
       display: grid;
-      gap: 0;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    .step {
-      display: grid;
-      grid-template-columns: clamp(56px, 5vw, 80px) minmax(0, 1fr) minmax(0, 1.2fr);
-      gap: 20px;
-      align-items: baseline;
-      padding: clamp(12px, 1.9vh, 20px) 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .step-num {
-      font-family: "JetBrains Mono", monospace;
-      color: var(--accent);
-      font-size: clamp(16px, 1.5vw, 24px);
-    }
-
-    /* Duelo Portal × aplicativo */
-    .duel {
-      display: grid;
-      gap: clamp(10px, 1.5vh, 16px);
-    }
-    .duel-head, .duel-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) 4px minmax(0, 1fr);
-      gap: 24px;
-      align-items: center;
-    }
-    .duel-head {
-      font-family: "JetBrains Mono", monospace;
-      font-size: var(--fs-mono);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
-    .duel-row {
-      padding: clamp(14px, 2vh, 22px) clamp(18px, 1.6vw, 26px);
-      border-radius: var(--radius-lg);
-      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .duel-val {
-      font-size: clamp(28px, 3vw, 52px);
-      font-weight: 600;
-      letter-spacing: -0.03em;
+      place-items: center;
       line-height: 1;
     }
-    .duel-val.portal { color: var(--accent); }
-    .duel-val.app { color: var(--accent-2); }
-    .duel-val small {
-      font-size: 0.42em;
-      color: var(--text-soft);
-      font-weight: 500;
-      letter-spacing: 0;
+    .ticks.v li::before { background: var(--accent-2-tint); color: var(--accent-2); content: "↻"; }
+
+    .lane-h {
+      height: 0;
+      border-top: 5px dashed var(--lane);
     }
 
-    /* Escada de níveis */
-    .ladder { display: grid; gap: 10px; }
-    .ladder-row {
+    /* ---------- Capa ---------- */
+    .cover {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 16px;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: clamp(24px, 3vw, 64px);
       align-items: center;
-      padding: clamp(10px, 1.5vh, 16px) 18px;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.03);
     }
-    .ladder-row strong {
-      font-size: var(--fs-body-lg);
-      color: var(--text);
-    }
-    .ladder-row .mono { font-size: var(--fs-mono); }
-    .ladder-row.l1 { border-left: 4px solid var(--success); }
-    .ladder-row.l2 { border-left: 4px solid var(--accent); }
-    .ladder-row.l3 { border-left: 4px solid var(--warning); }
-    .ladder-row.l4 { border-left: 4px solid var(--danger); }
-
-    /* Pares obstáculo → tratamento */
-    .pairs { display: grid; gap: clamp(8px, 1.3vh, 14px); }
-    .pair {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1.25fr);
-      gap: 16px;
-      align-items: center;
-      padding: clamp(12px, 1.7vh, 18px) 22px;
-      border-radius: var(--radius-md);
-      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .pair .from { color: var(--text); font-size: var(--fs-body); font-weight: 600; }
-    .pair .arrow {
-      height: 2px;
-      background: linear-gradient(90deg, var(--warning), var(--accent));
-      position: relative;
-    }
-    .pair .arrow::after {
-      content: "";
-      position: absolute;
-      right: -2px;
-      top: -4px;
-      border-left: 8px solid var(--accent);
-      border-top: 5px solid transparent;
-      border-bottom: 5px solid transparent;
-    }
-    .pair .to { font-size: var(--fs-body); color: var(--text-soft); }
-
-    /* Relatos */
-    .relato-head {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 24px;
-    }
-    .relato-role {
-      font-family: "JetBrains Mono", monospace;
+    .cover .badge {
+      align-self: flex-start;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: var(--accent-tint);
+      border: 1px solid var(--accent-line);
+      color: var(--accent-ink);
+      font-family: "IBM Plex Mono", monospace;
       font-size: var(--fs-mono);
-      color: var(--text-soft);
-      letter-spacing: 0.06em;
-      text-align: right;
-      max-width: 40ch;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
-    .relato-grid .card h3 { font-size: clamp(17px, 1.45vw, 26px); color: var(--text); }
-
-    .footnote {
-      font-family: "JetBrains Mono", monospace;
-      font-size: var(--fs-mono);
-      color: var(--text-soft);
-      letter-spacing: 0.04em;
-    }
-
-    .team-grid {
+    .cover-art svg { width: 100%; height: auto; display: block; max-height: 62vh; }
+    .team {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px 28px;
-      max-width: 1100px;
+      gap: 12px 22px;
     }
-    .team-grid div {
-      font-size: var(--fs-body);
-      color: var(--text);
-      padding: 8px 0;
-      border-top: 1px solid var(--line);
+    .person { display: flex; gap: 10px; align-items: center; }
+    .avatar {
+      flex: none;
+      width: clamp(32px, 2.4vw, 46px);
+      height: clamp(32px, 2.4vw, 46px);
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: clamp(11px, 0.85vw, 16px);
+      font-weight: 700;
+      color: #fff;
+      background: var(--accent);
     }
-    .team-grid span {
+    .avatar.v { background: var(--accent-2); }
+    .avatar.y { background: var(--lane); color: var(--text); }
+    .person div { font-size: var(--fs-small); color: var(--text); font-weight: 600; line-height: 1.2; }
+    .person span {
       display: block;
-      font-family: "JetBrains Mono", monospace;
+      font-family: "IBM Plex Mono", monospace;
       font-size: var(--fs-mono);
+      font-weight: 400;
       color: var(--text-soft);
-      letter-spacing: 0.06em;
-      margin-top: 2px;
+      letter-spacing: 0.02em;
     }
 
-    /* Animação */
+    /* ---------- Jornada desde o PC2 ---------- */
+    .journey {
+      display: grid;
+      grid-template-columns: auto 1fr auto 1fr auto;
+      align-items: center;
+      gap: 18px;
+      padding: clamp(16px, 2vh, 24px) clamp(18px, 1.6vw, 28px);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+    }
+    .stop { display: flex; align-items: center; gap: 12px; }
+    .stop .dot {
+      width: 22px; height: 22px; border-radius: 999px;
+      border: 4px solid var(--line-strong);
+      background: var(--surface);
+      flex: none;
+    }
+    .stop .dot.full { border-color: var(--accent); background: var(--accent); }
+    .stop .dot.mid { border-color: var(--lane); background: var(--lane); }
+    .stop p { font-size: var(--fs-small); line-height: 1.3; }
+    .stop p strong { display: block; font-size: var(--fs-body); }
+    .sessions { display: flex; gap: 8px; justify-content: center; }
+    .sessions span {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: var(--fs-mono);
+      font-weight: 700;
+      color: var(--accent-ink);
+      background: var(--accent-tint);
+      border: 1px solid var(--accent-line);
+      border-radius: 8px;
+      padding: 5px 8px;
+    }
+
+    .stat { justify-content: flex-end; min-height: clamp(150px, 22vh, 250px); }
+
+    /* ---------- Fases ---------- */
+    .phases { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; }
+    .phase {
+      position: relative;
+      padding: clamp(18px, 1.7vw, 28px) clamp(26px, 2.4vw, 44px) clamp(18px, 1.7vw, 28px) clamp(18px, 1.7vw, 28px);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%, 26px 50%);
+      margin-right: -14px;
+      padding-left: clamp(36px, 2.8vw, 52px);
+    }
+    .phase:first-child { clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%); padding-left: clamp(18px, 1.7vw, 28px); border-radius: var(--radius-lg) 0 0 var(--radius-lg); }
+    .phase:nth-child(even) { background: var(--surface-2); }
+    .phase:last-child { background: var(--accent-tint); }
+    .phase .n { font-family: "IBM Plex Mono", monospace; font-size: clamp(24px, 2.2vw, 40px); font-weight: 700; color: var(--accent); line-height: 1; }
+    .phase .who { font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); color: var(--accent-2); font-weight: 700; margin-top: auto; padding-top: 8px; }
+    .phase p { font-size: var(--fs-small); }
+
+    .agenda { display: flex; gap: 6px; }
+    .agenda div {
+      flex: var(--w) 1 0;
+      padding: 12px 12px 10px;
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      font-size: var(--fs-small);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    .agenda div:nth-child(even) { border-left-color: var(--accent-2); }
+    .agenda span { display: block; font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); color: var(--text-soft); font-weight: 400; margin-bottom: 4px; }
+
+    /* ---------- Dois canais ---------- */
+    .versus {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      gap: var(--gap);
+      align-items: stretch;
+    }
+    .versus .mid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .versus .mid .lane-v { flex: 1; border-left: 5px dashed var(--lane); }
+    .versus .mid .eq {
+      width: clamp(44px, 3.4vw, 64px);
+      height: clamp(44px, 3.4vw, 64px);
+      border-radius: 999px;
+      background: var(--lane);
+      color: var(--text);
+      font-weight: 700;
+      font-size: clamp(20px, 1.6vw, 30px);
+      display: grid;
+      place-items: center;
+    }
+    .channel { flex-direction: row; gap: clamp(14px, 1.4vw, 24px); align-items: flex-start; }
+    .channel svg { flex: none; width: clamp(56px, 5vw, 96px); height: auto; }
+    .channel .body { display: flex; flex-direction: column; gap: 8px; }
+
+    /* ---------- Barras ---------- */
+    .bars { display: grid; gap: clamp(8px, 1.3vh, 14px); position: relative; }
+    .bar-row {
+      display: grid;
+      grid-template-columns: clamp(170px, 15vw, 290px) minmax(0, 1fr) clamp(70px, 6vw, 110px);
+      gap: 16px;
+      align-items: center;
+    }
+    .bar-row .name { font-size: var(--fs-body); font-weight: 600; color: var(--text); line-height: 1.15; }
+    .bar-row .name small { display: block; font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); font-weight: 400; color: var(--text-faint); letter-spacing: 0.04em; }
+    .bar-track { position: relative; height: clamp(22px, 3.2vh, 36px); background: var(--surface-2); border-radius: 8px; }
+    .bar-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 8px; background: var(--accent); }
+    .bar-fill.v { background: var(--accent-2); }
+    .bar-fill.n { background: var(--line-strong); }
+    .bar-row .val { font-size: clamp(22px, 2vw, 38px); font-weight: 600; letter-spacing: -0.03em; text-align: right; }
+    .bar-row.out .name, .bar-row.out .val { color: var(--text-faint); }
+    .cut {
+      position: absolute;
+      top: -8px;
+      bottom: -8px;
+      border-left: 3px dashed var(--lane);
+    }
+    .cut span {
+      position: absolute;
+      top: -26px;
+      left: 8px;
+      white-space: nowrap;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: var(--fs-mono);
+      font-weight: 700;
+      color: var(--warning);
+    }
+
+    /* ---------- GQM ---------- */
+    .gqm-count { display: flex; align-items: baseline; gap: clamp(12px, 1.2vw, 24px); }
+    .gqm-count .big { font-size: clamp(40px, 4vw, 80px); }
+    .gqm-count .arrow { font-size: clamp(22px, 2vw, 40px); color: var(--lane); font-weight: 700; }
+    .gqm-count .big small { margin-left: 6px; }
+    .q-list { display: grid; gap: 8px; }
+    .q {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: baseline;
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      background: var(--surface-2);
+      font-size: var(--fs-small);
+      color: var(--text);
+    }
+    .q b { font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); color: var(--accent); }
+    .m-dots { display: flex; gap: 5px; margin-top: auto; padding-top: 6px; align-items: center; }
+    .m-dots i { width: 14px; height: 14px; border-radius: 4px; background: var(--accent); display: block; }
+    .m-dots span { margin-left: 8px; font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); color: var(--text-soft); }
+
+    /* ---------- Escala de níveis ---------- */
+    .scale { display: grid; grid-template-columns: 3fr 2fr 3fr 2fr; gap: 4px; }
+    .zone { padding: 14px 14px 12px; border-radius: 8px; color: #fff; display: flex; flex-direction: column; gap: 2px; }
+    .zone strong { color: inherit; font-size: var(--fs-body); }
+    .zone span { font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); opacity: 0.92; }
+    .z1 { background: var(--success); }
+    .z2 { background: var(--accent); }
+    .z3 { background: #D99A1E; color: var(--text); }
+    .z4 { background: var(--danger); }
+    .scale-axis { display: grid; grid-template-columns: 3fr 2fr 3fr 2fr; font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); color: var(--text-faint); }
+    .scale-axis span { border-left: 1px solid var(--line-strong); padding-left: 6px; }
+    .rules { display: grid; gap: 0; }
+    .rule { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: baseline; padding: clamp(9px, 1.4vh, 14px) 0; border-bottom: 1px solid var(--line); }
+    .rule:last-child { border-bottom: none; }
+    .rule b { font-family: "IBM Plex Mono", monospace; font-size: clamp(14px, 1.2vw, 22px); color: var(--accent); }
+
+    /* ---------- Plano e coleta ---------- */
+    .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .tile { padding: 14px 16px; border-radius: var(--radius-md); background: var(--surface-2); display: flex; flex-direction: column; gap: 4px; }
+    .tile .k { font-size: clamp(28px, 2.6vw, 50px); font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: var(--accent); }
+    .tile p { font-size: var(--fs-small); line-height: 1.3; }
+    .tl { display: grid; gap: 0; }
+    .tl-item { display: grid; grid-template-columns: clamp(78px, 6vw, 110px) 26px 1fr; gap: 12px; align-items: start; }
+    .tl-item .when { font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); font-weight: 700; color: var(--accent); padding-top: 3px; }
+    .tl-item .rail { position: relative; align-self: stretch; display: flex; justify-content: center; }
+    .tl-item .rail::before { content: ""; position: absolute; top: 0; bottom: 0; border-left: 2px solid var(--accent-line); }
+    .tl-item:first-child .rail::before { top: 8px; }
+    .tl-item:last-child .rail::before { bottom: auto; height: 8px; }
+    .tl-item .rail i { position: relative; width: 14px; height: 14px; margin-top: 5px; border-radius: 999px; background: var(--accent); border: 3px solid var(--accent-tint); display: block; }
+    .tl-item p { font-size: var(--fs-small); padding-bottom: clamp(9px, 1.5vh, 16px); }
+
+    /* ---------- Paridade de campos ---------- */
+    .fields { display: grid; grid-template-columns: repeat(9, 1fr); gap: 8px; }
+    .fields i { aspect-ratio: 1; border-radius: 8px; background: var(--accent); display: block; }
+    .fields i.gap { background: var(--surface); border: 3px dashed var(--accent-2); }
+    .legend { display: flex; gap: 18px; flex-wrap: wrap; }
+    .legend span { display: inline-flex; align-items: center; gap: 8px; font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); color: var(--text-soft); }
+    .legend i { width: 14px; height: 14px; border-radius: 4px; background: var(--accent); display: inline-block; }
+    .legend i.gap { background: var(--surface); border: 2px dashed var(--accent-2); }
+    .legend i.v { background: var(--accent-2); }
+    .legend i.f { background: var(--surface); border: 2px solid var(--line-strong); border-radius: 999px; }
+    .legend i.s { background: var(--success); border-radius: 999px; }
+
+    /* ---------- Tempo contra a faixa Excelente ---------- */
+    .speed { display: grid; gap: clamp(8px, 1.6vh, 22px); }
+    .speed-row { display: grid; grid-template-columns: clamp(190px, 16vw, 300px) minmax(0, 1fr); gap: 20px; align-items: center; }
+    .speed-row h3 { font-size: var(--fs-body-lg); }
+    .speed-row h3 small { display: block; font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); font-weight: 400; color: var(--text-faint); letter-spacing: 0.04em; }
+    .lanes { display: grid; gap: 6px; }
+    .lane-bar { display: grid; grid-template-columns: minmax(0, 1fr) clamp(80px, 6.6vw, 124px); gap: 14px; align-items: center; }
+    .lane-bar .track3 { position: relative; height: clamp(20px, 2.8vh, 32px); border-radius: 8px; background: var(--success-tint); }
+    .lane-bar .track3 .bar-fill { border-radius: 8px; }
+    .lane-bar .v3 { font-size: clamp(20px, 1.8vw, 34px); font-weight: 600; letter-spacing: -0.03em; }
+    .lane-bar .v3 small { font-size: 0.5em; color: var(--text-soft); font-weight: 500; }
+    .axis3 { display: grid; grid-template-columns: clamp(190px, 16vw, 300px) minmax(0, 1fr); gap: 20px; }
+    .axis3 > div { display: grid; grid-template-columns: minmax(0, 1fr) clamp(80px, 6.6vw, 124px); gap: 14px; }
+    .axis3 .ax { display: flex; justify-content: space-between; font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); color: var(--text-faint); border-top: 2px solid var(--success); padding-top: 6px; }
+    .axis3 .ax b { color: var(--success); }
+
+    /* ---------- Matriz de tentativas ---------- */
+    .runs { display: grid; gap: clamp(8px, 1.3vh, 13px); }
+    .run { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 14px; align-items: center; }
+    .run .what { font-size: var(--fs-small); color: var(--text); font-weight: 600; line-height: 1.2; }
+    .run .what small { display: block; font-weight: 400; color: var(--text-faint); font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); }
+    .pips { display: flex; gap: 5px; }
+    .pips i { width: clamp(12px, 0.95vw, 18px); height: clamp(12px, 0.95vw, 18px); border-radius: 999px; background: var(--success); display: block; }
+    .pips i.f { background: var(--surface); border: 2px solid var(--line-strong); }
+    .pips i.v { background: var(--accent-2); }
+    .run .score { font-family: "IBM Plex Mono", monospace; font-size: var(--fs-small); font-weight: 700; color: var(--success); min-width: 4.2em; text-align: right; }
+    .panel-total { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+    .panel-total .big { font-size: clamp(34px, 3.2vw, 62px); }
+
+    /* ---------- Resultado → decisão ---------- */
+    .flow { display: grid; gap: 12px; }
+    .flow-row { display: grid; grid-template-columns: minmax(0, 1fr) 54px minmax(0, 1fr); align-items: center; gap: 0; }
+    .flow-row .card { padding: clamp(14px, 1.3vw, 22px) clamp(16px, 1.5vw, 26px); flex-direction: row; align-items: center; gap: 16px; }
+    .flow-row .tag { flex: none; font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); font-weight: 700; padding: 6px 10px; border-radius: 8px; background: var(--accent); color: #fff; }
+    .flow-row .tag.v { background: var(--accent-2); }
+    .flow-row .card div p { font-size: var(--fs-small); }
+    .flow-row .card div h3 { font-size: var(--fs-body-lg); }
+    .connector { height: 0; border-top: 4px dashed var(--lane); position: relative; margin: 0 6px; }
+    .connector::after { content: ""; position: absolute; right: -4px; top: -9px; border-left: 12px solid var(--lane); border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+
+    /* ---------- Melhoria ---------- */
+    .process { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); }
+    .process .card { position: relative; }
+    .process .card .n { font-family: "IBM Plex Mono", monospace; font-size: clamp(22px, 2vw, 36px); font-weight: 700; color: var(--accent); line-height: 1; }
+    .process .card p { font-size: var(--fs-small); }
+    .before-after { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: var(--gap); align-items: center; }
+    .ba { display: flex; align-items: center; gap: 22px; }
+    .ba .pips i { width: clamp(22px, 2vw, 38px); height: clamp(22px, 2vw, 38px); }
+    .ba .arrow-big { font-size: clamp(30px, 3vw, 56px); color: var(--lane); font-weight: 700; }
+
+    /* ---------- Obstáculo → solução ---------- */
+    .pairs { display: grid; gap: clamp(10px, 1.5vh, 16px); }
+    .pair { display: grid; grid-template-columns: minmax(0, 0.85fr) 60px minmax(0, 1.4fr); align-items: stretch; }
+    .pair .from, .pair .to { padding: clamp(12px, 1.8vh, 20px) 20px; border-radius: var(--radius-md); display: flex; align-items: center; gap: 12px; font-size: var(--fs-body); }
+    .pair .from { background: var(--surface-2); color: var(--text-soft); }
+    .pair .to { background: var(--surface); border: 1px solid var(--accent-line); color: var(--text); font-weight: 600; }
+    .pair .to::before { content: "✓"; flex: none; width: 26px; height: 26px; border-radius: 999px; background: var(--success); color: #fff; display: grid; place-items: center; font-size: 15px; }
+    .pair .mid { display: flex; align-items: center; padding: 0 6px; }
+    .pair .mid .connector { flex: 1; }
+
+    /* ---------- Gestão ---------- */
+    .kpi { display: flex; align-items: baseline; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+    .kpi .big { font-size: clamp(34px, 3.2vw, 62px); }
+    .kpi p { font-size: var(--fs-small); line-height: 1.3; }
+    .commit { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: baseline; padding: clamp(9px, 1.5vh, 15px) 0; border-bottom: 1px solid var(--line); }
+    .commit:last-child { border-bottom: none; }
+    .commit b { font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); font-weight: 700; color: #fff; background: var(--success); padding: 4px 8px; border-radius: 6px; }
+    .commit p { font-size: var(--fs-small); }
+
+    .chain { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; }
+    .chain div {
+      position: relative;
+      padding: clamp(14px, 1.8vh, 20px) 18px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+      font-size: var(--fs-body-lg);
+      font-weight: 600;
+    }
+    .chain div:first-child { border-radius: var(--radius-md) 0 0 var(--radius-md); }
+    .chain div:last-child { border-radius: 0 var(--radius-md) var(--radius-md) 0; background: var(--accent); color: #fff; border-color: var(--accent); }
+    .chain div + div { border-left: none; }
+    .chain div:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px; height: 28px;
+      border-radius: 999px;
+      background: var(--lane);
+      color: var(--text);
+      font-size: 16px;
+      display: grid;
+      place-items: center;
+      z-index: 2;
+    }
+    .chain small { display: block; font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); font-weight: 400; color: var(--text-faint); margin-top: 2px; }
+    .chain div:last-child small { color: #D4ECEC; }
+    .statement { font-size: clamp(34px, 4vw, 74px); font-weight: 600; line-height: 1.04; letter-spacing: -0.03em; max-width: 22ch; }
+
+    /* ---------- Relatos ---------- */
+    .relato { gap: 14px; }
+    .relato .who { display: flex; align-items: center; gap: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+    .relato .who .avatar { width: clamp(44px, 3.4vw, 64px); height: clamp(44px, 3.4vw, 64px); font-size: clamp(14px, 1.1vw, 21px); }
+    .relato .name { font-size: clamp(18px, 1.45vw, 27px); font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; }
+    .relato .role { font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); color: var(--accent-2); line-height: 1.35; margin-top: 3px; }
+    .relato dl { display: grid; gap: clamp(8px, 1.2vh, 12px); }
+    .relato dt { font-family: "IBM Plex Mono", monospace; font-size: var(--fs-mono); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+    .relato dd { font-size: var(--fs-small); line-height: 1.35; color: var(--text); margin-top: 2px; }
+
+    /* ---------- Encerramento ---------- */
+    .recap { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); overflow: hidden; }
+    .recap div { padding: clamp(14px, 2vh, 24px) clamp(14px, 1.3vw, 24px); display: flex; flex-direction: column; gap: 6px; }
+    .recap div + div { border-left: 1px solid var(--line); }
+    .recap .big { font-size: clamp(34px, 3.4vw, 66px); color: var(--accent); }
+    .recap p { font-size: var(--fs-small); }
+
+    /* ---------- Animação ---------- */
     .animate {
       opacity: 0;
       transform: translateY(18px);
-      transition:
-        opacity var(--anim-duration) var(--anim-ease),
-        transform var(--anim-duration) var(--anim-ease);
-      will-change: opacity, transform;
+      transition: opacity var(--anim-duration) var(--anim-ease), transform var(--anim-duration) var(--anim-ease);
     }
-    .animate.in { opacity: 1; transform: translateY(0); }
+    .animate.in { opacity: 1; transform: none; }
     .delay-1 { transition-delay: 80ms; }
     .delay-2 { transition-delay: 180ms; }
     .delay-3 { transition-delay: 280ms; }
     .delay-4 { transition-delay: 380ms; }
     .delay-5 { transition-delay: 480ms; }
+    .grow { transform-origin: left center; }
+    .animate.grow { transform: scaleX(0.2); }
+    .animate.grow.in { transform: none; }
 
     .dot-nav {
       position: fixed;
@@ -643,30 +696,25 @@
       z-index: 100;
     }
     .dot-nav button {
-      width: 9px;
-      height: 9px;
+      width: 9px; height: 9px;
       border-radius: 999px;
       border: none;
       padding: 0;
-      background: rgba(255,255,255,0.22);
+      background: var(--line-strong);
       cursor: pointer;
-      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
-    .dot-nav button.active {
-      background: var(--accent);
-      box-shadow: 0 0 0 5px rgba(40,194,196,0.14);
-      transform: scale(1.15);
-    }
+    .dot-nav button.active { background: var(--accent); transform: scale(1.35); }
 
-    /* PDF: um slide por página 16:9, sem animação nem navegação. */
+    /* PDF: um slide por página 16:9, plano (sem sombras nem animação) para abrir rápido. */
     @page { size: 1920px 1080px; margin: 0; }
     @media print {
       html { scroll-snap-type: none; }
       body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .slide, .slide-inner { height: 1080px; min-height: 1080px; }
-      .slide { break-after: page; page-break-after: always; }
+      .slide { height: 1080px; break-after: page; page-break-after: always; }
       .animate { opacity: 1 !important; transform: none !important; transition: none !important; }
       .dot-nav { display: none; }
+      *, *::before, *::after { box-shadow: none !important; text-shadow: none !important; }
     }
   </style>
 </head>
@@ -675,624 +723,612 @@
 
   <main class="presentation">
 
-    <!-- 01 · Título -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Daniel</span></div>
+    <!-- 01 · Capa -->
+    <section class="slide" data-sec="0">
+      <div class="chrome"><div class="presenter"><b>DL</b>Apresenta <span>Daniel</span></div><div class="meta"><strong>01</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">01 / 29</div>
-        <div class="hero">
-          <div class="hero-badge animate delay-1">Qualidade de Software 1 · T02 · Entrega final</div>
-          <div class="eyebrow mono animate delay-2">Equipe Katherine Johnson</div>
-          <h1 class="animate delay-3">Portal <span class="accent-text">×</span> Aplicativo</h1>
-          <p class="subtitle animate delay-4">Avaliação comparativa da consulta de infrações do Detran-DF, com ISO/IEC 25040 e GQM.</p>
-          <div class="lane animate delay-4" style="max-width: 520px;"></div>
-        </div>
-        <div class="team-grid animate delay-5">
-          <div>Daniel de Oliveira Lira<span>Gestão e metodologia</span></div>
-          <div>Heitor Macedo Ricardo<span>Propósito, GitPage e PSM</span></div>
-          <div>Hugo Freitas Silva<span>Produto, plano e coleta</span></div>
-          <div>Pedro Druck Montalvão Reis<span>Priorização e melhoria</span></div>
-          <div>Pedro Henrique Ferreira Xavier<span>GQM e análise</span></div>
-          <div>Philipe Amâncio Reis Caetano<span>Métricas e instrumentos</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 02 · Roteiro -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Daniel</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">02 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Roteiro · 20 minutos</div>
-          <h2 class="animate delay-2">Seis vozes, <span class="accent-text">uma avaliação</span></h2>
-        </div>
-        <div class="timeline animate delay-3">
-          <div class="timeline-item"><div class="timeline-when">2 min</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>Abertura, virada e método</h3><p>Daniel</p></div></div>
-          <div class="timeline-item"><div class="timeline-when">2,5 min</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>Fase 1 · Requisitos da avaliação</h3><p>Heitor e Pedro Druck</p></div></div>
-          <div class="timeline-item"><div class="timeline-when">2 min</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>Fase 2 · GQM, níveis e julgamento</h3><p>Pedro Henrique e Philipe</p></div></div>
-          <div class="timeline-item"><div class="timeline-when">6 min</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>Fases 3 e 4 · Plano, resultados e melhoria</h3><p>Hugo, Pedro Henrique, Philipe, Pedro Druck e Heitor</p></div></div>
-          <div class="timeline-item"><div class="timeline-when">2,5 min</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>Gestão do projeto</h3><p>Daniel</p></div></div>
-          <div class="timeline-item"><div class="timeline-when">5 min</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>Relatos individuais</h3><p>Os seis integrantes</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 03 · Virada desde o PC2 -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Daniel</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">03 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Desde o PC2 · 16/11</div>
-          <h2 class="animate delay-2">Do plano no papel à <span class="accent-text">coleta completa</span></h2>
-          <p class="subtitle animate delay-3">No ponto de controle, a Fase 3 estava pronta, mas nenhum dado havia sido coletado. Uma semana depois, os sete procedimentos tinham registros.</p>
-        </div>
-        <div class="stats-grid cols-4">
-          <div class="stat-card accent animate delay-2"><div class="stat-label">Registros brutos</div><div class="stat-value">0<small> → </small>299</div><p>Nenhuma linha de dados em 16/11</p></div>
-          <div class="stat-card animate delay-3"><div class="stat-label">Sessões de coleta</div><div class="stat-value">6</div><p>S01, S02, S03, S05, S06 e S08, de 21 a 23/11</p></div>
-          <div class="stat-card animate delay-4"><div class="stat-label">Procedimentos</div><div class="stat-value">7<small>/7</small></div><p>P1 a P7 executados com evidência</p></div>
-          <div class="stat-card animate delay-5"><div class="stat-label">Desvios documentados</div><div class="stat-value">27</div><p>Nada descartado em silêncio</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 04 · Método -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Daniel</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">04 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Método</div>
-          <h2 class="animate delay-2">ISO/IEC 25040 em <span class="accent-text">quatro fases</span></h2>
-        </div>
-        <div class="diagram">
-          <div class="diagram-node animate delay-1"><div class="big-num">01</div><h3>Requisitos</h3><p>Produto, propósito, partes interessadas e características priorizadas</p></div>
-          <div class="diagram-node animate delay-2"><div class="big-num">02</div><h3>Especificação</h3><p>GQM: 3 objetivos, 7 questões e 14 métricas com níveis</p></div>
-          <div class="diagram-node animate delay-3"><div class="big-num">03</div><h3>Planejamento</h3><p>7 procedimentos, 6 contextos, 3 redes e instrumentos</p></div>
-          <div class="diagram-node animate delay-4" style="border-color: rgba(40,194,196,0.32); box-shadow: var(--shadow-glow);"><div class="big-num">04</div><h3>Execução</h3><p>Coleta, cálculo, julgamento, problemas e melhoria</p></div>
-        </div>
-        <div class="pill-row animate delay-5">
-          <span class="pill accent">Gestão PSM/CID em paralelo</span>
-          <span class="pill">4 indicadores</span>
-          <span class="pill">Coletas semanais</span>
-          <span class="pill">Issue → branch → PR revisado</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 05 · Fase 1: produto e propósito -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Heitor</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">05 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 1 · Produto e propósito</div>
-          <h2 class="animate delay-2">Um serviço, <span class="accent-text">dois canais</span></h2>
-          <p class="subtitle animate delay-3">Propósito: verificar se os dois canais entregam a mesma consulta, com a mesma qualidade.</p>
-        </div>
-        <div class="comparison-grid">
-          <div class="comparison-col accent animate delay-2">
-            <div class="card-label">Canal web</div>
-            <h3>Portal de Serviços</h3>
-            <ul>
-              <li>Aplicação web no navegador</li>
-              <li>Computador e celular</li>
-              <li>Lista em tabela, detalhe pela seta</li>
-              <li>Login pelo gov.br</li>
-            </ul>
+        <div class="cover">
+          <div class="head" style="gap: clamp(14px, 2.2vh, 24px);">
+            <div class="badge animate delay-1">Qualidade de Software 1 · T02 · Entrega final</div>
+            <div class="kicker animate delay-2">Equipe Katherine Johnson</div>
+            <h1 class="animate delay-3">Portal <span class="hl">×</span><br>Aplicativo</h1>
+            <p class="lead animate delay-4">Avaliação comparativa da consulta de infrações do Detran-DF, com ISO/IEC 25040 e GQM.</p>
+            <div class="team animate delay-5" style="margin-top: clamp(8px, 1.6vh, 18px);">
+              <div class="person"><div class="avatar">DL</div><div>Daniel Lira<span>Gestão e metodologia</span></div></div>
+              <div class="person"><div class="avatar v">HM</div><div>Heitor Macedo<span>Propósito e GitPage</span></div></div>
+              <div class="person"><div class="avatar y">HF</div><div>Hugo Freitas<span>Plano e coleta</span></div></div>
+              <div class="person"><div class="avatar v">PD</div><div>Pedro Druck<span>Priorização e melhoria</span></div></div>
+              <div class="person"><div class="avatar y">PH</div><div>Pedro Henrique<span>GQM e análise</span></div></div>
+              <div class="person"><div class="avatar">PC</div><div>Philipe Caetano<span>Métricas e instrumentos</span></div></div>
+            </div>
           </div>
-          <div class="lane-v animate delay-3"></div>
-          <div class="comparison-col violet animate delay-4">
-            <div class="card-label violet">Canal móvel</div>
-            <h3>Aplicativo DETRAN-DF</h3>
-            <ul>
-              <li>Android e iOS, versões 2.7.x</li>
-              <li>Mesma família de APIs do Detran-DF</li>
-              <li>Lista em cartões, abaixo do filtro</li>
-              <li>Navegação por abas</li>
-            </ul>
+          <div class="cover-art animate delay-3" aria-hidden="true">
+            <svg viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg">
+              <!-- Janela do Portal -->
+              <rect x="10" y="40" width="380" height="270" rx="22" fill="#FFFFFF" stroke="#CDD2DC" stroke-width="2"/>
+              <rect x="10" y="40" width="380" height="46" rx="22" fill="#E6F4F4"/>
+              <rect x="10" y="70" width="380" height="16" fill="#E6F4F4"/>
+              <circle cx="40" cy="63" r="7" fill="#0A7C7E"/><circle cx="62" cy="63" r="7" fill="#A9D6D6"/><circle cx="84" cy="63" r="7" fill="#A9D6D6"/>
+              <rect x="110" y="55" width="250" height="16" rx="8" fill="#FFFFFF"/>
+              <rect x="40" y="110" width="320" height="30" rx="8" fill="#0A7C7E"/>
+              <rect x="40" y="152" width="320" height="26" rx="6" fill="#F0F2F6"/>
+              <rect x="40" y="188" width="320" height="26" rx="6" fill="#F0F2F6"/>
+              <rect x="40" y="224" width="320" height="26" rx="6" fill="#F0F2F6"/>
+              <rect x="56" y="161" width="120" height="8" rx="4" fill="#8A90A0"/><rect x="250" y="161" width="90" height="8" rx="4" fill="#A9D6D6"/>
+              <rect x="56" y="197" width="150" height="8" rx="4" fill="#8A90A0"/><rect x="250" y="197" width="90" height="8" rx="4" fill="#A9D6D6"/>
+              <rect x="56" y="233" width="100" height="8" rx="4" fill="#8A90A0"/><rect x="250" y="233" width="90" height="8" rx="4" fill="#A9D6D6"/>
+              <text x="40" y="290" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="700" fill="#0A7C7E" letter-spacing="2">PORTAL DE SERVIÇOS</text>
+              <!-- Aplicativo -->
+              <rect x="430" y="150" width="190" height="350" rx="30" fill="#FFFFFF" stroke="#CDD2DC" stroke-width="2"/>
+              <rect x="495" y="166" width="60" height="8" rx="4" fill="#CDD2DC"/>
+              <rect x="450" y="192" width="150" height="40" rx="10" fill="#5550C8"/>
+              <rect x="450" y="246" width="150" height="62" rx="12" fill="#EEEDFB"/>
+              <rect x="450" y="318" width="150" height="62" rx="12" fill="#EEEDFB"/>
+              <rect x="464" y="262" width="90" height="8" rx="4" fill="#8A90A0"/><rect x="464" y="282" width="60" height="8" rx="4" fill="#C7C4F1"/>
+              <rect x="464" y="334" width="100" height="8" rx="4" fill="#8A90A0"/><rect x="464" y="354" width="60" height="8" rx="4" fill="#C7C4F1"/>
+              <text x="450" y="420" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="700" fill="#5550C8" letter-spacing="2">APLICATIVO</text>
+              <rect x="450" y="440" width="150" height="34" rx="10" fill="#F0F2F6"/>
+              <!-- Via entre os canais -->
+              <path d="M 200 330 C 200 430, 300 470, 425 470" fill="none" stroke="#E2A400" stroke-width="7" stroke-dasharray="20 14" stroke-linecap="round"/>
+              <circle cx="200" cy="420" r="34" fill="#1B8A56"/>
+              <path d="M 184 420 L 196 432 L 218 408" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 06 · Fase 1: decisões e escopo -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Heitor</span></div>
+    <!-- 02 · Desde o PC2 -->
+    <section class="slide" data-sec="0">
+      <div class="chrome"><div class="presenter"><b>DL</b>Apresenta <span>Daniel</span></div><div class="meta"><strong>02</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">06 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 1 · Partes interessadas e escopo</div>
-          <h2 class="animate delay-2">Quem decide e <span class="accent-text">o que decide</span></h2>
+        <div class="head">
+          <div class="kicker animate delay-1">A virada desde o PC2</div>
+          <h2 class="animate delay-2">Em uma semana, do plano no papel à <span class="hl">coleta executada</span></h2>
         </div>
-        <div class="card-grid cols-4">
-          <article class="card animate delay-1"><div class="card-label">D1 · Requisitante</div><h3>Onde investir primeiro</h3><p>Qual canal e qual característica melhorar antes.</p></article>
-          <article class="card animate delay-2"><div class="card-label">D2 · Equipe de TI</div><h3>Divergências a corrigir</h3><p>Dados diferentes entre os canais e sua urgência.</p></article>
-          <article class="card animate delay-3"><div class="card-label">D3 · Atendimento</div><h3>Canal a recomendar</h3><p>Por dispositivo e por rede, para o cidadão.</p></article>
-          <article class="card animate delay-4"><div class="card-label">D4 · Equipe de TI</div><h3>Contextos com suporte</h3><p>Sistemas, navegadores e redes que precisam funcionar.</p></article>
+        <div class="journey animate delay-3">
+          <div class="stop"><div class="dot"></div><p><strong>16/11 · PC2</strong>Fase 3 pronta, coleta por fazer</p></div>
+          <div class="lane-h"></div>
+          <div class="stop"><div class="dot mid"></div><div><div class="sessions"><span>S01</span><span>S02</span><span>S03</span><span>S05</span><span>S06</span><span>S08</span></div><p style="margin-top:6px; text-align:center;">6 sessões em 21 e 22/11</p></div></div>
+          <div class="lane-h"></div>
+          <div class="stop"><div class="dot full"></div><p><strong>Coleta executada</strong>P1 a P7, em primeira leitura</p></div>
         </div>
-        <div class="pill-row animate delay-5">
-          <span class="pill accent">Escopo: consulta de infrações, da lista ao detalhe</span>
-          <span class="pill">Avaliação em caixa-preta</span>
-          <span class="pill">Fora: pagamento, usabilidade e código-fonte</span>
+        <div class="grid c4">
+          <div class="card teal stat animate delay-2"><div class="label">Registros brutos</div><div class="big teal">320</div><p>Linhas nos CSVs de medição, partindo do zero</p></div>
+          <div class="card stat animate delay-3"><div class="label">Sessões de coleta</div><div class="big">6</div><p>Nos dois canais, com gravação de tela</p></div>
+          <div class="card stat animate delay-4"><div class="label">Procedimentos</div><div class="big">7<small>/7</small></div><p>Executados; faltam app na rede degradada e CT04</p></div>
+          <div class="card stat animate delay-5"><div class="label">Desvios documentados</div><div class="big">30</div><p>Cada ajuste registrado e rastreável</p></div>
         </div>
       </div>
     </section>
 
-    <!-- 07 · Fase 1: priorização -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Pedro Druck</span></div>
+    <!-- 03 · Método e roteiro -->
+    <section class="slide" data-sec="0">
+      <div class="chrome"><div class="presenter"><b>DL</b>Apresenta <span>Daniel</span></div><div class="meta"><strong>03</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">07 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 1 · Características priorizadas</div>
-          <h2 class="animate delay-2">Três características, <span class="accent-text">escolhidas por critério</span></h2>
-          <p class="subtitle animate delay-3">Matriz com cinco critérios ponderados sobre a ISO/IEC 25010. Confiabilidade (29) e compatibilidade (21) ficaram fora; flexibilidade exigiria código-fonte.</p>
+        <div class="head">
+          <div class="kicker animate delay-1">Método · ISO/IEC 25040</div>
+          <h2 class="animate delay-2">Quatro fases, <span class="hl">seis vozes</span></h2>
         </div>
-        <div class="stats-grid cols-3">
-          <div class="stat-card accent animate delay-2"><div class="stat-label">Adequação funcional</div><div class="stat-value">52</div><p>Completude, consistência e fluxo da consulta</p></div>
-          <div class="stat-card animate delay-3"><div class="stat-label">Cobertura de contexto</div><div class="stat-value">45</div><p>Plataformas, navegadores e redes</p></div>
-          <div class="stat-card animate delay-4"><div class="stat-label">Eficiência de desempenho</div><div class="stat-value">41</div><p>Tempo de resposta e volume de dados</p></div>
+        <div class="phases animate delay-3">
+          <div class="phase"><div class="n">01</div><h3>Requisitos</h3><p>Produto, propósito, partes interessadas e características priorizadas</p><div class="who">Heitor · Pedro Druck</div></div>
+          <div class="phase"><div class="n">02</div><h3>Especificação</h3><p>GQM com 3 objetivos, 7 questões e 14 métricas com níveis</p><div class="who">Pedro Henrique · Philipe</div></div>
+          <div class="phase"><div class="n">03</div><h3>Planejamento</h3><p>7 procedimentos, 6 contextos, 3 redes e instrumentos</p><div class="who">Hugo</div></div>
+          <div class="phase"><div class="n">04</div><h3>Execução</h3><p>Coleta, resultados, decisões e melhoria entregue</p><div class="who">Todos</div></div>
+        </div>
+        <div class="head animate delay-4" style="gap: 10px;">
+          <div class="label n">Roteiro · 20 minutos</div>
+          <div class="agenda">
+            <div style="--w:2.5"><span>2,5 min</span>Abertura</div>
+            <div style="--w:2"><span>2 min</span>Fase 1</div>
+            <div style="--w:2"><span>2 min</span>Fase 2</div>
+            <div style="--w:6.5"><span>6,5 min</span>Fases 3 e 4 · plano, resultados e melhoria</div>
+            <div style="--w:2.5"><span>2,5 min</span>Gestão</div>
+            <div style="--w:4.5"><span>4,5 min</span>Relatos e fechamento</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 08 · Fase 2: GQM -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Pedro Henrique</span></div>
+    <!-- 04 · Fase 1: produto, propósito e escopo -->
+    <section class="slide" data-sec="1">
+      <div class="chrome"><div class="presenter"><b>HM</b>Apresenta <span>Heitor</span></div><div class="meta"><strong>04</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">08 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 2 · Goal–Question–Metric</div>
-          <h2 class="animate delay-2">3 objetivos, 7 questões, <span class="accent-text">14 métricas</span></h2>
+        <div class="head">
+          <div class="kicker animate delay-1">Fase 1 · Produto, propósito e escopo</div>
+          <h2 class="animate delay-2">Um serviço, <span class="hl">dois canais</span>, a mesma consulta</h2>
+          <p class="lead animate delay-3">Propósito: verificar se o Portal e o aplicativo entregam a consulta de infrações com a mesma qualidade.</p>
         </div>
-        <div class="card-grid cols-3">
-          <article class="card card--accent animate delay-1"><div class="card-label">G1 · Adequação funcional</div><h3>A consulta mostra o que deve?</h3><p>Q1.1 completude · Q1.2 consistência entre canais · Q1.3 passos e telas</p><div class="card-meta">6 métricas · M1.1.1 a M1.3.2</div></article>
-          <article class="card animate delay-2"><div class="card-label">G2 · Eficiência</div><h3>Responde rápido e leve?</h3><p>Q2.1 tempo da lista e do detalhe · Q2.2 volume transferido</p><div class="card-meta">3 métricas · M2.1.1 a M2.2.1</div></article>
-          <article class="card animate delay-3"><div class="card-label">G3 · Cobertura de contexto</div><h3>Funciona em qualquer lugar?</h3><p>Q3.1 plataformas e navegadores · Q3.2 Wi-Fi, 4G e rede degradada</p><div class="card-meta">5 métricas · M3.1.1 a M3.2.3</div></article>
+        <div class="versus">
+          <div class="card channel animate delay-2">
+            <svg viewBox="0 0 96 80" aria-hidden="true"><rect x="2" y="4" width="92" height="72" rx="10" fill="#E6F4F4" stroke="#0A7C7E" stroke-width="3"/><rect x="2" y="4" width="92" height="16" rx="8" fill="#0A7C7E"/><rect x="14" y="30" width="68" height="8" rx="4" fill="#0A7C7E"/><rect x="14" y="44" width="68" height="6" rx="3" fill="#A9D6D6"/><rect x="14" y="56" width="68" height="6" rx="3" fill="#A9D6D6"/></svg>
+            <div class="body">
+              <div class="label">Canal web</div>
+              <h3>Portal de Serviços</h3>
+              <ul class="ticks"><li>Navegador no computador e no celular</li><li>Lista em tabela, detalhe pela seta</li><li>Login pelo gov.br</li></ul>
+            </div>
+          </div>
+          <div class="mid animate delay-3"><div class="lane-v"></div><div class="eq">=</div><div class="lane-v"></div></div>
+          <div class="card channel animate delay-4">
+            <svg viewBox="0 0 96 80" aria-hidden="true"><rect x="26" y="2" width="44" height="76" rx="10" fill="#EEEDFB" stroke="#5550C8" stroke-width="3"/><rect x="34" y="14" width="28" height="10" rx="3" fill="#5550C8"/><rect x="34" y="30" width="28" height="14" rx="3" fill="#C7C4F1"/><rect x="34" y="48" width="28" height="14" rx="3" fill="#C7C4F1"/></svg>
+            <div class="body">
+              <div class="label v">Canal móvel</div>
+              <h3>Aplicativo DETRAN-DF</h3>
+              <ul class="ticks"><li>Android e iOS, versões 2.7.x</li><li>Mesma família de APIs do Detran-DF</li><li>Lista em cartões, navegação por abas</li></ul>
+            </div>
+          </div>
         </div>
-        <p class="footnote animate delay-4">Uma hipótese por questão, escrita antes da coleta, para evitar ajustar a pergunta ao dado.</p>
+        <div class="grid c4 animate delay-5">
+          <div class="card top-teal" style="padding: 14px 18px; gap: 4px;"><div class="label">D1 · Requisitante</div><p>Onde investir primeiro</p></div>
+          <div class="card top-teal" style="padding: 14px 18px; gap: 4px;"><div class="label">D2 · Equipe de TI</div><p>Divergências a corrigir</p></div>
+          <div class="card top-teal" style="padding: 14px 18px; gap: 4px;"><div class="label">D3 · Atendimento</div><p>Canal a recomendar ao cidadão</p></div>
+          <div class="card top-teal" style="padding: 14px 18px; gap: 4px;"><div class="label">D4 · Equipe de TI</div><p>Contextos que precisam funcionar</p></div>
+        </div>
       </div>
     </section>
 
-    <!-- 09 · Fase 2: níveis e julgamento -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Philipe</span></div>
+    <!-- 05 · Fase 1: priorização -->
+    <section class="slide" data-sec="1">
+      <div class="chrome"><div class="presenter"><b>PD</b>Apresenta <span>Pedro Druck</span></div><div class="meta"><strong>05</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">09 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 2 · Níveis de pontuação e critérios</div>
-          <h2 class="animate delay-2">Cada métrica tem <span class="accent-text">quatro níveis</span></h2>
+        <div class="head">
+          <div class="kicker animate delay-1">Fase 1 · Características priorizadas</div>
+          <h2 class="animate delay-2">Três características, <span class="hl">escolhidas por critério</span></h2>
+          <p class="lead animate delay-3">Matriz ponderada sobre a ISO/IEC 25010, com MoSCoW: impacto no cidadão, risco, propósito comparativo, viabilidade em caixa-preta e esforço. Máximo de 55 pontos.</p>
         </div>
-        <div class="card-grid cols-2">
+        <div class="card animate delay-3" style="padding-top: clamp(34px, 4.4vh, 48px);">
+          <div class="bars">
+            <div class="cut" style="left: calc(clamp(170px, 15vw, 290px) + 16px + (100% - clamp(170px, 15vw, 290px) - clamp(70px, 6vw, 110px) - 32px) * 40 / 55);"><span>Must · 40 pontos</span></div>
+            <div class="bar-row"><div class="name">Adequação funcional<small>G1 · Must</small></div><div class="bar-track"><div class="bar-fill grow animate delay-3" style="width: calc(52 / 55 * 100%);"></div></div><div class="val hl">52</div></div>
+            <div class="bar-row"><div class="name">Cobertura de contexto<small>G3 · Must</small></div><div class="bar-track"><div class="bar-fill grow animate delay-4" style="width: calc(45 / 55 * 100%);"></div></div><div class="val hl">45</div></div>
+            <div class="bar-row"><div class="name">Eficiência de desempenho<small>G2 · Must</small></div><div class="bar-track"><div class="bar-fill grow animate delay-5" style="width: calc(41 / 55 * 100%);"></div></div><div class="val hl">41</div></div>
+            <div class="bar-row out"><div class="name">Segurança<small>Could</small></div><div class="bar-track"><div class="bar-fill n" style="width: calc(31 / 55 * 100%);"></div></div><div class="val">31</div></div>
+            <div class="bar-row out"><div class="name">Confiabilidade<small>Could</small></div><div class="bar-track"><div class="bar-fill n" style="width: calc(29 / 55 * 100%);"></div></div><div class="val">29</div></div>
+            <div class="bar-row out"><div class="name">Compatibilidade<small>Won't</small></div><div class="bar-track"><div class="bar-fill n" style="width: calc(21 / 55 * 100%);"></div></div><div class="val">21</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · Fase 2: GQM -->
+    <section class="slide" data-sec="2">
+      <div class="chrome"><div class="presenter"><b>PH</b>Apresenta <span>Pedro Henrique</span></div><div class="meta"><strong>06</strong> / 20</div></div>
+      <div class="slide-inner">
+        <div class="head">
+          <div class="kicker animate delay-1">Fase 2 · Goal–Question–Metric</div>
+          <div class="gqm-count animate delay-2">
+            <div class="big">3<small>objetivos</small></div><span class="arrow">→</span>
+            <div class="big">7<small>questões</small></div><span class="arrow">→</span>
+            <div class="big teal">14<small>métricas</small></div>
+          </div>
+        </div>
+        <div class="grid c3">
+          <article class="card top-teal animate delay-2"><div class="label">G1 · Adequação funcional</div><h3>A consulta mostra o que deve?</h3>
+            <div class="q-list"><div class="q"><b>Q1.1</b>Completude dos campos</div><div class="q"><b>Q1.2</b>Consistência entre canais</div><div class="q"><b>Q1.3</b>Passos e telas do fluxo</div></div>
+            <div class="m-dots"><i></i><i></i><i></i><i></i><i></i><i></i><span>6 métricas</span></div></article>
+          <article class="card top-violet animate delay-3"><div class="label v">G2 · Eficiência de desempenho</div><h3>Responde rápido e leve?</h3>
+            <div class="q-list"><div class="q"><b>Q2.1</b>Tempo da lista e do detalhe</div><div class="q"><b>Q2.2</b>Volume transferido</div></div>
+            <div class="m-dots"><i style="background:var(--accent-2)"></i><i style="background:var(--accent-2)"></i><i style="background:var(--accent-2)"></i><span>3 métricas</span></div></article>
+          <article class="card top-lane animate delay-4"><div class="label" style="color: var(--warning);">G3 · Cobertura de contexto</div><h3>Funciona em qualquer lugar?</h3>
+            <div class="q-list"><div class="q"><b>Q3.1</b>Plataformas e navegadores</div><div class="q"><b>Q3.2</b>Wi-Fi, 4G e rede degradada</div></div>
+            <div class="m-dots"><i style="background:var(--lane)"></i><i style="background:var(--lane)"></i><i style="background:var(--lane)"></i><i style="background:var(--lane)"></i><i style="background:var(--lane)"></i><span>5 métricas</span></div></article>
+        </div>
+        <p class="note animate delay-5">Uma hipótese por questão, escrita antes da coleta: a pergunta não se ajusta ao dado.</p>
+      </div>
+    </section>
+
+    <!-- 07 · Fase 2: níveis e julgamento -->
+    <section class="slide" data-sec="2">
+      <div class="chrome"><div class="presenter"><b>PC</b>Apresenta <span>Philipe</span></div><div class="meta"><strong>07</strong> / 20</div></div>
+      <div class="slide-inner">
+        <div class="head">
+          <div class="kicker animate delay-1">Fase 2 · Níveis de pontuação e critérios</div>
+          <h2 class="animate delay-2">Cada métrica tem <span class="hl">quatro níveis</span>, definidos antes do dado</h2>
+        </div>
+        <div class="card animate delay-3">
+          <div class="label">Exemplo · M2.1.1, tempo até a lista · faixas de Nielsen</div>
+          <div class="scale">
+            <div class="zone z1"><strong>Excelente</strong><span>até 3 s</span></div>
+            <div class="zone z2"><strong>Alvo</strong><span>3 a 5 s</span></div>
+            <div class="zone z3"><strong>Mínimo aceitável</strong><span>5 a 8 s</span></div>
+            <div class="zone z4"><strong>Inaceitável</strong><span>acima de 8 s</span></div>
+          </div>
+          <div class="scale-axis"><span>0 s</span><span>3 s</span><span>5 s</span><span>8 s</span></div>
+        </div>
+        <div class="grid c2 animate delay-4">
+          <div class="card">
+            <div class="label">Regras de julgamento</div>
+            <div class="rules">
+              <div class="rule"><b>01</b><p><strong>Questão atendida:</strong> todas as métricas no mínimo aceitável.</p></div>
+              <div class="rule"><b>02</b><p><strong>Objetivo atendido:</strong> todas as suas questões atendidas.</p></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="label v">Garantias do método</div>
+            <div class="rules">
+              <div class="rule"><b style="color: var(--accent-2);">03</b><p><strong>Sem dado:</strong> métrica inconclusiva, nunca zero nem aprovada.</p></div>
+              <div class="rule"><b style="color: var(--accent-2);">04</b><p><strong>Limites</strong> aplicados antes de arredondar.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · Fases 3 e 4: plano e coleta -->
+    <section class="slide" data-sec="3">
+      <div class="chrome"><div class="presenter"><b>HF</b>Apresenta <span>Hugo</span></div><div class="meta"><strong>08</strong> / 20</div></div>
+      <div class="slide-inner">
+        <div class="head">
+          <div class="kicker animate delay-1">Fase 3 · Plano → Fase 4 · Coleta</div>
+          <h2 class="animate delay-2">Coleta <span class="hl">reproduzível</span>, do piloto ao P7 em dois dias</h2>
+        </div>
+        <div class="grid" style="grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);">
           <div class="card animate delay-2">
-            <div class="card-label">Exemplo · M2.1.1, tempo até a lista</div>
-            <div class="ladder">
-              <div class="ladder-row l1"><strong>Excelente</strong><span class="mono">até 3 s</span></div>
-              <div class="ladder-row l2"><strong>Alvo</strong><span class="mono">&gt; 3 s e ≤ 5 s</span></div>
-              <div class="ladder-row l3"><strong>Mínimo aceitável</strong><span class="mono">&gt; 5 s e ≤ 8 s</span></div>
-              <div class="ladder-row l4"><strong>Inaceitável</strong><span class="mono">acima de 8 s</span></div>
-            </div>
-            <p class="footnote">Faixas baseadas nos limites de resposta de Nielsen.</p>
-          </div>
-          <div class="card card--accent animate delay-3">
-            <div class="card-label">Regras de julgamento</div>
-            <div class="steps-list">
-              <div class="step" style="grid-template-columns: 48px 1fr;"><div class="step-num">01</div><p><strong style="color:var(--text)">Questão atendida:</strong> todas as métricas no mínimo aceitável.</p></div>
-              <div class="step" style="grid-template-columns: 48px 1fr;"><div class="step-num">02</div><p><strong style="color:var(--text)">Objetivo atendido:</strong> todas as suas questões atendidas.</p></div>
-              <div class="step" style="grid-template-columns: 48px 1fr;"><div class="step-num">03</div><p><strong style="color:var(--text)">Sem dado:</strong> métrica inconclusiva, nunca zero nem aprovada.</p></div>
-              <div class="step" style="grid-template-columns: 48px 1fr; border-bottom: none;"><div class="step-num">04</div><p><strong style="color:var(--text)">Limites</strong> aplicados antes de arredondar.</p></div>
+            <div class="label">O plano</div>
+            <div class="tiles">
+              <div class="tile"><div class="k">7</div><p>procedimentos, com aquecimento e 10 repetições por bloco de tempo</p></div>
+              <div class="tile"><div class="k">6</div><p>contextos: 3 navegadores e o app em 3 aparelhos</p></div>
+              <div class="tile"><div class="k">3</div><p>redes: Wi-Fi, 4G e degradada (300 ms, 1 Mbit/s, 1% de perda)</p></div>
+              <div class="tile"><div class="k">8</div><p>CSVs com validador automático e consentimento dos titulares</p></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 10 · Fase 3 -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Hugo</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">10 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 3 · Planejamento da avaliação</div>
-          <h2 class="animate delay-2">Coleta <span class="accent-text">reproduzível</span>, do instrumento ao CSV</h2>
-        </div>
-        <div class="card-grid cols-3">
-          <article class="card animate delay-1"><div class="card-label">Procedimentos</div><h3>P1 a P7</h3><p>1 aquecimento e 10 repetições válidas por bloco de tempo e volume.</p></article>
-          <article class="card animate delay-2"><div class="card-label">Contextos</div><h3>6 contextos</h3><p>Chrome, Firefox e Chrome Android; app em Android de entrada, intermediário e iPhone.</p></article>
-          <article class="card animate delay-3"><div class="card-label">Redes</div><h3>Wi-Fi, 4G e degradada</h3><p>Perfil degradado com tc netem: 300 ms, 1 Mbit/s e 1% de perda.</p></article>
-          <article class="card animate delay-2"><div class="card-label">Instrumentos</div><h3>Scripts e gravação</h3><p>Tempo marcado pelos quadros do vídeo, com segunda leitura independente.</p></article>
-          <article class="card animate delay-3"><div class="card-label">Dados</div><h3>8 CSVs validados</h3><p>Validador recusa dado sem conferência, evidência ou inventário.</p></article>
-          <article class="card card--accent animate delay-4"><div class="card-label">Privacidade</div><h3>Consentimento primeiro</h3><p>Termos aplicados, códigos V1 a V4 e originais só no privado.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 11 · Fase 4: linha do tempo da coleta -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Hugo</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">11 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 4 · Evidências coletadas</div>
-          <h2 class="animate delay-2">Do piloto ao P7 em <span class="accent-text">três dias</span></h2>
-        </div>
-        <div class="timeline animate delay-3">
-          <div class="timeline-item"><div class="timeline-when">S01 · 22/11</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>Piloto nos dois canais</h3><p>8 de 11 verificações aprovadas; caminho e instrumentos validados</p></div></div>
-          <div class="timeline-item"><div class="timeline-when">S02 · 22/11</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>P1 a P3 · campos, paridade e fluxo</h3><p>Mesma infração nos dois canais, em menos de 10 minutos</p></div></div>
-          <div class="timeline-item"><div class="timeline-when">S03 · S05</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>P6 · contextos</h3><p>Chrome, Firefox, Chrome Android, app Android e iPhone</p></div></div>
-          <div class="timeline-item"><div class="timeline-when">S06 · 22/11</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>P4 e P5 · tempo e volume</h3><p>Lista, detalhe e bytes, com 10 repetições por canal</p></div></div>
-          <div class="timeline-item"><div class="timeline-when">S08 · 23/11</div><div class="timeline-dot"></div><div class="timeline-copy"><h3>P7 · redes</h3><p>Wi-Fi, 4G e rede degradada, com falhas no denominador</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 12 · Resultados G1 -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Pedro Henrique</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">12 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 4 · G1 Adequação funcional</div>
-          <h2 class="animate delay-2">Mesmos dados, <span class="accent-text">caminhos diferentes</span></h2>
-        </div>
-        <div class="stats-grid cols-4">
-          <div class="stat-card accent animate delay-1"><div class="stat-label">Campos paritários</div><div class="stat-value">16<small>/17</small></div><p>Nenhum valor divergente entre os canais</p></div>
-          <div class="stat-card animate delay-2"><div class="stat-label">Detalhe · portal × app</div><div class="stat-value">17 <small>×</small> 16</div><p>Um campo de 17 ausente só no app</p></div>
-          <div class="stat-card animate delay-3"><div class="stat-label">Passos até a lista</div><div class="stat-value">4 <small>×</small> 6</div><p>Portal × app, iguais nas 3 repetições</p></div>
-          <div class="stat-card animate delay-4"><div class="stat-label">Rolagens</div><div class="stat-value">0 <small>×</small> 2</div><p>No app, a lista fica abaixo da tela</p></div>
-        </div>
-        <p class="footnote animate delay-5">Na lista, os dois canais mostram 5 dos 15 campos de referência. S02 · primeira leitura; segunda leitura independente em andamento.</p>
-      </div>
-    </section>
-
-    <!-- 13 · Resultados G2 -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Philipe</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">13 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 4 · G2 Eficiência de desempenho</div>
-          <h2 class="animate delay-2">Tudo abaixo de <span class="accent-text">1 segundo</span> em Wi-Fi</h2>
-        </div>
-        <div class="duel">
-          <div class="duel-head animate delay-1"><span>Mediana · 10 repetições</span><span>Portal</span><span></span><span>Aplicativo</span></div>
-          <div class="duel-row animate delay-2"><h3>M2.1.1 · Tempo até a lista</h3><div class="duel-val portal">0,15<small> s</small></div><div class="lane-v"></div><div class="duel-val app">0,77<small> s</small></div></div>
-          <div class="duel-row animate delay-3"><h3>M2.1.2 · Tempo até o detalhe</h3><div class="duel-val portal">0,14<small> s</small></div><div class="lane-v"></div><div class="duel-val app">0,64<small> s</small></div></div>
-          <div class="duel-row animate delay-4"><h3>M2.2.1 · Volume da consulta</h3><div class="duel-val portal">0,011<small> MB</small></div><div class="lane-v"></div><div class="duel-val app">0,065<small> MB</small></div></div>
-        </div>
-        <p class="footnote animate delay-5">Faixa Excelente: até 3 s. S06, caso V4, primeira leitura pelos quadros do vídeo. Volume com escopos diferentes por canal: não comparamos superioridade.</p>
-      </div>
-    </section>
-
-    <!-- 14 · Resultados G3 -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Pedro Druck</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">14 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 4 · G3 Cobertura de contexto</div>
-          <h2 class="animate delay-2">A consulta chega ao fim <span class="accent-text">quase sempre</span></h2>
-        </div>
-        <div class="comparison-grid">
-          <div class="comparison-col accent animate delay-2">
-            <div class="card-label">P6 · Plataformas · até o detalhe</div>
-            <ul>
-              <li>Chrome no computador: <strong class="ok-text">6/6</strong></li>
-              <li>Firefox no computador: <strong class="ok-text">3/3</strong></li>
-              <li>Chrome no Android: <strong class="warn-text">2/3</strong>, uma sessão expirada</li>
-              <li>App Android 2.6.3: <strong class="bad-text">0/3</strong> · 2.7.0: <strong class="ok-text">3/3</strong></li>
-              <li>App no iPhone: <strong class="ok-text">3/3</strong>, em revisão</li>
-            </ul>
+          <div class="card teal animate delay-3">
+            <div class="label">A execução</div>
+            <div class="tl">
+              <div class="tl-item"><div class="when">S01</div><div class="rail"><i></i></div><p><strong>Piloto nos dois canais:</strong> caminho e instrumentos validados</p></div>
+              <div class="tl-item"><div class="when">S02</div><div class="rail"><i></i></div><p><strong>P1 a P3:</strong> campos, paridade e fluxo na mesma infração</p></div>
+              <div class="tl-item"><div class="when">S03 · S05</div><div class="rail"><i></i></div><p><strong>P6:</strong> três navegadores, app Android e iPhone</p></div>
+              <div class="tl-item"><div class="when">S06</div><div class="rail"><i></i></div><p><strong>P4 e P5:</strong> tempo e volume, 10 repetições por canal</p></div>
+              <div class="tl-item"><div class="when">S08</div><div class="rail"><i></i></div><p style="padding-bottom:0;"><strong>P7:</strong> Wi-Fi, 4G e rede degradada</p></div>
+            </div>
           </div>
-          <div class="lane-v animate delay-3"></div>
-          <div class="comparison-col violet animate delay-4">
-            <div class="card-label violet">P7 · Redes · portal e app</div>
-            <ul>
-              <li>Wi-Fi: <strong class="ok-text">10/10</strong> e <strong class="ok-text">10/10</strong></li>
-              <li>4G (LTE): <strong class="ok-text">10/10</strong> e <strong class="ok-text">10/10</strong></li>
-              <li>Degradada, portal: <strong class="warn-text">8/10</strong>, mediana 0,85 s</li>
-              <li>Degradada, app: não aplicável neste equipamento</li>
-            </ul>
+        </div>
+        <p class="note animate delay-4">Tempo marcado pelos quadros do vídeo; segunda leitura independente feita em P1 a P3 (S02) e pendente nos demais.</p>
+      </div>
+    </section>
+
+    <!-- 09 · Resultados G1 -->
+    <section class="slide" data-sec="3">
+      <div class="chrome"><div class="presenter"><b>PH</b>Apresenta <span>Pedro Henrique</span></div><div class="meta"><strong>09</strong> / 20</div></div>
+      <div class="slide-inner">
+        <div class="head">
+          <div class="kicker animate delay-1">Fase 4 · G1 Adequação funcional</div>
+          <h2 class="animate delay-2">Os dois canais mostram <span class="hl">os mesmos dados</span></h2>
+        </div>
+        <div class="grid" style="grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);">
+          <div class="card animate delay-2" style="gap: 16px;">
+            <div style="display:flex; justify-content: space-between; align-items: flex-end; gap: 16px;">
+              <div><div class="label">Campos do detalhe com paridade</div><p>Mesmo conteúdo no Portal e no app</p></div>
+              <div class="big teal">16<small>/17</small></div>
+            </div>
+            <div class="fields">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="gap"></i>
+            </div>
+            <div class="legend"><span><i></i>Campo igual nos dois canais</span><span><i class="gap"></i>Campo a incluir no app</span></div>
+          </div>
+          <div class="grid" style="grid-template-rows: 1fr 1fr;">
+            <div class="card teal animate delay-3" style="justify-content: center;"><div class="label">Valores divergentes</div><div style="display:flex; align-items: baseline; gap: 14px;"><div class="big teal">0</div><p>Nenhum valor diferente entre os canais</p></div></div>
+            <div class="card animate delay-4" style="justify-content: center;"><div class="label v">Passos até a lista · Portal × app</div><div style="display:flex; align-items: baseline; gap: 14px;"><div class="big">4 <small>×</small> 6</div><p>Estáveis nas 3 repetições</p></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 15 · Respostas e decisões -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Pedro Henrique</span></div>
+    <!-- 10 · Resultados G2 -->
+    <section class="slide" data-sec="3">
+      <div class="chrome"><div class="presenter"><b>PC</b>Apresenta <span>Philipe</span></div><div class="meta"><strong>10</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">15 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Fase 4 · Respostas e decisões</div>
-          <h2 class="animate delay-2">O que os dados <span class="accent-text">permitem concluir</span></h2>
+        <div class="head">
+          <div class="kicker animate delay-1">Fase 4 · G2 Eficiência de desempenho</div>
+          <h2 class="animate delay-2">Tudo abaixo de <span class="hl">1 segundo</span>, bem dentro da faixa Excelente</h2>
         </div>
-        <div class="card-grid cols-3">
-          <article class="card animate delay-1"><div class="card-label">G1 → D2</div><h3>Paridade nos dados</h3><p>Nenhuma divergência de valor; o app esconde um campo e exige rolagem.</p><div class="card-meta">Decisão: corrigir o campo ausente no app</div></article>
-          <article class="card card--accent animate delay-2"><div class="card-label">G2 → D3</div><h3>Dois canais rápidos</h3><p>Portal mais rápido em todas as medições; ambos na faixa mais alta.</p><div class="card-meta">Decisão: recomendar os dois em Wi-Fi e 4G</div></article>
-          <article class="card animate delay-3"><div class="card-label">G3 → D4</div><h3>Versão faz diferença</h3><p>Falha no app 2.6.3, superada na 2.7.0; portal sensível a rede ruim.</p><div class="card-meta">Decisão: regressão por versão e por rede</div></article>
+        <div class="card animate delay-3" style="gap: clamp(10px, 1.8vh, 24px);">
+          <div class="speed">
+            <div class="speed-row"><h3>Tempo até a lista<small>M2.1.1 · mediana de 10</small></h3>
+              <div class="lanes">
+                <div class="lane-bar"><div class="track3"><div class="bar-fill grow animate delay-3" style="width: calc(0.15 / 3 * 100%); min-width: 10px;"></div></div><div class="v3 hl">0,15<small> s</small></div></div>
+                <div class="lane-bar"><div class="track3"><div class="bar-fill v grow animate delay-4" style="width: calc(0.77 / 3 * 100%);"></div></div><div class="v3 hl-2">0,77<small> s</small></div></div>
+              </div>
+            </div>
+            <div class="speed-row"><h3>Tempo até o detalhe<small>M2.1.2 · mediana de 10</small></h3>
+              <div class="lanes">
+                <div class="lane-bar"><div class="track3"><div class="bar-fill grow animate delay-4" style="width: calc(0.14 / 3 * 100%); min-width: 10px;"></div></div><div class="v3 hl">0,14<small> s</small></div></div>
+                <div class="lane-bar"><div class="track3"><div class="bar-fill v grow animate delay-5" style="width: calc(0.64 / 3 * 100%);"></div></div><div class="v3 hl-2">0,64<small> s</small></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="axis3"><div></div><div><div class="ax"><span>0 s</span><span>1 s</span><span>2 s</span><b>3 s · limite Excelente</b></div><div></div></div></div>
+          <div class="legend"><span><i></i>Portal</span><span><i class="v"></i>Aplicativo</span></div>
         </div>
-        <p class="footnote animate delay-4">Níveis oficiais são atribuídos após a segunda leitura independente, como o método exige.</p>
+        <div class="grid c2 animate delay-4">
+          <div class="card" style="flex-direction: row; align-items: center; justify-content: space-between;"><div><div class="label">Volume da consulta · Portal</div><p>M2.2.1 · mediana</p></div><div class="big teal" style="font-size: clamp(30px, 2.8vw, 54px);">0,011<small> MB</small></div></div>
+          <div class="card" style="flex-direction: row; align-items: center; justify-content: space-between;"><div><div class="label v">Volume da consulta · App</div><p>M2.2.1 · mediana</p></div><div class="big violet" style="font-size: clamp(30px, 2.8vw, 54px);">0,065<small> MB</small></div></div>
+        </div>
+        <p class="note animate delay-5">S06, caso V4, em Wi-Fi, tempo pelos quadros do vídeo. Volume com escopos diferentes por canal.</p>
       </div>
     </section>
 
-    <!-- 16 · Problemas e relações -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Heitor</span></div>
+    <!-- 11 · Resultados G3 -->
+    <section class="slide" data-sec="3">
+      <div class="chrome"><div class="presenter"><b>PD</b>Apresenta <span>Pedro Druck</span></div><div class="meta"><strong>11</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">16 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Problemas e relações entre características</div>
-          <h2 class="animate delay-2">Onde o cidadão <span class="accent-text">sente o problema</span></h2>
+        <div class="head">
+          <div class="kicker animate delay-1">Fase 4 · G3 Cobertura de contexto</div>
+          <h2 class="animate delay-2">A consulta chega ao fim <span class="hl">em 17 de 18 tentativas</span></h2>
         </div>
-        <div class="card-grid cols-2">
+        <div class="grid c2">
           <div class="card animate delay-2">
-            <div class="card-label">Problemas no produto</div>
-            <div class="steps-list">
-              <div class="step" style="grid-template-columns: 40px 1fr;"><div class="step-num">01</div><p><strong style="color:var(--text)">App 2.6.3 não buscou veículos:</strong> consulta bloqueada antes da lista.</p></div>
-              <div class="step" style="grid-template-columns: 40px 1fr;"><div class="step-num">02</div><p><strong style="color:var(--text)">Lista do app fora da tela:</strong> 6 passos e 2 rolagens.</p></div>
-              <div class="step" style="grid-template-columns: 40px 1fr;"><div class="step-num">03</div><p><strong style="color:var(--text)">Sessão expirou no Chrome Android:</strong> login refeito no meio.</p></div>
-              <div class="step" style="grid-template-columns: 40px 1fr; border-bottom:none;"><div class="step-num">04</div><p><strong style="color:var(--text)">Rede ruim no portal:</strong> 1 falha e 1 tempo limite em 10.</p></div>
+            <div class="panel-total"><div><div class="label">P6 · Plataformas</div><p>Tentativas até o detalhe</p></div><div class="big teal">17<small>/18</small></div></div>
+            <div class="runs">
+              <div class="run"><div class="what">Chrome no computador</div><div class="pips"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="score">6/6</div></div>
+              <div class="run"><div class="what">Firefox no computador</div><div class="pips"><i></i><i></i><i></i></div><div class="score">3/3</div></div>
+              <div class="run"><div class="what">App Android 2.7.0</div><div class="pips"><i></i><i></i><i></i></div><div class="score">3/3</div></div>
+              <div class="run"><div class="what">App no iPhone</div><div class="pips"><i></i><i></i><i></i></div><div class="score">3/3</div></div>
+              <div class="run"><div class="what">Chrome no Android<small>uma sessão expirada</small></div><div class="pips"><i></i><i></i><i class="f"></i></div><div class="score">2/3</div></div>
             </div>
           </div>
-          <div class="card card--violet animate delay-3">
-            <div class="card-label violet">Relações entre características</div>
-            <div class="steps-list">
-              <div class="step" style="grid-template-columns: 1fr;"><p><strong style="color:var(--text)">Contexto → adequação:</strong> sem chegar à lista, nenhum campo pode ser avaliado.</p></div>
-              <div class="step" style="grid-template-columns: 1fr;"><p><strong style="color:var(--text)">Fluxo → desempenho percebido:</strong> a rolagem extra soma tempo no app.</p></div>
-              <div class="step" style="grid-template-columns: 1fr; border-bottom:none;"><p><strong style="color:var(--text)">Volume ↔ tempo:</strong> escopos diferentes; os dados não permitem estabelecer a relação.</p></div>
+          <div class="card animate delay-3">
+            <div class="panel-total"><div><div class="label v">P7 · Redes</div><p>Consultas concluídas</p></div><div class="big violet">48<small>/50</small></div></div>
+            <div class="runs">
+              <div class="run"><div class="what">Wi-Fi · Portal</div><div class="pips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="score">10/10</div></div>
+              <div class="run"><div class="what">Wi-Fi · App</div><div class="pips"><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i></div><div class="score">10/10</div></div>
+              <div class="run"><div class="what">4G · Portal</div><div class="pips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="score">10/10</div></div>
+              <div class="run"><div class="what">4G · App</div><div class="pips"><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"></i></div><div class="score">10/10</div></div>
+              <div class="run"><div class="what">Degradada · Portal<small>mediana de 0,85 s com 300 ms de latência</small></div><div class="pips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="f"></i><i class="f"></i></div><div class="score">8/10</div></div>
             </div>
+          </div>
+        </div>
+        <p class="note animate delay-4">A falha do app 2.6.3 ao buscar veículos (0/3) não se repetiu na 2.7.0, em outro aparelho e titular, e virou a nossa ação de melhoria. CT04 não foi avaliado.</p>
+      </div>
+    </section>
+
+    <!-- 12 · Respostas e decisões -->
+    <section class="slide" data-sec="3">
+      <div class="chrome"><div class="presenter"><b>HM</b>Apresenta <span>Heitor</span></div><div class="meta"><strong>12</strong> / 20</div></div>
+      <div class="slide-inner">
+        <div class="head">
+          <div class="kicker animate delay-1">Fase 4 · Respostas e decisões · primeira leitura, G1 a G3 ainda sem nível</div>
+          <h2 class="animate delay-2">Cada resultado <span class="hl">vira uma decisão</span></h2>
+        </div>
+        <div class="flow">
+          <div class="flow-row animate delay-2"><div class="card"><span class="tag">G1</span><div><h3>Nenhum valor divergente</h3><p>16 de 17 campos iguais; o R14 falta no app</p></div></div><div class="connector"></div><div class="card teal"><span class="tag">D2</span><div><h3>Incluir o campo no app</h3><p>Fecha a única diferença no detalhe</p></div></div></div>
+          <div class="flow-row animate delay-3"><div class="card"><span class="tag">G2</span><div><h3>Portal mais rápido</h3><p>Os dois abaixo de 1 s em Wi-Fi e 4G</p></div></div><div class="connector"></div><div class="card teal"><span class="tag">D3</span><div><h3>Sem canal superior</h3><p>Os dados não sustentam recomendar só um</p></div></div></div>
+          <div class="flow-row animate delay-4"><div class="card"><span class="tag">G3</span><div><h3>Falha não reproduzida</h3><p>Na 2.7.0, o app chegou ao detalhe no Android e no iPhone</p></div></div><div class="connector"></div><div class="card teal"><span class="tag">D4</span><div><h3>Regressão por versão e rede</h3><p>Processo pronto para cada nova versão</p></div></div></div>
+        </div>
+        <div class="card violet animate delay-5">
+          <div class="label v">Relações entre características</div>
+          <div class="grid c2" style="gap: 10px 32px;">
+            <p><strong>Contexto → adequação:</strong> os campos só podem ser avaliados quando a consulta chega à lista.</p>
+            <p><strong>Fluxo → tempo:</strong> o app tem mais passos e rolagens, mas a M2.1.1 começa em Consultar; nada se conclui sobre o tempo percebido.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 17 · Melhoria -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Pedro Druck</span></div>
+    <!-- 13 · Melhoria -->
+    <section class="slide" data-sec="3">
+      <div class="chrome"><div class="presenter"><b>PD</b>Apresenta <span>Pedro Druck</span></div><div class="meta"><strong>13</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">17 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Melhoria priorizada e executada</div>
-          <h2 class="animate delay-2">Do bloqueio no app a <span class="accent-text">um processo de regressão</span></h2>
+        <div class="head">
+          <div class="kicker animate delay-1">Melhoria priorizada e executada</div>
+          <h2 class="animate delay-2">De um bloqueio no app a <span class="hl">um processo de regressão</span></h2>
         </div>
-        <div class="steps-list">
-          <div class="step animate delay-1"><div class="step-num">01</div><h3>Problema</h3><p>App 2.6.3 falhou nas 3 tentativas ao buscar veículos.</p></div>
-          <div class="step animate delay-2"><div class="step-num">02</div><h3>Prioridade</h3><p>Bloqueio total da tarefa; apoia as decisões D4 e D1.</p></div>
-          <div class="step animate delay-3"><div class="step-num">03</div><h3>Ação</h3><p>Ficha de incidente, matriz de 4 cenários e inspeção automática no repositório.</p></div>
-          <div class="step animate delay-4" style="border-bottom:none;"><div class="step-num">04</div><h3>Verificação</h3><p>Reteste no app 2.7.0: <strong class="ok-text">3/3</strong> até o detalhe, contra <strong class="bad-text">0/3</strong> antes.</p></div>
+        <div class="process">
+          <div class="card animate delay-1"><div class="n">01</div><h3>Problema</h3><p>App 2.6.3 não buscou os veículos nas 3 tentativas.</p></div>
+          <div class="card animate delay-2"><div class="n">02</div><h3>Prioridade</h3><p>Bloqueio total da tarefa; apoia as decisões D4 e D1.</p></div>
+          <div class="card animate delay-3"><div class="n">03</div><h3>Ação</h3><p>Ficha de incidente, matriz de 4 cenários e inspeção automática no repositório.</p></div>
+          <div class="card teal animate delay-4"><div class="n">04</div><h3>Verificação</h3><p>Reteste no app 2.7.0 até o detalhe; revisão e eficácia da proposta pendentes.</p></div>
         </div>
-        <p class="footnote animate delay-5">Entrega técnica em melhorias/consulta-infracoes. Outra versão e outro veículo: o antes e depois mostra o processo funcionando, não prova a causa.</p>
+        <div class="card animate delay-5">
+          <div class="before-after">
+            <div class="ba"><div class="pips"><i class="f"></i><i class="f"></i><i class="f"></i></div><div><div class="label n">Antes · 2.6.3</div><div class="big" style="color: var(--text-faint); font-size: clamp(34px, 3.2vw, 62px);">0<small>/3</small></div></div></div>
+            <div class="ba"><span class="arrow-big">→</span></div>
+            <div class="ba"><div class="pips"><i></i><i></i><i></i></div><div><div class="label" style="color: var(--success);">Depois · 2.7.0</div><div class="big ok" style="font-size: clamp(34px, 3.2vw, 62px);">3<small>/3</small></div></div></div>
+          </div>
+        </div>
+        <p class="note animate delay-5">Entrega técnica em melhorias/consulta-infracoes. Versão, aparelho e titular mudaram: o 3/3 não comprova causa nem correção.</p>
       </div>
     </section>
 
-    <!-- 18 · Dificuldades -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Hugo</span></div>
+    <!-- 14 · Obstáculos que viraram método -->
+    <section class="slide" data-sec="3">
+      <div class="chrome"><div class="presenter"><b>HF</b>Apresenta <span>Hugo</span></div><div class="meta"><strong>14</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">18 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Dificuldades e limitações</div>
-          <h2 class="animate delay-2">Obstáculos que <span class="accent-text">viraram método</span></h2>
+        <div class="head">
+          <div class="kicker animate delay-1">Dificuldades e como resolvemos</div>
+          <h2 class="animate delay-2">Obstáculos que <span class="hl">viraram método</span></h2>
         </div>
         <div class="pairs">
-          <div class="pair animate delay-1"><div class="from">Equipe sem iPhone</div><div class="arrow"></div><div class="to">Heitor executou o CT06 no próprio aparelho</div></div>
-          <div class="pair animate delay-2"><div class="from">Dados pessoais dos titulares</div><div class="arrow"></div><div class="to">Termos aplicados, códigos V1 a V4, originais privados</div></div>
-          <div class="pair animate delay-3"><div class="from">Lista do app fora da tela</div><div class="arrow"></div><div class="to">Rolagem automática desde o toque, medida no vídeo</div></div>
-          <div class="pair animate delay-4"><div class="from">USB instável e travamentos</div><div class="arrow"></div><div class="to">Erros de instrumento preservados e repostos com novo número</div></div>
-          <div class="pair animate delay-5"><div class="from">Sem resposta ainda</div><div class="arrow"></div><div class="to">App em rede degradada e segunda leitura independente</div></div>
+          <div class="pair animate delay-1"><div class="from">iPhone fora do inventário</div><div class="mid"><div class="connector"></div></div><div class="to">Heitor registrou o aparelho e executou o CT06</div></div>
+          <div class="pair animate delay-2"><div class="from">Dados pessoais dos titulares</div><div class="mid"><div class="connector"></div></div><div class="to">Termos aplicados; códigos V1, V2, V4 e V5 conciliados no privado</div></div>
+          <div class="pair animate delay-3"><div class="from">Lista do app fora da tela</div><div class="mid"><div class="connector"></div></div><div class="to">Rolagem automática desde o toque, medida no vídeo</div></div>
+          <div class="pair animate delay-4"><div class="from">USB instável e travamentos</div><div class="mid"><div class="connector"></div></div><div class="to">Erros de instrumento preservados e repostos com novo número</div></div>
+          <div class="pair animate delay-5"><div class="from">Leitura de tempo manual</div><div class="mid"><div class="connector"></div></div><div class="to">Quadros do vídeo; segunda leitura feita em P1 a P3, pendente no resto</div></div>
+          <div class="pair animate delay-5"><div class="from">Rede degradada no app</div><div class="mid"><div class="connector"></div></div><div class="to">Sem resposta: o app ignorou proxy e recusou VPN (D021)</div></div>
         </div>
       </div>
     </section>
 
-    <!-- 19 · Gestão: três categorias -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Daniel</span></div>
+    <!-- 15 · Gestão: três categorias -->
+    <section class="slide" data-sec="4">
+      <div class="chrome"><div class="presenter"><b>DL</b>Apresenta <span>Daniel</span></div><div class="meta"><strong>15</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">19 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Gestão do projeto · PSM/CID</div>
-          <h2 class="animate delay-2">Evolução no semestre, <span class="accent-text">em três categorias</span></h2>
+        <div class="head">
+          <div class="kicker animate delay-1">Gestão do projeto · PSM/CID</div>
+          <h2 class="animate delay-2">Evolução no semestre, <span class="hl">em três categorias</span></h2>
         </div>
-        <div class="card-grid cols-3">
-          <article class="card card--accent animate delay-1"><div class="card-label">Desempenho dos processos</div><h3>Revisão virou rotina</h3><p>E1: todo trabalho revisado. E2: 13 PRs com revisão humana e 0% de retrabalho.</p><div class="card-meta">1ª revisão em 8,2 h (mediana)</div></article>
-          <article class="card animate delay-2"><div class="card-label">Calendário e progresso</div><h3>Atraso recuperado</h3><p>E1: 15 de 15 issues no prazo. E2: Fase 3 um dia atrasada, coleta recuperada em três dias.</p><div class="card-meta">ICM E1 100% · E2 50% no corte</div></article>
-          <article class="card animate delay-3"><div class="card-label">Recursos e custos</div><h3>Horas mais visíveis</h3><p>E1: registro só após a 2ª reunião. E2: estimativa por issue e declaração individual.</p><div class="card-meta">Variação −37,5% nas issues fechadas</div></article>
+        <div class="grid c3">
+          <article class="card top-teal animate delay-2"><div class="label">Desempenho dos processos</div><h3>Revisão virou rotina</h3>
+            <div class="kpi"><div class="big teal">0%</div><p>de retrabalho nos 13 PRs da E2 com revisão humana</p></div>
+            <div class="kpi"><div class="big">8,2<small> h</small></div><p>mediana até a primeira revisão</p></div></article>
+          <article class="card top-violet animate delay-3"><div class="label v">Calendário e progresso</div><h3>E1 no prazo, E2 atrasada</h3>
+            <div class="kpi"><div class="big violet">15<small>/15</small></div><p>issues da E1 entregues no prazo</p></div>
+            <div class="kpi"><div class="big" style="color: var(--danger, #B42318);">4<small>/8</small></div><p>issues da E2 fechadas no corte (50%, vermelho)</p></div></article>
+          <article class="card top-lane animate delay-4"><div class="label" style="color: var(--warning);">Recursos e custos</div><h3>Horas mais visíveis</h3>
+            <div class="kpi"><div class="big" style="color: var(--warning);">100%</div><p>das issues da E2 com estimativa de esforço</p></div>
+            <div class="kpi"><p><strong>58 h 45 min declaradas na E2</strong>; 4 de 6 integrantes com total individual</p></div></article>
         </div>
       </div>
     </section>
 
-    <!-- 20 · Gestão: certo, errado, decisões -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Daniel</span></div>
+    <!-- 16 · Retrospectiva -->
+    <section class="slide" data-sec="4">
+      <div class="chrome"><div class="presenter"><b>DL</b>Apresenta <span>Daniel</span></div><div class="meta"><strong>16</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">20 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Gestão · Decisões e efeitos</div>
-          <h2 class="animate delay-2">O que deu certo, o que não deu <span class="accent-text">e o que decidimos</span></h2>
+        <div class="head">
+          <div class="kicker animate delay-1">Retrospectiva E1 → E2</div>
+          <h2 class="animate delay-2">Compromissos <span class="hl">cumpridos em parte</span></h2>
         </div>
-        <div class="card-grid cols-3">
-          <div class="card card--accent animate delay-1">
-            <div class="card-label">Deu certo</div>
-            <p>Fluxo issue → branch → PR revisado</p>
-            <p>Atas e decisões registradas</p>
-            <p>Validador bloqueia dado sem conferência</p>
-          </div>
+        <div class="grid" style="grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);">
           <div class="card animate delay-2">
-            <div class="card-label" style="color: var(--warning);">Deu errado</div>
-            <p>Fase 3 fechou um dia depois do prazo</p>
-            <p>Horas de parte da equipe sem registro</p>
-            <p>Coleta concentrada na reta final</p>
+            <div class="label">O que funcionou</div>
+            <div>
+              <div class="commit"><b>C1</b><p><strong>PR revisado em até 48 h:</strong> mediana de 8,2 h até a primeira revisão.</p></div>
+              <div class="commit"><b>C3</b><p><strong>Bloqueios B01 a B08 mapeados</strong> (com atraso): iPhone, veículos e termos resolvidos.</p></div>
+              <div class="commit"><b>C5</b><p><strong>Revisor em rodízio:</strong> toda issue com responsável, revisor, data e estimativa.</p></div>
+              <div class="commit"><b>C6</b><p><strong>Fluxo de PR:</strong> nada direto na main desde 11/11; 0% de retrabalho em 13 PRs.</p></div>
+            </div>
           </div>
-          <div class="card card--violet animate delay-3">
-            <div class="card-label violet">Decisão → efeito</div>
-            <p><strong style="color:var(--text)">D2:</strong> priorizar a Fase 3 → coleta liberada</p>
-            <p><strong style="color:var(--text)">D8:</strong> reagendar critérios → seis sessões</p>
-            <p><strong style="color:var(--text)">D4:</strong> lista de bloqueios → iPhone, veículos e termos</p>
+          <div class="card violet animate delay-3">
+            <div class="label v">O que ajustamos no caminho</div>
+            <ul class="ticks v">
+              <li><strong>Fase 3 com um dia de atraso:</strong> a decisão D2 priorizou a fase e liberou a coleta</li>
+              <li><strong>Coleta no fim do prazo:</strong> a D8 dividiu o trabalho em seis sessões curtas</li>
+              <li><strong>C7 reuniões:</strong> ata em todas, mas só 2 de 3 semanas com reunião</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 21 · Retrospectiva -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Daniel</span></div>
+    <!-- 17 · A gestão melhorou a avaliação -->
+    <section class="slide" data-sec="4">
+      <div class="chrome"><div class="presenter"><b>DL</b>Apresenta <span>Daniel</span></div><div class="meta"><strong>17</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">21 / 29</div>
-        <div class="section-heading">
-          <div class="eyebrow mono animate delay-1">Retrospectiva E1 → E2</div>
-          <h2 class="animate delay-2">Compromissos e <span class="accent-text">resultados</span></h2>
+        <div class="kicker animate delay-1">As mudanças na gestão melhoraram a avaliação?</div>
+        <blockquote class="statement animate delay-2">Em parte: a avaliação ficou <span class="hl">rastreável e verificável</span>, mas a segunda leitura atrasou.</blockquote>
+        <div class="chain animate delay-3">
+          <div>Dado<small>CSV validado</small></div>
+          <div>Registro<small>sessão e desvios</small></div>
+          <div>Evidência<small>vídeo e captura</small></div>
+          <div>Artigo<small>com commit de origem</small></div>
         </div>
-        <div class="steps-list">
-          <div class="step animate delay-1"><div class="step-num">C1</div><h3>PR revisado em até 48 h</h3><p>Mediana de 8,2 h até a primeira revisão; 2 PRs passaram do prazo.</p></div>
-          <div class="step animate delay-2"><div class="step-num">C3</div><h3>Riscos mapeados cedo</h3><p>Lista de bloqueios na #46; iPhone, veículos e termos resolvidos.</p></div>
-          <div class="step animate delay-3"><div class="step-num">C5</div><h3>Revisor em rodízio</h3><p>Toda issue da E2 nasceu com responsável, revisor, data e estimativa.</p></div>
-          <div class="step animate delay-4" style="border-bottom:none;"><div class="step-num">C6·C7</div><h3>Fluxo de PR e atas</h3><p>Nenhum commit direto na main desde 11/11; decisões D1 a D9 registradas.</p></div>
+        <div class="grid c3 animate delay-4">
+          <div class="card top-teal"><div class="label">Rastreabilidade</div><p>Cada número do artigo volta ao dado e ao commit que o gerou.</p></div>
+          <div class="card top-violet"><div class="label v">Procedimento</div><p>O validador recusa linha sem conferência ou sem evidência.</p></div>
+          <div class="card top-lane"><div class="label" style="color: var(--warning);">Revisão de dados</div><p>Erros de instrumento preservados; falhas sempre no denominador.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- 22 · A gestão melhorou a qualidade? -->
-    <section class="slide">
-      <div class="presenter">Apresenta <span>Daniel</span></div>
+    <!-- 18 · Relatos 1 -->
+    <section class="slide" data-sec="5">
+      <div class="chrome"><div class="presenter"><b>3</b>Relatos <span>Daniel · Heitor · Hugo</span></div><div class="meta"><strong>18</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">22 / 29</div>
-        <div class="eyebrow mono animate delay-1">As mudanças na gestão melhoraram a avaliação?</div>
-        <blockquote class="statement animate delay-2">Sim: a avaliação ficou <span class="accent-text">rastreável e verificável</span>.</blockquote>
-        <div class="card-grid cols-4">
-          <article class="card animate delay-2"><div class="card-label">Rastreabilidade</div><p>Dado → registro → evidência → artigo, com commit de origem.</p></article>
-          <article class="card animate delay-3"><div class="card-label">Procedimento</div><p>Validador recusa linha sem conferência ou sem evidência.</p></article>
-          <article class="card animate delay-4"><div class="card-label">Revisão de dados</div><p>Erros de instrumento preservados; falhas nunca saem do denominador.</p></article>
-          <article class="card animate delay-5"><div class="card-label" style="color: var(--warning);">Limite honesto</div><p>Redução de erros de coleta não foi medida: não havia linha de base.</p></article>
+        <div class="head">
+          <div class="kicker animate delay-1">Relatos individuais · 1 de 2</div>
+          <h2 class="animate delay-2">O que cada um <span class="hl">construiu e levou</span></h2>
+        </div>
+        <div class="grid c3">
+          <article class="card relato top-teal animate delay-2">
+            <div class="who"><div class="avatar">DL</div><div><div class="name">Daniel de Oliveira Lira</div><div class="role">Gestão PSM/CID · metodologia · artigo</div></div></div>
+            <dl>
+              <div><dt>Contribuição</dt><dd>Gestão, metodologia e integração do artigo; facilitei a retrospectiva.</dd></div>
+              <div><dt>Aprendi</dt><dd>Métrica de processo só ajuda quando vira decisão registrada.</dd></div>
+              <div><dt>Superei</dt><dd>Horas sem registro: passei a cobrar a cada coleta.</dd></div>
+              <div><dt>Faria diferente</dt><dd>Medir a espera por revisão desde a primeira semana.</dd></div>
+            </dl>
+          </article>
+          <article class="card relato top-violet animate delay-3">
+            <div class="who"><div class="avatar v">HM</div><div><div class="name">Heitor Macedo Ricardo</div><div class="role">Propósito e escopo · GitPage · PSM · CT06</div></div></div>
+            <dl>
+              <div><dt>Contribuição</dt><dd>Propósito, partes interessadas, GitPage, coletas PSM e o CT06 no iPhone.</dd></div>
+              <div><dt>Aprendi</dt><dd>Escopo bem definido evita medir o que ninguém vai decidir.</dd></div>
+              <div><dt>Superei</dt><dd>iPhone fora do inventário: registrei o aparelho e executei o CT06.</dd></div>
+              <div><dt>Faria diferente</dt><dd>Garantir aparelhos e titulares antes de fechar o plano.</dd></div>
+            </dl>
+          </article>
+          <article class="card relato top-lane animate delay-4">
+            <div class="who"><div class="avatar y">HF</div><div><div class="name">Hugo Freitas Silva</div><div class="role">Produto e modelo · plano da Fase 3 · coleta</div></div></div>
+            <dl>
+              <div><dt>Contribuição</dt><dd>Produto, modelo de qualidade, plano da Fase 3, instrumentos e coleta de P4, P5 e P7.</dd></div>
+              <div><dt>Aprendi</dt><dd>Instrumento se valida antes do dado, não depois.</dd></div>
+              <div><dt>Superei</dt><dd>Lista do app fora da tela: criei a medição por rolagem no vídeo.</dd></div>
+              <div><dt>Faria diferente</dt><dd>Ensaiar cada instrumento logo depois do plano.</dd></div>
+            </dl>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- 23 · Relato Daniel -->
-    <section class="slide">
-      <div class="presenter">Relato <span>Daniel</span></div>
+    <!-- 19 · Relatos 2 -->
+    <section class="slide" data-sec="5">
+      <div class="chrome"><div class="presenter"><b>3</b>Relatos <span>Pedro Druck · Pedro Henrique · Philipe</span></div><div class="meta"><strong>19</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">23 / 29</div>
-        <div class="relato-head animate delay-1">
-          <div class="section-heading"><div class="eyebrow mono">Relato individual</div><h2>Daniel de Oliveira Lira</h2></div>
-          <div class="relato-role">Gestão PSM/CID · metodologia · integração do artigo</div>
+        <div class="head">
+          <div class="kicker animate delay-1">Relatos individuais · 2 de 2</div>
+          <h2 class="animate delay-2">O que cada um <span class="hl">construiu e levou</span></h2>
         </div>
-        <div class="card-grid cols-2 relato-grid">
-          <article class="card card--accent animate delay-2"><div class="card-label">Contribuição</div><h3>Gestão, metodologia e integração do artigo; facilitei a retrospectiva.</h3></article>
-          <article class="card animate delay-3"><div class="card-label">O que aprendi</div><h3>Métrica de processo só ajuda quando vira decisão registrada.</h3></article>
-          <article class="card animate delay-4"><div class="card-label">Dificuldade e como lidei</div><h3>Horas e revisões sem registro; passei a cobrar a cada coleta.</h3></article>
-          <article class="card card--violet animate delay-5"><div class="card-label violet">Faria diferente</div><h3>Medir a espera por revisão desde a primeira semana.</h3></article>
+        <div class="grid c3">
+          <article class="card relato top-violet animate delay-2">
+            <div class="who"><div class="avatar v">PD</div><div><div class="name">Pedro Druck Montalvão Reis</div><div class="role">Priorização · coleta P1–P3 e P6 · melhoria</div></div></div>
+            <dl>
+              <div><dt>Contribuição</dt><dd>Priorização das características, coleta de P1 a P3 e P6 e a ação de melhoria.</dd></div>
+              <div><dt>Aprendi</dt><dd>Falha bem registrada vale mais que sucesso sem evidência.</dd></div>
+              <div><dt>Superei</dt><dd>App travava ao buscar veículos: virou processo de regressão.</dd></div>
+              <div><dt>Faria diferente</dt><dd>Fixar versão do app e aparelho antes do P6.</dd></div>
+            </dl>
+          </article>
+          <article class="card relato top-lane animate delay-3">
+            <div class="who"><div class="avatar y">PH</div><div><div class="name">Pedro Henrique Ferreira Xavier</div><div class="role">Objetivos, questões e hipóteses · análise</div></div></div>
+            <dl>
+              <div><dt>Contribuição</dt><dd>Objetivos, questões e hipóteses GQM, referencial e análise comparativa.</dd></div>
+              <div><dt>Aprendi</dt><dd>A regra de julgamento precisa existir antes do dado.</dd></div>
+              <div><dt>Superei</dt><dd>Dados chegaram tarde: deixei o roteiro de análise pronto antes.</dd></div>
+              <div><dt>Faria diferente</dt><dd>Planejar o prazo da análise junto com o da coleta.</dd></div>
+            </dl>
+          </article>
+          <article class="card relato top-teal animate delay-4">
+            <div class="who"><div class="avatar">PC</div><div><div class="name">Philipe Amâncio Reis Caetano</div><div class="role">Métricas e níveis · piloto S01 · instrumentos</div></div></div>
+            <dl>
+              <div><dt>Contribuição</dt><dd>Métricas, níveis e critérios, diagrama GQM, piloto S01 e instrumentação.</dd></div>
+              <div><dt>Aprendi</dt><dd>Fórmula e unidade precisam caber no instrumento real.</dd></div>
+              <div><dt>Superei</dt><dd>Volume medido de formas diferentes: documentamos os escopos.</dd></div>
+              <div><dt>Faria diferente</dt><dd>Validar contadores de volume já no piloto.</dd></div>
+            </dl>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- 24 · Relato Heitor -->
-    <section class="slide">
-      <div class="presenter">Relato <span>Heitor</span></div>
+    <!-- 20 · Encerramento -->
+    <section class="slide" data-sec="5">
+      <div class="chrome"><div class="presenter"><b>6</b>Apresentam <span>Todos</span></div><div class="meta"><strong>20</strong> / 20</div></div>
       <div class="slide-inner">
-        <div class="slide-counter">24 / 29</div>
-        <div class="relato-head animate delay-1">
-          <div class="section-heading"><div class="eyebrow mono">Relato individual</div><h2>Heitor Macedo Ricardo</h2></div>
-          <div class="relato-role">Propósito e escopo · GitPage · coletas PSM · CT06</div>
+        <div class="head" style="gap: clamp(14px, 2.2vh, 24px);">
+          <div class="kicker animate delay-1">Encerramento</div>
+          <h1 class="animate delay-2" style="max-width: 18ch;">Avaliação <span class="hl">executada</span>, com evidência</h1>
         </div>
-        <div class="card-grid cols-2 relato-grid">
-          <article class="card card--accent animate delay-2"><div class="card-label">Contribuição</div><h3>Propósito, partes interessadas, GitPage, coletas PSM e o CT06 no iPhone.</h3></article>
-          <article class="card animate delay-3"><div class="card-label">O que aprendi</div><h3>Escopo bem definido evita medir o que ninguém vai decidir.</h3></article>
-          <article class="card animate delay-4"><div class="card-label">Dificuldade e como lidei</div><h3>Ninguém tinha iPhone; executei no meu, com desvios registrados.</h3></article>
-          <article class="card card--violet animate delay-5"><div class="card-label violet">Faria diferente</div><h3>Garantir aparelhos e titulares antes de fechar o plano.</h3></article>
+        <div class="recap animate delay-3">
+          <div><div class="big">4</div><p>fases da ISO/IEC 25040 executadas</p></div>
+          <div><div class="big">14</div><p>métricas com níveis e regras de julgamento</p></div>
+          <div><div class="big">320</div><p>registros brutos em 6 sessões</p></div>
+          <div><div class="big">0</div><p>valores divergentes entre os canais</p></div>
+          <div><div class="big">1</div><p>melhoria entregue, eficácia pendente</p></div>
         </div>
-      </div>
-    </section>
-
-    <!-- 25 · Relato Hugo -->
-    <section class="slide">
-      <div class="presenter">Relato <span>Hugo</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">25 / 29</div>
-        <div class="relato-head animate delay-1">
-          <div class="section-heading"><div class="eyebrow mono">Relato individual</div><h2>Hugo Freitas Silva</h2></div>
-          <div class="relato-role">Produto e modelo · plano da Fase 3 · instrumentos · coleta</div>
+        <div class="chip-row animate delay-4">
+          <span class="chip teal">fcte-qualidade-de-software-1.github.io/2026-2_T02_KATHERINE_JOHNSON</span>
+          <span class="chip">Artigo · artigo/main.pdf</span>
+          <span class="chip">Dados · dados/brutos</span>
         </div>
-        <div class="card-grid cols-2 relato-grid">
-          <article class="card card--accent animate delay-2"><div class="card-label">Contribuição</div><h3>Produto, modelo de qualidade, plano da Fase 3, instrumentos e coleta P4, P5 e P7.</h3></article>
-          <article class="card animate delay-3"><div class="card-label">O que aprendi</div><h3>Instrumento se valida antes do dado, não depois.</h3></article>
-          <article class="card animate delay-4"><div class="card-label">Dificuldade e como lidei</div><h3>Lista do app fora da tela; criei a medição por rolagem no vídeo.</h3></article>
-          <article class="card card--violet animate delay-5"><div class="card-label violet">Faria diferente</div><h3>Ensaiar cada instrumento logo depois do plano.</h3></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 26 · Relato Pedro Druck -->
-    <section class="slide">
-      <div class="presenter">Relato <span>Pedro Druck</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">26 / 29</div>
-        <div class="relato-head animate delay-1">
-          <div class="section-heading"><div class="eyebrow mono">Relato individual</div><h2>Pedro Druck Montalvão Reis</h2></div>
-          <div class="relato-role">Priorização · SQuaRE · coleta P1–P3 e P6 · melhoria</div>
-        </div>
-        <div class="card-grid cols-2 relato-grid">
-          <article class="card card--accent animate delay-2"><div class="card-label">Contribuição</div><h3>Priorização das características, coleta de P1 a P3 e P6 e ação de melhoria.</h3></article>
-          <article class="card animate delay-3"><div class="card-label">O que aprendi</div><h3>Falha bem registrada vale mais que sucesso sem evidência.</h3></article>
-          <article class="card animate delay-4"><div class="card-label">Dificuldade e como lidei</div><h3>App travava ao buscar veículos; virou processo de regressão.</h3></article>
-          <article class="card card--violet animate delay-5"><div class="card-label violet">Faria diferente</div><h3>Fixar versão do app e aparelho antes do P6.</h3></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 27 · Relato Pedro Henrique -->
-    <section class="slide">
-      <div class="presenter">Relato <span>Pedro Henrique</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">27 / 29</div>
-        <div class="relato-head animate delay-1">
-          <div class="section-heading"><div class="eyebrow mono">Relato individual</div><h2>Pedro Henrique Ferreira Xavier</h2></div>
-          <div class="relato-role">Objetivos, questões e hipóteses GQM · análise comparativa</div>
-        </div>
-        <div class="card-grid cols-2 relato-grid">
-          <article class="card card--accent animate delay-2"><div class="card-label">Contribuição</div><h3>Objetivos, questões e hipóteses GQM, referencial e análise comparativa.</h3></article>
-          <article class="card animate delay-3"><div class="card-label">O que aprendi</div><h3>A regra de julgamento precisa existir antes do dado.</h3></article>
-          <article class="card animate delay-4"><div class="card-label">Dificuldade e como lidei</div><h3>Dados chegaram tarde; deixei o roteiro de análise pronto antes.</h3></article>
-          <article class="card card--violet animate delay-5"><div class="card-label violet">Faria diferente</div><h3>Planejar o prazo da análise junto com o da coleta.</h3></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 28 · Relato Philipe -->
-    <section class="slide">
-      <div class="presenter">Relato <span>Philipe</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">28 / 29</div>
-        <div class="relato-head animate delay-1">
-          <div class="section-heading"><div class="eyebrow mono">Relato individual</div><h2>Philipe Amâncio Reis Caetano</h2></div>
-          <div class="relato-role">Métricas, níveis e critérios · piloto S01 · instrumentação</div>
-        </div>
-        <div class="card-grid cols-2 relato-grid">
-          <article class="card card--accent animate delay-2"><div class="card-label">Contribuição</div><h3>Métricas, níveis e critérios, diagrama GQM, piloto S01 e instrumentação.</h3></article>
-          <article class="card animate delay-3"><div class="card-label">O que aprendi</div><h3>Fórmula e unidade precisam caber no instrumento real.</h3></article>
-          <article class="card animate delay-4"><div class="card-label">Dificuldade e como lidei</div><h3>Volume medido de formas diferentes; documentamos os escopos.</h3></article>
-          <article class="card card--violet animate delay-5"><div class="card-label violet">Faria diferente</div><h3>Validar contadores de volume já no piloto.</h3></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 29 · Encerramento -->
-    <section class="slide">
-      <div class="presenter">Apresentam <span>Todos</span></div>
-      <div class="slide-inner">
-        <div class="slide-counter">29 / 29</div>
-        <div class="hero">
-          <div class="eyebrow mono animate delay-1">Encerramento</div>
-          <h2 class="animate delay-2" style="font-size: var(--fs-display); line-height: 0.98; max-width: 18ch;">Avaliação <span class="accent-text">executada</span>, com evidência</h2>
-          <p class="subtitle animate delay-3">Quatro fases, 14 métricas, seis sessões de coleta e uma melhoria entregue. Tudo rastreável no repositório.</p>
-          <div class="lane animate delay-3" style="max-width: 520px;"></div>
-          <div class="pill-row animate delay-4">
-            <span class="pill accent">fcte-qualidade-de-software-1.github.io/2026-2_T02_KATHERINE_JOHNSON</span>
-            <span class="pill">Artigo · artigo/main.pdf</span>
-            <span class="pill">Dados · dados/brutos</span>
-          </div>
+        <div class="team animate delay-5" style="max-width: 1100px;">
+          <div class="person"><div class="avatar">DL</div><div>Daniel Lira</div></div>
+          <div class="person"><div class="avatar v">HM</div><div>Heitor Macedo</div></div>
+          <div class="person"><div class="avatar y">HF</div><div>Hugo Freitas</div></div>
+          <div class="person"><div class="avatar v">PD</div><div>Pedro Druck</div></div>
+          <div class="person"><div class="avatar y">PH</div><div>Pedro Henrique</div></div>
+          <div class="person"><div class="avatar">PC</div><div>Philipe Caetano</div></div>
         </div>
       </div>
     </section>
@@ -1303,25 +1339,38 @@
     const slides = Array.from(document.querySelectorAll('.slide'));
     const dotsContainer = document.querySelector('.dot-nav');
 
+    // Trilha de progresso: blocos do roteiro com largura proporcional ao tempo.
+    const sections = [['Abertura', 2.5], ['Fase 1', 2], ['Fase 2', 2], ['Fases 3 e 4', 6.5], ['Gestão', 2.5], ['Relatos', 4.5]];
+    slides.forEach((slide) => {
+      const current = Number(slide.dataset.sec);
+      const track = document.createElement('div');
+      track.className = 'track';
+      sections.forEach(([name, weight], i) => {
+        const part = document.createElement('div');
+        part.style.setProperty('--w', weight);
+        part.textContent = name;
+        if (i < current) part.classList.add('done');
+        if (i === current) part.classList.add('on');
+        track.appendChild(part);
+      });
+      slide.appendChild(track);
+    });
+
     function scrollToSlide(index) {
       const clamped = Math.max(0, Math.min(index, slides.length - 1));
       slides[clamped].scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    function buildDots() {
-      slides.forEach((slide, index) => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.setAttribute('aria-label', `Ir para o slide ${index + 1}`);
-        btn.addEventListener('click', () => scrollToSlide(index));
-        dotsContainer.appendChild(btn);
-      });
-    }
+    slides.forEach((slide, index) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.setAttribute('aria-label', `Ir para o slide ${index + 1}`);
+      btn.addEventListener('click', () => scrollToSlide(index));
+      dotsContainer.appendChild(btn);
+    });
 
     function setActiveDot(index) {
-      dotsContainer.querySelectorAll('button').forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-      });
+      dotsContainer.querySelectorAll('button').forEach((dot, i) => dot.classList.toggle('active', i === index));
     }
 
     const slideObserver = new IntersectionObserver((entries) => {
@@ -1340,39 +1389,29 @@
     }, { threshold: 0.2 });
 
     function getCurrentSlideIndex() {
-      let closestIndex = 0;
-      let closestDistance = Infinity;
+      let closest = 0;
+      let best = Infinity;
       slides.forEach((slide, index) => {
         const distance = Math.abs(slide.getBoundingClientRect().top);
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = index;
-        }
+        if (distance < best) { best = distance; closest = index; }
       });
-      return closestIndex;
+      return closest;
     }
 
     document.addEventListener('keydown', (event) => {
-      const currentIndex = getCurrentSlideIndex();
-      if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(event.key)) {
-        event.preventDefault();
-        scrollToSlide(currentIndex + 1);
-      }
-      if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(event.key)) {
-        event.preventDefault();
-        scrollToSlide(currentIndex - 1);
-      }
+      const current = getCurrentSlideIndex();
+      if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(event.key)) { event.preventDefault(); scrollToSlide(current + 1); }
+      if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(event.key)) { event.preventDefault(); scrollToSlide(current - 1); }
       if (event.key === 'Home') { event.preventDefault(); scrollToSlide(0); }
       if (event.key === 'End') { event.preventDefault(); scrollToSlide(slides.length - 1); }
     });
 
     window.addEventListener('beforeprint', () => {
-      document.querySelectorAll('.animate').forEach(el => el.classList.add('in'));
+      document.querySelectorAll('.animate').forEach((el) => el.classList.add('in'));
     });
 
-    buildDots();
-    slides.forEach(slide => slideObserver.observe(slide));
-    document.querySelectorAll('.animate').forEach(el => animationObserver.observe(el));
+    slides.forEach((slide) => slideObserver.observe(slide));
+    document.querySelectorAll('.animate').forEach((el) => animationObserver.observe(el));
     setActiveDot(0);
   </script>
 </body>
