@@ -1,11 +1,23 @@
-# Registro do iPhone (D04) e do contexto CT06 — 22/11/2026
+# Registro do iPhone (D04) e do bloco B04 (CT06) — 22/11/2026
 
-Registro do inventário do iPhone de Heitor (bloqueio B03) e do plano do bloco B04 da sessão S03.
-**Nenhuma tentativa do P6 no iPhone foi executada até este registro**, e as três telas com login
-no iOS ainda não foram capturadas. Este arquivo não comprova execução, consentimento nem
+Registro do inventário do iPhone (bloqueio B03) e da execução do P6 no contexto CT06, bloco B04 da
+sessão S03. A execução foi manual, em 22/11/2026, das 12:06:20 às 12:10:45 (Brasília). **A
+conferência independente está pendente**, e este registro não comprova consentimento nem
 aprovação de piloto.
 
-## O que está registrado em `dados/brutos/ambientes.csv`
+## Identificação da sessão
+
+| Item | Registro |
+|---|---|
+| Sessão, bloco, data, início e fim (Brasília) | S03, B04, 22/11/2026, das 12:06:20 às 12:10:45 |
+| Executor / registrador / conferente independente | Heitor (executor); sem registrador (D028); conferente indicado: Philipe (pendente) |
+| Veículo e infração (somente códigos) | V5 (código novo, titular Heitor; Hugo confirma o vínculo na tabela privada) e V5-I1 (D029) |
+| Titular | O executor é também o titular e fez o login pessoalmente; os dados do titular ficam só no registro privado (D028) |
+| Contexto e rede | CT06 (iPhone D04, aplicativo 2.7.1), Wi-Fi sem limitação; linha `S03,CT06,...,wifi` em `ambientes.csv` |
+| Versão e build do iOS | Heitor informou ter conferido em Ajustes > Geral > Sobre antes da sessão e não pediu correção do valor registrado |
+| Versão do plano (commit) | Branch do S03 após o PR #69 |
+
+## Inventário registrado em `dados/brutos/ambientes.csv`
 
 | Campo | Valor | Origem |
 |---|---|---|
@@ -20,43 +32,65 @@ aprovação de piloto.
 | Captura | Captura de tela nativa do iOS, sem vídeo; o P6 não mede tempo | Plano do P6 |
 | Rede | Wi-Fi, sem limitação; velocidade não medida | Plano do P6 |
 
-## Conferência obrigatória antes da sessão
+## Caminho executado em cada tentativa
 
-O `so_build` foi preenchido com a versão estável mais recente do iOS em 22/11/2026, porque Heitor informou
-que o iPhone está atualizado. **Antes de executar o P6, abrir Ajustes > Geral > Sobre, conferir a versão e o
-build e, se forem outros, corrigir `ambientes.csv`.** Se o aparelho não estiver na versão mais recente, o
-valor registrado estará errado e deve ser substituído, sem apagar o histórico do desvio.
+Tela inicial autenticada, Infrações, Histórico de infrações por veículo, escolha do veículo V5,
+período ampliado até o limite permitido, com "Todas" as situações, Consultar, escolha da infração V5-I1 e
+detalhe (folha "Confira o detalhamento da infração"). Critério de conclusão: o detalhe exibe o rótulo
+"Descrição da Infração", como nas demais tentativas do P6.
 
-## O que ficou em branco, de propósito
+## Tentativas
 
-- **Número do modelo (A####):** não foi informado e não consta no campo `modelo`.
-- **FPS, download, upload e latência:** o P6 não mede tempo nem volume.
+| Repetição | Início (Brasília) | Duração | Resultado | Observação |
+|---:|---|---|---|---|
+| 1 | 12:06:20 | 2 min 15 s | concluida | Detalhe com "Descrição da Infração", conforme Heitor |
+| 2 | 12:08:35 | 1 min 20 s | concluida | Idem |
+| 3 | 12:09:55 | 50 s | concluida | Idem |
 
-## Bloco B04: P6 no iPhone (pendente)
+As durações foram informadas por Heitor; as três somam 4 min 25 s, igual à janela da sessão. Os
+inícios das tentativas 2 e 3 foram **calculados** pela soma das durações a partir de 12:06:20, sem
+intervalo entre elas. A duração inclui a operação manual e não é medida de tempo da Fase 2. O CT06 fica
+com **3 de 3** tentativas concluídas, pendente de conferência.
 
-| Item | Situação |
+Observações: a tela do aplicativo iOS informa que o período máximo de busca é de 5 anos (D030).
+Na lista de veículos, a seção "Veículos de minha propriedade à época da infração" mostrou "Até o
+presente momento, não há registros", e a seção de veículos atuais listava dois veículos da conta.
+
+## Evidências
+
+Capturas feitas durante a primeira passagem pelo caminho (12:06 a 12:09, conforme os metadados dos
+originais). Antes de entrar no repositório, foram cobertos com tarja opaca: a barra de status, o nome do
+usuário, os modelos e as placas dos veículos, o nome e o número do auto, a data da infração e
+o valor da placa e do modelo no detalhe. As cópias não têm metadados. Os originais, sem tarja, ficam
+em `dados/privado/`, ignorado pelo Git.
+
+| Arquivo | Conteúdo |
 |---|---|
-| Contexto e rede | CT06, Wi-Fi |
-| Tentativas | 3, até o detalhe de V1-I1 (critério e caminho iguais ao do registro do S03 de 21/11) |
-| Aprovação do contexto | Pelo menos 2 das 3 tentativas concluídas |
-| Executor | Heitor |
-| Titular | Presente; faz o login pessoalmente, com a captura desligada na digitação |
-| Conferência independente | Pendente (quem confere não pode ter executado) |
-| Linhas em `tentativas.csv` | Ainda não criadas: só entram depois da execução |
+| `capturas/S01/S01-ios-lista-veiculos.png` | Histórico de infrações por veículo: lista de veículos |
+| `capturas/S01/S01-ios-lista-infracoes-V5.png` | Resultado da pesquisa: lista de infrações |
+| `capturas/S01/S01-ios-detalhe-V5-I1.png` | Detalhe da infração |
+| `capturas/S03/S03-B04-aplicativo-P6-V5-resultado-2026-11-22.png` | Resultado do contexto CT06 (mesma tela do detalhe) |
+| `capturas/S03/S03-B04-aplicativo-P6-V5-periodo-2026-11-22.png` | Formulário de período (D030) |
 
-Se o titular não estiver disponível ou o aparelho não puder executar, o CT06 fica **não avaliado**,
-com desvio em `desvios.csv`, e os resultados do aplicativo valem para o Android. Não substituir por
-captura da App Store.
+**Limite da evidência:** as capturas não são uma por tentativa e não mostram o rótulo "Descrição da
+Infração": o detalhe aparece só na parte superior. A conclusão das 3 tentativas e a presença desse
+rótulo foram informadas por Heitor. A regra do P6 pede uma captura do resultado por contexto e os três
+resultados em `tentativas.csv`, o que foi feito.
 
-## Telas com login no iOS (pendentes)
+## Desvios registrados
 
-`S01-ios-lista-veiculos.png`, `S01-ios-lista-infracoes-V1.png` e `S01-ios-detalhe-V1-I1.png`, em
-`evidencias/fase4/capturas/S01/`, tarjadas antes de sair do aparelho, sem notificações e sem metadados.
+- **D008:** M2.2.1 não medida no iOS (sem contador de bytes por aplicativo).
+- **D028:** executor e titular são a mesma pessoa, sem registrador.
+- **D029:** CT06 usou o V5 (código novo), e não o V1 do S03; infrações diferentes.
+- **D030:** o app iOS tem filtro de período, e o do Android não tinha.
 
-## Desvio registrado
+## Conferência independente
 
-**D008:** a M2.2.1 do iOS fica **não medida**, porque o iOS não oferece contador de bytes por
-aplicativo equivalente ao `adb dumpsys netstats` usado no Android (`dados/brutos/desvios.csv`).
+| Chave do registro | Primeira leitura | Segunda leitura | Decisão final | Conferente |
+|---|---|---|---|---|
+| `tentativas.csv`, S03, B04, repetições 1 a 3 | concluida, concluida, concluida | | | Philipe (pendente) |
+
+Quem confere não pode ter executado a sessão. Só depois da conferência entra o `revisor` no CSV.
 
 ## Fontes consultadas em 22/11/2026
 

@@ -18,13 +18,13 @@ O passo a passo da fase está em [Metodologia](metodologia.md).
 | Critério | Artefato verificável | Situação |
 |---|---|---|
 | F3-C1: método e instruções | [P1–P7](fase3-metodo.md), parâmetros e registro de sessão | Documentado para revisão |
-| F3-C2: recursos e ambiente | [Inventário e piloto](fase3-ambiente.md) | Parcial: inventário efetivo de CT01, CT03 e CT05 registrado em `ambientes.csv` (S03 e S05) e do iPhone D04 (CT06, a conferir no aparelho); D02 pendente; S06/S08 com D05 (Samsung) e D06 (computador) |
-| F3-C2: massa e consentimento | [Massa e instrumentos](fase3-dados.md) | Termos aplicados, conforme confirmação de Hugo em 22/11/2026; vias assinadas privadas; V1 e V2 com códigos provisórios; V4 usado em S06/S08 |
+| F3-C2: recursos e ambiente | [Inventário e piloto](fase3-ambiente.md) | Parcial: inventário efetivo de CT01, CT03 e CT05 registrado em `ambientes.csv` (S03 e S05) e do iPhone D04 (CT06, com P6 executado e a conferir no aparelho); D02 pendente; S06/S08 com D05 (Samsung) e D06 (computador) |
+| F3-C2: massa e consentimento | [Massa e instrumentos](fase3-dados.md) | Termos aplicados, conforme confirmação de Hugo em 22/11/2026; vias assinadas privadas; V1 e V2 com códigos provisórios; V4 usado em S06/S08; V5 usado no CT06 (iPhone) |
 | F3-C3: cronograma | [Sessões e responsáveis](fase3-cronograma.md) | Datas propostas; horários com titulares e sincronização do Project pendentes |
 | F3-C8: coerência com a Fase 2 | [Tabela de rastreabilidade](fase3-metodo.md#4-rastreabilidade-entre-as-fases-2-e-3) | Quatorze métricas ligadas a procedimentos, instrumentos e registros |
 | Artigo e GitPage | Seção `fase3-plano.tex` e páginas desta fase | Disponíveis nesta branch para revisão |
 | Levantamento autenticado e atualização da Fase 1 | S01 e roteiro do levantamento | Parcial: seis capturas autenticadas do portal; caminho do app Android 2.7.0 levantado até o detalhe na S05 (seção 2 abaixo); iOS e liberação do piloto pendentes. Ver [evidências de S00/S01](fase4-coleta.md) |
-| iOS | CT06 e bloqueio B03 | iPhone de Heitor; modelo e versões a registrar; contexto não avaliado até haver evidências |
+| iOS | CT06 e bloqueio B03 | iPhone de Heitor; inventário registrado e P6 executado em 22/11 (3 de 3), pendente de conferência independente; M2.2.1 não medida no iOS (D008) |
 | Revisão do plano documental | Pedro Henrique | PR #57 aprovado; execução de S00/S01 ainda depende de comprovação |
 
 Os critérios empíricos só podem ser marcados como concluídos após as sessões e a conferência
