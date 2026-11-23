@@ -12,7 +12,7 @@ Os registros reúnem seis sessões, em 21 e 22/11/2026: o piloto S01, a S02 (P1 
 (P6), a S06 (P4 e P5) e a S08 (P7). S01 é piloto e não entra no cálculo oficial. Os casos usam
 veículos diferentes (V1, V2, V4 e V5), com aparelhos e versões distintos, e não são reunidos em uma
 única mediana. O consentimento foi aplicado, conforme confirmação de Hugo em 22/11/2026, com vias
-assinadas privadas; os códigos V1, V2, V4 e V5 foram conciliados com a tabela privada por Hugo (PR #XXX).
+assinadas privadas; os códigos V1, V2, V4 e V5 foram conciliados com a tabela privada por Hugo (PR #84).
 
 ### P1 a P3: S02 (caso V2, Wi-Fi, portal no Chrome e aplicativo 2.7.0 no Android)
 

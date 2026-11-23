@@ -5,7 +5,7 @@ Responsável: integrante designado. Situação documental atualizada em 22/11/20
 **Situação atualizada em 22/11/2026:** Hugo confirmou que os termos de consentimento foram
 aplicados aos participantes da coleta. O [registro de aplicação](consentimento.md#9-aplicação-confirmada-em-22112026)
 documenta a conclusão. As vias assinadas, datas de aplicação e correspondências permanecem
-em armazenamento privado. A conciliação dos códigos dos veículos (feita por Hugo, PR #XXX) e a disponibilidade de
+em armazenamento privado. A conciliação dos códigos dos veículos (feita por Hugo, PR #84) e a disponibilidade de
 infrações nos dois canais são verificações separadas; não constituem pendência de consentimento.
 Os códigos abaixo continuam como reservas, sem atribuição automática aos participantes.
 Há capturas preexistentes do portal, indexadas no [acompanhamento da coleta](../docs/fase4-coleta.md),
@@ -61,7 +61,7 @@ Se houver retirada do consentimento, interromper o uso, retirar registros/evidê
 - [ ] Hugo confirma um titular e agenda S00/S01 até 14/11/2026.
 - [x] Aplicar os termos aos participantes da coleta; conclusão confirmada por Hugo em 22/11/2026. Vias assinadas mantidas privadas.
 - [x] Registrar publicamente a aplicação dos termos, sem publicar assinaturas ou identidades; datas de aplicação mantidas nas vias privadas.
-- [x] Conciliar os códigos reservados com a tabela privada, incluindo a ambiguidade de V2 entre sessões (Hugo, PR #XXX).
+- [x] Conciliar os códigos reservados com a tabela privada, incluindo a ambiguidade de V2 entre sessões (Hugo, PR #84).
 - [ ] Registrar as categorias disponíveis e a justificativa das lacunas da amostra.
 - [ ] Executar o roteiro de `evidencias/fase1/roteiro-levantamento.md` em S01.
 - [ ] Revisar e publicar as capturas anonimizadas; atualizar os itens ainda não confirmados da Fase 1.

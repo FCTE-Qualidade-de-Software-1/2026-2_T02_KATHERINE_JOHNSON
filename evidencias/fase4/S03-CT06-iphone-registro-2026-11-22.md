@@ -11,7 +11,7 @@ aprovação de piloto.
 |---|---|
 | Sessão, bloco, data, início e fim (Brasília) | S03, B04, 22/11/2026, das 12:06:20 às 12:10:45 |
 | Executor / registrador / conferente independente | Heitor (executor); sem registrador (D028); conferente indicado: Philipe (pendente) |
-| Veículo e infração (somente códigos) | V5 (código novo, titular Heitor; vínculo conciliado com a tabela privada por Hugo, PR #XXX) e V5-I1 (D029) |
+| Veículo e infração (somente códigos) | V5 (código novo, titular Heitor; vínculo conciliado com a tabela privada por Hugo, PR #84) e V5-I1 (D029) |
 | Titular | O executor é também o titular e fez o login pessoalmente; os dados do titular ficam só no registro privado (D028) |
 | Contexto e rede | CT06 (iPhone D04, aplicativo 2.7.1), Wi-Fi sem limitação; linha `S03,CT06,...,wifi` em `ambientes.csv` |
 | Versão e build do iOS | Heitor informou ter conferido em Ajustes > Geral > Sobre antes da sessão e não pediu correção do valor registrado |
