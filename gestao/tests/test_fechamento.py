@@ -150,5 +150,29 @@ class DeclaracoesV5Test(unittest.TestCase):
         self.assertEqual(fechar.calcular(v4)['total_conhecido_min'], 3525)
 
 
+class DeclaracoesV6Test(unittest.TestCase):
+    def setUp(self):
+        self.snapshot = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-23-v6.json').read_text())
+
+    def test_pedro_druck_declara_13h_sem_somar_a_55_de_novo(self):
+        druck = fechar.calcular(self.snapshot)['individuais']['Pedro Druck']
+        self.assertEqual(druck['estimativa_min'], 860)
+        self.assertEqual(druck['real_min'], 780)
+        self.assertTrue(druck['completo'])
+
+    def test_seis_declaracoes_completam_a_contribuicao(self):
+        result = fechar.calcular(self.snapshot)
+        # 865 (Hugo) + 930 (Heitor) + 860 (Philipe) + 750 (Pedro Henrique) + 560 (Daniel) + 780 (Pedro Druck).
+        self.assertEqual(result['total_conhecido_min'], 4745)
+        self.assertTrue(result['pci_completo'])
+        tabela = fechar.contribuicao(result)
+        self.assertIn('16,44', tabela.replace('\\%', ''))
+        self.assertNotIn('parcial', tabela)
+
+    def test_v5_permanece_como_historico(self):
+        v5 = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-23-v5.json').read_text())
+        self.assertEqual(fechar.calcular(v5)['total_conhecido_min'], 4025)
+
+
 if __name__ == '__main__':
     unittest.main()
