@@ -6,16 +6,17 @@ Portal de Serviços e do aplicativo em relação ao propósito definido na [Fase
 Ela também inclui a [ação de melhoria](fase4-melhoria.md), exigida na Entrega 2 e justificada
 pelas evidências coletadas.
 
-> **Situação em 23/11/2026.** Os oito CSV têm registros de seis sessões (S01 a S08), cobrindo P1
-> a P7 com duas lacunas declaradas: o aplicativo na rede degradada e o contexto CT04. Todos os valores
-> são primeira leitura, pendentes de conferência independente, e por isso sem nível de pontuação. A
+> **Situação em 23/11/2026.** Os oito CSV têm registros de seis sessões (S01, S02, S03, S05, S06 e S08), cobrindo P1
+> a P7 com duas lacunas declaradas: o aplicativo na rede degradada e o contexto CT04. Os valores
+> são primeira leitura, exceto P1 a P3 da S02, que tiveram segunda leitura independente (uma rolagem
+> do P3 segue pendente); sem a conferência completa, não há nível de pontuação. A
 > [análise](fase4-analise.md) traz os valores observados e mantém os objetivos inconclusivos. A
 > [proposta de processo e templates de melhoria](fase4-melhoria.md) está entregue, sem comprovação de
 > eficácia no serviço.
 
 O [acompanhamento da coleta](fase4-coleta.md) reúne as pendências da #46, a proposta de
 reagendamento e o cálculo reproduzível da #47. O prazo original da coleta (18/11) foi
-reprogramado e a coleta ocorreu de 21 a 23/11. Sem a segunda leitura, a consolidação registra valores
+reprogramado e a coleta ocorreu em 21 e 22/11. Sem a segunda leitura, a consolidação registra valores
 observados sem níveis de qualidade.
 
 ## 1. Atividades, responsáveis e prazos

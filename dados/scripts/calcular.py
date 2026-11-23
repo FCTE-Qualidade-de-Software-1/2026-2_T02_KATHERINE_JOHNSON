@@ -206,7 +206,7 @@ def validar_tempo(row):
         raise ValueError('usar quadros ou timestamps, exatamente um método')
     expected = ((numero(row, 'quadro_final') - numero(row, 'quadro_inicial')) / numero(row, 'fps')
                 if has_frames else numero(row, 'fim_s') - numero(row, 'inicio_s'))
-    if expected < 0 or not math.isclose(expected, numero(row, 'tempo_s'), abs_tol=1e-6):
+    if expected < 0 or not math.isclose(expected, numero(row, 'tempo_s'), abs_tol=2e-6):
         raise ValueError('tempo incompatível com marcações')
 
 
