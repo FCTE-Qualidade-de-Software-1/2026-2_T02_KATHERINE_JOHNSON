@@ -29,9 +29,10 @@ A [Metodologia](metodologia.md) descreve o método em visão geral e o passo a p
 2. **[Fase 2](fase2.md)** — especificar a avaliação com o método GQM: objetivos, questões,
    hipóteses, métricas, níveis de pontuação e critérios de julgamento.
 3. **[Fase 3](fase3.md)** — plano de avaliação: método, ambiente, massa de dados e cronograma
-   (documentação preparada para revisão na Entrega 2; sessões reais pendentes).
+   (plano executado em seis sessões de coleta, de 21 a 23/11/2026).
 4. **[Fase 4](fase4.md)** — executar a avaliação e julgar os resultados, com a
-   [ação de melhoria](fase4-melhoria.md) (Entrega 2; execução ainda não iniciada).
+   [ação de melhoria](fase4-melhoria.md) (Entrega 2; valores de primeira leitura, ainda sem
+   segunda leitura independente e, por isso, sem níveis de pontuação).
 
 A execução do projeto é acompanhada com métricas PSM/CID, descritas em
 [Gestão](gestao.md), e as decisões da equipe ficam registradas nas [Atas](atas.md).
@@ -39,7 +40,7 @@ A execução do projeto é acompanhada com métricas PSM/CID, descritas em
 ## Situação atual
 
 A **Entrega 1** (Fases 1 e 2) foi concluída em 26/10/2026; a versão entregue, com o PDF do artigo,
-está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases). As Fases 3 e 4 fazem parte da Entrega 2, prevista para 22/11/2026: o plano da Fase 3 está documentado e a Fase 4 aguarda a execução das sessões de coleta. O andamento das tarefas pode ser acompanhado no
+está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases). As Fases 3 e 4 fazem parte da Entrega 2: o plano da Fase 3 foi executado em seis sessões de coleta (S01 a S08, de 21 a 23/11/2026) e a Fase 4 traz os valores observados, a análise e a ação de melhoria entregue. Os valores são de primeira leitura, a conferência independente está concluída apenas para P1 a P3 da S02 e os objetivos de medição permanecem inconclusivos; as lacunas (aplicativo na rede degradada e contexto CT04) estão declaradas. O andamento das tarefas pode ser acompanhado no
 [quadro do backlog](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38) (acesso restrito aos membros da organização; as
 [issues](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues) e os [milestones](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/milestones) são públicos).
 
