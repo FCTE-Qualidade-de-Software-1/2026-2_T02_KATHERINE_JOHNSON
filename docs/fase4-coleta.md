@@ -152,7 +152,7 @@ ainda precisam ser confirmadas nas issues e no Project.
 | 2 | S01: piloto, telas e validação dos instrumentos | Hugo; Philipe registra | Pedro Druck | 19/11; após S00 |
 | 3 | S02: P1–P5 nos contextos de referência | Hugo; Philipe registra | Pedro Druck | 19–20/11; piloto liberado |
 | 4 | S03: P6 por plataforma/navegador | Pedro Druck; Hugo registra; Heitor executa CT06 | Philipe | 20/11; inventários confirmados |
-| 5 | S04: P7 nas três redes | Philipe; Pedro Druck registra | Hugo | 20/11; redes validadas nos dois sentidos |
+| 5 | S04: P7 nas três redes | Philipe; Pedro Druck registra | Hugo | 20/11; redes validadas nos dois sentidos. Executado como S08 em 22–23/11 (caso V4) |
 | 6 | S05: contingências, anonimização e cálculo | Hugo, Pedro Druck e Philipe | Daniel revisa a entrega | 20/11; antes de passar dados à #48 |
 
 *Tabela 2 — Proposta de recuperação da coleta. Fonte: sequência do plano da Fase 3.*
