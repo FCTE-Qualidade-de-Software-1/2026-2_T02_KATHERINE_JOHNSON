@@ -165,7 +165,14 @@ valor do script (2) e a linha da repetição 2 do aplicativo permanece **sem `re
 | Portal | Rolagens | 0, 0, 0 | 0, 0, 0 | Concordância |
 | Aplicativo | Passos | 6, 6, 6 | 6, 6, 6 | Concordância |
 | Aplicativo | Transições | 5, 5, 5 | 5, 5, 5 | Concordância |
-| Aplicativo | Rolagens | 2, 2, 2 | 2, 1, 2 | Divergência na repetição 2 (pendente de revisão conjunta) |
+| Aplicativo | Rolagens | 2, 2, 2 | 2, 1, 2 | Divergência na repetição 2, resolvida em conjunto: 1 rolagem |
+
+### Resolução da divergência (23/11/2026)
+
+Heitor e Pedro Druck reviram juntos a gravação da repetição 2 do aplicativo e decidiram por **uma**
+rolagem: há um único gesto efetivo de rolagem até a lista. O `fluxo.csv` passou a registrar 1 nessa
+repetição, com `revisor` "Heitor e Pedro Druck". Registro em
+[segunda-leitura-p4-p7-2026-11-23.md](segunda-leitura-p4-p7-2026-11-23.md), Seção 3.
 
 ## 5. Quadro consolidado
 
@@ -174,7 +181,7 @@ valor do script (2) e a linha da repetição 2 do aplicativo permanece **sem `re
 | P1 | 5/15, 5/15, 17/17 e 16/17 | Sem divergência | Conferido |
 | P2 | 16 paritários e 1 ausente no aplicativo (R14) | Sem divergência | Conferido |
 | P3, portal | 4 passos, 3 transições e 0 rolagens nas três repetições | Sem divergência | Conferido |
-| P3, aplicativo | 6 passos e 5 transições nas três repetições; rolagens 2, 1 e 2 | Uma divergência (rolagens, repetição 2) | Repetições 1 e 3 conferidas; repetição 2 pendente de revisão conjunta |
+| P3, aplicativo | 6 passos e 5 transições nas três repetições; rolagens 2, 1 e 2 | Uma divergência (rolagens, repetição 2) | Conferido; repetição 2 resolvida em conjunto (1 rolagem) |
 
 ## 6. Referências
 
