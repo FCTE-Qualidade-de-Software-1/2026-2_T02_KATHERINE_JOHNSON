@@ -111,8 +111,8 @@ Daniel declarou **9 h 20 min** como total individual na E2, em 23/11, contra 9 h
 estimativa da própria pessoa, aproximada segundo ela, e não cronometragem. Ele confirma o valor em
 comentário no próprio PR.
 
-Pedro Druck declarou **13 h** como total individual na E2, em 23/11, no PR #83: 6 h na #47, 6 h na
-#36 e 1 h na #55, contra 14 h 20 min estimadas (a #36, a #55 e um terço da #47). A 1 h já registrada
+Pedro Druck declarou **13 h** como total individual na E2, em 23/11, no PR #83: 6 h na #47, 6 h na #36
+e 1 h na #55, contra 14 h 20 min estimadas (a #36, a #55 e um terço da #47). A 1 h já registrada
 na #55 faz parte desse total e não é somada de novo.
 
 Com as seis declarações totais, as horas da E2 somam **79 h 05 min**: 15 h 30 min de Heitor,
