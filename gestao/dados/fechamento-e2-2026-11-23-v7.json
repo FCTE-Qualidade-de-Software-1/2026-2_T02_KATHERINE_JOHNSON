@@ -1,0 +1,735 @@
+{
+  "consultado_em": "2026-11-22T02:00:20-03:00",
+  "corte": "2026-11-22",
+  "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON",
+  "commit_main": "da717f2da6327f93902f0cccc84f9906314a658e",
+  "origem": "Consulta somente de leitura via gh issue list e gh pr list; responsáveis conforme planejamento no corpo das issues. Nenhum campo remoto alterado. A declaração de Heitor foi acrescentada em 22/11, depois da consulta; issues e PRs permanecem os da consulta de 02:00.",
+  "issues": [
+    {
+      "numero": 28,
+      "titulo": "[E2] Aplicar correções indicadas no Ponto de Controle 1",
+      "estado": "CLOSED",
+      "fechada_em": "2026-11-15T19:35:42Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/28",
+      "prazo": "2026-11-15",
+      "estimativa_h": 3.0,
+      "real_h": 1.0,
+      "responsaveis": [
+        "Daniel"
+      ],
+      "criterios_concluidos": 4,
+      "criterios_total": 4
+    },
+    {
+      "numero": 36,
+      "titulo": "[E2] Fase 4: executar a ação de melhoria obrigatória",
+      "estado": "OPEN",
+      "fechada_em": null,
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36",
+      "prazo": "2026-11-21",
+      "estimativa_h": 8.0,
+      "real_h": null,
+      "responsaveis": [
+        "Pedro Druck"
+      ],
+      "criterios_concluidos": 0,
+      "criterios_total": 5
+    },
+    {
+      "numero": 46,
+      "titulo": "[E2] Fase 3: plano de avaliação (método, ambiente, massa de dados e cronograma)",
+      "estado": "CLOSED",
+      "fechada_em": "2026-11-16T11:34:18Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46",
+      "prazo": "2026-11-15",
+      "estimativa_h": 11.0,
+      "real_h": null,
+      "responsaveis": [
+        "Hugo",
+        "Philipe"
+      ],
+      "criterios_concluidos": 7,
+      "criterios_total": 14
+    },
+    {
+      "numero": 47,
+      "titulo": "[E2] Fase 4: coleta das medições e dados brutos",
+      "estado": "OPEN",
+      "fechada_em": null,
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47",
+      "prazo": "2026-11-18",
+      "estimativa_h": 16.0,
+      "real_h": null,
+      "responsaveis": [
+        "Hugo",
+        "Pedro Druck",
+        "Philipe"
+      ],
+      "criterios_concluidos": 2,
+      "criterios_total": 8
+    },
+    {
+      "numero": 48,
+      "titulo": "[E2] Fase 4: análise, respostas GQM e julgamento",
+      "estado": "OPEN",
+      "fechada_em": null,
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48",
+      "prazo": "2026-11-20",
+      "estimativa_h": 11.0,
+      "real_h": null,
+      "responsaveis": [
+        "Pedro Henrique",
+        "Philipe"
+      ],
+      "criterios_concluidos": 2,
+      "criterios_total": 9
+    },
+    {
+      "numero": 49,
+      "titulo": "[E2] Fechamento da Entrega 2 (artigo v2, GitPage, PSM, contribuição, IA, release e apresentação)",
+      "estado": "OPEN",
+      "fechada_em": null,
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/49",
+      "prazo": "2026-11-22",
+      "estimativa_h": 13.0,
+      "real_h": null,
+      "responsaveis": [
+        "Daniel",
+        "Heitor"
+      ],
+      "criterios_concluidos": 0,
+      "criterios_total": 19
+    },
+    {
+      "numero": 53,
+      "titulo": "[E2] Coleta intermediária PSM/CID e slides da apresentação de 11/11",
+      "estado": "CLOSED",
+      "fechada_em": "2026-11-11T13:59:48Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/53",
+      "prazo": "2026-11-11",
+      "estimativa_h": 4.0,
+      "real_h": 3.0,
+      "responsaveis": [
+        "Heitor"
+      ],
+      "criterios_concluidos": 0,
+      "criterios_total": 8
+    },
+    {
+      "numero": 55,
+      "titulo": "[E2] Inconsistências nos registros de gestão PSM/CID",
+      "estado": "CLOSED",
+      "fechada_em": "2026-11-11T15:55:53Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/55",
+      "prazo": "2026-11-17",
+      "estimativa_h": 1.0,
+      "real_h": 1.0,
+      "responsaveis": [
+        "Pedro Druck"
+      ],
+      "criterios_concluidos": 0,
+      "criterios_total": 8
+    }
+  ],
+  "prs": [
+    {
+      "numero": 52,
+      "titulo": "docs(gestao): detalha o PSM/CID na GitPage e compara com o período antes do plano",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-04T18:24:32Z",
+      "integrado_em": "2026-11-04T18:30:11Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/52",
+      "autor": "HeitorM50",
+      "revisoes": [
+        {
+          "autor": "PedroGTG",
+          "estado": "APPROVED",
+          "data": "2026-11-04T18:29:38Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "8a7fba89442c8182d46e31a33954ae39350d1d23",
+          "data": "2026-11-04T18:24:08Z"
+        }
+      ]
+    },
+    {
+      "numero": 54,
+      "titulo": "docs(gestao): coleta intermediaria PSM/CID da Entrega 2 e slides de 11/11",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-11T02:35:51Z",
+      "integrado_em": "2026-11-11T13:59:47Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/54",
+      "autor": "HeitorM50",
+      "revisoes": [
+        {
+          "autor": "PedroGTG",
+          "estado": "APPROVED",
+          "data": "2026-11-11T13:59:17Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "7b3dbcc87e34046099160f83443eadf31feb8773",
+          "data": "2026-11-11T02:35:39Z"
+        },
+        {
+          "sha": "3176b3b1a4c5b7c9c6249b7799ba67f284322e36",
+          "data": "2026-11-11T02:42:53Z"
+        },
+        {
+          "sha": "327932d281e0b186c919161ef7c88e3428486c02",
+          "data": "2026-11-11T13:48:52Z"
+        }
+      ]
+    },
+    {
+      "numero": 56,
+      "titulo": "docs(gestao): corrige inconsistências dos registros PSM/CID",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-11T15:49:48Z",
+      "integrado_em": "2026-11-11T15:55:51Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/56",
+      "autor": "pedruck",
+      "revisoes": [
+        {
+          "autor": "Phill-Chill",
+          "estado": "APPROVED",
+          "data": "2026-11-11T15:55:44Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "e3b5719866c9d0372535d9b003f0f6009984afcf",
+          "data": "2026-11-11T15:49:33Z"
+        },
+        {
+          "sha": "6ae8a485ef4a856bb26211130320fc948f5c937a",
+          "data": "2026-11-11T15:52:54Z"
+        }
+      ]
+    },
+    {
+      "numero": 57,
+      "titulo": "docs(fase3): consolida plano de avaliação da E2",
+      "base": "46-e2-fase-3-plano-de-avaliacao-metodo-ambiente-massa-de-dados-e-cronograma",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-14T00:47:59Z",
+      "integrado_em": "2026-11-16T03:40:33Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/57",
+      "autor": "HugoFreitass",
+      "revisoes": [
+        {
+          "autor": "PedroGTG",
+          "estado": "APPROVED",
+          "data": "2026-11-16T01:12:27Z"
+        },
+        {
+          "autor": "HeitorM50",
+          "estado": "APPROVED",
+          "data": "2026-11-16T03:40:30Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "bdd5192f284e39515734d68dc30c35d5133cc713",
+          "data": "2026-11-14T00:42:55Z"
+        },
+        {
+          "sha": "f4f8be3b0ccb6026bc1201e66aa90479a1c8be71",
+          "data": "2026-11-14T00:44:16Z"
+        },
+        {
+          "sha": "286843ddfaae54074b477df0ed684a5365f30a32",
+          "data": "2026-11-14T00:47:26Z"
+        },
+        {
+          "sha": "aa9d3bb38b0b905219004a005edffb9691daadee",
+          "data": "2026-11-15T19:11:46Z"
+        },
+        {
+          "sha": "d5f02d85e0e9994f7496917392a1fa6b6ca156ab",
+          "data": "2026-11-15T19:24:10Z"
+        }
+      ]
+    },
+    {
+      "numero": 58,
+      "titulo": "docs(gestao): aplica correcoes documentais com encaminhamentos do PC1",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-15T17:24:26Z",
+      "integrado_em": "2026-11-15T19:35:41Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/58",
+      "autor": "Daniellira540",
+      "revisoes": [
+        {
+          "autor": "HugoFreitass",
+          "estado": "APPROVED",
+          "data": "2026-11-15T19:34:08Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "ca91723e9fc69326e7c80378f477b3b2ec81cc03",
+          "data": "2026-11-15T17:15:58Z"
+        }
+      ]
+    },
+    {
+      "numero": 59,
+      "titulo": "docs(gitpage): páginas da Fase 4 e da ação de melhoria (E2)",
+      "base": "46-e2-fase-3-plano-de-avaliacao-metodo-ambiente-massa-de-dados-e-cronograma",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-16T03:20:04Z",
+      "integrado_em": "2026-11-16T11:34:27Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/59",
+      "autor": "HeitorM50",
+      "revisoes": [
+        {
+          "autor": "Phill-Chill",
+          "estado": "APPROVED",
+          "data": "2026-11-16T11:34:14Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "be4850aad314bd5bad1c2b52c74296104a13b6f5",
+          "data": "2026-11-16T03:19:53Z"
+        },
+        {
+          "sha": "f091837ddc3f10e98688636d8ea72286fbbf18d5",
+          "data": "2026-11-16T03:41:07Z"
+        }
+      ]
+    },
+    {
+      "numero": 60,
+      "titulo": "docs(gestao): rascunho da coleta de acompanhamento PSM/CID da E2 (17/11)",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-16T03:24:07Z",
+      "integrado_em": "2026-11-16T13:56:22Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/60",
+      "autor": "HeitorM50",
+      "revisoes": [
+        {
+          "autor": "PedroGTG",
+          "estado": "APPROVED",
+          "data": "2026-11-16T13:56:10Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "115f0f6ebae60777a47e0bd9652aefe54cc0a858",
+          "data": "2026-11-16T03:23:55Z"
+        },
+        {
+          "sha": "20f79d7cdcb86460d72c6c18e6f8a6194a688e9f",
+          "data": "2026-11-16T03:41:45Z"
+        },
+        {
+          "sha": "001b0245633ed6652a419af55eaf42a95c9a2d52",
+          "data": "2026-11-16T11:39:35Z"
+        }
+      ]
+    },
+    {
+      "numero": 61,
+      "titulo": "docs(fase3): leva o plano de avaliação da Fase 3 para a main (#46)",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-16T03:46:07Z",
+      "integrado_em": "2026-11-16T11:34:16Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/61",
+      "autor": "HeitorM50",
+      "revisoes": [],
+      "commits": [
+        {
+          "sha": "04d5a6ba72acbc9ba9dbb180d4a203d747017e18",
+          "data": "2026-11-13T16:33:55Z"
+        },
+        {
+          "sha": "22bee640201ad49bfd3b0754e7f47e1f555f31ae",
+          "data": "2026-11-13T17:34:41Z"
+        },
+        {
+          "sha": "a1317b1fc37f87f267fd1b683e8c136e77a30cb3",
+          "data": "2026-11-13T17:34:42Z"
+        },
+        {
+          "sha": "e17c816e87b71f2d2552e5d524562f1541e798f8",
+          "data": "2026-11-13T17:34:42Z"
+        },
+        {
+          "sha": "a3445485e484ddd1bae699ab68eb53d4797b4173",
+          "data": "2026-11-13T17:34:42Z"
+        },
+        {
+          "sha": "edf95db8d64ecf1e2362b36064ed6f4d6aa03ede",
+          "data": "2026-11-13T17:34:42Z"
+        },
+        {
+          "sha": "bdd5192f284e39515734d68dc30c35d5133cc713",
+          "data": "2026-11-14T00:42:55Z"
+        },
+        {
+          "sha": "f4f8be3b0ccb6026bc1201e66aa90479a1c8be71",
+          "data": "2026-11-14T00:44:16Z"
+        },
+        {
+          "sha": "286843ddfaae54074b477df0ed684a5365f30a32",
+          "data": "2026-11-14T00:47:26Z"
+        },
+        {
+          "sha": "aa9d3bb38b0b905219004a005edffb9691daadee",
+          "data": "2026-11-15T19:11:46Z"
+        },
+        {
+          "sha": "d5f02d85e0e9994f7496917392a1fa6b6ca156ab",
+          "data": "2026-11-15T19:24:10Z"
+        },
+        {
+          "sha": "427eca624d2d611d5b15585e43a56adfb02e8e14",
+          "data": "2026-11-16T03:40:32Z"
+        }
+      ]
+    },
+    {
+      "numero": 62,
+      "titulo": "docs(fase4): inicio  da issue 48 (depende de resultados da issue #47)",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-16T04:17:10Z",
+      "integrado_em": "2026-11-16T11:34:14Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/62",
+      "autor": "PedroGTG",
+      "revisoes": [
+        {
+          "autor": "HeitorM50",
+          "estado": "APPROVED",
+          "data": "2026-11-16T11:33:48Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "04d5a6ba72acbc9ba9dbb180d4a203d747017e18",
+          "data": "2026-11-13T16:33:55Z"
+        },
+        {
+          "sha": "22bee640201ad49bfd3b0754e7f47e1f555f31ae",
+          "data": "2026-11-13T17:34:41Z"
+        },
+        {
+          "sha": "a1317b1fc37f87f267fd1b683e8c136e77a30cb3",
+          "data": "2026-11-13T17:34:42Z"
+        },
+        {
+          "sha": "e17c816e87b71f2d2552e5d524562f1541e798f8",
+          "data": "2026-11-13T17:34:42Z"
+        },
+        {
+          "sha": "a3445485e484ddd1bae699ab68eb53d4797b4173",
+          "data": "2026-11-13T17:34:42Z"
+        },
+        {
+          "sha": "edf95db8d64ecf1e2362b36064ed6f4d6aa03ede",
+          "data": "2026-11-13T17:34:42Z"
+        },
+        {
+          "sha": "bdd5192f284e39515734d68dc30c35d5133cc713",
+          "data": "2026-11-14T00:42:55Z"
+        },
+        {
+          "sha": "f4f8be3b0ccb6026bc1201e66aa90479a1c8be71",
+          "data": "2026-11-14T00:44:16Z"
+        },
+        {
+          "sha": "286843ddfaae54074b477df0ed684a5365f30a32",
+          "data": "2026-11-14T00:47:26Z"
+        },
+        {
+          "sha": "aa9d3bb38b0b905219004a005edffb9691daadee",
+          "data": "2026-11-15T19:11:46Z"
+        },
+        {
+          "sha": "d5f02d85e0e9994f7496917392a1fa6b6ca156ab",
+          "data": "2026-11-15T19:24:10Z"
+        },
+        {
+          "sha": "427eca624d2d611d5b15585e43a56adfb02e8e14",
+          "data": "2026-11-16T03:40:32Z"
+        },
+        {
+          "sha": "a6530452f013bc766a0cf7096772eba65f5f1622",
+          "data": "2026-11-16T04:02:55Z"
+        },
+        {
+          "sha": "20b8b4e4ab42487a3ab7d685e3e078f74bbd1cfc",
+          "data": "2026-11-16T04:08:12Z"
+        },
+        {
+          "sha": "928938897cf577d973cd786837fe50676734f885",
+          "data": "2026-11-16T04:08:12Z"
+        },
+        {
+          "sha": "b123e269f042e2e11d6765e9a1d47a1bf3961ed7",
+          "data": "2026-11-16T04:08:12Z"
+        },
+        {
+          "sha": "f9431a83ef37f31f1a5c7e8fe1c98d28119078b6",
+          "data": "2026-11-16T04:08:12Z"
+        }
+      ]
+    },
+    {
+      "numero": 63,
+      "titulo": "docs(gitpage): leva as páginas da Fase 4 e da ação de melhoria para a main (D15)",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-16T12:16:28Z",
+      "integrado_em": "2026-11-16T13:35:40Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/63",
+      "autor": "HeitorM50",
+      "revisoes": [
+        {
+          "autor": "PedroGTG",
+          "estado": "APPROVED",
+          "data": "2026-11-16T13:35:27Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "cf889d8875af93995b3f0ea5d85fd415b3c89f74",
+          "data": "2026-11-16T12:16:00Z"
+        },
+        {
+          "sha": "93228d16ffcc1e6d31bd8af198c47e3f4a1fed73",
+          "data": "2026-11-16T12:16:00Z"
+        },
+        {
+          "sha": "e7d8e6695fdb8bf0156c62ec77c99bd6976622e6",
+          "data": "2026-11-16T12:16:24Z"
+        }
+      ]
+    },
+    {
+      "numero": 64,
+      "titulo": "feat(pages): moderniza o visual sem alterar o conteúdo",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-16T14:22:23Z",
+      "integrado_em": "2026-11-16T17:16:09Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/64",
+      "autor": "HugoFreitass",
+      "revisoes": [
+        {
+          "autor": "HeitorM50",
+          "estado": "APPROVED",
+          "data": "2026-11-16T17:08:14Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "d7f0fe506c2253a1aa45686d53ab794386414f50",
+          "data": "2026-11-16T14:21:53Z"
+        }
+      ]
+    },
+    {
+      "numero": 65,
+      "titulo": "docs(gestao): corrige a situação dos critérios da #46 na coleta de acompanhamento",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-16T17:09:01Z",
+      "integrado_em": "2026-11-17T22:52:02Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/65",
+      "autor": "HeitorM50",
+      "revisoes": [
+        {
+          "autor": "Daniellira540",
+          "estado": "APPROVED",
+          "data": "2026-11-17T22:51:50Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "5258ed81621f43e1c8a5a71bf8e093656e971d0e",
+          "data": "2026-11-16T17:08:57Z"
+        }
+      ]
+    },
+    {
+      "numero": 66,
+      "titulo": "docs: corrige as menções ao iPhone, que é de Heitor",
+      "base": "main",
+      "estado": "OPEN",
+      "aberto_em": "2026-11-16T19:28:48Z",
+      "integrado_em": null,
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/66",
+      "autor": "HeitorM50",
+      "revisoes": [
+        {
+          "autor": "pedruck",
+          "estado": "APPROVED",
+          "data": "2026-11-20T16:51:15Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "5da56b8cbf02930b7da3fb634e296850482a59d8",
+          "data": "2026-11-16T19:28:44Z"
+        }
+      ]
+    },
+    {
+      "numero": 67,
+      "titulo": "feat(fase4): automatiza cálculo e organiza evidências da coleta",
+      "base": "main",
+      "estado": "MERGED",
+      "aberto_em": "2026-11-19T16:51:04Z",
+      "integrado_em": "2026-11-21T12:30:39Z",
+      "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/67",
+      "autor": "HugoFreitass",
+      "revisoes": [
+        {
+          "autor": "Daniellira540",
+          "estado": "APPROVED",
+          "data": "2026-11-21T12:30:25Z"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "2efaac62643c4e158cb277797be358b3c048a923",
+          "data": "2026-11-19T04:10:43Z"
+        },
+        {
+          "sha": "f925c1d4011e3c4650cde3fcf958f1d8efc5a0df",
+          "data": "2026-11-19T16:44:58Z"
+        },
+        {
+          "sha": "6d05184efa39eac7aa66cc92438accf40b85c68b",
+          "data": "2026-11-19T16:50:28Z"
+        },
+        {
+          "sha": "a90f6feab4e626880a7b747ffa7a7fb3767fa2aa",
+          "data": "2026-11-20T17:00:40Z"
+        },
+        {
+          "sha": "8e2b3b72bcf45543a3d70f2456bab12434983584",
+          "data": "2026-11-20T17:08:12Z"
+        },
+        {
+          "sha": "472ee1d822ac0418155dd746dde35a59771680b4",
+          "data": "2026-11-20T17:22:12Z"
+        },
+        {
+          "sha": "d8d1beee07d23adebfdd5f4ecf457773494b1c09",
+          "data": "2026-11-20T17:24:15Z"
+        },
+        {
+          "sha": "1cb32dd19570c1ab1a8b356cc89e690ea87dc120",
+          "data": "2026-11-20T17:34:11Z"
+        },
+        {
+          "sha": "6f383cb3012a5b0fb7f0f05ba89b72bcd03a062a",
+          "data": "2026-11-21T00:58:16Z"
+        },
+        {
+          "sha": "31dc7ca64ac21dfacdab3d254bd693296aa5682a",
+          "data": "2026-11-21T01:00:01Z"
+        },
+        {
+          "sha": "becba8fed4e752c72dd4228c7538307aa9dba685",
+          "data": "2026-11-21T01:14:23Z"
+        }
+      ]
+    }
+  ],
+  "declaracoes": [
+    {
+      "integrante": "Hugo",
+      "data": "2026-11-23",
+      "fonte": "Declaração do próprio Hugo em 23/11/2026: total de 14 h 25 min na E2. Substitui a declaração de 22/11 (11 h 50 min). Acréscimo de 1 h declarado por Hugo em 23/11/2026 à noite, presencialmente a Heitor, que o registrou a pedido: revisão conjunta das cinco divergências de tempo da segunda leitura da #47. Total: 15 h 25 min.",
+      "acrescimo_min": 275,
+      "issues_estimativa": [
+        46,
+        47
+      ],
+      "metodo_estimativa": "Estimativa individual do planejamento: 5 h 30 min na #46 e 5 h 20 min na #47.",
+      "escopo": "Total individual da E2, sem distribuição declarada entre issues; substitui qualquer soma parcial das mesmas atividades, nunca adiciona duas vezes.",
+      "completo": true
+    },
+    {
+      "integrante": "Heitor",
+      "data": "2026-11-23",
+      "fonte": "Estimativa de Heitor, calculada com apoio de Claude Code a partir de registros datados (commits, PRs, revisões, comentários e horários da sessão de trabalho), agrupados em blocos; não é cronometragem. Composição: 11 h declaradas em 22/11 (até 13:15), mais cerca de 4,5 h depois disso (22/11 à noite, 0,6 h; 23/11 de 08:20 a 11:21, 3,0 h, incluindo a segunda leitura da S02, que não deixa commit; e 0,7 h até cerca de 12:00), somando 15,5 h. Valor conferido e aceito por Heitor em 23/11/2026. Acréscimo de 3 h declarado por Heitor em 23/11/2026 à noite: segunda leitura independente de P4 a P7 da #47 (PR #90), feita depois do horário coberto acima. Total: 18 h 30 min.",
+      "acrescimo_min": 480,
+      "issues_estimativa": [
+        49,
+        53
+      ],
+      "metodo_estimativa": "Estimativa individual do planejamento: 6 h 30 min na #49 e 4 h na #53.",
+      "escopo": "Total individual da E2 até a noite de 23/11/2026, sem distribuição completa entre issues (3 h na #47); substitui as 3 h já registradas na #53 e as declarações de 11 h (22/11) e 15 h 30 min (23/11), nunca adiciona duas vezes.",
+      "completo": true
+    },
+    {
+      "integrante": "Philipe",
+      "data": "2026-11-23",
+      "fonte": "Declaração de Philipe (total de 14 h 20 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Philipe estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR. Acréscimo de 1 h declarado por Philipe em 23/11/2026 à noite, presencialmente a Heitor, que o registrou a pedido: conferência do S03 B04 e revisão conjunta das divergências de tempo da #47. Total: 15 h 20 min.",
+      "acrescimo_min": -60,
+      "issues_estimativa": [
+        46,
+        47,
+        48
+      ],
+      "metodo_estimativa": "Estimativa individual do planejamento: 5 h 30 min na #46, 5 h 20 min na #47 e 5 h 30 min na #48.",
+      "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
+      "completo": true
+    },
+    {
+      "integrante": "Pedro Henrique",
+      "data": "2026-11-23",
+      "fonte": "Declaração de Pedro Henrique (total de 12 h 30 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Pedro Henrique estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR.",
+      "acrescimo_min": 420,
+      "issues_estimativa": [
+        48
+      ],
+      "metodo_estimativa": "Estimativa individual do planejamento: 5 h 30 min na #48.",
+      "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
+      "completo": true
+    },
+    {
+      "integrante": "Daniel",
+      "data": "2026-11-23",
+      "fonte": "Declaração de Daniel (total de 9 h 20 min na E2, valor aproximado segundo a própria pessoa), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR.",
+      "acrescimo_min": -10,
+      "issues_estimativa": [
+        28,
+        49
+      ],
+      "metodo_estimativa": "Estimativa individual do planejamento: 3 h na #28 e 6 h 30 min na #49.",
+      "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
+      "completo": true
+    },
+    {
+      "integrante": "Pedro Druck",
+      "data": "2026-11-23",
+      "fonte": "Declaração de Pedro Druck no PR #83 (total de 13 h na E2: 6 h na #47, 6 h na #36 e 1 h na #55), aberto pela própria pessoa em 23/11/2026. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe.",
+      "acrescimo_min": -80,
+      "issues_estimativa": [
+        36,
+        47,
+        55
+      ],
+      "metodo_estimativa": "Estimativa individual de Pedro Druck na #36 (8 h) e na #55 (1 h) mais um terço da #47 (16 h ÷ 3 = 5 h 20 min): 14 h 20 min.",
+      "escopo": "Total individual da E2 até 23/11/2026, com a distribuição entre issues declarada pela própria pessoa; inclui a 1 h já registrada na #55, sem somá-la de novo.",
+      "completo": true
+    }
+  ],
+  "declaracoes_atualizadas_em": "2026-11-23T23:59:00-03:00"
+}

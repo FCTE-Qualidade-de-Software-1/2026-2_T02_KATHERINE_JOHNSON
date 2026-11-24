@@ -174,5 +174,25 @@ class DeclaracoesV6Test(unittest.TestCase):
         self.assertEqual(fechar.calcular(v5)['total_conhecido_min'], 4025)
 
 
+
+class DeclaracoesV7Test(unittest.TestCase):
+    def setUp(self):
+        self.snapshot = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-23-v7.json').read_text())
+
+    def test_segunda_leitura_da_47_soma_5h(self):
+        result = fechar.calcular(self.snapshot)
+        ind = result['individuais']
+        self.assertEqual(ind['Heitor']['real_min'], 1110)
+        self.assertEqual(ind['Hugo']['real_min'], 925)
+        self.assertEqual(ind['Philipe']['real_min'], 920)
+        # 4745 da v6 + 180 (Heitor) + 60 (Hugo) + 60 (Philipe).
+        self.assertEqual(result['total_conhecido_min'], 5045)
+        self.assertTrue(result['pci_completo'])
+
+    def test_v6_permanece_como_historico(self):
+        v6 = json.loads((ROOT/'gestao/dados/fechamento-e2-2026-11-23-v6.json').read_text())
+        self.assertEqual(fechar.calcular(v6)['total_conhecido_min'], 4745)
+
+
 if __name__ == '__main__':
     unittest.main()
