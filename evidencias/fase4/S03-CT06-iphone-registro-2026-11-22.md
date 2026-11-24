@@ -10,7 +10,7 @@ aprovação de piloto.
 | Item | Registro |
 |---|---|
 | Sessão, bloco, data, início e fim (Brasília) | S03, B04, 22/11/2026, das 12:06:20 às 12:10:45 |
-| Executor / registrador / conferente independente | Heitor (executor); sem registrador (D028); conferente indicado: Philipe (pendente) |
+| Executor / registrador / conferente independente | Heitor (executor); sem registrador (D028); conferente independente: Philipe (conferido em 23/11/2026) |
 | Veículo e infração (somente códigos) | V5 (código novo, titular Heitor; vínculo conciliado com a tabela privada por Hugo, PR #84) e V5-I1 (D029) |
 | Titular | O executor é também o titular e fez o login pessoalmente; os dados do titular ficam só no registro privado (D028) |
 | Contexto e rede | CT06 (iPhone D04, aplicativo 2.7.1), Wi-Fi sem limitação; linha `S03,CT06,...,wifi` em `ambientes.csv` |
@@ -88,7 +88,7 @@ resultados em `tentativas.csv`, o que foi feito.
 
 | Chave do registro | Primeira leitura | Segunda leitura | Decisão final | Conferente |
 |---|---|---|---|---|
-| `tentativas.csv`, S03, B04, repetições 1 a 3 | concluida, concluida, concluida | | | Philipe (pendente) |
+| `tentativas.csv`, S03, B04, repetições 1 a 3 | concluida, concluida, concluida | concluida, concluida, concluida | Concordância; mantido | Philipe, 23/11/2026 |
 
 Quem confere não pode ter executado a sessão. Só depois da conferência entra o `revisor` no CSV.
 

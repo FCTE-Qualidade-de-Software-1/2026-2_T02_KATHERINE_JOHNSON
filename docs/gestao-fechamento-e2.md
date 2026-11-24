@@ -10,7 +10,7 @@
 |---|---|---|
 | M-CP1 | 4/8 = 50,00% | Vermelho; issues fechadas [28, 46, 53, 55]. A #46 foi fechada com critérios empíricos pendentes e um dia de atraso |
 | M-RC1 | 5,00 h / 8,00 h = -37,50% | Amarelo, somente issues fechadas com horas [28, 53, 55]; não é TVE global |
-| M-RC2 | 79 h 05 min declaradas; PCI final apurado | Declaração total de Hugo, Heitor, Philipe, Pedro Henrique, Daniel e Pedro Druck |
+| M-RC2 | 84 h 05 min declaradas; PCI final apurado | Declaração total de Hugo, Heitor, Philipe, Pedro Henrique, Daniel e Pedro Druck |
 | M-DP1 | 0/13 = 0,00% | Conta PR com revisão humana; PRs sem revisão excluídos: [61]; verde não comprova revisão profunda |
 
 *Tabela 1 — Indicadores no corte. Fonte: consulta de issues e PRs e plano PSM/CID.*
@@ -25,22 +25,22 @@ Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões 
 
 | Integrante | Estimativa individual | Horas conhecidas | Alcance | Participação nas horas conhecidas |
 |---|---|---|---|---|
-| Daniel | 9 h 30 min | 9 h 20 min | Total individual declarado | 11,80% |
-| Heitor | 10 h 30 min | 15 h 30 min | Total individual declarado | 19,60% |
-| Hugo | 10 h 50 min | 14 h 25 min | Total individual declarado | 18,23% |
-| Pedro Druck | 14 h 20 min | 13 h 00 min | Total individual declarado | 16,44% |
-| Pedro Henrique | 5 h 30 min | 12 h 30 min | Total individual declarado | 15,81% |
-| Philipe | 16 h 20 min | 14 h 20 min | Total individual declarado | 18,12% |
+| Daniel | 9 h 30 min | 9 h 20 min | Total individual declarado | 11,10% |
+| Heitor | 10 h 30 min | 18 h 30 min | Total individual declarado | 22,00% |
+| Hugo | 10 h 50 min | 15 h 25 min | Total individual declarado | 18,33% |
+| Pedro Druck | 14 h 20 min | 13 h 00 min | Total individual declarado | 15,46% |
+| Pedro Henrique | 5 h 30 min | 12 h 30 min | Total individual declarado | 14,87% |
+| Philipe | 16 h 20 min | 15 h 20 min | Total individual declarado | 18,24% |
 
 *Tabela 2 — Contribuição da E2. Fonte: mesma consulta e declarações de Hugo, Heitor, Philipe, Pedro Henrique, Daniel e Pedro Druck.*
 
 O denominador da última coluna é a soma dos totais declarados pelos seis integrantes. A decisão de contribuição igual da E1 não foi estendida à E2.
 
-**Hugo** declarou, em 23/11/2026, o total individual de **14 h 25 min** na E2, contra 10 h 50 min estimadas (variação individual +33,08%). Fonte: Declaração do próprio Hugo em 23/11/2026: total de 14 h 25 min na E2. Substitui a declaração de 22/11 (11 h 50 min). Estimativa-base: Estimativa individual do planejamento: 5 h 30 min na #46 e 5 h 20 min na #47. Escopo: Total individual da E2, sem distribuição declarada entre issues; substitui qualquer soma parcial das mesmas atividades, nunca adiciona duas vezes.
+**Hugo** declarou, em 23/11/2026, o total individual de **15 h 25 min** na E2, contra 10 h 50 min estimadas (variação individual +42,31%). Fonte: Declaração do próprio Hugo em 23/11/2026: total de 14 h 25 min na E2. Substitui a declaração de 22/11 (11 h 50 min). Acréscimo de 1 h declarado por Hugo em 23/11/2026 à noite, presencialmente a Heitor, que o registrou a pedido: revisão conjunta das cinco divergências de tempo da segunda leitura da #47. Total: 15 h 25 min. Estimativa-base: Estimativa individual do planejamento: 5 h 30 min na #46 e 5 h 20 min na #47. Escopo: Total individual da E2, sem distribuição declarada entre issues; substitui qualquer soma parcial das mesmas atividades, nunca adiciona duas vezes.
 
-**Heitor** declarou, em 23/11/2026, o total individual de **15 h 30 min** na E2, contra 10 h 30 min estimadas (variação individual +47,62%). Fonte: Estimativa de Heitor, calculada com apoio de Claude Code a partir de registros datados (commits, PRs, revisões, comentários e horários da sessão de trabalho), agrupados em blocos; não é cronometragem. Composição: 11 h declaradas em 22/11 (até 13:15), mais cerca de 4,5 h depois disso (22/11 à noite, 0,6 h; 23/11 de 08:20 a 11:21, 3,0 h, incluindo a segunda leitura da S02, que não deixa commit; e 0,7 h até cerca de 12:00), somando 15,5 h. Valor conferido e aceito por Heitor em 23/11/2026. Estimativa-base: Estimativa individual do planejamento: 6 h 30 min na #49 e 4 h na #53. Escopo: Total individual da E2 até cerca de 12:00 de 23/11, sem distribuição declarada entre issues; substitui as 3 h já registradas na #53 e a declaração de 11 h de 22/11, nunca adiciona duas vezes. Trabalho posterior a esse horário não está incluído.
+**Heitor** declarou, em 23/11/2026, o total individual de **18 h 30 min** na E2, contra 10 h 30 min estimadas (variação individual +76,19%). Fonte: Estimativa de Heitor, calculada com apoio de Claude Code a partir de registros datados (commits, PRs, revisões, comentários e horários da sessão de trabalho), agrupados em blocos; não é cronometragem. Composição: 11 h declaradas em 22/11 (até 13:15), mais cerca de 4,5 h depois disso (22/11 à noite, 0,6 h; 23/11 de 08:20 a 11:21, 3,0 h, incluindo a segunda leitura da S02, que não deixa commit; e 0,7 h até cerca de 12:00), somando 15,5 h. Valor conferido e aceito por Heitor em 23/11/2026. Acréscimo de 3 h declarado por Heitor em 23/11/2026 à noite: segunda leitura independente de P4 a P7 da #47 (PR #90), feita depois do horário coberto acima. Total: 18 h 30 min. Estimativa-base: Estimativa individual do planejamento: 6 h 30 min na #49 e 4 h na #53. Escopo: Total individual da E2 até a noite de 23/11/2026, sem distribuição completa entre issues (3 h na #47); substitui as 3 h já registradas na #53 e as declarações de 11 h (22/11) e 15 h 30 min (23/11), nunca adiciona duas vezes.
 
-**Philipe** declarou, em 23/11/2026, o total individual de **14 h 20 min** na E2, contra 16 h 20 min estimadas (variação individual −12,24%). Fonte: Declaração de Philipe (total de 14 h 20 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Philipe estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR. Estimativa-base: Estimativa individual do planejamento: 5 h 30 min na #46, 5 h 20 min na #47 e 5 h 30 min na #48. Escopo: Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.
+**Philipe** declarou, em 23/11/2026, o total individual de **15 h 20 min** na E2, contra 16 h 20 min estimadas (variação individual −6,12%). Fonte: Declaração de Philipe (total de 14 h 20 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Philipe estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR. Acréscimo de 1 h declarado por Philipe em 23/11/2026 à noite, presencialmente a Heitor, que o registrou a pedido: conferência do S03 B04 e revisão conjunta das divergências de tempo da #47. Total: 15 h 20 min. Estimativa-base: Estimativa individual do planejamento: 5 h 30 min na #46, 5 h 20 min na #47 e 5 h 30 min na #48. Escopo: Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.
 
 **Pedro Henrique** declarou, em 23/11/2026, o total individual de **12 h 30 min** na E2, contra 5 h 30 min estimadas (variação individual +127,27%). Fonte: Declaração de Pedro Henrique (total de 12 h 30 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Pedro Henrique estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR. Estimativa-base: Estimativa individual do planejamento: 5 h 30 min na #48. Escopo: Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.
 
@@ -66,7 +66,7 @@ Esses encaminhamentos são propostas documentadas nesta revisão, não delibera�
 
 ## Fontes e reprodução
 
-- [Consulta datada e declarações individuais](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/dados/fechamento-e2-2026-11-23-v6.json).
+- [Consulta datada e declarações individuais](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/dados/fechamento-e2-2026-11-23-v7.json).
 - [Cálculo e testes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/gestao/scripts).
 - [Planejamento e histórico](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/plano-psm.md).
 
