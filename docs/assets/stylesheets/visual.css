@@ -212,3 +212,156 @@
   .md-typeset .kj-home > ol, .md-typeset .kj-home > ul { display: block; }
   .md-typeset .kj-home > ol > li, .md-typeset .kj-home > ul > li { break-inside: avoid; box-shadow: none; }
 }
+
+/* Diagramas clicáveis da cadeia (index.md, cadeia.js). */
+.kj-cadeia-diagrama {
+  overflow-x: auto;
+  margin: 1rem 0 .4rem;
+  padding: .8rem;
+  border: 1px solid var(--kj-line);
+  border-radius: .6rem;
+  background: var(--kj-surface);
+}
+.kj-cadeia-diagrama svg { width: 100%; max-width: none !important; height: auto; }
+/* Em telas estreitas o diagrama mantém tamanho legível e rola na horizontal. */
+@media (max-width: 60em) { .kj-cadeia-diagrama svg { min-width: 48rem; } }
+.kj-cadeia-diagrama a { cursor: pointer; }
+.kj-cadeia-diagrama:focus-visible,
+.kj-cadeia-diagrama a:focus-visible {
+  outline: 3px solid var(--kj-accent);
+  outline-offset: 2px;
+}
+.kj-cadeia-diagrama a:focus-visible rect,
+.kj-cadeia-diagrama a:hover rect { stroke: var(--kj-accent) !important; stroke-width: 3px !important; }
+/* Antes da renderização (ou sem JavaScript) o código Mermaid fica legível e rolável. */
+pre.kj-cadeia { max-height: 18rem; overflow: auto; }
+
+/* Foco visível em todos os links do conteúdo. */
+.md-typeset a:focus-visible { outline: 2px solid var(--kj-accent); outline-offset: 2px; }
+
+/* Retorno ao índice no fim das páginas internas (overrides/main.html). */
+.kj-volta {
+  margin-top: 2rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--kj-line);
+  font-size: .72rem;
+}
+.kj-volta a { color: var(--md-typeset-a-color); font-weight: 600; }
+.kj-volta span { margin-inline: .45rem; color: var(--md-default-fg-color--light); }
+
+/* ---------- Página inicial: destaques, painéis e cores da cadeia ---------- */
+:root,
+[data-md-color-scheme="default"] {
+  --kj-f1-fill: #e4eef6; --kj-f1-line: #3b6a8a;
+  --kj-f2-fill: #dcf2ed; --kj-f2-line: #08776d;
+  --kj-obj-fill: #102b39; --kj-obj-text: #f3fafc;
+  --kj-f3-fill: #fbf0dc; --kj-f3-line: #a86b12;
+  --kj-f4-fill: #ece7f6; --kj-f4-line: #6b4fa3;
+  --kj-node-text: #142e3e;
+  --kj-edge: #7f97a5;
+}
+[data-md-color-scheme="slate"] {
+  --kj-f1-fill: #1d3a4e; --kj-f1-line: #7fb2d4;
+  --kj-f2-fill: #173f3b; --kj-f2-line: #72ddc8;
+  --kj-obj-fill: #72ddc8; --kj-obj-text: #0b202c;
+  --kj-f3-fill: #3b3020; --kj-f3-line: #e3ab55;
+  --kj-f4-fill: #2e2843; --kj-f4-line: #b9a2e0;
+  --kj-node-text: #edf4f8;
+  --kj-edge: #6f8796;
+}
+
+.kj-hero { margin-bottom: 1.2rem; }
+
+/* Cartões logo abaixo do título: levam à cadeia e às evidências sem rolar. */
+.kj-destaques {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .9rem;
+  margin: 0 0 2rem;
+}
+.md-typeset a.kj-destaque {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  padding: 1.25rem 1.4rem 1.2rem;
+  border: 1px solid var(--kj-line);
+  border-left: 4px solid var(--kj-accent);
+  border-radius: .75rem;
+  background: var(--kj-surface);
+  box-shadow: var(--kj-shadow);
+  color: var(--md-typeset-color);
+  text-decoration: none;
+  transition: transform 150ms, box-shadow 150ms, border-color 150ms;
+}
+.md-typeset a.kj-destaque:hover {
+  transform: translateY(-2px);
+  border-color: var(--kj-accent);
+  box-shadow: 0 12px 32px rgb(16 43 57 / 10%);
+}
+.kj-destaque__rotulo { color: var(--kj-accent); font-size: .6rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.kj-destaque__titulo { color: var(--kj-heading); font-size: .95rem; font-weight: 720; line-height: 1.35; letter-spacing: -.02em; }
+.kj-destaque__texto { font-size: .7rem; line-height: 1.65; }
+.kj-destaque__acao { margin-top: .3rem; color: var(--md-typeset-a-color); font-size: .7rem; font-weight: 700; }
+.kj-destaque__acao::after { content: " \2192"; }
+
+/* Seções em destaque (cadeia e evidências). */
+.md-typeset .kj-painel {
+  margin: 2.2rem 0;
+  padding: 1.6rem 1.8rem 1.4rem;
+  border: 1px solid var(--kj-line);
+  border-top: 4px solid var(--kj-accent);
+  border-radius: .9rem;
+  background: var(--kj-surface);
+  box-shadow: var(--kj-shadow);
+}
+.md-typeset .kj-painel > h2 { margin-top: 0; padding-top: 0; border-top: 0; font-size: 1.35rem; }
+.md-typeset .kj-painel > h3 { margin-top: 1.8rem; }
+.md-typeset .kj-painel table:not([class]) { font-size: .66rem; }
+.md-typeset .kj-painel > ul:not(.kj-legenda) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .55rem;
+  padding: 0;
+  list-style: none;
+}
+.md-typeset .kj-painel > ul:not(.kj-legenda) > li { margin: 0; padding: .7rem .9rem; border: 1px solid var(--kj-line); border-radius: .5rem; background: var(--kj-soft); font-size: .68rem; }
+
+/* Legenda das cores por fase (texto acompanha a cor). */
+.md-typeset ul.kj-legenda { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin: .8rem 0 0; padding: 0; list-style: none; font-size: .66rem; }
+.md-typeset ul.kj-legenda li { display: flex; align-items: center; gap: .4rem; margin: 0; }
+.kj-legenda__cor { display: inline-block; width: .85rem; height: .85rem; border: 2px solid; border-radius: .2rem; }
+.kj-legenda__cor--f1 { background: var(--kj-f1-fill); border-color: var(--kj-f1-line); }
+.kj-legenda__cor--f2 { background: var(--kj-f2-fill); border-color: var(--kj-f2-line); }
+.kj-legenda__cor--f3 { background: var(--kj-f3-fill); border-color: var(--kj-f3-line); }
+.kj-legenda__cor--f4 { background: var(--kj-f4-fill); border-color: var(--kj-f4-line); }
+
+/* Cores dos nós e grupos dos diagramas (classes definidas no código Mermaid). */
+.kj-cadeia-diagrama { background: var(--md-default-bg-color); }
+.kj-cadeia-diagrama .node rect, .kj-cadeia-diagrama .node polygon { rx: 6px; ry: 6px; stroke-width: 1.5px !important; }
+.kj-cadeia-diagrama .node .nodeLabel, .kj-cadeia-diagrama .node .label { color: var(--kj-node-text) !important; fill: var(--kj-node-text) !important; }
+.kj-cadeia-diagrama .kjf1 rect { fill: var(--kj-f1-fill) !important; stroke: var(--kj-f1-line) !important; }
+.kj-cadeia-diagrama .kjq rect, .kj-cadeia-diagrama .kjm rect { fill: var(--kj-f2-fill) !important; stroke: var(--kj-f2-line) !important; }
+.kj-cadeia-diagrama .kjm rect { fill: var(--kj-surface) !important; }
+.kj-cadeia-diagrama .kjobj rect { fill: var(--kj-obj-fill) !important; stroke: var(--kj-obj-fill) !important; }
+.kj-cadeia-diagrama .kjobj .nodeLabel { color: var(--kj-obj-text) !important; }
+.kj-cadeia-diagrama .kjf3 rect { fill: var(--kj-f3-fill) !important; stroke: var(--kj-f3-line) !important; }
+.kj-cadeia-diagrama .kjf4 rect { fill: var(--kj-f4-fill) !important; stroke: var(--kj-f4-line) !important; }
+.kj-cadeia-diagrama .cluster rect { rx: 10px; ry: 10px; fill: var(--kj-surface) !important; stroke-dasharray: 4 3; stroke-width: 1.2px !important; }
+.kj-cadeia-diagrama .kjg1 rect { stroke: var(--kj-f1-line) !important; }
+.kj-cadeia-diagrama .kjg2 rect { stroke: var(--kj-f2-line) !important; }
+.kj-cadeia-diagrama .kjg3 rect { stroke: var(--kj-f3-line) !important; }
+.kj-cadeia-diagrama .kjg4 rect { stroke: var(--kj-f4-line) !important; }
+.kj-cadeia-diagrama .cluster-label .nodeLabel, .kj-cadeia-diagrama .cluster-label span { color: var(--kj-heading) !important; }
+.kj-cadeia-diagrama .flowchart-link { stroke: var(--kj-edge) !important; stroke-width: 1.4px !important; }
+.kj-cadeia-diagrama marker path { fill: var(--kj-edge) !important; stroke: var(--kj-edge) !important; }
+.kj-cadeia-diagrama a:hover rect, .kj-cadeia-diagrama a:focus-visible rect { filter: brightness(.95); stroke-width: 3px !important; }
+
+@media (max-width: 40em) {
+  .kj-destaques, .md-typeset .kj-painel > ul:not(.kj-legenda) { grid-template-columns: minmax(0, 1fr); }
+  .md-typeset .kj-painel { padding: 1.2rem 1rem; }
+}
+@media print {
+  .kj-destaques { display: none; }
+  .md-typeset .kj-painel { box-shadow: none; }
+}

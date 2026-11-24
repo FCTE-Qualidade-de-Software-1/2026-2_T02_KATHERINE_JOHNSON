@@ -27,6 +27,8 @@ registros em datas fixas de coleta (Figura 1).
 
 ```mermaid
 flowchart LR
+    accTitle: Origem dos dados de gestão
+    accDescr: Cada issue com estimativa e responsável gera uma branch própria, um pull request revisado e o merge; esses registros alimentam as medições de gestão.
     A["Issue<br/>estimativa de horas<br/>e responsável"] --> B["Branch<br/>própria da tarefa"]
     B --> C["Pull request<br/>revisado por outro<br/>integrante"]
     C --> D["Merge na main<br/>issue fechada<br/>com horas reais"]

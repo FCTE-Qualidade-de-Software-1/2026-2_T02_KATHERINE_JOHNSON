@@ -1,6 +1,6 @@
 # Fase 3 — Massa e instrumentos de coleta
 
-A [massa de dados](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/massa-de-dados.md) prevê até três veículos consentidos, com mínimo de um veículo com infração nos dois canais. A diversidade de situações, órgãos e infrações de velocidade é desejada, mas ainda não confirmada. A amostra é intencional e não permite generalização estatística para a frota.
+A [massa de dados](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/massa-de-dados.md) previa até três veículos consentidos (na coleta foram usados quatro códigos: V1, V2, V4 e V5), com mínimo de um veículo com infração nos dois canais. A diversidade de situações, órgãos e infrações de velocidade é desejada, mas ainda não confirmada. A amostra é intencional e não permite generalização estatística para a frota.
 
 **Atualização em 22/11:** a S03 usou o V1 (infração de referência V1-I1) e a S05 usou o V2 (V2-I1, infração de velocidade autuada por outro órgão). Os códigos V1, V2, V4 e V5 foram conciliados com a tabela privada por Hugo (PR #84). O V2-I1 atende às metas de diversidade "outro órgão" e "velocidade"; as metas de situação (a vencer, vencida e paga) ainda não foram conferidas. A S06 e a S08 usaram o V4 (V4-I1), de outro titular coberto pelo consentimento, com a correspondência mantida na tabela privada.
 
@@ -8,7 +8,7 @@ Os termos foram aplicados aos participantes da coleta, conforme confirmação de
 
 ## Instrumentos entregues
 
-Os arquivos em `dados/brutos/` foram entregues apenas com cabeçalhos, sem dados fictícios. Desde 21/11, `tentativas.csv`, `ambientes.csv` e `desvios.csv` recebem os registros reais da P6 (S03 e S05); os demais continuam só com cabeçalhos. O
+Os arquivos em `dados/brutos/` foram entregues apenas com cabeçalhos, sem dados fictícios. Desde 21/11 recebem os registros reais: P6 (S03, S05 e CT06), P1 a P3 (S02), P4 e P5 (S06) e P7 (S08). Os valores são de primeira leitura até o preenchimento do campo `revisor`. O
 [dicionário e as regras de cálculo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/README.md)
 definem chaves, denominadores e exclusões. O
 [modelo de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md)

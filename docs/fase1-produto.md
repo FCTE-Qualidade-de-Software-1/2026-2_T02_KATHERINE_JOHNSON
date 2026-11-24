@@ -38,7 +38,7 @@ Os itens que dependem de login com um veículo real (rótulos exatos das telas l
 
 **Nota sobre consulta sem login.** Os dois canais têm uma consulta pública de **débitos** do veículo (serviço `acesso-publico/debitos`), que inclui débitos de infrações a pagar. Ela não substitui o histórico de infrações: mostra só o que está pendente de pagamento, sem o detalhamento da autuação. Por isso o objeto da avaliação continua sendo o histórico de infrações por veículo, na área logada. Cabe ao Heitor registrar esse corte no escopo.
 
-### 1.3 Passos da consulta
+### 1.3 Passos da consulta {#passos-consulta}
 
 Sequência provável nos dois canais, deduzida das telas públicas, das telas de divulgação nas lojas e dos nomes de menu e de tela presentes no código cliente. A contagem definitiva de telas e ações será feita com veículo real (ver `evidencias/fase1/roteiro-levantamento.md`).
 
@@ -71,7 +71,7 @@ Diferenças previstas, a confirmar com veículo real: o aplicativo não tem um r
 
 Nos dois canais, o campo "Código Renainf" traz a dica "Origem: RENAINF", o que indica que parte dos dados vem do Registro Nacional de Infrações de Trânsito, e não só da base do Detran-DF.
 
-### 1.5 Lista de referência de campos (insumo para a questão Q1.1)
+### 1.5 Lista de referência de campos (insumo para a questão Q1.1) {#lista-referencia}
 
 Para julgar a completude funcional sem depender de um dos canais como padrão, propõe-se uma lista de referência externa. Ela parte do conteúdo obrigatório do auto de infração (art. 280 do Código de Trânsito Brasileiro, Lei nº 9.503/1997) e acrescenta as informações de que o cidadão precisa para decidir o que fazer com a multa (pagar, recorrer, indicar condutor). Os textos legais foram conferidos no Planalto em 18/10/2026.
 
@@ -109,7 +109,7 @@ Ficam fora da lista os incisos IV (prontuário do condutor) e VI (assinatura do 
 | [`evidencias/fase1/app-ios-app-store-metadados-2026-10-26.json`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase1/app-ios-app-store-metadados-2026-10-26.json) | Resposta da consulta pública da App Store sobre o aplicativo | Nenhum |
 | [`evidencias/fase1/app-android-pacote-2026-10-26.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase1/app-android-pacote-2026-10-26.md) | Pacote do aplicativo Android 2.6.9 instalado pela Google Play: hashes dos arquivos, bibliotecas do React Native e do Hermes e ocorrências dos rótulos de infração no código | Nenhum |
 
-Os prints do aplicativo no Android foram capturados em 26/10/2026. No iOS, as telas do aplicativo não foram capturadas na Entrega 1; do iOS há apenas a página da App Store. O iPhone é de Heitor e será usado para as capturas e medições na Fase 3. As telas com login seguem pendentes. Prints pendentes, a fazer com veículo real e com tarja em placa, RENAVAM, CPF, nome, endereço e número do auto antes de entrar no repositório: lista de veículos, lista de infrações e detalhes de uma infração, nos dois canais. As regras de anonimização estão em [`evidencias/fase1/README.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase1/README.md).
+Os prints do aplicativo no Android foram capturados em 26/10/2026. No iOS, as telas do aplicativo não foram capturadas na Entrega 1; do iOS há apenas a página da App Store. O iPhone de um integrante será usado para as capturas e medições na Fase 3. As telas com login seguem pendentes. Prints pendentes, a fazer com veículo real e com tarja em placa, RENAVAM, CPF, nome, endereço e número do auto antes de entrar no repositório: lista de veículos, lista de infrações e detalhes de uma infração, nos dois canais. As regras de anonimização estão em [`evidencias/fase1/README.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase1/README.md).
 
 **Capturas do levantamento**
 
@@ -150,6 +150,8 @@ Os dois clientes não guardam as infrações: consultam serviços de backend do 
 
 ```mermaid
 flowchart LR
+    accTitle: Diagrama de contexto da consulta de infrações
+    accDescr: O cidadão condutor consulta as infrações pelo Portal de Serviços no navegador ou pelo aplicativo DETRAN-DF; os dois canais usam o servidor de identidade e os serviços de backend do Detran-DF, que consultam a base de infrações e o RENAINF; o login pode ser federado pelo gov.br, e os canais também acessam serviços de terceiros.
     cidadao(["Cidadão / condutor<br/>(proprietário do veículo)"])
 
     subgraph clientes["Canais avaliados (caixa-preta)"]
@@ -182,7 +184,7 @@ flowchart LR
     api --> renainf
 ```
 
-*Figura — Diagrama de contexto da consulta de infrações. Fonte: elaborado pela equipe a partir do levantamento de 18/10/2026.*
+*Figura 1 — Diagrama de contexto da consulta de infrações. Fonte: elaborado pela equipe a partir do levantamento de 18/10/2026.*
 
 ### 2.4 Implicações para a avaliação
 
@@ -204,7 +206,7 @@ Três consequências práticas para as Fases 2 e 3:
 
 ---
 
-## 3. Modelo de qualidade adaptado
+## 3. Modelo de qualidade adaptado {#modelo-qualidade}
 
 ### 3.1 Ponto de partida
 
@@ -215,7 +217,7 @@ O modelo combina duas fontes da família SQuaRE:
 
 A segunda fonte é uma edição anterior por um motivo explícito: a ISO/IEC 25019:2023, que substituiu o modelo de qualidade em uso de 2011, removeu a cobertura de contexto. O prefácio da norma diz: "context coverage which was shown as quality characteristics in the quality-in-use model of the previous version is removed" (ISO/IEC 25019:2023, Foreword). As medidas de completude de contexto continuam na ISO/IEC 25022:2016, ainda vigente, e a própria ISO/IEC 25019:2023 prevê comparar a qualidade entre contextos de uso para encontrar lacunas (Introduction). Por isso a equipe mantém a característica, com a origem declarada.
 
-Partes interessadas usadas nas justificativas (a tabela completa é a do Heitor, na seção de propósito e stakeholders):
+Partes interessadas usadas nas justificativas (a tabela completa é a do Heitor, na seção de [propósito e partes interessadas](fase1-proposito.md#partes-interessadas)):
 
 - **Cidadão/condutor:** precisa ver todas as infrações, com dados corretos, em qualquer aparelho e rede;
 - **Equipe técnica de TI e gestão de serviços digitais do Detran-DF:** precisa saber em que canal e em que condição o serviço fica lento ou pesado;
@@ -232,7 +234,7 @@ Partes interessadas usadas nas justificativas (a tabela completa é a do Heitor,
 | | Utilização de recursos | Incluída, restrita | Só dados transferidos, que pesam no plano de dados do cidadão e têm medição equivalente nos dois canais. Memória fica fora porque não há ferramenta equivalente para o portal e para um aplicativo de loja |
 | | Capacidade | Excluída | Exige teste de carga sobre a infraestrutura do Detran-DF, não autorizado e fora do alcance caixa-preta |
 | Cobertura de contexto (25010:2011, qualidade em uso) | Completude de contexto | Incluída, adaptada | É o que diferencia os canais: computador × celular, Wi-Fi × 4G. A norma de 2011 define com "effectiveness, efficiency, freedom from risk and satisfaction"; a equipe usa só eficácia (consulta concluída) e tempo, porque satisfação é usabilidade, proibida neste trabalho |
-| | Flexibilidade | Incluída | Contextos além dos especificados, como rede degradada e versões antigas de sistema. Não confundir com a característica "flexibilidade" do modelo de produto de 2023, que trata de adaptabilidade e instalação |
+| | Flexibilidade de contexto | Incluída | Contextos além dos especificados, como rede degradada e versões antigas de sistema. Não confundir com a característica "flexibilidade" do modelo de produto de 2023, que trata de adaptabilidade e instalação |
 | Capacidade de interação (25010:2023) | Todas | Excluída | Corresponde à antiga usabilidade, proibida pela professora |
 | Compatibilidade (25010:2023) | Coexistência, interoperabilidade | Excluída | A troca de dados com o gov.br e o RENAINF acontece no servidor, fora do que se observa |
 | Confiabilidade (25010:2023) | Todas | Excluída | Disponibilidade exige monitoramento contínuo por semanas. Falhas pontuais aparecem como consulta não concluída na cobertura de contexto |
@@ -253,6 +255,8 @@ Partes interessadas usadas nas justificativas (a tabela completa é a do Heitor,
 
 ```mermaid
 flowchart TB
+    accTitle: Modelo de qualidade adaptado
+    accDescr: A qualidade da consulta de infrações se divide em adequação funcional e eficiência de desempenho, da ISO/IEC 25010:2023, e cobertura de contexto, da ISO/IEC 25010:2011, com as subcaracterísticas completude, correção e apropriação funcional; comportamento temporal e utilização de recursos; completude de contexto e flexibilidade de contexto.
     raiz["Qualidade da consulta de infrações<br/>Portal de Serviços × aplicativo"]
 
     subgraph produto["Modelo de qualidade do produto — ISO/IEC 25010:2023"]
@@ -268,7 +272,7 @@ flowchart TB
     subgraph uso["Modelo de qualidade em uso — ISO/IEC 25010:2011 (medidas: ISO/IEC 25022:2016)"]
         cc["Cobertura de contexto"]
         cc1["Completude de contexto*"]
-        cc2["Flexibilidade"]
+        cc2["Flexibilidade de contexto"]
     end
 
     raiz --> af
@@ -283,7 +287,7 @@ flowchart TB
     cc --> cc2
 ```
 
-*Figura — Modelo de qualidade adaptado. Asterisco: subcaracterística adaptada (ver Seção 3.3). Características excluídas estão na tabela da Seção 3.2. Fonte: elaborado pela equipe com base na ISO/IEC 25010:2023 e na ISO/IEC 25010:2011.*
+*Figura 2 — Modelo de qualidade adaptado. Asterisco: subcaracterística adaptada (ver Seção 3.3). Características excluídas estão na tabela da Seção 3.2. Fonte: elaborado pela equipe com base na ISO/IEC 25010:2023 e na ISO/IEC 25010:2011.*
 
 ---
 

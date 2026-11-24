@@ -1,7 +1,22 @@
 # Fase 4 — Coleta, pendências e cálculo
 
+## Situação atual em 23/11/2026 {#situacao-atual}
+
+A coleta registrou seis sessões em 21 e 22/11/2026: o piloto S01, a S02 (P1 a P3, caso V2), a S03
+e a S05 (P6), o CT06 (P6 no iOS), a S06 (P4 e P5, caso V4) e a S08 (P7, caso V4). Os valores estão
+em `dados/brutos/` e são de **primeira leitura**; a segunda leitura independente está concluída só
+para P1 a P3 da S02. Por isso o validador ainda não promove as linhas a resultados oficiais e não
+há nível de pontuação. As lacunas declaradas são o aplicativo na rede degradada (D021) e o CT04,
+sem aparelho. Os valores observados estão na [análise](fase4-analise.md) e a ligação de cada
+métrica com sua coleta está na [rastreabilidade](rastreabilidade.md#metricas).
+
+As seções seguintes preservam o histórico datado do acompanhamento (20 a 22/11) e não devem ser
+lidas como situação atual.
+
+## Histórico do acompanhamento {#historico}
+
 **Continuação S06/V4 em 22/11:** novo titular coberto pelo consentimento aplicado, com outro
-veículo, Samsung SM-S731B e computador 750XGK. Os registros brutos estão nesta branch;
+veículo, Samsung SM-S731B (D05) e um computador com Ubuntu (D06). Os registros brutos estão no repositório;
 consulte `evidencias/fase4/S06-registro-2026-11-22.md` e `evidencias/fase4/S08-registro-2026-11-22.md`.
 P4 tem gravações provisórias; a lista do Android foi refeita no B09 com rolagem rápida contínua
 (o B04, contaminado por esperas do instrumento, segue excluído). P5 foi concluído nos dois canais
@@ -14,15 +29,16 @@ a julgamento oficial, e nenhum original identificável é público.
 da coleta. As vias assinadas e datas individuais permanecem privadas, sem publicação na GitPage.
 
 **Atualização documental em 22/11:** o PR #67 foi aprovado por Daniel em 21/11 antes do merge.
-A branch `feat/pedro-s03-fase4` registra tentativas P6 em CT01/CT03/CT05 de 21/11, ainda sem
+A S03 registra tentativas P6 em CT01/CT03/CT05 de 21/11, ainda sem
 conferência independente; a [análise](fase4-analise.md) referencia a fonte imutável e suas
 limitações. Os quadros datados de 20/11 abaixo preservam a situação daquela revisão.
 
 **Situação em 22/11, 17h40:** com o veículo V2, a S05 tem P6 concluído em CT05, CT02 e CT01 (3/3
-cada) e a S02 tem P1, P2 e P3 registrados nos contextos de referência; P4 e P5 não foram executados.
+cada) e a S02 tem P1, P2 e P3 registrados nos contextos de referência; P4 e P5 ainda não tinham sido
+executados naquele horário (foram executados depois, na S06).
 Todas as linhas aguardam a conferência independente. O resumo do que foi feito, do que falta e dos
 pontos de atenção está em
-[situação da coleta em 22/11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/feat/pedro-s03-fase4/gestao/situacao-coleta-2026-11-22.md).
+[situação da coleta em 22/11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/gestao/situacao-coleta-2026-11-22.md).
 
 Situação documental conferida em **20/11/2026**. Responsáveis pela
 [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47):
@@ -31,7 +47,7 @@ O prazo planejado de 18/11 venceu. O relatório recebido registra observações 
 e dez valores informados para tempo/transferência; S01 não entra nos resultados oficiais. O script
 de cálculo e os instrumentos estão preparados; isso não conclui a coleta.
 
-## Atualização dos bloqueios em 20/11
+### Atualização dos bloqueios em 20/11
 
 Foi comunicada a concordância de três integrantes para usar suas próprias contas na avaliação.
 O [registro da concordância](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/consentimento.md)
@@ -43,8 +59,8 @@ dos termos; as vias assinadas permanecem privadas e não são publicadas na GitP
 |---|---|---|
 | B01 — titular, veículo e consentimento | Termos aplicados, conforme confirmação de Hugo em 22/11; vias assinadas privadas | Conciliar códigos e confirmar veículo com infração acessível nos dois canais |
 | B02 — aparelhos | D03 tem caracterização parcial; computador Linux candidato a D01 foi inspecionado | Confirmar o computador inspecionado como D01; completar D02/D03 e instrumentos por sessão |
-| B03 — iPhone | PR #66 continua aberto; aparelho sob responsabilidade de Heitor | Heitor registra modelo, iOS e versão do app |
-| B05 — telas e rótulos | Seis capturas do portal disponíveis; levantamento autenticado dos apps sem registro | Titulares fazem login pessoalmente; executar e conferir as capturas dos apps |
+| B03 — iPhone | PR #66 continua aberto; aparelho sob responsabilidade de Heitor | Heitor registra modelo, iOS e versão do aplicativo |
+| B05 — telas e rótulos | Seis capturas do portal disponíveis; levantamento autenticado dos aplicativos sem registro | Titulares fazem login pessoalmente; executar e conferir as capturas dos aplicativos |
 | B08 — Project 38 | Nova consulta de 20/11 ainda sem escopo `read:project` | Conta autorizada sincroniza as datas confirmadas |
 | S01 — piloto | Não há registro de liberação nem sessão executada; aba do portal localizada, mas a leitura da interface expirou | Restabelecer leitura suportada, conectar Android, validar instrumentos e só então registrar execução/conferência |
 | Script e branch da #47 | Entregues no PR #67 | Revisar o código e usar o cálculo após as medições |
@@ -58,7 +74,7 @@ inspeção técnica inicial nenhum navegador estava conectado; depois a aba do p
 mas a leitura da interface expirou. Nenhum Android foi identificado por USB. Não foram coletadas
 senhas, capturadas telas de autenticação ou executadas operações sobre infrações.
 
-## S00 e S01: evidências e critérios de conclusão
+### S00 e S01: evidências e critérios de conclusão {#s00-s01}
 
 | Etapa | Estado documental | Evidência disponível | Condição para concluir |
 |---|---|---|---|
@@ -86,7 +102,7 @@ As capturas demonstram telas acessadas no portal, mas não identificam por si s�
 registrador, horário da sessão ou consentimento aplicado. Também não demonstram as repetições
 exigidas para as métricas. A data desta revisão não é uma data de coleta.
 
-### Percurso do portal já documentado
+#### Percurso do portal já documentado
 
 As imagens abaixo foram incorporadas no
 [commit aa9d3bb](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/commit/aa9d3bb38b0b905219004a005edffb9691daadee),
@@ -105,7 +121,7 @@ a descrição desta tabela segue o conteúdo visível de cada imagem.
 
 *Quadro de evidências — Inspeção documental das seis imagens versionadas, em 20/11/2026.*
 
-### O que falta registrar para encerrar as sessões
+#### O que falta registrar para encerrar as sessões
 
 | Registro | Quem providencia | Evidência mínima |
 |---|---|---|
@@ -120,7 +136,7 @@ para registrar fatos observados. A ausência de registro não determina se a ati
 fora do repositório; até sua comprovação, o critério permanece pendente. O campo de revisor e a
 liberação devem ser preenchidos somente depois da conferência efetiva.
 
-## 1. Pendências herdadas da Fase 3
+### Pendências herdadas da Fase 3
 
 O [comentário de acompanhamento da #46](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46#issuecomment-6922711169)
 identifica sete critérios ainda parciais ou pendentes. Esta página reúne seu acompanhamento
@@ -130,12 +146,12 @@ Na conferência de 20/11, não foi localizado registro de confirmação dessa ag
 
 | Critério | Responsável | Situação verificada | Próxima ação / evidência de conclusão | Data proposta |
 |---|---|---|---|---|
-| Ambiente detalhado (B02) | Hugo | Parcial: modelo do Android intermediário registrado; demais versões pendentes | Preencher inventário por sessão/contexto/rede, incluindo versão instalada do app | 19/11 |
+| Ambiente detalhado (B02) | Hugo | Parcial: modelo do Android intermediário registrado; demais versões pendentes | Preencher inventário por sessão/contexto/rede, incluindo versão instalada do aplicativo | 19/11 |
 | Consentimento aplicado (B01) | Hugo | **Concluído:** aplicação dos termos confirmada por Hugo em 22/11/2026 | Vias assinadas e datas individuais mantidas privadas; nenhuma publicação das assinaturas na GitPage | Confirmação em 22/11; não representa a data de aplicação |
 | Sessão com veículo real (S01/S02) | Hugo; Philipe registra; Pedro Druck confere | Sem registro de execução | Confirmar infração acessível nos dois canais; executar piloto e registrar sua liberação | 19/11, após consentimento |
-| Prints autenticados (B05) | Hugo e Philipe no Android; Heitor no iOS | Portal tem seis capturas; capturas dos apps pendentes | Lista de veículos, lista de infrações e detalhes; revisão das tarjas por outro integrante | 19–20/11 |
+| Prints autenticados (B05) | Hugo e Philipe no Android; Heitor no iOS | Portal tem seis capturas; capturas dos aplicativos pendentes | Lista de veículos, lista de infrações e detalhes; revisão das tarjas por outro integrante | 19–20/11 |
 | Rótulos, campos e passos (B05) | Hugo e Philipe | Confirmação com veículo real pendente | Registrar roteiro e contagens; atualizar Fase 1 apenas com evidência | 19–20/11 |
-| Registro do iPhone (B03) | Heitor | Aparelho de Heitor; modelo/iOS/app ainda não registrados | Inventário D04 e execução de CT06; declarar não avaliado se não executado | 20/11 |
+| Registro do iPhone (B03) | Heitor | Aparelho D04; modelo/iOS/aplicativo ainda não registrados | Inventário D04 e execução de CT06; declarar não avaliado se não executado | 20/11 |
 | Datas das issues no Project (B08) | Hugo | Consultas de 19 e 20/11 bloqueadas por falta de `read:project` | Conferir e sincronizar #47/#48 com conta autorizada; registrar data e link do quadro | Até 20/11 |
 
 *Tabela 1 — Acompanhamento dos critérios de execução. Fonte: #46, #47 e consulta ao Project em 19/11.*
@@ -145,7 +161,7 @@ As correções sobre o iPhone estão no
 Heitor executa as atividades que dependem desse aparelho. A disponibilidade não comprova coleta.
 O piloto também depende da validação da rede e do contador de volume por Philipe (B04).
 
-## 2. Sequência de execução e reagendamento proposto
+### Sequência de execução e reagendamento proposto
 
 Manter o [método P1–P7](fase3-metodo.md), o
 [inventário](fase3-ambiente.md) e o [modelo de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md).
@@ -158,7 +174,7 @@ ainda precisam ser confirmadas nas issues e no Project.
 | 2 | S01: piloto, telas e validação dos instrumentos | Hugo; Philipe registra | Pedro Druck | 19/11; após S00 |
 | 3 | S02: P1–P5 nos contextos de referência | Hugo; Philipe registra | Pedro Druck | 19–20/11; piloto liberado |
 | 4 | S03: P6 por plataforma/navegador | Pedro Druck; Hugo registra; Heitor executa CT06 | Philipe | 20/11; inventários confirmados |
-| 5 | S04: P7 nas três redes | Philipe; Pedro Druck registra | Hugo | 20/11; redes validadas nos dois sentidos. Executado como S08 em 22–23/11 (caso V4) |
+| 5 | S04: P7 nas três redes | Philipe; Pedro Druck registra | Hugo | 20/11; redes validadas nos dois sentidos. Executado como S08 em 22/11 (caso V4) |
 | 6 | S05: contingências, anonimização e cálculo | Hugo, Pedro Druck e Philipe | Daniel revisa a entrega | 20/11; antes de passar dados à #48 |
 
 *Tabela 2 — Proposta de recuperação da coleta. Fonte: sequência do plano da Fase 3.*
@@ -169,7 +185,7 @@ a proposta. Se o titular ou instrumentos não estiverem disponíveis, registrar 
 replanejar com a equipe e manter métricas sem medição inconclusivas. Não reduzir repetições
 silenciosamente nem converter reservas de agenda em horas reais.
 
-## 3. Validação e cálculo
+## Validação e cálculo {#calculo}
 
 Com os consentimentos aplicados, depois de registrar piloto, medições e conferência:
 
@@ -184,28 +200,30 @@ gera resultados com sessão, bloco, evidências e manifesto SHA-256. As instruç
 regras de exclusão e limites da validação estão no
 [dicionário](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/README.md).
 
-No estado atual, há **zero resultados calculáveis**. A consolidação registra 25 estados
-inconclusivos e um não aplicável (navegadores no aplicativo); esses registros não são medições.
+No estado atual, os CSV têm registros das seis sessões, mas `--validar` recusa promover as linhas
+sem o campo `revisor` preenchido. Por isso os arquivos de `dados/consolidados/` ainda refletem o
+estado anterior à coleta (estados inconclusivos e um não aplicável, navegadores no aplicativo);
+esses registros não são medições. Os valores de primeira leitura estão na [análise](fase4-analise.md).
 Os testes automatizados usam dados sintéticos temporários, separados dos instrumentos reais.
 O validador não substitui a revisão humana de consentimento, tarjas, piloto ou independência
 do conferente.
 
-## 4. Entrega para análise e registros de gestão
+## Entrega para análise e registros de gestão {#entrega-analise}
 
 - [ ] Confirmar novas datas na #47 com a equipe; conferir impacto na #48.
-- [ ] Preencher inventário, cadastro anonimizado e registro de liberação do piloto.
-- [ ] Executar os blocos, guardar originais em local privado e publicar apenas evidências revisadas.
-- [ ] Preencher os oito CSV; registrar falhas, exclusões e reposições com seus desvios.
+- [x] Preencher inventário, cadastro anonimizado e registro de liberação do piloto.
+- [x] Executar os blocos, guardar originais em local privado e publicar apenas evidências revisadas.
+- [x] Preencher os oito CSV; registrar falhas, exclusões e reposições com seus desvios.
 - [ ] Executar validação/cálculo e revisar cobertura, amostras reduzidas e limitações.
 - [ ] Versionar dados, evidências, resultados e manifesto no mesmo PR; Daniel revisa a entrega.
-- [ ] Registrar horas efetivamente trabalhadas por integrante nas #46/#47 até 20/11.
+- [x] Registrar horas efetivamente trabalhadas por integrante nas #46/#47 (ver [registro de horas](gestao-horas.md)).
 - [ ] Conferir datas no Project 38 e registrar a sincronização; indisponibilidade de acesso não equivale a conclusão.
 
-As horas reais ainda precisam ser informadas pelos integrantes. O quadro remoto não foi
+As horas reais foram informadas pelos integrantes. O quadro remoto não foi
 alterado: a credencial desta execução não dispõe de `read:project`; a escrita também exige
 autorização `project`. A leitura bloqueada não permite saber se os itens ou campos estão ausentes.
 Depois de obter acesso, localizar as issues #47/#48, conferir os campos de início e prazo e
 aplicar as datas **confirmadas pela equipe**, preservando o histórico do atraso.
 
 Os resultados alimentam a [análise GQM](fase4-analise.md). O consentimento está concluído,
-conforme confirmação de Hugo em 22/11; coleta e revisão continuam pendentes; o PR de implementação do cálculo não deve encerrar automaticamente a #47.
+conforme confirmação de Hugo em 22/11; a coleta foi executada e a segunda leitura continua pendente; o PR de implementação do cálculo não deve encerrar automaticamente a #47.

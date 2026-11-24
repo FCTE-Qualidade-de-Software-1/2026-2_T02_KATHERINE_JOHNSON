@@ -1,7 +1,7 @@
 # Declaração de Uso de Ferramentas de Inteligência Artificial
 
 **Projeto Final FGA0315 Qualidade de Software 1 (UnB/FGA, 2026/2)**  
-*Avaliação da consulta de infrações do Detran-DF: Portal de Serviços × Aplicativo Mobile*  
+*Avaliação da consulta de infrações do Detran-DF: Portal de Serviços × aplicativo*  
 *Responsável pela consolidação: Pedro Henrique*
 
 ---
@@ -12,7 +12,7 @@ Em atendimento aos critérios C10, F2-C9 e AG-C3 da disciplina FGA0315, a equipe
 
 **Compromissos assumidos por todos os membros da equipe:**
 1. Nenhuma decisão metodológica, julgamento de qualidade ou definição de métrica foi terceirizada sem validação técnica crítica;
-2. Todas as informações normativas (ISO/IEC 25010, ISO/IEC 25040, ISO/IEC 15939) e legais (Código de Trânsito Brasileiro) foram conferidas diretamente em suas fontes primárias oficiais;
+2. Todas as informações normativas (ISO/IEC 25010, ISO/IEC 25040, ISO/IEC/IEEE 15939) e legais (Código de Trânsito Brasileiro) foram conferidas diretamente em suas fontes primárias oficiais;
 3. Textos gerados foram exaustivamente revisados, expurgando jargões descontextualizados, inconsistências conceituais e qualquer elemento informal (como emojis, ícones ou figuras meramente decorativas);
 4. Toda citação direta ou paráfrase baseou-se em bibliografia acadêmica reconhecida e indexada no arquivo de referências BibTeX.
 
@@ -38,6 +38,7 @@ documenta a conferência e a divergência identificada.
 | Registro | Ferramenta | Tarefa | Conferência registrada |
 |---|---|---|---|
 | Heitor | Claude Code | Apoio aos registros de gestão, à redação da GitPage e dos slides de PSM/CID, à documentação da coleta em iOS e à estimativa das próprias horas. | Conferiu os registros nas issues, nos PRs, no histórico de commits e nas atas. Conferiu as descrições das imagens uma a uma, forneceu os dados da coleta em iOS e revisou e aceitou a estimativa de horas. |
+| Heitor (GitPage, 23/11) | Claude Code | Mapeamento das páginas da GitPage em busca de contradições, correção de situações desatualizadas e de termos fora do padrão, tarjas adicionais em três capturas da Fase 1, página de rastreabilidade, âncoras estáveis, diagramas clicáveis na página inicial e ajustes de acessibilidade. | Heitor decidiu o tratamento das contradições, das tarjas e dos termos; os pontos que dependem da equipe ficaram sinalizados, sem decisão da ferramenta. Os vínculos da rastreabilidade foram conferidos contra as Fases 1 a 4; a construção do site com `mkdocs build --strict` e a verificação dos links e âncoras não apontaram erros. |
 | Registros técnicos da equipe | Codex (OpenAI) | Apoio aos roteiros e modelos de coleta e análise (#46 e #48), à documentação da proposta de melhoria (#36), à atualização do artigo e à preparação desta declaração. | Cotejo com as fases anteriores, os dados disponíveis e os registros no GitHub, além das verificações de compilação e do PDF. A revisão da declaração pela equipe é acompanhada na [issue #49](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/49). |
 
 ### Declarações individuais da Entrega 2
@@ -84,7 +85,7 @@ A Tabela abaixo documenta pormenorizadamente a ferramenta empregada, a finalidad
 
 ---
 
-*Versão 1.0 — 18/10/2026 — Documento de conformidade da equipe KATHERINE JOHNSON.*
+*Declaração da Entrega 1: versão 1.0 — 18/10/2026 — Documento de conformidade da equipe KATHERINE JOHNSON.*
 
 ## 4. Histórico dos registros da Entrega 2
 
@@ -121,6 +122,6 @@ Codex (OpenAI) apoiou a entrega da proposta de processo e templates da #36, a at
 artigo e sua compilação, a consulta de issues/PRs e o fechamento PSM da E2. As observações S03
 foram atribuídas à branch e ao commit de origem, sem converter registros não conferidos em
 medições oficiais. A declaração de Hugo sobre +1 h na E2 foi registrada com a base de estimativa
-explicitada, sem inventar a distribuição real por issue ou as horas dos demais integrantes.
+explicitada (depois substituída pela declaração registrada no [registro de horas](gestao-horas.md)), sem inventar a distribuição real por issue ou as horas dos demais integrantes.
 As verificações automáticas e a inspeção do PDF são técnicas; a aprovação dos autores e dos
 revisores designados permanece dependente de registro humano no PR.

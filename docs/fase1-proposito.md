@@ -23,7 +23,7 @@ O requisitante é a **Área de Governança Digital do Detran-DF**. Trata-se de u
 hipotético**, adotado para orientar as decisões da avaliação: a equipe não tem vínculo com o
 órgão, e nenhum resultado será apresentado como posição oficial dele.
 
-### Decisões que a avaliação apoia
+### Decisões que a avaliação apoia {#decisoes}
 
 | ID | Decisão | Quem decide | Evidência usada |
 |---|---|---|---|
@@ -40,7 +40,7 @@ O uso pretendido é **comparativo**. Os resultados valem como linha de base da q
 consulta nos dois canais, nas versões e nos contextos avaliados, e não como certificação de
 conformidade nem como avaliação do Detran-DF como um todo.
 
-## 2. Partes interessadas
+## 2. Partes interessadas {#partes-interessadas}
 
 As três primeiras partes interessadas fornecem os pontos de vista dos objetivos G1, G2 e G3 da
 [Fase 2](fase2-gqm.md).
@@ -58,7 +58,7 @@ As três primeiras partes interessadas fornecem os pontos de vista dos objetivos
 
 ## 3. Escopo, profundidade e objetos
 
-### Dentro do escopo
+### Dentro do escopo {#escopo}
 
 O objeto é o **histórico de infrações por veículo**, na área autenticada:
 
@@ -68,15 +68,16 @@ O objeto é o **histórico de infrações por veículo**, na área autenticada:
 A consulta é observada **da escolha do menu de infrações, já com o usuário autenticado, até a
 exibição dos detalhes de uma infração**.
 
-### Contextos de uso especificados
+### Contextos de uso especificados {#contextos-de-uso}
 
-São os contextos que a cobertura de contexto (objetivo G3) deve cobrir. Insumo para as métricas
-M3.1.1, M3.1.2 e M3.2.1.
+São os contextos que a cobertura de contexto (objetivo [G3](fase2-gqm.md#g3)) deve cobrir. Insumo para as métricas
+[M3.1.1](fase2-metricas.md#m3-1-1), [M3.1.2](fase2-metricas.md#m3-1-2) e [M3.2.1](fase2-metricas.md#m3-2-1); na Fase 3 viraram os contextos
+[CT01 a CT06](fase3-ambiente.md#contextos).
 
 | Dimensão | Contextos |
 |---|---|
 | Portal de Serviços | Google Chrome e Mozilla Firefox em computador; Google Chrome em celular Android |
-| Aplicativo | Um celular Android de entrada e um intermediário (Android 8.0 ou superior); um iPhone (iOS 15.1 ou superior), de Heitor, cujo modelo e versão do iOS serão registrados na Fase 3; sem esse registro, o iOS fica fora da avaliação (os modelos dos aparelhos são definidos na preparação do ambiente, na Fase 3) |
+| Aplicativo | Um celular Android de entrada e um intermediário (Android 8.0 ou superior); um iPhone (iOS 15.1 ou superior), de um integrante, cujo modelo e versão do iOS serão registrados na Fase 3; sem esse registro, o iOS fica fora da avaliação (os modelos dos aparelhos são definidos na preparação do ambiente, na Fase 3) |
 | Rede | Wi-Fi; rede móvel 4G; rede degradada simulada, com parâmetros definidos no plano de avaliação (Fase 3) |
 
 *Tabela 3 — Contextos de uso especificados. Fonte: elaborada pela equipe.*
@@ -114,5 +115,5 @@ capacidade e outras) estão justificadas no modelo de qualidade adaptado da Fase
 - **Rede degradada:** é simulada, e não uma rede real com problemas.
 - **Correção dos dados:** é julgada pela consistência entre os canais e com a notificação
   recebida pelo proprietário, e não contra a base oficial.
-- **Aplicativo no iOS:** o iPhone é de Heitor e será usado na Fase 3. Se o aparelho não for registrado ou a coleta no iOS
+- **Aplicativo no iOS:** o iPhone de um integrante será usado na Fase 3. Se o aparelho não for registrado ou a coleta no iOS
   não puder ser feita, os resultados do aplicativo valem apenas para o Android.

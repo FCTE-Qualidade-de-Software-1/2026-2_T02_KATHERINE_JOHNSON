@@ -71,7 +71,9 @@ Os procedimentos P1 a P7 agrupam as métricas que se obtêm na mesma execução.
 executor começa a gravação de tela antes do primeiro passo e só a encerra depois do último
 registro.
 
-### P1 — Registro de campos (M1.1.1 e M1.1.2)
+### P1 — Registro de campos (M1.1.1 e M1.1.2) {#p1}
+
+*Mede [M1.1.1](fase2-metricas.md#m1-1-1), [M1.1.2](fase2-metricas.md#m1-1-2), que respondem à [Q1.1](fase2-gqm.md#q1-1). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m1-1-1).*
 
 1. No contexto de referência, abrir a lista de infrações do veículo.
 2. **M1.1.1:** para cada infração da lista, marcar no arquivo de coleta, campo a campo de R01 a
@@ -86,7 +88,9 @@ registro.
 5. Capturar a tela de detalhamento completa.
 6. Repetir os passos 1 a 5 no outro canal, para as mesmas infrações.
 
-### P2 — Comparação entre canais (M1.2.1 e M1.2.2)
+### P2 — Comparação entre canais (M1.2.1 e M1.2.2) {#p2}
+
+*Mede [M1.2.1](fase2-metricas.md#m1-2-1), [M1.2.2](fase2-metricas.md#m1-2-2), que respondem à [Q1.2](fase2-gqm.md#q1-2). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m1-2-1).*
 
 Usa as telas capturadas em P1; não exige nova consulta, desde que o intervalo entre os canais
 tenha respeitado o limite de 10 minutos.
@@ -112,7 +116,9 @@ minutos for excedida, preservar o par como inelegível e refazer ambos os canais
 em `desvios.csv`. M1.2.1/M1.2.2 são resultados do par de canais; não indicam qual canal contém
 o valor correto e não permitem atribuir superioridade individual.
 
-### P3 — Contagem do fluxo (M1.3.1 e M1.3.2)
+### P3 — Contagem do fluxo (M1.3.1 e M1.3.2) {#p3}
+
+*Mede [M1.3.1](fase2-metricas.md#m1-3-1), [M1.3.2](fase2-metricas.md#m1-3-2), que respondem à [Q1.3](fase2-gqm.md#q1-3). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m1-3-1).*
 
 1. No contexto de referência, a partir da tela inicial autenticada, executar o caminho até a
    lista de infrações do veículo, sem atalhos e sem usar a busca do canal.
@@ -125,7 +131,9 @@ o valor correto e não permitem atribuir superioridade individual.
    repetir; se as três forem diferentes, registrar como desvio e levar à discussão da equipe.
 5. Anotar o rótulo exato de cada elemento acionado, para confirmar os nomes de menu da Fase 1.
 
-### P4 — Medição de tempo (M2.1.1 e M2.1.2)
+### P4 — Medição de tempo (M2.1.1 e M2.1.2) {#p4}
+
+*Mede [M2.1.1](fase2-metricas.md#m2-1-1), [M2.1.2](fase2-metricas.md#m2-1-2), que respondem à [Q2.1](fase2-gqm.md#q2-1). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m2-1-1).*
 
 1. No contexto de referência, abrir a tela de seleção do veículo e iniciar o bloco com uma
    repetição de aquecimento, que não entra no cálculo.
@@ -147,7 +155,9 @@ Usar um bloco separado para cada métrica, com aquecimento próprio. Em gravaç�
 usar os timestamps dos quadros, conforme o dicionário. Manter as duas marcações e a decisão
 final no [registro de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md).
 
-### P5 — Medição de volume (M2.2.1)
+### P5 — Medição de volume (M2.2.1) {#p5}
+
+*Mede [M2.2.1](fase2-metricas.md#m2-2-1), que respondem à [Q2.2](fase2-gqm.md#q2-2). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m2-2-1).*
 
 1. **Portal:** abrir o DevTools, aba Network, com "Preserve log" ligado e "Disable cache"
    desligado (regra de cache da Tabela 1). Limpar a lista de requisições.
@@ -160,17 +170,19 @@ final no [registro de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2
    HAR **apenas no armazenamento privado**, pois pode conter credenciais e dados pessoais. **Aplicativo:** ler o contador de novo; o volume é a diferença entre as duas leituras
    (recebidos mais enviados).
 5. Repetir até completar 10 repetições válidas, depois da repetição de aquecimento.
-6. **iOS:** não há contador equivalente por aplicativo. No iPhone (de Heitor), a M2.2.1 do
+6. **iOS:** não há contador equivalente por aplicativo. No iPhone D04, a M2.2.1 do
    iOS fica registrada como não medida; o resultado do aplicativo vale para o Android.
 
 A equivalência do escopo e a atualização dos contadores precisam ser verificadas no [piloto](fase3-ambiente.md). Sem essa verificação, não classificar um canal como superior pelo volume. Usar MB decimal (1.000.000 bytes) e registrar leituras e instrumento.
 
-### P6 — Execução por contexto (M3.1.1 e M3.1.2)
+### P6 — Execução por contexto (M3.1.1 e M3.1.2) {#p6}
+
+*Mede [M3.1.1](fase2-metricas.md#m3-1-1), [M3.1.2](fase2-metricas.md#m3-1-2), que respondem à [Q3.1](fase2-gqm.md#q3-1). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m3-1-1).*
 
 1. Em Wi-Fi, executar a consulta completa (até o detalhamento de uma infração) em cada contexto
    especificado na [Fase 1](fase1-proposito.md):
     - portal: Chrome em computador, Firefox em computador e Chrome em celular Android;
-    - aplicativo: celular Android de entrada, celular Android intermediário e iPhone (de Heitor, CT06).
+    - aplicativo: celular Android de entrada, celular Android intermediário e iPhone D04 (CT06).
 2. Fazer três tentativas por contexto. O contexto conta como **concluído** quando pelo menos duas
    das três tentativas chegam ao detalhamento sem erro.
 3. **M3.1.1** usa as plataformas (computador, aprovado quando Chrome e Firefox forem aprovados, e celular Android, no portal; Android de entrada,
@@ -179,7 +191,9 @@ A equivalência do escopo e a atualização dos contadores precisam ser verifica
 4. Registrar versão do sistema, do navegador e do aplicativo de cada contexto. Contexto sem
    aparelho disponível é registrado como **não avaliado**, e não como falha.
 
-### P7 — Execução sob condição de rede (M3.2.1, M3.2.2 e M3.2.3)
+### P7 — Execução sob condição de rede (M3.2.1, M3.2.2 e M3.2.3) {#p7}
+
+*Mede [M3.2.1](fase2-metricas.md#m3-2-1), [M3.2.2](fase2-metricas.md#m3-2-2), [M3.2.3](fase2-metricas.md#m3-2-3), que respondem à [Q3.2](fase2-gqm.md#q3-2). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m3-2-1).*
 
 1. No contexto de referência, para cada condição da Tabela 2, aplicar a condição no ponto de
    acesso e anotar a velocidade medida.
@@ -197,7 +211,7 @@ A equivalência do escopo e a atualização dos contadores precisam ser verifica
 6. Se a sessão expirar, o proprietário faz o login de novo e a tentativa seguinte recomeça da
    tela inicial autenticada.
 
-## 4. Rastreabilidade entre as Fases 2 e 3
+## 4. Rastreabilidade entre as Fases 2 e 3 {#rastreabilidade-f2-f3}
 
 A tabela liga cada métrica da Fase 2 ao procedimento que a obtém, aos contextos medidos, ao
 instrumento e ao arquivo de dados. Os arquivos ficam em `dados/brutos/` e as evidências em
@@ -226,7 +240,7 @@ Os resultados são julgados com os níveis de pontuação e as regras de agrega�
 [Fase 2](fase2-metricas.md): uma questão é atendida quando todas as suas métricas atingem pelo
 menos o nível Mínimo aceitável, e o canal superior é o de nível maior em cada métrica.
 
-## 5. Registro de desvios
+## 5. Registro de desvios {#desvios}
 
 Qualquer mudança em relação a estas instruções durante a coleta (repetição perdida, contexto
 indisponível, parâmetro alterado, falha de gravação) é registrada no arquivo de desvios da

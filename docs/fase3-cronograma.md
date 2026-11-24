@@ -18,10 +18,16 @@ Os marcos de 15/11 (#46), 18/11 (#47), 20/11 (#48) e 22/11 (Entrega 2) seguem o 
 *Tabela 1 — Sequência proposta das sessões. Fonte: elaborada a partir dos marcos da E2.*
 
 **Execução efetiva até 22/11:** S03 foi executada em 21/11 (P6, parcial: CT01, CT03 e CT05;
-[registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S03-registro-2026-11-21.md)) e a contingência S05 em 22/11
-(CT05 com outro veículo; [registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S05-registro-2026-11-22.md)). O CT06 tem
-inventário registrado e três tentativas P6 em 22/11 (bloco B04, iPhone de Heitor), pendentes de conferência. S00, S01, S02 e S04 não têm execução registrada. As datas da
-tabela acima permanecem como proposta histórica.
+[registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S03-registro-2026-11-21.md)). Em 22/11 foram executados o piloto S01
+([registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S01-registro-2026-11-22.md)), a S02 com P1 a P3
+([registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S02-registro-2026-11-22.md)), a contingência S05
+(CT05, CT02 e CT01 com o V2; [registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S05-registro-2026-11-22.md)), a S06 com P4 e P5
+([registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S06-registro-2026-11-22.md)) e a S08 com P7
+([registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S08-registro-2026-11-22.md)). O CT06 tem
+inventário registrado e três tentativas P6 em 22/11 (bloco B04, iPhone D04), pendentes de conferência.
+O P7 previsto para a S04 foi executado como S08; a S07 foi reservada e não executada (desvio D020).
+S00 e S04 não têm execução registrada com essa numeração. As datas da tabela acima permanecem como
+proposta histórica.
 
 P4 e P5 exigem dez repetições válidas por canal no contexto de referência; P3 exige três. P6 tem quinze tentativas no mínimo (cinco contextos obrigatórios × três), mais três se houver iOS. P7 tem sessenta tentativas medidas (dois canais × três redes × dez), além de seis aquecimentos. Se houver mais veículos, ampliar a reserva; não reduzir a amostra silenciosamente para caber na sessão. O titular deve estar disponível para autenticar novamente quando necessário.
 
@@ -33,7 +39,7 @@ Situação documental em 13/11/2026: não há confirmação dos recursos nem evi
 |---|---|---|---|---|
 | B01 | Veículo com infração e consentimento | Hugo | 14/11 | Consentimentos aplicados, conforme confirmação de Hugo em 22/11/2026; vias assinadas e datas privadas. Conciliar códigos e confirmar veículo com infração; sem veículo elegível, adiar sessões e comunicar impacto na #47 |
 | B02 | Modelos, SO e versões dos dispositivos | Hugo | 14/11 | Inventário efetivo; sem aparelho obrigatório, registrar cobertura reduzida |
-| B03 | Registro do iPhone (D04), que é de Heitor | Heitor | 15/11 | Inventário e telas; sem o registro do aparelho, CT06 não avaliado e conclusão limitada ao Android |
+| B03 | Registro do iPhone (D04), de um integrante | Heitor | 15/11 | Inventário e telas; sem o registro do aparelho, CT06 não avaliado e conclusão limitada ao Android |
 | B04 | Rede controlada e contador de volume | Philipe | 15/11 | Piloto documentado; métrica/cenário inviável fica não medido |
 | B05 | Telas autenticadas e confirmação dos rótulos | Hugo e Philipe; iOS: Heitor | 15/11 | Evidências revisadas e atualização da Fase 1 no artigo e na GitPage |
 | B06 | Revisão do plano e PR | Pedro Henrique; autores abrem PR | 15/11 | PR aprovado; registrar ajustes solicitados |
@@ -44,8 +50,8 @@ Situação documental em 13/11/2026: não há confirmação dos recursos nem evi
 
 **Situação em 22/11, após o piloto S01:** B01 parcial (consentimento do titular do V2 informado;
 data e via privada a conferir por Hugo); B02 parcial (D01, D03 e D04 inventariados; D02 sem
-aparelho); B03 resolvido (CT06 executado por Heitor); B04 aberto (rede controlada e equivalência
-do contador de volume); B05 resolvido, sujeito à revisão independente das capturas (lista de
+aparelho); B03 resolvido (CT06 executado); B04 parcial (rede degradada aplicada ao portal na S08 e não
+aplicada ao aplicativo, desvio D021; equivalência do contador de volume não demonstrada); B05 resolvido, sujeito à revisão independente das capturas (lista de
 veículos, lista de infrações e detalhe nos dois canais); B06 resolvido (PR #57); B07 e B08 abertos.
 
 ## Sincronização e passagem para a Fase 4
@@ -80,7 +86,7 @@ Para entregar #47 à #48, conferir: arquivos sem dados pessoais, inventário pre
 O plano documental da #46 foi aprovado, mas os sete critérios de execução ainda estão parciais
 ou pendentes. O prazo original da #47 venceu em 18/11. A
 [página de coleta](fase4-coleta.md) registra responsáveis, evidências necessárias e a proposta de
-reagendamento sujeita à confirmação da equipe. O iPhone é de Heitor, responsável pelas
+reagendamento sujeita à confirmação da equipe. Heitor é o responsável pelas
 atividades de iOS; a correção das tabelas anteriores está no PR #66.
 Uma nova consulta ao Project 38 em 19/11 continuou bloqueada por falta de `read:project`;
 nenhum campo remoto foi alterado.

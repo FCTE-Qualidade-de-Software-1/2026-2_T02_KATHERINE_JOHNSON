@@ -2,8 +2,9 @@
 
 Esta página descreve como a avaliação é conduzida. Primeiro apresenta a visão geral do método,
 com o processo de avaliação, os modelos e as técnicas adotadas; depois detalha, passo a passo, o
-que foi feito em cada fase já concluída e o que está previsto para as próximas. A numeração dos passos
-é a mesma das subseções da Metodologia no artigo.
+que foi feito em cada uma das quatro fases. Nas Fases 1 e 2, a numeração dos passos é a mesma das
+subseções da Metodologia no artigo. A ligação de cada métrica com os elementos de todas as fases
+está na página de [rastreabilidade](rastreabilidade.md).
 
 ## Visão geral
 
@@ -12,7 +13,7 @@ Serviços e o aplicativo, sob o ponto de vista de quem usa o serviço. Todas as 
 externas (caixa-preta): a equipe não tem acesso ao código-fonte nem à infraestrutura do Detran-DF,
 e cada métrica precisa ser aplicável igualmente aos dois canais.
 
-O trabalho combina três referenciais:
+O trabalho combina quatro referenciais (Tabela 1):
 
 | Referencial | Papel no projeto |
 |---|---|
@@ -21,8 +22,14 @@ O trabalho combina três referenciais:
 | Goal–Question–Metric (GQM) | Liga os objetivos de medição às questões e às métricas da Fase 2 |
 | Practical Software Measurement (PSM/CID) e ISO/IEC/IEEE 15939 | Acompanham a execução do próprio projeto com métricas de gestão |
 
+*Tabela 1 — Referenciais adotados. Fonte: elaborada pela equipe.*
+
+A Figura 1 mostra a sequência das fases e o acompanhamento de gestão.
+
 ```mermaid
 flowchart LR
+    accTitle: Fases da avaliação
+    accDescr: A Fase 1, requisitos da avaliação, leva à Fase 2, especificação GQM, que leva à Fase 3, projeto da avaliação, que leva à Fase 4, execução e julgamento. A gestão PSM/CID acompanha as quatro fases.
     F1["Fase 1<br/>Requisitos da avaliação"] --> F2["Fase 2<br/>Especificação (GQM)"]
     F2 --> F3["Fase 3<br/>Projeto da avaliação"]
     F3 --> F4["Fase 4<br/>Execução e julgamento"]
@@ -31,6 +38,8 @@ flowchart LR
     G -.-> F3
     G -.-> F4
 ```
+
+*Figura 1 — Fases da avaliação segundo a ISO/IEC 25040 e o acompanhamento de gestão. Fonte: elaborada pela equipe.*
 
 Cada fase produz artefatos que alimentam a seguinte: as características priorizadas na Fase 1
 viram objetivos de medição na Fase 2; as métricas da Fase 2 definem o que o plano da Fase 3 deve
@@ -76,24 +85,26 @@ verificável, usando o método GQM.
 
 ## Fase 3 — Projeto da avaliação (Entrega 2)
 
-**Objetivo:** planejar como as medições serão obtidas, de forma repetível.
-
-Passos previstos: definição do método e das instruções para o avaliador; especificação dos
-recursos, do ambiente e da massa de dados; e cronograma das sessões de coleta.
+**Objetivo:** planejar como as medições seriam obtidas, de forma repetível.
 
 | Passo | O que foi feito | Resultado |
 |---|---|---|
 | 3.1 Método e instruções para o avaliador | Método caixa-preta roteirizado, parâmetros comuns (repetições, cache, tempo limite, condições de rede) e sete procedimentos que cobrem as quatorze métricas, com a rastreabilidade de cada métrica até o arquivo de dados | [Método e instruções para o avaliador](fase3-metodo.md) |
+| 3.2 Recursos e ambiente | Contextos CT01 a CT06, dispositivos, preparação da rede e piloto | [Recursos e ambiente](fase3-ambiente.md) |
+| 3.3 Massa e instrumentos de coleta | Veículos consentidos, termo de consentimento e oito arquivos CSV | [Massa e instrumentos de coleta](fase3-dados.md) |
+| 3.4 Cronograma e bloqueios | Sessões, responsáveis, bloqueios e critérios de resolução | [Cronograma e bloqueios](fase3-cronograma.md) |
 
 ## Fase 4 — Execução e julgamento (Entrega 2)
 
 **Objetivo:** obter as medidas, calcular as métricas, responder às questões do GQM e julgar a
 qualidade dos dois canais.
 
-Passos previstos: execução das medições com registro de evidências; organização dos dados
-brutos; cálculo das métricas e comparação com os níveis de pontuação; julgamento e conclusões
-em relação ao propósito da Fase 1; e execução de uma ação de melhoria justificada pelos
-resultados.
+| Passo | O que foi feito | Resultado |
+|---|---|---|
+| 4.1 Execução das medições | Seis sessões em 21 e 22/11/2026 (S01, S02, S03, S05, S06 e S08), com registros, evidências anonimizadas e desvios | [Coleta, pendências e cálculo](fase4-coleta.md) |
+| 4.2 Cálculo e comparação com os níveis | Valores de primeira leitura; níveis aguardam a segunda leitura independente | [Análise e julgamento GQM](fase4-analise.md) |
+| 4.3 Julgamento e conclusões | Questões e objetivos inconclusivos até a conferência, com lacunas declaradas | [Análise e julgamento GQM](fase4-analise.md#julgamento) |
+| 4.4 Ação de melhoria | Proposta de processo com templates técnicos, motivada pela falha de P6 no aplicativo 2.6.3 | [Ação de melhoria](fase4-melhoria.md) |
 
 O andamento da fase, as responsabilidades e as limitações já conhecidas estão em
 [Fase 4](fase4.md); a ação de melhoria tem página própria em [Ação de melhoria](fase4-melhoria.md).
