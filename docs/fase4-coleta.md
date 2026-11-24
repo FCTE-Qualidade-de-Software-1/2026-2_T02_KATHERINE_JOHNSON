@@ -1,14 +1,15 @@
 # Fase 4 — Coleta, pendências e cálculo
 
-## Situação atual em 23/11/2026 {#situacao-atual}
+## Situação atual em 24/11/2026 {#situacao-atual}
 
 A coleta registrou seis sessões em 21 e 22/11/2026: o piloto S01, a S02 (P1 a P3, caso V2), a S03
 e a S05 (P6), o CT06 (P6 no iOS), a S06 (P4 e P5, caso V4) e a S08 (P7, caso V4). Os valores estão
-em `dados/brutos/` e são de **primeira leitura**; a segunda leitura independente está concluída só
-para P1 a P3 da S02. Por isso o validador ainda não promove as linhas a resultados oficiais e não
-há nível de pontuação. As lacunas declaradas são o aplicativo na rede degradada (D021) e o CT04,
-sem aparelho. Os valores observados estão na [análise](fase4-analise.md) e a ligação de cada
-métrica com sua coleta está na [rastreabilidade](rastreabilidade.md#metricas).
+em `dados/brutos/`. As segundas leituras independentes elegíveis foram concluídas em 23/11; as
+divergências de tempo e a rolagem da S02 foram resolvidas em conjunto. O cálculo reproduzível
+registra 42 resultados calculados, quatro estados inconclusivos e uma métrica não aplicável.
+Permanecem sem medição o aplicativo na rede degradada (D021) e o CT04, sem aparelho. Os valores
+e julgamentos estão na [análise](fase4-analise.md); a ligação de cada métrica com sua coleta está
+na [rastreabilidade](rastreabilidade.md#metricas).
 
 As seções seguintes preservam o histórico datado do acompanhamento (20 a 22/11) e não devem ser
 lidas como situação atual.
@@ -18,12 +19,11 @@ lidas como situação atual.
 **Continuação S06/V4 em 22/11:** novo titular coberto pelo consentimento aplicado, com outro
 veículo, Samsung SM-S731B (D05) e um computador com Ubuntu (D06). Os registros brutos estão no repositório;
 consulte `evidencias/fase4/S06-registro-2026-11-22.md` e `evidencias/fase4/S08-registro-2026-11-22.md`.
-P4 tem gravações provisórias; a lista do Android foi refeita no B09 com rolagem rápida contínua
-(o B04, contaminado por esperas do instrumento, segue excluído). P5 foi concluído nos dois canais
-(10 leituras válidas cada). P7 foi executado no portal em Wi-Fi, rede degradada e 4G e no aplicativo em Wi-Fi e 4G (S08);
-a rede degradada no aplicativo não pôde ser aplicada (D021). Os tempos são propostas automáticas pendentes de
-marcação visual e segunda leitura independente. Nenhum resultado dessa continuação foi promovido
-a julgamento oficial, e nenhum original identificável é público.
+P4 foi conferido; o bloco B04 excluído e a repetição de instrumento de B09 foram preservados.
+P5 teve dez leituras válidas por canal. P7 foi executado no portal em Wi-Fi, rede degradada e 4G
+e no aplicativo em Wi-Fi e 4G (S08); a rede degradada no aplicativo não pôde ser aplicada (D021).
+As leituras independentes e os níveis elegíveis estão registrados; nenhum original identificável é
+público.
 
 **Consentimento concluído:** Hugo confirmou em 22/11/2026 a aplicação dos termos aos participantes
 da coleta. As vias assinadas e datas individuais permanecem privadas, sem publicação na GitPage.

@@ -6,25 +6,25 @@ Portal de Serviços e do aplicativo em relação ao propósito definido na [Fase
 Ela também inclui a [ação de melhoria](fase4-melhoria.md), exigida na Entrega 2 e justificada
 pelas evidências coletadas.
 
-> **Situação em 23/11/2026.** Os oito CSV têm registros de seis sessões (S01, S02, S03, S05, S06 e S08), cobrindo P1
-> a P7 com duas lacunas declaradas: o aplicativo na rede degradada e o contexto CT04. Os valores
-> são primeira leitura, exceto P1 a P3 da S02, que tiveram segunda leitura independente (uma rolagem
-> do P3 segue pendente); sem a conferência completa, não há nível de pontuação. A
-> [análise](fase4-analise.md) traz os valores observados e mantém os objetivos inconclusivos. A
+> **Situação em 24/11/2026.** Os registros de seis sessões (S01, S02, S03, S05, S06 e S08) foram
+> conferidos em segunda leitura independente para os procedimentos elegíveis. As divergências de
+> tempo foram resolvidas em conjunto; o cálculo reproduzível atribui níveis aos resultados elegíveis.
+> Permanecem duas lacunas: aplicativo na rede degradada e CT04. A
+> [análise](fase4-analise.md) responde às questões e julga objetivos por canal sem transformar
+> essas lacunas em zero ou aprovação. A
 > [proposta de processo e templates de melhoria](fase4-melhoria.md) está entregue, sem comprovação de
 > eficácia no serviço.
 
-O [acompanhamento da coleta](fase4-coleta.md) reúne as pendências da #46, a proposta de
-reagendamento e o cálculo reproduzível da #47. O prazo original da coleta (18/11) foi
-reprogramado e a coleta ocorreu em 21 e 22/11. Sem a segunda leitura, a consolidação registra valores
-observados sem níveis de qualidade.
+O [acompanhamento da coleta](fase4-coleta.md) reúne as pendências da #46 e o histórico de
+reagendamento; a [consolidação](../dados/consolidados/resultados-metricas.csv) registra valores,
+níveis, proveniência e limitações após a conferência. A coleta ocorreu em 21 e 22/11.
 
 ## 1. Atividades, responsáveis e prazos
 
 | Atividade | Issue | Responsáveis | Prazo | Situação em 23/11 | Onde está o resultado |
 |---|---|---|---|---|---|
-| Coleta das medições e dados brutos (S01, S02, S03, S05, S06 e S08) | [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Hugo, Pedro Druck, Philipe | 18/11/2026 | Seis sessões registradas em 21 e 22/11; segunda leitura concluída só para P1 a P3 da S02 | `dados/brutos/` e `evidencias/fase4/` |
-| Análise, respostas às questões GQM e julgamento | [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Pedro Henrique, Philipe; revisão de Heitor | 20/11/2026 | Valores de primeira leitura analisados; níveis aguardam a segunda leitura | [Análise e julgamento GQM](fase4-analise.md) e artigo |
+| Coleta das medições e dados brutos (S01, S02, S03, S05, S06 e S08) | [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Hugo, Pedro Druck, Philipe | 18/11/2026 | Segundas leituras registradas; níveis calculados para resultados elegíveis | `dados/brutos/` e `evidencias/fase4/` |
+| Análise, respostas às questões GQM e julgamento | [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Pedro Henrique, Philipe; revisão de Heitor | 20/11/2026 | Resultados, níveis, respostas, julgamentos e oportunidades registrados; aprovação do revisor pendente | [Análise e julgamento GQM](fase4-analise.md) e artigo |
 | Ação de melhoria obrigatória | [#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36) | Pedro Druck | 21/11/2026 | Processo e templates entregues; revisão e eficácia pendentes | [Ação de melhoria](fase4-melhoria.md) |
 
 *Tabela 1 — Atividades da Fase 4. Fonte: issues #36, #47 e #48 e coleta intermediária PSM/CID de 10/11/2026.*
@@ -67,24 +67,23 @@ Regras de integridade que valem para toda a fase:
 
 ## 4. Resultados e julgamento
 
-Não há resultados oficiais elegíveis: todos os valores são primeira leitura e dependem da segunda
-leitura independente. A página [Análise e julgamento GQM](fase4-analise.md) traz os valores
-observados e o estado de cada questão, hoje inconclusiva. Depois da conferência (#48), esta seção terá
-um resultado por objetivo, com o valor de cada métrica, o nível de pontuação, a resposta a cada
-questão e o julgamento por característica e por canal.
+Os resultados por métrica, os níveis e as respostas estão na página
+[Análise e julgamento GQM](fase4-analise.md) e na consolidação vinculada. O resumo abaixo segue a
+regra de que uma questão só é atendida quando todas as métricas aplicáveis alcançam ao menos o nível
+mínimo aceitável.
 
 | Objetivo GQM | Característica | Resultado |
 |---|---|---|
-| G1 | Adequação funcional | Primeira leitura: sem campo divergente; um campo ausente no aplicativo (16/17); 4 contra 6 passos. Inconclusivo |
-| G2 | Eficiência de desempenho | Primeira leitura (caso V4, Wi-Fi): medianas de tempo menores no portal; volumes de escopos diferentes. Inconclusivo |
-| G3 | Cobertura de contexto | Primeira leitura: cinco contextos de P6 executados, CT04 não avaliado; P7 sem o aplicativo na rede degradada. Inconclusivo |
+| G1 | Adequação funcional | Não atendido nos dois canais: M1.1.1 Inaceitável (33,33%); M1.2.2 Inaceitável (0/1). A ausência de R14 foi observada no aplicativo. |
+| G2 | Eficiência de desempenho | Inconclusivo nos dois canais: tempos Excelentes no caso V4/Wi-Fi, portal mais rápido; volumes com escopos de instrumentos não equivalentes. |
+| G3 | Cobertura de contexto | Portal atendido nos contextos medidos (até Alvo na rede degradada); aplicativo não atendido no escopo observado por falha 0/3 em CT05/2.6.3; CT04 e aplicativo degradado não avaliados. |
 
 *Tabela 3 — Resultados por objetivo de medição. Fonte: [Objetivos, questões e hipóteses](fase2-gqm.md).*
 
 ## 5. Limitações já conhecidas
 
 - **iOS:** o CT06 foi inventariado e executado em 22/11 no iPhone D04 (3 de 3, caso V5,
-  aplicativo 2.7.1), pendente de conferência independente. O iOS não oferece contador de bytes por
+  aplicativo 2.7.1), com segunda leitura independente registrada. O iOS não oferece contador de bytes por
   aplicativo, então a M2.2.1 não é medida nele (D008); a execução sem registrador independente
   está registrada como desvio (D028).
 - **Lacunas de cobertura:** o aplicativo na rede degradada não foi medido (D021) e o CT04 não tem

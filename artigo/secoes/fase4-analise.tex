@@ -1,90 +1,111 @@
 \subsection{Fase 4: Análise e Julgamento da Avaliação}
 \label{sec:fase4-analise}
 
-\subsubsection{Execução Documentada e Elegibilidade}
+\subsubsection{Dados Conferidos e Resultados das Métricas}
 
-Os registros reúnem seis sessões, em 21 e 22/11/2026: o piloto S01, a S02 (P1 a P3), a S03 e a S05 (P6), a S06 (P4 e P5) e a S08 (P7). São primeira leitura, exceto P1 a P3 da S02, com segunda leitura independente (uma rolagem pendente); nas demais o revisor está vazio e o validador recusa promover as linhas a dados oficiais. As tabelas trazem valores observados, sem nível. O piloto S01 não integra o cálculo, e as durações dos scripts de P6 não substituem P4. Os casos (V1, V2, V4 e V5) têm aparelhos e versões distintos e não são reunidos em uma única mediana.
-
-A Tabela~\ref{tab:fase4-s02} traz P1 a P3 (portal no Chrome e aplicativo 2.7.0 no Android, Wi-Fi, caso V2, uma infração).
+As sessões ocorreram em 21 e 22/11/2026; as segundas leituras elegíveis foram concluídas em 23/11. Divergências e a rolagem da S02 foram resolvidas. O piloto S01 foi excluído. A Tabela~\ref{tab:fase4-s02} resume G1 no caso V2 (Wi-Fi).
 
 \begin{table}[htbp]
 \centering
-\caption{Observações preliminares de S02 (P1 a P3); não são níveis oficiais.}
+\caption{Resultados de G1 na S02 (V2, Wi-Fi), com níveis de pontuação.}
 \label{tab:fase4-s02}
 \scriptsize
-\begin{tabular}{P{5.6cm}P{3.0cm}P{3.0cm}}
+\begin{tabular}{P{4.8cm}P{3.0cm}P{3.0cm}}
 \toprule
 Métrica & Portal & Aplicativo \\
 \midrule
-M1.1.1, campos na lista (de 15) & 5 & 5 \\
-M1.1.2, campos no detalhe (de 17) & 17 & 16 (sem R14) \\
-M1.2.1; M1.2.2 (par) & \multicolumn{2}{c}{16 de 17 campos paritários; 0 de 1 infração (R14)} \\
-M1.3.1, passos até a lista & 4 & 6 \\
-M1.3.2, transições; rolagens & 3; 0 & 5; 2 \\
+M1.1.1, lista & 5/15; 33,33\%; Inaceitável & 5/15; 33,33\%; Inaceitável \\
+M1.1.2, detalhe & 17/17; 100\%; Excelente & 16/17; 94,12\%; Alvo (sem R14) \\
+M1.2.1, campos paritários (par) & \multicolumn{2}{c}{16/17; 94,12\%; Alvo} \\
+M1.2.2, infrações paritárias (par) & \multicolumn{2}{c}{0/1; 0\%; Inaceitável} \\
+M1.3.1, passos (n=3) & 4; Excelente & 6; Alvo \\
+M1.3.2, transições (n=3) & 3; Excelente & 5; Alvo \\
 \bottomrule
 \end{tabular}
-\par\smallskip{\footnotesize Fonte: registro S02; segunda leitura concluída, exceto uma rolagem.}
+\par\smallskip{\footnotesize Fonte: registros e segunda leitura independente da S02. A rolagem do aplicativo foi conferida e resolvida; não integra M1.3.1 ou M1.3.2.}
 \end{table}
 
-A Tabela~\ref{tab:fase4-observacoes} resume as tentativas de P6 por contexto.
-
-\begin{table}[htbp]
-\centering
-\caption{Observações preliminares de P6 (S03 e S05); não são níveis oficiais.}
-\label{tab:fase4-observacoes}
-\scriptsize
-\begin{tabular}{P{2.6cm}P{2.0cm}P{7.2cm}}
-\toprule
-Contexto & Concluídas & Resultado e limite \\
-\midrule
-CT01: portal/Chrome & 3/3 (V1); 3/3 (V2) & Cinco erros de instrumento da S03 preservados à parte. \\
-CT02: portal/Firefox & 3/3 (V2) & Falha de login na S03 (D005), fora das tentativas; resolvida na S05. \\
-CT03: portal/Chrome Android & 2/3 (V1) & Sessão expirada, preservada como falha. \\
-CT05: aplicativo 2.6.3 & 0/3 (V1) & Erro ao buscar veículos; aparelho superior (D006). \\
-CT05: aplicativo 2.7.0 & 3/3 (V2) & Outro aparelho, titular e veículo (D009). \\
-CT06: aplicativo iOS 2.7.1 & 3/3 (V5) & Executor é o titular (D028); filtro de período (D030). \\
-CT04 & Sem execução & Sem aparelho; não avaliado. \\
-\bottomrule
-\end{tabular}
-\par\smallskip{\footnotesize Fonte: registros S03, S05 e CT06; conferência pendente. Versões, aparelhos, titulares e veículos diferentes impedem atribuir 2.6.3 contra 2.7.0 a uma causa.}
-\end{table}
-
-\subsubsection{Continuação com o Caso V4 (S06 e S08)}
-\label{subsec:fase4-v4}
-
-Em 22/11/2026, a coleta prosseguiu com outro titular consentido (caso V4), no computador D06 e no Samsung SM-S731B (Aplicativo 2.7.0), com início em \emph{Consultar}. A Tabela~\ref{tab:fase4-v4} traz a primeira leitura automática pelos quadros, sem aquecimentos; sem a segunda leitura independente, nenhum nível é atribuído.
+A Tabela~\ref{tab:fase4-v4} resume G2 no caso V4 (Wi-Fi). Todos os resultados foram Excelentes e o portal teve menores medianas de tempo. Os volumes não são comparáveis: DevTools mede bytes codificados do navegador; o contador Android soma tráfego enviado e recebido pelo UID.
 
 \begin{table}[!htbp]
 \centering
-\caption{Observações provisórias de S06/S08 (caso V4): mediana e P90; não são níveis oficiais.}
+\caption{Resultados de G2 na S06 (V4, Wi-Fi); tempo em segundos e volume em MB.}
 \label{tab:fase4-v4}
 \scriptsize
-\begin{tabular}{P{3.0cm}P{4.6cm}P{4.6cm}}
+\begin{tabular}{P{3.2cm}P{4.2cm}P{4.2cm}}
 \toprule
-Métrica e rede & Portal & Aplicativo \\
+Métrica & Portal (média/mediana/P90) & Aplicativo (média/mediana/P90) \\
 \midrule
-M2.1.1, Wi-Fi & 10/10; 0,145 s; 0,683 s & 10/10; 0,774 s; 0,858 s \\
-M2.1.2, Wi-Fi & 10/10; 0,136 s; 0,153 s & 10/10; 0,641 s; 0,816 s \\
-M2.2.1, Wi-Fi & 0,0107 MB (navegador) & 0,0649 MB (UID) \\
-M3.2.3, Wi-Fi & 10/10; 0,083 s; 0,083 s & 10/10; 0,408 s; 0,667 s \\
-M3.2.3, 4G & 10/10; 0,142 s; 0,183 s & 10/10; 0,726 s; 0,942 s \\
-M3.2.3, degradada & 8/10; 0,850 s; 1,500 s & Não avaliada (D021) \\
+M2.1.1, lista (n=10) & 0,254/0,145/0,683 s; Excelente & 0,695/0,774/0,858 s; Excelente \\
+M2.1.2, detalhe (n=10) & 0,142/0,136/0,153 s; Excelente & 0,687/0,641/0,816 s; Excelente \\
+M2.2.1, volume (n=10; média/mediana) & 0,0107/0,0107 MB; Excelente & 0,0660/0,0649 MB; Excelente \\
 \bottomrule
 \end{tabular}
-\par\smallskip{\footnotesize Fonte: \texttt{dados/brutos/} e registros S06/S08; conferência independente pendente.}
+\par\smallskip{\footnotesize Fonte: registros S06 e segunda leitura independente de P4/P5.}
 \end{table}
 
-Os escopos de volume diferem e não sustentam superioridade. No aplicativo, a lista fica abaixo da área visível; o B04 foi excluído por esperas do instrumento e o B09 usou rolagens rápidas do aparelho, cujo curso integra o tempo (D026). Falhas e tempo limite da rede degradada permanecem no denominador. Essa rede não pôde ser imposta ao aplicativo: o adaptador não sustentou ponto de acesso, e o aplicativo ignorou proxy e recusou VPN reversa (D021).
+\subsubsection{Cobertura de Contexto}
+
+A Tabela~\ref{tab:fase4-observacoes} resume a cobertura. O portal atingiu o mínimo em CT03 (2/3); o aplicativo falhou em CT05/2.6.3 (0/3), mas concluiu CT05/2.7.0 e CT06 (3/3). CT04 não foi executado.
+
+\begin{table}[htbp]
+\centering
+\caption{Resultados de M3.1.1 e M3.1.2 por plataforma/contexto.}
+\label{tab:fase4-observacoes}
+\scriptsize
+\begin{tabular}{P{4.4cm}P{3.5cm}P{3.5cm}}
+\toprule
+Contexto & Portal & Aplicativo \\
+\midrule
+CT03 móvel, V1 & 1/1; Excelente & -- \\
+CT01+CT02 computador, V2 & 1/1; Excelente & -- \\
+Navegadores (M3.1.2), V1 e V2 & 2/2 por grupo; Excelente & Não aplicável \\
+CT05, Android 2.6.3 (V1) & -- & 0/1; Inaceitável \\
+CT05, Android 2.7.0 (V2) & -- & 1/1; Excelente \\
+CT06, iOS 2.7.1 (V5) & -- & 1/1; Excelente \\
+CT04 & -- & Não avaliado \\
+\bottomrule
+\end{tabular}
+\par\smallskip{\footnotesize Fonte: S03, S05, CT06 e segunda leitura independente de P6. Percentual: 100\% nos aprovados; 0\% no reprovado. M3.1.2: V1 (CT01+CT03) e V2 (CT01+CT02).}
+\end{table}
+
+\subsubsection{Resultados por Condição de Rede}
+
+A Tabela~\ref{tab:fase4-p7} mostra P7: na rede degradada, o portal concluiu 8/10 (mediana 0,850 s entre as concluídas), mantendo preparação malsucedida e tempo limite no denominador. A condição não pôde ser aplicada ao aplicativo (D021).
+
+\begin{table}[!htbp]
+\centering
+\caption{Resultados de P7 por rede no caso V4 (E=Excelente; A=Alvo).}
+\label{tab:fase4-p7}
+\scriptsize
+\begin{tabular}{P{2.0cm}P{2.0cm}P{2.5cm}P{2.4cm}P{2.8cm}}
+\toprule
+Rede & Canal & Conclusão M3.2.1 & Falhas M3.2.2 & Mediana M3.2.3 \\
+\midrule
+Wi-Fi & Portal & 10/10; 100\%; E & 0\%; E & 0,083 s; E \\
+Wi-Fi & Aplicativo & 10/10; 100\%; E & 0\%; E & 0,408 s; E \\
+4G & Portal & 10/10; 100\%; E & 0\%; E & 0,142 s; E \\
+4G & Aplicativo & 10/10; 100\%; E & 0\%; E & 0,726 s; E \\
+Degradada & Portal & 8/10; 80\%; A & 20\%; A & 0,850 s; E \\
+Degradada & Aplicativo & Não avaliada & Não avaliada & Não avaliada \\
+\bottomrule
+\end{tabular}
+\par\smallskip{\footnotesize Fonte: registro S08, segunda leitura independente de P7 e consolidação das métricas.}
+\end{table}
 
 \subsubsection{Respostas GQM e Relações entre Características}
 
-Em primeira leitura, Q1.1 a Q1.3 mostram valores sem divergência entre os canais, um campo ausente no detalhe do aplicativo e mais passos e rolagens nele. Q2.1 e Q2.2 têm amostras completas do caso V4 (Tabela~\ref{tab:fase4-v4}), com o portal mais rápido em Wi-Fi e volumes de escopos diferentes. Q3.1 tem cinco contextos (Tabela~\ref{tab:fase4-observacoes}), e Q3.2 tem o portal nas três redes e o aplicativo em Wi-Fi e 4G. Como falta a segunda leitura exigida, nenhuma questão recebe nível, as sete hipóteses seguem sem julgamento definitivo e G1, G2 e G3 permanecem inconclusivos nos dois canais. Ausência de dado ou de conferência não equivale a paridade nem a aprovação.
+Q1.1 não é atendida (lista: 33,33\% em ambos; detalhe: Excelente no portal e Alvo no aplicativo; H1.1 compatível só quanto à contagem). Q1.2 não é atendida: R14 ausente gera 16/17 campos paritários e 0/1 infração integral (H1.2 contrariada). Q1.3 é atendida, mas H1.3 é contrariada: o aplicativo exige dois passos e transições a mais. Logo, G1 não é atendido em nenhum canal.
 
-A falha antes da lista em CT05 com a versão 2.6.3 impede observar campos e detalhes, relacionando cobertura de contexto e adequação funcional; não se atribui completude zero a uma tela não alcançada. O aplicativo exige mais passos e rolagens, mas a M2.1.1 começa em \emph{Consultar} e não os inclui, de modo que nada se conclui sobre o tempo percebido. Volume e tempo têm escopos diferentes e não permitem associação; na rede degradada só o portal foi observado.
+Q2.1 é atendida (Excelente em ambos), mas H2.1 é contrariada pela menor mediana do portal. Q2.2 e H2.2 são inconclusivas porque os instrumentos de volume não são equivalentes; G2 também permanece inconclusivo.
+
+Q3.1 é atendida no portal e não no aplicativo (falha CT05/2.6.3; H3.1 contrariada). Q3.2 é atendida no portal, compatível com H3.2 na amostra (80\% de conclusão degradada), e inconclusiva no aplicativo. G3 é atendido no portal nos contextos medidos e não atendido no aplicativo no escopo observado.
+
+A rapidez não compensa a baixa completude da lista; R14 ausente reduz a paridade. A falha do aplicativo 2.6.3 impediu observar os campos em CT05, sem justificar atribuir completude zero nem causalidade entre contextos distintos. Como M2.1.1 começa em \emph{Consultar}, os passos extras não entram no tempo. Na rede degradada, falhas do portal permanecem no denominador; não há par degradado para o aplicativo. A amostra não permite generalização.
 
 \subsubsection{Ação de Melhoria Entregue}
 \label{subsec:acao-melhoria}
 
-O bloqueio relatado em CT05 motivou uma proposta de processo com templates técnicos, tipo aceito na issue \#36. O artefato em \texttt{melhorias/consulta-infracoes/} entrega ficha de incidente, matriz de quatro cenários e inspeção automática: conferir a evidência, reproduzir a configuração, separar intervenções por versão, preparar diagnóstico e repetir três tentativas P6 por contexto. Apoia D4 (suporte por plataforma) e D1 (investimento), sem avaliar usabilidade.
+As prioridades são: (1) bloqueio 0/3 no aplicativo 2.6.3; (2) R14 ausente; (3) lista com 5/15 campos em ambos; (4) duas falhas do portal na rede degradada. A primeira motivou a proposta de diagnóstico e regressão da issue \#36, com ficha, matriz de cenários e inspeção automática em \texttt{melhorias/consulta-infracoes/}, apoiando D4 e D1.
 
-A aprovação do contexto preserva o mínimo de duas conclusões em três. A proposta não altera o serviço do Detran-DF, e sua revisão humana e eficácia permanecem pendentes: não se declara defeito corrigido, causa identificada ou encaminhamento ao órgão.
+A priorização aguarda revisão e não estima esforço. A proposta não altera o serviço nem teve eficácia medida. Resultados limitam-se às condições observadas; CT04, rede degradada no aplicativo e M2.2.1 no iOS não foram medidos. Valores, respostas e limitações estão em \texttt{dados/consolidados/}.

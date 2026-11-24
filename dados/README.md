@@ -1,6 +1,11 @@
 # Instrumentos da Fase 4
 
-Os CSV em `brutos/` são modelos vazios (UTF-8, vírgula, ponto decimal). Não são evidência de execução. Os termos foram aplicados, conforme confirmação de Hugo em 22/11/2026, com vias assinadas privadas. Preencher os CSV após piloto e medições efetivas. Aspas delimitam textos com vírgulas. Não publicar identificadores, credenciais, valores pessoais ou HAR original.
+Os CSV em `brutos/` registram as medições das sessões S02 a S08; S01 é piloto e não entra no
+cálculo. As leituras independentes elegíveis foram concluídas e registradas em
+`evidencias/fase4/segunda-leitura-p4-p7-2026-11-23.md` e
+`evidencias/fase4/S02-segunda-leitura-2026-11-23.md`. Os termos foram aplicados, conforme
+confirmação de Hugo em 22/11/2026, com vias assinadas privadas. Aspas delimitam textos com
+vírgulas. Não publicar identificadores, credenciais, valores pessoais ou HAR original.
 
 ## Validação e cálculo reproduzível
 
@@ -18,10 +23,11 @@ de melhoria. Para experimentar sem sobrescrever a consolidação versionada, usa
 `--saida /tmp/calculo-fase4`. O manifesto registra SHA-256 de cada entrada e do script, além do
 commit de base. Os hashes identificam também arquivos alterados depois desse commit.
 
-Com os instrumentos vazios, a saída tem 25 linhas inconclusivas e uma não aplicável
-(M3.1.2 no aplicativo), sem valor nem nível: são registros de cobertura, não resultados medidos.
-As métricas M1.2.x têm uma linha para o par. `--exigir-dados` retorna erro quando não há nenhum
-resultado calculável; essa opção **não certifica que a coleta inteira está completa**.
+Na consolidação atual, 42 resultados têm cálculo e nível, quatro estados permanecem inconclusivos
+e M3.1.2 no aplicativo é não aplicável. Métricas não medidas, inclusive aplicativo na rede
+degradada, continuam sem nível. As métricas M1.2.x têm uma linha para o par. `--exigir-dados`
+retorna erro quando não há nenhum resultado calculável; essa opção **não certifica que a coleta
+inteira está completa**.
 
 Antes de calcular, o validador rejeita cabeçalhos incorretos, chaves duplicadas, números
 negativos/não finitos, evidências inexistentes ou fora da pasta pública, falta de conferente,
@@ -40,7 +46,8 @@ limitação explícita; P6 incompleto e P3 sem recorrência ficam inconclusivos.
 Uma execução sem erros verifica consistência dos registros, **não comprova consentimento,
 anonimização, independência do revisor ou liberação do piloto**. Conferir esses itens no registro
 de sessão, assim como seleção dos campos condicionais, equivalência de instrumentos, motivos
-de exclusão/reposição e limitações de amostra. A análise e as respostas GQM continuam na #48.
+de exclusão/reposição e limitações de amostra. A análise, as respostas GQM e as oportunidades
+priorizadas estão registradas para revisão na #48.
 Os testes usam somente dados sintéticos em diretórios temporários, sem gerar evidências públicas.
 
 ## Dicionário e convenções
