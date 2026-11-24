@@ -19,7 +19,7 @@ O ICM conta fechamento formal, sem converter critérios pendentes em entregas co
 
 M-DP1: avaliados [52, 54, 56, 57, 58, 59, 60, 62, 63, 64, 65, 66, 67]; com retrabalho []. Inclui PRs avaliados ainda abertos e PRs de conteúdo integrados na branch da Fase 3, seguindo o alcance da coleta anterior. Bots não contam como revisão humana. Retrabalho é Changes Requested ou commit posterior à primeira revisão humana, dentro do corte.
 
-Daniellira540: 2Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: , HeitorM50: 3Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: , HugoFreitass: 1Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: , PedroGTG: 5Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: , Phill-Chill: 2Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: , pedruck: 1.
+Espera pela primeira revisão: mediana 8,24 h; 2 PR(s) acima de 48 h. Revisões por login: Daniellira540: 2, HeitorM50: 3, HugoFreitass: 1, PedroGTG: 5, Phill-Chill: 2, pedruck: 1.
 
 ## Horas e contribuição da E2
 

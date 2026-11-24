@@ -212,3 +212,39 @@
   .md-typeset .kj-home > ol, .md-typeset .kj-home > ul { display: block; }
   .md-typeset .kj-home > ol > li, .md-typeset .kj-home > ul > li { break-inside: avoid; box-shadow: none; }
 }
+
+/* Diagramas clicáveis da cadeia (index.md, cadeia.js). */
+.kj-cadeia-diagrama {
+  overflow-x: auto;
+  margin: 1rem 0 .4rem;
+  padding: .8rem;
+  border: 1px solid var(--kj-line);
+  border-radius: .6rem;
+  background: var(--kj-surface);
+}
+.kj-cadeia-diagrama svg { width: 100%; max-width: none !important; height: auto; }
+/* Em telas estreitas o diagrama mantém tamanho legível e rola na horizontal. */
+@media (max-width: 60em) { .kj-cadeia-diagrama svg { min-width: 48rem; } }
+.kj-cadeia-diagrama a { cursor: pointer; }
+.kj-cadeia-diagrama:focus-visible,
+.kj-cadeia-diagrama a:focus-visible {
+  outline: 3px solid var(--kj-accent);
+  outline-offset: 2px;
+}
+.kj-cadeia-diagrama a:focus-visible rect,
+.kj-cadeia-diagrama a:hover rect { stroke: var(--kj-accent) !important; stroke-width: 3px !important; }
+/* Antes da renderização (ou sem JavaScript) o código Mermaid fica legível e rolável. */
+pre.kj-cadeia { max-height: 18rem; overflow: auto; }
+
+/* Foco visível em todos os links do conteúdo. */
+.md-typeset a:focus-visible { outline: 2px solid var(--kj-accent); outline-offset: 2px; }
+
+/* Retorno ao índice no fim das páginas internas (overrides/main.html). */
+.kj-volta {
+  margin-top: 2rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--kj-line);
+  font-size: .72rem;
+}
+.kj-volta a { color: var(--md-typeset-a-color); font-weight: 600; }
+.kj-volta span { margin-inline: .45rem; color: var(--md-default-fg-color--light); }

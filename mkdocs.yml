@@ -37,6 +37,16 @@ theme:
 extra_css:
   - assets/stylesheets/visual.css
 
+# Renderiza os diagramas clicáveis da cadeia (bloco ```mermaid-cadeia) na Início.
+extra_javascript:
+  - assets/javascripts/cadeia.js
+
+# Links e âncoras quebrados viram aviso; com `mkdocs build --strict`, o build falha.
+validation:
+  links:
+    anchors: warn
+    unrecognized_links: warn
+
 # Versão exibida no rodapé de todas as páginas; atualizar a cada release.
 extra:
   versao: "2.0 (Entrega 2)"
@@ -53,6 +63,10 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+        # Diagrama com nós clicáveis; o Material não o processa (ver cadeia.js).
+        - name: mermaid-cadeia
+          class: kj-cadeia
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 plugins:
   - search:
@@ -62,6 +76,7 @@ plugins:
 nav:
   - Início: index.md
   - Metodologia: metodologia.md
+  - Rastreabilidade: rastreabilidade.md
   - Fase 1:
       - Visão geral: fase1.md
       - Propósito, partes interessadas e escopo: fase1-proposito.md

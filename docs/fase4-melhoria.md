@@ -6,21 +6,21 @@ para tratar e reavaliar falhas na consulta. A entrega da
 contém processo, ficha de incidente, matriz de regressão e inspeção automática. Sua revisão humana
 permanece pendente. Não foi alterado o serviço do Detran-DF nem medida a eficácia da ação.
 
-## Evidência e escolha
+## Evidência e escolha {#evidencia}
 
 O [registro S03 no commit 14ab804](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/14ab804210f4b1be2aaa84e1946d9e11079a9a28/evidencias/fase4/S03-registro-2026-11-21.md)
 relata três falhas em três tentativas no aplicativo Android 2.6.3 (CT05/B02), ao buscar veículos.
 No portal, CT01 teve três conclusões em três tentativas; CT03 teve duas conclusões e uma expiração.
 Os consentimentos foram aplicados, conforme confirmação de Hugo em 22/11/2026; as vias assinadas
 permanecem privadas. As contagens são preliminares: a conferência independente está pendente,
-e o aparelho/versão do app diferem do planejamento (D006). Não se atribui nível oficial,
+e o aparelho/versão do aplicativo diferem do planejamento (D006). Não se atribui nível oficial,
 causa técnica nem superioridade geral. O achado pertence a Q3.1/P6, não às taxas de rede de P7.
 
 O bloqueio completo antes da lista motiva priorizar a investigação de cobertura de contexto,
 apoiando D4 (plataformas com suporte) e D1 (investimento), sem avaliar usabilidade. Não se compara
 a recorrência com contextos não executados nem se presume o resultado final da #48.
 
-## Entrega técnica
+## Entrega técnica {#entrega-tecnica}
 
 | Item | Registro |
 |---|---|

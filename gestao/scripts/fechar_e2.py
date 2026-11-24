@@ -188,7 +188,7 @@ def relatorio(snapshot, result, fonte='gestao/dados/fechamento-e2-2026-11-22.jso
              'ou commit posterior à primeira revisão humana, dentro do corte.', '',
              f"Espera pela primeira revisão: mediana {numero(result['espera_mediana_h'])} h; "
              f"{result['esperas_acima_48h']} PR(s) acima de 48 h. Revisões por login: "
-             ', '.join(f'{k}: {v}' for k,v in sorted(result['revisoes_por_login'].items())) + '.', '',
+             + ', '.join(f'{k}: {v}' for k,v in sorted(result['revisoes_por_login'].items())) + '.', '',
              '## Horas e contribuição da E2', '',
              '| Integrante | Estimativa individual | Horas conhecidas | Alcance | Participação nas horas conhecidas |',
              '|---|---|---|---|---|']

@@ -86,7 +86,7 @@ Propósito 2: não discrimina os canais, que compartilham o servidor de identida
 Viabilidade 1: ocorre no servidor, não é observável.
 Esforço 3: seria moderado se houvesse o que coletar.
 
-## 4. Resultado, MoSCoW e sensibilidade
+## 4. Resultado, MoSCoW e sensibilidade {#resultado-priorizacao}
 
 Classificação: *Must* com 40 pontos ou mais, *Could* de 25 a 39, *Won't* abaixo de 25 ("não nesta avaliação"). O corte coincide com a maior descontinuidade da lista (41 → 31 pontos) e respeita a premissa de três a quatro características.
 
@@ -130,7 +130,7 @@ print(n, top3, cc_gt_ed)   # 243 242 207
 - **Compatibilidade fora.** A integração com o gov.br e o RENAINF ocorre no servidor; fica a recomendação de avaliá-la com acesso do órgão.
 - **Cobertura de contexto dentro.** É a mais cara (vários aparelhos e redes, esforço 2) e a única que trata diretamente da decisão D3; sem ela, a comparação seria só de dados e de tempo.
 
-## 6. Justificativa da cobertura de contexto
+## 6. Justificativa da cobertura de contexto {#justificativa-cobertura}
 
 **Por que uma característica do modelo de qualidade em uso entra num trabalho de qualidade de produto.** O propósito é comparar canais que são usados em contextos diferentes (computador ou celular, rede estável ou degradada), e a decisão D3 pede saber qual canal recomendar em cada contexto. O modelo de produto descreve propriedades do produto, mas não tem característica cuja pergunta seja se a tarefa se conclui em cada contexto especificado. A ISO/IEC 25019:2023 mantém o contexto de uso como pré-requisito da qualidade em uso e prevê que mudanças de contexto sejam monitoradas por avaliações da qualidade em uso, o que sustenta esse tipo de avaliação mesmo sem a característica.
 

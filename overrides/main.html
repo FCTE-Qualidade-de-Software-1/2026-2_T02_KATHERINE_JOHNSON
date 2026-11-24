@@ -12,5 +12,13 @@
     </div>
   {% else %}
     {{ super() }}
+    {# Retorno ao índice e à rastreabilidade em todas as páginas internas. #}
+    <nav class="kj-volta" aria-label="Retorno ao índice">
+      <a href="{{ base_url }}/">Voltar ao início</a>
+      {% if page.file.src_uri != "rastreabilidade.md" %}
+        <span aria-hidden="true">·</span>
+        <a href="{{ base_url }}/rastreabilidade/">Rastreabilidade da Fase 1 à Fase 4</a>
+      {% endif %}
+    </nav>
   {% endif %}
 {% endblock %}
