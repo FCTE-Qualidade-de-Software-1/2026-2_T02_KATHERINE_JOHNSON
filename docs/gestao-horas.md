@@ -55,13 +55,13 @@ As estimativas da E2 aplicam o fator de correção da E1 (+10%) e a margem de se
 |---|---|---|---|---|---|
 | [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/28) | Correções do Ponto de Controle 1 | Daniel | Fechada | 3 h | Daniel: 1 h |
 | [#46](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/46) | Fase 3: plano de avaliação | Hugo, Philipe | Fechada | 11 h | Hugo: 10 h 55 min; Philipe: no total individual |
-| [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Fase 4: coleta das medições e dados brutos | Hugo, Pedro Druck, Philipe | Aberta | 16 h | Hugo: 3 h 30 min; Pedro Druck: 6 h; Philipe: no total individual |
+| [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Fase 4: coleta das medições e dados brutos | Hugo, Pedro Druck, Philipe | Aberta | 16 h | Hugo: 4 h 30 min; Pedro Druck: 6 h; Heitor: 3 h (segunda leitura); Philipe: no total individual |
 | [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Fase 4: análise, respostas GQM e julgamento | Pedro Henrique, Philipe | Aberta | 11 h | Pedro Henrique e Philipe: no total individual |
 | [#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36) | Ação de melhoria obrigatória | Pedro Druck | Fechada | 8 h | Pedro Druck: 6 h |
 | [#49](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/49) | Fechamento da Entrega 2 | Daniel, Heitor | Aberta | 13 h | Daniel e Heitor: no total individual |
 | [#53](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/53) | Coleta intermediária PSM/CID e slides de 11/11 | Heitor | Fechada | 4 h | Heitor: 3 h |
 | [#55](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/55) | Inconsistências nos registros de gestão PSM/CID | Pedro Druck | Fechada | 1 h | Pedro Druck: 1 h |
-| | **Total** | | | **67 h** | **79 h 05 min** (soma das seis declarações individuais) |
+| | **Total** | | | **67 h** | **84 h 05 min** (soma das seis declarações individuais) |
 
 "No total individual" indica que a pessoa declarou o total da E2 sem dividir as horas entre as
 issues; essas horas entram na tabela por integrante abaixo, e nenhuma divisão foi inventada.
@@ -71,12 +71,12 @@ issues; essas horas entram na tabela por integrante abaixo, e nenhuma divisão f
 | Integrante | Issues | Estimativa | Horas declaradas | Variação |
 |---|---|---|---|---|
 | Daniel | #28, #49 | 9 h 30 min | 9 h 20 min | −1,75% |
-| Heitor | #49, #53 | 10 h 30 min | 15 h 30 min | +47,62% |
-| Hugo | #46, #47 | 10 h 50 min | 14 h 25 min | +33,08% |
+| Heitor | #47, #49, #53 | 10 h 30 min | 18 h 30 min | +76,19% |
+| Hugo | #46, #47 | 10 h 50 min | 15 h 25 min | +42,31% |
 | Pedro Druck | #36, #47, #55 | 14 h 20 min | 13 h 00 min | −9,30% |
 | Pedro Henrique | #48 | 5 h 30 min | 12 h 30 min | +127,27% |
-| Philipe | #46, #47, #48 | 16 h 20 min | 14 h 20 min | −12,24% |
-| **Total** | | **67 h** | **79 h 05 min** | **+18,03%** |
+| Philipe | #46, #47, #48 | 16 h 20 min | 15 h 20 min | −6,12% |
+| **Total** | | **67 h** | **84 h 05 min** | **+25,50%** |
 
 Fonte: declarações individuais de 22 e 23/11/2026 (detalhadas abaixo) e
 [coleta final documental](gestao-fechamento-e2.md). Os totais individuais incluem as horas já
@@ -85,23 +85,31 @@ de novo.
 
 ## Declarações individuais da E2 — 22 e 23/11/2026
 
-Hugo declarou, em 23/11, o total individual de **14 h 25 min** na E2. Sua estimativa no planejamento
-é de 5 h 30 min na #46 e 5 h 20 min na #47:
-**10 h 50 min estimadas e 14 h 25 min reais declaradas** (+33,08%). A declaração substitui a de
-22/11 (11 h 50 min, 1 h acima do estimado), que fica preservada na fonte v2. O total se divide
-em 10 h 55 min na #46 e 3 h 30 min na #47.
+**Acréscimos de 23/11/2026 à noite (fonte v7).** Heitor declarou mais **3 h** pela segunda leitura
+independente de P4 a P7 da #47 (PR #90), feita depois do horário coberto pela declaração anterior.
+Hugo e Philipe declararam mais **1 h** cada, presencialmente a Heitor, que registrou a pedido: Hugo
+pela revisão conjunta das cinco divergências de tempo, e Philipe pela conferência do S03 B04 e pela
+mesma revisão conjunta. Os totais abaixo já incluem esses acréscimos; as declarações anteriores
+ficam preservadas nas fontes v6 e anteriores.
 
-Heitor declarou, em 23/11, o total individual de **15 h 30 min** na E2, contra **10 h 30 min
-estimadas** (+47,62%): a metade da #49 (6 h 30 min) mais a #53 (4 h). O valor é uma **estimativa
+Hugo declarou, em 23/11, o total individual de **15 h 25 min** na E2. Sua estimativa no planejamento
+é de 5 h 30 min na #46 e 5 h 20 min na #47:
+**10 h 50 min estimadas e 15 h 25 min reais declaradas** (+42,31%), já com a 1 h de 23/11 à noite.
+A declaração substitui a de 22/11 (11 h 50 min, 1 h acima do estimado), que fica preservada na
+fonte v2. O total se divide em 10 h 55 min na #46 e 4 h 30 min na #47.
+
+Heitor declarou, em 23/11, o total individual de **18 h 30 min** na E2, contra **10 h 30 min
+estimadas** (+76,19%), já com as 3 h da segunda leitura da #47. Antes desse acréscimo, o total era 15 h 30 min: a metade da #49 (6 h 30 min) mais a #53 (4 h). O valor é uma **estimativa
 calculada com apoio de Claude Code** a partir de registros datados (commits, PRs, revisões,
 comentários e horários da sessão de trabalho), agrupados em blocos, e não uma cronometragem. Ele
 soma as 11 h declaradas em 22/11 (até 13:15) e cerca de 4,5 h depois disso: 0,6 h em 22/11 à noite,
 3,0 h em 23/11 de 08:20 a 11:21 (incluindo a segunda leitura da S02, que não deixa commit) e 0,7 h
 até cerca de 12:00. O total substitui as 3 h já registradas na #53 e a declaração anterior de 11 h,
-sem somá-las de novo, e não inclui trabalho posterior a esse horário.
+sem somá-las de novo. As 3 h da segunda leitura da #47, feita depois desse horário, foram
+declaradas à parte, à noite.
 
-Philipe declarou **14 h 20 min** e Pedro Henrique declarou **12 h 30 min** como total individual
-na E2, ambos em 23/11, contra 16 h 20 min e 5 h 30 min estimadas (estimativa individual do
+Philipe declarou **15 h 20 min** (14 h 20 min mais a 1 h de 23/11 à noite) e Pedro Henrique declarou
+**12 h 30 min** como total individual na E2, ambos em 23/11, contra 16 h 20 min e 5 h 30 min estimadas (estimativa individual do
 planejamento em cada issue). Os dois estavam sem computador e deram os valores
 verbalmente a Heitor, que os registrou a pedido: são estimativas das próprias pessoas, não
 cronometragem, e cada uma confirma o valor em comentário no próprio PR.
@@ -115,8 +123,8 @@ Pedro Druck declarou **13 h** como total individual na E2, em 23/11, no PR #83: 
 #36 e 1 h na #55, contra 14 h 20 min estimadas (a #36, a #55 e um terço da #47). A 1 h já registrada
 na #55 faz parte desse total e não é somada de novo.
 
-Com as seis declarações totais, as horas da E2 somam **79 h 05 min**: 15 h 30 min de Heitor,
-14 h 25 min de Hugo, 14 h 20 min de Philipe, 13 h de Pedro Druck, 12 h 30 min de Pedro Henrique e
+Com as seis declarações totais, as horas da E2 somam **84 h 05 min**: 18 h 30 min de Heitor,
+15 h 25 min de Hugo, 15 h 20 min de Philipe, 13 h de Pedro Druck, 12 h 30 min de Pedro Henrique e
 9 h 20 min de Daniel. A [coleta final documental](gestao-fechamento-e2.md) registra a fonte, a
 conciliação, as estimativas por integrante e a contribuição de cada um. A E1
 permanece histórica; a decisão de dividir sua contribuição igualmente não foi aplicada à E2.

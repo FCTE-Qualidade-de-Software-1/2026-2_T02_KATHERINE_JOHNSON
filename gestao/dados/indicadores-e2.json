@@ -31,71 +31,71 @@
       "estimativa_min": 570.0,
       "real_min": 560.0,
       "completo": true,
-      "percentual_conhecido": 11.801896733403582
+      "percentual_conhecido": 11.10009910802775
     },
     "Heitor": {
       "estimativa_min": 630.0,
-      "real_min": 930.0,
+      "real_min": 1110.0,
       "completo": true,
-      "percentual_conhecido": 19.599578503688093
+      "percentual_conhecido": 22.001982160555006
     },
     "Hugo": {
       "estimativa_min": 650.0,
-      "real_min": 865.0,
+      "real_min": 925.0,
       "completo": true,
-      "percentual_conhecido": 18.229715489989463
+      "percentual_conhecido": 18.334985133795836
     },
     "Pedro Druck": {
       "estimativa_min": 860.0,
       "real_min": 780.0,
       "completo": true,
-      "percentual_conhecido": 16.438356164383563
+      "percentual_conhecido": 15.460852329038651
     },
     "Pedro Henrique": {
       "estimativa_min": 330.0,
       "real_min": 750.0,
       "completo": true,
-      "percentual_conhecido": 15.806111696522656
+      "percentual_conhecido": 14.866204162537166
     },
     "Philipe": {
       "estimativa_min": 980.0,
-      "real_min": 860.0,
+      "real_min": 920.0,
       "completo": true,
-      "percentual_conhecido": 18.124341412012644
+      "percentual_conhecido": 18.23587710604559
     }
   },
-  "total_conhecido_min": 4745.0,
+  "total_conhecido_min": 5045.0,
   "pci_completo": true,
   "declaracoes": [
     {
       "integrante": "Hugo",
       "data": "2026-11-23",
-      "fonte": "Declaração do próprio Hugo em 23/11/2026: total de 14 h 25 min na E2. Substitui a declaração de 22/11 (11 h 50 min).",
+      "fonte": "Declaração do próprio Hugo em 23/11/2026: total de 14 h 25 min na E2. Substitui a declaração de 22/11 (11 h 50 min). Acréscimo de 1 h declarado por Hugo em 23/11/2026 à noite, presencialmente a Heitor, que o registrou a pedido: revisão conjunta das cinco divergências de tempo da segunda leitura da #47. Total: 15 h 25 min.",
       "metodo_estimativa": "Estimativa individual do planejamento: 5 h 30 min na #46 e 5 h 20 min na #47.",
       "escopo": "Total individual da E2, sem distribuição declarada entre issues; substitui qualquer soma parcial das mesmas atividades, nunca adiciona duas vezes.",
       "base_min": 650.0,
-      "acrescimo_min": 215,
-      "total_min": 865.0
+      "acrescimo_min": 275,
+      "total_min": 925.0
     },
     {
       "integrante": "Heitor",
       "data": "2026-11-23",
-      "fonte": "Estimativa de Heitor, calculada com apoio de Claude Code a partir de registros datados (commits, PRs, revisões, comentários e horários da sessão de trabalho), agrupados em blocos; não é cronometragem. Composição: 11 h declaradas em 22/11 (até 13:15), mais cerca de 4,5 h depois disso (22/11 à noite, 0,6 h; 23/11 de 08:20 a 11:21, 3,0 h, incluindo a segunda leitura da S02, que não deixa commit; e 0,7 h até cerca de 12:00), somando 15,5 h. Valor conferido e aceito por Heitor em 23/11/2026.",
+      "fonte": "Estimativa de Heitor, calculada com apoio de Claude Code a partir de registros datados (commits, PRs, revisões, comentários e horários da sessão de trabalho), agrupados em blocos; não é cronometragem. Composição: 11 h declaradas em 22/11 (até 13:15), mais cerca de 4,5 h depois disso (22/11 à noite, 0,6 h; 23/11 de 08:20 a 11:21, 3,0 h, incluindo a segunda leitura da S02, que não deixa commit; e 0,7 h até cerca de 12:00), somando 15,5 h. Valor conferido e aceito por Heitor em 23/11/2026. Acréscimo de 3 h declarado por Heitor em 23/11/2026 à noite: segunda leitura independente de P4 a P7 da #47 (PR #90), feita depois do horário coberto acima. Total: 18 h 30 min.",
       "metodo_estimativa": "Estimativa individual do planejamento: 6 h 30 min na #49 e 4 h na #53.",
-      "escopo": "Total individual da E2 até cerca de 12:00 de 23/11, sem distribuição declarada entre issues; substitui as 3 h já registradas na #53 e a declaração de 11 h de 22/11, nunca adiciona duas vezes. Trabalho posterior a esse horário não está incluído.",
+      "escopo": "Total individual da E2 até a noite de 23/11/2026, sem distribuição completa entre issues (3 h na #47); substitui as 3 h já registradas na #53 e as declarações de 11 h (22/11) e 15 h 30 min (23/11), nunca adiciona duas vezes.",
       "base_min": 630.0,
-      "acrescimo_min": 300,
-      "total_min": 930.0
+      "acrescimo_min": 480,
+      "total_min": 1110.0
     },
     {
       "integrante": "Philipe",
       "data": "2026-11-23",
-      "fonte": "Declaração de Philipe (total de 14 h 20 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Philipe estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR.",
+      "fonte": "Declaração de Philipe (total de 14 h 20 min na E2), dada verbalmente a Heitor em 23/11/2026 e registrada por Heitor a pedido, porque Philipe estava sem computador. Estimativa da própria pessoa; não é cronometragem nem foi calculada pela equipe. A confirmação fica registrada em comentário da própria pessoa no PR. Acréscimo de 1 h declarado por Philipe em 23/11/2026 à noite, presencialmente a Heitor, que o registrou a pedido: conferência do S03 B04 e revisão conjunta das divergências de tempo da #47. Total: 15 h 20 min.",
       "metodo_estimativa": "Estimativa individual do planejamento: 5 h 30 min na #46, 5 h 20 min na #47 e 5 h 30 min na #48.",
       "escopo": "Total individual da E2 até 23/11/2026, sem distribuição declarada entre issues; substitui qualquer soma parcial, nunca adiciona duas vezes.",
       "base_min": 980.0,
-      "acrescimo_min": -120,
-      "total_min": 860.0
+      "acrescimo_min": -60,
+      "total_min": 920.0
     },
     {
       "integrante": "Pedro Henrique",
