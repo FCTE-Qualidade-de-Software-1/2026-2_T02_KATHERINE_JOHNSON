@@ -365,3 +365,145 @@ pre.kj-cadeia { max-height: 18rem; overflow: auto; }
   .kj-destaques { display: none; }
   .md-typeset .kj-painel { box-shadow: none; }
 }
+
+/* ---------- Medições (fase4-medicoes.md, gerada por dados/scripts/gerar_medicoes.py) ---------- */
+:root,
+[data-md-color-scheme="default"] {
+  --kj-s-portal: #2a78d6;
+  --kj-s-aplicativo: #eb6834;
+  --kj-ok: #0ca30c; --kj-ok-bg: #e5f4e5;
+  --kj-aviso: #fab219; --kj-aviso-bg: #fdf1d6;
+  --kj-critico: #d03b3b; --kj-critico-bg: #f9e3e3;
+  --kj-neutro: #7f8c95; --kj-neutro-bg: #eceff1;
+  --kj-grade: #e3e9ec;
+}
+[data-md-color-scheme="slate"] {
+  --kj-s-portal: #3987e5;
+  --kj-s-aplicativo: #d95926;
+  --kj-ok-bg: #173a24;
+  --kj-aviso-bg: #3d321a;
+  --kj-critico-bg: #432026;
+  --kj-neutro: #8d9ba5; --kj-neutro-bg: #22333f;
+  --kj-grade: #2a3e4b;
+}
+
+/* Selo de nível: o texto diz o nível; a cor só reforça. */
+.md-typeset .kj-nivel {
+  display: inline-flex;
+  align-items: center;
+  gap: .3em;
+  padding: .05em .55em .05em .45em;
+  border-left: 3px solid var(--kj-neutro);
+  border-radius: .3rem;
+  background: var(--kj-neutro-bg);
+  color: var(--md-typeset-color);
+  font-size: .92em;
+  font-weight: 650;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.md-typeset .kj-nivel > span[aria-hidden] { font-weight: 800; }
+.md-typeset .kj-nivel--excelente, .md-typeset .kj-nivel--alvo { border-color: var(--kj-ok); background: var(--kj-ok-bg); }
+.md-typeset .kj-nivel--minimo { border-color: var(--kj-aviso); background: var(--kj-aviso-bg); }
+.md-typeset .kj-nivel--inaceitavel { border-color: var(--kj-critico); background: var(--kj-critico-bg); }
+.md-typeset .kj-nivel--na { font-weight: 500; }
+.md-typeset td small { color: var(--md-default-fg-color--light); }
+.md-typeset ul.kj-legenda .kj-nivel { font-size: .95em; }
+
+/* Trilha de fases no topo de cada métrica. */
+.md-typeset .kj-fases {
+  margin: .6rem 0 1rem;
+  padding: .7rem 1rem;
+  border: 1px solid var(--kj-line);
+  border-radius: .6rem;
+  background: var(--kj-soft);
+  font-size: .7rem;
+}
+.md-typeset .kj-fases ul { margin: 0; padding: 0; list-style: none; }
+.md-typeset .kj-fases li { margin: .15rem 0; }
+.md-typeset .kj-fase {
+  display: inline-block;
+  min-width: 3.9rem;
+  margin-right: .4rem;
+  padding: 0 .45rem;
+  border: 1.5px solid;
+  border-radius: .3rem;
+  color: var(--kj-node-text);
+  font-size: .62rem;
+  font-weight: 750;
+  text-align: center;
+  letter-spacing: .03em;
+}
+.kj-fase--f1 { background: var(--kj-f1-fill); border-color: var(--kj-f1-line); }
+.kj-fase--f2 { background: var(--kj-f2-fill); border-color: var(--kj-f2-line); }
+.kj-fase--f3 { background: var(--kj-f3-fill); border-color: var(--kj-f3-line); }
+.kj-fase--f4 { background: var(--kj-f4-fill); border-color: var(--kj-f4-line); }
+
+/* Caixa "como conferir". */
+.md-typeset .kj-passos {
+  margin: 1.2rem 0;
+  padding: .9rem 1.2rem;
+  border: 1px solid var(--kj-line);
+  border-left: 4px solid var(--kj-accent);
+  border-radius: .6rem;
+  background: var(--kj-soft);
+}
+.md-typeset .kj-passos > :first-child { margin-top: 0; }
+.md-typeset .kj-passos > :last-child { margin-bottom: 0; }
+
+/* Observações brutas recolhíveis. */
+.md-typeset details.kj-obs {
+  margin: 1rem 0;
+  font-size: inherit;
+  border: 1px solid var(--kj-line);
+  border-radius: .55rem;
+  background: var(--kj-surface);
+}
+.md-typeset details.kj-obs > summary {
+  padding: .6rem 2.4rem .6rem 2.2rem;
+  cursor: pointer;
+  color: var(--md-typeset-a-color);
+  font-weight: 650;
+}
+.md-typeset details.kj-obs[open] > summary { border-bottom: 1px solid var(--kj-line); }
+.md-typeset details.kj-obs > .md-typeset__scrollwrap, .md-typeset details.kj-obs > table { margin: .6rem; }
+
+/* Miniaturas das capturas anonimizadas. */
+.md-typeset .kj-miniaturas { display: flex; flex-wrap: wrap; gap: .8rem; margin: 1rem 0; }
+.md-typeset a.kj-miniatura {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  width: 11rem;
+  padding: .45rem;
+  border: 1px solid var(--kj-line);
+  border-radius: .5rem;
+  background: var(--kj-surface);
+  font-size: .64rem;
+  text-decoration: none;
+}
+.md-typeset a.kj-miniatura img { width: 100%; height: 9rem; object-fit: cover; object-position: top; border-radius: .3rem; }
+.md-typeset a.kj-miniatura:hover { border-color: var(--kj-accent); }
+
+/* Gráfico de pontos dos tempos. */
+.md-typeset figure.kj-grafico { margin: 1.2rem 0; padding: .8rem; border: 1px solid var(--kj-line); border-radius: .6rem; background: var(--kj-surface); }
+.md-typeset figure.kj-grafico svg { display: block; width: 100%; height: auto; overflow: visible; }
+.md-typeset figure.kj-grafico figcaption { margin: .5rem 0 0; max-width: none; color: var(--md-default-fg-color--light); font-size: .64rem; font-style: italic; text-align: left; }
+.kj-g-grade { stroke: var(--kj-grade); stroke-width: 1; }
+.kj-g-base { stroke: var(--kj-line); stroke-width: 1; }
+.kj-g-limite { stroke: var(--kj-ok); stroke-width: 2; stroke-dasharray: 5 4; }
+.kj-g-mediana { stroke: var(--kj-heading); stroke-width: 2.5; stroke-linecap: round; }
+.kj-g-ponto { stroke: var(--kj-surface); stroke-width: 2; fill-opacity: .85; }
+.kj-g-portal { fill: var(--kj-s-portal); }
+.kj-g-aplicativo { fill: var(--kj-s-aplicativo); }
+a:hover > .kj-g-ponto, a:focus-visible > .kj-g-ponto { fill-opacity: 1; stroke: var(--kj-heading); }
+.kj-g-eixo, .kj-g-nota { fill: var(--md-default-fg-color--light); font-size: 11px; }
+.kj-g-rotulo { fill: var(--md-typeset-color); font-size: 12px; font-weight: 650; }
+@media (max-width: 40em) {
+  .md-typeset figure.kj-grafico { overflow-x: auto; }
+  .md-typeset figure.kj-grafico svg { min-width: 36rem; }
+}
+
+/* Três cartões de destaque na abertura. */
+.kj-destaques { grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr)); }
+.md-typeset td a:has(.kj-nivel) { text-decoration: none; }
