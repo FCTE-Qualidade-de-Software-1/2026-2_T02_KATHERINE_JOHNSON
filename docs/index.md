@@ -10,6 +10,12 @@ Este site apresenta o Projeto Final da disciplina FGA0315 Qualidade de Software 
 <span class="kj-destaque__texto">Diagramas clicáveis ligam cada uma das 14 métricas à característica, à questão, à hipótese, ao procedimento de coleta e à observação registrada.</span>
 <span class="kj-destaque__acao">Ver os diagramas</span>
 </a>
+<a class="kj-destaque" href="fase4-medicoes/">
+<span class="kj-destaque__rotulo">Resultados</span>
+<span class="kj-destaque__titulo">Medições por métrica</span>
+<span class="kj-destaque__texto">Nível de cada uma das 14 métricas por canal e todas as leituras por trás dele, cada uma ligada à linha do CSV, à captura e à segunda leitura.</span>
+<span class="kj-destaque__acao">Conferir as medições</span>
+</a>
 <a class="kj-destaque" href="#evidencias">
 <span class="kj-destaque__rotulo">Dados e provas</span>
 <span class="kj-destaque__titulo">Evidências das coletas</span>
@@ -26,13 +32,17 @@ para Android e iOS. O objetivo é comparar os dois canais quanto às mesmas cara
 qualidade, usando apenas medições externas, observáveis por quem usa o serviço (avaliação
 caixa-preta).
 
-As características avaliadas são:
+As características avaliadas e o julgamento de cada uma, por canal, estão na Tabela 1. Cada
+resultado leva ao julgamento na [análise](fase4-analise.md#julgamento); as leituras que o
+sustentam estão em [Medições por métrica](fase4-medicoes.md).
 
-| Característica | Modelo de referência |
-|---|---|
-| Adequação funcional | ISO/IEC 25010:2023 (qualidade do produto) |
-| Eficiência de desempenho | ISO/IEC 25010:2023 (qualidade do produto) |
-| Cobertura de contexto | ISO/IEC 25010:2011 (qualidade em uso) e ISO/IEC 25022:2016 |
+| Característica | Modelo de referência | Objetivo | Portal | Aplicativo |
+|---|---|---|---|---|
+| Adequação funcional | ISO/IEC 25010:2023 (qualidade do produto) | [G1](fase2-gqm.md#g1) | [<span class="kj-nivel kj-nivel--inaceitavel">Não atendido</span>](fase4-analise.md#julg-g1) | [<span class="kj-nivel kj-nivel--inaceitavel">Não atendido</span>](fase4-analise.md#julg-g1) |
+| Eficiência de desempenho | ISO/IEC 25010:2023 (qualidade do produto) | [G2](fase2-gqm.md#g2) | [<span class="kj-nivel kj-nivel--excelente">Atendido</span>](fase4-analise.md#julg-g2) | [<span class="kj-nivel kj-nivel--excelente">Atendido</span>](fase4-analise.md#julg-g2) |
+| Cobertura de contexto | ISO/IEC 25010:2011 (qualidade em uso) e ISO/IEC 25022:2016 | [G3](fase2-gqm.md#g3) | [<span class="kj-nivel kj-nivel--excelente">Atendido</span>](fase4-analise.md#julg-g3) <small>nos contextos medidos</small> | [<span class="kj-nivel kj-nivel--inaceitavel">Não atendido</span>](fase4-analise.md#julg-g3) <small>falha em CT05 com o aplicativo 2.6.3</small> |
+
+*Tabela 1 — Características, objetivos e julgamento por canal. Fonte: [Fase 1](fase1-priorizacao.md#resultado-priorizacao), [Fase 2](fase2-gqm.md) e [análise da Fase 4](fase4-analise.md#julgamento). Os julgamentos valem para os casos medidos (veículos, aparelhos e redes das sessões); CT04 e o aplicativo na rede degradada não foram medidos.*
 
 <div class="kj-painel" markdown>
 
@@ -59,7 +69,7 @@ diagramas rolam na horizontal.
 ```mermaid-cadeia
 flowchart LR
     accTitle: Cadeia do objetivo G1, adequação funcional
-    accDescr: A característica adequação funcional da Fase 1 e as decisões D1 e D2 levam ao objetivo G1, às questões Q1.1, Q1.2, Q1.3 com suas hipóteses, às métricas M1.1.1, M1.1.2, M1.2.1, M1.2.2, M1.3.1, M1.3.2, aos procedimentos P1, P2, P3, aos arquivos de dados e às observações da Fase 4. Cada nó é um link para a seção correspondente.
+    accDescr: A característica adequação funcional da Fase 1 e as decisões D1 e D2 levam ao objetivo G1, às questões Q1.1, Q1.2, Q1.3 com suas hipóteses, às métricas M1.1.1, M1.1.2, M1.2.1, M1.2.2, M1.3.1, M1.3.2, aos procedimentos P1, P2, P3, aos arquivos de dados e às observações, às leituras por métrica e ao julgamento do objetivo na Fase 4. Cada nó é um link para a seção correspondente.
     subgraph F1["Fase 1"]
         C["Adequação funcional"]
         D["Decisões D1 e D2"]
@@ -86,6 +96,8 @@ flowchart LR
     end
     subgraph F4["Fase 4"]
         R1["S02: P1 a P3, caso V2"]
+        MD["Leituras e níveis<br/>por métrica"]
+        JG["Julgamento de G1<br/>por canal"]
     end
     C --> G
     D --> G
@@ -110,12 +122,14 @@ flowchart LR
     AP1 --> R1
     AP2 --> R1
     AP3 --> R1
+    R1 --> MD
+    MD --> JG
     class C,D kjf1
     class G kjobj
     class Q11,Q12,Q13 kjq
     class M111,M112,M121,M122,M131,M132 kjm
     class P1,P2,P3,AP1,AP2,AP3 kjf3
-    class R1 kjf4
+    class R1,MD,JG kjf4
     class F1 kjg1
     class F2 kjg2
     class F3 kjg3
@@ -139,6 +153,8 @@ flowchart LR
     click AP2 href "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/comparacao-canais.csv"
     click AP3 href "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/fluxo.csv"
     click R1 href "fase4-analise/#resultados-s02"
+    click MD href "fase4-medicoes/#g1"
+    click JG href "fase4-analise/#julg-g1"
 ```
 
 *Figura 1 — Cadeia do objetivo G1, da Fase 1 à Fase 4. Alternativa em texto: [linhas de G1 na rastreabilidade](rastreabilidade.md#rt-g1). Fonte: elaborada pela equipe a partir das Fases 1 a 4.*
@@ -148,7 +164,7 @@ flowchart LR
 ```mermaid-cadeia
 flowchart LR
     accTitle: Cadeia do objetivo G2, eficiência de desempenho
-    accDescr: A característica eficiência de desempenho da Fase 1 e as decisões D1 e D3 levam ao objetivo G2, às questões Q2.1, Q2.2 com suas hipóteses, às métricas M2.1.1, M2.1.2, M2.2.1, aos procedimentos P4, P5, aos arquivos de dados e às observações da Fase 4. Cada nó é um link para a seção correspondente.
+    accDescr: A característica eficiência de desempenho da Fase 1 e as decisões D1 e D3 levam ao objetivo G2, às questões Q2.1, Q2.2 com suas hipóteses, às métricas M2.1.1, M2.1.2, M2.2.1, aos procedimentos P4, P5, aos arquivos de dados e às observações, às leituras por métrica e ao julgamento do objetivo na Fase 4. Cada nó é um link para a seção correspondente.
     subgraph F1["Fase 1"]
         C["Eficiência de desempenho"]
         D["Decisões D1 e D3"]
@@ -169,6 +185,8 @@ flowchart LR
     end
     subgraph F4["Fase 4"]
         R1["S06: P4 e P5, caso V4"]
+        MD["Leituras e níveis<br/>por métrica"]
+        JG["Julgamento de G2<br/>por canal"]
     end
     C --> G
     D --> G
@@ -184,12 +202,14 @@ flowchart LR
     P5 --> AP5
     AP4 --> R1
     AP5 --> R1
+    R1 --> MD
+    MD --> JG
     class C,D kjf1
     class G kjobj
     class Q21,Q22 kjq
     class M211,M212,M221 kjm
     class P4,P5,AP4,AP5 kjf3
-    class R1 kjf4
+    class R1,MD,JG kjf4
     class F1 kjg1
     class F2 kjg2
     class F3 kjg3
@@ -207,6 +227,8 @@ flowchart LR
     click AP4 href "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/tempos.csv"
     click AP5 href "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/volume.csv"
     click R1 href "fase4-analise/#resultados-v4"
+    click MD href "fase4-medicoes/#g2"
+    click JG href "fase4-analise/#julg-g2"
 ```
 
 *Figura 2 — Cadeia do objetivo G2, da Fase 1 à Fase 4. Alternativa em texto: [linhas de G2 na rastreabilidade](rastreabilidade.md#rt-g2). Fonte: elaborada pela equipe a partir das Fases 1 a 4.*
@@ -216,7 +238,7 @@ flowchart LR
 ```mermaid-cadeia
 flowchart LR
     accTitle: Cadeia do objetivo G3, cobertura de contexto
-    accDescr: A característica cobertura de contexto da Fase 1 e as decisões D1, D3 e D4 levam ao objetivo G3, às questões Q3.1, Q3.2 com suas hipóteses, às métricas M3.1.1, M3.1.2, M3.2.1, M3.2.2, M3.2.3, aos procedimentos P6, P7, aos arquivos de dados e às observações da Fase 4. Cada nó é um link para a seção correspondente.
+    accDescr: A característica cobertura de contexto da Fase 1 e as decisões D1, D3 e D4 levam ao objetivo G3, às questões Q3.1, Q3.2 com suas hipóteses, às métricas M3.1.1, M3.1.2, M3.2.1, M3.2.2, M3.2.3, aos procedimentos P6, P7, aos arquivos de dados e às observações, às leituras por métrica e ao julgamento do objetivo na Fase 4. Cada nó é um link para a seção correspondente.
     subgraph F1["Fase 1"]
         C["Cobertura de contexto"]
         D["Decisões D1, D3 e D4"]
@@ -240,6 +262,8 @@ flowchart LR
     subgraph F4["Fase 4"]
         R1["S03, S05 e CT06: P6"]
         R2["S08: P7, caso V4"]
+        MD["Leituras e níveis<br/>por métrica"]
+        JG["Julgamento de G3<br/>por canal"]
     end
     C --> G
     D --> G
@@ -259,12 +283,15 @@ flowchart LR
     P7 --> AP7
     AP6 --> R1
     AP7 --> R2
+    R1 --> MD
+    R2 --> MD
+    MD --> JG
     class C,D kjf1
     class G kjobj
     class Q31,Q32 kjq
     class M311,M312,M321,M322,M323 kjm
     class P6,P7,AP6,AP7 kjf3
-    class R1,R2 kjf4
+    class R1,R2,MD,JG kjf4
     class F1 kjg1
     class F2 kjg2
     class F3 kjg3
@@ -285,6 +312,8 @@ flowchart LR
     click AP7 href "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/tentativas.csv"
     click R1 href "fase4-analise/#resultados-p6"
     click R2 href "fase4-analise/#resultados-p7"
+    click MD href "fase4-medicoes/#g3"
+    click JG href "fase4-analise/#julg-g3"
 ```
 
 *Figura 3 — Cadeia do objetivo G3, da Fase 1 à Fase 4. Alternativa em texto: [linhas de G3 na rastreabilidade](rastreabilidade.md#rt-g3). Fonte: elaborada pela equipe a partir das Fases 1 a 4.*
@@ -313,7 +342,7 @@ A execução do projeto é acompanhada com métricas PSM/CID, descritas em
 ## Situação atual
 
 A **Entrega 1** (Fases 1 e 2) foi concluída em 26/10/2026; a versão entregue, com o PDF do artigo,
-está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases). As Fases 3 e 4 fazem parte da Entrega 2: o plano da Fase 3 foi executado em seis sessões de coleta (S01, S02, S03, S05, S06 e S08, em 21 e 22/11/2026). As segundas leituras elegíveis foram concluídas, os níveis calculados e as respostas GQM registradas. A adequação funcional não foi atendida; a eficiência de desempenho permanece inconclusiva pela não equivalência dos instrumentos de volume; a cobertura foi atendida no portal nos contextos medidos e não atendida no escopo observado para o aplicativo. Permanecem as lacunas do aplicativo na rede degradada e do contexto CT04. O andamento das tarefas pode ser acompanhado no
+está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases). As Fases 3 e 4 fazem parte da Entrega 2: o plano da Fase 3 foi executado em seis sessões de coleta (S01, S02, S03, S05, S06 e S08, em 21 e 22/11/2026). As segundas leituras elegíveis foram concluídas, os níveis calculados e as respostas GQM registradas. A adequação funcional não foi atendida; a eficiência de desempenho foi atendida nos dois canais no caso medido, com o portal mais rápido e a comparação de volume inconclusiva pela não equivalência dos instrumentos; a cobertura foi atendida no portal nos contextos medidos e não atendida no escopo observado para o aplicativo. Permanecem as lacunas do aplicativo na rede degradada e do contexto CT04. O andamento das tarefas pode ser acompanhado no
 [quadro do backlog](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38) (acesso restrito aos membros da organização; as
 [issues](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues) e os [milestones](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/milestones) são públicos).
 
@@ -323,7 +352,7 @@ está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_K
 
 As evidências das coletas ficam no repositório, em [`evidencias/fase4/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/evidencias/fase4)
 (registros de sessão e capturas anonimizadas) e em [`dados/brutos/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/dados/brutos) (valores
-registrados em CSV). A Tabela 1 indica onde está o material de cada sessão.
+registrados em CSV). A Tabela 2 indica onde está o material de cada sessão.
 
 | Sessão e data | Procedimentos e caso | Registro da sessão | Capturas anonimizadas | Dados brutos |
 |---|---|---|---|---|
@@ -335,7 +364,7 @@ registrados em CSV). A Tabela 1 indica onde está o material de cada sessão.
 | S06, 22/11 | P4 e P5; V4 | [Registro da S06](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S06-registro-2026-11-22.md) | Gravações e leituras em armazenamento privado, sem captura pública | [`tempos.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/tempos.csv), [`volume.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/volume.csv) |
 | S08, 22/11 | P7; V4 | [Registro da S08](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S08-registro-2026-11-22.md) | Gravações em armazenamento privado, sem captura pública | [`tentativas.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/tentativas.csv), [`tempos.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/tempos.csv) |
 
-*Tabela 1 — Evidências das coletas por sessão. Fonte: `evidencias/fase4/` e `dados/brutos/`.*
+*Tabela 2 — Evidências das coletas por sessão. Fonte: `evidencias/fase4/` e `dados/brutos/`.*
 
 Mudanças em relação ao plano estão em [`desvios.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/desvios.csv), e o ambiente
 de cada sessão em [`ambientes.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/ambientes.csv). Originais, vídeos sem tarja e
