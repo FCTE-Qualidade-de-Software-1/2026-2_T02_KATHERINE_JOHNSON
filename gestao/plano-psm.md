@@ -170,8 +170,8 @@ A coleta prevista para 21/11 foi apurada em **22/11/2026**, com a data real e o 
 registrados em [`relatorio-metricas-e2.md`](relatorio-metricas-e2.md). A consulta de issues e PRs,
 a declaração de Hugo e os resultados reproduzíveis estão em `gestao/dados/` e
 `gestao/scripts/fechar_e2.py`. Horas ausentes permanecem desconhecidas; uma declaração de total
-individual substitui a soma parcial correspondente, sem dupla contagem. O rateio de estimativas
-coletivas serve somente ao planejamento e não é uma atribuição de horas reais.
+individual substitui a soma parcial correspondente, sem dupla contagem. As estimativas individuais
+servem somente ao planejamento; as horas reais são as declaradas por cada integrante.
 
 O fechamento documental foi realizado, mas o PCI final e a variação global dependem das
 outras declarações individuais e da conciliação por issue. Os encaminhamentos da coleta são

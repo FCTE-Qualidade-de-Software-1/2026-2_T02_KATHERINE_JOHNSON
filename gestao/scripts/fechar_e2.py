@@ -13,7 +13,7 @@ NOMES = dict(zip(MEMBROS, ('Daniel de Oliveira Lira', 'Heitor Macedo Ricardo',
     'Hugo Freitas Silva', 'Pedro Druck Montalvão Reis', 'Pedro Henrique Ferreira Xavier',
     'Philipe Amâncio Reis Caetano')))
 PAPEIS = dict(zip(MEMBROS, ('Gestão, metodologia, integração e revisão da coleta',
-    'GitPage, acompanhamento PSM e revisão da análise',
+    'GitPage, fechamento da E2 e revisão da análise',
     'Plano, preparação da coleta, instrumentos, artigo e integração documental',
     'Coleta por contexto e ação de melhoria', 'Objetivos GQM e análise comparativa',
     'Instrumentação, coleta e análise das métricas')))
@@ -136,10 +136,11 @@ def duracao(minutes):
 
 def contribuicao(result):
     """Apêndice permitido pela #49; indicadores de gestão ficam fora do artigo."""
+    completo = result['pci_completo']
     lines = [r'\section{Tabela de Contribuição Individual}', r'\label{sec:contribuicao}', '',
-        r'A Tabela~\ref{tab:contribuicao} resume as horas conhecidas da E2 em 23/11/2026. Declararam o total individual: ' + lista_nomes(d['integrante'] for d in result['declaracoes']) + r'; os demais registros são parciais ou ausentes. A conciliação está em \texttt{docs/gestao-fechamento-e2.md}.', '',
+        r'A Tabela~\ref{tab:contribuicao} resume as horas conhecidas da E2 em 23/11/2026. Declararam o total individual: ' + lista_nomes(d['integrante'] for d in result['declaracoes']) + (r'.' if completo else r'; os demais registros são parciais ou ausentes.') + r' A conciliação está em \texttt{docs/gestao-fechamento-e2.md}.', '',
         r'\begin{table}[htbp]', r'\centering', r'\scriptsize',
-        r'\caption{Contribuição documentada da E2 (parcial; não é o percentual final).}',
+        r'\caption{Contribuição documentada da E2' + (r'.}' if completo else r' (parcial; não é o percentual final).}'),
         r'\label{tab:contribuicao}', r'\begin{tabular}{P{3.1cm}P{6.0cm}P{2.2cm}}',
         r'\toprule', r'\textbf{Integrante} & \textbf{Atividades registradas / atribuídas} & \textbf{Participação conhecida} \\',
         r'\midrule']
@@ -147,7 +148,7 @@ def contribuicao(result):
         percentual = numero(item['percentual_conhecido']) + r'\%' if item['percentual_conhecido'] is not None else 'Não apurável'
         lines.append(NOMES[m]+' & '+PAPEIS[m]+' & '+percentual+r' \\')
     lines += [r'\bottomrule', r'\end{tabular}', r'\par\smallskip',
-        r'\raggedright\scriptsize Fonte: issues da E2 e declarações individuais em 23/11/2026; os percentuais somam 100\% apenas do esforço informado.',
+        r'\raggedright\scriptsize Fonte: issues da E2 e declarações individuais em 23/11/2026; os percentuais somam 100\% ' + (r'das horas declaradas.' if completo else r'apenas do esforço informado.'),
         r'\end{table}', '']
     return '\n'.join(lines)
 
@@ -157,19 +158,24 @@ def relatorio(snapshot, result, fonte='gestao/dados/fechamento-e2-2026-11-22.jso
     parciais = sum(1 for i in result['individuais'].values() if i['real_min'] is not None and not i['completo'])
     sem_horas = sum(1 for i in result['individuais'].values() if i['real_min'] is None)
     icm, tve, dp = result['icm'], result['tve'], result['retrabalho']
+    completo = result['pci_completo']
     lines = ['# Fechamento documental PSM/CID da Entrega 2', '',
              f"**Consulta:** {snapshot['consultado_em']}. **Corte:** {snapshot['corte']}. "
              'A coleta prevista para 21/11 foi realizada em 22/11; não foi retrodatada.', '',
-             '**Estado:** fechamento apurado com as evidências disponíveis; contribuição final e esforço '
-             'global incompletos por falta de declarações dos demais integrantes. Ausência de horas não é zero.', '',
+             ('**Estado:** fechamento apurado com as evidências disponíveis; todos os integrantes '
+              'declararam o total individual da E2.' if completo else
+              '**Estado:** fechamento apurado com as evidências disponíveis; contribuição final e esforço '
+              'global incompletos por falta de declarações dos demais integrantes. Ausência de horas não é zero.'), '',
              '## Indicadores e alcance', '',
              '| Indicador | Resultado | Interpretação |', '|---|---|---|',
              f"| M-CP1 | {icm['concluidas']}/{icm['planejadas']} = {numero(icm['percentual'])}% | Vermelho; "
              f"issues fechadas {icm['fechadas']}. A #46 foi fechada com critérios empíricos pendentes e um dia de atraso |",
              f"| M-RC1 | {numero(tve['real_h'])} h / {numero(tve['estimativa_h'])} h = {numero(tve['percentual'])}% | "
              f"Amarelo, somente issues fechadas com horas {tve['issues']}; não é TVE global |",
-             f"| M-RC2 | {duracao(result['total_conhecido_min'])} conhecidas; PCI final não apurável | "
-             f'Declaração total de {nomes} e registros parciais de {quantidade(parciais)} {"integrante" if parciais == 1 else "integrantes"}; {quantidade(sem_horas)} sem horas informadas |',
+             (f"| M-RC2 | {duracao(result['total_conhecido_min'])} declaradas; PCI final apurado | "
+              f'Declaração total de {nomes} |' if completo else
+              f"| M-RC2 | {duracao(result['total_conhecido_min'])} conhecidas; PCI final não apurável | "
+              f'Declaração total de {nomes} e registros parciais de {quantidade(parciais)} {"integrante" if parciais == 1 else "integrantes"}; {quantidade(sem_horas)} sem horas informadas |'),
              f"| M-DP1 | {len(dp['com_retrabalho'])}/{len(dp['avaliados'])} = {numero(dp['percentual'])}% | "
              f"Conta PR com revisão humana; PRs sem revisão excluídos: {dp['sem_revisao']}; verde não comprova revisão profunda |", '',
              '*Tabela 1 — Indicadores no corte. Fonte: consulta de issues e PRs e plano PSM/CID.*', '',
@@ -190,21 +196,24 @@ def relatorio(snapshot, result, fonte='gestao/dados/fechamento-e2-2026-11-22.jso
         status = 'Total individual declarado' if item['completo'] else 'Parcial' if item['real_min'] is not None else 'Não informado'
         percent = numero(item['percentual_conhecido']) + '%' if item['percentual_conhecido'] is not None else 'Não apurável'
         lines.append(f"| {m} | {duracao(item['estimativa_min'])} | {duracao(item['real_min'])} | {status} | {percent} |")
-    lines += ['', '*Tabela 2 — Contribuição parcial, sem imputar zero às lacunas. Fonte: mesma consulta e declarações de ' + nomes + '.*', '',
-              'O denominador da última coluna contém apenas as horas conhecidas; ele não é o esforço '
-              'total da equipe e os percentuais não são o PCI final. A decisão de contribuição igual '
-              'da E1 não foi estendida à E2.', '',
+    lines += ['', ('*Tabela 2 — Contribuição da E2. Fonte: mesma consulta e declarações de ' if completo else
+                   '*Tabela 2 — Contribuição parcial, sem imputar zero às lacunas. Fonte: mesma consulta e declarações de ') + nomes + '.*', '',
+              ('O denominador da última coluna é a soma dos totais declarados pelos seis integrantes. '
+               'A decisão de contribuição igual da E1 não foi estendida à E2.' if completo else
+               'O denominador da última coluna contém apenas as horas conhecidas; ele não é o esforço '
+               'total da equipe e os percentuais não são o PCI final. A decisão de contribuição igual '
+               'da E1 não foi estendida à E2.'), '',
               *declaracoes_texto(result),
               'O planejamento no corpo da #46 identifica Hugo e Philipe, embora a lista de assignees '
-              'da API contenha só Hugo. Usou-se o planejamento explícito para ratear estimativas, '
+              'da API contenha só Hugo. As estimativas individuais seguem o planejamento explícito, '
               'coerente com a tabela histórica de horas. Estimativas individuais fracionárias são '
               'mantidas sem arredondamento no cálculo; a exibição em minutos arredonda apenas ao final.', '',
               '## Resposta aos desvios', '',
               '| Evidência | Encaminhamento documentado | Responsável designado | Estado |',
               '|---|---|---|---|',
               '| ICM abaixo de 70%; coleta/análise atrasadas | Priorizar conferência de S03 e registrar limitações antes da integração da análise | Equipe da #47; Heitor revisa #48 | Proposta para confirmação no PR |',
-              '| Esforço individual incompleto | Registrar totais individuais e atribuição por issue, conciliando totais sem duplicidade | Cada integrante; Daniel consolida | ' + nomes + (' declarou' if len(result['declaracoes']) == 1 else ' declararam') + ' total; demais declarações pendentes |',
-              '| Tabela de contribuição ainda era da E1 | Substituir pelo retrato parcial E2; publicar final somente após todas as declarações | Integrador da #49 | Atualizada nesta branch |',
+              '| Esforço individual incompleto | Registrar totais individuais e atribuição por issue, conciliando totais sem duplicidade | Cada integrante; Daniel consolida | ' + nomes + (' declarou' if len(result['declaracoes']) == 1 else ' declararam') + ' total' + ('' if completo else '; demais declarações pendentes') + ' |',
+              '| Tabela de contribuição ainda era da E1 | Substituir pelo retrato parcial E2; publicar final somente após todas as declarações | Integrador da #49 | ' + ('Final publicada com as seis declarações' if completo else 'Atualizada nesta branch') + ' |',
               '| Relato de falha no aplicativo | Entregar proposta de processo, ficha e matriz de regressão da #36 | Revisão designada a Daniel | Artefato entregue; revisão e eficácia pendentes |',
               '| Coleta final prevista para 21/11 sem registro | Apurar em 22/11 com data real, fontes e reprodução local | Consolidação desta entrega | Realizada; sem simular reunião da equipe |', '',
               '*Tabela 3 — Tratamento dos desvios. Fonte: indicadores e issues #36, #47, #48 e #49.*', '',
@@ -223,7 +232,7 @@ def relatorio(snapshot, result, fonte='gestao/dados/fechamento-e2-2026-11-22.jso
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--fonte', type=Path, default=ROOT/'gestao/dados/fechamento-e2-2026-11-23-v4.json')
+    parser.add_argument('--fonte', type=Path, default=ROOT/'gestao/dados/fechamento-e2-2026-11-23-v6.json')
     args = parser.parse_args()
     snapshot = json.loads(args.fonte.read_text(encoding='utf-8'))
     result = calcular(snapshot)
