@@ -10,7 +10,7 @@ instrumentos ficam em `dados/privado/`, que o Git ignora.
 |---|---|
 | Sessões conferidas | S03 (21/11), S05 (22/11), S06 (22/11) e S08 (22 e 23/11); pendência de P3 da S02 (22/11) |
 | Conferente | Heitor. Não participou da S03 B01 a B03 nem da S05 (script supervisionado por Pedro Druck) nem da S06 e da S08 (executadas por Hugo) |
-| Fora deste registro | S03 B04 (iPhone, CT06): Heitor executou o bloco; a conferência é do Philipe e continua pendente |
+| S03 B04 (iPhone, CT06) | Heitor executou o bloco; conferido por Philipe em 23/11/2026 (3 concluídas, iguais à primeira leitura), com registro em [S03-CT06-iphone-registro-2026-11-22.md](S03-CT06-iphone-registro-2026-11-22.md) |
 | Data da conferência | 23/11/2026 |
 | Independência | O conferente declara que marcou os tempos e classificou as tentativas sem consultar os valores da primeira leitura (CSV, registros das sessões e propostas automáticas) |
 | Tolerância de tempo | 0,050 s (três quadros a 60 qps), desvio D031: as gravações têm taxa variável e a taxa nominal não está registrada |
@@ -22,11 +22,11 @@ instrumentos ficam em `dados/privado/`, que o Git ignora.
 |---|---:|---:|---:|---|
 | P3, S02 B02 rep. 2 (rolagens) | 1 | — | 1 (resolvida) | Decisão conjunta de Heitor e Pedro Druck: 1 rolagem (o script registrou 2) |
 | P6, S03 B01 a B03 e S05 | 23 | 23 | 0 | Conferido |
-| P6, S03 B04 | 3 | — | — | Pendente (conferente: Philipe) |
-| P4, tempos da S06 (com tempo) | 44 | 41 | 3 | 3 tempos acima da tolerância, aguardando revisão conjunta com Hugo |
+| P6, S03 B04 | 3 | 3 | 0 | Conferido por Philipe |
+| P4, tempos da S06 (com tempo) | 44 | 41 | 3 (resolvidas) | 3 tempos acima da tolerância, resolvidos em conjunto com Hugo (Seção 7) |
 | P4, S06 B04 (bloco excluído) e B09 rep. 1 | 13 | 13 | 0 | Exclusão do B04 e `erro_instrumento` da B09 rep. 1 confirmados |
 | P7, classificação das tentativas da S08 | 55 | 55 | 0 | Conferido |
-| P7, tempos M3.2.3 da S08 (com tempo) | 52 | 50 | 2 | 2 tempos acima da tolerância, aguardando revisão conjunta com Hugo |
+| P7, tempos M3.2.3 da S08 (com tempo) | 52 | 50 | 2 (resolvidas) | 2 tempos acima da tolerância, resolvidos em conjunto com Hugo (Seção 7) |
 | P5, volume da S06 | 22 | 22 | 0 | Conferido |
 
 Nos 96 tempos comparados, 24 coincidem no mesmo quadro e 72 diferem; a diferença mediana é de
@@ -242,7 +242,7 @@ As classificações de `tentativas.csv` e de `tempos.csv` coincidem nas 55 tenta
 degradada (B12), as duas falhas na preparação (incluindo o aquecimento) foram confirmadas como falha
 do serviço e continuam no denominador (D023); a repetição 6 passou de 60 s sem a lista (tempo limite).
 
-## 7. Divergências para a revisão conjunta com o Hugo
+## 7. Divergências e decisão conjunta com o Hugo
 
 | Sessão | Bloco | Rep. | Tempo 1ª | Tempo 2ª | Dif. | Observação do conferente |
 |---|---|---:|---:|---:|---:|---|
@@ -253,8 +253,12 @@ do serviço e continuam no denominador (D023); a repetição 6 passou de 60 s se
 | S08 | B15 | 6 | 0,865889 | 0,929767 | +0,063878 | Rolagem no 4G com atraso na renderização dos últimos itens |
 
 Nas cinco, o conferente marcou o fim mais tarde que a proposta automática, porque a tela ainda
-mudava depois do quadro proposto. Os dois devem marcar juntos o quadro final e registrar a decisão
-aqui; só então o `revisor` dessas linhas é preenchido.
+mudava depois do quadro proposto.
+
+**Decisão conjunta (23/11/2026).** Heitor, Hugo (executor da S06 e da S08) e Philipe reviram as
+cinco marcações e decidiram registrar a **marcação da segunda leitura** como valor final, porque a
+tela ainda mudava depois do quadro da proposta automática. O `tempos.csv` passou a ter esses
+valores (início, fim e tempo) e o `revisor` "Heitor e Hugo" nas cinco linhas.
 
 ## 8. P5 — volume da S06
 
@@ -288,15 +292,11 @@ O volume é leitura de contador, não marcação de quadro: o conferente refez a
 No B08, as repetições 3 e 4 não existem porque a conexão USB caiu na preparação, como mostram as
 saídas privadas.
 
-## 9. O que continua pendente
+## 9. Resultado da conferência
 
-| Item | Linhas | Responsável |
-|---|---:|---|
-| Revisão conjunta das cinco divergências de tempo (Seção 7) | 5 | Heitor e Hugo |
-| Conferência do S03 B04 (iPhone, CT06) | 3 | Philipe |
-
-Enquanto essas 8 linhas ficarem sem `revisor`, o `dados/scripts/calcular.py` não gera os
-resultados oficiais.
+Todas as linhas de `fluxo.csv`, `tentativas.csv`, `tempos.csv` e `volume.csv` têm `revisor`.
+O `dados/scripts/calcular.py` foi rodado em 23/11/2026, depois das decisões acima, e gerou os
+resultados oficiais em `dados/consolidados/resultados-metricas.csv` (42 resultados calculados).
 
 ## 10. Referências
 

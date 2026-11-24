@@ -1,29 +1,30 @@
 {
-  "commit_base": "f925c1d4011e3c4650cde3fcf958f1d8efc5a0df",
+  "commit_base": "9ef440ac5dcd9724570a6def85e82cb79b7941a2",
   "sha256": {
-    "dados/brutos/ambientes.csv": "e758e40ed7a57b17877ea768a0e2c4dfd1d03653d7accde7e8b9efa18548b8a5",
-    "dados/brutos/campos-por-infracao.csv": "c3564d29dfc71bfc9d3f8714fd3e9a2a8b8216dbc37b9dd29e0c882fbb2af98f",
-    "dados/brutos/comparacao-canais.csv": "f953c345ddad28f7df661df7e32516bd6ec56db1079794abce43a7904cf2dcce",
-    "dados/brutos/desvios.csv": "9ac24c211f87723b30d01c2d7afb897f23108c03de883b39dc0b55303ba7de7a",
-    "dados/brutos/fluxo.csv": "45f95bb7d016cf0fb801d0ee79e401e30cc77406972aea35fc517308694d111d",
-    "dados/brutos/tempos.csv": "93ef87971e900049ac75db74d89a761ef1af92c3c64f23fa8e265700dcb2f3d8",
-    "dados/brutos/tentativas.csv": "a10237226fc9635e27a306d0a1a4c0a2926b0a710dec94c6b9bcfc5956ed6514",
-    "dados/brutos/volume.csv": "914b64e6dab0838030433896bbd745c05ff7cfd23e1c416aff39dc3b1bd3b8cb",
-    "dados/scripts/calcular.py": "e1cbdd2c597ebcea7ed4a75b135c8fb5c855ade9001288bb64bb58270551923a"
+    "dados/brutos/ambientes.csv": "0f1b8605be730597aa87b65dab131ac344bb7632367513c348639ad5c33e26d1",
+    "dados/brutos/campos-por-infracao.csv": "babea6fdd5a84e74987aa94cbf3a438357664201ec6cb7bd3f3d6d92072bb921",
+    "dados/brutos/comparacao-canais.csv": "6fd1f79b7c47abe08d47e22e8d1db23ec65b477337eb8c1939939aa985fba637",
+    "dados/brutos/desvios.csv": "d95f2659218db8745017b2c0b88372314f10b429eea63461715ba8d4995b0b85",
+    "dados/brutos/fluxo.csv": "a030d2dd0ef207a1ed21ec15c83052ada975c87a2949d365c163131b77ee1530",
+    "dados/brutos/tempos.csv": "1348a85a71db4736ae3264ea3218c80996c13da649cb057def6bd56892ad8b89",
+    "dados/brutos/tentativas.csv": "34a669526d75f1feb643f1bb40953d3f2ade255e1984123c532e56ec6444b55e",
+    "dados/brutos/volume.csv": "558dbe8652f6ff0adf52fc90316fddea490e1500729be6d03540c3cf3352784b",
+    "dados/scripts/calcular.py": "3e866db68b5984446e9576dcb6e0c98060777f51b1b1486e81d352ddee617475"
   },
   "linhas_brutas": {
-    "ambientes": 0,
-    "campos-por-infracao": 0,
-    "comparacao-canais": 0,
-    "desvios": 0,
-    "fluxo": 0,
-    "tempos": 0,
-    "tentativas": 0,
-    "volume": 0
+    "ambientes": 18,
+    "campos-por-infracao": 64,
+    "comparacao-canais": 17,
+    "desvios": 31,
+    "fluxo": 6,
+    "tempos": 112,
+    "tentativas": 81,
+    "volume": 22
   },
-  "resultados_calculados": 0,
+  "resultados_calculados": 42,
   "estados": {
-    "inconclusivo": 25,
+    "calculado": 42,
+    "inconclusivo": 4,
     "nao_aplicavel": 1
   },
   "observacao": "Hashes identificam os arquivos efetivamente lidos, inclusive alterações ainda não commitadas. Validação estrutural não atesta consentimento, anonimização ou revisão humana."
