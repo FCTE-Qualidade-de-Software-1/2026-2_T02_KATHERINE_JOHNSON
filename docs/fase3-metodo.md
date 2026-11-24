@@ -73,7 +73,7 @@ registro.
 
 ### P1 — Registro de campos (M1.1.1 e M1.1.2) {#p1}
 
-*Mede [M1.1.1](fase2-metricas.md#m1-1-1), [M1.1.2](fase2-metricas.md#m1-1-2), que respondem à [Q1.1](fase2-gqm.md#q1-1). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m1-1-1).*
+*Mede [M1.1.1](fase2-metricas.md#m1-1-1), [M1.1.2](fase2-metricas.md#m1-1-2), que respondem à [Q1.1](fase2-gqm.md#q1-1). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m1-1-1). Execução na Fase 4: sessão [S02](fase4-medicoes.md#sessao-s02); leituras e resultados de [M1.1.1](fase4-medicoes.md#m1-1-1), [M1.1.2](fase4-medicoes.md#m1-1-2).*
 
 1. No contexto de referência, abrir a lista de infrações do veículo.
 2. **M1.1.1:** para cada infração da lista, marcar no arquivo de coleta, campo a campo de R01 a
@@ -90,7 +90,7 @@ registro.
 
 ### P2 — Comparação entre canais (M1.2.1 e M1.2.2) {#p2}
 
-*Mede [M1.2.1](fase2-metricas.md#m1-2-1), [M1.2.2](fase2-metricas.md#m1-2-2), que respondem à [Q1.2](fase2-gqm.md#q1-2). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m1-2-1).*
+*Mede [M1.2.1](fase2-metricas.md#m1-2-1), [M1.2.2](fase2-metricas.md#m1-2-2), que respondem à [Q1.2](fase2-gqm.md#q1-2). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m1-2-1). Execução na Fase 4: sessão [S02](fase4-medicoes.md#sessao-s02); leituras e resultados de [M1.2.1](fase4-medicoes.md#m1-2-1), [M1.2.2](fase4-medicoes.md#m1-2-2).*
 
 Usa as telas capturadas em P1; não exige nova consulta, desde que o intervalo entre os canais
 tenha respeitado o limite de 10 minutos.
@@ -118,7 +118,7 @@ o valor correto e não permitem atribuir superioridade individual.
 
 ### P3 — Contagem do fluxo (M1.3.1 e M1.3.2) {#p3}
 
-*Mede [M1.3.1](fase2-metricas.md#m1-3-1), [M1.3.2](fase2-metricas.md#m1-3-2), que respondem à [Q1.3](fase2-gqm.md#q1-3). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m1-3-1).*
+*Mede [M1.3.1](fase2-metricas.md#m1-3-1), [M1.3.2](fase2-metricas.md#m1-3-2), que respondem à [Q1.3](fase2-gqm.md#q1-3). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m1-3-1). Execução na Fase 4: sessão [S02](fase4-medicoes.md#sessao-s02); leituras e resultados de [M1.3.1](fase4-medicoes.md#m1-3-1), [M1.3.2](fase4-medicoes.md#m1-3-2).*
 
 1. No contexto de referência, a partir da tela inicial autenticada, executar o caminho até a
    lista de infrações do veículo, sem atalhos e sem usar a busca do canal.
@@ -133,7 +133,7 @@ o valor correto e não permitem atribuir superioridade individual.
 
 ### P4 — Medição de tempo (M2.1.1 e M2.1.2) {#p4}
 
-*Mede [M2.1.1](fase2-metricas.md#m2-1-1), [M2.1.2](fase2-metricas.md#m2-1-2), que respondem à [Q2.1](fase2-gqm.md#q2-1). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m2-1-1).*
+*Mede [M2.1.1](fase2-metricas.md#m2-1-1), [M2.1.2](fase2-metricas.md#m2-1-2), que respondem à [Q2.1](fase2-gqm.md#q2-1). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m2-1-1). Execução na Fase 4: sessão [S06](fase4-medicoes.md#sessao-s06); leituras e resultados de [M2.1.1](fase4-medicoes.md#m2-1-1), [M2.1.2](fase4-medicoes.md#m2-1-2).*
 
 1. No contexto de referência, abrir a tela de seleção do veículo e iniciar o bloco com uma
    repetição de aquecimento, que não entra no cálculo.
@@ -157,7 +157,7 @@ final no [registro de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2
 
 ### P5 — Medição de volume (M2.2.1) {#p5}
 
-*Mede [M2.2.1](fase2-metricas.md#m2-2-1), que respondem à [Q2.2](fase2-gqm.md#q2-2). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m2-2-1).*
+*Mede [M2.2.1](fase2-metricas.md#m2-2-1), que respondem à [Q2.2](fase2-gqm.md#q2-2). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m2-2-1). Execução na Fase 4: sessão [S06](fase4-medicoes.md#sessao-s06); leituras e resultados de [M2.2.1](fase4-medicoes.md#m2-2-1).*
 
 1. **Portal:** abrir o DevTools, aba Network, com "Preserve log" ligado e "Disable cache"
    desligado (regra de cache da Tabela 1). Limpar a lista de requisições.
@@ -177,7 +177,7 @@ A equivalência do escopo e a atualização dos contadores precisam ser verifica
 
 ### P6 — Execução por contexto (M3.1.1 e M3.1.2) {#p6}
 
-*Mede [M3.1.1](fase2-metricas.md#m3-1-1), [M3.1.2](fase2-metricas.md#m3-1-2), que respondem à [Q3.1](fase2-gqm.md#q3-1). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m3-1-1).*
+*Mede [M3.1.1](fase2-metricas.md#m3-1-1), [M3.1.2](fase2-metricas.md#m3-1-2), que respondem à [Q3.1](fase2-gqm.md#q3-1). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m3-1-1). Execução na Fase 4: sessões [S03](fase4-medicoes.md#sessao-s03), [S05](fase4-medicoes.md#sessao-s05); leituras e resultados de [M3.1.1](fase4-medicoes.md#m3-1-1), [M3.1.2](fase4-medicoes.md#m3-1-2).*
 
 1. Em Wi-Fi, executar a consulta completa (até o detalhamento de uma infração) em cada contexto
    especificado na [Fase 1](fase1-proposito.md):
@@ -193,7 +193,7 @@ A equivalência do escopo e a atualização dos contadores precisam ser verifica
 
 ### P7 — Execução sob condição de rede (M3.2.1, M3.2.2 e M3.2.3) {#p7}
 
-*Mede [M3.2.1](fase2-metricas.md#m3-2-1), [M3.2.2](fase2-metricas.md#m3-2-2), [M3.2.3](fase2-metricas.md#m3-2-3), que respondem à [Q3.2](fase2-gqm.md#q3-2). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m3-2-1).*
+*Mede [M3.2.1](fase2-metricas.md#m3-2-1), [M3.2.2](fase2-metricas.md#m3-2-2), [M3.2.3](fase2-metricas.md#m3-2-3), que respondem à [Q3.2](fase2-gqm.md#q3-2). Cadeia completa: [rastreabilidade](rastreabilidade.md#rt-m3-2-1). Execução na Fase 4: sessão [S08](fase4-medicoes.md#sessao-s08); leituras e resultados de [M3.2.1](fase4-medicoes.md#m3-2-1), [M3.2.2](fase4-medicoes.md#m3-2-2), [M3.2.3](fase4-medicoes.md#m3-2-3).*
 
 1. No contexto de referência, para cada condição da Tabela 2, aplicar a condição no ponto de
    acesso e anotar a velocidade medida.

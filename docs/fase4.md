@@ -14,16 +14,19 @@ pelas evidências coletadas.
 > essas lacunas em zero ou aprovação. A
 > [proposta de processo e templates de melhoria](fase4-melhoria.md) está entregue, sem comprovação de
 > eficácia no serviço.
+>
+> **Para conferir os números:** [Medições por métrica](fase4-medicoes.md) mostra cada leitura bruta
+> por trás de cada resultado, com link para a linha exata do CSV, a captura e a segunda leitura.
 
 O [acompanhamento da coleta](fase4-coleta.md) reúne as pendências da #46 e o histórico de
-reagendamento; a [consolidação](../dados/consolidados/resultados-metricas.csv) registra valores,
+reagendamento; a [consolidação](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/consolidados/resultados-metricas.csv) registra valores,
 níveis, proveniência e limitações após a conferência. A coleta ocorreu em 21 e 22/11.
 
 ## 1. Atividades, responsáveis e prazos
 
-| Atividade | Issue | Responsáveis | Prazo | Situação em 23/11 | Onde está o resultado |
+| Atividade | Issue | Responsáveis | Prazo | Situação em 24/11 | Onde está o resultado |
 |---|---|---|---|---|---|
-| Coleta das medições e dados brutos (S01, S02, S03, S05, S06 e S08) | [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Hugo, Pedro Druck, Philipe | 18/11/2026 | Segundas leituras registradas; níveis calculados para resultados elegíveis | `dados/brutos/` e `evidencias/fase4/` |
+| Coleta das medições e dados brutos (S01, S02, S03, S05, S06 e S08) | [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Hugo, Pedro Druck, Philipe | 18/11/2026 | Concluída: segundas leituras registradas, níveis calculados e issue fechada em 24/11 | [Medições por métrica](fase4-medicoes.md), `dados/brutos/` e `evidencias/fase4/` |
 | Análise, respostas às questões GQM e julgamento | [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Pedro Henrique, Philipe; revisão de Heitor | 20/11/2026 | Resultados, níveis, respostas, julgamentos e oportunidades registrados; aprovação do revisor pendente | [Análise e julgamento GQM](fase4-analise.md) e artigo |
 | Ação de melhoria obrigatória | [#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36) | Pedro Druck | 21/11/2026 | Processo e templates entregues; revisão e eficácia pendentes | [Ação de melhoria](fase4-melhoria.md) |
 
@@ -60,6 +63,7 @@ Regras de integridade que valem para toda a fase:
 | Instrumentos e dicionário de dados | Oito CSV com os registros das sessões e as convenções de cálculo | [`dados/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/dados) |
 | Evidências anonimizadas | Capturas, vídeos tratados e configuração de rede | [`evidencias/fase4/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/evidencias/fase4) |
 | Registro de sessão | Piloto, blocos, conferência e desvios | [`evidencias/fase4/modelo-sessao.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md) |
+| Medições por métrica | Cada leitura das 14 métricas ligada à linha do CSV, à captura e à segunda leitura | [Medições por métrica](fase4-medicoes.md) |
 | Estrutura da análise | Procedimento, dependências da #47 e modelos de consolidação | [Análise e julgamento GQM](fase4-analise.md); [`dados/consolidados/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/dados/consolidados) |
 | Release da Entrega 2 | Tag e PDF do artigo | [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases); publicação pendente |
 
@@ -74,11 +78,11 @@ mínimo aceitável.
 
 | Objetivo GQM | Característica | Resultado |
 |---|---|---|
-| G1 | Adequação funcional | Não atendido nos dois canais: M1.1.1 Inaceitável (33,33%); M1.2.2 Inaceitável (0/1). A ausência de R14 foi observada no aplicativo. |
-| G2 | Eficiência de desempenho | Inconclusivo nos dois canais: tempos Excelentes no caso V4/Wi-Fi, portal mais rápido; volumes com escopos de instrumentos não equivalentes. |
-| G3 | Cobertura de contexto | Portal atendido nos contextos medidos (até Alvo na rede degradada); aplicativo não atendido no escopo observado por falha 0/3 em CT05/2.6.3; CT04 e aplicativo degradado não avaliados. |
+| [G1](fase4-analise.md#julg-g1) | [Adequação funcional](fase4-medicoes.md#g1) | Não atendido nos dois canais: M1.1.1 Inaceitável (33,33%); M1.2.2 Inaceitável (0/1). A ausência de R14 foi observada no aplicativo. |
+| [G2](fase4-analise.md#julg-g2) | [Eficiência de desempenho](fase4-medicoes.md#g2) | Atendido nos dois canais no caso V4/Wi-Fi: tempos e volumes Excelentes, portal mais rápido (H2.1 contrariada); a comparação de volume (H2.2) é inconclusiva porque os instrumentos têm escopos diferentes. |
+| [G3](fase4-analise.md#julg-g3) | [Cobertura de contexto](fase4-medicoes.md#g3) | Portal atendido nos contextos medidos (até Alvo na rede degradada); aplicativo não atendido no escopo observado por falha 0/3 em CT05/2.6.3; CT04 e aplicativo degradado não avaliados. |
 
-*Tabela 3 — Resultados por objetivo de medição. Fonte: [Objetivos, questões e hipóteses](fase2-gqm.md).*
+*Tabela 3 — Resultados por objetivo de medição. Fonte: [Objetivos, questões e hipóteses](fase2-gqm.md) e [análise](fase4-analise.md#julgamento); cada característica leva às medições.*
 
 ## 5. Limitações já conhecidas
 

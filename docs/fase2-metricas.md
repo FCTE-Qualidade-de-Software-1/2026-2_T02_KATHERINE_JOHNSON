@@ -6,7 +6,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M1.1.1 — Proporção de campos da lista de referência exibidos {#m1-1-1}
 
-- **Questão respondida:** [Q1.1](fase2-gqm.md#q1-1), hipótese [H1.1](fase2-gqm.md#h1-1); procedimento [P1](fase3-metodo.md#p1); [rastreabilidade completa](rastreabilidade.md#rt-m1-1-1).
+- **Questão respondida:** [Q1.1](fase2-gqm.md#q1-1), hipótese [H1.1](fase2-gqm.md#h1-1); procedimento [P1](fase3-metodo.md#p1); [rastreabilidade completa](rastreabilidade.md#rt-m1-1-1); **medição na Fase 4:** [resultado e leituras de M1.1.1](fase4-medicoes.md#m1-1-1).
 - **Definição:** proporção de campos da lista de referência exibidos pelo canal para cada infração consultada.
 - **Fórmula:** (número de campos exibidos / número total de campos da lista de referência) × 100.
 - **Unidade:** percentual.
@@ -18,7 +18,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M1.1.2 — Proporção de campos detalhados acessíveis {#m1-1-2}
 
-- **Questão respondida:** [Q1.1](fase2-gqm.md#q1-1), hipótese [H1.1](fase2-gqm.md#h1-1); procedimento [P1](fase3-metodo.md#p1); [rastreabilidade completa](rastreabilidade.md#rt-m1-1-2).
+- **Questão respondida:** [Q1.1](fase2-gqm.md#q1-1), hipótese [H1.1](fase2-gqm.md#h1-1); procedimento [P1](fase3-metodo.md#p1); [rastreabilidade completa](rastreabilidade.md#rt-m1-1-2); **medição na Fase 4:** [resultado e leituras de M1.1.2](fase4-medicoes.md#m1-1-2).
 - **Definição:** proporção de campos da lista de referência que são visíveis ou consultáveis na tela de detalhamento e estão preenchidos para a infração avaliada. A diferença em relação a M1.1.1 é a tela medida (detalhamento, e não lista), não o conjunto de campos.
 - **Fórmula:** (número de campos da lista de referência visíveis ou consultáveis e preenchidos no detalhamento / número de campos da lista de referência aplicáveis à infração) × 100.
 - **Unidade:** percentual.
@@ -30,7 +30,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M1.2.1 — Proporção de campos comuns consistentes {#m1-2-1}
 
-- **Questão respondida:** [Q1.2](fase2-gqm.md#q1-2), hipótese [H1.2](fase2-gqm.md#h1-2); procedimento [P2](fase3-metodo.md#p2); [rastreabilidade completa](rastreabilidade.md#rt-m1-2-1).
+- **Questão respondida:** [Q1.2](fase2-gqm.md#q1-2), hipótese [H1.2](fase2-gqm.md#h1-2); procedimento [P2](fase3-metodo.md#p2); [rastreabilidade completa](rastreabilidade.md#rt-m1-2-1); **medição na Fase 4:** [resultado e leituras de M1.2.1](fase4-medicoes.md#m1-2-1).
 - **Definição:** proporção dos campos de referência aplicáveis à infração que estão preenchidos e comunicam a mesma informação nos dois canais.
 - **Fórmula:** (número de campos aplicáveis preenchidos e paritários nos dois canais / número total de campos de referência aplicáveis) × 100. O denominador por infração é 15 (R01–R15), acrescido de dois campos nas infrações de velocidade; ausências permanecem no denominador.
 - **Unidade:** percentual.
@@ -42,7 +42,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M1.2.2 — Proporção de infrações sem divergência {#m1-2-2}
 
-- **Questão respondida:** [Q1.2](fase2-gqm.md#q1-2), hipótese [H1.2](fase2-gqm.md#h1-2); procedimento [P2](fase3-metodo.md#p2); [rastreabilidade completa](rastreabilidade.md#rt-m1-2-2).
+- **Questão respondida:** [Q1.2](fase2-gqm.md#q1-2), hipótese [H1.2](fase2-gqm.md#h1-2); procedimento [P2](fase3-metodo.md#p2); [rastreabilidade completa](rastreabilidade.md#rt-m1-2-2); **medição na Fase 4:** [resultado e leituras de M1.2.2](fase4-medicoes.md#m1-2-2).
 - **Definição:** proporção de infrações consultadas com todos os campos aplicáveis preenchidos e paritários entre os canais, sem divergências nem ausências.
 - **Fórmula:** (número de infrações sem divergência / número total de infrações consultadas) × 100.
 - **Unidade:** percentual.
@@ -54,7 +54,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M1.3.1 — Número de passos até a lista de infrações {#m1-3-1}
 
-- **Questão respondida:** [Q1.3](fase2-gqm.md#q1-3), hipótese [H1.3](fase2-gqm.md#h1-3); procedimento [P3](fase3-metodo.md#p3); [rastreabilidade completa](rastreabilidade.md#rt-m1-3-1).
+- **Questão respondida:** [Q1.3](fase2-gqm.md#q1-3), hipótese [H1.3](fase2-gqm.md#h1-3); procedimento [P3](fase3-metodo.md#p3); [rastreabilidade completa](rastreabilidade.md#rt-m1-3-1); **medição na Fase 4:** [resultado e leituras de M1.3.1](fase4-medicoes.md#m1-3-1).
 - **Definição:** número de ações necessárias desde o início do fluxo até a exibição completa da lista de infrações.
 - **Fórmula:** contagem direta das ações realizadas.
 - **Unidade:** passos.
@@ -66,7 +66,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M1.3.2 — Número de transições de tela {#m1-3-2}
 
-- **Questão respondida:** [Q1.3](fase2-gqm.md#q1-3), hipótese [H1.3](fase2-gqm.md#h1-3); procedimento [P3](fase3-metodo.md#p3); [rastreabilidade completa](rastreabilidade.md#rt-m1-3-2).
+- **Questão respondida:** [Q1.3](fase2-gqm.md#q1-3), hipótese [H1.3](fase2-gqm.md#h1-3); procedimento [P3](fase3-metodo.md#p3); [rastreabilidade completa](rastreabilidade.md#rt-m1-3-2); **medição na Fase 4:** [resultado e leituras de M1.3.2](fase4-medicoes.md#m1-3-2).
 - **Definição:** número de telas ou páginas percorridas até a exibição da lista de infrações.
 - **Fórmula:** contagem direta das transições de tela.
 - **Unidade:** telas.
@@ -78,7 +78,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M2.1.1 — Tempo até a exibição completa da lista de infrações {#m2-1-1}
 
-- **Questão respondida:** [Q2.1](fase2-gqm.md#q2-1), hipótese [H2.1](fase2-gqm.md#h2-1); procedimento [P4](fase3-metodo.md#p4); [rastreabilidade completa](rastreabilidade.md#rt-m2-1-1).
+- **Questão respondida:** [Q2.1](fase2-gqm.md#q2-1), hipótese [H2.1](fase2-gqm.md#h2-1); procedimento [P4](fase3-metodo.md#p4); [rastreabilidade completa](rastreabilidade.md#rt-m2-1-1); **medição na Fase 4:** [resultado e leituras de M2.1.1](fase4-medicoes.md#m2-1-1).
 - **Definição:** intervalo entre o clique ou toque em “Consultar”, após a seleção do veículo e o preenchimento dos filtros, e a primeira exibição completa da lista de infrações. Definição operacional confirmada por Hugo em 22/11/2026 para a sessão S06 (V4), pois os canais apresentam filtros antes da lista; a seleção e o preenchimento ficam fora do intervalo cronometrado.
 - **Fórmula:** tempo final menos tempo inicial.
 - **Unidade:** segundos.
@@ -91,7 +91,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M2.1.2 — Tempo até a exibição completa dos detalhes da infração {#m2-1-2}
 
-- **Questão respondida:** [Q2.1](fase2-gqm.md#q2-1), hipótese [H2.1](fase2-gqm.md#h2-1); procedimento [P4](fase3-metodo.md#p4); [rastreabilidade completa](rastreabilidade.md#rt-m2-1-2).
+- **Questão respondida:** [Q2.1](fase2-gqm.md#q2-1), hipótese [H2.1](fase2-gqm.md#h2-1); procedimento [P4](fase3-metodo.md#p4); [rastreabilidade completa](rastreabilidade.md#rt-m2-1-2); **medição na Fase 4:** [resultado e leituras de M2.1.2](fase4-medicoes.md#m2-1-2).
 - **Definição:** intervalo entre a seleção de uma infração e a exibição completa de seus detalhes.
 - **Fórmula:** tempo final menos tempo inicial.
 - **Unidade:** segundos.
@@ -104,7 +104,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M2.2.1 — Volume de dados transferidos na consulta completa {#m2-2-1}
 
-- **Questão respondida:** [Q2.2](fase2-gqm.md#q2-2), hipótese [H2.2](fase2-gqm.md#h2-2); procedimento [P5](fase3-metodo.md#p5); [rastreabilidade completa](rastreabilidade.md#rt-m2-2-1).
+- **Questão respondida:** [Q2.2](fase2-gqm.md#q2-2), hipótese [H2.2](fase2-gqm.md#h2-2); procedimento [P5](fase3-metodo.md#p5); [rastreabilidade completa](rastreabilidade.md#rt-m2-2-1); **medição na Fase 4:** [resultado e leituras de M2.2.1](fase4-medicoes.md#m2-2-1).
 - **Definição:** volume total de dados transferidos durante a execução completa da consulta de infrações.
 - **Fórmula:** soma dos bytes transferidos durante a consulta.
 - **Unidade:** megabytes.
@@ -116,7 +116,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M3.1.1 — Taxa de conclusão da consulta por plataforma {#m3-1-1}
 
-- **Questão respondida:** [Q3.1](fase2-gqm.md#q3-1), hipótese [H3.1](fase2-gqm.md#h3-1); procedimento [P6](fase3-metodo.md#p6); [rastreabilidade completa](rastreabilidade.md#rt-m3-1-1).
+- **Questão respondida:** [Q3.1](fase2-gqm.md#q3-1), hipótese [H3.1](fase2-gqm.md#h3-1); procedimento [P6](fase3-metodo.md#p6); [rastreabilidade completa](rastreabilidade.md#rt-m3-1-1); **medição na Fase 4:** [resultado e leituras de M3.1.1](fase4-medicoes.md#m3-1-1).
 - **Definição:** proporção de plataformas definidas no escopo em que a consulta é concluída com sucesso.
 - **Fórmula:** (número de plataformas com consulta concluída / número total de plataformas testadas) × 100.
 - **Unidade:** percentual.
@@ -128,7 +128,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M3.1.2 — Taxa de conclusão da consulta por navegador {#m3-1-2}
 
-- **Questão respondida:** [Q3.1](fase2-gqm.md#q3-1), hipótese [H3.1](fase2-gqm.md#h3-1); procedimento [P6](fase3-metodo.md#p6); [rastreabilidade completa](rastreabilidade.md#rt-m3-1-2).
+- **Questão respondida:** [Q3.1](fase2-gqm.md#q3-1), hipótese [H3.1](fase2-gqm.md#h3-1); procedimento [P6](fase3-metodo.md#p6); [rastreabilidade completa](rastreabilidade.md#rt-m3-1-2); **medição na Fase 4:** [resultado e leituras de M3.1.2](fase4-medicoes.md#m3-1-2).
 - **Definição:** proporção de navegadores definidos no escopo em que a consulta é concluída com sucesso.
 - **Fórmula:** (número de navegadores com consulta concluída / número total de navegadores testados) × 100.
 - **Unidade:** percentual.
@@ -140,7 +140,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M3.2.1 — Taxa de conclusão da consulta por condição de rede {#m3-2-1}
 
-- **Questão respondida:** [Q3.2](fase2-gqm.md#q3-2), hipótese [H3.2](fase2-gqm.md#h3-2); procedimento [P7](fase3-metodo.md#p7); [rastreabilidade completa](rastreabilidade.md#rt-m3-2-1).
+- **Questão respondida:** [Q3.2](fase2-gqm.md#q3-2), hipótese [H3.2](fase2-gqm.md#h3-2); procedimento [P7](fase3-metodo.md#p7); [rastreabilidade completa](rastreabilidade.md#rt-m3-2-1); **medição na Fase 4:** [resultado e leituras de M3.2.1](fase4-medicoes.md#m3-2-1).
 - **Definição:** taxa de tentativas de consulta concluídas com sucesso, calculada separadamente para cada canal e condição de rede.
 - **Fórmula:** (número de tentativas concluídas em um canal e condição / número total de tentativas realizadas no mesmo canal e condição) × 100.
 - **Unidade:** percentual.
@@ -152,7 +152,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M3.2.2 — Taxa de falhas ou expiração de sessão {#m3-2-2}
 
-- **Questão respondida:** [Q3.2](fase2-gqm.md#q3-2), hipótese [H3.2](fase2-gqm.md#h3-2); procedimento [P7](fase3-metodo.md#p7); [rastreabilidade completa](rastreabilidade.md#rt-m3-2-2).
+- **Questão respondida:** [Q3.2](fase2-gqm.md#q3-2), hipótese [H3.2](fase2-gqm.md#h3-2); procedimento [P7](fase3-metodo.md#p7); [rastreabilidade completa](rastreabilidade.md#rt-m3-2-2); **medição na Fase 4:** [resultado e leituras de M3.2.2](fase4-medicoes.md#m3-2-2).
 - **Definição:** proporção de tentativas de consulta que apresentam falha, erro, expiração de sessão ou tempo limite, calculada separadamente para cada canal e condição de rede.
 - **Fórmula:** (número de tentativas com falha ou expiração em um canal e condição / número total de tentativas realizadas no mesmo canal e condição) × 100.
 - **Unidade:** percentual.
@@ -164,7 +164,7 @@ Os intervalos de aceitabilidade foram definidos considerando a finalidade da con
 
 ## M3.2.3 — Tempo de conclusão da consulta por condição de rede {#m3-2-3}
 
-- **Questão respondida:** [Q3.2](fase2-gqm.md#q3-2), hipótese [H3.2](fase2-gqm.md#h3-2); procedimento [P7](fase3-metodo.md#p7); [rastreabilidade completa](rastreabilidade.md#rt-m3-2-3).
+- **Questão respondida:** [Q3.2](fase2-gqm.md#q3-2), hipótese [H3.2](fase2-gqm.md#h3-2); procedimento [P7](fase3-metodo.md#p7); [rastreabilidade completa](rastreabilidade.md#rt-m3-2-3); **medição na Fase 4:** [resultado e leituras de M3.2.3](fase4-medicoes.md#m3-2-3).
 - **Definição:** tempo necessário para concluir a consulta em cada condição de rede.
 - **Fórmula:** tempo final menos tempo inicial.
 - **Unidade:** segundos.

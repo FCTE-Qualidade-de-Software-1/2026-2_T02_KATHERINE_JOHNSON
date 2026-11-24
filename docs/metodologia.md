@@ -102,8 +102,8 @@ qualidade dos dois canais.
 | Passo | O que foi feito | Resultado |
 |---|---|---|
 | 4.1 Execução das medições | Seis sessões em 21 e 22/11/2026 (S01, S02, S03, S05, S06 e S08), com registros, evidências anonimizadas e desvios | [Coleta, pendências e cálculo](fase4-coleta.md) |
-| 4.2 Cálculo e comparação com os níveis | Valores de primeira leitura; níveis aguardam a segunda leitura independente | [Análise e julgamento GQM](fase4-analise.md) |
-| 4.3 Julgamento e conclusões | Questões e objetivos inconclusivos até a conferência, com lacunas declaradas | [Análise e julgamento GQM](fase4-analise.md#julgamento) |
+| 4.2 Cálculo e comparação com os níveis | Segunda leitura independente de todas as linhas elegíveis (23/11), divergências resolvidas em conjunto e cálculo reproduzível: 42 resultados com nível, 4 inconclusivos por falta de medição e 1 não aplicável | [Medições por métrica](fase4-medicoes.md), com cada leitura ligada à linha do CSV |
+| 4.3 Julgamento e conclusões | Sete questões respondidas e três objetivos julgados por canal; lacunas (CT04 e aplicativo na rede degradada) mantidas sem nível | [Análise e julgamento GQM](fase4-analise.md#julgamento) |
 | 4.4 Ação de melhoria | Proposta de processo com templates técnicos, motivada pela falha de P6 no aplicativo 2.6.3 | [Ação de melhoria](fase4-melhoria.md) |
 
 O andamento da fase, as responsabilidades e as limitações já conhecidas estão em

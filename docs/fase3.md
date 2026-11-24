@@ -24,11 +24,26 @@ O passo a passo da fase está em [Metodologia](metodologia.md).
 | F3-C8: coerência com a Fase 2 | [Tabela de rastreabilidade](fase3-metodo.md#rastreabilidade-f2-f3) | Quatorze métricas ligadas a procedimentos, instrumentos e registros |
 | Artigo e GitPage | Seção `fase3-plano.tex` e páginas desta fase | Disponíveis no repositório |
 | Levantamento autenticado e atualização da Fase 1 | S01 e roteiro do levantamento | Parcial: seis capturas autenticadas do portal; caminho do aplicativo Android 2.7.0 levantado até o detalhe na S05 (seção 2 abaixo); piloto liberado em 22/11 (seção Piloto S01); atualização da Fase 1 com os filtros observados pendente. Ver [evidências de S00/S01](fase4-coleta.md#s00-s01) |
-| iOS | CT06 e bloqueio B03 | iPhone D04, de um integrante; inventário registrado e P6 executado em 22/11 (3 de 3), pendente de conferência independente; M2.2.1 não medida no iOS (D008) |
+| iOS | CT06 e bloqueio B03 | iPhone D04, de um integrante; inventário registrado e P6 executado em 22/11 (3 de 3), conferido por Philipe em 23/11; M2.2.1 não medida no iOS (D008) |
 | Revisão do plano documental | Pedro Henrique | PR #57 aprovado; piloto S01 executado e registrado em 22/11 (seção seguinte) |
 
 Os critérios empíricos só podem ser marcados como concluídos após as sessões e a conferência
 das evidências. A integração documental não encerra automaticamente a issue.
+
+## Do plano à execução {#plano-execucao}
+
+A Tabela 1 mostra o que aconteceu com cada procedimento planejado: em que sessão foi executado,
+quais métricas produziu e onde estão as leituras. Cada sessão e cada métrica levam à página
+[Medições por métrica](fase4-medicoes.md), que liga cada valor à linha do CSV e à segunda leitura.
+
+| Procedimento planejado | Sessão prevista | Sessão executada | Métricas produzidas | Mudança em relação ao plano |
+|---|---|---|---|---|
+| [P1](fase3-metodo.md#p1), [P2](fase3-metodo.md#p2) e [P3](fase3-metodo.md#p3) | S02 | [S02](fase4-medicoes.md#sessao-s02), 22/11, caso V2 | [M1.1.1](fase4-medicoes.md#m1-1-1), [M1.1.2](fase4-medicoes.md#m1-1-2), [M1.2.1](fase4-medicoes.md#m1-2-1), [M1.2.2](fase4-medicoes.md#m1-2-2), [M1.3.1](fase4-medicoes.md#m1-3-1), [M1.3.2](fase4-medicoes.md#m1-3-2) | Data e caso diferentes do plano (D014); uma infração |
+| [P4](fase3-metodo.md#p4) e [P5](fase3-metodo.md#p5) | S02 | [S06](fase4-medicoes.md#sessao-s06), 22/11, caso V4 | [M2.1.1](fase4-medicoes.md#m2-1-1), [M2.1.2](fase4-medicoes.md#m2-1-2), [M2.2.1](fase4-medicoes.md#m2-2-1) | Outro caso e aparelhos D05/D06 (D016 a D020); B04 excluído e reposto pelo B09 |
+| [P6](fase3-metodo.md#p6) | S03 | [S03](fase4-medicoes.md#sessao-s03), 21/11 (V1; B04 com V5 em 22/11), e [S05](fase4-medicoes.md#sessao-s05), 22/11 (V2) | [M3.1.1](fase4-medicoes.md#m3-1-1), [M3.1.2](fase4-medicoes.md#m3-1-2) | Contingência S05 para CT02 e CT05 2.7.0 (D009, D010); CT04 sem aparelho |
+| [P7](fase3-metodo.md#p7) | S04 | [S08](fase4-medicoes.md#sessao-s08), 22/11, caso V4 | [M3.2.1](fase4-medicoes.md#m3-2-1), [M3.2.2](fase4-medicoes.md#m3-2-2), [M3.2.3](fase4-medicoes.md#m3-2-3) | Rede degradada aplicada só ao portal (D021) |
+
+*Tabela 1 — Procedimentos planejados e sua execução na Fase 4. Fonte: [cronograma](fase3-cronograma.md), registros das sessões e [`desvios.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/desvios.csv).*
 
 ## Piloto S01 (22/11/2026)
 
@@ -44,7 +59,7 @@ liberados; P3 e P5 parciais; P7 bloqueado no piloto e executado depois na S08, c
 ## Levantamento autenticado
 
 ### 1. Passos da consulta
-A sequência a seguir é referência para os procedimentos [P1](fase3-metodo.md#p1) e [P3](fase3-metodo.md#p3). Sequência de telas e ações para consulta de infrações com usuário autenticado (Tabela 1). As capturas são do Portal de Serviços, com dados pessoais tarjados.
+A sequência a seguir é referência para os procedimentos [P1](fase3-metodo.md#p1) e [P3](fase3-metodo.md#p3). Sequência de telas e ações para consulta de infrações com usuário autenticado (Tabela 2). As capturas são do Portal de Serviços, com dados pessoais tarjados.
 
 | # | Portal de Serviços | Telas |
 |---|---|---|
@@ -55,7 +70,7 @@ A sequência a seguir é referência para os procedimentos [P1](fase3-metodo.md#
 | 5 | Selecionar o veículo na lista "Veículos atuais de minha propriedade" | ![Formulário de período do histórico de infrações, com placa tarjada, datas inicial e final e situação da pontuação, e o botão Consultar](./img/passoApassoConsulta/pageSeleçãoDeUmDosVeículos.png){ width="420" loading=lazy } |
 | 6 | Selecionar o período de emissão da infração e clicar em "Consultar" |![Resultado da consulta com uma infração listada: auto, órgão autuador e data tarjados; pontuação e situação da multa visíveis](./img/passoApassoConsulta/pageConsultaDeInfraçõesDefinindoData.png){ width="420" loading=lazy } |
 | 7 | Ver resultado da consulta e selecionar, caso exista, uma infração para ver detalhes | ![Detalhes da infração, com placa, modelo, auto, código Renainf, órgão, datas, hora, local, valores e velocidades tarjados; natureza, pontuação e descrição visíveis](./img/passoApassoConsulta/pageDetalhesDaInfração.png){ width="420" loading=lazy } |
-*Tabela 1 — Passos da consulta no Portal de Serviços, com capturas anonimizadas. Fonte: levantamento autenticado da equipe; capturas em `evidencias/fase1/` e `docs/img/passoApassoConsulta/`.*
+*Tabela 2 — Passos da consulta no Portal de Serviços, com capturas anonimizadas. Fonte: levantamento autenticado da equipe; capturas em `evidencias/fase1/` e `docs/img/passoApassoConsulta/`.*
 
 > Tela de exceção para tentativas de consultas de infrações emitidas há mais de 5 anos. ![Formulário de período com a mensagem de erro "Data informada não pode ser anterior à 5 anos"](./img/passoApassoConsulta/pageSeleçãoDeUmDosVeículosLimite5Anos.png){ width="420" loading=lazy }
 
@@ -74,7 +89,7 @@ de contingência S05 ([registro](https://github.com/FCTE-Qualidade-de-Software-1
 | 6 | Rolar até "Resultado da pesquisa": a tela repete antes CPF, placa, período, situação e pontuação. Tocar na infração |
 | 7 | Ver "Confira o detalhamento da infração", folha aberta sobre o resultado, com dados do veículo, informações gerais, dados da infração e penalidade; fecha pelo cabeçalho |
 
-*Tabela 2 — Passos da consulta no aplicativo Android 2.7.0. Fonte: registro da S05.*
+*Tabela 3 — Passos da consulta no aplicativo Android 2.7.0. Fonte: registro da S05.*
 
 Na versão 2.6.3 (Galaxy S24+, S03) a tela do histórico não tinha filtro de período e, nas três
 tentativas, mostrou "Ocorreu um erro ao buscar os veículos, por favor, tente novamente mais tarde."

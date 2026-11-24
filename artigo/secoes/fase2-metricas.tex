@@ -2,31 +2,8 @@
 \subsubsection{Passo 2.3: Especificação das Métricas de Medição}
 \label{subsec:metricas-gqm}
 
-Para responder às questões da Seção~\ref{subsec:questoes-hipoteses}, foram especificadas 14 métricas externas e objetivas, com M3.1.2 exclusiva do portal, sob a mesma massa de dados e contextos de acesso. A formulação algébrica completa, os protocolos de instrumentação e as tabelas detalhadas de faixas encontram-se em \texttt{docs/fase2-metricas.md}. A Tabela~\ref{tab:metricas-gqm} consolida o mapeamento das métricas.
+Para responder às questões da Seção~\ref{subsec:questoes-hipoteses}, foram especificadas 14 métricas externas e objetivas, com M3.1.2 exclusiva do portal, sob a mesma massa de dados e contextos de acesso. A formulação algébrica completa, os protocolos de instrumentação e as tabelas detalhadas de faixas encontram-se em \texttt{docs/fase2-metricas.md}. A Figura~\ref{fig:diagrama-gqm} mostra o desdobramento de cada questão nas métricas. As unidades são percentual (M1.1.x, M1.2.x, M3.1.x, M3.2.1 e M3.2.2), contagem (M1.3.x), segundos (M2.1.x e M3.2.3) e MB (M2.2.1).
 
-\begin{table}[htbp]
-\centering
-\caption{Mapeamento sintético entre objetivos, questões e métricas GQM}
-\label{tab:metricas-gqm}
-\footnotesize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{|c|c|c|P{7.4cm}|c|}
-\hline
-\textbf{Objetivo} & \textbf{Questão} & \textbf{ID} & \textbf{Nome da métrica de avaliação} & \textbf{Unidade} \\ \hline
-\multirow{5}{*}{G1} & \multirow{2}{*}{Q1.1} & M1.1.1 & Proporção de campos da lista de referência exibidos & \% \\ \cline{3-5}
-& & M1.1.2 & Proporção de campos detalhados acessíveis & \% \\ \cline{2-5}
-& \multirow{2}{*}{Q1.2} & M1.2.1 & Proporção de campos comuns consistentes & \% \\ \cline{3-5}
-& & M1.2.2 & Proporção de infrações sem divergência & \% \\ \cline{2-5}
-& \multirow{1}{*}{Q1.3} & M1.3.x & Núm. de passos (M1.3.1) e transições de tela (M1.3.2) & Int \\ \hline
-\multirow{2}{*}{G2} & Q2.1 & M2.1.x & Tempo até exibição da lista (M2.1.1) e detalhes (M2.1.2) & Seg \\ \cline{2-5}
-& Q2.2 & M2.2.1 & Volume total de dados transferidos na consulta & MB \\ \hline
-\multirow{3}{*}{G3} & Q3.1 & M3.1.x & Taxa de conclusão por plataforma (M3.1.1) e navegador (M3.1.2) & \% \\ \cline{2-5}
-& \multirow{2}{*}{Q3.2} & M3.2.x & Taxa de conclusão (M3.2.1) e de falhas/expiração (M3.2.2) por rede & \% \\ \cline{3-5}
-& & M3.2.3 & Tempo de conclusão da consulta por condição de rede & Seg \\ \hline
-\end{tabular}
-\par\smallskip
-\raggedright\scriptsize Fonte: elaborada pela equipe. Fórmulas e limites detalhados na GitPage (\texttt{docs/fase2-metricas.md}).
-\end{table}
 
 Na \textbf{adequação funcional}, M1.1.1 e M1.1.2 avaliam a presença dos 15 campos de referência do CTB (Seção~\ref{subsec:modelo-qualidade}) na lista e nos detalhes; M1.2.1 e M1.2.2 aferem a consistência exata dos valores entre canais; e M1.3.1 e M1.3.2 contam ações e transições de tela pós-login \cite{krug2014}. Na \textbf{eficiência de desempenho}, M2.1.1 e M2.1.2 medem os tempos de renderização por gravação de tela com o número de repetições por cenário definido no plano da Fase 3 (reportando média, mediana e percentil 90, baseados nos limiares cognitivos de Nielsen \cite{nielsen1994}), enquanto M2.2.1 mede o tráfego de rede (aba Network no navegador e contador de dados no Android). Na \textbf{cobertura de contexto}, M3.1.1 e M3.1.2 medem o percentual de conclusão nos ambientes da Seção~\ref{subsec:escopo}, e M3.2.1 a M3.2.3 avaliam conclusão, falhas e tempo sob degradação controlada no ponto de acesso.
 

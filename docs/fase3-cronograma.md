@@ -24,7 +24,8 @@ Os marcos de 15/11 (#46), 18/11 (#47), 20/11 (#48) e 22/11 (Entrega 2) seguem o 
 (CT05, CT02 e CT01 com o V2; [registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S05-registro-2026-11-22.md)), a S06 com P4 e P5
 ([registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S06-registro-2026-11-22.md)) e a S08 com P7
 ([registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S08-registro-2026-11-22.md)). O CT06 tem
-inventário registrado e três tentativas P6 em 22/11 (bloco B04, iPhone D04), pendentes de conferência.
+inventário registrado e três tentativas P6 em 22/11 (bloco B04, iPhone D04), conferidas por Philipe em 23/11.
+O que cada sessão produziu, métrica a métrica, está em [Medições por métrica](fase4-medicoes.md#sessoes).
 O P7 previsto para a S04 foi executado como S08; a S07 foi reservada e não executada (desvio D020).
 S00 e S04 não têm execução registrada com essa numeração. As datas da tabela acima permanecem como
 proposta histórica.
