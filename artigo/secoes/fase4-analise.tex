@@ -17,7 +17,7 @@ Métrica & Portal & Aplicativo \\
 M1.1.1, lista & 5/15; 33,33\%; Inaceitável & 5/15; 33,33\%; Inaceitável \\
 M1.1.2, detalhe & 17/17; 100\%; Excelente & 16/17; 94,12\%; Alvo (sem R14) \\
 M1.2.1, campos paritários (par) & \multicolumn{2}{c}{16/17; 94,12\%; Alvo} \\
-M1.2.2, infrações sem ausência/divergência (par) & \multicolumn{2}{c}{0/1; 0\%; Inaceitável} \\
+M1.2.2, infrações paritárias (par) & \multicolumn{2}{c}{0/1; 0\%; Inaceitável} \\
 M1.3.1, passos (n=3) & 4; Excelente & 6; Alvo \\
 M1.3.2, transições (n=3) & 3; Excelente & 5; Alvo \\
 \bottomrule
@@ -34,11 +34,11 @@ A Tabela~\ref{tab:fase4-v4} resume G2 no caso V4 (Wi-Fi). Todos os resultados fo
 \scriptsize
 \begin{tabular}{P{3.2cm}P{4.2cm}P{4.2cm}}
 \toprule
-Métrica & Portal & Aplicativo \\
+Métrica & Portal (média/mediana/P90) & Aplicativo (média/mediana/P90) \\
 \midrule
-M2.1.1, lista (n=10) & média 0,254; mediana 0,145; P90 0,683; Excelente & média 0,695; mediana 0,774; P90 0,858; Excelente \\
-M2.1.2, detalhe (n=10) & média 0,142; mediana 0,136; P90 0,153; Excelente & média 0,687; mediana 0,641; P90 0,816; Excelente \\
-M2.2.1, volume (n=10) & média 0,0107; mediana 0,0107; Excelente & média 0,0660; mediana 0,0649; Excelente \\
+M2.1.1, lista (n=10) & 0,254/0,145/0,683 s; Excelente & 0,695/0,774/0,858 s; Excelente \\
+M2.1.2, detalhe (n=10) & 0,142/0,136/0,153 s; Excelente & 0,687/0,641/0,816 s; Excelente \\
+M2.2.1, volume (n=10; média/mediana) & 0,0107/0,0107 MB; Excelente & 0,0660/0,0649 MB; Excelente \\
 \bottomrule
 \end{tabular}
 \par\smallskip{\footnotesize Fonte: registros S06 e segunda leitura independente de P4/P5.}
@@ -57,16 +57,16 @@ A Tabela~\ref{tab:fase4-observacoes} resume a cobertura. O portal atingiu o mín
 \toprule
 Contexto & Portal & Aplicativo \\
 \midrule
-CT03 móvel, V1 & 1/1; 100\%; Excelente & -- \\
-CT01+CT02 computador, V2 & 1/1; 100\%; Excelente & -- \\
-Navegadores (M3.1.2), V1 e V2 & 2/2 em cada grupo; 100\%; Excelente & Não aplicável \\
-CT05, Android 2.6.3 (V1) & -- & 0/1; 0\%; Inaceitável \\
-CT05, Android 2.7.0 (V2) & -- & 1/1; 100\%; Excelente \\
-CT06, iOS 2.7.1 (V5) & -- & 1/1; 100\%; Excelente \\
+CT03 móvel, V1 & 1/1; Excelente & -- \\
+CT01+CT02 computador, V2 & 1/1; Excelente & -- \\
+Navegadores (M3.1.2), V1 e V2 & 2/2 por grupo; Excelente & Não aplicável \\
+CT05, Android 2.6.3 (V1) & -- & 0/1; Inaceitável \\
+CT05, Android 2.7.0 (V2) & -- & 1/1; Excelente \\
+CT06, iOS 2.7.1 (V5) & -- & 1/1; Excelente \\
 CT04 & -- & Não avaliado \\
 \bottomrule
 \end{tabular}
-\par\smallskip{\footnotesize Fonte: S03, S05, CT06 e segunda leitura independente de P6.}
+\par\smallskip{\footnotesize Fonte: S03, S05, CT06 e segunda leitura independente de P6. Percentual: 100\% nos aprovados; 0\% no reprovado. M3.1.2: V1 (CT01+CT03) e V2 (CT01+CT02).}
 \end{table}
 
 \subsubsection{Resultados por Condição de Rede}
@@ -75,18 +75,18 @@ A Tabela~\ref{tab:fase4-p7} mostra P7: na rede degradada, o portal concluiu 8/10
 
 \begin{table}[!htbp]
 \centering
-\caption{Resultados de P7 por rede no caso V4.}
+\caption{Resultados de P7 por rede no caso V4 (E=Excelente; A=Alvo).}
 \label{tab:fase4-p7}
 \scriptsize
 \begin{tabular}{P{2.0cm}P{2.0cm}P{2.5cm}P{2.4cm}P{2.8cm}}
 \toprule
 Rede & Canal & Conclusão M3.2.1 & Falhas M3.2.2 & Mediana M3.2.3 \\
 \midrule
-Wi-Fi & Portal & 10/10; 100\%; Excelente & 0\%; Excelente & 0,083 s; Excelente \\
-Wi-Fi & Aplicativo & 10/10; 100\%; Excelente & 0\%; Excelente & 0,408 s; Excelente \\
-4G & Portal & 10/10; 100\%; Excelente & 0\%; Excelente & 0,142 s; Excelente \\
-4G & Aplicativo & 10/10; 100\%; Excelente & 0\%; Excelente & 0,726 s; Excelente \\
-Degradada & Portal & 8/10; 80\%; Alvo & 20\%; Alvo & 0,850 s; Excelente \\
+Wi-Fi & Portal & 10/10; 100\%; E & 0\%; E & 0,083 s; E \\
+Wi-Fi & Aplicativo & 10/10; 100\%; E & 0\%; E & 0,408 s; E \\
+4G & Portal & 10/10; 100\%; E & 0\%; E & 0,142 s; E \\
+4G & Aplicativo & 10/10; 100\%; E & 0\%; E & 0,726 s; E \\
+Degradada & Portal & 8/10; 80\%; A & 20\%; A & 0,850 s; E \\
 Degradada & Aplicativo & Não avaliada & Não avaliada & Não avaliada \\
 \bottomrule
 \end{tabular}
