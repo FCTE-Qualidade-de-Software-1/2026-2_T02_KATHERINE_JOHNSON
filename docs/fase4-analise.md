@@ -1,80 +1,91 @@
 # Fase 4 — Análise e julgamento GQM
 
-Atualização documental em **23/11/2026**, referente à #48. Responsáveis pela análise: Pedro Henrique
-e Philipe; revisor designado: Heitor. Os valores abaixo são **primeira leitura**, exceto P1 a P3 da S02,
-que tiveram [segunda leitura independente](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S02-segunda-leitura-2026-11-23.md)
-(86 de 87 linhas; uma rolagem do P3 segue pendente). Nas demais, o campo `revisor` está vazio e o
-validador recusa promover as linhas a dados oficiais. Por isso não há nível de pontuação.
+Atualização documental em **24/11/2026**, referente à #48. Responsáveis pela análise: Pedro Henrique
+e Philipe; revisor designado: Heitor. As segundas leituras independentes dos procedimentos elegíveis
+foram concluídas em 23/11. As divergências de tempo e a rolagem pendente da S02 foram resolvidas em
+conjunto e registradas; os dados conferidos foram calculados pelo procedimento versionado.
+Resultados não coletados continuam sem nível.
 
 ## Situação e dependência
 
-Os registros reúnem seis sessões, em 21 e 22/11/2026: o piloto S01, a S02 (P1 a P3), a S03 e a S05
-(P6), a S06 (P4 e P5) e a S08 (P7). S01 é piloto e não entra no cálculo oficial. Os casos usam
-veículos diferentes (V1, V2, V4 e V5), com aparelhos e versões distintos, e não são reunidos em uma
-única mediana. O consentimento foi aplicado, conforme confirmação de Hugo em 22/11/2026, com vias
-assinadas privadas; os códigos V1, V2, V4 e V5 foram conciliados com a tabela privada por Hugo (PR #84).
+Os registros reúnem seis sessões, em 21 e 22/11/2026: piloto S01; S02 (P1 a P3); S03 e S05 (P6);
+S06 (P4 e P5); e S08 (P7). S01 é piloto e não entra no cálculo. Os casos usam veículos V1, V2, V4
+e V5, com aparelhos e versões distintos, e não são reunidos em uma única mediana. O consentimento
+foi aplicado, conforme confirmação de Hugo em 22/11/2026, com vias assinadas privadas; os códigos
+dos veículos foram conciliados por Hugo (PR #84).
 
-### P1 a P3: S02 (caso V2, Wi-Fi, portal no Chrome e aplicativo 2.7.0 no Android) {#resultados-s02}
+## G1 — Adequação funcional: S02 (V2, Wi-Fi) {#resultados-s02}
+
+P1 e P2 foram conferidos por Heitor; P3 também foi conferido e a única divergência de rolagem foi
+resolvida com Pedro Druck. A tabela apresenta os valores e níveis oficiais para a amostra observada.
+
+| Métrica | Portal | Aplicativo | Resultado do par |
+|---|---|---|---|
+| M1.1.1, campos preenchidos na lista (n=15) | 5/15; 33,33%; **Inaceitável** | 5/15; 33,33%; **Inaceitável** | — |
+| M1.1.2, campos acessíveis no detalhe (n=17) | 17/17; 100%; **Excelente** | 16/17; 94,12%; **Alvo** (R14 ausente) | — |
+| M1.2.1, campos paritários (n=17) | — | — | 16/17; 94,12%; **Alvo** |
+| M1.2.2, infrações sem divergência (n=1) | — | — | 0/1; 0%; **Inaceitável** |
+| M1.3.1, passos até a lista (3 repetições) | 4; **Excelente** | 6; **Alvo** | — |
+| M1.3.2, transições (3 repetições) | 3; **Excelente** | 5; **Alvo** | — |
+
+*Tabela 1 — Resultados G1 na S02. Fonte: registros e segunda leitura independente da S02. A rolagem do aplicativo foi conferida e resolvida; ela não integra M1.3.1 nem M1.3.2.*
+
+Não houve divergência de valores: a ausência de R14 no aplicativo explica M1.2.1 abaixo de 100% e
+M1.2.2 em 0/1. A completude da lista é baixa nos dois canais apesar da completude superior no
+detalhe. As contagens de P3 são medidas objetivas do fluxo, não uma avaliação de usabilidade.
+
+## G2 — Eficiência de desempenho: S06 (V4, Wi-Fi) {#resultados-v4}
 
 | Métrica | Portal | Aplicativo |
 |---|---|---|
-| M1.1.1, campos na lista (de 15) | 5 | 5 |
-| M1.1.2, campos no detalhe (de 17) | 17 | 16 (sem R14) |
-| M1.2.1, campos paritários (par) | 16 de 17; R14 ausente no aplicativo | |
-| M1.2.2, infrações sem divergência (par) | 0 de 1, pela ausência de R14 | |
-| M1.3.1, passos até a lista | 4 | 6 |
-| M1.3.2, transições; rolagens | 3; 0 | 5; 2 |
+| M2.1.1, lista (n=10; média / mediana / P90) | 0,254 / 0,145 / 0,683 s; **Excelente** | 0,695 / 0,774 / 0,858 s; **Excelente** |
+| M2.1.2, detalhe (n=10; média / mediana / P90) | 0,142 / 0,136 / 0,153 s; **Excelente** | 0,687 / 0,641 / 0,816 s; **Excelente** |
+| M2.2.1, volume (n=10; média / mediana) | 0,0107 / 0,0107 MB; **Excelente** | 0,0660 / 0,0649 MB; **Excelente** |
 
-*Tabela — Observações provisórias de S02. Fonte: `evidencias/fase4/S02-registro-2026-11-22.md`; segunda leitura independente concluída (86 de 87 linhas; uma rolagem do aplicativo pendente).*
+*Tabela 2 — Resultados G2 na S06. Fonte: registros S06 e segunda leitura de P4/P5. Tempos em segundos; níveis aplicados antes do arredondamento.*
 
-Nenhum campo divergiu em valor. A regra de contagem das transições (D015) e a execução por script (D014)
-estão registradas como desvios.
+O portal teve medianas menores nos dois tempos desta amostra. Os volumes recebem nível
+individualmente, mas **não permitem ordenar os canais**: DevTools mede bytes codificados do
+navegador e o contador Android soma tráfego enviado e recebido pelo UID. A amostra de P4/P5 usa
+um veículo, um aparelho por canal e uma sessão; o B04 excluído e o erro de instrumento da primeira
+repetição B09 foram preservados conforme os desvios.
 
-### P6: contextos (S03 e S05) {#resultados-p6}
+## P6 — cobertura de plataforma {#resultados-p6}
 
-| Contexto | Concluídas | Resultado e limite |
+| Plataforma/contexto | Portal | Aplicativo |
 |---|---|---|
-| CT01: portal/Chrome | 3/3 (V1); 3/3 (V2) | Cinco erros de instrumento da S03 preservados à parte |
-| CT02: portal/Firefox | 3/3 (V2) | Falha de login na S03 (D005), fora das tentativas; resolvida na S05 |
-| CT03: portal/Chrome Android | 2/3 (V1) | Sessão expirada, preservada como falha |
-| CT05: aplicativo 2.6.3 | 0/3 (V1) | Erro ao buscar veículos; aparelho superior ao planejado (D006) |
-| CT05: aplicativo 2.7.0 | 3/3 (V2) | Outro aparelho, titular e veículo (D009) |
-| CT06: aplicativo iOS 2.7.1 | 3/3 (V5) | Execução sem registrador independente (D028); filtro de período (D030); M2.2.1 não medida no iOS (D008) |
-| CT04 | Sem execução | Sem aparelho; contexto não avaliado |
+| CT03, Chrome Android (V1) | 1/1 plataforma móvel; 100%; **Excelente** | — |
+| CT01 + CT02, Chrome+Firefox desktop (V2) | 1/1 plataforma computador; 100%; **Excelente** | — |
+| M3.1.2, navegadores portal (V1: CT01+CT03; V2: CT01+CT02) | 2/2 em cada grupo; 100%; **Excelente** | Não aplicável |
+| CT05, Android 2.6.3 (V1) | — | 0/1 plataforma; 0%; **Inaceitável** |
+| CT05, Android 2.7.0 (V2) | — | 1/1 plataforma; 100%; **Excelente** |
+| CT06, iOS 2.7.1 (V5) | — | 1/1 plataforma; 100%; **Excelente** |
+| CT04 | — | Sem execução; inconclusivo |
 
-*Tabela — Observações provisórias de P6. Fonte: registros S03, S05 e do CT06; conferência independente pendente.*
+*Tabela 3 — M3.1.1 e M3.1.2 por plataforma/contexto. Fonte: registros S03/S05/CT06 e segunda leitura independente de P6. M3.1.2 não se aplica ao aplicativo.*
 
-Versões, aparelhos, titulares e veículos diferentes impedem atribuir a diferença entre 2.6.3 e 2.7.0 a
-uma causa técnica. As durações dos scripts de P6 não substituem P4, e P6 não mede as taxas por rede de P7.
+O portal atingiu os critérios nos contextos medidos: CT03 concluiu 2/3 tentativas, o mínimo
+operacional para aprovação de contexto. No aplicativo, a falha 0/3 em CT05 com 2.6.3 é um resultado
+Inaceitável; CT05 com 2.7.0 e CT06 tiveram sucesso. Aparelhos, versões, veículos e titulares
+diferem, portanto não se atribui a diferença a uma causa técnica. CT04 não foi executado.
 
-As sete questões e hipóteses e os três objetivos permanecem **inconclusivos no julgamento oficial**
-até a segunda leitura. O relato de falha não deve ser apagado nem convertido em aprovação, e a
-ausência de dado ou de conferência não equivale a paridade nem a aprovação.
+## P7 — cobertura por rede no caso V4 {#resultados-p7}
 
-## Continuação com o caso V4 (S06 e S08) {#resultados-v4}
+| Rede (n=10) | Canal | M3.2.1 conclusão | M3.2.2 falha | M3.2.3 tempo mediano (média; P90) |
+|---|---|---|---|---|
+| Wi-Fi | Portal | 10/10; 100%; **Excelente** | 0%; **Excelente** | 0,083 s (0,073; 0,083); **Excelente** |
+| Wi-Fi | Aplicativo | 10/10; 100%; **Excelente** | 0%; **Excelente** | 0,408 s (0,470; 0,667); **Excelente** |
+| 4G | Portal | 10/10; 100%; **Excelente** | 0%; **Excelente** | 0,142 s (0,152; 0,183); **Excelente** |
+| 4G | Aplicativo | 10/10; 100%; **Excelente** | 0%; **Excelente** | 0,726 s (0,661; 0,942); **Excelente** |
+| Degradada | Portal | 8/10; 80%; **Alvo** | 2/10; 20%; **Alvo** | 0,850 s (0,942; 1,567); **Excelente** |
+| Degradada | Aplicativo | Não avaliada; inconclusivo | Não avaliada; inconclusivo | Não avaliada; inconclusivo |
 
-Em 22/11/2026, a coleta prosseguiu com outro titular coberto pelo consentimento
-(caso V4), no computador D06 (Chrome 157) e no Samsung SM-S731B (D05, aplicativo 2.7.0). Os registros
-estão em `evidencias/fase4/S06-registro-2026-11-22.md` e `evidencias/fase4/S08-registro-2026-11-22.md`.
-Os tempos abaixo são **propostas automáticas de primeira leitura**, pelos timestamps dos quadros,
-sem aquecimentos; sem a segunda leitura independente, nenhum nível é atribuído.
+*Tabela 4 — Resultados de P7 por rede. Fonte: S08, segunda leitura independente e `resultados-metricas.csv`. O tempo inclui apenas consultas concluídas; as falhas permanecem no denominador das taxas.*
 
-| Métrica e rede | Portal (concluídas; mediana; P90) | Aplicativo (concluídas; mediana; P90) |
-|---|---|---|
-| M2.1.1, Wi-Fi | 10/10; 0,145 s; 0,683 s (B03) | 10/10; 0,774 s; 0,858 s (B09) |
-| M2.1.2, Wi-Fi | 10/10; 0,136 s; 0,153 s (B05) | 10/10; 0,641 s; 0,816 s (B06) |
-| M2.2.1, Wi-Fi | mediana 0,0107 MB, escopo do navegador (B07) | mediana 0,0649 MB, contador do UID (B08) |
-| M3.2.3, Wi-Fi | 10/10; 0,083 s; 0,083 s (B10) | 10/10; 0,408 s; 0,667 s (B11) |
-| M3.2.3, 4G | 10/10; 0,142 s; 0,183 s (B14) | 10/10; 0,726 s; 0,942 s (B15) |
-| M3.2.3, degradada | 8/10; 0,850 s; 1,500 s (B12) | Não avaliada (D021) |
-
-*Tabela — Observações provisórias de S06/S08. Fonte: `dados/brutos/`; conferência independente pendente.*
-
-- Os escopos de volume diferem (bytes codificados no navegador; recebidos + enviados pelo UID): não declarar superioridade.
-- No aplicativo, a lista fica abaixo da área visível. O B04 foi excluído por esperas do instrumento; o B09 usou rolagens rápidas feitas pelo aparelho desde o toque, cujo curso integra o tempo (D026).
-- Na rede degradada do portal, uma falha na preparação e um tempo limite ficam no denominador (D023).
-- A condição degradada não pôde ser imposta ao aplicativo: o adaptador Wi-Fi não sustentou ponto de acesso concorrente, e o aplicativo ignorou proxy e recusou VPN reversa. Tudo foi desfeito sem medições (D021). Com o computador ligado por cabo ao roteador, o Wi-Fi ficaria livre para o ponto de acesso.
-- Demais limitações: execução automatizada, Wi-Fi doméstico sem controle de carga externa e tráfego do agente de automação no enlace degradado (D016–D027).
+No aplicativo, a condição degradada não pôde ser imposta (D021); não há nível nem comparação
+nessa condição. No portal, uma falha de preparação e um tempo limite permaneceram no denominador
+(D023). A execução automatizada, a carga externa não controlada do Wi-Fi e o tráfego do agente no
+enlace degradado limitam os resultados (D016–D027).
 
 O bloqueio no aplicativo motivou a [ação de melhoria entregue](fase4-melhoria.md): proposta de
 processo e templates de diagnóstico/regressão. A entrega não depende de inventar resultados;
@@ -86,54 +97,61 @@ sua eficácia e a revisão humana permanecem pendentes.
 2. Conferir chaves, duplicações, campos obrigatórios, revisão independente, vínculo às evidências e elegibilidade conforme `dados/README.md`. Registrar exclusões com motivo e contagem. Preservar falhas do serviço nas taxas e separar aquecimento e piloto.
 3. Calcular cada métrica conforme a [Fase 2](fase2-metricas.md) e as regras da [Fase 3](fase3-metodo.md). Reportar veículo, contexto, rede, tamanho da amostra e denominador efetivo. Separar aparelhos, redes e veículos nos resumos temporais e de volume.
 4. Aplicar os limites contínuos da Fase 2 antes de arredondar. Usar mediana para julgamento de tempo e volume, acompanhada de média e P90 para tempos. H2.2 compara médias de volume, ainda que o nível de M2.2.1 seja atribuído pela mediana.
-5. Preencher as respostas da Tabela 1 com valores, nível, evidências e limitações. Avaliar a hipótese separadamente do atendimento da questão. Uma hipótese pode ser contrariada mesmo quando os dois canais atingem o mínimo aceitável.
+5. Preencher as respostas de cada Q e G em `dados/consolidados/respostas-gqm.csv`, com valores, nível, evidências e limitações. Avaliar a hipótese separadamente do atendimento da questão. Uma hipótese pode ser contrariada mesmo quando os dois canais atingem o mínimo aceitável.
 6. Julgar G1, G2 e G3 por canal e contexto. Comparar níveis por métrica, com empate de nível como paridade. M1.2.1/M1.2.2 são resultados do par de canais. M3.1.2 é exclusiva do portal. Ausência de métrica aplicável deixa a questão inconclusiva conforme a Fase 2, preservando eventuais falhas já observadas na resposta textual.
 
-<span id="respostas-questoes"></span>A Tabela 1 define a interpretação a ser preenchida após a coleta. “Compatível com a amostra” não implica confirmação estatística ou generalização.
+<span id="respostas-questoes"></span>As respostas explícitas às sete questões e às hipóteses estão resumidas na Tabela 5; a decomposição por canal/contexto, as evidências e as limitações estão em [`respostas-gqm.csv`](../dados/consolidados/respostas-gqm.csv). “Compatível com a amostra” não implica confirmação estatística nem generalização.
 
-| Questão / hipótese | Métricas | Regra para interpretar a hipótese | Estado atual |
-|---|---|---|---|
-| Q1.1 / H1.1 | M1.1.1, M1.1.2 | Comparar completude por tela e infração nos dois canais. Distinguir rótulo existente de valor preenchido ao discutir a hipótese sobre rótulos | Inconclusivo |
-| Q1.2 / H1.2 | M1.2.1, M1.2.2 | Uma divergência ou ausência em campo aplicável contraria a paridade integral. Considerar apenas pares com intervalo válido | Inconclusivo |
-| Q1.3 / H1.3 | M1.3.1, M1.3.2 | Igualdade das contagens recorrentes de passos e transições sustenta paridade na amostra. Contagens diferentes a contrariam. Examinar o percurso para discutir redundância | Inconclusivo |
-| Q2.1 / H2.1 | M2.1.1, M2.1.2 | H2.1 compara a mediana da lista, no mesmo veículo/rede. Detalhes complementam Q2.1 e têm julgamento próprio | Inconclusivo; amostras V4 provisórias, segunda leitura pendente |
-| Q2.2 / H2.2 | M2.2.1 | Comparar médias apenas com escopo dos instrumentos equivalente e contexto pareado. Sem equivalência, hipótese inconclusiva | Inconclusivo; amostras V4 provisórias, segunda leitura pendente |
-| Q3.1 / H3.1 | M3.1.1, M3.1.2 | Verificar todos os contextos previstos. Taxa de 100% no subconjunto testado não confirma cobertura dos contextos ausentes | Inconclusivo |
-| Q3.2 / H3.2 | M3.2.1, M3.2.2, M3.2.3 | Verificar se a taxa degradada é menor que Wi-Fi e que 4G em pelo menos um canal. Discutir falhas e tempo junto das taxas | Inconclusivo; portal nas três redes e aplicativo em Wi-Fi/4G, provisórios; aplicativo degradado não avaliado |
+| Questão / hipótese | Resposta e estado por canal | Avaliação da hipótese |
+|---|---|---|
+| Q1.1 / H1.1 | **Portal e aplicativo: não atendida.** Ambos exibiram 5/15 campos preenchidos na lista (33,33%, Inaceitável). No detalhe, o portal exibiu 17/17 (Excelente) e o aplicativo 16/17 (Alvo), sem R14. | Compatível quanto à contagem observada igual; não comprova equivalência semântica de rótulos, que M1.1.1 não mede diretamente. |
+| Q1.2 / H1.2 | **Par: não atendida.** 16/17 campos paritários (Alvo), mas 0/1 infração sem divergência ou ausência (Inaceitável): R14 não estava no aplicativo. | Contrariada para paridade integral; não houve divergência de valores, mas houve ausência aplicável. |
+| Q1.3 / H1.3 | **Portal e aplicativo: atendida.** Os níveis foram Excelente/Alvo: 4 contra 6 passos e 3 contra 5 transições. O portal exige menos ações nesta amostra. | Contrariada: as contagens não foram iguais. Não é uma conclusão sobre usabilidade. |
+| Q2.1 / H2.1 | **Portal e aplicativo: atendida.** As duas métricas atingiram Excelente. No V4/Wi-Fi, medianas do portal foram 0,145 s (lista) e 0,136 s (detalhe), contra 0,774 s e 0,641 s no aplicativo. | Contrariada nesta amostra: o aplicativo não teve menor mediana. |
+| Q2.2 / H2.2 | **Ambos: inconclusiva.** Os níveis individuais de M2.2.1 foram Excelente (medianas 0,0107 MB no portal e 0,0649 MB no aplicativo), mas os instrumentos têm escopos diferentes. | Inconclusiva: os volumes não sustentam comparação nem confirmação de menor média no aplicativo. |
+| Q3.1 / H3.1 | **Portal: atendida** nos contextos medidos (M3.1.1 e M3.1.2, 100%, Excelente). **Aplicativo: não atendida** no escopo observado: CT05/2.6.3 teve 0/3 (Inaceitável), apesar de CT05/2.7.0 e CT06 atingirem 3/3; CT04 não foi executado. | Contrariada pela falha observada no aplicativo; não identifica causa entre versões, aparelhos e veículos diferentes. |
+| Q3.2 / H3.2 | **Portal: atendida** nas três redes; na degradada, 8/10 conclusões (Alvo), 20% de falhas (Alvo) e mediana de 0,850 s (Excelente). **Aplicativo: inconclusiva** porque a rede degradada não pôde ser aplicada. | Compatível com a amostra para o portal (80% < 100% em Wi-Fi e 4G); inconclusiva para o aplicativo. |
 
-*Tabela 1 — Roteiro de resposta às questões e hipóteses. Fonte: especificação GQM da equipe.*
+*Tabela 5 — Respostas às questões e hipóteses GQM. Fonte: Fase 2, dados consolidados e segundas leituras independentes de S02, S03, S05, S06 e S08.*
 
 ## Julgamento por característica e propósito {#julgamento}
 
-A Tabela 2 vincula os objetivos às decisões da [Fase 1](fase1-proposito.md). Cada questão requer todas as métricas aplicáveis no mínimo aceitável e cada objetivo requer todas as questões atendidas. Registrar resultados por canal, inclusive quando a evidência é compartilhada pelo par.
+O julgamento segue a regra da [Fase 2](fase2-metricas.md#niveis): cada questão requer que todas as métricas aplicáveis alcancem ao menos o nível Mínimo aceitável. O objetivo é atendido somente quando todas as questões forem atendidas. A Tabela 6 vincula cada resultado às decisões e partes interessadas da [Fase 1](fase1-proposito.md).
 
 | Objetivo | Questões | Decisão e parte interessada | Portal | Aplicativo |
 |---|---|---|---|---|
-| G1 — Adequação funcional | Q1.1–Q1.3 | D1, investimento em melhoria pelo requisitante; D2, correção de divergências pela equipe de TI para o cidadão | Inconclusivo | Inconclusivo |
-| G2 — Eficiência de desempenho | Q2.1–Q2.2 | D1 e D3, investimento e recomendação de canal pelo requisitante e atendimento | Inconclusivo | Inconclusivo |
-| G3 — Cobertura de contexto | Q3.1–Q3.2 | D1, D3 e D4, investimento, recomendação por contexto e definição de suporte pela equipe de TI | Inconclusivo | Inconclusivo |
+| G1 — Adequação funcional | Q1.1–Q1.3 | D1, investimento pelo requisitante; D2, correção de inconsistências para o cidadão pela equipe técnica | **Não atendido**: Q1.1 e Q1.2 abaixo do mínimo | **Não atendido**: Q1.1 e Q1.2 abaixo do mínimo |
+| G2 — Eficiência de desempenho | Q2.1–Q2.2 | D1, investimento pelo requisitante; D3, recomendação pela área de atendimento | **Inconclusivo**: Q2.2 não comparável | **Inconclusivo**: Q2.2 não comparável |
+| G3 — Cobertura de contexto | Q3.1–Q3.2 | D1, D3 e D4: investimento, recomendação por contexto e definição de suporte pela equipe técnica | **Atendido nos contextos medidos** | **Não atendido no escopo observado**: falha em CT05/2.6.3; CT04 e rede degradada ausentes |
 
-*Tabela 2 — Julgamento atual e ligação com o propósito. Fonte: questões GQM e decisões D1–D4 da equipe.*
+*Tabela 6 — Julgamento por característica e canal, ligado ao propósito e às partes interessadas. Fonte: Fase 1, regras da Fase 2 e respostas GQM.*
 
 ## Relações entre características e limites {#relacoes}
 
-Investigar se o aumento de tempo sob rede degradada acompanha a redução da conclusão, usando M3.2.3, M3.2.1 e M3.2.2 das mesmas tentativas. O tempo só das consultas concluídas pode parecer baixo quando as lentas falham, por isso apresentar n e falhas juntos.
+**Adequação funcional e eficiência.** A lista exibiu 5/15 campos em ambos os canais, nível Inaceitável, enquanto os tempos da lista foram Excelentes e menores no portal. Portanto, rapidez não substitui completude. No detalhe, o aplicativo omitiu R14 e a infração pareada não atingiu paridade integral. O volume numericamente menor no portal não pode ser relacionado à completude nem usado para ranking, pois os instrumentos têm escopos distintos.
 
-Cruzar completude (M1.1.x) com volume/tempo (G2) no mesmo veículo, contexto e versão. Maior volume pode acompanhar mais informação, mas a observação externa não demonstra causalidade. Um canal rápido com campos ausentes requer discussão conjunta de G1 e G2.
+**Adequação funcional e cobertura de contexto.** A falha 0/3 do aplicativo 2.6.3 em CT05 bloqueou a chegada à lista; não se atribui completude zero a uma tela não alcançada. Em outro bloco, CT05 com aplicativo 2.7.0 concluiu 3/3, mas a mudança concomitante de veículo, titular, aparelho e versão impede atribuir a diferença a uma causa. A relação permanece observada, não causal.
 
-Examinar se contextos com falha impedem observar a completude. Não atribuir completude zero a um contexto sem tela de resultado. A amostra intencional, o cache, a ordem dos canais, atualizações entre consultas e a equivalência dos instrumentos limitam as conclusões. Sem pares suficientes, registrar a relação como inconclusiva e indicar os dados faltantes.
+**Eficiência e cobertura de contexto.** No portal/V4, a rede degradada reduziu a conclusão para 8/10, com duas falhas no denominador; a mediana de 0,850 s considera somente as oito consultas concluídas. Por isso, o tempo baixo não apaga as falhas nem prova melhor resiliência. Para o aplicativo, não há par degradado. A amostra intencional, o cache, a ordem dos canais, a carga externa do Wi-Fi e os instrumentos limitam as conclusões.
 
 ## Apresentação e oportunidades de melhoria {#oportunidades}
 
-Após a #47, apresentar tabela de valores e níveis por métrica com n, contexto e evidência. Para tempos, um gráfico por métrica/rede com os pontos observados e mediana permite visualizar dispersão. Para conclusão, apresentar sucessos/total e falhas por canal/rede. Toda tabela e figura deve ter legenda, fonte com commit dos dados e chamada no texto. Os gráficos aguardam medições.
+As Tabelas 1–6 foram chamadas e interpretadas no texto; cada uma indica legenda e fonte. A consolidação integral com valores, níveis, denominadores, evidências e proveniência está em [`resultados-metricas.csv`](../dados/consolidados/resultados-metricas.csv). Não se agregam veículos, versões ou redes diferentes. O arquivo [`oportunidades.csv`](../dados/consolidados/oportunidades.csv) registra a priorização proposta para revisão de Heitor:
 
-Preencher `dados/consolidados/oportunidades.csv` apenas com problemas observados. Como proposta de priorização para revisão de Heitor, ordenar por impacto documentado sobre a consulta, recorrência na amostra e abrangência de contextos. Em empate, usar a prioridade da Fase 1 (adequação funcional, cobertura de contexto, eficiência de desempenho) e registrar o esforço estimado para escolher a ação da #36. Indicar métrica afetada, evidência, decisão D1–D4, benefício esperado e como reavaliar. A priorização definitiva depende da análise dos resultados.
+| Prioridade | Problema observado | Evidência e impacto | Decisão apoiada |
+|---:|---|---|---|
+| 1 | Consulta bloqueada no aplicativo 2.6.3 (CT05) | 0/3 concluídas; a versão 2.7.0 em outro bloco teve 3/3, sem permitir atribuir causa | D4 e D1: investigar suporte por versão e regressão |
+| 2 | R14 ausente no detalhe do aplicativo | 16/17 campos e 0/1 infração integralmente paritária; campo de prazo de defesa/condutor | D2 e D1: conferir e corrigir ou justificar a informação |
+| 3 | Apenas 5/15 campos preenchidos na lista de ambos os canais | 33,33%, Inaceitável, na amostra V2 | D1: investigar apresentação dos campos essenciais |
+| 4 | Queda de conclusão do portal na rede degradada | 8/10 sucessos e 2/10 falhas; apenas uma sessão e um veículo | D3 e D4: repetir em rede controlada antes de orientar suporte |
 
-## Pendências para concluir a #48
+*Tabela 7 — Oportunidades priorizadas por impacto, recorrência e abrangência observados. Fonte: `oportunidades.csv`, S02, S03 e S08. As posições são uma proposta, não estimativa de esforço.*
 
-- Receber da #47 dados brutos, desvios, evidências e cálculo reproduzível.
-- Preencher resultados das quatorze métricas e respectivos níveis.
-- Responder às sete questões e hipóteses e julgar os três objetivos por canal.
-- Gerar tabelas finais e gráficos, interpretar relações entre características e priorizar melhorias com evidências.
-- Atualizar a síntese do artigo e conferir compilação e limite de páginas.
-- Submeter PR à revisão de Heitor e registrar esforço real.
+## Fechamento e limitações da #48
+
+Os resultados, níveis, respostas, julgamentos e oportunidades foram registrados com base nas
+leituras conferidas. Permanecem sem medição o CT04, a condição degradada no aplicativo e a
+M2.2.1 no iOS; não recebem zero nem nível. Os resultados valem somente para os veículos,
+dispositivos, versões, redes e datas observados, não certificam o serviço nem representam
+todos os cidadãos do Detran-DF. O PR desta entrega aguarda a revisão designada de Heitor;
+aprovação e fechamento da issue não são presumidos.

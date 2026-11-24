@@ -284,7 +284,7 @@ flowchart LR
     click AP6 href "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/tentativas.csv"
     click AP7 href "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/brutos/tentativas.csv"
     click R1 href "fase4-analise/#resultados-p6"
-    click R2 href "fase4-analise/#resultados-v4"
+    click R2 href "fase4-analise/#resultados-p7"
 ```
 
 *Figura 3 — Cadeia do objetivo G3, da Fase 1 à Fase 4. Alternativa em texto: [linhas de G3 na rastreabilidade](rastreabilidade.md#rt-g3). Fonte: elaborada pela equipe a partir das Fases 1 a 4.*
@@ -304,8 +304,8 @@ A [Metodologia](metodologia.md) descreve o método em visão geral e o passo a p
 3. **[Fase 3](fase3.md)** — plano de avaliação: método, ambiente, massa de dados e cronograma
    (plano executado em seis sessões de coleta, em 21 e 22/11/2026).
 4. **[Fase 4](fase4.md)** — executar a avaliação e julgar os resultados, com a
-   [ação de melhoria](fase4-melhoria.md) (Entrega 2; valores de primeira leitura, com segunda
-   leitura independente concluída só para P1 a P3 da S02 e, por isso, sem níveis de pontuação).
+   [ação de melhoria](fase4-melhoria.md) (Entrega 2; resultados elegíveis conferidos, calculados
+   e julgados por questão, objetivo e canal; lacunas de contexto permanecem explícitas).
 
 A execução do projeto é acompanhada com métricas PSM/CID, descritas em
 [Gestão](gestao.md), e as decisões da equipe ficam registradas nas [Atas](atas.md).
@@ -313,7 +313,7 @@ A execução do projeto é acompanhada com métricas PSM/CID, descritas em
 ## Situação atual
 
 A **Entrega 1** (Fases 1 e 2) foi concluída em 26/10/2026; a versão entregue, com o PDF do artigo,
-está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases). As Fases 3 e 4 fazem parte da Entrega 2: o plano da Fase 3 foi executado em seis sessões de coleta (S01, S02, S03, S05, S06 e S08, em 21 e 22/11/2026) e a Fase 4 traz os valores observados, a análise e a ação de melhoria entregue. Os valores são de primeira leitura, a conferência independente está concluída apenas para P1 a P3 da S02 (uma rolagem do P3 segue pendente) e os objetivos de medição permanecem inconclusivos; as lacunas (aplicativo na rede degradada e contexto CT04) estão declaradas. O andamento das tarefas pode ser acompanhado no
+está em [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases). As Fases 3 e 4 fazem parte da Entrega 2: o plano da Fase 3 foi executado em seis sessões de coleta (S01, S02, S03, S05, S06 e S08, em 21 e 22/11/2026). As segundas leituras elegíveis foram concluídas, os níveis calculados e as respostas GQM registradas. A adequação funcional não foi atendida; a eficiência de desempenho permanece inconclusiva pela não equivalência dos instrumentos de volume; a cobertura foi atendida no portal nos contextos medidos e não atendida no escopo observado para o aplicativo. Permanecem as lacunas do aplicativo na rede degradada e do contexto CT04. O andamento das tarefas pode ser acompanhado no
 [quadro do backlog](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/38) (acesso restrito aos membros da organização; as
 [issues](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues) e os [milestones](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/milestones) são públicos).
 
