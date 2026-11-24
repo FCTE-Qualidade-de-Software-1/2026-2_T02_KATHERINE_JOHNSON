@@ -9,7 +9,18 @@ divergências de tempo e a rolagem da S02 foram resolvidas em conjunto. O cálcu
 registra 42 resultados calculados, quatro estados inconclusivos e uma métrica não aplicável.
 Permanecem sem medição o aplicativo na rede degradada (D021) e o CT04, sem aparelho. Os valores
 e julgamentos estão na [análise](fase4-analise.md); a ligação de cada métrica com sua coleta está
-na [rastreabilidade](rastreabilidade.md#metricas).
+na [rastreabilidade](rastreabilidade.md#metricas), e cada leitura, com o link para a linha do CSV,
+em [Medições por métrica](fase4-medicoes.md).
+
+| Conferência independente | Linhas | Concordância | Divergências | Registro |
+|---|---:|---:|---:|---|
+| S02: P1, P2 e P3 | 87 | 86 | 1 rolagem do P3, resolvida por Heitor e Pedro Druck | [segunda leitura da S02](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S02-segunda-leitura-2026-11-23.md) |
+| S03, S05 e CT06: P6 | 26 | 26 | 0 | [segunda leitura de P4 a P7](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/segunda-leitura-p4-p7-2026-11-23.md#4-p6--execução-por-contexto) |
+| S06: P4 (tempos, B04 excluído e B09) | 57 | 54 | 3 tempos acima da tolerância, resolvidos com Hugo | [segunda leitura de P4 a P7](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/segunda-leitura-p4-p7-2026-11-23.md#5-p4--tempos-da-s06) |
+| S06: P5 (volume) | 22 | 22 | 0 | [segunda leitura de P4 a P7](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/segunda-leitura-p4-p7-2026-11-23.md#8-p5--volume-da-s06) |
+| S08: P7 (tentativas e tempos) | 107 | 105 | 2 tempos acima da tolerância, resolvidos com Hugo | [segunda leitura de P4 a P7](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/segunda-leitura-p4-p7-2026-11-23.md#6-p7--tentativas-e-tempos-m323-da-s08) |
+
+*Tabela 1 — Resumo da segunda leitura independente de 23/11/2026. Fonte: registros de segunda leitura; a tolerância de tempo é 0,050 s.*
 
 As seções seguintes preservam o histórico datado do acompanhamento (20 a 22/11) e não devem ser
 lidas como situação atual.
@@ -200,10 +211,12 @@ gera resultados com sessão, bloco, evidências e manifesto SHA-256. As instruç
 regras de exclusão e limites da validação estão no
 [dicionário](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/README.md).
 
-No estado atual, os CSV têm registros das seis sessões, mas `--validar` recusa promover as linhas
-sem o campo `revisor` preenchido. Por isso os arquivos de `dados/consolidados/` ainda refletem o
-estado anterior à coleta (estados inconclusivos e um não aplicável, navegadores no aplicativo);
-esses registros não são medições. Os valores de primeira leitura estão na [análise](fase4-analise.md).
+Desde a segunda leitura de 23/11, todas as linhas elegíveis têm `revisor` preenchido, e
+`--validar` aceita os dados: o cálculo gera 42 resultados com nível, quatro inconclusivos (bloco
+B04 excluído e as três métricas de P7 do aplicativo na rede degradada) e um não aplicável (M3.1.2
+no aplicativo). A consolidação em `dados/consolidados/` foi gerada no PR #90, aprovado por Daniel,
+e o cálculo reproduz os mesmos valores. A página [Medições por métrica](fase4-medicoes.md) mostra
+cada resultado com as leituras que o originaram.
 Os testes automatizados usam dados sintéticos temporários, separados dos instrumentos reais.
 O validador não substitui a revisão humana de consentimento, tarjas, piloto ou independência
 do conferente.
@@ -214,8 +227,8 @@ do conferente.
 - [x] Preencher inventário, cadastro anonimizado e registro de liberação do piloto.
 - [x] Executar os blocos, guardar originais em local privado e publicar apenas evidências revisadas.
 - [x] Preencher os oito CSV; registrar falhas, exclusões e reposições com seus desvios.
-- [ ] Executar validação/cálculo e revisar cobertura, amostras reduzidas e limitações.
-- [ ] Versionar dados, evidências, resultados e manifesto no mesmo PR; Daniel revisa a entrega.
+- [x] Executar validação/cálculo e revisar cobertura, amostras reduzidas e limitações (PR #90).
+- [x] Versionar dados, evidências, resultados e manifesto no mesmo PR; Daniel revisa a entrega (PR #90, aprovado por Daniel).
 - [x] Registrar horas efetivamente trabalhadas por integrante nas #46/#47 (ver [registro de horas](gestao-horas.md)).
 - [ ] Conferir datas no Project 38 e registrar a sincronização; indisponibilidade de acesso não equivale a conclusão.
 
@@ -226,4 +239,4 @@ Depois de obter acesso, localizar as issues #47/#48, conferir os campos de iníc
 aplicar as datas **confirmadas pela equipe**, preservando o histórico do atraso.
 
 Os resultados alimentam a [análise GQM](fase4-analise.md). O consentimento está concluído,
-conforme confirmação de Hugo em 22/11; a coleta foi executada e a segunda leitura continua pendente; o PR de implementação do cálculo não deve encerrar automaticamente a #47.
+conforme confirmação de Hugo em 22/11; a coleta foi executada, a segunda leitura foi concluída em 23/11 e a #47 foi fechada em 24/11.

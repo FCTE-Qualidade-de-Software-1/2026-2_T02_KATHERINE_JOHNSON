@@ -25,14 +25,14 @@ hipotético**, adotado para orientar as decisões da avaliação: a equipe não 
 
 ### Decisões que a avaliação apoia {#decisoes}
 
-| ID | Decisão | Quem decide | Evidência usada |
-|---|---|---|---|
-| D1 | Em qual canal e em qual característica investir primeiro em melhoria | Requisitante | Julgamento dos objetivos G1, G2 e G3 por canal |
-| D2 | Quais divergências de dados entre os canais corrigir, e com que urgência | Equipe técnica de TI, acionada pelo requisitante | Questão Q1.2 (consistência entre canais) |
-| D3 | Qual canal recomendar ao cidadão em cada contexto de uso (computador ou celular, Wi-Fi ou rede móvel) | Requisitante, com a área de atendimento ao cidadão | Objetivos G2 e G3 por contexto |
-| D4 | Quais contextos (versões de sistema, navegadores e condições de rede) devem ter suporte garantido | Equipe técnica de TI | Objetivo G3 |
+| ID | Decisão | Quem decide | Evidência usada | Resposta na Fase 4 |
+|---|---|---|---|---|
+| D1 | Em qual canal e em qual característica investir primeiro em melhoria | Requisitante | Julgamento dos objetivos G1, G2 e G3 por canal | [Julgamento por canal](fase4-analise.md#julgamento) e [oportunidades priorizadas](fase4-analise.md#oportunidades) |
+| D2 | Quais divergências de dados entre os canais corrigir, e com que urgência | Equipe técnica de TI, acionada pelo requisitante | Questão Q1.2 (consistência entre canais) | [Resposta à Q1.2](fase4-analise.md#resp-q1-2): R14 ausente no aplicativo ([M1.2.1](fase4-medicoes.md#m1-2-1), [M1.2.2](fase4-medicoes.md#m1-2-2)) |
+| D3 | Qual canal recomendar ao cidadão em cada contexto de uso (computador ou celular, Wi-Fi ou rede móvel) | Requisitante, com a área de atendimento ao cidadão | Objetivos G2 e G3 por contexto | [Julgamento de G2](fase4-analise.md#julg-g2) e [de G3](fase4-analise.md#julg-g3); [medições por rede](fase4-medicoes.md#m3-2-1) |
+| D4 | Quais contextos (versões de sistema, navegadores e condições de rede) devem ter suporte garantido | Equipe técnica de TI | Objetivo G3 | [Julgamento de G3](fase4-analise.md#julg-g3); [conclusão por plataforma](fase4-medicoes.md#m3-1-1) |
 
-*Tabela 1 — Decisões apoiadas pela avaliação e seus responsáveis. Fonte: elaborada pela equipe.*
+*Tabela 1 — Decisões apoiadas pela avaliação e seus responsáveis. Fonte: elaborada pela equipe; a última coluna aponta onde a Fase 4 entrega a evidência.*
 
 ### Uso pretendido
 

@@ -90,14 +90,14 @@ Esforço 3: seria moderado se houvesse o que coletar.
 
 Classificação: *Must* com 40 pontos ou mais, *Could* de 25 a 39, *Won't* abaixo de 25 ("não nesta avaliação"). O corte coincide com a maior descontinuidade da lista (41 → 31 pontos) e respeita a premissa de três a quatro características.
 
-| Característica | Total | MoSCoW |
-|---|---:|---|
-| Adequação funcional | 52 | Must |
-| Cobertura de contexto | 45 | Must |
-| Eficiência de desempenho | 41 | Must |
-| Segurança | 31 | Could |
-| Confiabilidade | 29 | Could |
-| Compatibilidade | 21 | Won't |
+| Característica | Total | MoSCoW | Objetivo (Fase 2) e resultado (Fase 4) |
+|---|---:|---|---|
+| Adequação funcional | 52 | Must | [G1](fase2-gqm.md#g1) → [julgamento](fase4-analise.md#julg-g1) e [medições](fase4-medicoes.md#g1) |
+| Cobertura de contexto | 45 | Must | [G3](fase2-gqm.md#g3) → [julgamento](fase4-analise.md#julg-g3) e [medições](fase4-medicoes.md#g3) |
+| Eficiência de desempenho | 41 | Must | [G2](fase2-gqm.md#g2) → [julgamento](fase4-analise.md#julg-g2) e [medições](fase4-medicoes.md#g2) |
+| Segurança | 31 | Could | Fora desta avaliação |
+| Confiabilidade | 29 | Could | Fora desta avaliação |
+| Compatibilidade | 21 | Won't | Fora desta avaliação |
 
 **Relação com a numeração dos objetivos.** G1 (adequação funcional), G2 (eficiência de desempenho) e G3 (cobertura de contexto) seguem a ordem de apresentação do modelo de qualidade, não a prioridade. Pela matriz, a prioridade é adequação funcional, cobertura de contexto e eficiência de desempenho.
 

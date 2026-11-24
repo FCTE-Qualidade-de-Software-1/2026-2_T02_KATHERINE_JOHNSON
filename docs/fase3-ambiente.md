@@ -36,7 +36,7 @@ desvios D002, D005, D006, D007, D009, D010, D013 e D021):
 | CT03 | S03 | Galaxy S24+ (SM-S926B), Android 17, Chrome 157.0.8103.78 | Aparelho topo de linha no lugar do D03 (D007) |
 | CT05 | S03 | Galaxy S24+, aplicativo 2.6.3 (232) | Aparelho topo de linha e versão anterior do aplicativo (D006) |
 | CT05 | S05 | Motorola edge 60 neo, Android 16, aplicativo 2.7.0 (246), tela 1200x2670 | Modelo previsto para o D03; outro titular e veículo (D009) e novo script (D010) |
-| CT06 | S03 | iPhone 16e, iOS 27.2.1 (a conferir no aparelho), aplicativo DETRAN-DF 2.7.1 | Inventário registrado; P6 executado em 22/11 (bloco B04, 3 de 3 concluídas, conferência pendente; [registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S03-CT06-iphone-registro-2026-11-22.md)) |
+| CT06 | S03 | iPhone 16e, iOS 27.2.1 (24B156), aplicativo DETRAN-DF 2.7.1 | Inventário registrado; P6 executado em 22/11 (bloco B04, 3 de 3 concluídas, conferidas por Philipe em 23/11; [resultado](fase4-medicoes.md#m3-1-1); [registro](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/S03-CT06-iphone-registro-2026-11-22.md)) |
 | CT01 | S06 e S08 | Computador D06, Ubuntu 26.04 LTS, Chrome 157.0.8103.78 | P4, P5 e P7 do portal com o V4; aparelho fora do inventário planejado |
 | CT05 | S06 e S08 | Samsung SM-S731B (D05), aplicativo 2.7.0 | P4, P5 e P7 do aplicativo com o V4; aparelho fora do inventário planejado; rede degradada não aplicada (D021) |
 | CT04 | — | Sem aparelho | Não avaliado |

@@ -8,7 +8,7 @@ Os termos foram aplicados aos participantes da coleta, conforme confirmação de
 
 ## Instrumentos entregues
 
-Os arquivos em `dados/brutos/` foram entregues apenas com cabeçalhos, sem dados fictícios. Desde 21/11 recebem os registros reais: P6 (S03, S05 e CT06), P1 a P3 (S02), P4 e P5 (S06) e P7 (S08). Os valores são de primeira leitura até o preenchimento do campo `revisor`. O
+Os arquivos em `dados/brutos/` foram entregues apenas com cabeçalhos, sem dados fictícios. Desde 21/11 recebem os registros reais: P6 (S03, S05 e CT06), P1 a P3 (S02), P4 e P5 (S06) e P7 (S08). Todas as linhas elegíveis têm o campo `revisor` preenchido desde a segunda leitura independente de 23/11; cada leitura aparece, com link para a linha do CSV, em [Medições por métrica](fase4-medicoes.md). O
 [dicionário e as regras de cálculo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/dados/README.md)
 definem chaves, denominadores e exclusões. O
 [modelo de sessão](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md)

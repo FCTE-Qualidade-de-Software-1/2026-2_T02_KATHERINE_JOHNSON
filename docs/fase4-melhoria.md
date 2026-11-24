@@ -12,9 +12,12 @@ O [registro S03 no commit 14ab804](https://github.com/FCTE-Qualidade-de-Software
 relata três falhas em três tentativas no aplicativo Android 2.6.3 (CT05/B02), ao buscar veículos.
 No portal, CT01 teve três conclusões em três tentativas; CT03 teve duas conclusões e uma expiração.
 Os consentimentos foram aplicados, conforme confirmação de Hugo em 22/11/2026; as vias assinadas
-permanecem privadas. As contagens são preliminares: a conferência independente está pendente,
-e o aparelho/versão do aplicativo diferem do planejamento (D006). Não se atribui nível oficial,
-causa técnica nem superioridade geral. O achado pertence a Q3.1/P6, não às taxas de rede de P7.
+permanecem privadas. As contagens foram confirmadas na
+[segunda leitura independente de P6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/segunda-leitura-p4-p7-2026-11-23.md#4-p6--execução-por-contexto)
+(23/11) e resultaram em M3.1.1 Inaceitável, 0/1 plataforma, nesse caso
+([medições de M3.1.1](fase4-medicoes.md#m3-1-1)). O aparelho e a versão do aplicativo diferem do
+planejamento (D006), e o CT05 com o aplicativo 2.7.0, em outro aparelho e veículo, concluiu 3 de 3.
+Por isso não se atribui causa técnica nem superioridade geral. O achado pertence a Q3.1/P6, não às taxas de rede de P7.
 
 O bloqueio completo antes da lista motiva priorizar a investigação de cobertura de contexto,
 apoiando D4 (plataformas com suporte) e D1 (investimento), sem avaliar usabilidade. Não se compara
