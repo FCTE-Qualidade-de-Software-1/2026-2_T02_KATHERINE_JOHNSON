@@ -27,7 +27,7 @@ níveis, proveniência e limitações após a conferência. A coleta ocorreu em 
 | Atividade | Issue | Responsáveis | Prazo | Situação em 24/11 | Onde está o resultado |
 |---|---|---|---|---|---|
 | Coleta das medições e dados brutos (S01, S02, S03, S05, S06 e S08) | [#47](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/47) | Hugo, Pedro Druck, Philipe | 18/11/2026 | Concluída: segundas leituras registradas, níveis calculados e issue fechada em 24/11 | [Medições por métrica](fase4-medicoes.md), `dados/brutos/` e `evidencias/fase4/` |
-| Análise, respostas às questões GQM e julgamento | [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Pedro Henrique, Philipe; revisão de Heitor | 20/11/2026 | Resultados, níveis, respostas, julgamentos e oportunidades registrados; aprovação do revisor pendente | [Análise e julgamento GQM](fase4-analise.md) e artigo |
+| Análise, respostas às questões GQM e julgamento | [#48](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/48) | Pedro Henrique, Philipe; revisão de Heitor | 20/11/2026 | Concluída: PR #92 integrado em 24/11 (aprovação de Hugo; revisão de Heitor não registrada) e ajuste de G2 no PR #93; issue fechada pelo merge | [Análise e julgamento GQM](fase4-analise.md) e artigo |
 | Ação de melhoria obrigatória | [#36](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/36) | Pedro Druck | 21/11/2026 | Processo e templates entregues; revisão e eficácia pendentes | [Ação de melhoria](fase4-melhoria.md) |
 
 *Tabela 1 — Atividades da Fase 4. Fonte: issues #36, #47 e #48 e coleta intermediária PSM/CID de 10/11/2026.*
