@@ -71,8 +71,6 @@ Declarações dadas pelas próprias pessoas em 23 e 24/11/2026, registradas como
 
 #### Pedro Druck — 24/11/2026
 
-*Declaração confirmada por Pedro Druck por mensagem em 24/11/2026, com o mesmo texto-base das demais; a confirmação foi registrada por Philipe na aprovação do [PR #96](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/96).*
-
 > Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.
 
 ## 3. Registro individual da Entrega 1
