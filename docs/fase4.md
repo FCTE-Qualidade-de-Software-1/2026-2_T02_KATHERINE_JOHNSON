@@ -65,7 +65,7 @@ Regras de integridade que valem para toda a fase:
 | Registro de sessão | Piloto, blocos, conferência e desvios | [`evidencias/fase4/modelo-sessao.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/evidencias/fase4/modelo-sessao.md) |
 | Medições por métrica | Cada leitura das 14 métricas ligada à linha do CSV, à captura e à segunda leitura | [Medições por métrica](fase4-medicoes.md) |
 | Estrutura da análise | Procedimento, dependências da #47 e modelos de consolidação | [Análise e julgamento GQM](fase4-analise.md); [`dados/consolidados/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/dados/consolidados) |
-| Release da Entrega 2 | Tag e PDF do artigo | [Releases](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases); publicação pendente |
+| Release da Entrega 2 | Tag `v2.0-E2` e PDF do artigo | [Release v2.0-E2](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/releases/tag/v2.0-E2), publicada em 24/11/2026 |
 
 *Tabela 2 — Materiais da Fase 4. Fonte: elaborada pela equipe.*
 
