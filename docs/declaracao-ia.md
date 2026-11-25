@@ -44,7 +44,7 @@ documenta a conferência e a divergência identificada.
 
 ### Declarações individuais da Entrega 2
 
-Declarações dadas pelas próprias pessoas em 23/11/2026, registradas como indicado em cada uma.
+Declarações dadas pelas próprias pessoas em 23 e 24/11/2026, registradas como indicado em cada uma.
 
 #### Heitor — 23/11/2026
 
@@ -69,7 +69,7 @@ Declarações dadas pelas próprias pessoas em 23/11/2026, registradas como indi
 
 > Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.
 
-#### Pedro Druck — proposta de 24/11/2026, aguardando confirmação
+#### Pedro Druck — 24/11/2026
 
 > Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.
 
