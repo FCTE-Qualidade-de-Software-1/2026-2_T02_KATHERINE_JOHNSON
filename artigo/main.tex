@@ -5,10 +5,12 @@
 
 \documentclass[12pt]{article}
 
-\usepackage{sbc-template}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+% babel antes do sbc-template: o hook do template para hyperref quebra o babel
+% quando carregado depois dele.
 \usepackage[brazilian]{babel}
+\usepackage{sbc-template}
 \usepackage{graphicx,url}
 \usepackage{multirow}
 \usepackage{booktabs}
@@ -36,6 +38,8 @@
 
 % Permite quebra de linha em URLs longas
 \def\UrlBreaks{\do\/\do-\do\_}
+% Links clicáveis mesmo quando a URL quebra de linha, sem moldura colorida.
+\usepackage[hidelinks,breaklinks]{hyperref}
 
 % Uma seção obrigatória ausente deve interromper a compilação.
 \newcommand{\incluir}[1]{\input{#1}}
