@@ -164,5 +164,6 @@ Os resultados, níveis, respostas, julgamentos e oportunidades foram registrados
 leituras conferidas. Permanecem sem medição o CT04, a condição degradada no aplicativo e a
 M2.2.1 no iOS; não recebem zero nem nível. Os resultados valem somente para os veículos,
 dispositivos, versões, redes e datas observados, não certificam o serviço nem representam
-todos os cidadãos do Detran-DF. O PR desta entrega aguarda a revisão designada de Heitor;
-aprovação e fechamento da issue não são presumidos.
+todos os cidadãos do Detran-DF. A análise foi integrada pelo PR #92 em 24/11, com aprovação de
+Hugo; a revisão designada de Heitor não foi registrada no PR. O julgamento de Q2.2 e G2 foi
+ajustado à regra da Fase 2 no PR #93, aprovado por Pedro Druck.

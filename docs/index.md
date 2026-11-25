@@ -377,6 +377,8 @@ termos assinados ficam em armazenamento privado, com acesso restrito aos avaliad
 - [Artigo em LaTeX](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/artigo)
 - [Plano de gestão PSM/CID](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/gestao)
 - [Atas de reunião](atas.md)
+- [Apresentação final da Entrega 2 (PDF, 23/11/2026)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/slides/apresentacao-final-2026-11-23.pdf) — apresentada em 23/11, antes da segunda leitura de P4 a P7 e do ajuste de G2; os resultados oficiais estão na [análise](fase4-analise.md) e nas [medições](fase4-medicoes.md)
+- [Slides de gestão PSM/CID (PDF, 04/11/2026)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/slides/apresentacao-psm-cid-2026-11-04.pdf) e [atualização de 11/11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/slides/apresentacao-psm-cid-2026-11-11.pdf)
 - [Slides do Ponto de Controle 1 (PDF, 19/10/2026)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/blob/main/slides/ponto-de-controle-1-2026-10-19.pdf)
 - [Evidências do levantamento da Fase 1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/evidencias/fase1)
 - [Dados da avaliação e termo de consentimento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/tree/main/dados)

@@ -39,6 +39,7 @@ documenta a conferência e a divergência identificada.
 |---|---|---|---|
 | Heitor | Claude Code | Apoio aos registros de gestão, à redação da GitPage e dos slides de PSM/CID, à documentação da coleta em iOS e à estimativa das próprias horas. | Conferiu os registros nas issues, nos PRs, no histórico de commits e nas atas. Conferiu as descrições das imagens uma a uma, forneceu os dados da coleta em iOS e revisou e aceitou a estimativa de horas. |
 | Heitor (GitPage, 23/11) | Claude Code | Mapeamento das páginas da GitPage em busca de contradições, correção de situações desatualizadas e de termos fora do padrão, tarjas adicionais em três capturas da Fase 1, página de rastreabilidade, âncoras estáveis, diagramas clicáveis na página inicial e ajustes de acessibilidade. | Heitor decidiu o tratamento das contradições, das tarjas e dos termos; os pontos que dependem da equipe ficaram sinalizados, sem decisão da ferramenta. Os vínculos da rastreabilidade foram conferidos contra as Fases 1 a 4; a construção do site com `mkdocs build --strict` e a verificação dos links e âncoras não apontaram erros. |
+| Hugo (GitPage, artigo e revisões, 24/11) | Claude Code | Página de medições por métrica gerada a partir dos CSV, com links para as linhas dos dados, gráficos dos tempos e ligação entre as fases ([PR #93](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/93)); atualização de situações desatualizadas; ajuste de Q2.2 e G2 à regra da Fase 2; corte da tabela de métricas repetida pelo diagrama GQM para o artigo voltar às 15 páginas; identificação da versão no artigo; apoio à revisão dos PRs #89 e #92 e à resposta sobre a gestão. | Hugo pediu e acompanhou cada etapa e decidiu as mudanças. O ajuste de G2 foi justificado no PR #93 e aprovado por Pedro Druck. `calcular.py` reproduz os 47 resultados oficiais; os testes de `dados/tests`, o `mkdocs build --strict`, a verificação dos links e o `validar_pdf.py` passaram. |
 | Registros técnicos da equipe | Codex (OpenAI) | Apoio aos roteiros e modelos de coleta e análise (#46 e #48), à documentação da proposta de melhoria (#36), à atualização do artigo e à preparação desta declaração. | Cotejo com as fases anteriores, os dados disponíveis e os registros no GitHub, além das verificações de compilação e do PDF. A revisão da declaração pela equipe é acompanhada na [issue #49](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/issues/49). |
 
 ### Declarações individuais da Entrega 2
@@ -113,7 +114,7 @@ Codex (OpenAI) apoiou a complementação documental da issue #46: ambiente plane
 
 ### Preparação da análise da Fase 4 — 16/11/2026
 
-Codex (OpenAI) apoiou o roteiro de análise da issue #48, os modelos de consolidação e a síntese LaTeX. As regras foram cotejadas com as Fases 1–3 e os CSV disponíveis. A revisão humana por Pedro Henrique, Philipe e Heitor permanece pendente. Resultados e conclusões aguardam a coleta da #47.
+Codex (OpenAI) apoiou o roteiro de análise da issue #48, os modelos de consolidação e a síntese LaTeX. As regras foram cotejadas com as Fases 1–3 e os CSV disponíveis. Naquela data, a revisão humana por Pedro Henrique, Philipe e Heitor estava pendente e os resultados aguardavam a coleta da #47; a análise foi integrada pelo PR #92 em 24/11.
 
 
 ### Fechamento documental — 22/11/2026

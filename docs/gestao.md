@@ -1,6 +1,6 @@
 # Gestão do projeto (PSM/CID)
 
-**Fechamento em 22/11/2026:** a [coleta final documental da E2](gestao-fechamento-e2.md) atualiza os indicadores, registra a declaração de Hugo e distingue horas conhecidas de totais ainda não informados. Os valores históricos abaixo preservam suas datas de corte.
+**Fechamento em 22/11/2026:** a [coleta final documental da E2](gestao-fechamento-e2.md) atualiza os indicadores, registra a declaração de Hugo e distingue horas conhecidas de totais ainda não informados. Os valores históricos abaixo preservam suas datas de corte. A resposta sobre o efeito da gestão na qualidade da avaliação e o balanço dos compromissos da retrospectiva estão em [Fechamento: a gestão melhorou a avaliação?](#efeito-gestao).
 
 A execução do projeto é acompanhada com métricas baseadas no PSM/CID, em três categorias:
 
@@ -262,6 +262,52 @@ propostas D8 a D15, está em
 | C7 — Semanas com reunião | 2 de 3 semanas fechadas; semana de 16/11 sem reunião até agora | Vermelho |
 
 *Tabela 10 — Coleta de acompanhamento da E2, com dados de 16/11/2026. Fonte: issues #28, #36, #46 a #49, #53 e #55 e PRs #52, #54, #56, #57, #58, #59, #61 e #62 no GitHub; histórico da `main`; pasta `atas/`.*
+
+## Fechamento: a gestão melhorou a avaliação? {#efeito-gestao}
+
+Esta seção responde, com os dados do fechamento da E2 ([corte de 22/11](gestao-fechamento-e2.md))
+e do histórico do GitHub até 24/11, o que foi feito dos compromissos da retrospectiva e se as
+mudanças na gestão melhoraram a qualidade da avaliação entregue.
+
+### Compromissos da retrospectiva {#compromissos}
+
+| Compromisso (Tabela 6) | O que foi executado | Resultado |
+|---|---|---|
+| C1 — Revisar todo PR em até 48 h | Revisor cobrado no grupo e na reunião de 10/11 | Parcial: PRs com espera acima de 48 h caíram de 6 de 15 na E1 para 2 na E2; a mediana subiu de 6,2 h para 8,24 h |
+| C3 — Listar e repassar os bloqueios | Decisão de 10/11 de completar a lista da #46 com responsável e data; pendências repassadas na reunião de 10/11 | Não evitou o atraso: veículo real, consentimento e iPhone só se resolveram em 20 a 22/11, e a coleta prevista para 18/11 ocorreu em 21 e 22/11 |
+| C5 — Revisor em rodízio definido na criação | Aplicado a todas as issues da E2 em 10/11 | Cumprido: na E2 os seis integrantes revisaram PRs (Pedro Henrique 5, Heitor 3, Daniel 2, Philipe 2, Hugo 1, Pedro Druck 1), contra três integrantes com 12 das 15 revisões na E1 |
+| C6 — Sem commit direto na `main` | Regra mantida e conferida a cada coleta | Parcial: 2 commits diretos em 11/11 e nenhum depois de 12/11; os PRs #61 e #88 foram integrados sem revisão registrada |
+| C7 — Uma reunião por semana com ata | Reunião e ata de 10/11 | Não cumprido: não há ata depois de 10/11; as decisões seguintes ficaram nas issues e nos PRs |
+
+*Tabela 11 — Execução dos compromissos da retrospectiva. Fonte: Tabela 5, Tabela 10, [fechamento da E2](gestao-fechamento-e2.md), pasta `atas/` e histórico de commits e PRs da `main` até 24/11/2026.*
+
+### Efeito sobre a qualidade da avaliação {#efeito-qualidade}
+
+**Onde houve melhoria verificável.** A revisão em rodízio e a conferência independente pegaram
+erros antes que chegassem aos resultados:
+
+- **Segunda leitura das medições:** 293 de 299 linhas conferidas (98,0%) concordaram com a
+  primeira leitura. As seis divergências (uma rolagem do P3 e cinco tempos acima da tolerância de
+  0,050 s) foram resolvidas em conjunto e registradas antes do cálculo; nenhuma mudou um nível
+  ([coleta](fase4-coleta.md#situacao-atual)).
+- **Revisão dos cálculos:** `calcular.py` reproduz os 47 resultados oficiais a partir dos CSV, e
+  os testes no CI barram dados sem revisor e uma página de medições que não corresponda aos dados.
+- **Revisão da análise:** a revisão do PR #92 encontrou o julgamento de G2 em desacordo com a regra
+  da Fase 2, links quebrados na GitPage e o artigo com 16 páginas. Os três foram corrigidos no
+  [PR #93](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KATHERINE_JOHNSON/pull/93) antes da release.
+- **Rastreabilidade:** cada resultado da [página de medições](fase4-medicoes.md) leva à linha do
+  CSV, à captura e à segunda leitura, e cada fase aponta para a seguinte.
+
+**Onde não houve.** O calendário não melhorou: M-CP1 fechou em 50% (vermelho) no corte de 22/11, a
+coleta começou três dias depois do previsto e a entrega dependeu da prorrogação da disciplina. O esforço foi
+subestimado: 84 h 05 min declaradas contra 67 h estimadas pelos integrantes (+25,5%). As reuniões
+semanais não se mantiveram, e a #48 foi fechada pelo merge do #92 sem a revisão do revisor designado.
+
+**Conclusão.** As mudanças de processo (revisão em rodízio, PR revisado e conferência independente)
+coincidem com uma avaliação mais confiável: erros de leitura, de julgamento e de formatação foram
+encontrados e corrigidos antes da entrega. Não é possível atribuir esse efeito só à gestão, porque
+a segunda leitura também é exigência do método da Fase 3 e não há uma entrega sem essas práticas
+para comparar. No calendário e no esforço, a gestão mediu os desvios, mas não os evitou.
 
 ## Registro de fechamento de issues da Entrega 1
 
