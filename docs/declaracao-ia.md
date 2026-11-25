@@ -69,6 +69,12 @@ Declarações dadas pelas próprias pessoas em 23/11/2026, registradas como indi
 
 > Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.
 
+#### Pedro Druck — proposta de 24/11/2026, aguardando confirmação
+
+*Texto-base das demais declarações da E2, proposto a Pedro Druck por Hugo em 24/11/2026. Ainda não é a declaração de Pedro Druck: passa a valer como dele somente depois que ele a confirmar, ou a corrigir, em comentário da própria pessoa no PR que inclui este trecho.*
+
+> Declaro que foram utilizadas ferramentas de Inteligência Artificial, como o ChatGPT e o Claude, como recursos auxiliares durante o desenvolvimento deste trabalho. Essas ferramentas foram empregadas para apoiar a pesquisa, esclarecer conceitos, organizar ideias e auxiliar na revisão e elaboração de textos. Todo o conteúdo gerado foi analisado, revisado e adaptado, sendo o autor responsável pela verificação das informações e pela versão final do trabalho.
+
 ## 3. Registro individual da Entrega 1
 
 A Tabela abaixo documenta pormenorizadamente a ferramenta empregada, a finalidade específica e o procedimento de auditoria e ajuste humano realizado por cada integrante da equipe.
